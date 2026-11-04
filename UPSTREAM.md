@@ -3,7 +3,7 @@
 Merged-upstream: 084a4334b0598ea92c233afae31db2146c0a89d6
 
 - DividedRealms: https://github.com/rambodolphin13/DividedRealms, snapshot `e7155da` (2026-10-30, 0.38-dev7), merged up to `084a433` (2026-11-04, DR-dev-0.1a, the Fishing Update).
-  History is squashed upstream; later commits will build on this one.
+  Upstream history is squashed, so ours is separate from theirs and `git merge` does not work; use `tools/sync-upstream.sh` (below).
 - Removed from the snapshot: `source/new-client/` only (World Workshop editor kept).
 - Lineage: OpenDAoC -> OfflineDAoC (shadowofze) -> DividedRealms.
 - Left out of the 0.1a merge on purpose: the Passport Desk (bringing a character to a friend's world; Windows launcher feature),
