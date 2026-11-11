@@ -28,3 +28,5 @@ READ ME FIRST.txt
 RELEASE VERIFICATION.txt
 START WORLD EDITOR.cmd
 DEVELOPMENT - START HERE.md
+# upstream's CI (we dropped it)
+.github
