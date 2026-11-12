@@ -75,14 +75,18 @@ class AdminLink:
                 if self.writer is None or self.writer.is_closing():
                     if not os.path.exists(self.path):
                         raise Unreachable("server not running")
-                    self.reader, self.writer = await asyncio.wait_for(asyncio.open_unix_connection(self.path), 3)
+                    # A big roster (e.g. bots.list with hundreds of bots) can exceed asyncio's default 64 KiB line limit, which
+                    # raises a plain ValueError instead of a connection error, so the reader needs a generous limit.
+                    # (Fix found by ThatFontGuy's fork.)
+                    self.reader, self.writer = await asyncio.wait_for(
+                        asyncio.open_unix_connection(self.path, limit=1 << 23), 3)
                 self.writer.write((json.dumps({"id": self.next_id, "op": op, "args": args}) + "\n").encode())
                 await self.writer.drain()
                 line = await asyncio.wait_for(self.reader.readline(), 15)
                 if not line:
                     raise ConnectionError("the server closed the connection")
                 reply = json.loads(line)
-            except (OSError, ConnectionError, asyncio.TimeoutError, json.JSONDecodeError) as exc:
+            except (OSError, ConnectionError, asyncio.TimeoutError, ValueError) as exc:
                 await self._close()
                 raise Unreachable(f"cannot reach the server ({exc or type(exc).__name__})") from exc
             if not reply.get("ok"):
