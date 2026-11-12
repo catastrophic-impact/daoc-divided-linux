@@ -132,23 +132,32 @@ These are server properties for now (no Options tab entry yet). Both are new and
 
 ## The client: patching and `launcher.bat`
 
-The server **never starts or talks to the game client**. It only helps with three things, all on the **Client** tab: switching the client between patched and original, the battleground fix, and writing a `launcher.bat`. Point the tab at
+The server **never starts or talks to the game client**. It only helps with two things, both on the **Client** tab: switching the client between patched and original (the full DividedRealms client patch), and writing a `launcher.bat`. Point the tab at
 your client folder (a Wine prefix, Lutris, Steam, Bottles... it only needs to be a path your terminal can see).
 
 ### Switching the client between patched and original (no copy)
 
-The extra DividedRealms classes (Death Knight, the Sovereigns, Stormforged) need a patched client. The six expansion classes listed
-above work on the **stock** 1.130 client and do not need this. The patch changes exactly two files:
+DividedRealms needs a patched 1.130 client: the extra classes (Death Knight, the Sovereigns, Stormforged), the battleground and
+Abermenai zones, the door and building files, Marfach Caverns and the new art. The six expansion classes listed
+above work on the **stock** client. This server ships DividedRealms' own client patch (`tools/client-patch.json`, about 19 MB, no
+retail game file in it) and applies it **in place** to your client folder, the same 40 files the Windows launcher patches:
 
-- `game.dll` (about 5.9 MB): adds the extra class slots
-- `pregame/character_creation.xml` (about 17 KB): adds the extra class buttons
+- `game.dll` and `pregame/character_creation.xml`: the extra class slots and creation buttons; `pregame/splash.mpk`: the loading screen
+- `zones/zones.mpk`: the zone table with the battleground regions (this replaces the old Battleground fix, see below)
+- zone 0, 3, 100, 102, 206 and 207 data and csv archives (doors, buildings, gate walls)
+- new files made from stock ones: zone 253 (Abermenai) and zone 276 (Marfach) terrain, the Tara helms, skins and the fishing rod
+- `gamedata.mpk`: the new catalog rows, added by ID so any build of it works
 
-The tab shows whether each file is *original*, *patched* or *unknown*, and offers one toggle: **Switch to patched** /
-**Switch to original**. The first switch saves the originals as `game.dll.orig` and `character_creation.xml.orig`; switching back copies
-them back and keeps them, so you can toggle at any time without the original client and **without copying the multi-GB client**.
-The patch refuses anything but the pristine 1.130 files (it checks SHA-256 hashes), so it can't damage a different version.
+The tab shows the state (*ready*, *fully patched*, or *blocked*) and offers one toggle: **Switch to patched** / **Switch to original**.
+It only accepts stock 1.130 files (SHA-256 checked) and **writes nothing unless all 40 files check out**. Every replaced file is kept as
+`<name>.orig`; switching back restores them and removes the files the patch added, without the original client and **without
+copying the multi-GB client**. A client patched the old way (only `game.dll` and the layout, or with the Battleground fix on) is
+brought up to date from its `.orig` backups. Code: `tui/client_patch.py` (a port of the launcher's algorithm, see UPSTREAM.md).
+A build without `tools/client-patch.json` falls back to the old two-file patch.
 
-### Battleground fix
+### Battleground fix (only without the full client patch)
+
+The full client patch above already includes the battleground zone table. With the full patch this switch is greyed out; it is only used by a build that has no `client-patch.json`.
 
 The plain 1.130 client doesn't know this server's battleground regions, so walking into any battleground sends you to the login screen. The Client tab's
 **Switch battleground fix on** replaces just `zones/zones.mpk` (about 10 KB) with the classic zone table, keeps the original as `zones.mpk.orig`, and **Switch ... off**
@@ -226,7 +235,7 @@ DividedRealms' own updater (`tools/world_update.py`).
 - **Not separately tested:** Master Levels, Champion Levels, the bot raids and sieges, mounts and Trials of Atlantis items are included
   as DividedRealms ships them. They are not independently verified here.
 - **Battleground exit portal has no graphic:** the exit portal in each portal keep exists, but the arch draws without the portal graphic with the 1.130 client, so you have to know where it is. Cosmetic; not fixed.
-- **Battlegrounds need the Battleground fix on the client:** the plain 1.130 client maps the battlegrounds to other regions (and has no Abermenai), so the server sends you to the login screen when you enter one. The Client tab's **Battleground fix** swaps one small file (`zones/zones.mpk`) for the classic zone table; the classic table ships with the server. It covers all four battlegrounds. Some small object-data files in the battleground zone folders still differ and are not replaced yet.
+- **Battlegrounds need the Battleground fix on the client:** the plain 1.130 client maps the battlegrounds to other regions (and has no Abermenai), so the server sends you to the login screen when you enter one. The Client tab's full client patch includes the zone table and the zone files DividedRealms changes (older builds had a smaller **Battleground fix** that swapped only `zones/zones.mpk`).
 - **Startup log noise:** about 450 ERR lines at startup are upstream data issues (items referring to missing spells, and so on), not
   failures of this build.
 - **Gating:** flying mounts, account companions and the invented classes ship as upstream has them; switches to turn them off are

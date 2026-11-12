@@ -3,7 +3,7 @@
 
 The release zip is ~950 MB and holds the finished world DB, the navmeshes and a few data files that are not in git.
 This reads only those members, using HTTP range requests, and skips files already cached (safe to re-run).
-Result in <cache>/<tag>/: world.sqlite, navmesh/, server-data/ (classic-quests.json etc.), world-updates/.
+Result in <cache>/<tag>/: world.sqlite, navmesh/, server-data/ (classic-quests.json etc.), world-updates/, client-patch.json.
 Only the Python standard library is used.
 """
 import io, json, os, sys, urllib.request, zipfile
@@ -66,6 +66,7 @@ def main():
     for name in ('classic-quests.json', 'classic-quest-guides.json', 'classic-otd.json'):
         want[root + 'server/' + name] = 'server-data/' + name
     want[f'{top}/tools/connect-local1130.exe'] = 'tools/connect-local1130.exe'
+    want[root + 'client-patch.json'] = 'client-patch.json'  # daoc-divided-linux: the client patch the Client tab applies (tui/client_patch.py)
     info = {i.filename: i for i in z.infolist()}
     done = 0
     for src, rel in sorted(want.items()):

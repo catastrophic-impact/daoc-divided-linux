@@ -39,6 +39,16 @@ Find them with `grep -rn "daoc-divided-linux:" source`. Everything else we added
 | `AutonomousBotGoalPolicy.cs` | exposes `FilePath` and adds `Apply()` for the admin goals editor |
 | `AutonomousBotSchedule.cs` | "no players, no bots" (`BotPresence`) |
 
+## The client patch (our own port, not an upstream file)
+
+Upstream's Windows launcher applies `runtime/client-patch.json` to a copy of the player's client (`ModernClientSetup.cs`). We ship the
+same JSON from the release zip (`tools/fetch-divided-release.py` caches it, `build-release.sh` copies it to `tools/`) and apply it in
+place with `tui/client_patch.py`. The JSON is the release's, so it follows every sync for free; what can break is the code that reads it:
+- after a sync, compare `source/tools/OfflineDaoc.Launcher/ModernClientSetup.cs` (upstream's, also `make_client_patch.py`) with
+  `tui/client_patch.py`: new entry kinds, a new `Format`, or changes to the MPAK handling or `Adapt`. `client_patch.load` refuses a Format other than 1.
+- re-run `tui/test_client_patch.py <client folder>` and `tui/test_tui_client.py <client folder>` (read-only on the client).
+- the class-slot patch (`classslots/patch_class_slots.py`) is also inside the JSON now; the old two-file path is only a fallback.
+
 ## Merge resolutions (the files that conflicted at the DR-dev-0.1g sync; expect them again)
 
 | File | How it was resolved |

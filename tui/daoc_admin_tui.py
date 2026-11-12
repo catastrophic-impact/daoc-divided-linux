@@ -22,6 +22,7 @@ from textual.widgets import Button, DataTable, Footer, Header, Input, Label, Ric
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import client_tools  # noqa: E402
+import client_patch  # noqa: E402  daoc-divided-linux: the full DividedRealms client patch (client-patch.json)
 
 HOME = Path(os.environ.get("DAOC_HOME") or Path(__file__).resolve().parent.parent)
 SOCKET = os.environ.get("DAOC_ADMIN_SOCKET", str(HOME / "run" / "admin.sock"))
@@ -503,6 +504,14 @@ class DaocAdmin(App):
         button.styles.width = len(label) + 4
         button.refresh(layout=True)
 
+    def full_patch(self):
+        """The release's client-patch.json (tools/), or None when this build does not ship it (then only the class-slot patch is used)."""
+        file = HOME / "tools" / "client-patch.json"
+        try:
+            return client_patch.load(file) if file.is_file() else None
+        except (OSError, ValueError, client_patch.PatchError):
+            return None
+
     def show_client(self):
         folder = self.query_one("#client-path", Input).value.strip()
         box = self.query_one("#client-info", Static)
@@ -515,9 +524,24 @@ class DaocAdmin(App):
             box.update(str(exc))
             return None
         toggle = self.query_one("#client-toggle", Button)
+        bg = client_tools.bgfix_state(folder)
+        full = self.full_patch()
+        info["full"] = full  # daoc-divided-linux: with the full patch the toggle covers every file, not just game.dll and the layout
+        if full:
+            st = client_patch.status(folder, full)
+            info["full_status"] = st
+            restore = st["state"] == "patched" or st["state"] == "blocked" and st["backups"]  # a half-patched or old-patched client is patched the rest of the way
+            info["full_restore"] = restore
+            self.set_button_label(toggle, "Switch to original" if restore else "Switch to patched")
+            toggle.disabled = st["state"] == "missing" or st["state"] == "blocked" and not st["backups"]
+            self.query_one("#bgfix-info", Static).update("Battleground fix: included in the full client patch" if st["state"] == "patched"
+                                                          else "Battleground fix: part of the full client patch (use Switch to patched)")
+            self.set_button_label(self.query_one("#bgfix-toggle", Button), "Switch battleground fix on")
+            self.query_one("#bgfix-toggle", Button).disabled = True
+            box.update(f"Full client patch ({st['total']} files): {st['state']}   backups: {'yes' if st['backups'] else 'no'}\n{st['message']}")
+            return info
         self.set_button_label(toggle, "Switch to original" if info["game"] == "patched" or info["layout"] == "patched" else "Switch to patched")
         toggle.disabled = not (info["can_patch"] or info["backups"])
-        bg = client_tools.bgfix_state(folder)
         self.query_one("#bgfix-info", Static).update({
             "live": "Battleground fix: OFF (the retail zone table: entering a battleground will send you to the login screen)",
             "classic": "Battleground fix: ON (classic zone table; all four battlegrounds work)",
@@ -540,6 +564,29 @@ class DaocAdmin(App):
         folder = self.client_folder()
         info = self.show_client()
         if not info:
+            return
+        full = info.get("full")
+        if full:  # daoc-divided-linux: the whole DividedRealms client patch
+            st = info["full_status"]
+            try:
+                if info["full_restore"]:
+                    if not await self.push_screen_wait(Confirm("Switch to original", f"Put the original client files back in\n{folder}\nfrom their .orig backups, and remove the files the patch added?", "Switch")):
+                        return
+                    changed = await asyncio.to_thread(client_patch.restore, folder, full)
+                    done = f"Client switched to the original files ({len(changed)} files)."
+                else:
+                    if st["state"] not in ("ready", "partial"):
+                        self.say(st["message"], error=True)
+                        return
+                    if not await self.push_screen_wait(Confirm("Switch to patched", f"Apply the full DividedRealms client patch ({st['total']} files) to\n{folder}\nEvery replaced file is kept as .orig. Only stock 1.130 files are accepted; nothing is written unless all of them check out.", "Switch")):
+                        return
+                    written = await asyncio.to_thread(client_patch.apply, folder, full)
+                    done = f"Client patched ({len(written)} files written)."
+            except (client_patch.PatchError, OSError) as exc:
+                self.say(str(exc), error=True)
+                return
+            self.show_client()
+            self.say(done)
             return
         patched = info["game"] == "patched" or info["layout"] == "patched"
         try:

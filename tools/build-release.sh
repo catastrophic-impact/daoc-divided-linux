@@ -85,11 +85,12 @@ echo "$VERSION (DividedRealms $RELEASE_TAG)" > "$OUT/VERSION"
 echo "== Admin screen (bundled Python + Textual)"
 "$REPO/tools/fetch-python.sh" "$OUT/python"
 mkdir -p "$OUT/tui"
-cp "$REPO/tui/daoc_admin_tui.py" "$REPO/tui/client_tools.py" "$OUT/tui/"
+cp "$REPO/tui/daoc_admin_tui.py" "$REPO/tui/client_tools.py" "$REPO/tui/client_patch.py" "$OUT/tui/"   # client_patch.py: daoc-divided-linux, the full client patch
 mkdir -p "$OUT/tui/classslots" "$OUT/tools"
 cp "$REPO/tools/world_update.py" "$OUT/tools/"
 cp "$SRC/../tools/classslots/patch_class_slots.py" "$OUT/tui/classslots/"
 cp "$DATA/tools/connect-local1130.exe" "$OUT/tools/"
+cp "$DATA/client-patch.json" "$OUT/tools/"   # DividedRealms' client patch (about 19 MB, no retail file in it); the Client tab applies it
 cp "$REPO/deploy/zones-classic.mpk" "$OUT/tools/"   # the classic zone table the Battleground fix puts in the client
 
 echo "== World Workshop editor (runs on the bundled Python)"
