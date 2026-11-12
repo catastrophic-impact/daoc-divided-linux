@@ -1,12 +1,12 @@
 # Upstream
 
-Merged-upstream: 084a4334b0598ea92c233afae31db2146c0a89d6
+Merged-upstream: a0555cd433c10d813f17128474543917b5e29939
 
-- DividedRealms: https://github.com/rambodolphin13/DividedRealms, snapshot `e7155da` (2026-10-30, 0.38-dev7), merged up to `084a433` (2026-11-04, DR-dev-0.1a, the Fishing Update).
+- DividedRealms: https://github.com/rambodolphin13/DividedRealms, snapshot `e7155da` (2026-10-30, 0.38-dev7), merged up to `a0555cd` (2026-11-11, DR-dev-0.1g, Catacombs and Crafting).
   Upstream history is squashed, so ours is separate from theirs and `git merge` does not work; use `tools/sync-upstream.sh` (below).
 - Removed from the snapshot: `source/new-client/` only (World Workshop editor kept).
 - Lineage: OpenDAoC -> OfflineDAoC (shadowofze) -> DividedRealms.
-- Left out of the 0.1a merge on purpose: the Passport Desk (bringing a character to a friend's world; Windows launcher feature),
+- Left out of the merges on purpose: the Passport Desk (bringing a character to a friend's world; Windows launcher feature),
   `OfflineDaoc.TestClient`, the Windows launcher changes, and `source/new-client`. `PASSPORT_DESK_PORT_OFFSET` stays in
   BaseServer because a test uses it.
 - Our own bot death-pose change was dropped: upstream's `ShowDeadToViewers` / `ShowStandingToViewers` cover it.
@@ -19,7 +19,9 @@ Merged-upstream: 084a4334b0598ea92c233afae31db2146c0a89d6
 
 Then resolve conflicts, build (`./build.sh`), run the tests, update `Merged-upstream:` above and the line in
 `changes.txt`. If upstream's `GameServer.csproj` or `Tests.csproj` changed, hand-merge them (they are excluded because they
-link the Passport and TestClient sources). Pre-sync checklist: `git status` clean, `dist/` not needed.
+link the Passport and TestClient sources). Do not skip this: without upstream's new `EmbeddedResource` lines (lore, epic chains,
+zone water, test fixtures) the build still succeeds but about 1,500 tests fail with `epic_chains_data.json is not built into
+GameServer.dll` and a `GameObject` type-initializer error. Check `git diff <old> <new> -- <the two csproj>` and add the lines. Pre-sync checklist: `git status` clean, `dist/` not needed.
 
 ## Our edits to upstream files (all marked `daoc-divided-linux:` in the code)
 

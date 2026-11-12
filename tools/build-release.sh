@@ -13,7 +13,7 @@ REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SRC="$REPO/source/server"
 DOTNET="${DOTNET:-$(command -v dotnet || echo "$HOME/.dotnet/dotnet")}"
 VERSION="${VERSION:-$(git -C "$REPO" describe --tags --always 2>/dev/null || echo dev)}"
-RELEASE_TAG="${RELEASE_TAG:-DR-dev-0.1a}"   # DividedRealms release the world data comes from
+RELEASE_TAG="${RELEASE_TAG:-DR-dev-0.1g}"   # DividedRealms release the world data comes from
 OUT="$REPO/dist/daoc-divided"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 DOTNET_NOLOGO=1
 
