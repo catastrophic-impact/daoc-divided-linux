@@ -213,9 +213,11 @@ bundled Python, which carries Pillow and NumPy for the previews (about 90 MB; bu
 
 1. `dotnet publish`es the server (`CoreServer`) and the command-line admin tool (`DaocAdmin`) for linux-x64, self-contained.
 2. Builds the native pathing library (Detour) with CMake, linking the C++ runtime statically so it runs on older glibc systems.
-3. Fetches the world data from the DividedRealms release with `tools/fetch-divided-release.py` (reads only the needed files out
-   of the ~1.2 GB zip with HTTP range requests; cached in `.cache/divided/`): the world database, the navmeshes, quest data and
-   the login connector.
+3. Fetches the world data with `tools/fetch-divided-release.py` (cached in `.cache/divided/`): the world database, the navmeshes,
+   quest data, the client patch list and the login connector. It first downloads this repo's own data release
+   (`divided-data-<tag>`, about 525 MB, made by `tools/make-data-archive.sh`), so a build does not depend on DividedRealms keeping
+   its old releases online. If that is not available it reads the same files out of the DividedRealms release zip (~1.2 GB) with
+   HTTP range requests. A cache that is already complete is used as it is, without any download.
 4. Bundles Python 3.12 and [Textual](https://github.com/Textualize/textual) for the admin screen (`tools/fetch-python.sh`).
 5. Writes `dist/daoc-divided/` and the tarball.
 

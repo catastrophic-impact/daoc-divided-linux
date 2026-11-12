@@ -24,6 +24,20 @@ link the Passport and TestClient sources). Do not skip this: without upstream's 
 zone water, test fixtures) the build still succeeds but about 1,500 tests fail with `epic_chains_data.json is not built into
 GameServer.dll` and a `GameObject` type-initializer error. Check `git diff <old> <new> -- <the two csproj>` and add the lines. Pre-sync checklist: `git status` clean, `dist/` not needed.
 
+## The world data release (made once per upstream tag)
+
+The world database, navmeshes and a few data files are not in upstream's git, only in its release zip, and upstream can delete old
+releases. So this repo carries its own copy as a release asset: tag `divided-data-<upstream tag>`, file `divided-data-<tag>.tar.xz`
+(about 525 MB; world.sqlite, navmesh/, server-data/, tools/connect-local1130.exe, client-patch.json; no client files, no
+`world-updates`, which come from git). `tools/fetch-divided-release.py` tries it first and falls back to upstream's zip. After a sync to a
+new upstream tag, once `RELEASE_TAG` in `tools/build-release.sh` points at it:
+
+    python3 -I tools/fetch-divided-release.py <tag> .cache/divided   # fills .cache/divided/<tag> from upstream
+    tools/make-data-archive.sh <tag>                                 # -> .cache/data-archive/divided-data-<tag>.tar.xz
+    # upload that file as an asset of a GitHub release tagged divided-data-<tag> (the archive must stay under 2 GB)
+
+Test a build against a local copy with `DAOC_DATA_ARCHIVE=<file or URL> ./build.sh`.
+
 ## Our edits to upstream files (all marked `daoc-divided-linux:` in the code)
 
 Find them with `grep -rn "daoc-divided-linux:" source`. Everything else we added is in new files and cannot conflict:

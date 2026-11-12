@@ -6,9 +6,46 @@ This reads only those members, using HTTP range requests, and skips files alread
 Result in <cache>/<tag>/: world.sqlite, navmesh/, server-data/ (classic-quests.json etc.), world-updates/, client-patch.json.
 Only the Python standard library is used.
 """
-import io, json, os, sys, urllib.request, zipfile
+import io, json, os, shutil, sys, tarfile, urllib.request, zipfile
 
 REPO_SLUG = 'rambodolphin13/DividedRealms'
+# daoc-divided-linux: this repo's own copy of the files below, made by tools/make-data-archive.sh and attached to a release
+# tagged divided-data-<tag>. Tried first, so a build does not depend on DividedRealms keeping an old release online.
+OWN_SLUG = 'catastrophic-impact/daoc-divided-linux'
+# What build-release.sh reads out of the cache (the archive and the upstream path both produce these).
+REQUIRED = ('world.sqlite', 'navmesh/zone000.nav', 'server-data/classic-quests.json', 'tools/connect-local1130.exe',
+            'client-patch.json')
+
+
+def cached(out):
+    return all(os.path.isfile(os.path.join(out, r)) for r in REQUIRED)
+
+
+def from_data_archive(tag, out):
+    """Fill <out> from our data archive. DAOC_DATA_ARCHIVE=<file or URL> overrides the default release URL.
+    Returns True when the files are in place; on any failure says why and returns False (the caller falls back)."""
+    src = os.environ.get('DAOC_DATA_ARCHIVE') or f'https://github.com/{OWN_SLUG}/releases/download/divided-data-{tag}/divided-data-{tag}.tar.xz'
+    part = None
+    try:
+        if os.path.isfile(src):
+            path = src
+        else:
+            os.makedirs(out, exist_ok=True)
+            part = path = os.path.join(out, 'data-archive.part')
+            print(f'  downloading {src}', flush=True)
+            with urllib.request.urlopen(urllib.request.Request(src, headers={'User-Agent': 'daoc-divided-linux'}), timeout=60) as r, \
+                    open(path, 'wb') as o:
+                shutil.copyfileobj(r, o, 1 << 20)
+        print('  unpacking the data archive', flush=True)
+        with tarfile.open(path, 'r:xz') as t:
+            t.extractall(out, filter='data')
+        return cached(out)
+    except Exception as e:  # network down, no release yet, bad file: fall back to DividedRealms' own release
+        print(f'  data archive not used ({type(e).__name__}: {e})', flush=True)
+        return False
+    finally:
+        if part and os.path.exists(part):
+            os.remove(part)
 
 
 class RangeFile(io.RawIOBase):
@@ -47,6 +84,13 @@ def main():
     tag = sys.argv[1]
     cache = os.path.abspath(sys.argv[2] if len(sys.argv) > 2 else '.cache/divided')
     out = os.path.join(cache, tag)
+    if cached(out):
+        print(f'{tag}: world data already in {out}')
+        return
+    if from_data_archive(tag, out):
+        print(f'{tag}: world data from this repo\'s data archive, in {out}')
+        return
+    print(f'{tag}: fetching from DividedRealms\' release')
     # The release zip's name and top folder changed with DR-dev-0.1 ("...-modern-test.zip" before), so ask GitHub for it.
     api = f'https://api.github.com/repos/{REPO_SLUG}/releases/tags/{tag}'
     with urllib.request.urlopen(urllib.request.Request(api, headers={'User-Agent': 'daoc-divided-linux'})) as r:

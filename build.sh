@@ -6,6 +6,8 @@
 #   ./build.sh --local      force building on this system
 #
 # Result: dist/daoc-divided/ (the portable server) and dist/daoc-divided-<version>-linux-x64.tar.gz
+# The world data (database, navmeshes, quest files, ~525 MB) is downloaded on the first build from this repo's release
+# "divided-data-<tag>" (fallback: the DividedRealms release) and cached in .cache/divided/.
 # Nothing is installed into your system. The box has its own home under ~/boxes/; a local build keeps its caches and a private
 # .NET SDK (if you have no .NET 10) in .cache/ inside this folder. (The .NET tools may still drop a 205-byte default
 # ~/.nuget/NuGet/NuGet.Config.) The finished server folder never touches your home.
