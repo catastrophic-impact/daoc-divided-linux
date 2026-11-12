@@ -18,7 +18,8 @@ Merged-upstream: a0555cd433c10d813f17128474543917b5e29939
     tools/sync-upstream.sh              # apply it (3-way, minus tools/upstream-exclude.txt)
 
 Then resolve conflicts, build (`./build.sh`), run the tests, update `Merged-upstream:` above and the line in
-`changes.txt`. If upstream's `GameServer.csproj` or `Tests.csproj` changed, hand-merge them (they are excluded because they
+`changes.txt`, the version label `OfflineDaocVersion` in `source/server/Admin.Host/AdminService.cs` (shown by `daoc-admin status`), the
+status lines in `README.md` and the `RELEASE_TAG` default in `tools/build-release.sh`. If upstream's `GameServer.csproj` or `Tests.csproj` changed, hand-merge them (they are excluded because they
 link the Passport and TestClient sources). Do not skip this: without upstream's new `EmbeddedResource` lines (lore, epic chains,
 zone water, test fixtures) the build still succeeds but about 1,500 tests fail with `epic_chains_data.json is not built into
 GameServer.dll` and a `GameObject` type-initializer error. Check `git diff <old> <new> -- <the two csproj>` and add the lines. Pre-sync checklist: `git status` clean, `dist/` not needed.
