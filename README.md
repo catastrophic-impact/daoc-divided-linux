@@ -7,14 +7,15 @@ folder that runs on Linux (including SteamOS / Steam Deck), with a terminal admi
 
 You play with the **original retail 1.130 client**. No game files are included in this project.
 
-> **Status: development. Based on DividedRealms DR-dev-0.1a, "the Fishing Update" (2026-11-04).** The server builds and runs on
-> Linux and its ~5,700 unit tests pass. The six expansion classes (Vampiir, Bainshee, Heretic, Valkyrie, Warlock, Mauler) and the
-> battleground bracket bots were played in-game on the stock client. Everything else DividedRealms offers is included as it ships
-> upstream and has not been separately tested here. See [Known gaps](#known-gaps).
+> **Status: development. Based on DividedRealms DR-dev-0.1g, "Catacombs and Crafting" (2026-11-11).** The server builds and runs on
+> Linux and its ~8,200 unit tests pass (tests only). The six expansion classes (Vampiir, Bainshee, Heretic, Valkyrie, Warlock, Mauler)
+> and the battleground bracket bots were played in-game on the stock client with the earlier DR-dev-0.1a build; nothing from 0.1b to
+> 0.1g has been played in-game here yet. Everything else DividedRealms offers is included as it ships upstream and has not been
+> separately tested here. See [Known gaps](#known-gaps).
 
 ## What is in this version
 
-Everything in DividedRealms DR-dev-0.1a, plus the Linux layer:
+Everything in DividedRealms DR-dev-0.1g, plus the Linux layer:
 
 - **From DividedRealms (see their [changelog](CHANGELOG.md)):** fishing (own rod model, camps, cooking, `/fish`); gamebots that do
   classic quests, craft, and trade crafted gear; guild merit and dues for bots you invite; faster power regeneration; bots with
@@ -219,7 +220,7 @@ DividedRealms' own updater (`tools/world_update.py`).
 
 ## Known gaps
 
-- **New in DR-dev-0.1a, not separately tested here:** bot quests and crafting, fishing, and the new bot armor rules (`bot_quests`,
+- **New in DR-dev-0.1a to 0.1g, not separately tested here:** Catacombs and Darkness Rising (they may need client files the Client tab does not install yet), crafting, bot quests and crafting, fishing, and the new bot armor rules (`bot_quests`,
   `bot_crafting` and `bot_craft_orders` switch the first three off). The bracket bots' behaviour in a full battleground is
   upstream's: a realm with 8 or more bots in a battleground marches on the central keep, a smaller group roams.
 - **Not separately tested:** Master Levels, Champion Levels, the bot raids and sieges, mounts and Trials of Atlantis items are included
