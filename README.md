@@ -107,26 +107,17 @@ The same actions exist as single commands (`./daoc-admin help`). `--detach` star
 ## Battleground bracket bots (new in this project)
 
 A low-level character who walks into a battleground would otherwise find it empty, because bots level up and leave the low brackets.
-**Bracket bots** fix that: they are ordinary roster bots (random names, real characters) that live at a battleground's level range and are
-**logged in only while a player is inside that battleground**. They fill each realm, fight the battleground goal in waves, and log out about two
-minutes after the last player leaves. Ordinary bots keep behaving as before, including joining battlegrounds while they level.
+**Bracket bots** fix that. While a player is inside a battleground, the server makes brand-new bots for it (random name, class and level in
+that battleground's range, at most 2 of a class per realm), one per realm every couple of seconds, so a wave builds up over a few seconds. They fight
+the battleground goal in waves and are **deleted** about two minutes after the last player leaves, so every visit meets different characters
+and nothing piles up in the database. Ordinary bots keep behaving as before, including joining battlegrounds while they level.
 
-**They are off by default.** A new server has no bots in the battlegrounds. Switch `bracket_bots_enabled` on (Options tab, or
-`./daoc-admin options set bracket_bots_enabled on`) and it works at once, without a restart: the first time a player enters a battleground the
-server creates the missing roster by itself (`bracket_bots_auto_create`, on), then logs the bots in. `daoc-admin bracket create` below is only
-for making them ahead of time.
-
-```bash
-./daoc-admin bracket create --battleground all --count 12   # 12 bots per realm per battleground (levels 15-35)
-./daoc-admin bracket                                        # roster / online per battleground
-```
-
-The same is on the admin screen's **Bracket Bots** tab, and the settings are on the **Options** tab (`bracket_bots_*`): bots **per realm** (default 12,
-always per realm, minimum 8 = the size of a wave), **fill mode** (*fill* tops each realm up counting players and bots already there; *extra* always adds
-the full number), **keep even** (raise every realm toward the biggest), and the logout delay. Cathal Valley (45-49) is not covered, because the bot
+**They are off by default.** Switch `bracket_bots_enabled` on (Options tab, or `./daoc-admin options set bracket_bots_enabled on`); it works at once,
+without a restart. `./daoc-admin bracket` shows, per battleground, how many exist and how many are online. The other settings are on the
+**Options** tab (`bracket_bots_*`): bots **per realm** (default 12, always per realm; **minimum 8 required**, the size of a wave: a lower, blank or invalid
+entry is set to 8), **fill mode** (*fill* tops each realm up counting players and bots already there; *extra* always adds the full number), **keep even**
+(raise every realm toward the biggest), and the delay before they are deleted. Cathal Valley (45-49) is not covered, because the bot
 logic only knows the four classic battlegrounds. This is new code and only lightly tested.
-
-Bracket bots are equipped once, at their first login, with a full kit for their class and level (weapons, shield, ranged weapon, armor, jewelry), so they never fight bare. Bots do not lose item condition, so they never need repairs. They start with 50 gold.
 
 ## Keeping the server light
 

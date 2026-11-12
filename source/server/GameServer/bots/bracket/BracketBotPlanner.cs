@@ -9,19 +9,13 @@ namespace DOL.GS
     {
         public static readonly eRealm[] Realms = { eRealm.Albion, eRealm.Midgard, eRealm.Hibernia };
 
-        /// <summary>How many roster bots each realm still lacks to reach perRealm (realms that are complete are left out).</summary>
-        public static Dictionary<eRealm, int> MissingRoster(IReadOnlyDictionary<eRealm, int> roster, int perRealm)
-        {
-            perRealm = Math.Max(BracketBotProperties.MinimumPerRealm, perRealm);
-            var missing = new Dictionary<eRealm, int>();
-            foreach (eRealm realm in Realms)
-            {
-                int have = roster.TryGetValue(realm, out int count) ? Math.Max(0, count) : 0;
-                if (have < perRealm)
-                    missing[realm] = perRealm - have;
-            }
-            return missing;
-        }
+        /// <summary>No realm gets more than this many bots of one class in a battleground, so a wave is not five of the same class.</summary>
+        public const int MaxPerClass = 2;
+
+        /// <summary>Bots are made one per realm per tick until a realm has the wanted number (counting bots still waiting to log in).</summary>
+        public static bool NeedsAnother(int wanted, int existing) => existing < wanted;
+
+        public static bool ClassAllowed(int sameClassAlready) => sameClassAlready < MaxPerClass;
 
         /// <summary>
         /// How many bracket bots each realm should have online in a battleground.

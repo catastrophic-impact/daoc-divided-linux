@@ -21,8 +21,7 @@ public static class AdminCommandLine
           bots create [--realm alb|mid|hib|all] [--count N] [--level 1|50] [--class NAME]
           bots delete <name|id>
           bots delete-all --yes
-          bracket                         battleground bracket bots: roster and who is online
-          bracket create [--battleground NAME|all] [--count N]   N bots per realm per battleground (default all, 12)
+          bracket                         battleground bracket bots: how many exist and are online per realm (turn them on with: options set bracket_bots_enabled on)
           population                      show population settings
           population on | off             off also logs every bot out of the world
           population max <N>              most bots in the world at once; 0 = whole roster
@@ -63,7 +62,6 @@ public static class AdminCommandLine
             ("bots", "delete") => Request(AdminOps.BotsDelete, ("bot", Single(rest, "bots delete <name|id>"))),
             ("bots", "delete-all") => BotsDeleteAll(rest),
             ("bracket", "" or "status") => Request(AdminOps.BracketStatus),
-            ("bracket", "create") => BracketCreate(rest),
             ("population", "" or "show") => Request(AdminOps.PopulationGet),
             ("population", "on") => Request(AdminOps.PopulationSet, ("enabled", true)),
             ("population", "off") => Request(AdminOps.PopulationSet, ("enabled", false)),
@@ -135,14 +133,6 @@ public static class AdminCommandLine
         if (options.TryGetValue("--class", out string? className))
             request.Args["class"] = className;
         return request;
-    }
-
-    private static AdminRequest BracketCreate(List<string> rest)
-    {
-        var options = Options(rest, flags: [], values: ["--battleground", "--count"]);
-        return Request(AdminOps.BracketCreate,
-            ("battleground", options.GetValueOrDefault("--battleground") ?? "all"),
-            ("count", ParseInt(options.GetValueOrDefault("--count") ?? "12", 1, 100, "--count")));
     }
 
     private static AdminRequest BotsDeleteAll(List<string> rest)

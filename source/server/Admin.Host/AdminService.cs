@@ -68,7 +68,6 @@ namespace DOL.GS.Admin
                         request.GetInt("battlegrounds") ?? 0),
                     AdminOps.RvrStatus => OptionsAdmin.Rvr(),
                     AdminOps.BracketStatus => BracketAdmin.Status(),
-                    AdminOps.BracketCreate => BracketAdmin.Create(request.GetString("battleground") ?? "all", request.GetInt("count") ?? 12),
                     _ => throw new AdminException(AdminErrorCodes.Invalid, $"Unknown operation '{request.Op}'."),
                 };
                 return AdminResponse.Success(request.Id, result);

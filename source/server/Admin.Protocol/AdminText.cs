@@ -77,15 +77,10 @@ public static class AdminText
             case AdminOps.BracketStatus:
             {
                 var rows = AdminJson.To<List<BracketBgInfo>>(result)!;
-                string table = Table(["Battleground", "Players", "Albion roster/online", "Midgard roster/online", "Hibernia roster/online"],
+                string table = Table(["Battleground", "Players", "Albion made/online", "Midgard made/online", "Hibernia made/online"],
                     rows.Select(b => new[] { b.Name, b.PlayersInside.ToString(),
                         $"{b.Roster[0]}/{b.Online[0]}", $"{b.Roster[1]}/{b.Online[1]}", $"{b.Roster[2]}/{b.Online[2]}" }));
-                return table + "\nBracket bots log in only while a player is inside their battleground. Create more with: bracket create";
-            }
-            case AdminOps.BracketCreate:
-            {
-                var r = AdminJson.To<BracketCreateResult>(result)!;
-                return $"Created {r.Names.Count} bracket bot(s). They stay logged out until a player enters their battleground.";
+                return table + "\nThey are made fresh while a player is inside their battleground and deleted after the last one leaves. Off by default: options set bracket_bots_enabled on";
             }
             case AdminOps.OptionsList:
                 return Table(["Option", "Value", "Default", "What it does"],

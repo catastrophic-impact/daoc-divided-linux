@@ -293,12 +293,10 @@ class DaocAdmin(App):
                 yield DataTable(id="bg-table", cursor_type="row", zebra_stripes=True)
                 yield DataTable(id="obj-table", cursor_type="row", zebra_stripes=True)
             with TabPane("Bracket Bots", id="bracket"):
-                yield Static("Battleground bracket bots stay logged out until a player enters their battleground, then fill each realm and leave after the last player goes. "
-                             "Off by default: switch bracket_bots_enabled on in the Options tab and they work at once (the roster is created the first time a player enters a battleground). "
-                             "The other settings (bots per realm, fill mode, keep even, grace time) are there too: bracket_bots_*.", classes="hint")
+                yield Static("Battleground bracket bots: while a player is inside a battleground, brand-new bots (new names, classes and levels) are made a few at a time "
+                             "and deleted after the last player leaves. Off by default: switch bracket_bots_enabled on in the Options tab and it works at once. "
+                             "Bots per realm (minimum 8), fill mode, keep even and the delete delay are there too: bracket_bots_*.", classes="hint")
                 yield DataTable(id="bracket-table", cursor_type="row", zebra_stripes=True)
-                with Horizontal(classes="buttons"):
-                    yield Button("Create bracket bots...", id="bracket-create", variant="primary")
             with TabPane("Client", id="client"):
                 with VerticalScroll():
                     yield Static("Folder of your DAoC 1.130 client (in your Wine prefix, Lutris, Steam or Bottles). The client patch has two independent parts below; "
@@ -343,7 +341,7 @@ class DaocAdmin(App):
             ("#rule-table", ["Rule", "Value", "Default", "What it does"]),
             ("#bg-table", ["Battleground", "Levels", "Keep owner", "Inside A/M/H", "On the way A/M/H"]),
             ("#obj-table", ["Kind", "Name", "Owner", "State", "Location", "Forces"]),
-            ("#bracket-table", ["Battleground", "Players inside", "Albion roster/online", "Midgard roster/online", "Hibernia roster/online"]),
+            ("#bracket-table", ["Battleground", "Players inside", "Albion made/online", "Midgard made/online", "Hibernia made/online"]),
         ):
             self.query_one(table, DataTable).add_columns(*columns)
         self.query_one("#log", RichLog).can_focus = False
@@ -456,26 +454,6 @@ class DaocAdmin(App):
                   [(b["name"], b["playersInside"], f"{b['roster'][0]}/{b['online'][0]}", f"{b['roster'][1]}/{b['online'][1]}",
                     f"{b['roster'][2]}/{b['online'][2]}") for b in rows],
                   [b["name"] for b in rows])
-
-    @on(Button.Pressed, "#bracket-create")
-    @work
-    async def _bracket_create(self):
-        values = await self.push_screen_wait(Form("Create bracket bots", [
-            ("bg", "Battleground", "select", "all", [("All four", "all"), ("Abermenai (15-19)", "Abermenai"), ("Thidranki (20-24)", "Thidranki"),
-                                                     ("Murdaigean (25-29)", "Murdaigean"), ("Caledonia (30-35)", "Caledonia")]),
-            ("count", "Bots per realm (1-100)", "text", "12"),
-        ], ok="Create", note="They stay logged out until a player enters their battleground. Each realm gets this many for every battleground chosen."))
-        if not values:
-            return
-        try:
-            count = int(values["count"])
-        except ValueError:
-            self.say("Enter a whole number.", error=True)
-            return
-        result = await self.api("bracket.create", battleground=values["bg"], count=count)
-        if result is not None:
-            self.say(f"Created {len(result['names'])} bracket bot(s).")
-            await self.load_bracket()
 
     async def load_population(self):
         p = await self.link.call("population.get")
@@ -892,9 +870,17 @@ class DaocAdmin(App):
         row = self.query_one(table_id, DataTable).get_row(key)
         switch = row[1] in ("on", "off")
         field = ("value", f"{noun}: {key}", "select", row[1], [("on", "on"), ("off", "off")]) if switch else ("value", f"{key} (default {row[2]})", "text", row[1])
-        values = await self.push_screen_wait(Form(f"Change {key}", [field], note=row[3]))
-        if values and await self.api(op, key=key, value=values["value"]) is not None:
-            self.say(f"{key} = {values['value']}. Saved.")
+        note = row[3]
+        if key == "bracket_bots_per_realm":
+            note += "  MINIMUM 8 REQUIRED: a blank, invalid or lower entry is set to 8."
+        values = await self.push_screen_wait(Form(f"Change {key}", [field], note=note))
+        if not values:
+            return
+        result = await self.api(op, key=key, value=values["value"])
+        if result is not None:
+            # The server may correct the value (for example up to the minimum of 8): show what it saved.
+            saved = result.get("value", values["value"]) if isinstance(result, dict) else values["value"]
+            self.say(f"{key} = {saved}. Saved." + (" (minimum is 8)" if key == "bracket_bots_per_realm" and str(saved) != values["value"].strip() else ""))
             await self.refresh_tab("options" if op == "options.set" else "rules")
 
     @on(Button.Pressed, "#opt-change")

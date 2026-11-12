@@ -10,13 +10,10 @@ namespace DOL.GS
     {
         public const int MinimumPerRealm = 8; // a battleground wave needs 8 bots of one realm (AutonomousBattlegroundWave.MinimumWave)
 
-        [ServerProperty("bracket_bots", "bracket_bots_enabled", "Bring in bracket bots while a player is inside a battleground, and log them out after the last player leaves. Off by default: switch it on to fill the battlegrounds (the roster is created automatically the first time a player enters one).", false)]
+        [ServerProperty("bracket_bots", "bracket_bots_enabled", "Fill the battlegrounds with bots while a player is inside: each visit gets brand-new bots (new names, classes and levels), made a few at a time, and deleted after the last player leaves. Off by default.", false)]
         public static bool ENABLED;
 
-        [ServerProperty("bracket_bots", "bracket_bots_auto_create", "When a player is inside a battleground and its roster has fewer bracket bots than the per-realm number, create the missing ones (a new server starts with none). Off = only 'daoc-admin bracket create' makes them.", true)]
-        public static bool AUTO_CREATE;
-
-        [ServerProperty("bracket_bots", "bracket_bots_per_realm", "Bots per realm in a battleground while a player is inside (minimum 8, the size of a battleground wave). Always per realm.", 12)]
+        [ServerProperty("bracket_bots", "bracket_bots_per_realm", "Bots per realm in a battleground while a player is inside. Minimum 8 required (the size of a battleground wave): a lower, blank or invalid entry is set to 8. Always per realm.", 12)]
         public static int PER_REALM;
 
         [ServerProperty("bracket_bots", "bracket_bots_fill_mode", "fill = top each realm up to the per-realm number, counting players and ordinary bots already there. extra = always bring in the full per-realm number of bracket bots.", "fill")]
@@ -25,7 +22,7 @@ namespace DOL.GS
         [ServerProperty("bracket_bots", "bracket_bots_keep_even", "Keep the realms even: top every realm up toward the biggest realm in the battleground (fill mode).", true)]
         public static bool KEEP_EVEN;
 
-        [ServerProperty("bracket_bots", "bracket_bots_grace_seconds", "How long bracket bots stay after the last player leaves a battleground before they log out.", 120)]
+        [ServerProperty("bracket_bots", "bracket_bots_grace_seconds", "How long bracket bots stay after the last player leaves a battleground before they are deleted.", 120)]
         public static int GRACE_SECONDS;
 
         [ServerProperty("bracket_bots", "bracket_bots_debug_presence_region", "Testing only: pretend an Albion player is inside this battleground region (250 to 253). 0 = off.", 0)]

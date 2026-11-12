@@ -33,7 +33,6 @@ namespace DOL.GS.Admin
             "rvr_siege_defense_ratio",
             // daoc-divided-linux: battleground bracket bots
             "bracket_bots_enabled",
-            "bracket_bots_auto_create",
             "bracket_bots_per_realm",
             "bracket_bots_fill_mode",
             "bracket_bots_keep_even",
@@ -232,10 +231,13 @@ namespace DOL.GS.Admin
                         : throw new AdminException(AdminErrorCodes.Invalid, $"{key} must be a number from 0 to 1 (for example 0.5).");
                 case int:
                 {
+                    // A battleground wave needs 8 bots of one realm: a blank, invalid or too-low entry is set to the minimum.
+                    if (key == "bracket_bots_per_realm")
+                        return int.TryParse(value, NumberStyles.Integer, Invariant, out int perRealm) && perRealm >= BracketBotProperties.MinimumPerRealm
+                            ? Math.Min(perRealm, 100_000)
+                            : BracketBotProperties.MinimumPerRealm;
                     if (!int.TryParse(value, NumberStyles.Integer, Invariant, out int whole) || whole < 0 || whole > 100_000)
                         throw new AdminException(AdminErrorCodes.Invalid, $"{key} must be a whole number.");
-                    if (key == "bracket_bots_per_realm" && whole < BracketBotProperties.MinimumPerRealm)
-                        throw new AdminException(AdminErrorCodes.Invalid, $"{key} must be at least {BracketBotProperties.MinimumPerRealm} (a battleground wave needs 8 bots of one realm).");
                     return whole;
                 }
                 case string:

@@ -33,7 +33,6 @@ public static class AdminOps
     public const string GoalsSet = "goals.set";
     public const string RvrStatus = "rvr.status";
     public const string BracketStatus = "bracket.status";
-    public const string BracketCreate = "bracket.create";
 }
 
 public static class AdminErrorCodes
@@ -139,10 +138,8 @@ public sealed record BotCreateResult(IReadOnlyList<string> Names, bool Populatio
 
 public sealed record BotDeleteResult(int Queued);
 
-/// <summary>One battleground's bracket bots: roster and online counts per realm (Albion, Midgard, Hibernia) and the players inside.</summary>
+/// <summary>One battleground's bracket bots: how many exist (created, some may still be waiting to log in) and how many are online, per realm (Albion, Midgard, Hibernia), and the players inside.</summary>
 public sealed record BracketBgInfo(string Name, int Region, int PlayersInside, IReadOnlyList<int> Roster, IReadOnlyList<int> Online);
-
-public sealed record BracketCreateResult(IReadOnlyList<string> Names);
 
 public sealed record PopulationInfo(bool Enabled, int MaxActiveBots, int Roster, int Online);
 

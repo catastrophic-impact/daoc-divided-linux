@@ -11,21 +11,22 @@ namespace DOL.UnitTests.Gameserver
             new() { [eRealm.Albion] = alb, [eRealm.Midgard] = mid, [eRealm.Hibernia] = hib };
 
         [Test]
-        public void MissingRoster_NewServer_NeedsPerRealmForEveryRealm()
+        public void NeedsAnother_BuildsUpOneAtATimeUntilTheRealmHasTheWantedNumber()
         {
-            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(Present(0, 0, 0), 12);
-            Assert.That(missing[eRealm.Albion], Is.EqualTo(12));
-            Assert.That(missing[eRealm.Midgard], Is.EqualTo(12));
-            Assert.That(missing[eRealm.Hibernia], Is.EqualTo(12));
+            Assert.That(BracketBotPlanner.NeedsAnother(12, 0), Is.True);
+            Assert.That(BracketBotPlanner.NeedsAnother(12, 11), Is.True);
+            Assert.That(BracketBotPlanner.NeedsAnother(12, 12), Is.False);
+            Assert.That(BracketBotPlanner.NeedsAnother(12, 15), Is.False);
+            Assert.That(BracketBotPlanner.NeedsAnother(0, 0), Is.False);
         }
 
         [Test]
-        public void MissingRoster_OnlyTheShortRealmsAreTopped_UpAndNeverBelowTheWaveMinimum()
+        public void ClassAllowed_AtMostTwoOfOneClassPerRealm()
         {
-            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(Present(12, 5, 20), 3); // 3 is raised to the minimum of 8
-            Assert.That(missing.ContainsKey(eRealm.Albion), Is.False);
-            Assert.That(missing[eRealm.Midgard], Is.EqualTo(3));
-            Assert.That(missing.ContainsKey(eRealm.Hibernia), Is.False);
+            Assert.That(BracketBotPlanner.MaxPerClass, Is.EqualTo(2));
+            Assert.That(BracketBotPlanner.ClassAllowed(0), Is.True);
+            Assert.That(BracketBotPlanner.ClassAllowed(1), Is.True);
+            Assert.That(BracketBotPlanner.ClassAllowed(2), Is.False);
         }
 
         [Test]

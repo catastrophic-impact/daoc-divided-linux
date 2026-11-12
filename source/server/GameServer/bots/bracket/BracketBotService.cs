@@ -11,9 +11,10 @@ using DOL.Logging;
 namespace DOL.GS
 {
     /// <summary>
-    /// Battleground bracket bots (daoc-divided-linux addition). Roster bots tagged in divided_bracket_bots stay out of the world until a
-    /// player is inside the battleground they belong to; then enough of them log in (inside the battleground, at their realm's arrival point)
-    /// to fill each realm, and they log out some time after the last player leaves. The normal population controller skips them.
+    /// Battleground bracket bots (daoc-divided-linux addition). While a player is inside a battleground, brand-new bots are created for it
+    /// (one per realm every couple of seconds, random name, class and level in the bracket, at most 2 of a class per realm), logged in at their
+    /// realm's arrival point, and deleted some time after the last player leaves, so every visit meets different characters. They are
+    /// tagged in divided_bracket_bots; the normal population controller skips them. Deleting uses the same queue as the admin's "delete bot".
     /// Keep this file free of DividedRealms code changes: the only hooks elsewhere are IsManaged, IsAtCap, TryChooseGoal and QueueLogin callers.
     /// </summary>
     public static class BracketBotService
@@ -21,10 +22,11 @@ namespace DOL.GS
         private static readonly Logger Log = LoggerManager.Create(MethodBase.GetCurrentMethod().DeclaringType);
         private static readonly ConcurrentDictionary<long, BracketBotRecord> Tags = new();
         private static readonly Dictionary<int, DateTime> LastPlayerSeen = new(); // timer thread only
-        private static readonly Dictionary<int, DateTime> LastAutoCreateAttempt = new(); // timer thread only
+        private static readonly ConcurrentDictionary<long, int> ClassOf = new(); // bot id -> class id, for the 2-per-class limit
+        private static readonly Dictionary<int, DateTime> CreateBackoff = new(); // timer thread only
         private static readonly object CreateLock = new();
         private const int LoginsPerRealmPerTick = 4;
-        private const int LogoutsPerTick = 6;
+        private const int DeletesPerTick = 6;
         private static Timer _timer;
         private static int _busy;
 
@@ -32,7 +34,13 @@ namespace DOL.GS
         public static void OnServerStarted(DOLEvent e, object sender, EventArgs args)
         {
             Reload();
-            _timer = new Timer(Tick, null, 5000, 5000);
+            // Bracket bots are made fresh for every visit: any left in the database from before the server stopped are not wanted.
+            List<BracketBotRecord> stale = Tags.Values.ToList();
+            foreach (BracketBotRecord leftover in stale)
+                RetireAndQueueDelete(leftover);
+            if (stale.Count > 0)
+                Log.Info($"BRACKET_BOTS startup cleanup: queued deletion of {stale.Count} leftover bracket bot(s)");
+            _timer = new Timer(Tick, null, 5000, 2000);
         }
 
         [GameServerStoppedEvent]
@@ -85,24 +93,7 @@ namespace DOL.GS
             return result;
         }
 
-        /// <summary>Creates count roster bots per realm for one battleground (by name or region id) and tags them. Returns the new names.</summary>
-        public static List<string> Create(string battleground, int countPerRealm)
-        {
-            BattlegroundBrackets.Bracket bracket = null;
-            for (int i = 0; i < BattlegroundBrackets.Count; i++)
-            {
-                BattlegroundBrackets.Bracket candidate = BattlegroundBrackets.Get(i);
-                if (candidate.Name.Equals(battleground, StringComparison.OrdinalIgnoreCase) || candidate.RegionId.ToString() == battleground)
-                    bracket = candidate;
-            }
-            if (bracket == null)
-                throw new ArgumentException("Unknown battleground. Use Abermenai, Thidranki, Murdaigean or Caledonia.");
-            if (countPerRealm is < 1 or > 100)
-                throw new ArgumentException("Create 1 to 100 bracket bots per realm at a time.");
-
-            return CreateBots(bracket, BracketBotPlanner.Realms.ToDictionary(r => r, r => countPerRealm));
-        }
-
+        /// <summary>Creates the given number of bots per realm for one battleground and tags them. Returns the new names.</summary>
         private static List<string> CreateBots(BattlegroundBrackets.Bracket bracket, IReadOnlyDictionary<eRealm, int> countByRealm)
         {
             var names = new List<string>();
@@ -124,43 +115,75 @@ namespace DOL.GS
                     }
                 }
             }
-            Reload();
+            // The population controller logs bots in from its cached roster: have it re-read the roster now, or new bots wait for its slow poll.
             AutonomousPopulationController.RequestRefresh();
-            Log.Info($"Created {names.Count} bracket bot(s) for {bracket.Name}.");
+            Log.Debug($"Created {names.Count} bracket bot(s) for {bracket.Name}.");
             return names;
         }
 
-        /// <summary>A new server has no bracket bots. When a player is inside a battleground, create the ones its roster lacks.</summary>
-        private static void EnsureRoster(BattlegroundBrackets.Bracket bracket, DateTime now)
+        /// <summary>
+        /// Deletes a bracket bot the way the admin's "delete bot" does: mark it retired and queue a Delete command, which the population
+        /// controller runs on the game loop (guild, market lots, inventory, record, and the live bot if it is in the world). Then forgets the tag.
+        /// </summary>
+        private static void RetireAndQueueDelete(BracketBotRecord tag)
         {
-            if (!BracketBotProperties.AUTO_CREATE)
-                return;
-            if (LastAutoCreateAttempt.TryGetValue(bracket.RegionId, out DateTime last) && (now - last).TotalSeconds < 60)
-                return; // a failed attempt is not retried every tick
-            Dictionary<eRealm, int> roster = BracketBotPlanner.Realms.ToDictionary(r => r, r => Tags.Values.Count(t => t.BattlegroundRegion == bracket.RegionId && t.Realm == (int)r));
-            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(roster, BracketBotProperties.EffectivePerRealm);
-            if (missing.Count == 0)
-                return;
-            LastAutoCreateAttempt[bracket.RegionId] = now;
-            try
+            string now = DateTime.UtcNow.ToString("O");
+            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
             {
-                Log.Info($"BRACKET_BOTS auto-create battleground={bracket.Name} missing={string.Join(",", missing.Select(kv => $"{GlobalConstants.RealmToName(kv.Key)}:{kv.Value}"))}");
-                CreateBots(bracket, missing);
+                OfflineWorldBotRecord record = DOLDB<OfflineWorldBotRecord>.SelectObject(DB.Column("BotId").IsEqualTo(tag.BotId));
+                if (record != null)
+                {
+                    // Mark both copies: a live bot saves its in-memory record and must not un-retire itself.
+                    if (AutonomousBotRegistry.TryGet(tag.BotId, out GameBot live) && live.PersistentRecord != null)
+                        Retire(live.PersistentRecord, now);
+                    Retire(record, now);
+                    GameServer.Database.SaveObject(record);
+                }
+
+                bool alreadyQueued = DOLDB<OfflineBotCommandRecord>
+                    .SelectObjects(DB.Column("BotId").IsEqualTo(tag.BotId))
+                    .Any(c => c.CommandType == "Delete" && (c.State == "Pending" || c.State == "Processing"));
+                if (!alreadyQueued)
+                {
+                    GameServer.Database.AddObject(new OfflineBotCommandRecord
+                    {
+                        BotId = tag.BotId,
+                        CommandType = "Delete",
+                        RequestedUtc = now,
+                        State = "Pending",
+                        RequestedByAccount = "bracket-bots",
+                    });
+                }
+
+                tag.AllowDelete = true;
+                GameServer.Database.DeleteObject(tag);
             }
-            catch (Exception exception)
-            {
-                Log.Error($"Bracket bots could not be created for {bracket.Name}", exception);
-            }
+            Tags.TryRemove(tag.BotId, out _);
+            ClassOf.TryRemove(tag.BotId, out _);
+        }
+
+        private static void Retire(OfflineWorldBotRecord record, string now)
+        {
+            record.IsRetired = true;
+            record.Activity = "Deletion requested";
+            record.CurrentGoal = string.Empty;
+            record.LastUpdateUtc = now;
+            record.Dirty = true;
         }
 
         private static string CreateOne(BattlegroundBrackets.Bracket bracket, eRealm realm, ISet<string> reserved)
         {
             AutonomousBotIdentityGenerator.Identity identity = null;
-            for (int attempt = 0; attempt < 20 && identity == null; attempt++)
+            for (int attempt = 0; attempt < 30 && identity == null; attempt++)
             {
                 eGender gender = Random.Shared.Next(2) == 0 ? eGender.Male : eGender.Female;
                 AutonomousBotIdentityGenerator.Identity candidate = AutonomousBotIdentityGenerator.Generate(realm, gender, reserved);
-                if (!IsInventedClass(candidate.CharacterClass))
+                if (IsInventedClass(candidate.CharacterClass))
+                    continue;
+                // Variety: at most 2 of a class per realm here. After 25 tries take what comes (a realm with few classes still fills).
+                int sameClass = Tags.Values.Count(t => t.BattlegroundRegion == bracket.RegionId && t.Realm == (int)realm
+                                                       && ClassOf.TryGetValue(t.BotId, out int classId) && classId == (int)candidate.CharacterClass);
+                if (BracketBotPlanner.ClassAllowed(sameClass) || attempt >= 25)
                     identity = candidate;
             }
             if (identity == null)
@@ -204,6 +227,8 @@ namespace DOL.GS
             var tag = new BracketBotRecord { BotId = record.BotId, BattlegroundRegion = bracket.RegionId, Realm = (int)realm, LevelCap = bracket.MaxLevel };
             if (!GameServer.Database.AddObject(tag))
                 throw new InvalidOperationException($"Could not tag bracket bot {identity.Name}.");
+            Tags[tag.BotId] = tag;
+            ClassOf[tag.BotId] = (int)identity.CharacterClass;
             return identity.Name;
         }
 
@@ -259,12 +284,11 @@ namespace DOL.GS
 
                     if (!BracketBotProperties.ENABLED || (!playersInside && !inGrace))
                     {
-                        LogOutAll(region);
+                        DeleteAll(region);
                         continue;
                     }
                     if (!playersInside)
                         continue; // grace period: leave the bots as they are
-                    EnsureRoster(bracket, now);
 
                     // Players and ordinary bots of each realm already inside; bracket bots are not counted.
                     var present = BracketBotPlanner.Realms.ToDictionary(r => r, r => humansByRealm.TryGetValue(r, out int n) ? n : 0);
@@ -275,14 +299,33 @@ namespace DOL.GS
                     }
                     Dictionary<eRealm, int> target = BracketBotPlanner.Plan(present, BracketBotProperties.EffectivePerRealm, BracketBotProperties.FillIn, BracketBotProperties.KEEP_EVEN);
 
+                    // Make one new bot per realm that still lacks some (created or waiting to log in), so a wave builds up over a few seconds.
+                    var create = new Dictionary<eRealm, int>();
                     foreach (eRealm realm in BracketBotPlanner.Realms)
                     {
-                        List<GameBot> online = OnlineBracketBots(region, realm);
-                        int want = target[realm];
-                        if (online.Count < want)
-                            LogIn(bracket, realm, want - online.Count);
-                        else if (online.Count > want)
-                            LogOut(online.Take(Math.Min(LogoutsPerTick, online.Count - want)));
+                        int existing = Tags.Values.Count(t => t.BattlegroundRegion == region && t.Realm == (int)realm);
+                        if (BracketBotPlanner.NeedsAnother(target[realm], existing))
+                            create[realm] = 1;
+                    }
+                    if (create.Count > 0 && !(CreateBackoff.TryGetValue(region, out DateTime until) && now < until))
+                    {
+                        try
+                        {
+                            CreateBots(bracket, create);
+                        }
+                        catch (Exception exception)
+                        {
+                            CreateBackoff[region] = now.AddSeconds(60); // do not retry a failing insert every tick
+                            Log.Error($"Bracket bots could not be created for {bracket.Name}", exception);
+                        }
+                    }
+
+                    // Log in the ones that are made. Realms with more bots than wanted keep them until the visit ends (no churn).
+                    foreach (eRealm realm in BracketBotPlanner.Realms)
+                    {
+                        int online = OnlineBracketBots(region, realm).Count;
+                        if (online < target[realm])
+                            LogIn(bracket, realm, target[realm] - online);
                     }
                 }
             }
@@ -329,38 +372,30 @@ namespace DOL.GS
                 Log.Info($"BRACKET_BOTS login battleground={bracket.Name} realm={GlobalConstants.RealmToName(realm)} queued={queued} wanted={needed}");
         }
 
-        private static void LogOutAll(int region)
+        /// <summary>Deletes the bracket bots of a battleground (the visit is over, or the feature is off), a few per tick.</summary>
+        private static void DeleteAll(int region)
         {
-            List<GameBot> online = AutonomousBotRegistry.Snapshot()
-                .Where(bot => Tags.TryGetValue(bot.DatabaseID, out BracketBotRecord tag) && tag.BattlegroundRegion == region)
-                .Take(LogoutsPerTick)
-                .ToList();
-            if (online.Count > 0)
-                LogOut(online);
-        }
-
-        private static void LogOut(IEnumerable<GameBot> bots)
-        {
-            foreach (GameBot bot in bots)
+            int removed = 0;
+            foreach (BracketBotRecord tag in Tags.Values.Where(t => t.BattlegroundRegion == region).ToList())
             {
-                if (bot.InCombat || bot.Group != null && bot.Group.GetPlayersInTheGroup().Count > 0)
-                    continue; // never pull a bot out of a fight or from a player's group; it goes on the next tick
-                GameBot leaving = bot;
-                // Same as the Living Server schedule: leave on the game loop, shortly after.
-                _ = new ECSGameTimer(leaving, timer =>
+                if (removed >= DeletesPerTick)
+                    break;
+                // Never pull a bot out of a player's group; it goes on a later tick. Combat does not hold it back: the visit is over (no player
+                // is inside), and bots of different realms left alone in a battleground fight each other for a long time.
+                if (AutonomousBotRegistry.TryGet(tag.BotId, out GameBot bot) && bot.Group != null && bot.Group.GetPlayersInTheGroup().Count > 0)
+                    continue;
+                try
                 {
-                    try
-                    {
-                        if (!leaving.InCombat)
-                            leaving.Delete();
-                    }
-                    catch (Exception exception)
-                    {
-                        Log.Warn($"Bracket bot {leaving.Name} could not log out", exception);
-                    }
-                    return 0;
-                }, 1_500 + Random.Shared.Next(2_000));
+                    RetireAndQueueDelete(tag);
+                    removed++;
+                }
+                catch (Exception exception)
+                {
+                    Log.Warn($"Bracket bot {tag.BotId} could not be queued for deletion", exception);
+                }
             }
+            if (removed > 0)
+                Log.Info($"BRACKET_BOTS delete region={region} queued={removed}");
         }
     }
 }
