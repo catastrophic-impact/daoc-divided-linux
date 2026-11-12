@@ -9,6 +9,20 @@ namespace DOL.GS
     {
         public static readonly eRealm[] Realms = { eRealm.Albion, eRealm.Midgard, eRealm.Hibernia };
 
+        /// <summary>How many roster bots each realm still lacks to reach perRealm (realms that are complete are left out).</summary>
+        public static Dictionary<eRealm, int> MissingRoster(IReadOnlyDictionary<eRealm, int> roster, int perRealm)
+        {
+            perRealm = Math.Max(BracketBotProperties.MinimumPerRealm, perRealm);
+            var missing = new Dictionary<eRealm, int>();
+            foreach (eRealm realm in Realms)
+            {
+                int have = roster.TryGetValue(realm, out int count) ? Math.Max(0, count) : 0;
+                if (have < perRealm)
+                    missing[realm] = perRealm - have;
+            }
+            return missing;
+        }
+
         /// <summary>
         /// How many bracket bots each realm should have online in a battleground.
         /// present = players and ordinary bots of that realm already inside (bracket bots not counted).

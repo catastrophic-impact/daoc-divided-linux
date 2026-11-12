@@ -11,6 +11,24 @@ namespace DOL.UnitTests.Gameserver
             new() { [eRealm.Albion] = alb, [eRealm.Midgard] = mid, [eRealm.Hibernia] = hib };
 
         [Test]
+        public void MissingRoster_NewServer_NeedsPerRealmForEveryRealm()
+        {
+            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(Present(0, 0, 0), 12);
+            Assert.That(missing[eRealm.Albion], Is.EqualTo(12));
+            Assert.That(missing[eRealm.Midgard], Is.EqualTo(12));
+            Assert.That(missing[eRealm.Hibernia], Is.EqualTo(12));
+        }
+
+        [Test]
+        public void MissingRoster_OnlyTheShortRealmsAreTopped_UpAndNeverBelowTheWaveMinimum()
+        {
+            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(Present(12, 5, 20), 3); // 3 is raised to the minimum of 8
+            Assert.That(missing.ContainsKey(eRealm.Albion), Is.False);
+            Assert.That(missing[eRealm.Midgard], Is.EqualTo(3));
+            Assert.That(missing.ContainsKey(eRealm.Hibernia), Is.False);
+        }
+
+        [Test]
         public void Fill_EmptyBattleground_BringsPerRealmToEveryRealm()
         {
             Dictionary<eRealm, int> plan = BracketBotPlanner.Plan(Present(0, 0, 0), 12, fillIn: true, keepEven: true);

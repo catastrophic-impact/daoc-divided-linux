@@ -10,8 +10,11 @@ namespace DOL.GS
     {
         public const int MinimumPerRealm = 8; // a battleground wave needs 8 bots of one realm (AutonomousBattlegroundWave.MinimumWave)
 
-        [ServerProperty("bracket_bots", "bracket_bots_enabled", "Bring in bracket bots while a player is inside a battleground, and log them out after the last player leaves.", true)]
+        [ServerProperty("bracket_bots", "bracket_bots_enabled", "Bring in bracket bots while a player is inside a battleground, and log them out after the last player leaves. Off by default: switch it on to fill the battlegrounds (the roster is created automatically the first time a player enters one).", false)]
         public static bool ENABLED;
+
+        [ServerProperty("bracket_bots", "bracket_bots_auto_create", "When a player is inside a battleground and its roster has fewer bracket bots than the per-realm number, create the missing ones (a new server starts with none). Off = only 'daoc-admin bracket create' makes them.", true)]
+        public static bool AUTO_CREATE;
 
         [ServerProperty("bracket_bots", "bracket_bots_per_realm", "Bots per realm in a battleground while a player is inside (minimum 8, the size of a battleground wave). Always per realm.", 12)]
         public static int PER_REALM;

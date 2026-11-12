@@ -1,6 +1,7 @@
 CHANGES (short tldr, newest first)
 
 2026-11-12
+- Found on a fresh world: nothing created the bracket-bot roster (it only existed because we made it by hand). Now the server creates the missing roster the first time a player enters a battleground (new setting bracket_bots_auto_create, on). Bracket bots are now OFF by default (bracket_bots_enabled; switch it on in the Options tab, read live, no restart). The 7 settings of ours that were not on the Options tab (bots_only_with_players, its grace time, load_governor_*) are there now; tui/test_options_coverage.py fails when one of ours is missing. README: test count, startup error count (about 45), bracket bots off by default. Server unit tests 8,201 pass, 2 skipped (tests only). NOT checked live: the auto-create and the switch on a running server.
 - The build no longer depends on DividedRealms keeping its release online: tools/make-data-archive.sh packs the world data (world DB, navmeshes, quest data, client patch list, connector; 525 MB) and the owner attached it to this repo's release divided-data-DR-dev-0.1g. tools/fetch-divided-release.py downloads that first and falls back to upstream's zip. Tested: real download from the release into an empty cache is byte-identical to upstream's files; a full build from an empty cache using the archive works (tarball built). Server unit tests on a fresh clone of 31bdbb7: 8,199 pass, 2 skipped (tests only). NOT checked: a server started from an archive-built folder.
 
 2026-11-11

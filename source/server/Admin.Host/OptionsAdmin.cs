@@ -33,10 +33,19 @@ namespace DOL.GS.Admin
             "rvr_siege_defense_ratio",
             // daoc-divided-linux: battleground bracket bots
             "bracket_bots_enabled",
+            "bracket_bots_auto_create",
             "bracket_bots_per_realm",
             "bracket_bots_fill_mode",
             "bracket_bots_keep_even",
             "bracket_bots_grace_seconds",
+            // daoc-divided-linux: "no players, no bots" and the bot load governor
+            "bots_only_with_players",
+            "bots_only_with_players_grace_seconds",
+            "load_governor_enabled",
+            "load_governor_min_tps_percent",
+            "load_governor_resume_tps_percent",
+            "load_governor_min_free_mb",
+            "load_governor_shed_after_seconds",
             // daoc-divided-linux: DividedRealms DR-dev-0.1g settings worth having on the Options tab (switches and whole numbers).
             // Bots
             "bots_use_custom_classes",

@@ -111,6 +111,11 @@ A low-level character who walks into a battleground would otherwise find it empt
 **logged in only while a player is inside that battleground**. They fill each realm, fight the battleground goal in waves, and log out about two
 minutes after the last player leaves. Ordinary bots keep behaving as before, including joining battlegrounds while they level.
 
+**They are off by default.** A new server has no bots in the battlegrounds. Switch `bracket_bots_enabled` on (Options tab, or
+`./daoc-admin options set bracket_bots_enabled on`) and it works at once, without a restart: the first time a player enters a battleground the
+server creates the missing roster by itself (`bracket_bots_auto_create`, on), then logs the bots in. `daoc-admin bracket create` below is only
+for making them ahead of time.
+
 ```bash
 ./daoc-admin bracket create --battleground all --count 12   # 12 bots per realm per battleground (levels 15-35)
 ./daoc-admin bracket                                        # roster / online per battleground
@@ -222,7 +227,7 @@ bundled Python, which carries Pillow and NumPy for the previews (about 90 MB; bu
 5. Writes `dist/daoc-divided/` and the tarball.
 
 Building directly with .NET also works: `cd source/server && dotnet build DOLLinux.sln -c Release` then
-`dotnet test Tests/Tests.csproj -c Release --no-build` (about 5,700 tests).
+`dotnet test Tests/Tests.csproj -c Release --no-build` (about 8,200 tests).
 
 ## Upgrading
 
@@ -249,7 +254,7 @@ DividedRealms' own updater (`tools/world_update.py`).
   as DividedRealms ships them. They are not independently verified here.
 - **Battleground exit portal has no graphic:** the exit portal in each portal keep exists, but the arch draws without the portal graphic with the 1.130 client, so you have to know where it is. Cosmetic; not fixed.
 - **Battlegrounds need the Battleground fix on the client:** the plain 1.130 client maps the battlegrounds to other regions (and has no Abermenai), so the server sends you to the login screen when you enter one. The Client tab's full client patch includes the zone table and the zone files DividedRealms changes (older builds had a smaller **Battleground fix** that swapped only `zones/zones.mpk`).
-- **Startup log noise:** about 450 ERR lines at startup are upstream data issues (items referring to missing spells, and so on), not
+- **Startup log noise:** about 45 ERR lines at startup are upstream data issues (items referring to missing spells, and so on), not
   failures of this build.
 - **Gating:** flying mounts, account companions and the invented classes ship as upstream has them; switches to turn them off are
   planned.

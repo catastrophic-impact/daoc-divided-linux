@@ -21,6 +21,7 @@ namespace DOL.GS
         private static readonly Logger Log = LoggerManager.Create(MethodBase.GetCurrentMethod().DeclaringType);
         private static readonly ConcurrentDictionary<long, BracketBotRecord> Tags = new();
         private static readonly Dictionary<int, DateTime> LastPlayerSeen = new(); // timer thread only
+        private static readonly Dictionary<int, DateTime> LastAutoCreateAttempt = new(); // timer thread only
         private static readonly object CreateLock = new();
         private const int LoginsPerRealmPerTick = 4;
         private const int LogoutsPerTick = 6;
@@ -99,6 +100,11 @@ namespace DOL.GS
             if (countPerRealm is < 1 or > 100)
                 throw new ArgumentException("Create 1 to 100 bracket bots per realm at a time.");
 
+            return CreateBots(bracket, BracketBotPlanner.Realms.ToDictionary(r => r, r => countPerRealm));
+        }
+
+        private static List<string> CreateBots(BattlegroundBrackets.Bracket bracket, IReadOnlyDictionary<eRealm, int> countByRealm)
+        {
             var names = new List<string>();
             lock (CreateLock)
             {
@@ -112,7 +118,8 @@ namespace DOL.GS
                 {
                     foreach (eRealm realm in BracketBotPlanner.Realms)
                     {
-                        for (int i = 0; i < countPerRealm; i++)
+                        int count = countByRealm.TryGetValue(realm, out int n) ? n : 0;
+                        for (int i = 0; i < count; i++)
                             names.Add(CreateOne(bracket, realm, reserved));
                     }
                 }
@@ -121,6 +128,29 @@ namespace DOL.GS
             AutonomousPopulationController.RequestRefresh();
             Log.Info($"Created {names.Count} bracket bot(s) for {bracket.Name}.");
             return names;
+        }
+
+        /// <summary>A new server has no bracket bots. When a player is inside a battleground, create the ones its roster lacks.</summary>
+        private static void EnsureRoster(BattlegroundBrackets.Bracket bracket, DateTime now)
+        {
+            if (!BracketBotProperties.AUTO_CREATE)
+                return;
+            if (LastAutoCreateAttempt.TryGetValue(bracket.RegionId, out DateTime last) && (now - last).TotalSeconds < 60)
+                return; // a failed attempt is not retried every tick
+            Dictionary<eRealm, int> roster = BracketBotPlanner.Realms.ToDictionary(r => r, r => Tags.Values.Count(t => t.BattlegroundRegion == bracket.RegionId && t.Realm == (int)r));
+            Dictionary<eRealm, int> missing = BracketBotPlanner.MissingRoster(roster, BracketBotProperties.EffectivePerRealm);
+            if (missing.Count == 0)
+                return;
+            LastAutoCreateAttempt[bracket.RegionId] = now;
+            try
+            {
+                Log.Info($"BRACKET_BOTS auto-create battleground={bracket.Name} missing={string.Join(",", missing.Select(kv => $"{GlobalConstants.RealmToName(kv.Key)}:{kv.Value}"))}");
+                CreateBots(bracket, missing);
+            }
+            catch (Exception exception)
+            {
+                Log.Error($"Bracket bots could not be created for {bracket.Name}", exception);
+            }
         }
 
         private static string CreateOne(BattlegroundBrackets.Bracket bracket, eRealm realm, ISet<string> reserved)
@@ -216,8 +246,6 @@ namespace DOL.GS
                 return;
             try
             {
-                if (Tags.IsEmpty)
-                    return;
                 DateTime now = DateTime.UtcNow;
                 Dictionary<ushort, Dictionary<eRealm, int>> players = PlayersByRegion();
                 for (int i = 0; i < BattlegroundBrackets.Count; i++)
@@ -236,6 +264,7 @@ namespace DOL.GS
                     }
                     if (!playersInside)
                         continue; // grace period: leave the bots as they are
+                    EnsureRoster(bracket, now);
 
                     // Players and ordinary bots of each realm already inside; bracket bots are not counted.
                     var present = BracketBotPlanner.Realms.ToDictionary(r => r, r => humansByRealm.TryGetValue(r, out int n) ? n : 0);

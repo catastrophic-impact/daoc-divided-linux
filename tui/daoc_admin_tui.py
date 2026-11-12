@@ -294,7 +294,8 @@ class DaocAdmin(App):
                 yield DataTable(id="obj-table", cursor_type="row", zebra_stripes=True)
             with TabPane("Bracket Bots", id="bracket"):
                 yield Static("Battleground bracket bots stay logged out until a player enters their battleground, then fill each realm and leave after the last player goes. "
-                             "Settings (bots per realm, fill mode, keep even, grace time) are on the Options tab: bracket_bots_*.", classes="hint")
+                             "Off by default: switch bracket_bots_enabled on in the Options tab and they work at once (the roster is created the first time a player enters a battleground). "
+                             "The other settings (bots per realm, fill mode, keep even, grace time) are there too: bracket_bots_*.", classes="hint")
                 yield DataTable(id="bracket-table", cursor_type="row", zebra_stripes=True)
                 with Horizontal(classes="buttons"):
                     yield Button("Create bracket bots...", id="bracket-create", variant="primary")
