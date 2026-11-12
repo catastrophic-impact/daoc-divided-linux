@@ -14,7 +14,8 @@ SRC="$REPO/source/server"
 DOTNET="${DOTNET:-$(command -v dotnet || echo "$HOME/.dotnet/dotnet")}"
 VERSION="${VERSION:-$(git -C "$REPO" describe --tags --always 2>/dev/null || echo dev)}"
 RELEASE_TAG="${RELEASE_TAG:-DR-dev-0.1g}"   # DividedRealms release the world data comes from
-OUT="$REPO/dist/daoc-divided"
+DIST="${DIST:-$REPO/dist}"   # output folder; set DIST=/elsewhere to build without touching dist/ (for testing)
+OUT="$DIST/daoc-divided"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 DOTNET_NOLOGO=1
 
 missing=()
@@ -107,9 +108,9 @@ echo "== Navmeshes"
 mkdir -p "$OUT/navmesh"
 cp -r "$DATA"/navmesh/. "$OUT/navmesh/"
 
-tarball="$REPO/dist/daoc-divided-$VERSION-linux-x64.tar.gz"
-tar -C "$REPO/dist" "${KEEP[@]/#/--exclude=daoc-divided/}" -czf "$tarball" daoc-divided
+tarball="$DIST/daoc-divided-$VERSION-linux-x64.tar.gz"
+tar -C "$DIST" "${KEEP[@]/#/--exclude=daoc-divided/}" -czf "$tarball" daoc-divided
 # Keep only the newest tarball: each build is ~1 GB and they pile up in dist/.
-find "$REPO/dist" -maxdepth 1 -name 'daoc-divided-*-linux-x64.tar.gz' ! -path "$tarball" -delete
+find "$DIST" -maxdepth 1 -name 'daoc-divided-*-linux-x64.tar.gz' ! -path "$tarball" -delete
 echo "== Done: $OUT"
 echo "         $tarball ($(du -h "$tarball" | cut -f1))"
