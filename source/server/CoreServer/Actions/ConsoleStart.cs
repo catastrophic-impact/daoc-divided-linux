@@ -134,6 +134,7 @@ namespace DOL.DOLServer.Actions
             GameServer.Instance?.Stop();
         }
 
+        // daoc-divided-linux: the whole console loop is ours (admin commands via AdminConsole, then upstream's /command path).
         /// <summary>
         /// Runs one console line. Returns true when the line asks the server to exit.
         /// </summary>

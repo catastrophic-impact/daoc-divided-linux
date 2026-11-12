@@ -35,8 +35,28 @@ Find them with `grep -rn "daoc-divided-linux:" source`. Everything else we added
 | `AutonomousPopulationController.cs` | load governor holds logins; bracket bots are not ramped in; `QueueLogin` |
 | `LoginRequestHandler.cs` | `NewAccountPrivLevelProvider` (admin roles from `config/admins.json`) |
 | `ConsoleStart.cs`, `CoreServer.csproj`, `DOLLinux.sln` | admin host and Linux build |
-| `AutonomousBotGoalPolicy.cs` | exposes `FilePath` for the admin goals editor |
+| `AutonomousBotGoalPolicy.cs` | exposes `FilePath` and adds `Apply()` for the admin goals editor |
 | `AutonomousBotSchedule.cs` | "no players, no bots" (`BotPresence`) |
+
+## Merge resolutions (the files that conflicted at the DR-dev-0.1g sync; expect them again)
+
+| File | How it was resolved |
+|---|---|
+| `GameBot.cs` | the XP cap line is `Level >= ExperienceStopLevel \|\| BracketBotService.IsAtCap(this)` (upstream's stop level plus our bracket cap). `EquipBracketKit()` stays; upstream's comment on the next method wins. |
+| `AutonomousBotGoalPolicy.cs` | keep both: our `Apply()` and upstream's level scaling (`ScaleForLevel`, `WeightsFor`). |
+| `ConsoleStart.cs` | ours (`HandleConsoleLine`); take upstream's `ConsoleCommandClient.Create()` where it builds the command client. The file has CRLF line endings. |
+| `.gitignore` | keep both sets of lines. |
+| `README.md` | ours always (upstream's README is their Windows one, kept as `README-DividedRealms.md`). |
+| `GameServer.csproj`, `Tests.csproj` | not synced (they link Passport and TestClient): hand-merge upstream's new `EmbeddedResource` lines each time. |
+
+Not conflicts but ours, to re-check on every sync: `source/server/Admin.Host/OptionsAdmin.cs` lists the server settings the Options tab
+may change (marked `daoc-divided-linux:`); new upstream settings are added there by hand. 0.1g added 57; 24 are on the tab.
+
+## Changes that came from other people's forks
+
+Kept in our own files (so they cannot conflict with upstream) and credited in `changes.txt`:
+- ThatFontGuy (GitHub fork of this repo): admin screen reads big replies, `tui/daoc_admin_tui.py` (8 MiB line limit). Their fork also has a
+  `build.sh --cross` mode, and moves Stormforged for a custom class (Drengr); we did not take those (see `changes.txt`).
 
 Passport hooks removed from upstream files (re-check after each sync; `sync-upstream.sh` greps for them):
 `GameServer.cs` (`PassportDesk.Start`), `BaseServer.cs` (UPnP port line), `LotMarker.cs`, `CharacterCreateRequestHandler.cs`,

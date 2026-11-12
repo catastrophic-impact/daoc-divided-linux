@@ -31,6 +31,7 @@ public static class AutonomousBotGoalPolicy
 
     // The admin screen saves new goal percentages here. Every goal choice reads Settings, so new choices use the change;
     // saved tasks are re-checked by ReconcileSavedAssignment at each bot's next login.
+    // daoc-divided-linux: Apply() is ours (saves the goals the admin screen edits).
     public static void Apply(BotGoalSettings settings)
     {
         string path = FilePath ?? throw new InvalidOperationException("Bot goals are not initialized.");

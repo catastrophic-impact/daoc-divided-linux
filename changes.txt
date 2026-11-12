@@ -1,5 +1,12 @@
 CHANGES (short tldr, newest first)
 
+2026-11-11
+- Merged upstream DividedRealms a0555cd (DR-dev-0.1g, Catacombs and Crafting; 0.1b..0.1g) into branch sync-2026-11-11: build ok, 8,199 tests pass (tests only, nothing checked in game yet). Same cut-outs as before (Passport, TestClient, launcher, Godot client, upstream CI). Conflicts and how they were resolved are in UPSTREAM.md ("Merge resolutions"). GameServer.csproj and Tests.csproj were hand-merged: without upstream's new embedded resources about 1,500 tests fail.
+- Navmeshes: 161 existing ones are byte-identical to 0.1a; 3 new (zone339-341). build-release.sh now defaults to RELEASE_TAG=DR-dev-0.1g.
+- Options tab: 24 more server settings from 0.1g (bots_use_custom_classes, rvr_bot_perception, living tales, realm point percentages, quest_xp_by_level, login_account_notice and more) in Admin.Host/OptionsAdmin.cs. Upstream's 30+ epic-encounter switches are not on the tab.
+- Thanks to ThatFontGuy (GitHub fork of this repo): the admin screen could crash on a big bots.list reply (asyncio's 64 KiB line limit); their fix is in tui/daoc_admin_tui.py. Their other work (a `build.sh --cross` no-root build, and the custom Drengr class that takes Stormforged's client slot) was not taken: Drengr is not part of DividedRealms and renumbering Stormforged would conflict with every upstream sync.
+- Not done yet: DividedRealms' own client patch (client-patch.json: battleground zone files, doors/buildings, gamedata.mpk) is more than our Client tab does; needs a port or an optional switch. The new Catacombs zones may need client files: to be tested by the owner.
+
 2026-11-04
 - Merged upstream DividedRealms 084a433 (DR-dev-0.1a, the Fishing Update, 255 commits) into main. Left out on purpose: Passport Desk, TestClient, the Windows launcher changes, the Godot client (tools/upstream-exclude.txt). Server builds, 5692 tests pass (was 4887).
 - Checked: the 5 new world-update steps (dev8..DR-dev-0.1a) apply to a copy of the dev7 world; a smoke server on spare port 10350 (copy of the dist data) started, updated the world, took a player login (stock client via the bottle) and ran bracket bots in Thidranki. Startup error log = the old upstream noise plus 3 small new lines (Ring_of_Pumice loot, UniPortalKeep handler, spell target "ground"). NOT checked in game: fishing, bot quests/crafting/craft orders, bot corpses lying down (see below), load governor under load, "no players, no bots" with a player leaving and returning.

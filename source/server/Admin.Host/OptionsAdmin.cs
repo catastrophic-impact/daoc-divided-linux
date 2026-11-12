@@ -37,6 +37,34 @@ namespace DOL.GS.Admin
             "bracket_bots_fill_mode",
             "bracket_bots_keep_even",
             "bracket_bots_grace_seconds",
+            // daoc-divided-linux: DividedRealms DR-dev-0.1g settings worth having on the Options tab (switches and whole numbers).
+            // Bots
+            "bots_use_custom_classes",
+            "rvr_bot_perception",
+            "rvr_bot_spotters",
+            "rvr_group_pet_cap",
+            "bot_group_invite_player",
+            "bot_raid_invite_player",
+            "bot_group_player_loot_weight",
+            "bot_living_tales",
+            "bot_living_tale_raids",
+            "living_atmosphere_lines",
+            // Realm points
+            "rp_worth_seconds_released",
+            "kill_rp_bonus_percent",
+            "heal_rp_percent",
+            "mez_rp_pool_percent",
+            "stun_rp_pool_percent",
+            "repair_rp_percent",
+            "repair_rp_cap",
+            "underpopulated_rp_bonus",
+            "siege_contribution_keep_percent",
+            "siege_contribution_tower_percent",
+            // Quests, login, relics, loot
+            "quest_xp_by_level",
+            "login_account_notice",
+            "relic_players_ignore_pad_count",
+            "artifact_glass_named_max_spawns",
         ];
 
         private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
