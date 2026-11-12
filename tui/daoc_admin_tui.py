@@ -742,6 +742,9 @@ class DaocAdmin(App):
                                                     stdout=asyncio.subprocess.DEVNULL, stderr=asyncio.subprocess.DEVNULL)
         await proc.wait()
         ok = await self.wait_stopped(5)
+        if ok and proc.returncode != 0:  # daoc-divided-linux: gone, but without the final save (the script checks the log)
+            self.say("The server exited WITHOUT finishing its save: changes since its last autosave are lost. See logs/console.out.", error=True)
+            return True
         self.say("Server stopped." if ok else "The server is still stopping; check logs/console.out.", error=not ok)
         return ok
 
@@ -770,7 +773,12 @@ class DaocAdmin(App):
             note="./daoc-admin reopens this screen later."))
         if choice is None:
             return
-        self.exit(EXIT_STOP if choice["what"] == "stop" else 0)
+        # daoc-divided-linux: stop the server here, the same way the Stop button does, and close the screen only once it has saved and exited.
+        # (This used to call self.exit(EXIT_STOP): Textual's first argument is a result, not the exit code, so the screen always exited 0 and
+        # daoc-admin's "10 = stop" branch never ran. That branch only waits for the server anyway; nothing ever sent it the stop.)
+        if choice["what"] == "stop" and not await self.stop_server():
+            return  # still stopping: stay on the screen so the message stays visible
+        self.exit()
 
     # ---- buttons ------------------------------------------------------------------------------
 

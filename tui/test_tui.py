@@ -45,6 +45,14 @@ async def main():
         await pilot.press("escape") if False else await pilot.click("#cancel"); await pilot.pause(0.2)
         app.query_one("#tabs").active = "console"; await pilot.pause(0.5)
         assert app.log_seen and len(app.log_seen) == 3, app.log_seen
+        # Quit -> "Stop the server too" must stop the server itself (it used to exit the screen and leave the server running)
+        stopped = []
+        async def fake_stop(): stopped.append(1); return True
+        app.stop_server = fake_stop; t.pid_alive = lambda: 123
+        await pilot.press("ctrl+q"); await pilot.pause(0.4)
+        app.screen.query_one("#f-what").value = "stop"; await pilot.pause(0.2)
+        await pilot.click("#ok"); await pilot.pause(0.6)
+        assert stopped == [1], "Quit -> Stop the server too did not stop the server"
         app.save_screenshot(os.path.join(tmp, "shot.svg"))
     assert "rules.list" in calls and "rvr.status" in calls, calls
     print("OK", sorted(set(calls)))

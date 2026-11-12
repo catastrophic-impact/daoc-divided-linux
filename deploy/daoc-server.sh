@@ -127,7 +127,17 @@ stop() {
   pid=$(running_pid) || { echo "not running"; return 0; }
   kill -TERM "$pid"
   for ((i = 0; i < 120; i++)); do
-    kill -0 "$pid" 2>/dev/null || { rm -f "$PIDFILE"; echo "stopped"; return 0; }
+    if ! kill -0 "$pid" 2>/dev/null; then
+      rm -f "$PIDFILE" "$DAOC_HOME/run/admin.sock"
+      # daoc-divided-linux: a clean stop ends the log with "Stopped" (after the final save and the database checkpoint). Without it the
+      # process was killed or crashed mid-shutdown: the database file is still consistent, but changes since the last autosave are lost.
+      local log="$DAOC_HOME/logs/console.out"
+      if [[ -s $log ]] && ! tail -n 60 "$log" | grep -q 'DOL.GS.GameServer | Stopped'; then
+        echo "stopped, but the server did NOT finish saving (no 'Stopped' line in logs/console.out). Changes since its last autosave are lost; see the log." >&2
+        return 1
+      fi
+      echo "stopped"; return 0
+    fi
     sleep 1
   done
   die "server (pid $pid) did not stop within 120 s"
