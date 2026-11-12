@@ -41,6 +41,21 @@ class PatchError(Exception):
     pass
 
 
+# The patch has two independent parts, offered as two switches on the Client tab:
+CLASS_FILES = ("game.dll", "pregame/character_creation.xml")  # the extra classes: class slots and the creation buttons
+GROUPS = ("classes", "world")  # world = everything else: zone table, zones, doors, gamedata rows, art, splash
+
+
+def select(patch, group):
+    """The patch cut down to one part ("classes" or "world"); anything else (None) is the whole patch."""
+    if group is None:
+        return patch
+    if group not in GROUPS:
+        raise PatchError(f"unknown patch part {group!r}")
+    want = group == "classes"
+    return {**patch, "Files": [e for e in patch["Files"] if (e["Path"] in CLASS_FILES) == want]}
+
+
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 

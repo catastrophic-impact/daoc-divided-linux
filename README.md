@@ -148,11 +148,18 @@ retail game file in it) and applies it **in place** to your client folder, the s
 - new files made from stock ones: zone 253 (Abermenai) and zone 276 (Marfach) terrain, the Tara helms, skins and the fishing rod
 - `gamedata.mpk`: the new catalog rows, added by ID so any build of it works
 
-The tab shows the state (*ready*, *fully patched*, or *blocked*) and offers one toggle: **Switch to patched** / **Switch to original**.
-It only accepts stock 1.130 files (SHA-256 checked) and **writes nothing unless all 40 files check out**. Every replaced file is kept as
-`<name>.orig`; switching back restores them and removes the files the patch added, without the original client and **without
-copying the multi-GB client**. A client patched the old way (only `game.dll` and the layout, or with the Battleground fix on) is
-brought up to date from its `.orig` backups. Code: `tui/client_patch.py` (a port of the launcher's algorithm, see UPSTREAM.md).
+The tab offers the patch as **two independent switches**, each with its own **Switch to patched** / **Switch to original**:
+
+1. **Extra classes** (2 files: `game.dll` and `pregame/character_creation.xml`). Only needed to play the added classes (Death Knight,
+   the Sovereigns, Stormforged and the others); the stock client's classes work without it.
+2. **World and art** (the other 38 files: zone table, Abermenai, Marfach, doors and buildings, new items and skins, `gamedata.mpk`
+   rows, loading screen). Needed whatever classes you play, for example to enter a battleground at all.
+
+Each part shows its state (*ready*, *patched*, *blocked*). It only accepts stock 1.130 files (SHA-256 checked) and **writes nothing
+unless all of that part's files check out**. Every replaced file is kept as `<name>.orig`; switching back restores them and removes the
+files the patch added, without the original client and **without copying the multi-GB client**. A client patched the old way (only
+`game.dll` and the layout, or with the Battleground fix on) is brought up to date from its `.orig` backups. Code: `tui/client_patch.py`
+(a port of the launcher's algorithm, see UPSTREAM.md).
 A build without `tools/client-patch.json` falls back to the old two-file patch.
 
 ### Battleground fix (only without the full client patch)
@@ -165,7 +172,11 @@ puts it back. The classic table ships with the server (`tools/zones-classic.mpk`
 
 ### `launcher.bat`
 
-The **Create launcher.bat** button writes two files into the client folder: `launcher.bat` and the small login connector
+Optional. The retail client can't be pointed at another server by itself; `connect-local1130.exe` starts it with a server address and
+login. `launcher.bat` just runs that for you. It's useful when you start the client under Wine, Lutris, Steam or Bottles, and it also runs
+on Windows. If you already have your own way to start the client with a server address, you don't need it.
+
+The **Create launcher.bat** button writes two files into the client folder (the one you entered on the Client tab, next to `game.dll`): `launcher.bat` and the small login connector
 `connect-local1130.exe`. The batch file does what a hand-made one would:
 
 ```bat

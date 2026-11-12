@@ -125,6 +125,16 @@ try:
     assert cp.apply(work, real) == []
     cp.restore(work, real); assert cp.status(work, real)["state"] in ("ready", "partial")
     assert len(cp.apply(work, real)) >= n - 1
+    # the two parts are independent: patch one, the other stays as it was
+    cp.restore(work, real)
+    cls, wld = cp.select(real, "classes"), cp.select(real, "world")
+    assert [e["Path"] for e in cls["Files"]] == list(cp.CLASS_FILES) and len(wld["Files"]) == len(real["Files"]) - 2
+    cp.apply(work, cls)
+    assert cp.status(work, cls)["state"] == "patched" and cp.status(work, wld)["state"] in ("ready", "partial")
+    assert not (work / "zones/zone253/ter253.mpk").exists()
+    cp.apply(work, wld); assert cp.status(work, real)["state"] == "patched"
+    cp.restore(work, cls)
+    assert cp.status(work, cls)["state"] in ("ready", "partial") and cp.status(work, wld)["state"] == "patched"
     print(f"part 2 (real client, {len(real['Files'])} files, {n} written): OK")
 finally:
     shutil.rmtree(tmp, ignore_errors=True)

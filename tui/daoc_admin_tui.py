@@ -201,6 +201,15 @@ class Form(ModalScreen):
         self.query_one("#ok", Button).press()
 
 
+CLIENT_HINTS = {
+    "classes": "Patches {n} files: game.dll (the extra class slots) and pregame/character_creation.xml (the creation screen's extra class buttons). "
+               "Only needed to play the added classes; the classes of the stock 1.130 client work without it.",
+    "world": "Patches {n} files: the zone table (without it entering a battleground sends you to the login screen), Abermenai and Marfach Caverns, "
+             "door and building files for zones 0, 3, 100, 102, 206 and 207, the new items and skins, new catalog rows in gamedata.mpk and the loading screen. "
+             "Needed whatever classes you play. Files the patch adds are removed again when you switch back.",
+}
+
+
 class DaocAdmin(App):
     TITLE = "DAoC Linux Server"
     BINDINGS = [Binding("ctrl+q", "quit_screen", "Quit"), Binding("f5", "refresh", "Refresh")]
@@ -291,18 +300,26 @@ class DaocAdmin(App):
                     yield Button("Create bracket bots...", id="bracket-create", variant="primary")
             with TabPane("Client", id="client"):
                 with VerticalScroll():
-                    yield Static("Folder of your DAoC 1.130 client (in your Wine prefix, Lutris, Steam or Bottles). Patching is only needed for the extra classes.", classes="hint")
+                    yield Static("Folder of your DAoC 1.130 client (in your Wine prefix, Lutris, Steam or Bottles). The client patch has two independent parts below; "
+                                 "each keeps the replaced files as .orig, so you can switch it back at any time.", classes="hint")
                     yield Input("", placeholder="/path/to/Dark Age of Camelot", id="client-path")
-                    yield Static("", id="client-info")
                     with Horizontal(classes="buttons"):
                         yield Button("Check", id="client-check", variant="primary")
+                    yield Label("1. Extra classes (Death Knight, the Sovereigns, Stormforged and the other added classes)", id="classes-title")
+                    yield Static("", id="client-info")
+                    with Horizontal(classes="buttons"):
                         yield Button("Switch to patched", id="client-toggle", variant="warning")
-                    yield Static("Switches the two client files (game.dll, pregame/character_creation.xml; about 6 MB) in place. The originals are kept as .orig, so you can switch back at any time.", classes="hint")
-                    yield Label("Battleground fix: the plain 1.130 client sends you to the login screen when you enter a battleground (and has no Abermenai)")
+                    yield Static("", id="classes-hint", classes="hint")
+                    yield Label("2. World and art (battlegrounds, new zones, doors and buildings, new items, loading screen)", id="world-title")
+                    yield Static("", id="world-info")
+                    with Horizontal(classes="buttons"):
+                        yield Button("Switch to patched", id="world-toggle", variant="warning")
+                    yield Static("", id="world-hint", classes="hint")
+                    yield Label("Battleground fix: the plain 1.130 client sends you to the login screen when you enter a battleground (and has no Abermenai)", id="bgfix-title")
                     yield Static("", id="bgfix-info")
                     with Horizontal(classes="buttons"):
                         yield Button("Switch battleground fix on", id="bgfix-toggle", variant="warning")
-                    yield Static("Replaces only zones/zones.mpk (about 10 KB) with the classic zone table and keeps the original as zones.mpk.orig. Switch it off to put the original back.", classes="hint")
+                    yield Static("Replaces only zones/zones.mpk (about 10 KB) with the classic zone table and keeps the original as zones.mpk.orig. Switch it off to put the original back.", id="bgfix-hint", classes="hint")
                     yield Label("launcher.bat: the server never starts the game. This writes a launcher you run yourself (wine, Lutris, Steam...)")
                     yield Input("", placeholder="server host:port", id="client-server")
                     yield Input("", placeholder="account (blank = asked each time)", id="client-account")
@@ -512,9 +529,17 @@ class DaocAdmin(App):
         except (OSError, ValueError, client_patch.PatchError):
             return None
 
+    FULL_ONLY = ("#world-title", "#world-info", "#world-toggle", "#world-hint")
+    LEGACY_ONLY = ("#bgfix-title", "#bgfix-info", "#bgfix-toggle", "#bgfix-hint")
+
     def show_client(self):
         folder = self.query_one("#client-path", Input).value.strip()
         box = self.query_one("#client-info", Static)
+        full = self.full_patch()
+        for sel in self.FULL_ONLY:   # the world switch only exists with the full patch, the old battleground fix only without it
+            self.query_one(sel).display = bool(full)
+        for sel in self.LEGACY_ONLY:
+            self.query_one(sel).display = not full
         if not folder:
             box.update("Enter the client folder, then press Check.")
             return None
@@ -524,24 +549,24 @@ class DaocAdmin(App):
             box.update(str(exc))
             return None
         toggle = self.query_one("#client-toggle", Button)
-        bg = client_tools.bgfix_state(folder)
-        full = self.full_patch()
-        info["full"] = full  # daoc-divided-linux: with the full patch the toggle covers every file, not just game.dll and the layout
-        if full:
-            st = client_patch.status(folder, full)
-            info["full_status"] = st
-            restore = st["state"] == "patched" or st["state"] == "blocked" and st["backups"]  # a half-patched or old-patched client is patched the rest of the way
-            info["full_restore"] = restore
-            self.set_button_label(toggle, "Switch to original" if restore else "Switch to patched")
-            toggle.disabled = st["state"] == "missing" or st["state"] == "blocked" and not st["backups"]
-            self.query_one("#bgfix-info", Static).update("Battleground fix: included in the full client patch" if st["state"] == "patched"
-                                                          else "Battleground fix: part of the full client patch (use Switch to patched)")
-            self.set_button_label(self.query_one("#bgfix-toggle", Button), "Switch battleground fix on")
-            self.query_one("#bgfix-toggle", Button).disabled = True
-            box.update(f"Full client patch ({st['total']} files): {st['state']}   backups: {'yes' if st['backups'] else 'no'}\n{st['message']}")
+        info["full"] = full
+        if full:  # daoc-divided-linux: the two parts of DividedRealms' client patch, each with its own switch
+            for group, toggle_id, info_id, hint_id in (("classes", "#client-toggle", "#client-info", "#classes-hint"),
+                                                       ("world", "#world-toggle", "#world-info", "#world-hint")):
+                part = client_patch.select(full, group)
+                st = client_patch.status(folder, part)
+                restore = st["state"] == "patched" or st["state"] == "blocked" and st["backups"]  # a half or old-patched part is patched the rest of the way
+                info[group] = {"patch": part, "status": st, "restore": restore}
+                button = self.query_one(toggle_id, Button)
+                self.set_button_label(button, "Switch to original" if restore else "Switch to patched")
+                button.disabled = st["state"] == "missing" or st["state"] == "blocked" and not st["backups"]
+                self.query_one(info_id, Static).update(f"{st['state']}   ({st['total']} files)   backups: {'yes' if st['backups'] else 'no'}\n{st['message']}")
+                self.query_one(hint_id, Static).update(CLIENT_HINTS[group].format(n=st["total"]))
             return info
         self.set_button_label(toggle, "Switch to original" if info["game"] == "patched" or info["layout"] == "patched" else "Switch to patched")
         toggle.disabled = not (info["can_patch"] or info["backups"])
+        self.query_one("#classes-hint", Static).update("Switches the two client files (game.dll, pregame/character_creation.xml; about 6 MB) in place. The originals are kept as .orig.")
+        bg = client_tools.bgfix_state(folder)
         self.query_one("#bgfix-info", Static).update({
             "live": "Battleground fix: OFF (the retail zone table: entering a battleground will send you to the login screen)",
             "classic": "Battleground fix: ON (classic zone table; all four battlegrounds work)",
@@ -561,27 +586,36 @@ class DaocAdmin(App):
     @on(Button.Pressed, "#client-toggle")
     @work
     async def _client_toggle(self):
+        await self.toggle_part("classes")
+
+    @on(Button.Pressed, "#world-toggle")
+    @work
+    async def _world_toggle(self):
+        await self.toggle_part("world")
+
+    async def toggle_part(self, group):
         folder = self.client_folder()
         info = self.show_client()
         if not info:
             return
-        full = info.get("full")
-        if full:  # daoc-divided-linux: the whole DividedRealms client patch
-            st = info["full_status"]
+        if info.get("full"):  # daoc-divided-linux: one part of the full patch (classes | world)
+            part = info[group]
+            st, patch = part["status"], part["patch"]
+            name = "extra classes" if group == "classes" else "world and art"
             try:
-                if info["full_restore"]:
-                    if not await self.push_screen_wait(Confirm("Switch to original", f"Put the original client files back in\n{folder}\nfrom their .orig backups, and remove the files the patch added?", "Switch")):
+                if part["restore"]:
+                    if not await self.push_screen_wait(Confirm("Switch to original", f"Put the original {name} files back in\n{folder}\nfrom their .orig backups" + (", and remove the files the patch added?" if group == "world" else "?"), "Switch")):
                         return
-                    changed = await asyncio.to_thread(client_patch.restore, folder, full)
-                    done = f"Client switched to the original files ({len(changed)} files)."
+                    changed = await asyncio.to_thread(client_patch.restore, folder, patch)
+                    done = f"Client {name} switched to the original files ({len(changed)} files)."
                 else:
                     if st["state"] not in ("ready", "partial"):
                         self.say(st["message"], error=True)
                         return
-                    if not await self.push_screen_wait(Confirm("Switch to patched", f"Apply the full DividedRealms client patch ({st['total']} files) to\n{folder}\nEvery replaced file is kept as .orig. Only stock 1.130 files are accepted; nothing is written unless all of them check out.", "Switch")):
+                    if not await self.push_screen_wait(Confirm("Switch to patched", f"Patch the {name} files ({st['total']}) in\n{folder}\nEvery replaced file is kept as .orig. Only stock 1.130 files are accepted; nothing is written unless all of them check out.", "Switch")):
                         return
-                    written = await asyncio.to_thread(client_patch.apply, folder, full)
-                    done = f"Client patched ({len(written)} files written)."
+                    written = await asyncio.to_thread(client_patch.apply, folder, patch)
+                    done = f"Client {name} patched ({len(written)} files written)."
             except (client_patch.PatchError, OSError) as exc:
                 self.say(str(exc), error=True)
                 return

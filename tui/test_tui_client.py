@@ -27,20 +27,23 @@ async def main():
         app.query_one("#tabs").active = "client"; await pilot.pause(0.3)
         app.query_one("#client-path").value = str(work)
         await pilot.click("#client-check"); await pilot.pause(0.5)
-        info = str(app.query_one("#client-info").render())
-        assert "Full client patch (40 files)" in info, info
-        assert str(app.query_one("#client-toggle").label) == "Switch to patched", app.query_one("#client-toggle").label
-        await pilot.click("#client-toggle"); await pilot.pause(0.5)
-        await pilot.click("#ok"); await pilot.pause(2.5)
-        info = str(app.query_one("#client-info").render())
-        assert "patched" in info and "Fully patched (40 files)" in info, info
-        assert str(app.query_one("#client-toggle").label) == "Switch to original"
-        assert "included in the full client patch" in str(app.query_one("#bgfix-info").render())
-        await pilot.click("#client-toggle"); await pilot.pause(0.5)
-        await pilot.click("#ok"); await pilot.pause(2.5)
-        assert str(app.query_one("#client-toggle").label) == "Switch to patched", app.query_one("#client-toggle").label
-        assert not (work / "zones/zone253/ter253.mpk").exists()
-    print("OK: Client tab applied and removed the full patch")
+        txt = lambda i: str(app.query_one(i).render())
+        label = lambda i: str(app.query_one(i).label)
+        assert "(2 files)" in txt("#client-info") and "(38 files)" in txt("#world-info"), (txt("#client-info"), txt("#world-info"))
+        assert label("#client-toggle") == label("#world-toggle") == "Switch to patched"
+        assert not app.query_one("#bgfix-toggle").display and app.query_one("#world-toggle").display
+        async def press(i):
+            await pilot.click(i); await pilot.pause(0.5); await pilot.click("#ok"); await pilot.pause(2.5)
+        await press("#client-toggle")   # classes only
+        assert label("#client-toggle") == "Switch to original" and label("#world-toggle") == "Switch to patched"
+        assert "patched" in txt("#client-info") and not (work / "zones/zone253/ter253.mpk").exists()
+        await press("#world-toggle")    # then the world part
+        assert label("#world-toggle") == "Switch to original" and (work / "zones/zone253/ter253.mpk").exists()
+        await press("#client-toggle")   # classes back to original; the world part stays patched
+        assert label("#client-toggle") == "Switch to patched" and label("#world-toggle") == "Switch to original"
+        await press("#world-toggle")
+        assert label("#world-toggle") == "Switch to patched" and not (work / "zones/zone253/ter253.mpk").exists()
+    print("OK: Client tab: classes and world parts switch on and off independently")
 try:
     asyncio.run(main())
 finally:
