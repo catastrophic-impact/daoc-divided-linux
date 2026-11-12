@@ -1,0 +1,164 @@
+[
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2384a7ad-f5e9-5990-bee7-0a2600eef03d",
+   "MobName": "greater myling",
+   "LootTemplateName": "family magical 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "65f2b080-a3b6-591c-8199-4aeb55ba6d96",
+   "MobName": "greater myling",
+   "LootTemplateName": "Myling",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d4268a35-d4c5-5dc5-a26b-02baaa97aad8",
+   "MobName": "hostile myling",
+   "LootTemplateName": "family undead 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ee684c3-fe2c-5c04-99dd-f708922cac3f",
+   "MobName": "hostile myling",
+   "LootTemplateName": "Myling",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "828a601b-f004-58e5-bf0a-de8e7159960b",
+   "MobName": "choker",
+   "LootTemplateName": "family plant 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7c0f9995-f768-5a21-9e4f-3c6b92a6e629",
+   "MobName": "choker",
+   "LootTemplateName": "Strangler",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b750480a-9333-5d04-aecd-eab62e05ff4a",
+   "MobName": "shackler",
+   "LootTemplateName": "family plant 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "46fcb88a-73df-5227-b1e1-3d3745a67b9d",
+   "MobName": "shackler",
+   "LootTemplateName": "Strangler",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1e308360-63cc-5275-9b71-30d2e8e0a7f1",
+   "MobName": "Throttler",
+   "LootTemplateName": "family plant 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "19e9aa58-d4a7-581c-aff7-517ba16190be",
+   "MobName": "Throttler",
+   "LootTemplateName": "Strangler",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0374e6e3-0650-5099-a407-98e6fc32c321",
+   "MobName": "undead soldier",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d8a885a6-c93b-5b97-aeff-753224583702",
+   "MobName": "Loken",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e475d64c-3ee3-5404-abbf-3e11839c9f26",
+   "MobName": "Oona",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4032e8b0-63b1-57ff-9b1c-fb777f45f8a4",
+   "MobName": "Basilius",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "26bb97bc-aa56-5183-a908-a790549b0af4",
+   "MobName": "Develin",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6a294269-f707-58b3-b85b-e40f6fc037b0",
+   "MobName": "Lord Sanguis",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "997a5923-fc6f-593a-b4b5-dd6534483dc7",
+   "MobName": "Abomos the Soultrapper",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8c43f5c4-3a62-5eb4-a56f-c151b304bef2",
+   "MobName": "Luriquay",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ }
+]

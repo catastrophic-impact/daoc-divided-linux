@@ -1,0 +1,401 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T22:46:22.227138+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Mob",
+   "key": "08b2dc53-8173-4b6d-ae5a-b2423daa670b",
+   "op": "update",
+   "before": {
+    "AggroLevel": 200,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "27cf363b-cdb1-47b1-be53-d011a86fe0b9",
+   "op": "update",
+   "before": {
+    "AggroLevel": 200,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "b841f12c-072a-438f-8959-0ca123c7f892",
+   "op": "update",
+   "before": {
+    "AggroLevel": 200,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100006396",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100006486",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100006719",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100007024",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100007490",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100013067",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100015974",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100006396",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100006486",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100006719",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100007024",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100007490",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100013067",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100015974",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100006396",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100006486",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100006719",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100007024",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100007490",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100013067",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100015974",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 800
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "130_100001551",
+   "op": "update",
+   "before": {
+    "AggroLevel": 75,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "130_100001959",
+   "op": "update",
+   "before": {
+    "AggroLevel": 75,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "130_99999700",
+   "op": "update",
+   "before": {
+    "AggroLevel": 75,
+    "AggroRange": 500,
+    "Flags": 0
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Flags": 16
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

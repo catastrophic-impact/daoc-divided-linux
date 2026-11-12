@@ -1,0 +1,2025 @@
+[
+ {
+  "table": "CraftedXItem",
+  "key": "1f06c54e-c343-11ec-8871-c5d0c1587542",
+  "set": {
+   "IngredientId_nb": "boiled_St._Johns_wort"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "66d1b5d7-c33e-11ec-8871-c5d0c1587542",
+  "set": {
+   "IngredientId_nb": "boiled_St._Johns_wort"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c9035d95-c346-11ec-8871-c5d0c1587542",
+  "set": {
+   "IngredientId_nb": "boiled_St._Johns_wort"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0b1b2905-0aec-5867-a29c-c8ed5f51dfd9",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ebdc8242-bb30-5fd4-a69d-62c559980ef8",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c1ed3cbc-f8f5-5ef4-bb07-2662017711e4",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6b7cafbf-7dba-5e1a-91e1-41d819814761",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6551b46c-4a1f-5084-abbe-58c776d36590",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d6f939bf-ce59-5ab9-89ba-012761aa8638",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d1fd9b7b-022a-5171-ae9e-f6808ed441e3",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "50b80bd5-e9b2-554a-b23f-92c53372f166",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d571e480-2268-5b26-8260-c989210b20d6",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "91d5215f-8663-5d63-93f7-9316102f78f8",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e6e42fe7-d50b-55e7-9ec1-fb8e8f0ad5b7",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ba5bd0bd-df73-58d2-b613-bee617d76187",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3d0cc8ad-e543-5ad3-adb7-643b0c6863d6",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "bed057bd-dae7-564e-a42f-a1c1bc57dc23",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2097006e-1bea-524f-a40e-931aba0ba794",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ed76ef88-7a6e-506c-91f2-e78e7c7dc2d7",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4770f550-45b0-52b4-8288-66fc6e9bcb52",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b65e65e4-c897-5ced-9913-fd90f105b980",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f624aa9a-6cc5-5abf-91da-73a6c412b8db",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "396ad4dc-a2b4-52e2-bee0-b9c998aef71a",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "05b4b8b3-f89c-5f8a-a9a9-193318db83a1",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e7764dcb-8369-54ce-845f-1189cf4ba4c8",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "362711d0-b575-5667-a8cf-1a32434acc63",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8a61a9f3-f362-5dc5-9b07-3a88ef1cacd6",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5a7d14ae-aa65-5abb-84d9-29a6cbec0942",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "356f1ae9-1346-5da7-acaa-5e1626ea9d8d",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d5dfc587-f23f-5d78-95ee-c302073baf14",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7bbfc2bc-7ade-5477-8012-a4a221e89158",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f65c501a-259f-5959-b7c0-0769407ed951",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aba4d9ac-fb6e-5e0f-9341-df8c5d6df2fc",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "abd35c00-58bc-5ded-a9c9-9bc3543a9d51",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a9bc0bdc-1385-5ebf-b30f-cea4adf54179",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "32e83f20-33ec-5557-b498-0db11f9aaaf6",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4bfd7035-8da1-5c46-9366-5e0ea2319fe9",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e8b23e43-581d-5bc8-a345-0023c855fcb4",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "fd2c15cc-602d-5d69-918e-9565499638b0",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5c48716b-a8f1-5e0d-a4e6-c9e75cf25e15",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ae2cc7e7-18e2-5a46-9c8a-0b3257ec9d66",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "cf0ead5f-5ea5-58fd-91c9-a46022d284d9",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "434cb4b2-8b99-59c1-b55b-92c3b5473694",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3f742296-b868-5224-aba3-3f578500f945",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "90d8c10b-f159-51ec-9ab9-bdf95800d7c4",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "adb533b7-3b92-526c-bedd-effe48c78a3f",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6c828948-459c-51f7-8a94-81640a8ce9c6",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f4143031-b0a1-5c5e-a7f0-847e521b78c7",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "01c70c1e-6249-534e-ae3e-dcc5aa4bb4ec",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5f0d9a4f-bec1-5296-92a9-3656c20701c1",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5b25c728-6f08-5091-b7f6-53fc96f7ff52",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6b454898-b7a5-53a5-ac07-cf259f1638f9",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2c0a4ee7-e3ff-50d8-bdce-01c14f041a46",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4adf34af-c38d-58b2-8ec8-7802dd1e06ef",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a57471a4-463d-5091-b21c-334d4e87980a",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9d73068d-ecf5-5800-869f-cf17fc687724",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1f357216-9a2d-5cb7-98b9-0ba130f8bd72",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5c31b8ae-40bb-5b6e-bac2-c7990ffa0482",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e8792564-3b7f-5451-986e-700275e1e4b1",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f7031fea-a88e-51a7-845c-1ed629bf8cfd",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aa585391-0f49-5f2a-b9dc-7f8ed920c95f",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "93dc33c4-0b8a-594c-8b1f-c890b0b92006",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "71aa5806-0fba-529c-ac81-906a0baeefc2",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4fce3517-1778-5393-bf1b-fe6d7ed7a145",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "bcaf9b5e-df72-5958-9906-46fd47ee5638",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "78e568f7-08a2-5692-8501-bb06c67164ad",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7f11d020-aa1b-5288-bf1f-16eed6ef3568",
+  "set": {
+   "IngredientId_nb": "tanned_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d32591b9-e3d9-56fb-b7d9-bbd7bb775601",
+  "set": {
+   "IngredientId_nb": "hard_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7add7c59-1e93-59da-8895-4354636e5319",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2ffca095-976b-510c-8e03-db657ac9da14",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "41d1b1c0-5e38-53aa-b162-6018d3a4d307",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c060c06e-ffcf-500a-ace8-f8fd19e1a3ea",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "01c8aca1-79f2-59da-af1f-0b9b8eb64be3",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c8ed2c72-c08a-5d23-9211-22bdf8bb2bfc",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9075245c-c1a7-56f8-af89-0e76f6553ae3",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7de392cd-872d-52fd-be95-daa473c1f1e4",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ead3dde2-9391-52f6-a47a-316700305b75",
+  "set": {
+   "IngredientId_nb": "gossamer_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "634619f7-ea82-5146-bc6f-7e18cb7c3d6d",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ee55fbde-7d7b-5115-9ac0-761f19cf2f9a",
+  "set": {
+   "IngredientId_nb": "sylvan_cloth_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "af23de84-184a-5605-9eca-08b3825ae3ea",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e4b4125f-e116-5e8b-af01-2ce17b2cdf9f",
+  "set": {
+   "IngredientId_nb": "rigid_leather_squares"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0b6642e0-9934-55dd-963f-c2a9ab751747",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "37e23f90-4973-5f53-bf56-a4a2bc6319ae",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5de8e289-d6dc-54ac-80b6-d11e14894de3",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f7acdfc3-ac05-5ca7-89cb-f0e1e21acf20",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "70739495-693c-5195-8402-98cb9797413f",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d0d47c44-fa60-520a-9bd3-e38176fded8d",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "520261cb-49df-55fb-970e-22a134aa04c2",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "06af1f9f-8d57-5a5b-b81c-f2dcbecfcc77",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "237b8218-af1b-59e7-9898-0dcd511ba3bc",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a93929cf-2923-53a8-9d26-d493b63d030a",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "019c885b-520a-549b-bed2-1b97a709c7df",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "bc2c8201-8453-5452-ac0a-7d1bc05ac040",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2882e8ea-bbc7-5c1c-8b60-eca07d440480",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "99e1e18f-bc2f-57d6-ac35-73dacb61e4d7",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9e12aa61-7443-56a3-8802-717fcbd2c4dd",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b20c70fb-82d0-5c13-b229-98d42ccca710",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b22bf2ec-b48d-5d50-bfb6-d0dbd39d3be8",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a1696b66-a86c-511b-8074-534eb05a43b0",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "80b85e49-8c03-5e3f-b5f0-46623f1333f0",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "652ac380-18ef-5ed9-95e7-0d4412586a13",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ff7dc89b-8d17-5e9c-9c5d-7183a9cb846f",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ef91e72e-6088-52ee-89e4-b5067de6e977",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "99a364bc-6442-5054-8a91-b9f8b0365207",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "dbdeecca-cc4a-5534-bb89-5cfb8f533e26",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d67662e3-9193-56a8-a463-ad94db37d1c0",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "21a28a8d-ed07-533d-9d35-7153d5fcd819",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "41022398-ff0f-5a22-9e32-9815619c7695",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4dafe5be-8817-5d59-adfa-ecbc3317a82e",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e31eb8c9-1c63-5ac6-afbd-15e6139700b4",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "80fbf473-707d-54dd-85b9-00fcf7771321",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "394571fc-7726-5e9d-9f72-fe7439d68cd8",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "82287a55-687c-5ae7-984a-f02850178c87",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c7f57495-7167-5ee7-89df-b60984458142",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "39b5c88c-9736-5a51-82d7-04ba50bf3981",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a8bb8f3f-3c01-5a87-8247-654816d5116e",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "51250b1f-6b69-5211-aa67-95fa2cfe68e4",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6be1c3c8-f7b9-5212-ae96-4cfbadd53a9d",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7a0e83fa-5d9c-5238-8cf5-67d14cb1c936",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8316409d-18cc-5072-9e4b-8ebf4e3a9e71",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d14f1b13-2e91-58e5-b511-ad72d49ed495",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "397ac113-e86e-5cef-b26c-042efba59bda",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "32767629-e584-5261-abe7-1e60b1ad604b",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8f840aab-3e73-5e43-8452-051902848238",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2aaf46bb-178b-5901-8e8e-4edee762d35f",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c4c67192-0062-5ef1-91f5-eef68151911e",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0358e02d-726a-591a-83bb-39999192645a",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "408207f5-3e5d-5076-97c2-566496ab22b1",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e22b5283-ffc0-57a1-9c8c-d861db4e1df8",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aa659a1f-ecd3-52a5-9cad-b8c5aaeb4382",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aca8144f-48c8-508e-9068-dc5a3c191640",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "72f65733-43a6-5d5e-af4a-463c617c2a60",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8da77f13-39ec-53b1-9e46-6f61c414a32b",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4e612275-d76c-5ba4-866e-3b9afa4c4b47",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8dedf482-303c-5457-8b9d-54a13d4d105a",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ce5596a4-d292-58e5-8162-de0c814831b1",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e214f3cc-8e1a-575c-81ec-83aedf35ec6e",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "218b94aa-668e-543a-a890-2a1ff826a721",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "30f2e7b3-3de8-5973-9961-0aa2eedf6869",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1d46061e-991c-546f-80f9-dc4f77ce7430",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c0011799-60c6-5d62-bee1-dccaae038cb2",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1ec2211c-3dd7-5865-a9a1-b7ea6d85663e",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5275d727-6f22-5854-98d6-190152a7198a",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3b3c1685-974e-5074-afb4-32665c5ef259",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c861e00f-1b64-5eb3-b9e1-b470238fcf5c",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "774e84bf-1070-5518-bed0-28376118ac49",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9f943368-235b-5280-8ad5-14885a8deaf7",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "dbcc5c47-1f38-56fb-a840-d7442750f5da",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "64a0c53f-8a51-504c-a7da-a4c9068da428",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9dbb6450-f6a0-570c-80fe-0322dec54619",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6c310789-a893-50f9-98a0-5c8c45fb7432",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f310183b-145c-5cb2-bbce-7ee83402e86c",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b93e04d6-a9f8-588d-b4a9-fcffcbc9e343",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b96bee57-6fa1-580a-876e-02c952e13e09",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e8f65f3c-d952-5b94-9e36-84b3c3d3290d",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a447923d-0b73-59e5-87c1-5ffa0793d793",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "375744fd-02c8-5f8f-8b80-65b017a0b5c0",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ecca3d1b-87e6-5a38-9d05-2f64474906b6",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "482de974-e029-5e65-bdf2-d74cc594f2a6",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2c8019ef-e03e-5381-82f9-15457cac01d4",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ac7becc3-cd53-5cf4-a2bb-402a94ec2c70",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ff821d35-139b-5b4b-ae94-ddb136fc0adb",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "72f3f3ca-c0bf-5f8f-9aaa-cfe73fbc938c",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ecf81d2f-331b-5f71-8e6f-bc55db4f5d3c",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aafe5449-3eb5-5f52-8aec-5a9654e90c67",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "60988727-a4ab-5e32-9177-dc41ce5559e8",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a529aaca-1871-5cd5-af59-0062228bb1db",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f8c6b988-f60c-5d1c-aca0-18953bd00057",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "24327283-d358-5523-a618-bca01c7a1705",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "dc9b6e4c-bacb-57b1-914a-4f73ae134178",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6f98901a-e290-52d2-9995-f71ffbe7ded0",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4b634805-00ce-5e63-b57e-0d75e6a46178",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c37ebfad-fae2-55fe-94d7-bff128792005",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "fed1df7a-c8f0-5963-8a15-0e64ee5c7f0c",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "01e451a7-c046-51a2-ba42-a65c17fa0fd8",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d1fe8bb2-3853-5674-8718-fb79d7f2ad07",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "cd87904f-83e2-52f2-9fec-f10739ca2f46",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "23145429-bbbb-5708-88e8-46d052e82592",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2e07320f-cdf2-5152-adca-ddca36b829f5",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "58fbc023-4b7d-5a93-9686-72395d372ab9",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "eb9b5c9a-772c-5765-81eb-25680ec1628b",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6c820124-2be1-5085-8edc-db6f7fb0cad9",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "46b072e6-0a05-5af9-a354-e2c77b442c97",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3df71d0e-c8d6-5a9d-a34f-46f3ec2854d5",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d2f09894-274d-5eb7-a06f-5dae9b3b6c65",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "41b236ab-2677-5539-9318-5a596cebe23c",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2f9098f3-7d1c-502a-8bf9-6e866dca44d0",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d0125c08-88d3-582a-b447-0b7977912a5e",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8d0c1271-73b2-5a69-870e-51b2e3f3b9c3",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8f2a5583-0314-577a-9a10-1cf9c6467cb7",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c7d39752-5e4e-5b8e-95d7-a86677174733",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d8005a36-220b-5079-921c-7403027dd805",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "cf781748-9f20-57e8-bfab-3ed916b2af4f",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "945498cb-70c5-5811-9ccf-ac7240711c69",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d8ff07b9-cb70-5866-a611-4fe22bdbbe54",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "86aeaa6b-6ea9-5e39-9788-91898d9b7232",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "bacd9741-7d88-55f0-b2c0-1699626231e3",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2cc3fdfd-1ea5-53bf-8230-86853d667771",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "9ec7cc91-8e4f-59ff-9b6e-4024887f1512",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f3fc1436-b0f4-5d9e-a647-84ebe43ad816",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "93c18891-1ea1-5c49-b7d9-664e90250da0",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2715248b-1499-5ad3-a6cd-127bdaec21fb",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f3ffc76b-8c1c-50a2-a808-d18cbad5ace6",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5ff9989f-826d-511e-a5c7-64a227fa77f7",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "89d2ce3b-d79f-5d8d-8f00-34f618bdf47c",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e6cda3c0-9013-5f12-8e43-7b46269f841d",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1bcfa36d-2dc0-598c-a89d-08cd4e656069",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7042e672-12ac-5623-9a80-a83549d96d2a",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f884d3ef-b629-5a76-8a1f-be8eb218cd2a",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "450c978f-4e9d-58d7-93a0-5e9adc157d82",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5a32e14b-4d09-572a-a6f3-e5b9c806d18a",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "58ce030f-141d-50a0-a8eb-aa6c4b4ba243",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "29763bd1-0bd4-5cdc-ab88-78660281ce27",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "6a28d70a-1ce6-5002-87d8-4f46843bdd30",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "33d0ccb4-3460-5adf-b820-d1c19d76f4e4",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f315da3b-39c8-5afe-9e9a-b81b70f4c103",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "721dcacb-c53f-58ba-be10-db12219653e0",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e4e8bd08-bec9-5b53-94b7-ba3ac92c2764",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "21c3b983-3845-5ae1-b67c-518d9bdb3a06",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "dc1feb95-7299-5fdf-b4c3-cca25ab02f0b",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "11027f7f-4e8f-5253-9c60-40c707c18c24",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f147d799-57fd-5533-8c96-7172e369f9ee",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "24965ec0-016e-5dc5-8102-e81fa05b0be1",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7c2181f4-a390-55ed-a755-c26a8385f06c",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a8229296-c4da-5393-b22c-76d6c7808cd7",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a06dcd29-e436-5be6-ae1a-160a8a9e5c6c",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "dd94536e-488d-53de-a0ef-392817ceeb84",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "33a7414f-5459-52a8-8b72-3def674081fb",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "471e24d0-2505-5c45-98fd-acac0fbe2a79",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "f77b7235-6d47-5c53-ab40-9ad50afe2100",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2afb7b6d-b147-5a24-9ece-7ef6bf85e39f",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2349bba1-8bcc-5d91-ae22-15a32aa4ee9b",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d5d07ec9-5f21-5abc-bd5b-9d1f0c1e7955",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "133a523c-8611-5446-8be4-8bb59ec9074e",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "23c0f21f-f307-544c-93e8-b935334149de",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "61adf8ad-9dbc-5e9e-8d61-1b70c411dab9",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1ab4553c-a2f6-5095-903c-788d45b924a3",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "7a99e734-a29d-506d-800c-84acd2287bc8",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ffde37fc-2396-59ac-a465-a7cc75ba3232",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "fd7ba40c-e925-508a-a4fc-8be3b0618b20",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "35cd84d6-b5ba-5f90-ac4d-a066ae62f69c",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "77a75b68-c4f7-57f9-bc6a-7fbafd329233",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d7cf95a3-52ff-5091-a458-1743e6fd050a",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "34a8b972-20db-5480-a148-f71b58b65bce",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3f9fbef6-8772-5c5d-90c5-96850bb95b4c",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "700369bd-2e51-5262-afeb-44bf10fb8e03",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3069aacd-760f-5b8c-9348-60df6bd31db5",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "48496bd7-01ed-5746-ac0e-a53fc0c0a3cc",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "3dd992cb-9a23-52e6-8245-62ac2a851d97",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c6dbbcbb-50f9-5ebd-bac7-363216401434",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "07d2dd8b-f8af-5f1d-804e-356134af06ae",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "056497b1-eecc-5cce-8284-2d24930943b5",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "bf4987e2-0b67-5365-aed6-7f77e79c3b34",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "102a9369-2906-58af-8873-cf67a88a39da",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0a479679-6b1d-5dc0-a1e9-dbe601744a06",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "a7daa23a-bb95-519d-87d0-954176f5e443",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "2cae02eb-c91a-5639-9503-8819bd035b8c",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "589cfd79-613d-5469-9a62-f8cee3444eb3",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "44846610-4271-5585-87ae-4192d74a5633",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "967cf906-b2c7-5550-87f4-9d4838fca994",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d652c336-77cf-5934-bcd5-1115e24f541b",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "35284c2d-dcce-5738-9448-d482f76acf52",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0cc7e579-942c-5e89-a8e0-a4d1fef55e0f",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "aa627ca1-f6d6-5231-b499-42dce3093d62",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "204998ed-8527-5919-8cb7-416bb488a5b5",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "4cbde994-19bb-5269-82f2-1b780c7f7561",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "176368dc-4f43-55e3-b291-1d721b190083",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b05619cd-687c-59b1-8aa1-2ced7e9f2287",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "5d6d43bd-a4df-505d-98b4-6f79f2a98df5",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "da6e5c6c-42e2-50a1-82f5-bfc7227e7455",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "806b25de-9149-5f08-9cc7-cb7d1aabc6e4",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d3f07a37-f000-5a30-8fe3-c6b12558db49",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "b73df2ef-bd33-5835-a927-81092c67dca3",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "e95a9442-a459-5e42-801a-bac43b55092f",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "551afdb8-4f26-5726-aba2-2c4dab3b059c",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "167ca8ab-8254-5573-ab0e-5a3eedebafd0",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ef5cede5-728b-5d24-afed-2e2b6f8fd5c8",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "d493ce34-4e5f-5ff6-9587-c58bbb8e242b",
+  "set": {
+   "IngredientId_nb": "Dust_of_Creation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "21fb8718-8faa-5e60-8bde-5a97199d0704",
+  "set": {
+   "IngredientId_nb": "Vial_of_Heavenly_Breezes1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "0106922c-6128-57da-b36e-c4fa04cbc1d0",
+  "set": {
+   "IngredientId_nb": "Torch_of_Innovation1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "c0092e79-12f0-5a0d-84cf-406bb8b1f887",
+  "set": {
+   "IngredientId_nb": "Cauldron_of_Vivifying_Water1"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "8765f314-da9b-507b-b007-8d20590588f3",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "54846b8d-fd29-53f3-b89f-7852c75e9723",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ad5f36b1-e2df-538c-90d4-4f87d933ac8f",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "34c62a0f-967c-5256-af58-0308f52d128a",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "1e3944f6-ee48-5e05-b229-47acb69a3243",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "ae9a180f-4b49-5a98-a3a5-8bed6e9c43cc",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "14a81bf0-e9cf-5e83-97d4-a57afc13e944",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "key": "240c0ee5-265d-5b9d-92c4-691636fc445d",
+  "set": {
+   "IngredientId_nb": "broken_dragonsworn_weapons"
+  }
+ }
+]

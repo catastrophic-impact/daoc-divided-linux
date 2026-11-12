@@ -1,0 +1,6475 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T01:26:23.477343+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Spell",
+   "key": "offline-toa-item-801591",
+   "op": "update",
+   "before": {
+    "Duration": 6
+   },
+   "after": {
+    "Duration": 0
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-toa-item-801592",
+   "op": "update",
+   "before": {
+    "Type": "PowerHeal",
+    "Value": -50.0,
+    "Name": "Replenish Power (1592)"
+   },
+   "after": {
+    "Type": "PowerRegenBuff",
+    "Value": 4.0,
+    "Name": "Power Regen (1592)"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-toa-item-803403",
+   "op": "update",
+   "before": {
+    "Value": 75.0,
+    "Name": "Shield (3403)"
+   },
+   "after": {
+    "Value": 250.0,
+    "Name": "Ablativearmor (3403)"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803482",
+   "op": "update",
+   "before": {
+    "Duration": 600
+   },
+   "after": {
+    "Duration": 0
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803483",
+   "op": "update",
+   "before": {
+    "Type": "Heal",
+    "Value": -10.0,
+    "Target": "Realm",
+    "Range": 1500,
+    "Name": "Heal (3483)"
+   },
+   "after": {
+    "Type": "CrushSlashThrustBuff",
+    "Value": 10.0,
+    "Target": "Self",
+    "Range": 0,
+    "Name": "Resistance Enhancement (3483)"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803484",
+   "op": "update",
+   "before": {
+    "Type": "HealAllOverTime",
+    "Value": 4.0,
+    "Target": "Realm",
+    "Range": 1500,
+    "Radius": 0,
+    "Frequency": 50,
+    "Name": "Heal All Over Time (3484)",
+    "Description": "You regenerate 4% health, endurance and power every 5 sec."
+   },
+   "after": {
+    "Type": "LoreDebuff",
+    "Value": 15.0,
+    "Target": "Enemy",
+    "Range": 0,
+    "Radius": 350,
+    "Frequency": 0,
+    "Name": "Lore Debuff (3484)",
+    "Description": "Target becomes 15% less effective at casting and resisting spells 15%. Reports target's primary specialization."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803485",
+   "op": "update",
+   "before": {
+    "Duration": 45,
+    "Target": "Realm",
+    "Range": 1500,
+    "DamageType": 10
+   },
+   "after": {
+    "Duration": 30,
+    "Target": "Self",
+    "Range": 0,
+    "DamageType": 0
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-809576",
+   "op": "update",
+   "before": {
+    "Type": "StrengthConstitutionBuff",
+    "Value": 75.0,
+    "Duration": 600,
+    "Name": "Improved Stat Enhancement (9576)",
+    "Description": "Improved Stat Enhancement"
+   },
+   "after": {
+    "Type": "HeatResistBuff",
+    "Value": 29.0,
+    "Duration": 300,
+    "Name": "Resistance Enhancement (9576)",
+    "Description": "Enhances the target's resistance to the listed damage type."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-810535",
+   "op": "update",
+   "before": {
+    "Type": "Heal",
+    "Value": 230.0,
+    "Duration": 0,
+    "Target": "Self",
+    "Range": 0,
+    "Name": "Heal (10535)",
+    "Description": "Heal"
+   },
+   "after": {
+    "Type": "CastingSpeedDebuff",
+    "Value": 25.0,
+    "Duration": 40,
+    "Target": "Enemy",
+    "Range": 1500,
+    "Name": "Castingspeeddebuff (10535)",
+    "Description": "Single target debuff that penalizes the casting time of enemy casters by 25% for 40 seconds."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-toa-item-812051",
+   "op": "update",
+   "before": {
+    "Duration": 120,
+    "Range": 2000
+   },
+   "after": {
+    "Duration": 0,
+    "Range": 1000
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-toa-item-812211",
+   "op": "update",
+   "before": {
+    "Duration": 600
+   },
+   "after": {
+    "Duration": 0
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-808714",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 808714,
+    "ClientEffect": 8093,
+    "Icon": 8093,
+    "Name": "Arrogance (Invocation (8714)",
+    "Description": "You gain a 50% immunity to melee damage and a 50 bonus to all stats for 15 sec.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 2.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ArtifactAllStats",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 50.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 858714,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-808714"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-858714",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 858714,
+    "ClientEffect": 21,
+    "Icon": 21,
+    "Name": "Arrogance (Invocation (8714, part 2)",
+    "Description": "You gain a 50% immunity to melee damage and a 50 bonus to all stats for 15 sec.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 2.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ArmorAbsorptionBuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 50.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your body is covered with a hard sheath of earth.",
+    "Message2": "{0} is covered in a sheath of earth.",
+    "Message3": "The shield around you fades.",
+    "Message4": "The protection around {0} fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-858714"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "133a6376-6ae5-57eb-95a6-4ff69fa1be94",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 808714,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "133a6376-6ae5-57eb-95a6-4ff69fa1be94"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "fc3eeb22-3f95-5146-b27e-b75360bbeb98",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 858714,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "fc3eeb22-3f95-5146-b27e-b75360bbeb98"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803300",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803300,
+    "ClientEffect": 11416,
+    "Icon": 11416,
+    "Name": "Castingspeeddebuff (3300)",
+    "Description": "Single target debuff that penalizes the casting time of enemy casters by 25% for 40 seconds.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CastingSpeedDebuff",
+    "Duration": 40,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803300"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "a845633c-4027-5c8d-b4d7-33b46a61b7db",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803300,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "a845633c-4027-5c8d-b4d7-33b46a61b7db"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_gem_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_emerald_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ruby_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_spinel_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_citrine_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_amethyst_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_topaz_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_sapphire_of_the_harbinger_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-813600",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 813600,
+    "ClientEffect": 11416,
+    "Icon": 11416,
+    "Name": "Illusion (13600)",
+    "Description": "The target shapechanges.",
+    "Target": "Enemy",
+    "Range": 2000,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 15,
+    "Type": "ToHitDebuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-813600"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "7c72fbca-0ad9-5b2b-b13a-18b43867a485",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 813600,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "7c72fbca-0ad9-5b2b-b13a-18b43867a485"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_majestic_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_fierce_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_striking_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hardened_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_empowering_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shimmering_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_battled_cap_of_the_hallowed_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803407",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803407,
+    "ClientEffect": 8093,
+    "Icon": 8093,
+    "Name": "Arrogance (3407)",
+    "Description": "You gain a 10% immunity to melee damage and a 50 bonus to all stats for 30 sec.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ArtifactAllStats",
+    "Duration": 30,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 50.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 853407,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803407"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853407",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853407,
+    "ClientEffect": 21,
+    "Icon": 21,
+    "Name": "Arrogance (3407, part 2)",
+    "Description": "You gain a 10% immunity to melee damage and a 50 bonus to all stats for 30 sec.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ArmorAbsorptionBuff",
+    "Duration": 30,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your body is covered with a hard sheath of earth.",
+    "Message2": "{0} is covered in a sheath of earth.",
+    "Message3": "The shield around you fades.",
+    "Message4": "The protection around {0} fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853407"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "4e884e91-5bbf-5181-aac2-cfd31f28d13c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803407,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "4e884e91-5bbf-5181-aac2-cfd31f28d13c"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "9fc96c4c-e41c-553e-81f8-8fb84ecbac86",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853407,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "9fc96c4c-e41c-553e-81f8-8fb84ecbac86"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_cabalist_staff_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_sorcerer_staff_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_theurgist_staff_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_wizard_staff_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_necromancer_staff_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_friar_mace_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803425",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803425,
+    "ClientEffect": 731,
+    "Icon": 731,
+    "Name": "Disease (3425)",
+    "Description": "Inflicts a wasting disease on the target that slows target by 15%, reduces its strength by 15 and inhibits healing by 50%.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 10,
+    "Type": "Disease",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You are diseased!",
+    "Message2": "{0} is diseased!",
+    "Message3": "You look healthy.",
+    "Message4": "{0} looks healthy again.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803425"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "06005f3e-edc6-5736-a21b-4470ecc2ae02",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803425,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "06005f3e-edc6-5736-a21b-4470ecc2ae02"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_scout_longbow_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803425
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_minstrel_harp_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_cleric_mace_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_cleric_mace_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_heretic_mace_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_heretic_flail_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abyssal_heretic_barbed_chain_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803361",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803361,
+    "ClientEffect": 8053,
+    "Icon": 8053,
+    "Name": "Omni Heal (3361)",
+    "Description": "Heals the target for 10% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Heal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803361"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853361",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853361,
+    "ClientEffect": 8060,
+    "Icon": 8060,
+    "Name": "Omni Heal (3361, part 2)",
+    "Description": "Heals the target for 10% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "PowerHeal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853361"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-863361",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 863361,
+    "ClientEffect": 8055,
+    "Icon": 8055,
+    "Name": "Omni Heal (3361, part 3)",
+    "Description": "Heals the target for 10% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "EnduranceHeal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel invigorated!",
+    "Message2": "{0} takes a second wind.",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-863361"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "f8012b8f-4d63-5052-be85-835ecaead631",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803361,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "f8012b8f-4d63-5052-be85-835ecaead631"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "e0e77713-9b90-5e5d-b3b2-2abf99fa1862",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853361,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "e0e77713-9b90-5e5d-b3b2-2abf99fa1862"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ae9368d0-d3a4-5b08-8f05-d42d98a2f6ce",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 863361,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ae9368d0-d3a4-5b08-8f05-d42d98a2f6ce"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1455,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803361,
+    "KeyName": "MultipleSubSpells",
+    "Value": "853361",
+    "CustomParamID": 1455,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1456,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803361,
+    "KeyName": "MultipleSubSpells",
+    "Value": "863361",
+    "CustomParamID": 1456,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_dreams_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_means_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_breastplate_of_demonic_dreams_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807688",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807688,
+    "ClientEffect": 3919,
+    "Icon": 3919,
+    "Name": "Resistance Enhancement (7688)",
+    "Description": "Enhances the target's resistance to the listed damage type.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "AllMagicResistsBuff",
+    "Duration": 7,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807688"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "9b6942d1-9b3d-59ae-baa7-ee12a959ada7",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807688,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "9b6942d1-9b3d-59ae-baa7-ee12a959ada7"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_brutalizer_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807727",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807727,
+    "ClientEffect": 778,
+    "Icon": 778,
+    "Name": "Resistance Decrease (7727)",
+    "Description": "Lowers the value of the target's resistance buffs or items to the listed damage type.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "ColdResistDebuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 30.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel more vulnerable to cold!",
+    "Message2": "{0} seems vulnerable to cold!",
+    "Message3": "Your cold vulnerability fades.",
+    "Message4": "{0}'s cold vulnerability fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807727"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "907bf444-ec3a-5cc9-9593-d152fd0cf760",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807727,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "907bf444-ec3a-5cc9-9593-d152fd0cf760"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ancient_battle_staff_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807727
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-809620",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 809620,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Style Damage Shield (9620)",
+    "Description": "Absorbs 75% style damage.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "StyleAbsorbBuff",
+    "Duration": 300,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 75.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-809620"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "e5c5c26e-0cb0-5f70-bbed-bb05a0726562",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 809620,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "e5c5c26e-0cb0-5f70-bbed-bb05a0726562"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ancient_drum_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 809620,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-809581",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 809581,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Damage Conversion (9581)",
+    "Description": "A portion of any damage done to the target is converted to heal the target instead.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Conversion",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 100.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-809581"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "c2278c1d-7b1b-5ef3-a05b-0a578dabda75",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 809581,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "c2278c1d-7b1b-5ef3-a05b-0a578dabda75"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_fireheart_mantle_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 809581,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hallowed_hammer_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807665",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807665,
+    "ClientEffect": 10082,
+    "Icon": 10082,
+    "Name": "Speed Decrease (7665)",
+    "Description": "Target moves slower for the spell's duration.",
+    "Target": "Enemy",
+    "Range": 1000,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "SpeedDecrease",
+    "Duration": 4,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Constricting bonds surround your body!",
+    "Message2": "{0} is surrounded by constricting bonds!",
+    "Message3": "The constricting bonds around you fall away.",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807665"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "5b709388-3bea-5b3c-a465-5f4de7ab4f6d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807665,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "5b709388-3bea-5b3c-a465-5f4de7ab4f6d"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_solemnity_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807710",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807710,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Style Damage Shield (7710)",
+    "Description": "Reduces the amount of damage the target takes from melee combat styles.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "StyleAbsorbBuff",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 30.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807710"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ce49eea3-5608-56d2-8d29-a37d456f9077",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807710,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ce49eea3-5608-56d2-8d29-a37d456f9077"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_betrayal_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807710
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_brutalizer_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807684",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807684,
+    "ClientEffect": 461,
+    "Icon": 461,
+    "Name": "Mesmerize (7684)",
+    "Description": "Target is stunned and cannot move or take any other action for the duration of the spell. If the target suffers any damage or other negative effect, the spell will break.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "Mesmerize",
+    "Duration": 61,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You are mesmerized!",
+    "Message2": "{0} is mesmerized!",
+    "Message3": "You recover from the mesmerize.",
+    "Message4": "{0} recovers from the mesmerize.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807684"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "f90ecd2c-7c0d-585b-a9ed-128fb64ba499",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807684,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "f90ecd2c-7c0d-585b-a9ed-128fb64ba499"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_manipulator_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807684
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_geomancer_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_snowfall_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807727
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_silent_night_alb",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 809620,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803465",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803465,
+    "ClientEffect": 1371,
+    "Icon": 1371,
+    "Name": "Curepoison (3465)",
+    "Description": "Cures both Disease and Poison from the user.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CurePoison",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": null,
+    "Message3": null,
+    "Message4": null,
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 853465,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803465"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853465",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853465,
+    "ClientEffect": 1372,
+    "Icon": 1372,
+    "Name": "Curepoison (3465, part 2)",
+    "Description": "Cures both Disease and Poison from the user.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CureDisease",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853465"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "cb15abe9-bdca-5ddd-9b83-6cd5a34c78f5",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803465,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "cb15abe9-bdca-5ddd-9b83-6cd5a34c78f5"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "b8adbe6c-5dc7-5c72-8e88-9b7717cf9440",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853465,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "b8adbe6c-5dc7-5c72-8e88-9b7717cf9440"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_mighty_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_arcane_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_adept_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_tracker_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_dueling_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_furtive_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_agile_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_deft_ring_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803477",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803477,
+    "ClientEffect": 13080,
+    "Icon": 13080,
+    "Name": "Bedazzled (3477)",
+    "Description": "Bedazzles target, causing it to suffer a undefined% chance to miscast and a 15% chance to fumble for 30 sec.",
+    "Target": "Enemy",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 10,
+    "Type": "FumbleChanceDebuff",
+    "Duration": 30,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 350,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 15.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803477"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "8e76823c-5bc2-543c-b706-d8e632be13b8",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803477,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "8e76823c-5bc2-543c-b706-d8e632be13b8"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_physical_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_elemental_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_soul_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803590",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803590,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Mesmerization Feedback (3590)",
+    "Description": "You become immune to the next mesmerize spell cast on yourself.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CCResist",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 20,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803590"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "b233b4ec-2d0b-5676-b937-134541351d38",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803590,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "b233b4ec-2d0b-5676-b937-134541351d38"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803592",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803592,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Style Damage Shield (3592)",
+    "Description": "Absorbs 25% style damage.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "StyleAbsorbBuff",
+    "Duration": 420,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803592"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "a6dde7a9-0827-58ce-828a-03810f0c84e1",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803592,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "a6dde7a9-0827-58ce-828a-03810f0c84e1"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_mighty_necklace_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_arcane_necklace_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_agile_necklace_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_tempered_necklace_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_mercurial_necklace_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803681",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803681,
+    "ClientEffect": 8053,
+    "Icon": 8053,
+    "Name": "Wave Of Healing (3681)",
+    "Description": "Heals target within view of the caster for 33% health.",
+    "Target": "Realm",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Heal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 2000,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -33.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803681"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "6e1d7462-66ac-5d51-98d3-acb17f30b7bf",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803681,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "6e1d7462-66ac-5d51-98d3-acb17f30b7bf"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803682",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803682,
+    "ClientEffect": 1041,
+    "Icon": 1041,
+    "Name": "Raise Dead (3682)",
+    "Description": "Brings the target back to life, restores 10% and 0% power and endurance and suffers no experience or constitution loss.",
+    "Target": "Corpse",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Resurrect",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 500,
+    "RecastDelay": 0,
+    "ResurrectHealth": 10,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803682"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "a9054ae8-5c05-514c-83f7-61bf3622fb96",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803682,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "a9054ae8-5c05-514c-83f7-61bf3622fb96"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_uther_s_otherworldly_restorative_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803687",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803687,
+    "ClientEffect": 8053,
+    "Icon": 8053,
+    "Name": "Omni Heal (3687)",
+    "Description": "Heals the target for 18% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Heal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -18.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803687"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853687",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853687,
+    "ClientEffect": 8060,
+    "Icon": 8060,
+    "Name": "Omni Heal (3687, part 2)",
+    "Description": "Heals the target for 18% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "PowerHeal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -18.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853687"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-863687",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 863687,
+    "ClientEffect": 8055,
+    "Icon": 8055,
+    "Name": "Omni Heal (3687, part 3)",
+    "Description": "Heals the target for 18% health, power and fatigue.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "EnduranceHeal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -18.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel invigorated!",
+    "Message2": "{0} takes a second wind.",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-863687"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "f573551d-4101-58e9-bb0b-4be13f9b8f3d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803687,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "f573551d-4101-58e9-bb0b-4be13f9b8f3d"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "01f6f5c2-204a-55be-8240-87ba6a88f1dc",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853687,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "01f6f5c2-204a-55be-8240-87ba6a88f1dc"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "71d3af13-f86d-5ed9-ba13-e19ea7bfe295",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 863687,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "71d3af13-f86d-5ed9-ba13-e19ea7bfe295"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1457,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803687,
+    "KeyName": "MultipleSubSpells",
+    "Value": "853687",
+    "CustomParamID": 1457,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1458,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803687,
+    "KeyName": "MultipleSubSpells",
+    "Value": "863687",
+    "CustomParamID": 1458,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_uther_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-805676",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 805676,
+    "ClientEffect": 1505,
+    "Icon": 1505,
+    "Name": "Boon Of Kings (5676)",
+    "Description": "Target has improved armor and health for this spell's duration.",
+    "Target": "Group",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 2.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "AfHitsBuff",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": -4.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You are affected by the Scepter's Boon.",
+    "Message2": "{0} is affected by the Scepter's Boon.",
+    "Message3": "You are no more affected by the Scepter's Boon.",
+    "Message4": "{0} is no more affected by the Scepter's Boon.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-805676"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "02661bac-d3ca-561a-a5ba-24e5223e76ef",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 805676,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "02661bac-d3ca-561a-a5ba-24e5223e76ef"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_band_of_the_dream_conqueror_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 805676,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-812834",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 812834,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Damage Conversion (12834)",
+    "Description": "Also casts: A portion of any spell damage done to the target is converted to heal the target instead. After the first spell damage processed, the spell is dispelled. Target: Self Duration: 20 sec Casting time: instant",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Conversion",
+    "Duration": 300,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 75.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-812834"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "933e7f93-e8c0-53ec-a479-dbdd12620258",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 812834,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "933e7f93-e8c0-53ec-a479-dbdd12620258"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-812835",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 812835,
+    "ClientEffect": 981,
+    "Icon": 981,
+    "Name": "Mesmerize Duration Reduction (12835)",
+    "Description": "Mesmerisation spells cast upon this spell's recipient are reduced in duration by the given percentage.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "MesmerizeDurationBuff",
+    "Duration": 300,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 20.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You harden your mind against mesmerization effects.",
+    "Message2": "{0} fortifies their mental defenses.",
+    "Message3": "Your mental defenses slip.",
+    "Message4": "{0}'s mental defenses slip.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-812835"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "fb2ed8b3-e572-5991-af40-f4785f30d50e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 812835,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "fb2ed8b3-e572-5991-af40-f4785f30d50e"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-812832",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 812832,
+    "ClientEffect": 1081,
+    "Icon": 1081,
+    "Name": "Heal Bonus (12832)",
+    "Description": "Enhances the effectiveness of heal spells by the caster.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "HealingDoneBuff",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 11.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your healing grows stronger.",
+    "Message2": "{0}'s healing grows stronger.",
+    "Message3": "Your healing returns to normal.",
+    "Message4": "{0}'s healing returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-812832"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "8bba9813-7206-51df-be3a-4d9024689e30",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 812832,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "8bba9813-7206-51df-be3a-4d9024689e30"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-812836",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 812836,
+    "ClientEffect": 1566,
+    "Icon": 1566,
+    "Name": "Melee Damage Boost (12836)",
+    "Description": "Target does additional damage with melee attacks.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "MeleeDamageBuff",
+    "Duration": 300,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 5.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your weapon is blessed by the heavens!",
+    "Message2": "{0}'s weapon is blessed by the heavens!",
+    "Message3": "Your weapon returns to normal.",
+    "Message4": "{0}'s weapon returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-812836"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "6b3a7cf6-6de5-5554-b4d7-ef1a4cd8cc3a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 812836,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "6b3a7cf6-6de5-5554-b4d7-ef1a4cd8cc3a"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_alb",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_alb2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_alb2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_alb2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_alb2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_alb3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_alb3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_alb3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_alb3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_alb4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_alb4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_alb4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_alb4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_alb5",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_alb5",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_alb5",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_alb5",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-813601",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 813601,
+    "ClientEffect": 11416,
+    "Icon": 11416,
+    "Name": "Illusion (13601)",
+    "Description": "The target shapechanges.",
+    "Target": "Enemy",
+    "Range": 2000,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 15,
+    "Type": "ToHitDebuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-813601"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "3fc2e0d8-f1be-5f23-bf06-ddd73064d682",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 813601,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "3fc2e0d8-f1be-5f23-bf06-ddd73064d682"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_arcane_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_mindful_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_brawler_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_unseen_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_studded_steeple_of_the_sword_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_tactful_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_sword_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_feallan_steeple_of_the_revered_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_runemaster_staff_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_spiritmaster_staff_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_bonedancer_staff_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_warlock_staff_mid",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_healer_hammer_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_healer_heavy_hammer_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_shaman_hammer_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icecursed_shaman_heavy_hammer_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803372",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803372,
+    "ClientEffect": 721,
+    "Icon": 10301,
+    "Name": "Attack Speed Decrease (3372)",
+    "Description": "Target's attack speed reduced by 31%.",
+    "Target": "Enemy",
+    "Range": 150,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 10,
+    "Type": "CombatSpeedDebuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 31.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your attacks are slowed by an unseen force!",
+    "Message2": "{0} can't attack as fast as normal!",
+    "Message3": "Your attacks return to their normal speed.",
+    "Message4": "{0}'s attacks return to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803372"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "c9a2deed-670f-596a-bdce-879572333a1e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803372,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "c9a2deed-670f-596a-bdce-879572333a1e"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_frostshard_shadowblade_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803372
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_hunter_composite_bow_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803425
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_robe_of_demonic_intent_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_robe_of_demonic_means_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_dreams_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_intent_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_intent_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_intent_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_dreams_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807720",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807720,
+    "ClientEffect": 1566,
+    "Icon": 1566,
+    "Name": "Melee Damage Boost (7720)",
+    "Description": "Target does additional damage with melee attacks.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "MeleeDamageBuff",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your weapon is blessed by the heavens!",
+    "Message2": "{0}'s weapon is blessed by the heavens!",
+    "Message3": "Your weapon returns to normal.",
+    "Message4": "{0}'s weapon returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807720"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "b0ffc89d-21c3-5708-98fa-ed65e30515fe",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807720,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "b0ffc89d-21c3-5708-98fa-ed65e30515fe"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_predator_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807720
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807715",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807715,
+    "ClientEffect": 1081,
+    "Icon": 1081,
+    "Name": "Efficient Healing (7715)",
+    "Description": "Heals cast on the target are more effective.",
+    "Target": "Group",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "HealingReceivedBuff",
+    "Duration": 20,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 50.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Healing has less effect on you.",
+    "Message2": "Healing has less effect on {0}.",
+    "Message3": "Healing returns to normal.",
+    "Message4": "Healing returns to normal on {0}.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807715"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ec2fe310-1f8d-55c3-a841-b633f4b0868a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807715,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ec2fe310-1f8d-55c3-a841-b633f4b0868a"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_revival_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807715
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807714",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807714,
+    "ClientEffect": 8071,
+    "Icon": 8071,
+    "Name": "Increase Attack Speed (7714)",
+    "Description": "Increases the target's melee attack speed.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CombatSpeedBuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your attack speed increases.",
+    "Message2": "{0} begins attacking faster.",
+    "Message3": "Your attacks return to normal.",
+    "Message4": "{0}'s attacks return to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807714"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "b9a9121c-03df-5af7-acfb-7f8e269f5b18",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807714,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "b9a9121c-03df-5af7-acfb-7f8e269f5b18"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_chaser_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807714
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_brutalizer_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807669",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807669,
+    "ClientEffect": 778,
+    "Icon": 778,
+    "Name": "Resistance Decrease (7669)",
+    "Description": "Lowers the value of the target's resistance buffs or items to the listed damage type.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "ColdResistDebuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 40.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel more vulnerable to cold!",
+    "Message2": "{0} seems vulnerable to cold!",
+    "Message3": "Your cold vulnerability fades.",
+    "Message4": "{0}'s cold vulnerability fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807669"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "11e595cd-e8e0-500f-a4b1-db124e35c085",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807669,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "11e595cd-e8e0-500f-a4b1-db124e35c085"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_mystic_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807669
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807712",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807712,
+    "ClientEffect": 13035,
+    "Icon": 13035,
+    "Name": "Parry (7712)",
+    "Description": "The target is given the ability to parry in combat.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ParryBuff",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 5.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You parry with extra skill!",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 1,
+    "Uninterruptible": 1,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807712"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "d7f17a01-fd46-56f7-a3a7-bcf11f01cd39",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807712,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "d7f17a01-fd46-56f7-a3a7-bcf11f01cd39"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_shadow_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807712
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_drakulv_war_hammer_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hallowed_hammer_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_predator_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807720
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_revival_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807715
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_chaser_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807714
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_brutalizer_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_mystic_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807669
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_shadow_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807712
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_avalanche_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_snowstinger_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807727
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_mighty_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_arcane_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_adept_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_tracker_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_dueling_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_furtive_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_agile_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_deft_ring_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_physical_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_elemental_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_soul_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ymir_s_otherworldly_restorative_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ymir_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_mid",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_mid2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_mid2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_mid2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_mid2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_mid3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_mid3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_mid3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_mid3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_mid4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_mid4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_mid4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_mid4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-813602",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 813602,
+    "ClientEffect": 11416,
+    "Icon": 11416,
+    "Name": "Illusion (13602)",
+    "Description": "The target shapechanges.",
+    "Target": "Enemy",
+    "Range": 2000,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 15,
+    "Type": "ToHitDebuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-813602"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "1676f6da-7b5e-5e9a-9d84-ab3b791f69ce",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 813602,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "1676f6da-7b5e-5e9a-9d84-ab3b791f69ce"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_majestic_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-802096",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 802096,
+    "ClientEffect": 8071,
+    "Icon": 8071,
+    "Name": "Increase Attack Speed (2096)",
+    "Description": "Increases your attack speed by 25%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "CombatSpeedBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your attack speed increases.",
+    "Message2": "{0} begins attacking faster.",
+    "Message3": "Your attacks return to normal.",
+    "Message4": "{0}'s attacks return to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-802096"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "81b3a1c8-254e-59c9-9585-87b026f02569",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 802096,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "81b3a1c8-254e-59c9-9585-87b026f02569"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_pictslayer_defender_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 802096
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_pictslayer_heater_shield_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 802096
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-808680",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 808680,
+    "ClientEffect": 4301,
+    "Icon": 11253,
+    "Name": "Ablativearmor (8680)",
+    "Description": "Adds a shield to the recipient which will temporarily absorb some of the damage type specified.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 50.0,
+    "DamageType": 0,
+    "Type": "AblativeArmor",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 200.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "A crystal shield covers you.",
+    "Message2": "A crystal shield covers {0}'s skin.",
+    "Message3": "Your crystal shield fades.",
+    "Message4": "{0}'s crystal shield fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-808680"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "c727cab7-743a-5703-9a0e-e29c5c60b774",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 808680,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "c727cab7-743a-5703-9a0e-e29c5c60b774"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_pictslayer_small_shield_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 808680,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_eldritch_staff_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_enchanter_staff_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_mentalist_staff_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_animist_staff_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_bainshee_staff_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_bard_harp_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_bard_hammer_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_bard_blade_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_malignant_ranger_recurve_bow_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803425
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_druid_blade_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_druid_hammer_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_warden_blade_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_miasmic_warden_hammer_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_robe_of_demonic_means_all2",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_intent_all2",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_means_all",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_jerkin_of_demonic_intent_all3",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_intent_all2",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_dreams_all2",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hauberk_of_demonic_means_all2",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803361
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_wails_robe_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807690",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807690,
+    "ClientEffect": 9201,
+    "Icon": 9201,
+    "Name": "Stat Decrease (7690)",
+    "Description": "Decreases the target's listed stat.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "ConstitutionDebuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 75.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You look less robust!",
+    "Message2": "{0} looks less robust!",
+    "Message3": "Your health returns to normal.",
+    "Message4": "{0} looks healthy again.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807690"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "5d696ee3-37b6-51b4-8c40-40541aa6ef6c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807690,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "5d696ee3-37b6-51b4-8c40-40541aa6ef6c"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_crystal_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807690
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807692",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807692,
+    "ClientEffect": 1443,
+    "Icon": 1443,
+    "Name": "Spreadheal (7692)",
+    "Description": "Specialized healing spell that attempts to heal the most damaged members of the group. Useful when there's no time to determine who needs help first.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpreadHeal",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 295.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807692"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "9ab22513-b838-50be-b35b-e2bc1747537c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807692,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "9ab22513-b838-50be-b35b-e2bc1747537c"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_grove_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807692
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807689",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807689,
+    "ClientEffect": 4301,
+    "Icon": 4301,
+    "Name": "Damage Conversion (7689)",
+    "Description": "A portion of any spell damage done to the target is converted to heal the target instead. After the first spell damage processed, the spell is dispelled.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Conversion",
+    "Duration": 10,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 100.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807689"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "acfaa0e1-7f16-500b-9f9c-bb85bd7159c3",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807689,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "acfaa0e1-7f16-500b-9f9c-bb85bd7159c3"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_prince_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807689
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_brutalizer_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807685",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807685,
+    "ClientEffect": 21,
+    "Icon": 21,
+    "Name": "Melee Absorption (7685)",
+    "Description": "Adds to the target's absorption (ABS) factor, resulting in better protection against melee attacks.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "ArmorAbsorptionBuff",
+    "Duration": 25,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your body is covered with a hard sheath of earth.",
+    "Message2": "{0} is covered in a sheath of earth.",
+    "Message3": "The shield around you fades.",
+    "Message4": "The protection around {0} fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807685"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ea8bedbf-7d10-55ba-b768-f13219ba7079",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807685,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ea8bedbf-7d10-55ba-b768-f13219ba7079"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_wanderer_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807685
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807728",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807728,
+    "ClientEffect": 1041,
+    "Icon": 1041,
+    "Name": "Raise Dead (7728)",
+    "Description": "Brings target back to life, and restores a portion of their health and power, and eliminates the experience penalty and con loss they would have suffered were they to have /released.",
+    "Target": "Corpse",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "Resurrect",
+    "Duration": 0,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 1000,
+    "RecastDelay": 0,
+    "ResurrectHealth": 10,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807728"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "d2bbf1b2-580a-5247-bb14-405bcd7c23a7",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807728,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "d2bbf1b2-580a-5247-bb14-405bcd7c23a7"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_abagath_fife_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 807728,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_hallowed_blade_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_crystal_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807690
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_grove_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807692
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_prince_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807689
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_brutalizer_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807688
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_wanderer_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807685
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blizzard_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807727
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_icicle_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 807727
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_silent_night_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 807728,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cliodna_s_otherworldly_restorative_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_hib",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_hib2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_hib2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_hib2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_hib2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_hib3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_hib3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_hib3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_hib3",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_soul_gauntlets_hib4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dream_gauntlets_hib4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_life_gauntlets_hib4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cursed_dragon_gauntlets_hib4",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_solemnity_robe_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_betrayal_robe_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807710
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_manipulator_robe_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807684
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_geomancer_robe_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_battled_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_striking_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glittering_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_melodic_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_empowering_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_fierce_mantle_of_samhain_hib",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-804999",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 804999,
+    "ClientEffect": 883,
+    "Icon": 883,
+    "Name": "Resistance Decrease (4999)",
+    "Description": "Lowers the value of the target's resistance buffs or items to the listed damage type.",
+    "Target": "Enemy",
+    "Range": 1500,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 12,
+    "Type": "EnergyResistDebuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 40.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel more vulnerable to energy!",
+    "Message2": "{0} seems vulnerable to energy!",
+    "Message3": "Your energy vulnerability fades.",
+    "Message4": "{0}'s energy vulnerability fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-804999"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "99eac4a2-5649-541f-b2dd-c3db7278cd1f",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 804999,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "99eac4a2-5649-541f-b2dd-c3db7278cd1f"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_gatekeeper_s_sickle_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 804999
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_wails_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807665
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0
+   },
+   "after": {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

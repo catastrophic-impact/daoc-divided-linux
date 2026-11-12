@@ -1,0 +1,68 @@
+379 ZonePoint rows for 193 of 212 trigger ids
+
+Skipped EoD rows:
+  292 realm 1 'SB to AW1': class DOL.GS.Scripts.LostWing
+  293 realm 1 'SB to AW2': class DOL.GS.Scripts.DeliahsSanctuary
+  466 realm 0 'Muire KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  466 realm 0 'Muire KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  491 realm 1 'Tepok KT4': second EoD row for this realm (target 1 523341,585160), first kept
+  493 realm 0 'Cardova KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  493 realm 0 'Cardova KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  494 realm 0 'Cardova KT2': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  494 realm 0 'Cardova KT2': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  495 realm 0 'Cardova KT3': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  495 realm 0 'Cardova KT3': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  495 realm 1 'Cardova KT3': second EoD row for this realm (target 1 468750,631606), first kept
+  496 realm 0 'Cardova KT4': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  496 realm 0 'Cardova KT4': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  497 realm 0 'Cardova KT5': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  497 realm 0 'Cardova KT5': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  500 realm 0 'SHB KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  500 realm 0 'SHB KT1': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  500 realm 1 'SHB KT1': second EoD row for this realm (target 1 591763,492414), first kept
+  505 realm 1 'Keltoi KT1': second EoD row for this realm (target 1 574918,539427), first kept
+  510 realm 3 'Sprag KT1': second EoD row for this realm (target 200 330041,536659), first kept
+  518 realm 3 'Treibh KT4': second EoD row for this realm (target 200 334712,587920), first kept
+  538 realm 2 'Ctomb KT5': second EoD row for this realm (target 100 726444,774968), first kept
+  539 realm 2 'Vendo KT1': second EoD row for this realm (target 100 762614,849671), first kept
+  540 realm 2 'Vendo KT2': second EoD row for this realm (target 100 762614,849671), first kept
+  541 realm 2 'Vendo KT3': second EoD row for this realm (target 100 762614,849671), first kept
+  542 realm 2 'Vendo KT4': second EoD row for this realm (target 100 762614,849671), first kept
+  543 realm 2 'Vendo KT5': second EoD row for this realm (target 100 762614,849671), first kept
+  544 realm 2 'Varv KT1': second EoD row for this realm (target 100 808998,697197), first kept
+  552 realm 2 'Spin KT4': second EoD row for this realm (target 100 759217,676381), first kept
+  553 realm 0 'Spin KT5': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  553 realm 0 'Spin KT5': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  616 realm 0 'Sprag KT7': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  616 realm 0 'Sprag KT7': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  621 realm 2 'Vendo KT6': second EoD row for this realm (target 100 762614,849671), first kept
+  622 realm 2 'Vendo KT7': second EoD row for this realm (target 100 762614,849671), first kept
+  623 realm 2 'Vendo KT8': second EoD row for this realm (target 100 762614,849671), first kept
+  625 realm 0 'Koalinth KT7': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  625 realm 0 'Koalinth KT7': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  625 realm 3 'Koalinth KT7': second EoD row for this realm (target 200 311882,459783), first kept
+  626 realm 0 'Koalinth KT8': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  626 realm 0 'Koalinth KT8': class DOL.GS.ServerRules.InstanceDoorJumpPoint
+  711 realm 1 'AlbExitMainland': second EoD row for this realm (target 1 562709,514547), first kept
+  720 realm 1 'AlbExitMainland 5-9': second EoD row for this realm (target 1 524492,479980), first kept
+
+Trigger ids still with no destination:
+  221 zone 227 'Crypt2'
+  222 zone 227 'Surface2'
+  227 zone 228 'HAM to AW1'
+  239 zone 369 'Back To Front'
+  303 zone 367 'From Vandr'
+  306 zone 368 'Exit Past and Present'
+  309 zone 370 'From Brutal'
+  394 zone 228 'HAM to WolvesDen'
+  655 zone 336 'Z336toZ026'
+  656 zone 337 'Z337toZ120'
+  657 zone 338 'Z338toZ209'
+  662 zone 351 'BTtoCh2p2'
+  663 zone 351 'BTtoBKmid'
+  675 zone 339 'z339toz347'
+  676 zone 340 'z340toz347'
+  677 zone 341 'z341toz347'
+  681 zone 347 'Alb347jump'
+  682 zone 347 'Hib347jump'
+  683 zone 347 'Mid347jump'

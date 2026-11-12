@@ -1057,6 +1057,7 @@ namespace DOL.GS.Keeps
 		/// <param name="realm"></param>
 		public virtual void Reset(eRealm realm)
 		{
+			DOL.GS.ServerRules.RvrRealmPointRules.OnKeepTaken(this); // siege contribution pools are paid (DR-182)
 			LastAttackedByEnemyTick = 0;
 			StartCombatTick = 0;
 

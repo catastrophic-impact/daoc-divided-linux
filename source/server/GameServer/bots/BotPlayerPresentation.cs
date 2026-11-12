@@ -113,6 +113,43 @@ public static class BotPlayerPresentation
         return (byte)flags;
     }
 
+    /// <summary>How far below the bot a water polygon may lie and still be the surface it floats on.</summary>
+    private const float WaterSurfaceDepth = 32f;
+    private const float WaterSurfaceAbove = 8f;
+    private static readonly EDtPolyFlags[] SwimOnly = [EDtPolyFlags.Swim, EDtPolyFlags.Disabled];
+
+    /// <summary>
+    /// Whether a bot shown as a player swims. The zone water level alone misses the surface: it is 0 in the
+    /// battlegrounds and sits below the sea in Atlantis (7970 against a surface near 8010), so a bot on top of the
+    /// water was drawn standing in the air and the client dropped it and snapped it back, over and over (Discord
+    /// 2026-11-04). The navmesh marks water from the client's own river data, so a bot on a swim polygon swims.
+    /// Worked out again only when the bot moves.
+    /// </summary>
+    public static bool Swimming(GameBot bot)
+    {
+        if (bot.IsUnderwater)
+            return true;
+        Zone zone = bot.CurrentZone;
+        if (zone == null)
+            return false;
+        var at = (zone.ID, bot.X, bot.Y, bot.Z);
+        if (bot.SwimCheckedAt == at)
+            return bot.SwimmingForClients;
+        bool swimming = OnWaterSurface(PathfindingProvider.Instance, zone, new System.Numerics.Vector3(bot.X, bot.Y, bot.Z));
+        bot.SwimmingForClients = swimming;
+        bot.SwimCheckedAt = at;
+        return swimming;
+    }
+
+    /// <summary>
+    /// Whether the navmesh has a water polygon straight under this point, close enough to be the surface it floats on.
+    /// A little above counts too: a bot's height is whole units and the surface polygon is not.
+    /// </summary>
+    public static bool OnWaterSurface(IPathfindingMgr nav, Zone zone, System.Numerics.Vector3 position) =>
+        nav.IsAvailable && nav.HasNavmesh(zone) &&
+        nav.GetClosestPoint(zone, position with { Z = position.Z - (WaterSurfaceDepth - WaterSurfaceAbove) / 2 }, 2, 2,
+            (WaterSurfaceDepth + WaterSurfaceAbove) / 2, SwimOnly).HasValue;
+
     /// <summary>
     /// The seven face bytes of the player create packet. A bot has no saved face, so its name picks one, always the same.
     /// Only the first four of each choice: every race has at least those at character creation. Pure.

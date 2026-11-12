@@ -18,11 +18,17 @@ namespace DOL.GS
 
         public override LootList GenerateLoot(GameNPC mob, GameObject killer)
         {
-            LootList loot = base.GenerateLoot(mob, killer);
+            return GenerateLoot(LootContext.For(mob, killer));
+        }
+
+        public override LootList GenerateLoot(LootContext context)
+        {
+            GameNPC mob = context.Mob;
+            LootList loot = base.GenerateLoot(mob, context.Killer);
 
             try
             {
-                GameLiving owner = ROGMobGenerator.ResolveEquipmentLootOwner(killer);
+                GameLiving owner = context.Owner;
 
                 if (owner == null || mob.Level < ServerProperties.Properties.LOOTGENERATOR_MYTHIRIAN_MIN_LEVEL || owner.GetConLevel(mob) <= -3)
                     return loot;
@@ -48,7 +54,7 @@ namespace DOL.GS
         {
             double chance = ServerProperties.Properties.LOOTGENERATOR_MYTHIRIAN_BASE_CHANCE;
 
-            if (mob is GameEpicNPC || !mob.Name.ToLower().Equals(mob.Name))
+            if (LootContext.IsNamedMob(mob))
                 chance *= ServerProperties.Properties.LOOTGENERATOR_MYTHIRIAN_NAMED_MULTIPLIER;
 
             return Math.Min(100, chance);

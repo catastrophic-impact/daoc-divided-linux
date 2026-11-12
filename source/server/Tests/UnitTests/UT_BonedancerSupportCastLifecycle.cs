@@ -299,6 +299,36 @@ public sealed class UT_BonedancerSupportCastLifecycle
             "The uninterrupted Bone Mage cast must finish instead of restarting forever.");
     }
 
+    [Test]
+    public void CommanderSkipsSpellsOnCooldownOrOutOfRange()
+    {
+        // Overnight 2026-11-09: commander Crawl/Lifetap/Lifeforce were requested while on their recast timer and
+        // refused as "spell on cooldown" 55-82% of the time. The brain now asks IsReadyOn before requesting.
+        (_, Commander commander, _, _) = Graph(false);
+        Enemy enemy = Actor<Enemy>();
+        commander.X = 1000; commander.Y = 1000;
+        enemy.X = 1500; enemy.Y = 1000;
+        commander.movementComponent.ForceUpdatePosition();
+        enemy.movementComponent.ForceUpdatePosition();
+        Spell crawl = new(new DbSpell
+        {
+            SpellID = 5440, Name = "Crawl", Type = "SpeedDecrease", Target = "Enemy",
+            Range = 1500, CastTime = 0, RecastDelay = 20, Duration = 20, Value = 30
+        }, 1);
+
+        Assert.That(CommanderBrain.IsReadyOn(commander, crawl, enemy), Is.True, "ready, in range");
+
+        commander.DisableSkill(crawl, 20_000);
+        Assert.That(CommanderBrain.IsReadyOn(commander, crawl, enemy), Is.False, "on its recast timer");
+
+        SetTime(GameLoop.GameLoopTime + 21_000);
+        Assert.That(CommanderBrain.IsReadyOn(commander, crawl, enemy), Is.True, "timer over");
+
+        enemy.X = 1000 + 3000;
+        enemy.movementComponent.ForceUpdatePosition();
+        Assert.That(CommanderBrain.IsReadyOn(commander, crawl, enemy), Is.False, "beyond range");
+    }
+
     private (RootBot, Commander, Patroller, BufferBrain) Graph(bool temporaryCompanion)
     {
         RootBot root = Actor<RootBot>();

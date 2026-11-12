@@ -97,7 +97,10 @@ public static class AutonomousBotQuests
     internal static readonly LivingServerTable<(long BotId, int QuestId), OfflineBotQuestRecord> Quests =
         new("bot quest", row => (row.BotId, row.QuestId));
 
-    public sealed record NpcSpot(string Name, ushort Region, int X, int Y, int Z, eRealm Realm, int Level, bool Hostile);
+    /// <param name="Aggressive">The monster attacks on sight (AggroLevel and AggroRange above 0): quest roads keep clear of
+    /// these when they are far over a bot's level (DR-076).</param>
+    public sealed record NpcSpot(string Name, ushort Region, int X, int Y, int Z, eRealm Realm, int Level, bool Hostile,
+        bool Aggressive = false, int AggroRange = 0);
 
     /// <summary>A quest with what the live world says about it.</summary>
     public sealed record Entry(BotQuestPlan Plan, eRealm Realm, int HardestLevel);
@@ -134,6 +137,7 @@ public static class AutonomousBotQuests
         public Dictionary<int, Entry> ById = new();
         public Dictionary<string, List<NpcSpot>> Spots = new(StringComparer.OrdinalIgnoreCase);
         public HashSet<string> Places = new(StringComparer.OrdinalIgnoreCase);
+        public AutonomousQuestRouteDanger Dangers = new();
     }
 
     private static volatile Catalog _catalog;
@@ -228,7 +232,9 @@ public static class AutonomousBotQuests
                         continue;
                     bool hostile = npc.Realm == eRealm.None && (npc.Flags & (GameNPC.eFlags.PEACE | GameNPC.eFlags.CANTTARGET)) == 0;
                     Point3D home = npc.SpawnPoint ?? new Point3D(npc.X, npc.Y, npc.Z);
-                    spots.Add(new NpcSpot(npc.Name, region.ID, home.X, home.Y, home.Z, npc.Realm, npc.Level, hostile));
+                    bool aggressive = npc.Brain is DOL.AI.Brain.StandardMobBrain { AggroLevel: > 0, AggroRange: > 0 };
+                    int aggroRange = npc.Brain is DOL.AI.Brain.StandardMobBrain mobBrain ? mobBrain.AggroRange : 0;
+                    spots.Add(new NpcSpot(npc.Name, region.ID, home.X, home.Y, home.Z, npc.Realm, npc.Level, hostile, aggressive, aggroRange));
                 }
                 else if (item is GameStaticItem)
                     spots.Add(new NpcSpot(item.Name, region.ID, item.X, item.Y, item.Z, item.Realm, 0, false));
@@ -243,12 +249,14 @@ public static class AutonomousBotQuests
     private static Catalog BuildCatalog(IEnumerable<DbDataQuest> rows, ClassicQuests.Config config, IEnumerable<NpcSpot> world)
     {
         var catalog = new Catalog();
+        world = world as ICollection<NpcSpot> ?? world.ToList();
         foreach (NpcSpot spot in world)
         {
             if (!catalog.Spots.TryGetValue(spot.Name, out List<NpcSpot> list))
                 catalog.Spots[spot.Name] = list = new List<NpcSpot>();
             list.Add(spot);
         }
+        catalog.Dangers = AutonomousQuestRouteDanger.Build(world);
         var skips = new Dictionary<string, int>();
         void Skip(string reason) => skips[reason] = skips.GetValueOrDefault(reason) + 1;
         var plans = new List<BotQuestPlan>();
@@ -461,6 +469,28 @@ public static class AutonomousBotQuests
 
     private static bool HasFreeSlots(GameBot bot, int slots) =>
         bot.Inventory.IsSlotsFree(slots, eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack);
+
+    /// <summary>The step's spots nearest first (to the step's point when it has one), as NearestSpot ranks them.</summary>
+    private static IEnumerable<NpcSpot> SpotsNearestFirst(Catalog catalog, string name, ushort region, GameBot bot, BotQuestPoint near) =>
+        FindSpots(catalog, name, region).OrderBy(spot =>
+        {
+            bool sameRegion = near != null ? spot.Region == near.Region : spot.Region == bot.CurrentRegionID;
+            long dx = spot.X - (near?.X ?? bot.X), dy = spot.Y - (near?.Y ?? bot.Y);
+            return (sameRegion ? 0 : 1L << 50) + dx * dx / 2 + dy * dy / 2;
+        });
+
+    /// <summary>
+    /// The nearest spot the bot can fight (when it must) and reach without walking past a monster far over its level
+    /// (DR-076). Null, with the reason, when every spot is out of reach that way.
+    /// </summary>
+    private static NpcSpot SafeSpot(Catalog catalog, string name, ushort region, GameBot bot, BotQuestPoint near, bool fights, ref string blocked)
+    {
+        NpcSpot spot = catalog.Dangers.Choose(SpotsNearestFirst(catalog, name, region, bot, near), bot.CurrentRegionID, bot.X, bot.Y,
+            bot.Level, fights, out string reason);
+        if (spot == null && reason != null)
+            blocked = reason;
+        return spot;
+    }
 
     private static NpcSpot NearestSpot(Catalog catalog, string name, ushort region, GameBot bot, BotQuestPoint near = null)
     {
@@ -692,20 +722,27 @@ public static class AutonomousBotQuests
     #region Walking the steps
 
     /// <summary>Where the bot must go now, or null when the place cannot be found.</summary>
-    public static Goal GoalFor(GameBot bot, Run run)
+    public static Goal GoalFor(GameBot bot, Run run) => GoalFor(bot, run, out _);
+
+    /// <summary>
+    /// Where the bot must go now, or null. <paramref name="blocked"/> is set (a "Route blocked" reason) when the place
+    /// exists but every spot of it is far over the bot's level or behind such a monster: the caller sets the step aside.
+    /// </summary>
+    public static Goal GoalFor(GameBot bot, Run run, out string blocked)
     {
+        blocked = null;
         Catalog catalog = _catalog;
         if (catalog == null)
             return null;
         BotQuestPlan plan = run.Plan;
         if (run.Step == 0)
-            return SpotGoal(NearestSpot(catalog, plan.GiverName, plan.GiverRegion, bot), false);
+            return SpotGoal(SafeSpot(catalog, plan.GiverName, plan.GiverRegion, bot, null, false, ref blocked), false);
         BotQuestStep step = run.Current;
         if (step == null)
             return null;
         string hunted = step.HuntForItem(item => Carried(bot, item));
         if (hunted != null)
-            return SpotGoal(NearestSpot(catalog, hunted, 0, bot, step.Point), true);
+            return SpotGoal(SafeSpot(catalog, hunted, 0, bot, step.Point, true, ref blocked), true);
         switch (step.Action)
         {
             case eBotQuestAction.Kill:
@@ -713,13 +750,13 @@ public static class AutonomousBotQuests
                     return step.Spawn.TriggerRadius > 0
                         ? new Goal(step.TargetName, step.Spawn.Region, step.Spawn.X, step.Spawn.Y, step.Spawn.Z, step.Spawn.TriggerRadius, true)
                         : new Goal(step.TargetName, bot.CurrentRegionID, bot.X, bot.Y, bot.Z, 0, true);
-                return SpotGoal(NearestSpot(catalog, step.TargetName, step.TargetRegion, bot, step.Point), true);
+                return SpotGoal(SafeSpot(catalog, step.TargetName, step.TargetRegion, bot, step.Point, true, ref blocked), true);
             case eBotQuestAction.Talk:
             case eBotQuestAction.HandIn:
             case eBotQuestAction.Choose:
                 if (step.Spawn is { Peaceful: true } && QuestNames.Same(step.Spawn.Name, step.TargetName))
                     return new Goal(step.TargetName, step.Spawn.Region, step.Spawn.X, step.Spawn.Y, step.Spawn.Z, 0, false);
-                return SpotGoal(NearestSpot(catalog, step.TargetName, step.TargetRegion, bot, step.Point), false);
+                return SpotGoal(SafeSpot(catalog, step.TargetName, step.TargetRegion, bot, step.Point, false, ref blocked), false);
             default:
                 // A step with no place, or anywhere in the region, is done where the bot stands.
                 return step.Point == null || step.Point.Region == 0
@@ -1105,12 +1142,14 @@ public static class AutonomousBotQuests
     {
         var catalog = new Catalog { Entries = entries.ToArray() };
         catalog.ById = catalog.Entries.ToDictionary(entry => entry.Plan.Id);
+        spots = spots.ToList();
         foreach (NpcSpot spot in spots)
         {
             if (!catalog.Spots.TryGetValue(spot.Name, out List<NpcSpot> list))
                 catalog.Spots[spot.Name] = list = new List<NpcSpot>();
             list.Add(spot);
         }
+        catalog.Dangers = AutonomousQuestRouteDanger.Build(spots);
         _catalog = catalog;
         Interlocked.Exchange(ref _loading, 1);
         Active.Clear();

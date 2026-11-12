@@ -1,0 +1,52 @@
+[
+ {
+  "table": "Mob",
+  "where": {
+   "Region": 73,
+   "AggroRange": 800
+  },
+  "set": {
+   "AggroRange": 500
+  }
+ },
+ {
+  "table": "Mob",
+  "where": {
+   "Region": 79,
+   "AggroRange": 800
+  },
+  "set": {
+   "AggroRange": 500
+  }
+ },
+ {
+  "table": "Mob",
+  "where": {
+   "Region": 80,
+   "AggroRange": 800
+  },
+  "set": {
+   "AggroRange": 500
+  }
+ },
+ {
+  "table": "Mob",
+  "where": {
+   "Region": 83,
+   "AggroRange": 800
+  },
+  "set": {
+   "AggroRange": 500
+  }
+ },
+ {
+  "table": "Mob",
+  "where": {
+   "Region": 90,
+   "AggroRange": 800
+  },
+  "set": {
+   "AggroRange": 500
+  }
+ }
+]

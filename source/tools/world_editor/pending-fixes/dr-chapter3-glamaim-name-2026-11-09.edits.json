@@ -1,0 +1,5 @@
+[
+ {"table": "Mob", "where": {"Name": "Glaimaim", "Region": 341}, "set": {"Name": "Glamaim"}},
+ {"table": "NpcTemplate", "where": {"Name": "Glaimaim"}, "set": {"Name": "Glamaim"}},
+ {"table": "MobXLootTemplate", "where": {"MobName": "Glaimaim"}, "set": {"MobName": "Glamaim"}}
+]

@@ -287,7 +287,10 @@ namespace DOL.GS.Keeps
 
         public bool TryTraverse(GameBot bot)
         {
-            if (bot?.IsAutonomousWorldBot != true || !bot.IsAlive || bot.IsStunned || bot.IsMezzed ||
+            // Gamebots, and bots in a player's group (Discord 2026-11-08: a /raid 80 that took a keep could not follow the
+            // player back out once the captured keep's doors reset shut; CompanionKeepDoors).
+            if (bot is not ({ IsAutonomousWorldBot: true } or { IsPlayerLedGroup: true } or { IsTemporaryGroupHelper: true }) ||
+                !bot.IsAlive || bot.IsStunned || bot.IsMezzed ||
                 Component?.Keep == null || (DOL.GS.ServerRules.HybridCoopRules.Enabled
                     ? DOL.GS.ServerRules.HybridCoopRules.KeepEnemy(Component.Keep, bot)
                     : bot.Realm != Component.Keep.Realm) ||

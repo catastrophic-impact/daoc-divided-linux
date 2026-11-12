@@ -31,6 +31,19 @@ namespace DOL.GS.PacketHandler
 		{
 		}
 
+		public override void SendChamberOrbs(GameObject owner, byte[] slots)
+		{
+			using (var pak = PooledObjectFactory.GetForTick<GSTCPPacketOut>().Init(GetPacketCode(eServerPackets.VisualEffect)))
+			{
+				pak.WriteShort((ushort)owner.ObjectID);
+				pak.WriteByte((byte)3);
+				for (int i = 0; i < 5; i++)
+					pak.WriteByte(i < slots.Length ? slots[i] : (byte)0);
+				pak.WriteInt(0);
+				SendTCP(pak);
+			}
+		}
+
 		public override void SendWarlockChamberEffect(GamePlayer player)
         {
 

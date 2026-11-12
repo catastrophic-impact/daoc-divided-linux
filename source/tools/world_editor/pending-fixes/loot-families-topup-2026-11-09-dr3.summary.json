@@ -1,0 +1,57 @@
+{
+ "mob names given a table": 25,
+ "spawns covered": 206,
+ "skipped": {
+  "has a table": 5656,
+  "not a hostile mob": 4752,
+  "placeholder name": 1
+ },
+ "by family (names, spawns)": {
+  "animal": [
+   2,
+   36
+  ],
+  "demon": [
+   17,
+   124
+  ],
+  "humanoid": [
+   4,
+   40
+  ],
+  "undead": [
+   2,
+   6
+  ]
+ },
+ "chosen by": {
+  "race": 25
+ },
+ "tables": 4,
+ "junk items": 120,
+ "edits": 25,
+ "samples": {
+  "animal": [
+   "Ofridr's Worms (L50, race)",
+   "Teugmhail's Worms (L50, race)"
+  ],
+  "demon": [
+   "Aspect of Myrkr (L50, race)",
+   "Banahogg (L60, race)",
+   "Chthonic Knight Azel (L58, race)",
+   "Chthonic Knight Beleth (L61, race)",
+   "Chthonic Knight Nexus (L63, race)",
+   "Chthonic Knight Zalar (L61, race)"
+  ],
+  "humanoid": [
+   "Ofridr's Front Guard (L55, race)",
+   "Soremaiden of Ofridr (L55, race)",
+   "Soremaiden of Teugmhail (L55, race)",
+   "Teugmhail's Front Guard (L55, race)"
+  ],
+  "undead": [
+   "Banahogg's Spawn (L50, race)",
+   "Glaimaim's Spawn (L50, race)"
+  ]
+ }
+}

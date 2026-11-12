@@ -71,14 +71,16 @@ namespace DOL.GS
 
             bool syntheticAutonomousPet = charmNpc.TempProperties.GetProperty<bool>(AutonomousPetSupport.SyntheticCharmPetProperty);
             bool gameBotSyntheticPet = syntheticAutonomousPet && SpellHandler.Caster is GameBot;
-            // A stale generated pet can end after its GameBot has acquired a
-            // replacement. Never release the replacement's controlled brain.
-            // Ordinary and player charm keep their existing release path.
-            ControlledMobBrain oldBrain = gameBotSyntheticPet
-                ? charmNpc.Brain as ControlledMobBrain
-                : SpellHandler.Caster.ControlledBrain as ControlledMobBrain;
-            if (!gameBotSyntheticPet || IsCurrentBotSyntheticCharmBrain(
-                    SpellHandler.Caster.ControlledBrain, oldBrain))
+            // The brain this charm gave the monster: its own controlled brain while it is still the caster's. A bot that let
+            // the pet go may already have cleared its pet slot before this effect ended, and a stale pet can end after the
+            // caster has a replacement (2026-11-06: /charm left a Sorcerer companion with its old and new pet at once, the
+            // old one never given its own brain back). Never release the replacement's controlled brain.
+            ControlledMobBrain oldBrain = charmNpc.Brain is ControlledMobBrain own && own.Owner == SpellHandler.Caster
+                ? own
+                : !gameBotSyntheticPet && SpellHandler.Caster.ControlledBrain?.Body == charmNpc
+                    ? SpellHandler.Caster.ControlledBrain as ControlledMobBrain
+                    : null;
+            if (oldBrain != null && IsCurrentBotSyntheticCharmBrain(SpellHandler.Caster.ControlledBrain, oldBrain))
                 SpellHandler.Caster.RemoveControlledBrain(oldBrain);
             bool keepSongAlive = false;
 

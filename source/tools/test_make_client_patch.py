@@ -145,6 +145,34 @@ class ClientPatchTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.with_member(stock, b'x', 'missing.csv')
 
+    def test_gate_jumps_go_and_the_rest_are_numbered_again(self):
+        table = (b'1,PVPzone,0,0,0,0,0,0,4,,\r\n2,Erik,1,2,3,4,5,6,112,0,1\r\n12,Border,1,2,3,4,5,6,,,\r\n'
+                 b'13,Border,1,2,3,4,5,6,,,\r\n14,Border,1,2,3,4,5,6,,,\r\n15,Border,1,2,3,4,5,6,,,\r\n'
+                 b'16,toKT1,1,2,3,4,5,6,428\r\n28,artfix967,1,2,3,4,5,6,\r\n29,artfix967,1,2,3,4,5,6,\r\n')
+        self.assertEqual(m.without_gate_jumps(table, 100),
+                         b'1,PVPzone,0,0,0,0,0,0,4,,\r\n2,Erik,1,2,3,4,5,6,112,0,1\r\n3,toKT1,1,2,3,4,5,6,428\r\n')
+        with self.assertRaises(ValueError):
+            m.without_gate_jumps(table.replace(b'28,artfix967', b'28,somethingelse'), 100)
+
+    def test_the_real_gate_jumps_go(self):
+        if not (PRISTINE / 'game.dll').is_file():
+            self.skipTest('No pristine 1.130 client on this machine')
+        for zone, drop in m.GATE_JUMPS:
+            for template in m.GATE_ARCHIVES:
+                path = PRISTINE / template.format(zone)
+                stock = path.read_bytes()
+                if not m.has_member(stock, m.ZONE_JUMP):
+                    continue
+                before = m.member_of(stock, m.ZONE_JUMP).decode('latin1').split('\r\n')
+                after = m.member_of(m.apply(stock, m.gate_entry(PRISTINE, template.format(zone), zone)), m.ZONE_JUMP)
+                after = after.decode('latin1').split('\r\n')
+                names = [line.split(',')[1] for line in after if line.strip()]
+                self.assertFalse({'Frontier', 'Border'} & set(names), path)
+                self.assertFalse([n for n in names if n.lower().startswith('artfix')], path)
+                self.assertEqual([line.split(',', 1)[0] for line in after if line.strip()],
+                                 [str(n) for n in range(1, len(names) + 1)])
+                self.assertEqual(len([line for line in before if line.strip()]) - len(drop), len(names))
+
     def test_a_gate_wall_edit_refuses_another_wall(self):
         with self.assertRaises(ValueError):
             m.open_gate_walls(b'0, 2, 1, 2, 3, 4\r\n0, 2, 5, 6, 7, 8\r\n0, 2, 9, 9, 8, 8\r\n', 206)
@@ -183,24 +211,56 @@ class ClientPatchTests(unittest.TestCase):
                           'zones/zone276/dat276.mpk', 'zones/zone276/sounds.dat',
                           'zones/zone000/dat000.mpk', 'zones/zone000/csv000.mpk',
                           'zones/zone003/dat003.mpk', 'zones/zone003/csv003.mpk',
+                          'zones/zone100/dat100.mpk', 'zones/zone100/csv100.mpk',
+                          'zones/zone102/dat102.mpk', 'zones/zone102/csv102.mpk',
                           'zones/zone206/dat206.mpk', 'zones/zone206/csv206.mpk',
-                          'items/offline_fishrod01.nif', 'gamedata.mpk'])
-        # The fishing rod: only our vertex positions and our three catalog rows ship, and every other catalog is untouched.
-        rod, game = patch['Files'][-2:]
+                          'zones/zone207/dat207.mpk', 'zones/zone207/csv207.mpk',
+                          'items/offline_fishrod01.nif',
+                          'items/pskins/pskin061.mpk', 'figures/Mskins/mskin070.mpk',
+                          'items/pskins/pskin062.mpk', 'figures/Mskins/mskin071.mpk'] +
+                         [f'items/Tara_helm01_{sex}_{race}.nif' for race in ('cel', 'elf', 'lur', 'fir', 'syl', 'sha')
+                          for sex in 'MF'] +
+                         ['items/pskins/pskin063.mpk', 'figures/Mskins/mskin072.mpk', 'gamedata.mpk'])
+        # The fishing rod: only our vertex positions ship.
+        rod, game = next(f for f in patch['Files'] if f['Path'] == 'items/offline_fishrod01.nif'), patch['Files'][-1]
         self.assertLess(sum(len(base64.b64decode(e['Insert'])) for e in rod['Edits']), 1000)
-        self.assertEqual([part['Member'] for part in game['Members']], ['objects.csv', 'items.csv'])
-        added = [line.split(',', 1)[0] for part in game['Members'] for e in part['Edits']
-                 for line in base64.b64decode(e['Insert']).decode('latin1').strip('\r\n').split('\r\n')]
-        self.assertEqual(added, ['4927', '4928', '3085'])
+        # The rod's three catalog rows and the Storm, Tara and Camelot Regalia rows ship, and every other catalog is untouched.
+        self.assertEqual([part['Member'] for part in game['Members']], list(m.GAMEDATA_CATALOGS))
+        added = {part['Member']: [line.split(',', 1)[0] for e in part['Edits']
+                                  for line in base64.b64decode(e['Insert']).decode('latin1').strip('\r\n').split('\r\n')]
+                 for part in game['Members']}
+        self.assertEqual(added, {'objects.csv': ['4927', '4928', '4929', '4930', '4931', '4932', '4933', '4937', '4942'] +
+                                                [str(n) for n in range(4950, 4965)],
+                                 'items.csv': [str(n) for n in range(44, 56)] + ['3085'],
+                                 'pskins.csv': [str(n) for n in range(5790, 5798)] + ['5800'] + [str(n) for n in range(5810, 5829)],
+                                 'mskins.csv': [str(n) for n in range(2740, 2746)] + [str(n) for n in range(2750, 2762)]})
         stock_game = (PRISTINE / 'gamedata.mpk').read_bytes()
         patched_game = m.apply(stock_game, game)
         archive.verify_memory_image(patched_game)
         before, after = archive.read(stock_game)[1], archive.read(patched_game)[1]
         self.assertEqual([e.name for e in before], [e.name for e in after])
-        self.assertEqual([e.data for e in before if e.name.lower() not in m.ROD_CATALOGS],
-                         [e.data for e in after if e.name.lower() not in m.ROD_CATALOGS])
+        self.assertEqual([e.data for e in before if e.name.lower() not in m.GAMEDATA_CATALOGS],
+                         [e.data for e in after if e.name.lower() not in m.GAMEDATA_CATALOGS])
+        # The Regalia skin archives hold only our textures, the same ones the test client's installers put in (its Storm
+        # archive has more concept textures, and its classic cloak came from an older Pillow: the same image, other DXT3 bits).
+        # The Crown of Lugh: the stock Lug helmets with only their 52 transform bytes changed (pipeline/fit_lugh.py).
+        lugh = [f for f in patch['Files'] if f['Path'].startswith('items/Tara_helm01_')]
+        self.assertEqual(len(lugh), 12)
+        for mesh in lugh:
+            self.assertTrue(mesh['From'].startswith('items/Lum_helm01_'))
+            self.assertLessEqual(sum(len(base64.b64decode(e['Insert'])) for e in mesh['Edits']), 52)
+        for skins in [f for f in patch['Files'] if f.get('From') == m.REGALIA_FROM]:
+            ours = m.apply((PRISTINE / skins['From']).read_bytes(), skins)
+            archive.verify_memory_image(ours)
+            self.assertTrue(all(e.name.lower().startswith(('sf_rw_', 'sf_wolfcloak', 'sf_wingedhelm', 'tara_', 'camelot_'))
+                                for e in archive.read(ours)[1]), skins['Path'])
+            if MODERN_TEST.is_dir():
+                installed = {e.name: e.data for e in archive.read((MODERN_TEST / skins['Path']).read_bytes())[1]}
+                for e in archive.read(ours)[1]:
+                    if e.name != 'sf_wolfcloak256.dds':
+                        self.assertEqual(installed.get(e.name), e.data, e.name)
         game = patch['Files'][0]
-        self.assertEqual((game['InputSha256'][:8], game['OutputSha256'][:8]), ('3915a495', '39d82bb0'))
+        self.assertEqual((game['InputSha256'][:8], game['OutputSha256'][:8]), ('3915a495', 'f6660890'))  # 2c7e306e0 (Vampiir hover); the test client and DR-dev-0.1d match
         # The stock 1.130 loading screen in, the Divided Realms splash out, in one edit.
         splash = patch['Files'][2]
         self.assertEqual(splash['InputSha256'][:8], '9348c3a6')
@@ -224,7 +284,12 @@ class ClientPatchTests(unittest.TestCase):
         if MODERN_TEST.is_dir():
             # The test client keeps its hand-installed classic zone table until it is set up from this patch.
             # Its gamedata.mpk got the rod rows from the hand installer (compressed differently, and with other private art).
-            for f in [f for f in patch['Files'] if f['Path'] not in ('zones/zones.mpk', m.GAMEDATA) and f.get('Member') != m.BOUND]:
+            gate_archives = {template.format(zone) for zone in m.gate_zones() for template in m.GATE_ARCHIVES}
+            # The Regalia archives were stamped when they were installed there (their contents are compared above).
+            regalia = {f['Path'] for f in patch['Files'] if f.get('From') == m.REGALIA_FROM}
+            regalia |= {f['Path'] for f in lugh if not (MODERN_TEST / f['Path']).exists()}  # until the Tara kit is reinstalled
+            for f in [f for f in patch['Files'] if f['Path'] not in ('zones/zones.mpk', m.GAMEDATA) and f['Path'] not in gate_archives
+                      and f['Path'] not in regalia]:
                 self.assertEqual(hashlib.sha256((MODERN_TEST / f['Path']).read_bytes()).hexdigest(), f['OutputSha256'], f['Path'])
 
     def test_the_real_gates_open_and_nothing_else_moves(self):
@@ -239,14 +304,16 @@ class ClientPatchTests(unittest.TestCase):
             for template in m.GATE_ARCHIVES:
                 path = template.format(zone)
                 stock = (PRISTINE / path).read_bytes()
-                entry = m.gate_wall_entry(PRISTINE, path, zone)
+                entry = m.gate_entry(PRISTINE, path, zone)
                 patched = m.apply(stock, entry)
                 archive.verify_memory_image(patched)
-                # Only bound.csv changes, and only our numbers ship.
-                self.assertLess(sum(len(base64.b64decode(e['Insert'])) for e in entry['Edits']), 150)
+                # Only bound.csv (and zonejump.csv) change, and only our numbers ship.
+                bound_edits = next(part for part in entry.get('Members') or [entry] if part['Member'] == m.BOUND)['Edits']
+                self.assertLess(sum(len(base64.b64decode(e['Insert'])) for e in bound_edits), 150)
                 before, after = archive.read(stock)[1], archive.read(patched)[1]
                 self.assertEqual([e.name for e in before], [e.name for e in after])
-                self.assertEqual([e.data for e in before if e.name != m.BOUND], [e.data for e in after if e.name != m.BOUND])
+                self.assertEqual([e.data for e in before if e.name.lower() not in (m.BOUND, m.ZONE_JUMP)],
+                                 [e.data for e in after if e.name.lower() not in (m.BOUND, m.ZONE_JUMP)])
                 old, new = bound_polygons(m.member_of(stock, m.BOUND)), bound_polygons(m.member_of(patched, m.BOUND))
                 self.assertEqual(len(old), len(new))
                 touched = {wall[1] for wall in m.GATE_WALLS if wall[0] == zone}

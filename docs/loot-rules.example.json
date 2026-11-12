@@ -1,0 +1,52 @@
+// Loot tuning. Copy to runtime/server/loot-rules.json (beside bot-goals.json). The server re-reads it within
+// 10 seconds of a save; /lootrules shows what is in use and /lootrules reload reads it at once.
+// Leave a setting out to keep its default (the defaults are the drop rates from before this file existed).
+{
+  "Version": 1,
+  "RandomItems": {
+    // Owner 2026-11-05: about 1 in 8 solo random items instead of about 1 in 4. Groups are halved the same way.
+    "ChanceMultiplier": 0.5,
+    "NamedChanceMultiplier": 1.0,
+    "FrontierChanceMultiplier": 1.0,
+    "BaseChance": 14,
+    "ChancePerCon": 3,
+    "SoloBonus": 10,
+    "GroupLevelPenalties": [
+      { "AboveLevel": 27, "Chance": 3 },
+      { "AboveLevel": 40, "Chance": 3 }
+    ],
+    "GroupMembersPerDrop": 3,
+    "GroupMaxDrops": 3,
+    "GroupExtraDropAboveLevel": 65,
+    "GroupGuaranteedDropAboveLevel": 67,
+    "BattlegroupChance": 2,
+    "BattlegroupPlayersPerDrop": 50,
+    "EpicBattlegroupDropMultiplier": 2,
+    // Owner 2026-11-05: personal loot. Each group or battlegroup member who rolls an item gets one for their own class.
+    "PersonalLoot": true,
+    // Bad-luck protection: each missed roll adds this many percent to that member's next roll (up to BadLuckMax) until
+    // they get an item. 0 is off. Try 1 with BadLuckMax 25 to soften long dry spells at the 1 in 8 rate.
+    "BadLuckStep": 0,
+    "BadLuckMax": 25,
+    // Budget-first bonuses (phase 3). Set Enabled to true to use them: a mid quality item then matches the old average
+    // strength, low quality is a little weaker and high quality (orange and red kills) stronger.
+    "Budget": {
+      "Enabled": false,
+      "PerLevel": 0.88,
+      "LevelOffset": 6,
+      "Floor": 5,
+      "Max": 80,
+      "LowQuality": 95,
+      "LowQualityFactor": 0.85,
+      "HighQuality": 99,
+      "HighQualityFactor": 1.05,
+      "ProcFactor": 0.7,
+      "LineCapFactor": 1.5
+    }
+  },
+  "Coin": {
+    // On top of the money_drop server setting.
+    "Multiplier": 1.0,
+    "NamedMultiplier": 1.0
+  }
+}

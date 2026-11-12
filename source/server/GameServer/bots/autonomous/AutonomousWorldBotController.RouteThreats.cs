@@ -37,6 +37,21 @@ namespace DOL.GS
         private int _routeThreatPullRepeats;
         private long _lastRouteThreatPullTick;
         private const int RouteThreatPullAttempts = 3;
+
+        /// <summary>Turn-backs from one monster on a keep march before the bot walks on past it.</summary>
+        public const int RvrTravelTurnBacksBeforeWalkingOn = 2;
+        private GameNPC _rvrTurnBackFrom;
+        private int _rvrTurnBacks;
+        private long _rvrLastTurnBackTick;
+
+        /// <summary>Counts this turn-back from <paramref name="blocker"/> (a gap over two minutes starts over).</summary>
+        private int RvrTravelTurnBacks(GameNPC blocker, long now)
+        {
+            _rvrTurnBacks = blocker == _rvrTurnBackFrom && now - _rvrLastTurnBackTick < 120_000 ? _rvrTurnBacks + 1 : 1;
+            _rvrTurnBackFrom = blocker;
+            _rvrLastTurnBackTick = now;
+            return _rvrTurnBacks;
+        }
         // A party holding in front of a route monster it may not pull yet. Run 17 (2026-10-17): 12,472 of 13,547 level 50
         // party route-threat decisions were the same hold repeated (114 loops in 78 parties, one for 98 minutes): only
         // the leader looks ahead, only the party's puller may open a pull, and a leader that was not the puller held
@@ -78,13 +93,24 @@ namespace DOL.GS
         private bool GuardMeetupWalk(GameBot bot, Vector3 destination) =>
             GuardRoute(bot, destination, alone: true, out _, mayTurnBack: false);
 
-        private bool GuardRoute(GameBot bot, Vector3 destination, bool alone, out bool turnedBack, bool mayTurnBack = true)
+        /// <summary>
+        /// A frontier march to a keep (the RvR objective's own travel), scanned for PvE monsters like a lone walk: it goes
+        /// around one, pulls one it can take, or backs out of the reach of one it cannot and holds. Night 2026-11-04: route
+        /// threat scanning was off for every bot on an RvR objective, and levels 40-49 on frontier tours walked into purple
+        /// PvE monsters. Enemy players and bots are never route threats (IsExperienceMonster).
+        /// </summary>
+        private bool GuardRvrTravel(GameBot bot, Vector3 destination) =>
+            GuardRoute(bot, destination, alone: true, out _, rvrTravel: true);
+
+        private bool GuardRoute(GameBot bot, Vector3 destination, bool alone, out bool turnedBack, bool mayTurnBack = true,
+            bool rvrTravel = false)
         {
+            using var aiProfile = AiProfile.Scope(AiSystem.ControllerRouteThreats); // AI_PROFILE: measures only
             turnedBack = false;
             if (!AutonomousRouteThreatPolicy.Enabled || bot.Brain is not BotBrain brain ||
                 bot.CurrentZone == null || bot.CurrentZone.IsDungeon || bot.CurrentRegion?.IsDungeon == true ||
                 bot.IsOnStableMasterRoute || bot.IsPlayerLedGroup || brain.HasAggro || bot.InCombat || bot.IsAttacking ||
-                AutonomousObjectiveAssignments.Is(bot, eAutonomousObjectiveKind.RvR) ||
+                !AutonomousRouteThreatPolicy.ScansFor(AutonomousObjectiveAssignments.Is(bot, eAutonomousObjectiveKind.RvR), rvrTravel) ||
                 AutonomousRealmRaid.GetView(bot.Group) != null)
                 return false;
             bool grouped = !alone && _groupDirective?.IsDynamic == true;
@@ -93,6 +119,10 @@ namespace DOL.GS
             long now = GameLoop.GameLoopTime;
             // Still backing off from the last monster: the turn is spent, the reaction was already taken.
             if (alone && mayTurnBack && now < _loneWalkHoldUntilTick)
+                return true;
+            // A solo bot hurt in a fight on the road, or about to open a route pull without the health, power or
+            // endurance for it, rests where it stands first (AutonomousSoloFightReadiness).
+            if (!grouped && mayTurnBack && bot.Group == null && HoldRoadRest(bot, now))
                 return true;
             if (now < _nextRouteThreatScanTick)
                 return false;
@@ -159,6 +189,13 @@ namespace DOL.GS
                 Vector3 position = new(npc.X, npc.Y, npc.Z);
                 if (Vector2.Distance(new(position.X, position.Y), new(destination.X, destination.Y)) <=
                     AutonomousRouteThreatPolicy.CampSkipRadius)
+                    continue;
+                // The walk's destination is often an approach point or a sidestep, not the camp: the camp's own monsters
+                // and the camp's own species at yellow or lower are the work, not a reason to give the camp up
+                // (playtest 2026-11-07: 578 give-ups were to the bot's own target).
+                if (_camp != null && _camp.RegionId == bot.CurrentRegionID &&
+                    (Vector2.Distance(new(position.X, position.Y), new(_camp.X, _camp.Y)) <= AutonomousRouteThreatPolicy.CampSkipRadius ||
+                     AutonomousRouteThreatPolicy.IsCampWork(npc.Name, ConLevels.GetConColor(bot.GetConLevel(npc)), _camp.MonsterName)))
                     continue;
                 // The monster this detour is already going around.
                 if (detouring && _routeThreatDetours.ContainsKey(npc))
@@ -246,6 +283,18 @@ namespace DOL.GS
                         blocker.Name, _camp?.ZoneName ?? string.Empty);
                     return false;
 
+                case RouteThreatAction.Retarget when alone && rvrTravel && (int)con <= (int)ConColor.ORANGE && !bossLike &&
+                        RvrTravelTurnBacks(blocker, now) > RvrTravelTurnBacksBeforeWalkingOn:
+                    // A keep march has no other road. Overnight run 2026-11-08: level 50s stood in the fellwood camp on the
+                    // Pennine road (rvr-keep-56) and by the isalf forayers in Odin's Gate (rvr-keep-79), turning back from a
+                    // yellow pack with "no way out" every scan until three stalls released the job, then marching back to
+                    // the same spot (700 RVR_KEEP_TRAVEL_STALL lines, two-thirds at those two spots). Walk on and fight if they come.
+                    foreach (GameNPC member in packMembers)
+                        _unreachableRouteThreats.Add(member);
+                    if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_ROUTE_THREAT_WALK_ON bot={bot.Name} id={bot.DatabaseID} level={bot.Level} " +
+                             $"target=\"{blocker.Name}\" pack={pack} con={con} zone=\"{zone.Description}\" at={blocker.X},{blocker.Y},{blocker.Z}");
+                    return false;
+
                 case RouteThreatAction.Retarget when alone:
                     turnedBack = true;
                     _loneWalkHoldUntilTick = now + LoneWalkHoldMilliseconds;
@@ -271,6 +320,15 @@ namespace DOL.GS
                         if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_ROUTE_THREAT_UNREACHABLE bot={bot.Name} id={bot.DatabaseID} target=\"{blocker.Name}\" " +
                                  $"at={blocker.X},{blocker.Y},{blocker.Z} zone=\"{zone.Description}\"");
                         return false;
+                    }
+                    if (!grouped && !AutonomousSoloFightReadiness.ReadyForRoutePull(bot.HealthPercent, bot.ManaPercent,
+                            bot.EndurancePercent, bot.MaxMana > 0))
+                    {
+                        if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_ROUTE_PULL_REST bot={bot.Name} id={bot.DatabaseID} level={bot.Level} " +
+                                 $"target=\"{blocker.Name}\" hp={bot.HealthPercent} power={bot.ManaPercent} endurance={bot.EndurancePercent} " +
+                                 $"dist={bot.GetDistanceTo(blocker)} zone=\"{zone.Description}\"");
+                        BeginRoadRest(bot, now, $"Resting before clearing {blocker.Name} from the route");
+                        return true;
                     }
                     _routeThreatPullRepeats = blocker == _lastRouteThreatPull && now - _lastRouteThreatPullTick < 45_000
                         ? _routeThreatPullRepeats + 1 : 0;
@@ -378,6 +436,36 @@ namespace DOL.GS
              AutonomousRouteBlockMemory.Crosses(AutonomousRouteBlockMemory.WordOfMouthKey(bot.Realm, bot.Level, region), region,
                  new(bot.X, bot.Y), new(x, y), now));
 
+        /// <summary>A spot that lies inside the reach of a pack the bot, its party or its realm's bots of its level just gave up a camp for.</summary>
+        private bool IsInsideRouteBlocker(GameBot bot, ushort region, float x, float y, long now) =>
+            AutonomousRouteBlockMemory.Within(FailedGoalOwnerKey(bot), region, new(x, y), now) ||
+            AutonomousRouteBlockMemory.Within(WarbandGoalKey(), region, new(x, y), now) ||
+            AutonomousRouteBlockMemory.Within(AutonomousRouteBlockMemory.WordOfMouthKey(bot.Realm, bot.Level, region), region, new(x, y), now);
+
+        /// <summary>Where the bot stands and the nearest blocker it remembers, for the log line of a search that every blocker emptied.</summary>
+        private string NearestRouteBlockerText(GameBot bot, long now)
+        {
+            Vector2 here = new(bot.X, bot.Y);
+            (string Owner, long Key)[] owners =
+            [
+                ("own", FailedGoalOwnerKey(bot)), ("party", WarbandGoalKey()),
+                ("realm", AutonomousRouteBlockMemory.WordOfMouthKey(bot.Realm, bot.Level, bot.CurrentRegionID)),
+            ];
+            string text = $" at={bot.CurrentRegionID}:{bot.X},{bot.Y}";
+            float best = float.MaxValue;
+            foreach ((string owner, long key) in owners)
+            {
+                if (!AutonomousRouteBlockMemory.TryNearest(key, bot.CurrentRegionID, here, now, out Vector2 at, out float radius))
+                    continue;
+                float distance = Vector2.Distance(at, here);
+                if (distance >= best)
+                    continue;
+                best = distance;
+                text = $" at={bot.CurrentRegionID}:{bot.X},{bot.Y} blocker={(int)at.X},{(int)at.Y} reach={(int)radius} distance={(int)distance} from={owner}";
+            }
+            return text;
+        }
+
         private bool HasRouteBlockers(GameBot bot, long now) =>
             AutonomousRouteBlockMemory.HasAny(FailedGoalOwnerKey(bot), now) || AutonomousRouteBlockMemory.HasAny(WarbandGoalKey(), now) ||
             AutonomousRouteBlockMemory.HasAny(AutonomousRouteBlockMemory.WordOfMouthKey(bot.Realm, bot.Level, bot.CurrentRegionID), now);
@@ -409,17 +497,19 @@ namespace DOL.GS
         /// </summary>
         private const int RetreatFloorSearch = 1536;
 
-        private void BackAwayFrom(GameBot bot, IPathfindingMgr nav, Zone zone, GameNPC threat, GameNPC[] pack, int margin,
-            GameNPC[] others)
+        /// <summary>True when the bot is walking away (or already clear); false when no way out was found.</summary>
+        private bool BackAwayFrom(GameBot bot, IPathfindingMgr nav, Zone zone, GameNPC threat, GameNPC[] pack, int margin,
+            GameNPC[] others, float minimumRadius = 0)
         {
             var members = new (Vector2 Position, int AggroRange)[pack.Length];
             for (int i = 0; i < pack.Length; i++)
                 members[i] = (new(pack[i].X, pack[i].Y), (pack[i].Brain as StandardMobBrain)?.AggroRange ?? 0);
             (Vector2 center, float radius) = AutonomousRouteThreatPolicy.PackRetreat(members, margin);
+            radius = Math.Max(radius, minimumRadius);
             Vector2 here = new(bot.X, bot.Y);
             float distance = Vector2.Distance(here, center);
             if (distance >= radius)
-                return;
+                return true;
             Vector3 start = new(bot.X, bot.Y, bot.Z);
             foreach (Vector2 candidate in AutonomousRouteThreatPolicy.RetreatCandidates(here, center, radius))
             {
@@ -444,11 +534,12 @@ namespace DOL.GS
                 if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_ROUTE_RETREAT bot={bot.Name} id={bot.DatabaseID} level={bot.Level} result=walking " +
                          $"target=\"{threat.Name}\" pack={pack.Length} from={distance:0} radius={radius:0} walk={walkDistance:0} " +
                          $"zone=\"{zone.Description}\" at={bot.X},{bot.Y},{bot.Z} to={floor.X:0},{floor.Y:0},{floor.Z:0}");
-                return;
+                return true;
             }
             if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_ROUTE_RETREAT bot={bot.Name} id={bot.DatabaseID} level={bot.Level} result=no_way_out " +
                      $"target=\"{threat.Name}\" pack={pack.Length} from={distance:0} radius={radius:0} " +
                      $"zone=\"{zone.Description}\" at={bot.X},{bot.Y},{bot.Z}");
+            return false;
         }
 
         private long _nextDangerBypassLogTick;

@@ -1,0 +1,2768 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T02:08:50.960253+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Spell",
+   "key": "offline-item-803411",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803411,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3411)",
+    "Description": "Increases your Dual Wield by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your dual wield skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your dual wield skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803411"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "402cfcc4-02e1-54aa-be09-6a3bddb6f6a2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803411,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "402cfcc4-02e1-54aa-be09-6a3bddb6f6a2"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1459,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803411,
+    "KeyName": "BuffProperty",
+    "Value": "28",
+    "CustomParamID": 1459,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_infiltrator_blade_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803411
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_infiltrator_edge_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803411
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803381",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803381,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3381)",
+    "Description": "Increases your Staff by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your staff skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your staff skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803381"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "75fafb9f-bfc0-5727-93e6-a79319951638",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803381,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "75fafb9f-bfc0-5727-93e6-a79319951638"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1460,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803381,
+    "KeyName": "BuffProperty",
+    "Value": "48",
+    "CustomParamID": 1460,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_friar_quarter_staff_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803381
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803377",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803377,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3377)",
+    "Description": "Increases your Slash by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your slash skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your slash skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803377"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "c173b3a0-9967-5a55-953d-67b34c5327ba",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803377,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "c173b3a0-9967-5a55-953d-67b34c5327ba"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1461,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803377,
+    "KeyName": "BuffProperty",
+    "Value": "44",
+    "CustomParamID": 1461,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_minstrel_blade_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803377
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803378",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803378,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3378)",
+    "Description": "Increases your Thrust by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your thrust skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your thrust skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803378"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "dc22ea27-238a-5d14-9658-d87f71ddab5e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803378,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "dc22ea27-238a-5d14-9658-d87f71ddab5e"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1462,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803378,
+    "KeyName": "BuffProperty",
+    "Value": "50",
+    "CustomParamID": 1462,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_minstrel_edge_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803378
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803379",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803379,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3379)",
+    "Description": "Increases your Crush by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your crush skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your crush skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803379"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "a156bd0d-85af-5619-aa26-9db71951a922",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803379,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "a156bd0d-85af-5619-aa26-9db71951a922"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1463,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803379,
+    "KeyName": "BuffProperty",
+    "Value": "25",
+    "CustomParamID": 1463,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_heretic_mace_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803379
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_reaver_blade_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803377
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_reaver_edge_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803378
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_darkflame_reaver_mace_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803379
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803451",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803451,
+    "ClientEffect": 4301,
+    "Icon": 11253,
+    "Name": "Damage To Power (3451)",
+    "Description": "Blocks 10.0% damage and returns 10.0% to the caster as power.",
+    "Target": "Group",
+    "Range": 350,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 10.0,
+    "DamageType": 0,
+    "Type": "DmgReductionAndPowerReturn",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "A crystal shield covers you.",
+    "Message2": "A crystal shield covers {0}'s skin.",
+    "Message3": "Your crystal shield fades.",
+    "Message4": "{0}'s crystal shield fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803451"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "52e947e3-ed62-5598-a705-6329214e21e5",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803451,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "52e947e3-ed62-5598-a705-6329214e21e5"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_halberd_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_pike_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_mattock_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_flamberge_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_lance_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_chthonian_armsman_arch_mace_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807705",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807705,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (7705)",
+    "Description": "Raises the target's ability in a given skill.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your critical strike skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your critical strike skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807705"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ca36ffee-b452-56ce-aa49-aba41fe3197a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807705,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ca36ffee-b452-56ce-aa49-aba41fe3197a"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1464,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807705,
+    "KeyName": "BuffProperty",
+    "Value": "23",
+    "CustomParamID": 1464,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_assassin_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807705
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_assassin_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807705
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807687",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807687,
+    "ClientEffect": 4301,
+    "Icon": 11253,
+    "Name": "Damage To Power (7687)",
+    "Description": "Blocks a portion of damage dealt to the target and gives power to the caster.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 20.0,
+    "DamageType": 0,
+    "Type": "DmgReductionAndPowerReturn",
+    "Duration": 15,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 20.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "A crystal shield covers you.",
+    "Message2": "A crystal shield covers {0}'s skin.",
+    "Message3": "Your crystal shield fades.",
+    "Message4": "{0}'s crystal shield fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807687"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "971b61f7-f418-5c4b-b426-5434aab56518",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807687,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "971b61f7-f418-5c4b-b426-5434aab56518"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_demon_vest_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803476",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803476,
+    "ClientEffect": 11416,
+    "Icon": 11416,
+    "Name": "Bedazzled (3476)",
+    "Description": "Bedazzles target, causing it to suffer a 35% chance to miscast and a 0% chance to fumble for 30 sec.",
+    "Target": "Enemy",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 10,
+    "Type": "CastingSpeedDebuff",
+    "Duration": 30,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 350,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 35.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803476"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "46b4ef44-1a64-5568-b634-2487e79da68d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803476,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "46b4ef44-1a64-5568-b634-2487e79da68d"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_physical_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_elemental_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_soul_bracer_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-806952",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 806952,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Stealth Lore (6952)",
+    "Description": "Your have a 35% increased chance to uncover hidden opponents. Your ability to stealth is also increased, if you possess it.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "StealthSkillBuff",
+    "Duration": 90,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 35.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your senses sharpen and your steps grow quieter.",
+    "Message2": "{0} looks more watchful.",
+    "Message3": "Your senses return to normal.",
+    "Message4": "{0}'s watchfulness fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-806952"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "1e5f94f1-9b52-5352-bfc2-134daf6bc560",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 806952,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "1e5f94f1-9b52-5352-bfc2-134daf6bc560"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803657",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803657,
+    "ClientEffect": 11238,
+    "Icon": 11238,
+    "Name": "Defensive Proc (3657)",
+    "Description": "Triggers the following spell with a 15% chance when being attacked.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "DefensiveProc",
+    "Duration": 420,
+    "Frequency": 1500,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 853657.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "",
+    "Message2": "",
+    "Message3": "",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803657"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853657",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853657,
+    "ClientEffect": 1198,
+    "Icon": 1198,
+    "Name": "Defensive Proc (3657, part 2)",
+    "Description": "Triggers the following spell with a 15% chance when being attacked.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 100.0,
+    "DamageType": 10,
+    "Type": "AblativeArmor",
+    "Duration": 45,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 150.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You are protected from mundane weapons.",
+    "Message2": "{0} is surrounded by a magical buffer.",
+    "Message3": "Your melee buffer dissipates.",
+    "Message4": "",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853657"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "919f4af9-8128-5dfe-af32-7bd501bacf53",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803657,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "919f4af9-8128-5dfe-af32-7bd501bacf53"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "528af566-dda5-5c2c-9a80-f5b4bd205c59",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853657,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "528af566-dda5-5c2c-9a80-f5b4bd205c59"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_uther_s_otherworldly_resilient_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803686",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803686,
+    "ClientEffect": 9621,
+    "Icon": 9621,
+    "Name": "Offensive Proc (3686)",
+    "Description": "Triggers the following spell with a 5% chance on own attacks.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "OffensiveProc",
+    "Duration": 600,
+    "Frequency": 500,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 853686.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your blows can now steal the life from your foes!",
+    "Message2": "{0} is shrouded in a life-stealing aura.",
+    "Message3": "Your life-stealing aura fades.",
+    "Message4": "The dark aura around {0} fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803686"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-853686",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 853686,
+    "ClientEffect": 10594,
+    "Icon": 10594,
+    "Name": "Offensive Proc (3686, part 2)",
+    "Description": "Triggers the following spell with a 5% chance on own attacks.",
+    "Target": "Enemy",
+    "Range": 250,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "Disarm",
+    "Duration": 4,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": null,
+    "Message2": null,
+    "Message3": null,
+    "Message4": null,
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-853686"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "78e6541e-9bf8-5d48-a775-7cd3e83b5537",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803686,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "78e6541e-9bf8-5d48-a775-7cd3e83b5537"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "471f25d7-c3b7-598b-a159-74c9ac380c1d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 853686,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "471f25d7-c3b7-598b-a159-74c9ac380c1d"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_uther_s_otherworldly_stalwart_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_uther_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803412",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803412,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3412)",
+    "Description": "Increases your Left Axe by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your left axe skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your left axe skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803412"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "ecf814c7-ad72-5b38-98c3-b065ca3edace",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803412,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "ecf814c7-ad72-5b38-98c3-b065ca3edace"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1465,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803412,
+    "KeyName": "BuffProperty",
+    "Value": "55",
+    "CustomParamID": 1465,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_shadowblade_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803412
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803696",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803696,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3696)",
+    "Description": "Increases your Sword by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your sword skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your sword skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803696"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "1e2e1045-d8e9-5bd7-9d79-1d317eed75d6",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803696,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "1e2e1045-d8e9-5bd7-9d79-1d317eed75d6"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1466,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803696,
+    "KeyName": "BuffProperty",
+    "Value": "52",
+    "CustomParamID": 1466,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_shadowblade_heavy_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803696
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803695",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803695,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3695)",
+    "Description": "Increases your Axe by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your axe skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your axe skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803695"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "8325273c-73fc-50dd-9827-fe82d5f1efad",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803695,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "8325273c-73fc-50dd-9827-fe82d5f1efad"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1467,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803695,
+    "KeyName": "BuffProperty",
+    "Value": "54",
+    "CustomParamID": 1467,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_shadowblade_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803695
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_shadowblade_heavy_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803695
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803384",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803384,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3384)",
+    "Description": "Increases your Axe by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your axe skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your axe skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803384"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "9c602f55-d587-5a0a-843a-b1b69f4310b2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803384,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "9c602f55-d587-5a0a-843a-b1b69f4310b2"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1468,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803384,
+    "KeyName": "BuffProperty",
+    "Value": "54",
+    "CustomParamID": 1468,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_thane_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803384
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_thane_heavy_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803384
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803383",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803383,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3383)",
+    "Description": "Increases your Sword by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your sword skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your sword skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803383"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "f60adc0d-a21e-5bff-9322-9c9bdd659ec7",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803383,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "f60adc0d-a21e-5bff-9322-9c9bdd659ec7"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1469,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803383,
+    "KeyName": "BuffProperty",
+    "Value": "52",
+    "CustomParamID": 1469,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_thane_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803383
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_thane_heavy_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803383
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803385",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803385,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3385)",
+    "Description": "Increases your Hammer by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your hammer skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your hammer skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803385"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "e502cec3-83c5-5f4e-ba89-f827ffbb4396",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803385,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "e502cec3-83c5-5f4e-ba89-f827ffbb4396"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1470,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803385,
+    "KeyName": "BuffProperty",
+    "Value": "53",
+    "CustomParamID": 1470,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_thane_hammer_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803385
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_thane_heavy_hammer_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803385
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_glacial_valkyrie_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803383
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_valkyrie_heavy_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803383
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803386",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803386,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3386)",
+    "Description": "Increases your Spear by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your spear skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your spear skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803386"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "e1691332-a5b5-5a51-ab5a-1ffdd3bbea16",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803386,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "e1691332-a5b5-5a51-ab5a-1ffdd3bbea16"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1471,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803386,
+    "KeyName": "BuffProperty",
+    "Value": "56",
+    "CustomParamID": 1471,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_valkyrie_slashing_spear_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803386
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_valkyrie_spear_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803386
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_warrior_heavy_axe_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_warrior_heavy_sword_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_blighted_warrior_heavy_hammer_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_howling_bewitched_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_bewitched_vest_mid",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_physical_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_elemental_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_otherworldly_soul_bracer_all2",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ymir_s_otherworldly_resilient_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ymir_s_otherworldly_stalwart_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_ymir_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803387",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803387,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3387)",
+    "Description": "Increases your Scythe by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your scythe skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your scythe skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803387"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "40780bd2-3e6f-50da-8441-4a6a87e6e6ee",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803387,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "40780bd2-3e6f-50da-8441-4a6a87e6e6ee"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1472,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803387,
+    "KeyName": "BuffProperty",
+    "Value": "90",
+    "CustomParamID": 1472,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_malignant_valewalker_scythe_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803387
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803413",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803413,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3413)",
+    "Description": "Increases your Celtic Dual by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your celtic dual skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your celtic dual skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803413"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "40ab04ba-55d7-528e-853b-6f5ec6fbc600",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803413,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "40ab04ba-55d7-528e-853b-6f5ec6fbc600"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1473,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803413,
+    "KeyName": "BuffProperty",
+    "Value": "81",
+    "CustomParamID": 1473,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_venomous_nightshade_steel_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803413
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_venomous_nightshade_blade_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID1": 0
+   },
+   "after": {
+    "ProcSpellID1": 803413
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803389",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803389,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3389)",
+    "Description": "Increases your Blades by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your blades skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your blades skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803389"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "0a155f4a-5196-55d1-ba07-2ad3e6f4f795",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803389,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "0a155f4a-5196-55d1-ba07-2ad3e6f4f795"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1474,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803389,
+    "KeyName": "BuffProperty",
+    "Value": "72",
+    "CustomParamID": 1474,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_venomous_warden_blade_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803389
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-803390",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803390,
+    "ClientEffect": 3537,
+    "Icon": 3537,
+    "Name": "Skill Buff (3390)",
+    "Description": "Increases your Blunt by 10%.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SpecSkillBuff",
+    "Duration": 60,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 10.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your blunt skill improves!",
+    "Message2": "{0} looks more skilled.",
+    "Message3": "Your blunt skill returns to normal.",
+    "Message4": "{0}'s skill returns to normal.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-803390"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "7c939d5e-8766-57d7-b1a4-2dbbaa068466",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 803390,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "7c939d5e-8766-57d7-b1a4-2dbbaa068466"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1475,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 803390,
+    "KeyName": "BuffProperty",
+    "Value": "73",
+    "CustomParamID": 1475,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_venomous_warden_hammer_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803390
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_malignant_hero_warhammer_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_malignant_hero_warblade_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_malignant_hero_celtic_spear_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 803451
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-807678",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 807678,
+    "ClientEffect": 9621,
+    "Icon": 9621,
+    "Name": "Offensive Proc (7678)",
+    "Description": "Offensive Proc",
+    "Target": "Self",
+    "Range": 0,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "OffensiveProc",
+    "Duration": 10,
+    "Frequency": 1000,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 857678.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "Your blows can now steal the life from your foes!",
+    "Message2": "{0} is shrouded in a life-stealing aura.",
+    "Message3": "Your life-stealing aura fades.",
+    "Message4": "The dark aura around {0} fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-807678"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "offline-item-857678",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 857678,
+    "ClientEffect": 778,
+    "Icon": 778,
+    "Name": "Offensive Proc (7678, part 2)",
+    "Description": "Offensive Proc",
+    "Target": "Enemy",
+    "Range": 1250,
+    "Power": 0,
+    "CastTime": 0.0,
+    "Damage": 0.0,
+    "DamageType": 11,
+    "Type": "ColdResistDebuff",
+    "Duration": 12,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 25.0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You feel more vulnerable to cold!",
+    "Message2": "{0} seems vulnerable to cold!",
+    "Message3": "Your cold vulnerability fades.",
+    "Message4": "{0}'s cold vulnerability fades.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 0,
+    "EffectGroup": 0,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "OfflineBountycraft",
+    "TooltipId": 0,
+    "LastTimeRowUpdated": "2026-11-08 00:00:00",
+    "Spell_ID": "offline-item-857678"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "6f7d996f-40e1-5070-bec7-21fa631583e8",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 807678,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "6f7d996f-40e1-5070-bec7-21fa631583e8"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "39ca7d26-b473-5bfd-b265-66ef55295f65",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Item Effects",
+    "SpellID": 857678,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "39ca7d26-b473-5bfd-b265-66ef55295f65"
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_reaper_robe_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807678
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_shrouded_death_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_death_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cliodna_s_otherworldly_resilient_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cliodna_s_otherworldly_stalwart_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID": 0,
+    "Charges": 0,
+    "MaxCharges": 0,
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_unyielding_demon_robe_alb",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807687
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_freezing_reaper_vest_hib",
+   "op": "update",
+   "before": {
+    "ProcSpellID": 0
+   },
+   "after": {
+    "ProcSpellID": 807678
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "op": "update",
+   "before": {
+    "SpellID1": 0,
+    "Charges1": 0,
+    "MaxCharges1": 0
+   },
+   "after": {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

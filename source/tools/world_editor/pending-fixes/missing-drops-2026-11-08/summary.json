@@ -1,0 +1,62 @@
+{
+ "monsters with official drops we spawn (non-ToA)": 1878,
+ "monsters getting new table rows": 1778,
+ "items created": 3052,
+ "items created by realm": {
+  "3": 880,
+  "1": 940,
+  "2": 881,
+  "0": 351
+ },
+ "existing items newly dropped": 2791,
+ "LootTemplate rows": 25279,
+ "MobXLootTemplate rows": 744,
+ "tables": 1422,
+ "monsters by chance a kill gives one new drop": {
+  "common 10-19%": 481,
+  "common 20-29%": 384,
+  "common 30-39%": 68,
+  "common 40-49%": 42,
+  "common 50-59%": 3,
+  "named 10-19%": 87,
+  "named 20-29%": 59,
+  "named 30-39%": 72,
+  "named 40-49%": 289,
+  "named 50-59%": 293
+ },
+ "LootOTD rows": 166,
+ "spells created": 15,
+ "spells not buildable": 16,
+ "items that lost a spell they could not get": 88,
+ "skipped": {
+  "already drops there": 2827,
+  "our item belongs to package OfflineToANamedDrops": 5,
+  "our item belongs to package atlas_orbs_item": 478,
+  "our item belongs to package drmed": 72,
+  "no donor of that type": 11,
+  "our item belongs to package OfflineBountycraft": 177
+ },
+ "edits": 29271,
+ "part1 edits": 19000,
+ "part2 edits": 10271,
+ "by table": {
+  "ItemTemplate": 3052,
+  "Spell": 15,
+  "LineXSpell": 15,
+  "LootOTD": 166,
+  "LootTemplate": 25279,
+  "MobXLootTemplate": 744
+ },
+ "new item level source": {
+  "from DPS": 977,
+  "from AF": 1383,
+  "monster level": 494,
+  "level requirement": 192,
+  "placeholder AF; monster level": 1,
+  "placeholder DPS; monster level": 5
+ },
+ "new item model source": {
+  "donor": 2859,
+  "EoD twin": 193
+ }
+}

@@ -789,6 +789,12 @@ namespace DOL.GS
                     if (PathfindingProvider.Instance.HasLineOfSight(zone, _ownerPosition, destination, filters))
                     {
                         ClearAutonomousPathFailure();
+                        // A walking bot never walks on up into the air to a hovering target (DR-246). A swimming
+                        // bot keeps its mid-water end: the floor under it is the sea bed.
+                        if (Owner is GameBot walker && (Owner.Flags & (GameNPC.eFlags.FLYING | GameNPC.eFlags.SWIMMING)) == 0 &&
+                            !BotPlayerPresentation.Swimming(walker))
+                            destination = BotAirborneTargetPolicy.GroundedWalkEnd(destination,
+                                PathfindingProvider.Instance.GetFloorBeneath(zone, destination, 3000, PathfindingProvider.Instance.DefaultFilters));
                         FallbackToWalk(this, destination, speed);
                     }
                     else
@@ -1017,7 +1023,10 @@ namespace DOL.GS
             int arrived = formation && !leaderWalking ? AutonomousGroupFormationFollow.ArrivedTolerance : MinFollowDistance + 1;
             if (distanceSquared <= arrived * arrived)
             {
-                TurnTo(FollowTarget);
+                // An autonomous gamebot re-faces what it follows only when more than 30 degrees off, not on every follow
+                // check (Living Server 1.2: a party standing around its leader no longer turns with its every step).
+                if (!BotTurning.HoldsFollowHeading(Owner, FollowTarget))
+                    TurnTo(FollowTarget);
 
                 if (IsMoving)
                     UpdateMovement(0);

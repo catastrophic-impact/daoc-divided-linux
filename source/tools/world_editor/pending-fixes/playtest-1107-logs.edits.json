@@ -1,0 +1,126 @@
+[
+ {
+  "table": "Spell",
+  "key": "local-round3-live-v1-77738",
+  "set": {
+   "Type": "PaladinArmorFactorBuff"
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99992932",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99992947",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99993025",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99993252",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99993295",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99993736",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99993904",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99994124",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99994616",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99995621",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99995882",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "99995970",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "81deae8f-0fb1-4005-8ba4-8b12e24d0e72",
+  "set": {
+   "ClassType": "DOL.GS.GameTrainingDummy",
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ }
+]

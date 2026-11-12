@@ -26,7 +26,7 @@ namespace DOL.GS
                 Request request = _waiting.Find(r => r.Rider.TryGetTarget(out var owner) && ReferenceEquals(owner, rider));
                 if (request == null)
                 {
-                    if (_waiting.Count >= RealmRaidRecruitmentPolicy.MaximumParties) return false;
+                    if (_waiting.Count >= RealmRaidRecruitmentPolicy.FormationSlots) return false;
                     request = new() { Rider = new(rider), Seen = now };
                     _waiting.Add(request);
                 }

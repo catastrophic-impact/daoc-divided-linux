@@ -16,7 +16,7 @@ namespace DOL.GS
             return spellType is not eSpellType.EnduranceRegenBuff ? ServerProperties.Properties.BUFF_RANGE > 0 ? ServerProperties.Properties.BUFF_RANGE : 5000 : 1500;
         }
 
-        public static void SendSpellAnimation(ECSGameSpellEffect e)
+        public static void SendSpellAnimation(ECSGameSpellEffect e, bool noSound = false)
         {
             if (e == null || e.SpellHandler.Spell.ClientEffect == 0)
                 return;
@@ -32,7 +32,7 @@ namespace DOL.GS
                 target = e.Owner;
 
             foreach (GamePlayer player in e.Owner.GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
-                player.Out.SendSpellEffectAnimation(spellHandler.Caster, target, spell.ClientEffect, 0, false, 1);
+                player.Out.SendSpellEffectAnimation(spellHandler.Caster, target, spell.ClientEffect, 0, noSound, 1);
         }
 
         public static eEffect GetEffectFromSpell(Spell spell)
@@ -52,6 +52,7 @@ namespace DOL.GS
                 case eSpellType.DeathKnightPowerShield: return eEffect.DeathKnightPowerShield;
                 case eSpellType.DeathKnightEmpowerment: return eEffect.DeathKnightEmpowerment;
                 case eSpellType.DeathKnightRegenerate: return eEffect.HealOverTime;
+                case eSpellType.HealAllOverTime: return eEffect.HealOverTime;
                 case eSpellType.DeathKnightSnare: return eEffect.MovementSpeedDebuff;
                 case eSpellType.DeathKnightServant: return eEffect.Pet;
                 case eSpellType.DeathKnightPowerLock: return eEffect.DeathKnightPowerLock;
@@ -163,6 +164,8 @@ namespace DOL.GS
                     return eEffect.PhysicalAbsorptionBuff;
                 case eSpellType.SiegeProtection:
                     return eEffect.SiegeProtection;
+                case eSpellType.CostFreeChance:
+                    return eEffect.CostFreeChance;
                 case eSpellType.CrowdControlGuard:
                     return eEffect.CrowdControlGuard;
                 case eSpellType.DamageReflection:
@@ -217,6 +220,27 @@ namespace DOL.GS
                     return eEffect.StyleZeal;
                 case eSpellType.MeleeTruth:
                     return eEffect.MeleeTruth;
+                // DR-216 loyalty cloaks; ArtifactSpellDamage had no effect type, so its bonus never applied.
+                case eSpellType.ArtifactSpellDamage:
+                    return eEffect.SpellDamageBuff;
+                case eSpellType.MeleeCritBuff:
+                    return eEffect.MeleeCritBuff;
+                case eSpellType.ParryBlockBuff:
+                    return eEffect.ParryBlockBuff;
+                case eSpellType.LoyalArcaneLeadership:
+                    return eEffect.ArcaneLeadership;
+                case eSpellType.IgnoreBladeturn:
+                    return eEffect.IgnoreBladeturn;
+                case eSpellType.GroupDDRadius:
+                    return eEffect.GroupDDRadius;
+                case eSpellType.ControlShrug:
+                    return eEffect.ControlShrug;
+                case eSpellType.DiseaseWard:
+                    return eEffect.DiseaseWard;
+                case eSpellType.SimulacrumSacrifice:
+                    return eEffect.SimulacrumSacrifice;
+                case eSpellType.InCombatSpeed:
+                    return eEffect.MovementSpeedBuff;
                 case eSpellType.Siegebreaker:
                     return eEffect.Siegebreaker;
                 case eSpellType.BlightSurge:
@@ -469,6 +493,28 @@ namespace DOL.GS
                     return list;
                 case eEffect.SpellRangeBuff:
                     list.Add(eProperty.SpellRange);
+                    return list;
+                case eEffect.SpellDamageBuff:
+                    list.Add(eProperty.SpellDamage);
+                    return list;
+                case eEffect.MeleeCritBuff:
+                    list.Add(eProperty.CriticalMeleeHitChance);
+                    return list;
+                case eEffect.ParryBlockBuff:
+                    list.Add(eProperty.ParryChance);
+                    list.Add(eProperty.BlockChance);
+                    return list;
+                case eEffect.ArcaneLeadership:
+                    list.Add(eProperty.SpellRange);
+                    list.Add(eProperty.ResistPierce);
+                    return list;
+                case eEffect.ControlShrug:
+                    list.Add(eProperty.Resist_Body);
+                    list.Add(eProperty.Resist_Cold);
+                    list.Add(eProperty.Resist_Energy);
+                    list.Add(eProperty.Resist_Heat);
+                    list.Add(eProperty.Resist_Matter);
+                    list.Add(eProperty.Resist_Spirit);
                     return list;
                 case eEffect.StaffSkillBuff:
                     list.Add(eProperty.Skill_Staff);

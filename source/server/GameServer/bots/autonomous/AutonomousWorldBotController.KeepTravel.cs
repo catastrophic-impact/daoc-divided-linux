@@ -133,6 +133,9 @@ public sealed partial class AutonomousWorldBotController
         if (HandleKeepTravelStall(bot, destination, current, next, now))
             return true;
         Vector3 leg = KeepTravelLeg(bot, current, next);
+        // PvE monsters on the march (GuardRvrTravel): night 2026-11-04, levels 40-49 on frontier tours walked into purple camps.
+        if (GuardRvrTravel(bot, leg))
+            return true;
         var zone = bot.CurrentRegion.GetZone((int)next.X, (int)next.Y);
         if (zone != bot.CurrentZone && _keepTravelIndex > 0 &&
             Vector3.DistanceSquared(current, next) <= 256 * 256)

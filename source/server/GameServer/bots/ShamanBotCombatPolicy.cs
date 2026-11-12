@@ -24,6 +24,24 @@ namespace DOL.GS
                 eCharacterClass.Reaver or eCharacterClass.Valkyrie or eCharacterClass.Champion or eCharacterClass.Valewalker or
                 eCharacterClass.MaulerAlb or eCharacterClass.MaulerMid or eCharacterClass.MaulerHib or eCharacterClass.Heretic;
 
+        public const int VampiirMeleeReach = 350;
+        /// <summary>Below this power a Vampiir in melee keeps what is left for its claws.</summary>
+        public const int VampiirDrainPowerFloor = 25;
+
+        /// <summary>
+        /// Night 2026-11-04: Vampiirs of levels 18-24 lost 18% of their solo fights (other melee classes 3-5%), dealt about
+        /// 4 damage a second in a losing fight and ended winning fights at 0% power, landing 6% of their swings. In melee
+        /// they spent three-second casts on 10-30 damage bolts (Vampiir's Heat, Sparks, Embers), debuffs and slows, each
+        /// one a lost swing. In melee reach a Vampiir casts only its weapon claws (MagicalStrike, 36-120 damage on the next
+        /// hit) and, with power to spare, its cheap endurance-draining Embrace; everything else waits for range.
+        /// </summary>
+        public static bool VampiirCastsInMelee(Spell spell, int powerPercent) => spell?.SpellType switch
+        {
+            eSpellType.MagicalStrike => true,
+            eSpellType.EnduranceDrain => powerPercent >= VampiirDrainPowerFloor,
+            _ => false,
+        };
+
         public static bool IsRoot(Spell spell) =>
             spell != null && spell.SpellType == eSpellType.SpeedDecrease && spell.Value >= 99;
 

@@ -29,9 +29,9 @@ namespace DOL.GS.PlayerClass
 			return true;
 		}
 
-		public override List<PlayerRace> EligibleRaces => new List<PlayerRace>()
-		{
-			 PlayerRace.Dwarf, PlayerRace.Norseman, PlayerRace.Troll,
-		};
+		// The 1.130 client also offers Valkyn (its creation table, checked 2026-11-09); allowed with modern races on.
+		public override List<PlayerRace> EligibleRaces => ServerProperties.Properties.ENABLE_MODERN_RACES
+			? new List<PlayerRace> { PlayerRace.Dwarf, PlayerRace.Norseman, PlayerRace.Troll, PlayerRace.Valkyn }
+			: new List<PlayerRace> { PlayerRace.Dwarf, PlayerRace.Norseman, PlayerRace.Troll };
 	}
 }

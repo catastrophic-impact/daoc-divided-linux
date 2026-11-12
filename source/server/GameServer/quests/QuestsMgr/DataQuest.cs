@@ -1058,11 +1058,11 @@ namespace DOL.GS.Quests
 
 			foreach (AbstractQuest quest in finishedQuests)
 			{
-				if (quest is DataQuest dataQuest && dataQuest.ID == ID)
-				{
-					if (quest.IsDoingQuest() == true || (dataQuest.Count >= MaxQuestCount && MaxQuestCount >= 0))
-						return false; // player has done this quest the max number of times
-				}
+				// QUESTING.md defect 5 (1.2): a finished data quest is at step 0, and AbstractQuest.IsDoingQuest() is true
+				// for any step but -1, so a quest with MaxCount 2 or more was refused after its first finish. MaxCount 0
+				// and 1 stay offered once, as before (QuestRepeats).
+				if (quest is DataQuest dataQuest && dataQuest.ID == ID && !QuestRepeats.OffersAgain(dataQuest.Step, dataQuest.Count, m_dataQuest.MaxCount))
+					return false; // player has done this quest the max number of times
 			}
 
 			// check to see if this quest requires another to be done first
@@ -1519,6 +1519,8 @@ namespace DOL.GS.Quests
 		
 		/// <summary>
         /// Gets experience reward for reward quests. Used for sending packet info to dialog popup window.
+        /// 2026-10-30: the offer and reward windows show what the quest will pay this player, as FinishQuest pays it:
+        /// its share of the level (ClassicQuests.ScaleXP), the quest rate and the one-level cap (QuestExperience).
         /// </summary>
         /// <returns></returns>
         public int ExperiencePercent(GamePlayer player)
@@ -1533,7 +1535,8 @@ namespace DOL.GS.Quests
             long experienceToLevel = player.GetExperienceNeededForLevel(currentLevel + 1) -
                 player.GetExperienceNeededForLevel(currentLevel);
 
-            return (int)((m_rewardXPs[0] * 100) / experienceToLevel);
+            long paid = QuestExperience.Payout(ClassicQuests.ScaleXP(ID, player, 0, m_rewardXPs[0]), currentLevel, experienceToLevel);
+            return QuestExperience.Percent(paid, experienceToLevel);
         }
         
 		protected virtual bool ExecuteCustomQuestStep(GamePlayer player, int step, eStepCheckType stepCheckType)
@@ -1723,7 +1726,7 @@ namespace DOL.GS.Quests
 					{
 						if (RewardXP > 0)
 						{
-							m_questPlayer.ForceGainExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, Step - 1, RewardXP));
+							m_questPlayer.GainQuestExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, Step - 1, RewardXP), Name);
 						}
 	
 						if (RewardRP > 0)
@@ -2176,7 +2179,7 @@ namespace DOL.GS.Quests
 
 							if (m_rewardXPs.Count > 0 && m_rewardXPs[0] > 0)
 							{
-								player.ForceGainExperience(ClassicQuests.ScaleXP(ID, player, 0, m_rewardXPs[0]));
+								player.GainQuestExperience(ClassicQuests.ScaleXP(ID, player, 0, m_rewardXPs[0]), Name);
 							}
 							
 							if (m_rewardCLXPs.Count > 0 && m_rewardCLXPs[0] > 0)
@@ -2377,7 +2380,10 @@ namespace DOL.GS.Quests
 			//log.DebugFormat("Checking collection quests: '{0}' of type '{1}', wants item '{2}'", Name, (eStartType)DBDataQuest.StartType, DBDataQuest.CollectItemTemplate == null ? "" : DBDataQuest.CollectItemTemplate);
 			// check to see if this object has a collection quest and if so accept the item and generate the reward
 			// collection quests do not go into the GamePlayer quest lists
-			if (StartType == eStartType.Collection && item.Id_nb.Equals(DBDataQuest.CollectItemTemplate))
+			// Ids compare without case, as the server finds item templates (its pre-cache is case-insensitive): quest 401
+			// Human Leg XP Item collects "Human_Leg" and its template is "Human_leg", so the leg dropped but Dera never
+			// took it (quest harness world report, 2026-11-04).
+			if (StartType == eStartType.Collection && string.Equals(item.Id_nb, DBDataQuest.CollectItemTemplate, StringComparison.OrdinalIgnoreCase))
 			{
 				DbCharacterXDataQuest charQuest = GetCharacterQuest(player, ID, true);
 
@@ -2398,7 +2404,7 @@ namespace DOL.GS.Quests
 								rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
 							else if (lvlXP > rewardXP)
 								rewardXP = lvlXP;
-							player.ForceGainExperience(rewardXP);
+							player.GainQuestExperience(rewardXP, Name);
 						}
 						if (m_sourceTexts.Count > 0)
 						{
@@ -2425,7 +2431,7 @@ namespace DOL.GS.Quests
 										rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
 									else if (lvlXP > rewardXP)
 										rewardXP = lvlXP;
-									player.ForceGainExperience(rewardXP);
+									player.GainQuestExperience(rewardXP, Name);
 								}
 								//remove only the remaining turn-ins
 								item.Count -= 1;
@@ -2444,7 +2450,7 @@ namespace DOL.GS.Quests
 										rewardXP = player.GetExperienceNeededForLevel(player.Level) / 50;
 									else if (lvlXP > rewardXP)
 										rewardXP = lvlXP;
-									player.ForceGainExperience(rewardXP);
+									player.GainQuestExperience(rewardXP, Name);
 								}
 								//remove only the remaining turn-ins
 								item.Count -= 1;
@@ -2640,7 +2646,10 @@ namespace DOL.GS.Quests
 		/// <param name="item"></param>
 		protected virtual void OnPlayerGiveItem(GamePlayer player, GameObject obj, DbInventoryItem item)
 		{
-			if (item == null || item.OwnerID == null || m_collectItems.Count == 0)
+			// QUESTING.md defect 7 (1.2): a row with no CollectItemTemplate at all returned here, so its delivery steps
+			// (the item named in StepItemTemplates, the branch below) could never be handed in. The collect branch
+			// checks for its own entry.
+			if (item == null || item.OwnerID == null)
 				return;
 
 			// Owner 2026-10-30: no level window here. This is a step of a quest the player already holds, and a player who
@@ -2895,7 +2904,7 @@ namespace DOL.GS.Quests
 
 								if (m_rewardXPs.Count > 0 && m_rewardXPs[0] > 0)
 								{
-									player.ForceGainExperience(ClassicQuests.ScaleXP(ID, player, 0, m_rewardXPs[0]));
+									player.GainQuestExperience(ClassicQuests.ScaleXP(ID, player, 0, m_rewardXPs[0]), Name);
 								}
 								
 								if (m_rewardCLXPs.Count > 0 && m_rewardCLXPs[0] > 0)
@@ -3135,7 +3144,7 @@ namespace DOL.GS.Quests
 								return false;
 							}
 	
-							m_questPlayer.ForceGainExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, lastStep - 1, rewardXP));
+							m_questPlayer.GainQuestExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, lastStep - 1, rewardXP), Name);
 						}
 	
 						if (rewardRP > 0)
@@ -3219,7 +3228,7 @@ namespace DOL.GS.Quests
 								return false;
 							}
 	
-							m_questPlayer.ForceGainExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, 0, rewardXP));
+							m_questPlayer.GainQuestExperience(ClassicQuests.ScaleXP(ID, m_questPlayer, 0, rewardXP), Name);
 						}
 	
 						if (rewardRP > 0)

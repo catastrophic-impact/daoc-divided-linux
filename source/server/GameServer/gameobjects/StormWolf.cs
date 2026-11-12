@@ -19,6 +19,9 @@ namespace DOL.GS
             base.DealDamage(ad);
             int dealt=Math.Min(healthBefore,Math.Max(0,ad.Damage+ad.CriticalDamage));
             if(dealt>0 && IsAlive) ChangeHealth(this,eHealthChangeType.Spell,StormforgedRules.RestorePerHit(dealt,HealthSteal));
+            // The Tuatha's Faerie Drake: its breath (spells) marks what it hits for its owner.
+            if(dealt>0 && ad.SpellHandler!=null && Owner is GamePlayer owner && PendragonRules.IsTuatha(owner.CharacterClass.ID))
+                TuathaMarks.Add(owner,ad.Target,1);
         }
         public override double GetSpellScalingFactor() => Level / 50.0;
         public override void SortSpells()
@@ -52,10 +55,12 @@ namespace DOL.GS
             bool empowered=StormforgedHeroicRules.HasAvatar(Owner);
             ushort model=empowered && PendragonRules.RealmOffset(Owner)==0?(ushort)650:_normalModel;
             if(Model!=model) Model=model;
-            Size=empowered?(byte)70:(byte)50;
+            byte size=SizeFor(empowered);
+            if(Size!=size) Size=size; // runs every brain tick: setting Size always broadcast a model+size packet
             DamageFactor=empowered?CrownDamage:NormalDamage;
             MaxSpeedBase = Owner.MaxSpeedBase;
         }
+        public static byte SizeFor(bool empowered)=>empowered?(byte)70:(byte)50;
         public override void Stealth(bool hidden)
         {
             if(IsStealthed==hidden) return;
@@ -105,6 +110,17 @@ namespace DOL.GS.Spells
         public SummonStormWolf(GameLiving caster,Spell spell,SpellLine line):base(caster,spell,line) { }
         public override bool IsSummoningSpell=>true;
         public override string ShortDescription=>Spell.Description;
+        // One wolf: a recast used to replace the owner's pet link and leave the old wolf in the world, so wolves piled up.
+        public override bool CheckBeginCast(GameLiving selectedTarget,bool quiet)
+        {
+            if(Caster.ControlledBrain?.Body is { IsAlive: true, ObjectState: GameObject.eObjectState.Active } pet)
+            {
+                // The pet's own name: the Pendragon's Royal Lion and the Tuatha's Faerie Drake use this handler too.
+                if(!quiet) MessageToCaster($"You already have a {pet.Name}. Release it first to call another.",DOL.GS.PacketHandler.eChatType.CT_SpellResisted);
+                return false;
+            }
+            return base.CheckBeginCast(selectedTarget,quiet);
+        }
         protected override IControlledBrain GetPetBrain(GameLiving owner)=>new StormWolfBrain(owner);
         protected override GameSummonedPet GetGamePet(INpcTemplate template)=>new StormWolf(template);
     }

@@ -257,7 +257,7 @@ namespace DOL.GS
             Handler = handler;
             Owner = owner as GamePlayer;
             Name = handler.Spell.Name;
-            Realm = eRealm.None;
+            Realm = owner.Realm;   // model 3457 draws its storm by realm; None drew the Hibernian green for every caster
             Flags |= eFlags.PEACE;
             StormRadius = (ushort)Math.Max(1, handler.Spell.Radius);
         }

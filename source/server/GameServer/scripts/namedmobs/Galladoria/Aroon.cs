@@ -26,15 +26,22 @@ namespace DOL.GS
         public static bool Aroon_heat = false;
         public static bool Aroon_matter = false;
         public static bool Aroon_spirit = false;
+        /// <summary>Which Scaiths are dead, in the order they must die (EpicEncounterRestores.AroonOrder).</summary>
+        public static bool[] DeadInOrder =>
+            [Aroon_slash, Aroon_thrust, Aroon_crush, Aroon_body, Aroon_cold, Aroon_energy, Aroon_heat, Aroon_matter, Aroon_spirit];
 
         #region Aroon resist damage checks
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.AroonAccepts(damageType, DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -451,15 +458,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -488,11 +495,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -573,11 +580,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(1, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -627,13 +638,13 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
-        private GamePlayer RandomTarget
+        private GameLiving randomtarget = null;
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
         public int RandomAttackTarget(ECSGameTimer timer)
         {
             //IList enemies = new ArrayList(AggroTable.Keys);
@@ -660,11 +671,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -742,11 +753,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(2, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -796,15 +811,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -833,11 +848,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -917,11 +932,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(3, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -971,15 +990,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1008,11 +1027,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -1092,11 +1111,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(4, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -1146,15 +1169,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1184,11 +1207,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -1268,11 +1291,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(5, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -1322,15 +1349,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1360,11 +1387,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -1444,11 +1471,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(6, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -1498,15 +1529,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1536,11 +1567,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -1620,11 +1651,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(7, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -1674,15 +1709,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1712,11 +1747,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {
@@ -1796,11 +1831,15 @@ namespace DOL.GS
 
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
-            // Offline raids cannot coordinate class/weapon damage puzzles or heal-on-hit rules.
+            // Offline DAoC: no damage-type order for bot raids; the original (Aroon takes only the damage types whose Scaith
+            // has died, and the Scaiths die in order) is behind EpicEncounterMechanics.AllowAroonDamageOrder.
             // Keep real damage, armor/resists, health, death phases, and the encounter tether.
             if (!EpicEncounterActors.IsCombatant(source)) return;
-            if (IsOutOfTetherRange)
+            if (IsOutOfTetherRange || EpicEncounterMechanics.AllowAroonDamageOrder && !EpicEncounterRestores.ScaithAccepts(8, Aroon.DeadInOrder))
+            {
+                if (!IsOutOfTetherRange) EpicEncounterRestores.TellImmune(source, Name + " is immune to this damage!");
                 base.TakeDamage(source, damageType, 0, 0);
+            }
             else
                 base.TakeDamage(source, damageType, damageAmount, criticalAmount);
         }
@@ -1850,15 +1889,15 @@ namespace DOL.AI.Brain
             }
         }
         public static bool switch_target = false;
-        private GamePlayer randomtarget = null;
+        private GameLiving randomtarget = null;
 
-        private GamePlayer RandomTarget
+        private GameLiving RandomTarget
         {
             get { return randomtarget; }
             set { randomtarget = value; }
         }
 
-        public List<GamePlayer> PlayersToAttack = new List<GamePlayer>();
+        public List<GameLiving> PlayersToAttack = new List<GameLiving>();
 
         public int RandomAttackTarget(ECSGameTimer timer)
         {
@@ -1888,11 +1927,11 @@ namespace DOL.AI.Brain
             }
             if (Body.InCombat)
             {
-                foreach (GamePlayer player in Body.GetPlayersInRadius((ushort) AggroRange))
+                foreach (GameLiving player in EncounterTargets.InRadius(Body, (ushort) AggroRange))
                 {
                     if (player != null)
                     {
-                        if (player.IsAlive && player.Client.Account.PrivLevel == 1)
+                        if (player.IsAlive && EncounterTargets.NotGm(player))
                         {
                             if (!PlayersToAttack.Contains(player))
                             {

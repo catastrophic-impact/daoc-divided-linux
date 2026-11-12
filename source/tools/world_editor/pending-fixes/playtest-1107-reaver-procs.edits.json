@@ -1,0 +1,63 @@
+[
+ {
+  "table": "Spell",
+  "copy": "20301",
+  "key": "20312",
+  "set": {
+   "SpellID": 20312,
+   "Value": 40,
+   "Description": "Reduces the target's movement speed by 40% for 19 seconds."
+  }
+ },
+ {
+  "table": "Spell",
+  "copy": "20304",
+  "key": "20313",
+  "set": {
+   "SpellID": 20313,
+   "Value": 40,
+   "Description": "Reduces the target's movement speed by 40% for 23 seconds."
+  }
+ },
+ {
+  "table": "Spell",
+  "copy": "20103",
+  "key": "20314",
+  "set": {
+   "SpellID": 20314,
+   "Name": "Reaver Pain",
+   "Damage": 45,
+   "Description": "Does 45 damage to the target."
+  }
+ },
+ {
+  "table": "StyleXSpell",
+  "where": {
+   "StyleID": 363,
+   "ClassID": 0
+  },
+  "set": {
+   "SpellID": 20312
+  }
+ },
+ {
+  "table": "StyleXSpell",
+  "where": {
+   "StyleID": 365,
+   "ClassID": 0
+  },
+  "set": {
+   "SpellID": 20313
+  }
+ },
+ {
+  "table": "StyleXSpell",
+  "where": {
+   "StyleID": 366,
+   "ClassID": 0
+  },
+  "set": {
+   "SpellID": 20314
+  }
+ }
+]

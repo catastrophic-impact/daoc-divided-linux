@@ -37,6 +37,9 @@ namespace DOL.GS
 
         [ServerProperty("run_telemetry", "run_telemetry_target_sample_percent", "Percent of new autonomous gamebot camp pull targets recorded with the reason they won (0 turns it off).", 10)]
         public static int TARGET_SAMPLE_PERCENT = 10;
+
+        [ServerProperty("run_telemetry", "run_telemetry_keep_days", "Days of run-telemetry files to keep; older run-YYYYMMDD.jsonl files are deleted when a new day's file starts (0 keeps them all).", 7)]
+        public static int KEEP_DAYS = 7;
     }
 
     /// <summary>
@@ -530,6 +533,38 @@ namespace DOL.GS
             Flush();
         }
 
+        private static string _prunedDay;
+
+        /// <summary>
+        /// Deletes run-YYYYMMDD.jsonl files older than KEEP_DAYS. A busy bot run writes about 1 GB a day and nothing
+        /// cleaned them (setup review 2026-11-06).
+        /// </summary>
+        private static void PruneOldFiles(DateTime nowUtc)
+        {
+            int keep = RunTelemetryProperties.KEEP_DAYS;
+            if (keep <= 0)
+                return;
+            foreach (string file in Directory.EnumerateFiles(Folder, "run-*.jsonl"))
+            {
+                if (IsExpired(Path.GetFileName(file), nowUtc, keep))
+                {
+                    try { File.Delete(file); }
+                    catch (IOException) { }
+                    catch (UnauthorizedAccessException) { }
+                }
+            }
+        }
+
+        /// <summary>Whether a run-YYYYMMDD.jsonl file name is from more than <paramref name="keepDays"/> days ago. Pure.</summary>
+        public static bool IsExpired(string fileName, DateTime nowUtc, int keepDays)
+        {
+            if (keepDays <= 0 || fileName is null || fileName.Length != "run-yyyyMMdd.jsonl".Length || !fileName.StartsWith("run-") || !fileName.EndsWith(".jsonl"))
+                return false;
+            return DateTime.TryParseExact(fileName.Substring(4, 8), "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture,
+                       System.Globalization.DateTimeStyles.None, out DateTime day)
+                   && day < nowUtc.Date.AddDays(-keepDays);
+        }
+
         private static void Flush()
         {
             if (Pending.IsEmpty || Interlocked.Exchange(ref _writing, 1) == 1)
@@ -539,6 +574,11 @@ namespace DOL.GS
                 Directory.CreateDirectory(Folder);
                 string day = DateTime.UtcNow.ToString("yyyyMMdd");
                 string path = Path.Combine(Folder, $"run-{day}.jsonl");
+                if (day != _prunedDay)
+                {
+                    _prunedDay = day;
+                    PruneOldFiles(DateTime.UtcNow);
+                }
                 if (File.Exists(path) && new FileInfo(path).Length > FileLimitBytes)
                 {
                     _fullDay = day;

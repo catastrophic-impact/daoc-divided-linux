@@ -1,0 +1,282 @@
+[
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Defiled Cowl",
+  "set": {
+   "ItemTemplateID": "Defiled_Cowl"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Ebon Vanquisher's Warchain",
+  "set": {
+   "ItemTemplateID": "Ebon Vanquishers Warchain"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Eloquent Chain Necklace",
+  "set": {
+   "ItemTemplateID": "Eloquent_Chain_Necklace"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Medallion of Avoidance",
+  "set": {
+   "ItemTemplateID": "Medallion_of_Avoidance"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Medallion of Dark Beauty",
+  "set": {
+   "ItemTemplateID": "Medallion_of_Dark_Beauty"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Shadow Templar Medallion",
+  "set": {
+   "ItemTemplateID": "Shadow_Templar_Medallion"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Stone Boned Choker",
+  "set": {
+   "ItemTemplateID": "Stone_Boned_Choker"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Tome of Lichdom",
+  "set": {
+   "ItemTemplateID": "Tome_of_Lichdom"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Unearthly Cowl",
+  "set": {
+   "ItemTemplateID": "Unearthly_Cowl"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Warlord's Golden Flail",
+  "set": {
+   "ItemTemplateID": "Warlords_Golden_Flail"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Warlord's Golden Flayer",
+  "set": {
+   "ItemTemplateID": "Warlords_Golden_Flayer"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Warlord's Golden Glaive",
+  "set": {
+   "ItemTemplateID": "Warlords_Golden_Glaive"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Apocalypse_Warlord's Golden War Mace",
+  "set": {
+   "ItemTemplateID": "Warlords_Golden_War_Mace"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Dura'ek the Empowered_Dura'ek's Cloak of the Embrace",
+  "set": {
+   "ItemTemplateID": "Duraeks_Cloak_of_the_Embrace"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Golestandt_Cloak of the Maelstrom",
+  "set": {
+   "ItemTemplateID": "Cloak_of_the_Maelstrom"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Golestandt_Ring_of_Pumice",
+  "set": {
+   "ItemTemplateID": "Ring_of_the_Pumice"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Maldahar the Glimmer Prince_Fairich Sgath Bracer",
+  "set": {
+   "ItemTemplateID": "Fairich_Sgath_Bracer"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Moran the Mighty_Ring_of_Pumice",
+  "set": {
+   "ItemTemplateID": "Ring_of_the_Pumice"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Morval_Obsidian_Sword_XPI",
+  "set": {
+   "ItemTemplateID": "Morvalt_Obsidian_Sword"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Scurceol Hyrde_Diamond Studded Mace Of Stars",
+  "set": {
+   "ItemTemplateID": "Diamond_Studded_Mace_Of_Stars"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Scurceol Hyrde_Shield Of Constellations",
+  "set": {
+   "ItemTemplateID": "Shield_Of_Constellations"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Scurceol Hyrde_Staff of the Last Briton Hero",
+  "set": {
+   "ItemTemplateID": "Staff_Of_The_Last_Briton_hero"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Spectral Provisioner_Tear of Petulance",
+  "set": {
+   "ItemTemplateID": "Tear_of_Petulance"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Weno'iak the Enlightened_Weno'iak Belt",
+  "set": {
+   "ItemTemplateID": "Wenoiak_Belt"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Weno'iak the Enlightened_Weno'iak Jewel",
+  "set": {
+   "ItemTemplateID": "Wenoiak_Jewel"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Weno'iak the Enlightened_Weno'iak's Pendant",
+  "set": {
+   "ItemTemplateID": "Wenoiaks_Pendant"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Weno'iak the Enlightened_Weno'iak's Ring",
+  "set": {
+   "ItemTemplateID": "Wenoiaks_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Constructor's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Constructors_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Defender's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Defender's_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Duelist's Ring",
+  "set": {
+   "ItemTemplateID": "Royal Duelist`s Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Friar's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Friars_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Impersonator's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Impersonators_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Mage's Ring",
+  "set": {
+   "ItemTemplateID": "Royal Mage`s Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Note Singer's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Note_Singer's_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Soul Raiser's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Soul_Raiser's_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Soul Stealer's Ring",
+  "set": {
+   "ItemTemplateID": "Royal Soul Stealer`s Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Soul's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Souls_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Templar's Ring",
+  "set": {
+   "ItemTemplateID": "Royal Templar`s Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Thinker's Ring",
+  "set": {
+   "ItemTemplateID": "Royal_Thinker's_Ring"
+  }
+ },
+ {
+  "table": "LootTemplate",
+  "key": "Xanxicar_Royal Tracker's Ring",
+  "set": {
+   "ItemTemplateID": "Royal Tracker`s Ring"
+  }
+ }
+]

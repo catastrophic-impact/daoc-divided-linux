@@ -45,8 +45,11 @@ namespace DOL.GS
 		}
 
 		// Both represent what percentage of this entity's target's defenses should be used, not how much is removed.
-		public virtual double DualWieldDefensePenetrationFactor => 0.5;
-		public virtual double TwoHandedDefensePenetrationFactor => 0.5;
+		// Dual wield: monsters keep the old 50%; players and bots use 75% (see PlayerDefenseFormula, DR-191).
+		public virtual double DualWieldDefensePenetrationFactor =>
+			PlayerDefenseFormula.UsesPlayerDefense(this) ? PlayerDefenseFormula.DualWieldDefenseFactor : 0.5;
+		// 1.87: parry is no longer penalized against a two-handed weapon (DR-192).
+		public virtual double TwoHandedDefensePenetrationFactor => 1.0;
 
 		public virtual bool BenefitsFromRelics => false;
 
@@ -1153,8 +1156,10 @@ namespace DOL.GS
 					parryChance *= 0.001;
 
 					// Parry chance is divided by the number of attackers.
-					// The penalty was reduced in 1.87.
-					if (attackerCount > 0)
+					// 1.87 "greatly reduced" the penalty without a number, and the 2020-10-23 Grab Bag says that in RvR
+					// several attackers in the frontal arc do not lower parry at all (DR-193). So: no penalty between
+					// players and bots, the old division against monsters.
+					if (attackerCount > 0 && !PlayerDefenseFormula.IgnoresAttackerCountForParry(ad.Attacker, this))
 						parryChance /= attackerCount;
 
 					// Tribal Wrath 25% evade.
@@ -1584,6 +1589,7 @@ namespace DOL.GS
             RealmAbilities.ModernRr5.OnAttacked(this, ad);
             RealmAbilities.ModernRr5.ModifyIncoming(this, ad);
             Spells.LiveRound7.OnAttacked(this, ad);
+            Spells.SimulacrumSacrificeSpellHandler.OnAttacked(this, ad); // Cabalist pet sacrifice (DR-094)
             Spells.DamageReductionSpellHandler.Reduce(this, ad);
             HandleAblatives(ad);
             Spells.DamageReflectionSpellHandler.OnAttacked(this, ad);
@@ -1600,7 +1606,9 @@ namespace DOL.GS
 						Stealth(false);
 				}
 
-				if (this is GameNPC gameNpc && ActiveWeaponSlot is eActiveWeaponSlot.Distance && IsWithinRadius(ad.Attacker, 150))
+				// A bot that fights this attacker with its distance weapon only (Funus) keeps it: a melee swing would heal him.
+				if (this is GameNPC gameNpc && ActiveWeaponSlot is eActiveWeaponSlot.Distance && IsWithinRadius(ad.Attacker, 150) &&
+					!(this is GameBot rangedBot && EpicEncounterTactics.FightsAtRange(rangedBot, ad.Attacker)))
 					gameNpc.StartAttackWithMeleeWeapon(ad.Attacker);
 
 				attackComponent.AddAttacker(ad);
@@ -1722,8 +1730,9 @@ namespace DOL.GS
 
 								if (ad.AttackResult is eAttackResult.HitStyle)
 								{
-									string damageAmount = $" (+{ad.StyleDamage}, GR: {ad.Style.GrowthRate})";
-									string message = LanguageMgr.GetTranslation(player.Client.Account.Language, "StyleProcessor.ExecuteStyle.PerformPerfectly", ad.Style.Name, damageAmount);
+									// The pet's style, not the owner's ("You perform your Plague perfectly!" read as the owner's own).
+									string damageAmount = $"(+{ad.StyleDamage}, GR: {ad.Style.GrowthRate})";
+									string message = LanguageMgr.GetTranslation(player.Client.Account.Language, "StyleProcessor.ExecuteStyle.PerformsPerfectly", ad.Attacker.Name, ad.Style.Name, damageAmount);
 									player.Out.SendMessage(message, eChatType.CT_YouHit, eChatLoc.CL_SystemWindow);
 								}
 
@@ -1934,6 +1943,10 @@ namespace DOL.GS
 					if (effect.SpellHandler.Spell.SpellType is eSpellType.VampiirFlight)
 						continue;
 
+					// Bard loyalty cloak (DR-216): in-combat run speed.
+					if (effect.SpellHandler.Spell.SpellType is eSpellType.InCombatSpeed)
+						continue;
+
 					if (ShouldBeCancelled(attackData, effect))
 						effect.End();
 				}
@@ -2082,61 +2095,15 @@ namespace DOL.GS
 		public virtual void ProcessDeath(GameObject killer)
 		{
 			attackComponent.StopAttack();
-			List<GamePlayer> playerAttackers = new();
+			// Who the kill credits: QuestKillCredit.PlayersCredited (moved there in 1.2 so the quest harness walks the same
+			// code): player attackers, pet and companion owners, the leader of an autonomous gamebot's player-led group
+			// (owner 2026-10-30), and their groups in range. XP and loot keep their own rules.
+			List<GameLiving> toldOfKill = new();
+			AttackerTracker attackerTracker = attackComponent.AttackerTracker;
+			List<GamePlayer> playerAttackers = Quests.QuestKillCredit.PlayersCredited(this, attackerTracker.Attackers, attackerTracker.ContainsAttacker, toldOfKill);
 
-			foreach (GameObject attacker in attackComponent.AttackerTracker.Attackers)
-			{
-				if (attacker is not GameLiving livingAttacker)
-					continue;
-
-				GamePlayer player = attacker as GamePlayer;
-
-				if (attacker is GameNPC npcAttacker && npcAttacker.Brain is IControlledBrain npcAttackerBrain)
-				{
-					// Ok, we're a pet - if our Player owner isn't in the attacker list, let's make them a 'virtual' attacker
-					player = npcAttackerBrain.GetPlayerOwner();
-
-					if (player != null)
-					{
-						if (!attackComponent.AttackerTracker.ContainsAttacker(player))
-						{
-							if (!playerAttackers.Contains(player))
-								playerAttackers.Add(player);
-						}
-
-						// Pet gets the killed message as well
-						livingAttacker.EnemyKilled(this);
-					}
-				}
-
-				// Owner 2026-10-30: an autonomous gamebot fighting in a real player's group (/invite) has no Owner, only
-				// a PlayerGroupLeader, so a kill its group made without the player's own damage credited nobody's
-				// quests. The leader is credited like a companion's owner when in the kill's region and within the
-				// group's credit range, and the leader's group in range follows below. XP and loot keep their own
-				// rules (QuestKillCredit).
-				if (player == null && attacker is GameBot gamebot && Quests.QuestKillCredit.GroupLeaderFor(gamebot, this) is GamePlayer leader)
-				{
-					player = leader;
-					livingAttacker.EnemyKilled(this);
-				}
-
-				if (player != null)
-				{
-					if (!playerAttackers.Contains(player))
-						playerAttackers.Add(player);
-
-					if (player.Group != null)
-					{
-						foreach (GamePlayer groupPlayer in player.Group.GetPlayersInTheGroup())
-						{
-							if (groupPlayer.IsWithinRadius(this, WorldMgr.MAX_EXPFORKILL_DISTANCE) && playerAttackers.Contains(groupPlayer) == false)
-								playerAttackers.Add(groupPlayer);
-						}
-					}
-				}
-				else
-					livingAttacker.EnemyKilled(this);
-			}
+			foreach (GameLiving livingAttacker in toldOfKill)
+				livingAttacker.EnemyKilled(this);
 
 			foreach (GamePlayer player in playerAttackers)
 				player.EnemyKilled(this);

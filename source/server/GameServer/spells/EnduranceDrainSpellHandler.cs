@@ -26,7 +26,7 @@ namespace DOL.GS.Spells
 
 			if (target is GamePlayer)
 			{
-				((GamePlayer)target).Out.SendMessage(m_caster.Name + " steal you for " + end + " endurance!", eChatType.CT_YouWereHit, eChatLoc.CL_SystemWindow);
+				((GamePlayer)target).Out.SendMessage(DrainedText(m_caster.GetName(0, true), end), eChatType.CT_YouWereHit, eChatLoc.CL_SystemWindow);
 			}
 
 			StealEndurance(target,end);
@@ -43,16 +43,22 @@ namespace DOL.GS.Spells
 
 		public virtual void SendCasterMessage(GameLiving target,int end)
 		{
-			MessageToCaster(string.Format("You steal {0} for {1} endurance!", target.Name, end), eChatType.CT_YouHit);
-			if(end > 0) 
+			// Was "You steal oaken treant for 55 endurance!".
+			MessageToCaster(DrainText(m_caster, target.GetName(0, false), end), eChatType.CT_YouHit);
+			if(end > 0)
 			{
-				MessageToCaster("You steal " + end + " endurance point" + (end==1?".":"s."), eChatType.CT_Spell);
+				MessageToCaster(CasterSentence(m_caster, $"steal {Points(end, "endurance")}.", $"steals {Points(end, "endurance")}."), eChatType.CT_Spell);
 			}
-			else 
+			else
 			{
-				MessageToCaster("You cannot absorb any more endurance.", eChatType.CT_SpellResisted);
+				MessageToCaster(CasterSentence(m_caster, "cannot absorb any more endurance.", "cannot absorb any more endurance."), eChatType.CT_SpellResisted);
 			}
 		}
+
+		public static string DrainText(GameLiving caster, string targetName, int end) =>
+			CasterSentence(caster, $"drain {end} endurance from {targetName}!", $"drains {end} endurance from {targetName}!");
+
+		public static string DrainedText(string casterName, int end) => $"{casterName} drains {end} endurance from you!";
 
 		public override IList<string> DelveInfo 
 		{

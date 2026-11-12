@@ -32,7 +32,10 @@ HERE = Path(__file__).resolve().parent
 FROZEN = getattr(sys, 'frozen', False)          # the packaged WorldWorkshop.exe (app.py)
 TOOLS = HERE.parent
 REPO = TOOLS.parents[1]
-WORKSPACE = REPO.parent
+# Run from a git worktree (Source/.claude/worktrees/<name>), the tools still work on the main checkout's installs,
+# build outputs and workspace folders, which are not in Git (setup review 2026-11-06).
+DATA_REPO = REPO.parents[2] if REPO.parent.name == 'worktrees' and REPO.parent.parent.name == '.claude' else REPO
+WORKSPACE = DATA_REPO.parent
 sys.path.insert(0, str(REPO / 'source/new-client/pipeline'))
 sys.path.insert(0, str(TOOLS))
 from daoc_mpk import read_mpk
@@ -64,7 +67,8 @@ DATA_TABLES = {
                      'MobDropTemplate', 'DropTemplateXItemTemplate', 'StarterEquipment', 'Salvage', 'SalvageYield',
                      'CraftedItem', 'CraftedXItem', 'Artifact', 'ArtifactBonus', 'ArtifactXItem', 'offline_currency_lists'],
     'Spells & classes': ['Spell', 'SpellLine', 'LineXSpell', 'Style', 'StyleXSpell', 'Specialization', 'SpecXAbility',
-                         'ClassXSpecialization', 'Ability', 'ClassXRealmAbility_Atlas', 'Race'],
+                         'ClassXSpecialization', 'Ability', 'ClassXRealmAbility_Atlas', 'Race',
+                         'SpellXCustomValues'],
     'Quests': ['DataQuest'],
     'Server settings': ['ServerProperty', 'offline_population_settings', 'offline_local_options', 'offline_auction_settings'],
 }
@@ -1248,10 +1252,10 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--db', type=Path, required=True)
     parser.add_argument('--client', type=Path, required=True)
-    parser.add_argument('--state', type=Path, default=REPO / 'artifacts/world-editor')
+    parser.add_argument('--state', type=Path, default=DATA_REPO / 'artifacts/world-editor')
     parser.add_argument('--target-client', type=Path, action='append', default=[])
     parser.add_argument('--geometry', type=Path)
-    parser.add_argument('--exporter', type=Path, default=REPO / 'source/development-tools/OpenDAoC-BuildNav/bin/Release/net10.0-windows7.0/OpenDAoC-BuildNav.exe')
+    parser.add_argument('--exporter', type=Path, default=DATA_REPO / 'source/development-tools/OpenDAoC-BuildNav/bin/Release/net10.0-windows7.0/OpenDAoC-BuildNav.exe')
     parser.add_argument('--port', type=int, default=0)
     parser.add_argument('--no-browser', action='store_true')
     args = parser.parse_args(argv)

@@ -222,8 +222,8 @@ namespace DOL.GS
 
             log.Info($"ACCOUNT_COMPANION_SUMMONED owner=\"{owner.Name}\" character=\"{character.Name}\" " +
                      $"class={(eCharacterClass)character.Class} level={companion.Level}");
-            message = $"{companion.Name}, your level {companion.Level} {companion.ClassName}, joins your group with its own gear. " +
-                      "Everything it earns is saved to its character.";
+            message = AccountCompanionRules.JoinMessage(companion.Name, companion.Level, companion.ClassName,
+                companion.CompanionAutoSpend, companion.CompanionUnspentSpecPoints());
             return companion;
         }
 

@@ -139,6 +139,20 @@ namespace DOL.GS
 			player.Out.SendMessage(LanguageMgr.GetTranslation(player.Client.Account.Language, "AbstractCraftingSkill.CraftItem.StopWork", itemToCraft.Name), eChatType.CT_System, eChatLoc.CL_SystemWindow);
 		}
 
+		/// <summary>What a player is told when the server rules refuse a recipe's product (another realm's recipe).</summary>
+		public static string CraftRealmRefusal(DbItemTemplate product)
+		{
+			string realm = (eRealm)product.Realm switch
+			{
+				eRealm.Albion => "Albion",
+				eRealm.Midgard => "Midgard",
+				eRealm.Hibernia => "Hibernia",
+				_ => "no realm",
+			};
+			return $"You can't make the {product.Name}: that recipe is for {realm}. "
+				+ "Use /craft alb, /craft mid or /craft hib to show your own realm's recipes.";
+		}
+
 		protected virtual bool CanPlayerStartToCraftItem(GamePlayer player, Recipe recipe)
 		{
 			
@@ -146,6 +160,8 @@ namespace DOL.GS
 			
 			if (!GameServer.ServerRules.IsAllowedToCraft(player, recipe.Product))
 			{
+				// This refusal used to say nothing, so the craft button looked dead (player report 2026-11-08).
+				player.Out.SendMessage(CraftRealmRefusal(recipe.Product), eChatType.CT_System, eChatLoc.CL_SystemWindow);
 				return false;
 			}
 

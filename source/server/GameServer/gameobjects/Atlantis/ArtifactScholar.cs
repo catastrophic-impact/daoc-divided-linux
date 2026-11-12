@@ -41,7 +41,7 @@ namespace DOL.GS
             }
 
             text.Append("I can also tell you [where] the artifacts are found.");
-            player.Out.SendMessage(text.ToString(), eChatType.CT_Say, eChatLoc.CL_PopupWindow);
+            SendPopup(player, text.ToString());
             return true;
         }
 
@@ -169,7 +169,7 @@ namespace DOL.GS
             for (int i = 0; i < versions.Count; i++)
                 text.Append($"[{i + 1}] {DescribeVersion(versions[i])}\n");
 
-            player.Out.SendMessage(text.ToString(), eChatType.CT_Say, eChatLoc.CL_PopupWindow);
+            SendPopup(player, text.ToString());
         }
 
         public static string DescribeVersion(DbItemTemplate template)
@@ -195,7 +195,33 @@ namespace DOL.GS
                 text.Append($"[{ArtifactCatalog.NameOf(artifactId)}]{(encounter == null ? string.Empty : $" - {encounter.Zone}")}\n");
             }
 
-            player.Out.SendMessage(text.ToString(), eChatType.CT_Say, eChatLoc.CL_PopupWindow);
+            SendPopup(player, text.ToString());
+        }
+
+        // One message packet holds at most 2048 bytes, so a long reply goes out in pieces, split
+        // between lines; the client adds each piece to the same popup window.
+        private const int MaxPopupChunk = 1500;
+
+        private static void SendPopup(GamePlayer player, string text)
+        {
+            StringBuilder chunk = new();
+
+            foreach (string line in text.Split('\n'))
+            {
+                if (chunk.Length > 0 && chunk.Length + line.Length + 1 > MaxPopupChunk)
+                {
+                    player.Out.SendMessage(chunk.ToString(), eChatType.CT_Say, eChatLoc.CL_PopupWindow);
+                    chunk.Clear();
+                }
+
+                if (chunk.Length > 0)
+                    chunk.Append('\n');
+
+                chunk.Append(line);
+            }
+
+            if (chunk.Length > 0)
+                player.Out.SendMessage(chunk.ToString(), eChatType.CT_Say, eChatLoc.CL_PopupWindow);
         }
 
         private void Deliver(GamePlayer player, string artifactId, DbItemTemplate template)

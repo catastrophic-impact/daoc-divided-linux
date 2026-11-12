@@ -25,7 +25,7 @@ namespace DOL.GS
 
         public static bool Open(GamePlayer player, int capacity = 40)
         {
-            if (player?.Level != 50 || capacity is not (40 or 80)) return false;
+            if (player == null || player.Level < 50 || capacity is not (40 or 80)) return false;
             Group group = player.Group;
             if (group == null)
             {

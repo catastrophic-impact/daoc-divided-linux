@@ -16,7 +16,6 @@ namespace DOL.GS
         //The following properties are weights for each roll
         //It is *not* a direct chance to receive the item. It is instead
         //a chance for that item type to be randomly selected as a valid generation type
-        private static int ToaItemChance = Properties.ROG_TOA_ITEM_CHANCE;
         private static int ArmorWeight = Properties.ROG_ARMOR_WEIGHT;
         private static int JewelryWeight = Properties.ROG_MAGICAL_WEIGHT;
         private static int WeaponWeight = Properties.ROG_WEAPON_WEIGHT;
@@ -74,7 +73,7 @@ namespace DOL.GS
         }
 
         public GeneratedUniqueItem(eRealm realm, eCharacterClass charClass, byte level, eObjectType type, eInventorySlot slot, eDamageType dmg, int minUtility = 15)
-            : this(false, realm, charClass, level, type, slot, dmg, minUtility)
+            : this(ToaBonusesEnabled, realm, charClass, level, type, slot, dmg, minUtility)
         {
 
         }
@@ -133,7 +132,13 @@ namespace DOL.GS
             this.IsDropable = true;
             this.IsPickable = true;
             this.IsTradable = true;
-            this.CapUtility(this.Level, utilityMinimum);
+
+            RandomItemBudgetRules budget = LootRulesFile.Current.RandomItems.Budget;
+            if (!budget.Enabled)
+                this.CapUtility(this.Level, utilityMinimum);
+
+            m_budgetLevel = this.Level;
+            m_utilityMinimum = utilityMinimum;
 
             if (this.Level > 51)
             {
@@ -141,6 +146,10 @@ namespace DOL.GS
             }
 
             this.GenerateProc();
+
+            // after the proc, so a proc item aims lower (the old cap meant to, but ran before the proc was rolled)
+            if (budget.Enabled)
+                this.ApplyBudget(budget);
 
             //item bonus
             int temp = this.Level - 15;
@@ -191,7 +200,184 @@ namespace DOL.GS
             this.Price /= 8;
             if (this.Price <= 0)
                 this.Price = 2; // 2c as sell price is 50%
+
+            // a loot generator re-rolls quality with the real con after building the item: re-split its budget to match
+            if (m_budgeted)
+                ApplyBudget(LootRulesFile.Current.RandomItems.Budget);
         }
+
+        #region budget-first bonuses
+
+        // Loot redesign phase 3 (owner 2026-11-05). The level before it is clamped to 51, the floor the caller asked for,
+        // and whether the budget has split this item's lines yet.
+        private int m_budgetLevel;
+        private int m_utilityMinimum = 15;
+        private bool m_budgeted;
+
+        private static readonly int[] NoAllSkillLines = [163, 164, 167, 168, 213]; // no +all skills on rogs
+
+        /// <summary>
+        /// Sets the item's total utility to the budget for its level and quality, split across the lines it rolled in
+        /// proportion to what each line rolled. Lines with no utility (focus, cap bonuses) are left alone.
+        /// </summary>
+        private void ApplyBudget(RandomItemBudgetRules budget)
+        {
+            if (!budget.Enabled)
+                return;
+
+            int[] types = BonusTypeArray();
+            int[] values = BonusValueArray();
+            for (int i = 0; i < types.Length; i++)
+            {
+                if (Array.IndexOf(NoAllSkillLines, types[i]) >= 0)
+                {
+                    types[i] = 0;
+                    values[i] = 0;
+                }
+            }
+
+            bool hasProc = ProcSpellID != 0 || ProcSpellID1 != 0;
+            double target = budget.Target(m_budgetLevel, Quality, hasProc, m_utilityMinimum);
+            int[] split = SplitBudget(types, values, target, type => LineCap(type, m_budgetLevel, budget.LineCapFactor));
+            WriteBonusArrays(types, split);
+
+            if (!m_budgeted)
+            {
+                m_budgeted = true;
+                int utiLine = GetHighestUtilitySingleLine();
+                WriteMagicalName(GetPropertyFromBonusLine(utiLine));
+            }
+        }
+
+        /// <summary>
+        /// Splits a utility target across bonus lines in proportion to their rolled values, each kept under its cap and at
+        /// least 1. A line capped short hands its share to the others. Lines whose type has no utility keep their value.
+        /// </summary>
+        public static int[] SplitBudget(int[] types, int[] values, double target, Func<int, int> lineCap)
+        {
+            int count = types.Length;
+            double[] perPoint = new double[count];
+            double[] want = new double[count];
+            int[] result = (int[])values.Clone();
+
+            for (int i = 0; i < count; i++)
+            {
+                perPoint[i] = types[i] == 0 || values[i] <= 0 ? 0 : GetSingleUtility(types[i], 1);
+                want[i] = perPoint[i] > 0 ? values[i] : 0;
+            }
+
+            double rolled = 0;
+            for (int i = 0; i < count; i++)
+                rolled += want[i] * perPoint[i];
+            if (rolled <= 0 || target <= 0)
+                return result;
+
+            double scale = target / rolled;
+            for (int i = 0; i < count; i++)
+                want[i] *= scale;
+
+            bool[] capped = new bool[count];
+            for (int pass = 0; pass < count; pass++)
+            {
+                double cappedUtility = 0, freeUtility = 0;
+                for (int i = 0; i < count; i++)
+                {
+                    if (perPoint[i] <= 0)
+                        continue;
+                    if (!capped[i] && want[i] > lineCap(types[i]))
+                    {
+                        want[i] = lineCap(types[i]);
+                        capped[i] = true;
+                    }
+                    if (capped[i])
+                        cappedUtility += want[i] * perPoint[i];
+                    else
+                        freeUtility += want[i] * perPoint[i];
+                }
+
+                if (freeUtility <= 0 || cappedUtility + freeUtility >= target - 0.01)
+                    break;
+
+                double grow = (target - cappedUtility) / freeUtility;
+                for (int i = 0; i < count; i++)
+                {
+                    if (perPoint[i] > 0 && !capped[i])
+                        want[i] *= grow;
+                }
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                if (perPoint[i] > 0)
+                    result[i] = Math.Max(1, Math.Min(lineCap(types[i]), (int)Math.Round(want[i])));
+            }
+
+            // Each line rounds on its own, and a skill point is worth 5: four lines rounding up together put an item
+            // 6 or more over its target (DR-254). Take back the line that rounded up furthest, while that lands closer.
+            while (true)
+            {
+                double total = 0;
+                for (int i = 0; i < count; i++)
+                    total += perPoint[i] > 0 ? result[i] * perPoint[i] : 0;
+
+                double excess = total - target;
+                int worst = -1;
+                for (int i = 0; i < count; i++)
+                {
+                    if (perPoint[i] > 0 && result[i] > 1 && result[i] > want[i] &&
+                        (worst < 0 || (result[i] - want[i]) * perPoint[i] > (result[worst] - want[worst]) * perPoint[worst]))
+                    {
+                        worst = i;
+                    }
+                }
+
+                if (worst < 0 || perPoint[worst] >= 2 * excess)
+                    break;
+                result[worst]--;
+            }
+
+            return result;
+        }
+
+        /// <summary>The most one line of this type may hold: the old roll's top value for the level, times factor.</summary>
+        public static int LineCap(int bonusType, int level, double factor)
+        {
+            eProperty property = (eProperty)bonusType;
+            int resist = (int)Math.Ceiling((level / 2.0 + 1) / 4);
+            int top = property switch
+            {
+                (>= eProperty.Stat_First and <= eProperty.Stat_Last) or eProperty.Acuity => (int)Math.Ceiling(level / 3.0),
+                eProperty.MaxHealth => level,
+                eProperty.MaxMana => resist,
+                >= eProperty.Resist_First and <= eProperty.Resist_Last => resist,
+                >= eProperty.Skill_First and <= eProperty.Skill_Last => 4,
+                _ => int.MaxValue,
+            };
+            return top == int.MaxValue ? int.MaxValue : Math.Max(1, (int)Math.Ceiling(top * factor));
+        }
+
+        private int[] BonusTypeArray() =>
+            [Bonus1Type, Bonus2Type, Bonus3Type, Bonus4Type, Bonus5Type, Bonus6Type, Bonus7Type, Bonus8Type, Bonus9Type, Bonus10Type, ExtraBonusType];
+
+        private int[] BonusValueArray() =>
+            [Bonus1, Bonus2, Bonus3, Bonus4, Bonus5, Bonus6, Bonus7, Bonus8, Bonus9, Bonus10, ExtraBonus];
+
+        private void WriteBonusArrays(int[] types, int[] values)
+        {
+            Bonus1Type = types[0]; Bonus1 = values[0];
+            Bonus2Type = types[1]; Bonus2 = values[1];
+            Bonus3Type = types[2]; Bonus3 = values[2];
+            Bonus4Type = types[3]; Bonus4 = values[3];
+            Bonus5Type = types[4]; Bonus5 = values[4];
+            Bonus6Type = types[5]; Bonus6 = values[5];
+            Bonus7Type = types[6]; Bonus7 = values[6];
+            Bonus8Type = types[7]; Bonus8 = values[7];
+            Bonus9Type = types[8]; Bonus9 = values[8];
+            Bonus10Type = types[9]; Bonus10 = values[9];
+            ExtraBonusType = types[10]; ExtraBonus = values[10];
+        }
+
+        #endregion
 
         private void GenerateItemStats()
         {
@@ -781,11 +967,11 @@ namespace DOL.GS
             if (CanAddFocus())
                 return eBonusType.Focus;
             
-			// ToA allows stat cap bonuses
-			if (toa && Util.Chance(ToaItemChance))
-			{
-				return eBonusType.AdvancedStat;
-			}
+            // ToA bonuses (stat caps and the ToA percent lines), one roll per bonus line.
+            if (toa && this.Level >= ToaMinimumItemLevel && Util.Chance(Properties.ROG_TOA_ITEM_CHANCE))
+            {
+                return eBonusType.AdvancedStat;
+            }
 
             if (Level < 10)
             {
@@ -998,9 +1184,11 @@ namespace DOL.GS
                         ArrayList validStats = new ArrayList();
                         foreach (eProperty property in AdvancedStats)
                         {
-                            if (!BonusExists(property) && StatIsValidForObjectType(property) && StatIsValidForRealm(property))
+                            if (!BonusExists(property) && StatIsValidForObjectType(property) && StatIsValidForRealm(property) && StatIsValidForClass(property))
                                 validStats.Add(property);
                         }
+                        if (validStats.Count == 0)
+                            return GetProperty(eBonusType.Stat);
                         return (eProperty)validStats[Util.Random(0, validStats.Count - 1)];
                     }
             }
@@ -1929,6 +2117,36 @@ namespace DOL.GS
             return true;
         }
 
+        // Class groups for the ToA lines (stat template classes, see ExpansionClassLoot.StatTemplate).
+        private static readonly HashSet<eCharacterClass> ToaNoPowerClasses =
+        [
+            eCharacterClass.Armsman, eCharacterClass.Mercenary, eCharacterClass.Infiltrator, eCharacterClass.Scout, eCharacterClass.Paladin,
+            eCharacterClass.Blademaster, eCharacterClass.Hero, eCharacterClass.Nightshade, eCharacterClass.Ranger,
+            eCharacterClass.Berserker, eCharacterClass.Warrior, eCharacterClass.Savage, eCharacterClass.Shadowblade,
+        ];
+
+        private static readonly HashSet<eCharacterClass> ToaPureCasters =
+        [
+            eCharacterClass.Cabalist, eCharacterClass.Necromancer, eCharacterClass.Sorcerer, eCharacterClass.Theurgist, eCharacterClass.Wizard,
+            eCharacterClass.Eldritch, eCharacterClass.Enchanter, eCharacterClass.Mentalist, eCharacterClass.Animist,
+            eCharacterClass.Runemaster, eCharacterClass.Spiritmaster, eCharacterClass.Bonedancer, eCharacterClass.Warlock, eCharacterClass.Bainshee,
+            eCharacterClass.Druid, eCharacterClass.Healer, eCharacterClass.Shaman,
+        ];
+
+        private static readonly HashSet<eCharacterClass> ToaDualWielders =
+        [
+            eCharacterClass.Mercenary, eCharacterClass.Infiltrator, eCharacterClass.Blademaster, eCharacterClass.Nightshade,
+            eCharacterClass.Ranger, eCharacterClass.Berserker, eCharacterClass.Shadowblade, eCharacterClass.Savage,
+        ];
+
+        private static readonly HashSet<eCharacterClass> ToaHealers =
+        [
+            eCharacterClass.Cleric, eCharacterClass.Friar, eCharacterClass.Druid, eCharacterClass.Warden, eCharacterClass.Bard,
+            eCharacterClass.Mentalist, eCharacterClass.Healer, eCharacterClass.Shaman,
+        ];
+
+        private static readonly HashSet<eCharacterClass> ToaArchers = [eCharacterClass.Scout, eCharacterClass.Hunter, eCharacterClass.Ranger];
+
         private bool StatIsValidForClass(eProperty property)
         {
             eCharacterClass charClass = ExpansionClassLoot.StatTemplate(this.charClass);
@@ -1936,6 +2154,7 @@ namespace DOL.GS
             {
                 case eProperty.MaxMana: //mana isn't a thing!! >:(
                 case eProperty.PowerPool:
+                case eProperty.PowerPoolCapBonus:
                     if (charClass == eCharacterClass.Armsman ||
                         charClass == eCharacterClass.Mercenary ||
                         charClass == eCharacterClass.Infiltrator ||
@@ -1954,7 +2173,35 @@ namespace DOL.GS
                     }
                     return true;
 
+                case eProperty.MeleeDamage:
+                case eProperty.MeleeSpeed:
+                case eProperty.StyleDamage:
+                case eProperty.Fatigue:
+                    return !ToaPureCasters.Contains(charClass);
+
+                case eProperty.OffhandDamageAndChance:
+                    return ToaDualWielders.Contains(charClass);
+
+                case eProperty.CastingSpeed:
+                case eProperty.SpellDamage:
+                case eProperty.SpellRange:
+                case eProperty.SpellDuration:
+                case eProperty.ResistPierce:
+                case eProperty.BuffEffectiveness:
+                case eProperty.DebuffEffectiveness:
+                    return !ToaNoPowerClasses.Contains(charClass);
+
+                case eProperty.HealingEffectiveness:
+                    return ToaHealers.Contains(charClass);
+
+                case eProperty.ArcherySpeed:
+                case eProperty.ArcheryRange:
+                case eProperty.RangedDamage:
+                case eProperty.ArrowRecovery:
+                    return ToaArchers.Contains(charClass);
+
                 case eProperty.Acuity:
+                case eProperty.AcuCapBonus:
                     if (charClass == eCharacterClass.Armsman ||
                         charClass == eCharacterClass.Mercenary ||
                         charClass == eCharacterClass.Paladin ||
@@ -2036,7 +2283,10 @@ namespace DOL.GS
                 return PendragonRules.IsRogSkill(property);
             if (this.charClass == eCharacterClass.TuathaSovereign)
                 return PendragonRules.IsTuathaSkill(property);
-            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Stealth || property == eProperty.Skill_Spear))
+            // Storm Sovereign trains Hammer, Axe, Shields, Parry and Stealth (no Sword or Spear).
+            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Sword || property == eProperty.Skill_Spear))
+                return false;
+            if (this.charClass == eCharacterClass.Stormforged && property == eProperty.Skill_Stealth)
                 return true;
             int level = this.Level;
             eRealm realm = (eRealm)this.Realm;
@@ -2681,7 +2931,10 @@ namespace DOL.GS
                 return PendragonRules.IsRogSkill(property);
             if (this.charClass == eCharacterClass.TuathaSovereign)
                 return PendragonRules.IsTuathaSkill(property);
-            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Stealth || property == eProperty.Skill_Spear))
+            // Storm Sovereign trains Hammer, Axe, Shields, Parry and Stealth (no Sword or Spear).
+            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Sword || property == eProperty.Skill_Spear))
+                return false;
+            if (this.charClass == eCharacterClass.Stormforged && property == eProperty.Skill_Stealth)
                 return true;
             int level = this.Level;
             eRealm realm = (eRealm)this.Realm;
@@ -3723,7 +3976,10 @@ namespace DOL.GS
                 return PendragonRules.IsRogSkill(property);
             if (this.charClass == eCharacterClass.TuathaSovereign)
                 return PendragonRules.IsTuathaSkill(property);
-            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Stealth || property == eProperty.Skill_Spear))
+            // Storm Sovereign trains Hammer, Axe, Shields, Parry and Stealth (no Sword or Spear).
+            if (this.charClass == eCharacterClass.Stormforged && (property == eProperty.Skill_Sword || property == eProperty.Skill_Spear))
+                return false;
+            if (this.charClass == eCharacterClass.Stormforged && property == eProperty.Skill_Stealth)
                 return true;
             int level = this.Level;
             eRealm realm = (eRealm)this.Realm;
@@ -4846,6 +5102,8 @@ namespace DOL.GS
                             return Util.Random(5, 25); // cap is 400
                         else if (property == eProperty.PowerPoolCapBonus)
                             return Util.Random(1, 10); // cap is 50
+                        else if (ToaPercentBonusMax.TryGetValue(property, out int percentMax))
+                            return ToaPercentAmount(percentMax);
                         else
                             return Util.Random(1, 6); // cap is 26
                     }
@@ -4888,11 +5146,22 @@ namespace DOL.GS
                 int worstline = 1;
                 int numAttempts = 0;
                 int utiScaleAttempts = 25;
+                double floorLineCapFactor = LootRulesFile.Current?.RandomItems?.Budget?.LineCapFactor ?? 1.5;
                 while (GetTotalUtility() < utilityMinimum && numAttempts < utiScaleAttempts)
                 {
                     //find highest utility line on the item
                     worstline = GetLowestUtilitySingleLine();
                     numAttempts++;
+                    if (worstline == 0)
+                        break;
+
+                    // A line never rises past the old roll's top value for the level: an item that spent its other
+                    // lines on zero-utility ToA bonuses used to pour the whole floor into one stat (+72 Quickness).
+                    int lineIndex = worstline - 1;
+                    int lineType = BonusTypeArray()[lineIndex];
+                    int lineCap = LineCap(lineType, mobLevel, floorLineCapFactor);
+                    if (BonusValueArray()[lineIndex] >= lineCap)
+                        break;
 
                     //lower the value of it by
                     //1-5% for resist
@@ -4934,6 +5203,13 @@ namespace DOL.GS
                             ExtraBonus = IncreaseSingleLineUtility(ExtraBonusType, ExtraBonus);
                             break;
                     }
+
+                    int[] raisedValues = BonusValueArray();
+                    if (raisedValues[lineIndex] > lineCap)
+                    {
+                        raisedValues[lineIndex] = lineCap;
+                        WriteBonusArrays(BonusTypeArray(), raisedValues);
+                    }
                     //then recalculate
                 }
             }
@@ -4942,10 +5218,14 @@ namespace DOL.GS
             if (GetTotalUtility() > cap)
             {
                 int bestline = 1;
-                while (GetTotalUtility() > cap)
+                // Bounded: a line the reducer cannot lower used to spin this loop forever on the game loop thread.
+                int trimAttempts = 0;
+                while (GetTotalUtility() > cap && trimAttempts++ < 500)
                 {
                     //find highest utility line on the item
                     bestline = GetHighestUtilitySingleLine();
+                    if (bestline == 0)
+                        break;
 
                     //lower the value of it by
                     //1-5% for resist
@@ -5029,7 +5309,7 @@ namespace DOL.GS
             if (GetSingleUtility(Bonus6Type, Bonus6) > highestUti)
             {
                 highestUti = GetSingleUtility(Bonus6Type, Bonus6);
-                highestLine = 2;
+                highestLine = 6;
             }
 
             if (GetSingleUtility(Bonus7Type, Bonus7) > highestUti)
@@ -5066,8 +5346,10 @@ namespace DOL.GS
         
         public int GetLowestUtilitySingleLine()
         {
-            double lowestUti = GetSingleUtility(Bonus1Type, Bonus1);
-            int lowestLine = lowestUti > 0 ? 1 : 0; //if line1 had a bonus, set it as highest line, otherwise default to 0
+            // Lines with no utility (ToA and cap bonuses) can't be raised, so they are never picked: the floor loop would spin on them.
+            bool firstValid = IsValidUpscaleType(Bonus1Type) && Bonus1 != 0;
+            double lowestUti = firstValid ? GetSingleUtility(Bonus1Type, Bonus1) : double.MaxValue;
+            int lowestLine = firstValid ? 1 : 0;
 
             if (GetSingleUtility(Bonus2Type, Bonus2) < lowestUti && IsValidUpscaleType(Bonus2Type))
             {
@@ -5096,7 +5378,7 @@ namespace DOL.GS
             if (GetSingleUtility(Bonus6Type, Bonus6) < lowestUti && IsValidUpscaleType(Bonus6Type))
             {
                 lowestUti = GetSingleUtility(Bonus6Type, Bonus6);
-                lowestLine = 2;
+                lowestLine = 6;
             }
 
             if (GetSingleUtility(Bonus7Type, Bonus7) < lowestUti && IsValidUpscaleType(Bonus7Type))
@@ -5138,7 +5420,8 @@ namespace DOL.GS
                    && BonusType != 164 
                    && BonusType != 167 
                    && BonusType != 168 
-                   && BonusType != 213;
+                   && BonusType != 213
+                   && GetSingleUtility(BonusType, 1) > 0;
         }
 
         private int ReduceSingleLineUtility(int BonusType, int Bonus)
@@ -5173,7 +5456,7 @@ namespace DOL.GS
                 {
                     Bonus = Bonus - Util.Random(1, Math.Min(Bonus, 3)); //up to 6 uti reduction
                 }
-                else if (BonusType < 115)
+                else if (BonusType <= (int)eProperty.Skill_Last) // 115 is archery; < 115 left it uncuttable
                 {
                     Bonus = Bonus - Util.Random(1, Math.Min(Bonus, 1)); //up to 5 uti reduction
                 }
@@ -5222,7 +5505,7 @@ namespace DOL.GS
                 {
                     Bonus = Bonus + Util.Random(1, Math.Min(Bonus, 3)); //up to 6 uti reduction
                 }
-                else if (BonusType < 115)
+                else if (BonusType <= (int)eProperty.Skill_Last)
                 {
                     Bonus = Bonus + Util.Random(1, Math.Min(Bonus, 1)); //up to 5 uti reduction
                 }
@@ -5448,12 +5731,13 @@ namespace DOL.GS
                     weaponTypes.Add(eObjectType.Shield);
                     break;
                 case eCharacterClass.PendragonSovereign:
-                    weaponTypes.AddRange(new[] { eObjectType.SlashingWeapon, eObjectType.CrushingWeapon,
-                        eObjectType.ThrustWeapon, eObjectType.TwoHandedWeapon, eObjectType.PolearmWeapon, eObjectType.Shield });
+                    // Sword, Polearm and Shield only (2026-11-06 remake).
+                    weaponTypes.AddRange(new[] { eObjectType.SlashingWeapon, eObjectType.PolearmWeapon, eObjectType.SlashingWeapon,
+                        eObjectType.PolearmWeapon, eObjectType.Shield });
                     break;
                 case eCharacterClass.TuathaSovereign:
-                    weaponTypes.AddRange(new[] { eObjectType.Blades, eObjectType.Blunt, eObjectType.Piercing,
-                        eObjectType.LargeWeapons, eObjectType.CelticSpear, eObjectType.Shield });
+                    // Scythe, Blades and Shield only (2026-11-06 remake).
+                    weaponTypes.AddRange(new[] { eObjectType.Scythe, eObjectType.Blades, eObjectType.Scythe, eObjectType.Blades, eObjectType.Shield });
                     break;
                 case eCharacterClass.Armsman:
                     weaponTypes.Add(eObjectType.PolearmWeapon);
@@ -5758,8 +6042,14 @@ namespace DOL.GS
                     weaponTypes.Add(eObjectType.Shield);
                     break;
                 case eCharacterClass.Stormforged:
-                    weaponTypes.Add(eObjectType.Spear);
-                    goto case eCharacterClass.Thane;
+                    // Hammer, Axe and Shield only (2026-11-04 remake).
+                    weaponTypes.Add(eObjectType.Axe);
+                    weaponTypes.Add(eObjectType.Hammer);
+                    weaponTypes.Add(eObjectType.Axe);
+                    weaponTypes.Add(eObjectType.Hammer);
+                    weaponTypes.Add(eObjectType.Shield);
+                    weaponTypes.Add(eObjectType.Shield);
+                    break;
                 case eCharacterClass.Thane:
                 case eCharacterClass.Warrior:
                     weaponTypes.Add(eObjectType.Sword);
@@ -5913,8 +6203,8 @@ namespace DOL.GS
             {
                 // Hibernian drops for the Tuatha Sovereign come here, not to the Albion list.
                 case eCharacterClass.TuathaSovereign:
-                    weaponTypes.AddRange(new[] { eObjectType.Blades, eObjectType.Blunt, eObjectType.Piercing,
-                        eObjectType.LargeWeapons, eObjectType.CelticSpear, eObjectType.Shield });
+                    // Scythe, Blades and Shield only (2026-11-06 remake).
+                    weaponTypes.AddRange(new[] { eObjectType.Scythe, eObjectType.Blades, eObjectType.Scythe, eObjectType.Blades, eObjectType.Shield });
                     break;
                 // Match each starter trainer's guaranteed practice weapon.
                 case eCharacterClass.Guardian:
@@ -10984,7 +11274,60 @@ namespace DOL.GS
 			//eProperty.ChaCapBonus,
 			eProperty.MaxHealthCapBonus,
             eProperty.AcuCapBonus,
+            // ToA percent lines; StatIsValidForClass keeps each to the classes that use it.
+            eProperty.MeleeDamage,
+            eProperty.MeleeSpeed,
+            eProperty.StyleDamage,
+            eProperty.Fatigue,
+            eProperty.OffhandDamageAndChance,
+            eProperty.CastingSpeed,
+            eProperty.SpellDamage,
+            eProperty.SpellRange,
+            eProperty.SpellDuration,
+            eProperty.ResistPierce,
+            eProperty.BuffEffectiveness,
+            eProperty.DebuffEffectiveness,
+            eProperty.HealingEffectiveness,
+            eProperty.ArcherySpeed,
+            eProperty.ArcheryRange,
+            eProperty.RangedDamage,
+            eProperty.ArrowRecovery,
         };
+
+        /// <summary>Largest roll at item level 50 for each ToA percent line (live caps are 10% or 25%, power pool 50%).</summary>
+        private static readonly Dictionary<eProperty, int> ToaPercentBonusMax = new()
+        {
+            [eProperty.MeleeDamage] = 5,
+            [eProperty.MeleeSpeed] = 5,
+            [eProperty.StyleDamage] = 5,
+            [eProperty.OffhandDamageAndChance] = 5,
+            [eProperty.CastingSpeed] = 5,
+            [eProperty.SpellDamage] = 5,
+            [eProperty.SpellRange] = 5,
+            [eProperty.ResistPierce] = 5,
+            [eProperty.ArcherySpeed] = 5,
+            [eProperty.ArcheryRange] = 5,
+            [eProperty.RangedDamage] = 5,
+            [eProperty.SpellDuration] = 10,
+            [eProperty.BuffEffectiveness] = 10,
+            [eProperty.DebuffEffectiveness] = 10,
+            [eProperty.HealingEffectiveness] = 10,
+            [eProperty.ArrowRecovery] = 10,
+            [eProperty.Fatigue] = 10,
+            [eProperty.PowerPool] = 10,
+        };
+
+        /// <summary>Items below this level never roll ToA bonuses.</summary>
+        public const int ToaMinimumItemLevel = 20;
+
+        /// <summary>Generated loot may roll ToA bonuses when `atlas_rog / rog_toa_item_chance` is above 0.</summary>
+        public static bool ToaBonusesEnabled => Properties.ROG_TOA_ITEM_CHANCE > 0;
+
+        private int ToaPercentAmount(int maxAtFifty)
+        {
+            int max = Math.Max(1, (int)Math.Round(maxAtFifty * Math.Min(this.Level, 50) / 50.0));
+            return Util.Random(Math.Max(1, max / 2), max);
+        }
 
         private static eProperty[] ResistBonus = new eProperty[]
         {

@@ -1,0 +1,1534 @@
+[
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1726,
+  "category": "Darkness Falls Armor",
+  "name": "Jerkin of Demonic Intent",
+  "skill": 0,
+  "level": 50,
+  "model": 10907,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Darkness Falls",
+    1
+   ],
+   [
+    "Ancient Pure Mercury",
+    2
+   ]
+  ],
+  "result": "world item",
+  "product": "Jerkin_of_Demonic_Intent1",
+  "official": 10907
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1733,
+  "category": "Aurulite Chestpieces",
+  "name": "Cabalist - Unyielding Majestic Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24081,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_majestic_robe_alb",
+  "official": 24081,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1734,
+  "category": "Aurulite Chestpieces",
+  "name": "Cleric - Unyielding Iridescent Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24055,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Azure_Hauberk_of_Notes, matched by id (online Herald))",
+  "product": "bounty_unyielding_iridescent_hauberk_alb",
+  "official": 24055,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1735,
+  "category": "Aurulite Chestpieces",
+  "name": "Friar - Unyielding Solemnity Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24077,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Mirror",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Demoniac_Turmoil_Jerkin, matched by id (online Herald))",
+  "product": "bounty_unyielding_solemnity_robe_alb",
+  "official": 24077,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1736,
+  "category": "Aurulite Chestpieces",
+  "name": "Heretic - Unyielding Betrayal Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24083,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_betrayal_robe_alb",
+  "official": 24083,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1740,
+  "category": "Aurulite Chestpieces",
+  "name": "Minstrel - Unyielding Vagabond Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24041,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Azure_Hauberk_of_Notes, matched by id (online Herald))",
+  "product": "bounty_unyielding_vagabond_hauberk_alb",
+  "official": 24041,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1741,
+  "category": "Aurulite Chestpieces",
+  "name": "Necromancer - Unyielding Demon Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24079,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_demon_robe_alb",
+  "official": 24079,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1732,
+  "category": "Aurulite Chestpieces",
+  "name": "Paladin - Unyielding Protector Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24012,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor Ageless_Fluted_Protector, matched by id (online Herald))",
+  "product": "bounty_unyielding_protector_breastplate_alb",
+  "official": 24012,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1745,
+  "category": "Aurulite Chestpieces",
+  "name": "Sorcerer - Unyielding Manipulator Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24069,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_manipulator_robe_alb",
+  "official": 24069,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1746,
+  "category": "Aurulite Chestpieces",
+  "name": "Theurgist - Unyielding Geomancer Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24048,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_geomancer_robe_alb",
+  "official": 24048,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1747,
+  "category": "Aurulite Chestpieces",
+  "name": "Wizard - Unyielding Magus Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24062,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    3
+   ]
+  ],
+  "result": "new item (donor 1_Superior_Gossamer_Body-torn_Vest, matched by id (online Herald))",
+  "product": "bounty_unyielding_magus_robe_alb",
+  "official": 24062,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1768,
+  "category": "Aurulite Weapons",
+  "name": "Ancient Priest Hammer",
+  "skill": 0,
+  "level": 50,
+  "model": 24389,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Weapon Mold",
+    3
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Necrotic Brain Fluid",
+    3
+   ],
+   [
+    "Ancient Lich Tooth",
+    1
+   ]
+  ],
+  "result": "new item (donor 1Dragonsworn_Fist_Wrap_Alb, matched by id (online Herald))",
+  "product": "bounty_ancient_priest_mace_alb",
+  "official": 24389,
+  "notes": [
+   "use ability 12903 has no charges in the official record; given 30",
+   "use ability 12901 has no charges in the official record; given 30"
+  ]
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1784,
+  "category": "Frozen Chestpieces",
+  "name": "Armsman - Freezing Soldier Hauberk",
+  "skill": 0,
+  "level": 50,
+  "model": 23032,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor Ageless_Fluted_Protector, matched by id (online Herald))",
+  "product": "bounty_freezing_soldier_vest_alb",
+  "official": 23032,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 2494,
+  "category": "Curse Chestpieces",
+  "name": "Reaver - Dullahan's Armor",
+  "skill": 0,
+  "level": 50,
+  "model": 27396,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 1_Azure_Hauberk_of_Notes, matched by id (online Herald))",
+  "product": "bounty_dullahan_s_hauberk_alb",
+  "official": 27396,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 2512,
+  "category": "Curse Sleeves",
+  "name": "Scout - Soul Diffuser Sleeves",
+  "skill": 0,
+  "level": 50,
+  "model": 27469,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Pure Mercury",
+    4
+   ]
+  ],
+  "result": "new item (donor 1_Ageless_Telamon_Sleeves, matched by id (online Herald))",
+  "product": "bounty_soul_diffuser_s_sleeves_alb",
+  "official": 27469,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 8381,
+  "category": "Aurulite Chestpieces",
+  "name": "Warrior -  Howling Titan Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 24087,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Armor Mold",
+    2
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    3
+   ]
+  ],
+  "result": "new item (donor 2_Baldurs_Hauberk, matched by id (online Herald))",
+  "product": "bounty_howling_titan_vest_mid",
+  "official": 24087,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 8524,
+  "category": "Frozen Chestpieces",
+  "name": "Warrior -  Freezing Titan Vest",
+  "skill": 0,
+  "level": 50,
+  "model": 23525,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 2_Baldurs_Hauberk, matched by id (online Herald))",
+  "product": "bounty_freezing_titan_vest_mid",
+  "official": 23525,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 9354,
+  "category": "Curse Chestpieces",
+  "name": "Spiritmaster - Dark Magister's Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 27689,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 2_Ancient_Cobalt_Jerkin, matched by id (online Herald))",
+  "product": "bounty_robe_of_the_dark_magister_mid",
+  "official": 27689,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 9369,
+  "category": "Curse Sleeves",
+  "name": "Spiritmaster - Dark Masgister's Sleeves",
+  "skill": 0,
+  "level": 50,
+  "model": 27763,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 2_SoT_Sleeves, matched by id (online Herald))",
+  "product": "bounty_sleeves_of_the_dark_magister_mid",
+  "official": 27763,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 9381,
+  "category": "Curse Leggings",
+  "name": "Skald - Howling Saga Leggaurds",
+  "skill": 0,
+  "level": 50,
+  "model": 27687,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 2_Exquisite_Abysmal_Leggings, matched by id (online Herald))",
+  "product": "bounty_howling_saga_legguards_mid",
+  "official": 27687,
+  "notes": []
+ },
+ {
+  "realm": 2,
+  "trade": 5,
+  "id": 8548,
+  "category": "Curse Boots",
+  "name": "Spiritmaster - Dark Magister's Slippers",
+  "skill": 0,
+  "level": 50,
+  "model": 27690,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 2_SBoT_Boots, matched by id (online Herald))",
+  "product": "bounty_slippers_of_the_dark_magister_mid",
+  "official": 27690,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14666,
+  "category": "Seasonal Event Rewards",
+  "name": "Battled Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 64262,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Cloth_Cap, matched by id (online Herald))",
+  "product": "bounty_battled_mantle_of_samhain_hib",
+  "official": 64262,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14667,
+  "category": "Seasonal Event Rewards",
+  "name": "Striking Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 64258,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Ancient Mirror",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Jewel_Pierced_Helm, matched by id (online Herald))",
+  "product": "bounty_striking_mantle_of_samhain_hib",
+  "official": 64258,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14668,
+  "category": "Seasonal Event Rewards",
+  "name": "Glittering Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 64259,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Ancient Pure Mercury",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Jewel_Spiked_Helm, matched by id (online Herald))",
+  "product": "bounty_glittering_mantle_of_samhain_hib",
+  "official": 64259,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14669,
+  "category": "Seasonal Event Rewards",
+  "name": "Melodic Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 10999,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Jewel_Spiked_Helm, matched by id (online Herald))",
+  "product": "bounty_melodic_mantle_of_samhain_hib",
+  "official": 10999,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14670,
+  "category": "Seasonal Event Rewards",
+  "name": "Empowering Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 64260,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Loyalist_Scale_Coif, matched by id (online Herald))",
+  "product": "bounty_empowering_mantle_of_samhain_hib",
+  "official": 64260,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14671,
+  "category": "Seasonal Event Rewards",
+  "name": "Fierce Mantle of the Samhain",
+  "skill": 0,
+  "level": 50,
+  "model": 64261,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Seasonal",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    2
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Loyalist_Scale_Coif, matched by id (online Herald))",
+  "product": "bounty_fierce_mantle_of_samhain_hib",
+  "official": 64261,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 14682,
+  "category": "Pictslayer",
+  "name": "Pictslayer Shillelagh",
+  "skill": 0,
+  "level": 50,
+  "model": 17181,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Weapon Mold",
+    1
+   ],
+   [
+    "Recipe: Pictslayer",
+    1
+   ],
+   [
+    "Ancient Necrotic Brain Fluid",
+    1
+   ],
+   [
+    "Ancient Lich Tooth",
+    1
+   ]
+  ],
+  "result": "new item (donor 3Dragonsworn_Great_Hammer_Hib, matched by id (online Herald))",
+  "product": "bounty_pictslayer_shillelagh_hib",
+  "official": 17181,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15581,
+  "category": "Aurulite Weapons",
+  "name": "Abagath Strider",
+  "skill": 0,
+  "level": 50,
+  "model": 26462,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Weapon Mold",
+    3
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Necrotic Brain Fluid",
+    3
+   ],
+   [
+    "Ancient Lich Tooth",
+    1
+   ]
+  ],
+  "result": "new item (donor 3Dragonsworn_Scythe, matched by id (online Herald))",
+  "product": "bounty_abagath_strider_sickle_hib",
+  "official": 26462,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15583,
+  "category": "Aurulite Weapons",
+  "name": "Abagath Cursed Hammer",
+  "skill": 0,
+  "level": 50,
+  "model": 24383,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Weapon Mold",
+    3
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Necrotic Brain Fluid",
+    3
+   ],
+   [
+    "Ancient Lich Tooth",
+    1
+   ]
+  ],
+  "result": "new item (donor 3Dragonsworn_Hammer_Hib, matched by id (online Herald))",
+  "product": "bounty_abagath_cursed_mace_hib",
+  "official": 24383,
+  "notes": [
+   "use ability 12903 has no charges in the official record; given 30",
+   "use ability 12901 has no charges in the official record; given 30"
+  ]
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15588,
+  "category": "Aurulite Weapons",
+  "name": "Gatekeeper's Scythe",
+  "skill": 0,
+  "level": 50,
+  "model": 26192,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Weapon Mold",
+    3
+   ],
+   [
+    "Recipe: Aurulite",
+    1
+   ],
+   [
+    "Ancient Necrotic Brain Fluid",
+    3
+   ],
+   [
+    "Ancient Lich Tooth",
+    1
+   ]
+  ],
+  "result": "new item (donor 3Dragonsworn_Scythe, matched by id (online Herald))",
+  "product": "bounty_gatekeeper_s_sickle_hib",
+  "official": 26192,
+  "notes": [
+   "unknown bonus codes [{'type': 60, 'value': 2}, {'type': 72, 'value': 5}]"
+  ]
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15599,
+  "category": "Frozen Chestpieces",
+  "name": "Animist - Freezing Forest Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22398,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_forest_vest_hib",
+  "official": 22398,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15600,
+  "category": "Frozen Chestpieces",
+  "name": "Bainshee - Freezing Wails Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22215,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_wails_vest_hib",
+  "official": 22215,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15605,
+  "category": "Frozen Chestpieces",
+  "name": "Eldritch - Freezing Gloom Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22216,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_gloom_vest_hib",
+  "official": 22216,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15606,
+  "category": "Frozen Chestpieces",
+  "name": "Enchanter - Freezing Enchanted Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22217,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_enchanted_vest_hib",
+  "official": 22217,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15609,
+  "category": "Frozen Chestpieces",
+  "name": "Mentalist - Freezing Illusion Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22218,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_illusion_vest_hib",
+  "official": 22218,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15612,
+  "category": "Frozen Chestpieces",
+  "name": "Valewalker - Freezing Reaper Robe",
+  "skill": 0,
+  "level": 50,
+  "model": 22399,
+  "ingredients": [
+   [
+    "Stardust",
+    3
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Frozen",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_freezing_reaper_vest_hib",
+  "official": 22399,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15361,
+  "category": "Otherworldly Accessories",
+  "name": "Cliodnar's Otherworldly Hardy Cloak",
+  "skill": 1,
+  "level": 50,
+  "model": 17192,
+  "ingredients": [
+   [
+    "Stardust",
+    2
+   ],
+   [
+    "Bounty Accessory Mold",
+    2
+   ],
+   [
+    "Recipe: Otherworldly",
+    1
+   ],
+   [
+    "Ancient Crushed Focus Stone",
+    2
+   ]
+  ],
+  "result": "new item (donor Ancient_Cracked_Stag_Hide, matched by id (online Herald))",
+  "product": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+  "official": 17192,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15635,
+  "category": "Curse Chestpieces",
+  "name": "Bainshee - Gown of the Dark Queen",
+  "skill": 0,
+  "level": 50,
+  "model": 27965,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Gossamer_Seolc_Vest, matched by id (online Herald))",
+  "product": "bounty_robe_of_the_dark_queen_hib",
+  "official": 27965,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15639,
+  "category": "Curse Chestpieces",
+  "name": "Druid - Darkseed Hauberk",
+  "skill": 0,
+  "level": 50,
+  "model": 29624,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Burnished_Shansee_Hauberk, matched by id (online Herald))",
+  "product": "bounty_darkseed_armor_hib",
+  "official": 29624,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15642,
+  "category": "Curse Chestpieces",
+  "name": "Hero - Marrach Prime Scale",
+  "skill": 0,
+  "level": 50,
+  "model": 29789,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Burnished_Shansee_Hauberk, matched by id (online Herald))",
+  "product": "bounty_marrach_prime_armor_hib",
+  "official": 29789,
+  "notes": [
+   "unknown bonus codes [{'type': 60, 'value': 2}]"
+  ]
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15649,
+  "category": "Curse Chestpieces",
+  "name": "Warden - Dark Protector's Scalemail",
+  "skill": 0,
+  "level": 50,
+  "model": 30074,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Burnished_Shansee_Hauberk, matched by id (online Herald))",
+  "product": "bounty_dark_defender_s_scalemail_hib",
+  "official": 30074,
+  "notes": [
+   "unknown bonus codes [{'type': 62, 'value': 2}]"
+  ]
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15665,
+  "category": "Curse Sleeves",
+  "name": "Warden - Dark Protector's Armguards",
+  "skill": 0,
+  "level": 50,
+  "model": 30176,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Black_Velvet-lined_Armguards, matched by id (online Herald))",
+  "product": "bounty_dark_defender_s_armguards_hib",
+  "official": 30176,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15667,
+  "category": "Curse Leggings",
+  "name": "Animist - Darkspore Pants",
+  "skill": 0,
+  "level": 50,
+  "model": 27945,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor Azure Incandescent Leggings, matched by id (online Herald))",
+  "product": "bounty_darkspore_breeches_hib",
+  "official": 27945,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15679,
+  "category": "Curse Leggings",
+  "name": "Warden - Dark Protector's Leggings",
+  "skill": 0,
+  "level": 50,
+  "model": 30100,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Ancient Troll Blood",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Loyalist_Scale_Legs, matched by id (online Herald))",
+  "product": "bounty_dark_defender_s_leggings_hib",
+  "official": 30100,
+  "notes": []
+ },
+ {
+  "realm": 3,
+  "trade": 5,
+  "id": 15682,
+  "category": "Curse Boots",
+  "name": "Enchanter - Emberlight Boots",
+  "skill": 0,
+  "level": 50,
+  "model": 27991,
+  "ingredients": [
+   [
+    "Stardust",
+    4
+   ],
+   [
+    "Bounty Armor Mold",
+    3
+   ],
+   [
+    "Recipe: Curse",
+    1
+   ],
+   [
+    "Enriched Quicksilver",
+    4
+   ]
+  ],
+  "result": "new item (donor 3_Worn_Jewel_Dusted_Boots, matched by id (online Herald))",
+  "product": "bounty_emberlight_shoes_hib",
+  "official": 27991,
+  "notes": []
+ },
+ {
+  "realm": 1,
+  "trade": 5,
+  "id": 1726,
+  "category": "Darkness Falls Armor",
+  "name": "Jerkin of Demonic Intent",
+  "skill": 0,
+  "level": 50,
+  "model": 10907,
+  "ingredients": [
+   [
+    "Stardust",
+    1
+   ],
+   [
+    "Bounty Armor Mold",
+    1
+   ],
+   [
+    "Recipe: Darkness Falls",
+    1
+   ],
+   [
+    "Ancient Pure Mercury",
+    2
+   ]
+  ],
+  "result": "skipped: Jerkin_of_Demonic_Intent1 already made with other ingredients"
+ }
+]

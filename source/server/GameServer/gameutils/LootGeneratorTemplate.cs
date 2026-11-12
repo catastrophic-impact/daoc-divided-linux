@@ -191,19 +191,25 @@ namespace DOL.GS
 
             if (mxlts != null)
             {
+                // Replace the mob's rows instead of appending: every refresh used to add the same rows again, so
+                // tables other than the mob's own rolled once more per refresh.
+                var refreshed = new Dictionary<string, List<DbMobXLootTemplate>>();
+                foreach (DbMobXLootTemplate mxlt in mxlts)
+                {
+                    string key = mxlt.MobName.ToLower();
+                    if (!refreshed.TryGetValue(key, out List<DbMobXLootTemplate> rows))
+                        refreshed[key] = rows = new List<DbMobXLootTemplate>();
+                    rows.Add(mxlt);
+                }
+
                 lock (m_mobXLootTemplates)
                 {
+                    m_mobXLootTemplates.Remove(mob.Name.ToLower());
+                    foreach (var pair in refreshed)
+                        m_mobXLootTemplates[pair.Key] = pair.Value;
+
                     foreach (DbMobXLootTemplate mxlt in mxlts)
                     {
-                        List<DbMobXLootTemplate> mobxLootTemplates;
-                        if (!m_mobXLootTemplates.TryGetValue(mxlt.MobName.ToLower(), out mobxLootTemplates))
-                        {
-                            mobxLootTemplates = new List<DbMobXLootTemplate>();
-                            m_mobXLootTemplates[mxlt.MobName.ToLower()] = mobxLootTemplates;
-                        }
-
-                        mobxLootTemplates.Add(mxlt);
-
                         RefreshLootTemplate(mxlt.LootTemplateName);
 
 
@@ -252,9 +258,6 @@ namespace DOL.GS
         public override LootList GenerateLoot(GameNPC mob, GameObject killer)
         {
             LootList loot = base.GenerateLoot(mob, killer);
-
-            string XPItemKey = "XP_Item";
-            string XPItemDroppersKey = "XP_Item_Droppers";
 
             try
             {
@@ -314,7 +317,7 @@ namespace DOL.GS
 
                                     if (CanReceiveRealmDrop(lootOwner, drop))
                                     {
-                                        if (lootTemplate.Chance < 0 && player != null)
+                                        if (lootTemplate.Chance < 0 && player != null && !LootSimulator.IsSimulating) // a simulation never moves the XP item timer
                                         {
                                             timedDrops.Add(lootTemplate);
                                         }
@@ -330,84 +333,9 @@ namespace DOL.GS
                                 }
 
                                 if (timedDrops.Count > 0)
-                                {
-                                    DbLootTemplate
-                                        lootTemplate =
-                                            timedDrops[
-                                                Util.Random(timedDrops.Count - 1)]; //randomly pick one available drop
+                                    RollTimedDrop(player, timedDrops, loot, false, ref tmp, ref dropChan);
 
-                                    lock (player.XpGainersLock)
-                                    {
-                                        DbItemTemplate drop =
-                                            GameServer.Database.FindObjectByKey<DbItemTemplate>(lootTemplate
-                                                .ItemTemplateID);
-                                        int dropCooldown =
-                                            lootTemplate.Chance * -1 * 60 * 1000; //chance time in minutes
-                                        long tempProp =
-                                            player.TempProperties.GetProperty<long>(XPItemKey); //check if our loot has dropped for player
-                                        List<string> itemsDropped =
-                                            player.TempProperties
-                                                .GetProperty<List<string>>(
-                                                    XPItemDroppersKey); //check our list of dropped monsters
-                                        if (itemsDropped == null) itemsDropped = new List<string>();
-                                        GamePlayer GroupedTimerToUse = null;
-
-                                        if (player.Group != null)
-                                            GroupedTimerToUse =
-                                                CheckGroupForValidXpTimer(XPItemKey, dropCooldown, player);
-
-                                        //if we've never dropped an item, or our cooldown is up, drop an item
-                                        if (tempProp == 0 ||
-                                            tempProp + dropCooldown < GameLoop.GameLoopTime)
-                                        {
-                                            long nextDropTime = GameLoop.GameLoopTime;
-                                            var numRelics = RelicMgr.GetRelicCount(player.Realm);
-                                            if (numRelics > 0) nextDropTime -= 10000 * numRelics;
-
-                                            loot.AddFixed(drop, lootTemplate.Count);
-                                            player.TempProperties.SetProperty(XPItemKey, nextDropTime);
-
-                                            itemsDropped.Clear();
-                                            player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
-                                        }
-                                        else if (GroupedTimerToUse != null)
-                                        {
-                                            long nextDropTime = GameLoop.GameLoopTime;
-                                            loot.AddFixed(drop, lootTemplate.Count);
-                                            GroupedTimerToUse.TempProperties.SetProperty(XPItemKey, nextDropTime);
-
-                                            itemsDropped.Clear();
-                                            GroupedTimerToUse.TempProperties.SetProperty(XPItemDroppersKey,
-                                                itemsDropped);
-                                        }
-                                        //else if this drop cycle has not seen this item, reduce global cooldown
-                                        else if (!itemsDropped.Contains(drop.Name))
-                                        {
-                                            itemsDropped.Add(drop.Name);
-                                            tempProp -= 20 * 1000; //take 20 seconds off cooldown
-                                            player.TempProperties.SetProperty(XPItemKey, tempProp);
-                                            player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
-                                            tmp = tempProp;
-                                            dropChan = dropCooldown;
-                                        }
-                                    }
-                                }
-
-                                if (tmp > 0 && dropChan > 0)
-                                {
-                                    long timeDifference = GameLoop.GameLoopTime - (tmp + dropChan);
-                                    timeDifference *= -1;
-                                    //"PvE Time Remaining: " + TimeSpan.FromMilliseconds(pve).Hours + "h " + TimeSpan.FromMilliseconds(pve).Minutes + "m " + TimeSpan.FromMilliseconds(pve).Seconds + "s");
-                                    if (timeDifference > 0)
-                                        player.Out.SendMessage(
-                                            TimeSpan.FromMilliseconds(timeDifference).Hours + "h " +
-                                            TimeSpan.FromMilliseconds(timeDifference).Minutes + "m " +
-                                            TimeSpan.FromMilliseconds(timeDifference).Seconds + "s until next XP item",
-                                            eChatType.CT_System, eChatLoc.CL_SystemWindow);
-                                    else
-                                        player.Out.SendMessage("XP item will drop after your next kill!",
-                                            eChatType.CT_System, eChatLoc.CL_SystemWindow);
-                                }
+                                ReportXpItemTimer(player, tmp, dropChan);
                             }
                         }
                     }
@@ -455,7 +383,7 @@ namespace DOL.GS
                                     DbItemTemplate drop =
                                         GameServer.Database.FindObjectByKey<DbItemTemplate>(lootTemplate.ItemTemplateID);
 
-                                    if (lootTemplate.Chance < 0 && player != null)
+                                    if (lootTemplate.Chance < 0 && player != null && !LootSimulator.IsSimulating) // a simulation never moves the XP item timer
                                     {
                                         timedDrops.Add(lootTemplate);
                                     }
@@ -466,87 +394,11 @@ namespace DOL.GS
                                 }
 
                                 if (timedDrops.Count > 0)
-                                {
-                                    DbLootTemplate
-                                        lootTemplate =
-                                            timedDrops[
-                                                Util.Random(timedDrops.Count - 1)]; //randomly pick one available drop
-
-                                    lock (player.XpGainersLock)
-                                    {
-                                        DbItemTemplate drop =
-                                            GameServer.Database.FindObjectByKey<DbItemTemplate>(lootTemplate
-                                                .ItemTemplateID);
-                                        int dropCooldown =
-                                            lootTemplate.Chance * -1 * 60 * 1000; //chance time in minutes
-                                        long tempProp =
-                                            player.TempProperties.GetProperty<long>(XPItemKey); //check if our loot has dropped for player
-                                        List<string> itemsDropped =
-                                            player.TempProperties
-                                                .GetProperty<List<string>>(
-                                                    XPItemDroppersKey); //check our list of dropped monsters
-                                        GamePlayer GroupedTimerToUse = null;
-                                        if (itemsDropped == null) itemsDropped = new List<string>();
-
-                                        if (player.Group != null)
-                                            GroupedTimerToUse =
-                                                CheckGroupForValidXpTimer(XPItemKey, dropCooldown, player);
-
-                                        //if we've never dropped an item, or our cooldown is up, drop an item
-                                        if (tempProp == 0 ||
-                                            tempProp + dropCooldown < GameLoop.GameLoopTime)
-                                        {
-                                            long nextDropTime = GameLoop.GameLoopTime;
-                                            var numRelics = RelicMgr.GetRelicCount(player.Realm);
-                                            if (numRelics > 0) nextDropTime -= 10000 * numRelics;
-
-                                            loot.AddFixed(drop, lootTemplate.Count);
-                                            player.TempProperties.SetProperty(XPItemKey, nextDropTime);
-
-                                            itemsDropped.Clear();
-                                            player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
-                                        }
-                                        else if (GroupedTimerToUse != null)
-                                        {
-                                            long nextDropTime = GameLoop.GameLoopTime;
-                                            loot.AddFixed(drop, lootTemplate.Count);
-                                            GroupedTimerToUse.TempProperties.SetProperty(XPItemKey, nextDropTime);
-
-                                            itemsDropped.Clear();
-                                            GroupedTimerToUse.TempProperties.SetProperty(XPItemDroppersKey,
-                                                itemsDropped);
-                                        }
-                                        //else if this drop cycle has not seen this item, reduce global cooldown
-                                        else if (itemsDropped == null || !itemsDropped.Contains(drop.Name))
-                                        {
-                                            itemsDropped.Add(drop.Name);
-                                            tempProp -= 20 * 1000; //take 20 seconds off cooldown
-                                            player.TempProperties.SetProperty(XPItemKey, tempProp);
-                                            player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
-                                        }
-
-                                        tmp = tempProp;
-                                        dropChan = dropCooldown;
-                                    }
-                                }
+                                    RollTimedDrop(player, timedDrops, loot, true, ref tmp, ref dropChan);
                             }
                         }
 
-                        if (tmp > 0 && dropChan > 0)
-                        {
-                            long timeDifference = GameLoop.GameLoopTime - (tmp + dropChan);
-                            timeDifference *= -1;
-                            //"PvE Time Remaining: " + TimeSpan.FromMilliseconds(pve).Hours + "h " + TimeSpan.FromMilliseconds(pve).Minutes + "m " + TimeSpan.FromMilliseconds(pve).Seconds + "s");
-                            if (timeDifference > 0)
-                                player.Out.SendMessage(
-                                    TimeSpan.FromMilliseconds(timeDifference).Hours + "h " +
-                                    TimeSpan.FromMilliseconds(timeDifference).Minutes + "m " +
-                                    TimeSpan.FromMilliseconds(timeDifference).Seconds + "s until next XP item",
-                                    eChatType.CT_System, eChatLoc.CL_SystemWindow);
-                            else
-                                player.Out.SendMessage("XP item will drop after your next kill!", eChatType.CT_System,
-                                    eChatLoc.CL_SystemWindow);
-                        }
+                        ReportXpItemTimer(player, tmp, dropChan);
                     }
                 }
             }
@@ -557,6 +409,91 @@ namespace DOL.GS
             }
 
             return loot;
+        }
+
+        private const string XPItemKey = "XP_Item";
+        private const string XPItemDroppersKey = "XP_Item_Droppers";
+
+        /// <summary>
+        /// The timed XP item drop (LootTemplate rows with a negative chance: the cooldown in minutes), shared by both table
+        /// paths; each had its own copy until 2026-11-06 (UT_LootXpItemTimer pins what they did). One of the timed rows is
+        /// picked; it drops if the player's timer is up, or a group member's in range, and otherwise a mob not yet seen this
+        /// cycle takes 20 seconds off. reportEveryKill: the MobXLootTemplate path reports the time left after every kill,
+        /// the other path only after taking time off.
+        /// </summary>
+        private void RollTimedDrop(GamePlayer player, List<DbLootTemplate> timedDrops, LootList loot, bool reportEveryKill,
+            ref long tmp, ref long dropChan)
+        {
+            DbLootTemplate lootTemplate = timedDrops[Util.Random(timedDrops.Count - 1)]; //randomly pick one available drop
+
+            lock (player.XpGainersLock)
+            {
+                DbItemTemplate drop = GameServer.Database.FindObjectByKey<DbItemTemplate>(lootTemplate.ItemTemplateID);
+                int dropCooldown = lootTemplate.Chance * -1 * 60 * 1000; //chance time in minutes
+                long tempProp = player.TempProperties.GetProperty<long>(XPItemKey); //check if our loot has dropped for player
+                List<string> itemsDropped = player.TempProperties.GetProperty<List<string>>(XPItemDroppersKey); //check our list of dropped monsters
+                if (itemsDropped == null) itemsDropped = new List<string>();
+                GamePlayer GroupedTimerToUse = null;
+
+                if (player.Group != null)
+                    GroupedTimerToUse = CheckGroupForValidXpTimer(XPItemKey, dropCooldown, player);
+
+                //if we've never dropped an item, or our cooldown is up, drop an item
+                if (tempProp == 0 || tempProp + dropCooldown < GameLoop.GameLoopTime)
+                {
+                    long nextDropTime = GameLoop.GameLoopTime;
+                    var numRelics = RelicMgr.GetRelicCount(player.Realm);
+                    if (numRelics > 0) nextDropTime -= 10000 * numRelics;
+
+                    loot.AddFixed(drop, lootTemplate.Count);
+                    player.TempProperties.SetProperty(XPItemKey, nextDropTime);
+
+                    itemsDropped.Clear();
+                    player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
+                }
+                else if (GroupedTimerToUse != null)
+                {
+                    long nextDropTime = GameLoop.GameLoopTime;
+                    loot.AddFixed(drop, lootTemplate.Count);
+                    GroupedTimerToUse.TempProperties.SetProperty(XPItemKey, nextDropTime);
+
+                    itemsDropped.Clear();
+                    GroupedTimerToUse.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
+                }
+                //else if this drop cycle has not seen this item, reduce global cooldown
+                else if (!itemsDropped.Contains(drop.Name))
+                {
+                    itemsDropped.Add(drop.Name);
+                    tempProp -= 20 * 1000; //take 20 seconds off cooldown
+                    player.TempProperties.SetProperty(XPItemKey, tempProp);
+                    player.TempProperties.SetProperty(XPItemDroppersKey, itemsDropped);
+                    tmp = tempProp;
+                    dropChan = dropCooldown;
+                }
+
+                if (reportEveryKill)
+                {
+                    tmp = tempProp;
+                    dropChan = dropCooldown;
+                }
+            }
+        }
+
+        private static void ReportXpItemTimer(GamePlayer player, long tmp, long dropChan)
+        {
+            if (tmp <= 0 || dropChan <= 0)
+                return;
+
+            long timeDifference = GameLoop.GameLoopTime - (tmp + dropChan);
+            timeDifference *= -1;
+            if (timeDifference > 0)
+                player.Out.SendMessage(
+                    TimeSpan.FromMilliseconds(timeDifference).Hours + "h " +
+                    TimeSpan.FromMilliseconds(timeDifference).Minutes + "m " +
+                    TimeSpan.FromMilliseconds(timeDifference).Seconds + "s until next XP item",
+                    eChatType.CT_System, eChatLoc.CL_SystemWindow);
+            else
+                player.Out.SendMessage("XP item will drop after your next kill!", eChatType.CT_System, eChatLoc.CL_SystemWindow);
         }
 
         private GamePlayer CheckGroupForValidXpTimer(String xpItemKey, int dropCooldown, GamePlayer player)

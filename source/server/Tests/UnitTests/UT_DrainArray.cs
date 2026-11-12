@@ -184,6 +184,59 @@ namespace DOL.GS.Tests
                 Assert.Inconclusive("Race condition was not reproduced.");
         }*/
 
+        // The packet queues (deferAddsDuringDrain): an add made while a drain runs, e.g. a packet from a timer thread
+        // while the game loop sends, is kept and goes out first on the next drain instead of being dropped.
+        [Test]
+        public void DeferredAdd_DuringDrainTo_IsKeptForTheNextDrain()
+        {
+            DrainArray<int> drainArray = new(deferAddsDuringDrain: true);
+            drainArray.Add(1);
+            drainArray.Add(2);
+            bool addedDuringDrain = true;
+            System.Collections.Generic.List<int> first = new();
+
+            drainArray.DrainTo(item =>
+            {
+                first.Add(item);
+
+                if (item == 1)
+                    addedDuringDrain = drainArray.Add(99);
+            });
+
+            Assert.That(addedDuringDrain, Is.False, "an add during a drain reports that it was kept for later");
+            Assert.That(first, Is.EqualTo(new[] { 1, 2 }));
+            Assert.That(drainArray.Any, Is.True);
+
+            Assert.That(drainArray.Add(3), Is.True);
+            System.Collections.Generic.List<int> second = new();
+            drainArray.DrainTo(second.Add);
+            Assert.That(second, Is.EqualTo(new[] { 99, 3 }), "the kept item is older, so it goes first");
+            Assert.That(drainArray.Any, Is.False);
+            AssertBufferIsCleared(drainArray);
+        }
+
+        [Test]
+        public void DeferredAdd_FromAnotherThreadDuringDrain_IsNeverLost()
+        {
+            DrainArray<int> drainArray = new(deferAddsDuringDrain: true);
+            ConcurrentBag<int> drained = new();
+            int itemCount = 20000;
+            using CancellationTokenSource stop = new();
+
+            Task drainer = Task.Run(() =>
+            {
+                while (!stop.IsCancellationRequested)
+                    drainArray.DrainTo(drained.Add);
+            });
+
+            Parallel.For(0, itemCount, i => drainArray.Add(i));
+            stop.Cancel();
+            drainer.Wait();
+            drainArray.DrainTo(drained.Add);
+            drainArray.DrainTo(drained.Add);
+            CollectionAssert.AreEquivalent(Enumerable.Range(0, itemCount), drained);
+        }
+
         static void AssertBufferIsCleared<T>(DrainArray<T> drainArray)
         {
             FieldInfo bufferField = typeof(DrainArray<T>).GetField("_buffer", BindingFlags.NonPublic | BindingFlags.Instance);

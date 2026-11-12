@@ -30,6 +30,12 @@ namespace DOL.GS
         internal AccountCompanionRecord CompanionRecord { get; private set; }
         public string CompanionCharacterId => CompanionCharacter?.ObjectId;
 
+        /// <summary>The character's realm points, earned in RvR beside its owner and saved back to it.</summary>
+        public long CompanionRealmPoints { get; private set; }
+
+        /// <summary>The character's bounty points, earned in RvR beside its owner and saved back to it.</summary>
+        public long CompanionBountyPoints { get; private set; }
+
         public GameBot(GamePlayer owner, DbCoreCharacter character, AccountCompanionRecord record)
         {
             Owner = owner ?? throw new ArgumentNullException(nameof(owner));
@@ -69,6 +75,9 @@ namespace DOL.GS
             LoadPersistedSpecs(character.SerializedSpecs);
             BotSpec = ResolveCompanionBuild();
             Experience = Math.Max(0, character.Experience);
+            CompanionRealmPoints = Math.Max(0, character.RealmPoints);
+            CompanionBountyPoints = Math.Max(0, character.BountyPoints);
+            RealmLevel = Math.Max(Math.Max(0, character.RealmLevel), AutonomousBotRealmPointRewards.RealmLevelFor(CompanionRealmPoints));
             RefreshSpecDependantSkills(false);
             SetBotSpells();
             SortStyles();
@@ -101,28 +110,55 @@ namespace DOL.GS
         /// </summary>
         private BotSpec ResolveCompanionBuild()
         {
-            eCharacterClass characterClass = (eCharacterClass)ClassId;
+            BotSpec plan = PickCompanionBuild((eCharacterClass)ClassId, CompanionRecord.BuildPlan,
+                CompanionRecord.Style, GetBaseSpecLevel, out bool replaced);
+            if (replaced && plan != null)
+            {
+                CompanionRecord.BuildPlan = BotLifetimeBuild.Encode(plan);
+                CompanionRecord.Dirty = true;
+            }
+            return plan;
+        }
+
+        /// <summary>
+        /// The build a companion of this class should follow: the saved plan, unless the
+        /// character's own trained lines clearly fit another of the class's builds better.
+        /// A plan picked at level 1 (every fit 0, so the class's first choice) used to win
+        /// forever: a Champion trained in Large Weapons kept a one-hand Blades plan, refused
+        /// its two-handed sword and made a starter blade. Same rule for every class.
+        /// </summary>
+        private const int CompanionBuildQuietRolls = 64; // rolls without a new build before a choice counts as seen
+        private const int CompanionBuildMaxRolls = 512;
+
+        public static BotSpec PickCompanionBuild(eCharacterClass characterClass, string savedPlan, string style,
+            Func<string, int> trained, out bool replaced)
+        {
+            replaced = false;
             IReadOnlyList<eSpecType> choices = BotSpec.GetSpecializationChoices(characterClass);
             BotSpec saved = BotSpec.GetSpec(characterClass, choices[0]);
-            if (saved != null && BotLifetimeBuild.Restore(saved, CompanionRecord.BuildPlan))
-                return saved;
+            bool restored = saved != null && BotLifetimeBuild.Restore(saved, savedPlan);
 
-            bool hasStyle = Enum.TryParse(CompanionRecord.Style, true, out eSpecType wanted) && choices.Contains(wanted);
+            bool hasStyle = Enum.TryParse(style, true, out eSpecType wanted) && choices.Contains(wanted);
             BotSpec best = null;
             int bestFit = -1;
             foreach (eSpecType choice in choices)
             {
                 if (hasStyle && choice != wanted)
                     continue;
-                // Builds include random weapon and variance rolls. Several rolls give the
-                // best match a fair chance to appear.
-                for (int roll = 0; roll < 8; roll++)
+                // Builds include random weapon and variance rolls, so a choice is rolled until it stops
+                // showing new builds. Eight rolls missed one build in six a quarter of the time (a Bard
+                // trained in Blades kept a plan without Blades, DR-231).
+                var seen = new HashSet<string>();
+                for (int roll = 0, sinceNew = 0; roll < CompanionBuildMaxRolls && sinceNew < CompanionBuildQuietRolls; roll++, sinceNew++)
                 {
                     BotSpec candidate = BotSpec.GetSpec(characterClass, choice);
                     if (candidate == null)
+                        break;
+                    if (!seen.Add(BotLifetimeBuild.Encode(candidate)))
                         continue;
-                    BotLifetimeBuild.AlignWithInvestedWeapons(candidate, GetBaseSpecLevel);
-                    int fit = AccountCompanionRules.PlanFit(PlanLines(candidate), GetBaseSpecLevel);
+                    sinceNew = -1;
+                    BotLifetimeBuild.AlignWithInvestedWeapons(candidate, trained);
+                    int fit = AccountCompanionRules.PlanFit(PlanLines(candidate), trained);
                     if (fit > bestFit)
                     {
                         best = candidate;
@@ -131,12 +167,29 @@ namespace DOL.GS
                 }
             }
 
-            if (best != null)
-            {
-                CompanionRecord.BuildPlan = BotLifetimeBuild.Encode(best);
-                CompanionRecord.Dirty = true;
-            }
+            if (restored && (best == null || AccountCompanionRules.PlanFit(PlanLines(saved), trained) >= bestFit))
+                return saved;
+            replaced = best != null;
             return best;
+        }
+
+        /// <summary>
+        /// After the owner trains or respecs, moves the companion to the build its trained lines
+        /// now fit, and re-equips for it (two-hander, shield or main-hand weapon).
+        /// </summary>
+        private void ReconcileCompanionBuild()
+        {
+            BotSpec plan = ResolveCompanionBuild();
+            if (plan == null || BotSpec != null && BotLifetimeBuild.Encode(plan) == BotLifetimeBuild.Encode(BotSpec))
+                return;
+            string before = BotSpec?.SpecType.ToString() ?? "none";
+            BotSpec = plan;
+            SortStyles();
+            EnsureBotWeaponReady();
+            RefreshItemBonuses();
+            _companionDirty = true;
+            if (log.IsInfoEnabled)
+                log.Info($"ACCOUNT_COMPANION_BUILD companion=\"{Name}\" from={before} to={plan.SpecType} weapon={plan.WeaponOneType}/{plan.WeaponTwoType}");
         }
 
         private static IEnumerable<AccountCompanionRules.PlanLine> PlanLines(BotSpec plan) =>
@@ -243,6 +296,7 @@ namespace DOL.GS
             SetBotSpells();
             SortStyles();
             SortSpells();
+            ReconcileCompanionBuild();
             _companionDirty = true;
             SaveAccountCompanion("train");
             if (log.IsInfoEnabled)
@@ -299,6 +353,7 @@ namespace DOL.GS
             SetBotSpells();
             SortStyles();
             SortSpells();
+            ReconcileCompanionBuild();
             _companionDirty = true;
             SaveAccountCompanion("respec");
             if (log.IsInfoEnabled)
@@ -387,6 +442,36 @@ namespace DOL.GS
             ShowCompanionLevelUp();
             RemindCompanionUnspentPoints();
             SaveAccountCompanion("level");
+        }
+
+        /// <summary>
+        /// Realm points for an RvR kill beside the owner: kept on the character as a player's are, with the
+        /// realm rank they reach. The owner sees what the companion got.
+        /// </summary>
+        private void GainAccountCompanionRealmPoints(long amount)
+        {
+            int previousRealmLevel = RealmLevel;
+            CompanionRealmPoints += amount;
+            RealmLevel = Math.Max(RealmLevel, AutonomousBotRealmPointRewards.RealmLevelFor(CompanionRealmPoints));
+            _companionDirty = true;
+
+            if (Owner?.Client?.ClientState is not GameClient.eClientState.Playing)
+                return;
+            Owner.Out.SendMessage($"{Name} gets {amount} realm points!", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
+            if (RealmLevel > previousRealmLevel)
+            {
+                string rank = $"{RealmLevel / 10 + 1}L{RealmLevel % 10}";
+                Owner.Out.SendMessage($"{Name} has reached realm rank {rank}!", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
+                Owner.Out.SendMessage($"{Name} has reached realm rank {rank}!", eChatType.CT_ScreenCenter, eChatLoc.CL_SystemWindow);
+            }
+        }
+
+        private void GainAccountCompanionBountyPoints(long amount)
+        {
+            CompanionBountyPoints += amount;
+            _companionDirty = true;
+            if (Owner?.Client?.ClientState is GameClient.eClientState.Playing)
+                Owner.Out.SendMessage($"{Name} gets {amount} bounty points!", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
         }
 
         /// <summary>
@@ -516,6 +601,10 @@ namespace DOL.GS
             target.Class = ClassId;
             target.Level = Level;
             target.Experience = Experience;
+            // Only ever raised: a character's RvR progress is never taken away by a companion save.
+            target.RealmPoints = Math.Max(target.RealmPoints, CompanionRealmPoints);
+            target.RealmLevel = Math.Max(target.RealmLevel, RealmLevel);
+            target.BountyPoints = CompanionBountyPoints;
             target.IsLevelSecondStage = CompanionSecondStage;
             target.SerializedSpecs = AccountCompanionRules.MergeSerializedSpecs(target.SerializedSpecs,
                 GetSpecList().Where(spec => spec.Trainable && spec.AllowSave).Select(spec => (spec.KeyName, spec.Level)));
@@ -586,6 +675,47 @@ namespace DOL.GS
                 EnsureBotWeaponReady();
             _companionDirty = true;
             return true;
+        }
+
+        /// <summary>
+        /// A drop rolled for this companion (personal loot names it the intended owner) is its own, as it would be a
+        /// player's: an upgrade is worn, anything else goes into its backpack and is saved with the character.
+        /// Before DR-272 the companion turned these down and the player's bags filled with every companion's rolls.
+        /// A full backpack, or a dead companion, hands the drop on to the group as before.
+        /// </summary>
+        internal TryPickUpResult TryCompanionAutoPickUpItem(WorldInventoryItem item)
+        {
+            TryPickUpResult result = KeepCompanionLoot(
+                IsAlive && ObjectState is eObjectState.Active && Inventory != null && item?.Item != null,
+                () => !item.Item.IsStackable && TryTakeCompanionUpgrade(item.Item),
+                () => item.Item.IsStackable
+                    ? Inventory.AddTemplate(item.Item, item.Item.Count, eInventorySlot.FirstBackpack, eInventorySlot.LastBackpack)
+                    : Inventory.AddItem(eInventorySlot.FirstEmptyBackpack, item.Item),
+                out bool equipped);
+            if (result is not TryPickUpResult.Success)
+                return result;
+
+            item.RemoveFromWorld();
+            _companionDirty = true;
+            Owner?.Out.SendMessage(equipped
+                    ? $"{Name} takes {item.Item.GetName(1, false)} and equips it."
+                    : $"{Name} keeps {item.Item.GetName(1, false)}.",
+                eChatType.CT_Loot, eChatLoc.CL_SystemWindow);
+            return result;
+        }
+
+        /// <summary>The companion's loot decision: wear an upgrade, else keep it in the backpack, else hand it on.</summary>
+        public static TryPickUpResult KeepCompanionLoot(bool canHold, Func<bool> takeUpgrade, Func<bool> store, out bool equipped)
+        {
+            equipped = false;
+            if (!canHold)
+                return TryPickUpResult.DoesNotWant;
+            if (takeUpgrade())
+            {
+                equipped = true;
+                return TryPickUpResult.Success;
+            }
+            return store() ? TryPickUpResult.Success : TryPickUpResult.Blocked;
         }
 
         internal static int CompanionUpgradeValue(GameBot bot, DbInventoryItem item)

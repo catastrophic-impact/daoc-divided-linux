@@ -1,0 +1,19 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-08T13:14:12.652973+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Spell",
+   "key": "local-warlock-test-v1-66172",
+   "op": "update",
+   "before": {
+    "Target": "Realm"
+   },
+   "after": {
+    "Target": "Corpse"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

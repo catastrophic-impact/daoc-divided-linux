@@ -10,6 +10,19 @@ namespace DOL.UnitTests
         private static readonly long[] Xp = { 0, 50, 250, 850, 2300, 6350, 15950, 37950, 88950, 203950, 459950 };
         private static long XpFor(int level) => level < Xp.Length ? Xp[level] : long.MaxValue;
 
+        /// <summary>DR-273: auto-spend stays off by default, and the join message says how to turn it on.</summary>
+        [Test]
+        public void JoinMessageExplainsAutoSpend()
+        {
+            string off = AccountCompanionRules.JoinMessage("Gunnar", 20, "Berserker", false, 12);
+            Assert.That(off, Does.Contain("Gunnar has 12 specialization points to spend"));
+            Assert.That(off, Does.Contain("/companion autospend Gunnar on"));
+            Assert.That(AccountCompanionRules.JoinMessage("Gunnar", 20, "Berserker", false, 0), Does.Not.Contain("points to spend"));
+            string on = AccountCompanionRules.JoinMessage("Gunnar", 20, "Berserker", true, 12);
+            Assert.That(on, Does.Contain("spends its own specialization points"));
+            Assert.That(on, Does.Not.Contain("/companion autospend"));
+        }
+
         [Test]
         public void EarnedPoints_MatchesPlayerFormula()
         {

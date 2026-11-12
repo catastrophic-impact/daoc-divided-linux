@@ -1,0 +1,655 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T13:36:01.708952+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Mob",
+   "key": "ef5e8bc9-2cac-4523-b5fd-e369f7cb8cff",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "ClassType": "DOL.GS.ThroneRoomTeleporter",
+    "TranslationId": null,
+    "Name": "King's Royal Guard",
+    "Suffix": null,
+    "Guild": "",
+    "ExamineArticle": null,
+    "MessageArticle": null,
+    "X": 32547,
+    "Y": 24320,
+    "Z": 8447,
+    "Speed": 0,
+    "Heading": 3060,
+    "Region": 10,
+    "Model": 33,
+    "Size": 52,
+    "Strength": 350,
+    "Constitution": 50,
+    "Dexterity": 100,
+    "Quickness": 50,
+    "Intelligence": 30,
+    "Piety": 30,
+    "Empathy": 30,
+    "Charisma": 30,
+    "Level": 52,
+    "Realm": 1,
+    "EquipmentTemplateID": "82553ae8-ccbe-49c2-9aa8-ec66edf002cd",
+    "ItemsListTemplateID": null,
+    "NPCTemplateID": 60162911,
+    "Race": 0,
+    "Flags": 0,
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "MeleeDamageType": 2,
+    "RespawnInterval": 0,
+    "FactionID": 0,
+    "BodyType": 0,
+    "HouseNumber": 0,
+    "Brain": null,
+    "PathID": null,
+    "OwnerID": "",
+    "RoamingRange": 0,
+    "IsCloakHoodUp": 0,
+    "Gender": 1,
+    "PackageID": "DR-211 throne guards",
+    "VisibleWeaponSlots": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Mob_ID": "ef5e8bc9-2cac-4523-b5fd-e369f7cb8cff"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "pendragon-trainer",
+   "op": "update",
+   "before": {
+    "X": 39680,
+    "Y": 27109,
+    "Z": 8382,
+    "Heading": 637,
+    "EquipmentTemplateID": "PaladinTrainer"
+   },
+   "after": {
+    "X": 32593,
+    "Y": 24431,
+    "Z": 8447,
+    "Heading": 3060,
+    "EquipmentTemplateID": "sovereign_trainer_camelot"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-23",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 23,
+    "Model": 4961,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-23"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-26",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 26,
+    "Model": 4963,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-26"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-22",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 22,
+    "Model": 4960,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-22"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-25",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 25,
+    "Model": 4957,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 5,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-25"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-21",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 21,
+    "Model": 4962,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-21"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-27",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 27,
+    "Model": 4958,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-27"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-28",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 28,
+    "Model": 4959,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-28"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_camelot-12",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_camelot",
+    "Slot": 12,
+    "Model": 3818,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_camelot-12"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "426dd8cc-93a9-4c9a-b197-9409099d7aee",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "ClassType": "DOL.GS.ThroneRoomTeleporter",
+    "TranslationId": null,
+    "Name": "Royal Guard",
+    "Suffix": null,
+    "Guild": "",
+    "ExamineArticle": null,
+    "MessageArticle": null,
+    "X": 31763,
+    "Y": 27001,
+    "Z": 8830,
+    "Speed": 0,
+    "Heading": 70,
+    "Region": 101,
+    "Model": 209,
+    "Size": 51,
+    "Strength": 350,
+    "Constitution": 50,
+    "Dexterity": 100,
+    "Quickness": 50,
+    "Intelligence": 30,
+    "Piety": 30,
+    "Empathy": 30,
+    "Charisma": 30,
+    "Level": 50,
+    "Realm": 2,
+    "EquipmentTemplateID": "c292b020-c3c7-40ee-8137-11f95cabe162",
+    "ItemsListTemplateID": null,
+    "NPCTemplateID": 60165450,
+    "Race": 0,
+    "Flags": 0,
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "MeleeDamageType": 2,
+    "RespawnInterval": 0,
+    "FactionID": 0,
+    "BodyType": 0,
+    "HouseNumber": 0,
+    "Brain": null,
+    "PathID": null,
+    "OwnerID": "",
+    "RoamingRange": 0,
+    "IsCloakHoodUp": 0,
+    "Gender": 0,
+    "PackageID": "DR-211 throne guards",
+    "VisibleWeaponSlots": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Mob_ID": "426dd8cc-93a9-4c9a-b197-9409099d7aee"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "stormforged-trainer",
+   "op": "update",
+   "before": {
+    "X": 29938,
+    "Y": 34935,
+    "Z": 8073,
+    "Heading": 205,
+    "EquipmentTemplateID": "MidStuddedChainHammer"
+   },
+   "after": {
+    "X": 31942,
+    "Y": 27020,
+    "Z": 8830,
+    "Heading": 70,
+    "EquipmentTemplateID": "sovereign_trainer_storm"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-23",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 23,
+    "Model": 4933,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-23"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-26",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 26,
+    "Model": 4937,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-26"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-22",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 22,
+    "Model": 4932,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-22"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-25",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 25,
+    "Model": 4929,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 5,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-25"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-21",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 21,
+    "Model": 4942,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-21"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-27",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 27,
+    "Model": 4930,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-27"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-28",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 28,
+    "Model": 4931,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-28"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-10",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 10,
+    "Model": 3837,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-10"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_storm-11",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_storm",
+    "Slot": 11,
+    "Model": 1138,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_storm-11"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "e373e658-0874-4696-98df-951f521ee498",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "ClassType": "DOL.GS.ThroneRoomTeleporter",
+    "TranslationId": null,
+    "Name": "Royal Guard",
+    "Suffix": null,
+    "Guild": "",
+    "ExamineArticle": null,
+    "MessageArticle": null,
+    "X": 33177,
+    "Y": 33003,
+    "Z": 8008,
+    "Speed": 0,
+    "Heading": 2040,
+    "Region": 201,
+    "Model": 346,
+    "Size": 48,
+    "Strength": 350,
+    "Constitution": 50,
+    "Dexterity": 100,
+    "Quickness": 50,
+    "Intelligence": 30,
+    "Piety": 30,
+    "Empathy": 30,
+    "Charisma": 30,
+    "Level": 50,
+    "Realm": 3,
+    "EquipmentTemplateID": "5e18bcd7-2028-4428-8c00-d71ccee331b8",
+    "ItemsListTemplateID": null,
+    "NPCTemplateID": 60165451,
+    "Race": 0,
+    "Flags": 0,
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "MeleeDamageType": 2,
+    "RespawnInterval": 0,
+    "FactionID": 0,
+    "BodyType": 0,
+    "HouseNumber": 0,
+    "Brain": null,
+    "PathID": null,
+    "OwnerID": "",
+    "RoamingRange": 0,
+    "IsCloakHoodUp": 0,
+    "Gender": 0,
+    "PackageID": "DR-211 throne guards",
+    "VisibleWeaponSlots": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Mob_ID": "e373e658-0874-4696-98df-951f521ee498"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "tuatha-trainer",
+   "op": "update",
+   "before": {
+    "X": 31672,
+    "Y": 26114,
+    "Z": 7767,
+    "Heading": 466,
+    "EquipmentTemplateID": "hero"
+   },
+   "after": {
+    "X": 32997,
+    "Y": 33005,
+    "Z": 8008,
+    "Heading": 2040,
+    "EquipmentTemplateID": "sovereign_trainer_tara"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-23",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 23,
+    "Model": 4954,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-23"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-26",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 26,
+    "Model": 4956,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-26"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-22",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 22,
+    "Model": 4953,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-22"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-25",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 25,
+    "Model": 4950,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 5,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-25"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-21",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 21,
+    "Model": 4964,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-21"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-27",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 27,
+    "Model": 4951,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-27"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-28",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 28,
+    "Model": 4952,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-28"
+   }
+  },
+  {
+   "table": "NPCEquipment",
+   "key": "sovereign_trainer_tara-12",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateID": "sovereign_trainer_tara",
+    "Slot": 12,
+    "Model": 3821,
+    "Color": 0,
+    "Effect": 0,
+    "Extension": 0,
+    "Emblem": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NPCEquipment_ID": "sovereign_trainer_tara-12"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

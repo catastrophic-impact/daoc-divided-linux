@@ -30,11 +30,11 @@ namespace DOL.GS
             _ => id
         };
         public static bool IsRoyalRank(int id) => NormalizeSpell(id) is >= 62400 and < 62656;
-        public static bool IsRogSkill(eProperty property) => property is eProperty.Skill_Slashing or eProperty.Skill_Crushing or
-            eProperty.Skill_Thrusting or eProperty.Skill_Two_Handed or eProperty.Skill_Polearms or eProperty.Skill_Shields or
-            eProperty.Skill_Parry or eProperty.Skill_Stealth or eProperty.AllMeleeWeaponSkills or eProperty.AllSkills;
-        public static bool IsTuathaSkill(eProperty property) => property is eProperty.Skill_Blades or eProperty.Skill_Blunt or
-            eProperty.Skill_Piercing or eProperty.Skill_Large_Weapon or eProperty.Skill_Celtic_Spear or eProperty.Skill_Shields or
-            eProperty.Skill_Parry or eProperty.Skill_Stealth or eProperty.AllMeleeWeaponSkills or eProperty.AllSkills;
+        // Pendragon remake (2026-11-06): Slash, Polearm, Shields, Parry and Stealth.
+        public static bool IsRogSkill(eProperty property) => property is eProperty.Skill_Slashing or eProperty.Skill_Polearms or
+            eProperty.Skill_Shields or eProperty.Skill_Parry or eProperty.Skill_Stealth or eProperty.AllMeleeWeaponSkills or eProperty.AllSkills;
+        // Tuatha remake (2026-11-06): Scythe, Blades, Shields, Parry and Stealth.
+        public static bool IsTuathaSkill(eProperty property) => property is eProperty.Skill_Scythe or eProperty.Skill_Blades or
+            eProperty.Skill_Shields or eProperty.Skill_Parry or eProperty.Skill_Stealth or eProperty.AllMeleeWeaponSkills or eProperty.AllSkills;
     }
 }

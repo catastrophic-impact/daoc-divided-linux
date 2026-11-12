@@ -41,7 +41,18 @@ public static class AutonomousDarknessFallsPolicy
 
     // Nearly every meeting room holds level 48+ monsters, above a solo bot's blue limit.
     // First private copy run, 2026-11-01: no solo bot took a PvP goal.
-    public const ConColor SoloPvpMaximumCon = ConColor.ORANGE;
+    // Playtest 2026-11-07: 98 deaths on solo "Hunt enemies" goals with orange allowed; yellow until the DF route scan is in.
+    public const ConColor SoloPvpMaximumCon = ConColor.YELLOW;
+
+    // Night playtest 2026-11-04: a level 17-23 party was wiped in DF at a level 33 demoniac familiar camp. A party's camp
+    // band is measured from its average (up to 10 above it) and only checked against the highest member, so a room could be
+    // 16 levels above its lowest. DF stays open to parties from an average of 20; a room more than 10 levels above the
+    // lowest member (the top of the ordinary party band) is not.
+    public const int PartyLevelsAboveLowestMember = 10;
+
+    /// <summary>A party may take a DF room when its average is 20+ and the room's lowest monster is at most 10 levels above its lowest member. Pure.</summary>
+    public static bool PartyFitsCamp(int averageLevel, int lowestMemberLevel, int campLowestLevel) =>
+        averageLevel >= SoloMinimumLevel && campLowestLevel - lowestMemberLevel <= PartyLevelsAboveLowestMember;
 
     /// <summary>roll is 0-99. A full dungeon or a level below 20 keeps the ordinary camp pick.</summary>
     public static eDarknessFallsGoal RollGoal(int level, int population, int roll)

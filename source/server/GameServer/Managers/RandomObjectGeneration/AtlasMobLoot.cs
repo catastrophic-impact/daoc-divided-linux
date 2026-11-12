@@ -13,8 +13,7 @@ namespace DOL.GS {
     /// </summary>
     public class ROGMobGenerator : LootGeneratorBase {
 
-        //base chance in %
-        public static ushort BASE_ROG_CHANCE = 14;
+        //base chance in % is RandomItemLootRules.BaseChance (loot-rules.json)
         private static readonly Logger Log = LoggerManager.Create(typeof(ROGMobGenerator));
         private static long _nextErrorLogTick;
 
@@ -27,14 +26,21 @@ namespace DOL.GS {
         /// <returns></returns>
         public override LootList GenerateLoot(GameNPC mob, GameObject killer)
         {
+            return GenerateLoot(LootContext.For(mob, killer));
+        }
+
+        public override LootList GenerateLoot(LootContext context)
+        {
+            GameNPC mob = context.Mob;
+            GameObject killer = context.Killer;
             LootList loot = base.GenerateLoot(mob, killer);
 
             try
             {
                 // BotBrain implements IControlledBrain but is NOT ControlledMobBrain.
                 // More importantly a persistent bot's class pet has no human owner.
-                // Resolve the actual player-like owner before any class/realm rolls.
-                GameLiving owner = ResolveEquipmentLootOwner(killer);
+                // The context resolved the actual player-like owner before any class/realm rolls.
+                GameLiving owner = context.Owner;
                 if (owner == null)
                 {
                     return loot;
@@ -53,20 +59,31 @@ namespace DOL.GS {
                 if (owner.Group?.LivingLeader is GameLiving leader && IsLootParticipant(leader))
                     owner = leader;
 
-                // chance to get a RoG Item
-                int chance = BASE_ROG_CHANCE + ((killedcon < 0 ? killedcon + 1 : killedcon) * 3);
+                // chance to get a RoG Item; every number comes from loot-rules.json (defaults are the old constants)
+                RandomItemLootRules rules = LootRulesFile.Current.RandomItems;
+                bool named = context.IsNamed;
+                bool frontier = context.IsFrontier;
+                double chance = rules.BaseChance + ((killedcon < 0 ? killedcon + 1 : killedcon) * rules.ChancePerCon);
 
                 //chance = 100;
-                
+
                 BattleGroup bg = (owner as GamePlayer)?.TempProperties.GetProperty<BattleGroup>(BattleGroup.BATTLEGROUP_PROPERTY);
 
                 if (bg != null)
                 {
-                    var maxDropCap = bg.PlayerCount / 50;
+                    var maxDropCap = bg.PlayerCount / rules.BattlegroupPlayersPerDrop;
                     if (maxDropCap < 1) maxDropCap = 1;
                     if (mob is GameEpicNPC)
-                        maxDropCap *= 2;
-                    chance = 2;
+                        maxDropCap *= rules.EpicBattlegroupDropMultiplier;
+                    chance = rules.Scale(rules.BattlegroupChance, named, frontier);
+
+                    if (rules.PersonalLoot)
+                    {
+                        // each member in sight of the mob rolls for an item of their own class (owner 2026-11-05)
+                        var inSight = bg.Members.Keys.OfType<GamePlayer>().Where(member => member.GetDistance(mob) <= WorldMgr.VISIBILITY_DISTANCE);
+                        RollPersonal(inSight, chance, maxDropCap, 0, mob, killedcon, loot, rules);
+                        return loot;
+                    }
 
                     int numDrops = 0;
                     foreach (GamePlayer bgMember in bg.Members.Keys)
@@ -87,17 +104,20 @@ namespace DOL.GS {
                 //or a valid class for one of their groupmates
                 else if (owner.Group != null)
                 {
-                    var MaxDropCap = Math.Round((decimal) (owner.Group.MemberCount)/3);
+                    var MaxDropCap = Math.Round((decimal) (owner.Group.MemberCount)/rules.GroupMembersPerDrop);
                     if (MaxDropCap < 1) MaxDropCap = 1;
-                    if (MaxDropCap > 3) MaxDropCap = 3;
-                    if (mob.Level > 65) MaxDropCap++; //increase drop cap beyond lvl 60
-                    int guaranteedDrop = mob.Level > 67 ? 1 : 0; //guarantee a drop for very high level mobs
-                    
-                    if (mob.Level > 27)
-                        chance -= 3;
+                    if (MaxDropCap > rules.GroupMaxDrops) MaxDropCap = rules.GroupMaxDrops;
+                    if (mob.Level > rules.GroupExtraDropAboveLevel) MaxDropCap++; //increase drop cap beyond lvl 60
+                    int guaranteedDrop = mob.Level > rules.GroupGuaranteedDropAboveLevel ? 1 : 0; //guarantee a drop for very high level mobs
 
-                    if (mob.Level > 40)
-                        chance -= 3;
+                    chance = rules.Scale(chance - rules.GroupLevelPenalty(mob.Level), named, frontier);
+
+                    if (rules.PersonalLoot)
+                    {
+                        // each member in sight of the mob rolls for an item of their own class (owner 2026-11-05)
+                        RollPersonal(context.Participants, chance, (int)MaxDropCap, guaranteedDrop, mob, killedcon, loot, rules);
+                        return loot;
+                    }
 
                     int numDrops = 0;
                     //roll for an item for each player in the group
@@ -134,12 +154,12 @@ namespace DOL.GS {
                         classForLoot = GetRandomClassFromRealm(owner.Realm);
                     }
 
-                    chance += 10; //solo drop bonus
-                    
-                    if (RollDropChance(chance))
+                    chance = rules.Scale(chance + rules.SoloBonus, named, frontier); //solo drop bonus
+
+                    if (RollWithBadLuck(owner, chance, rules))
                     {
                         DbItemTemplate item = GenerateItemTemplate(owner, classForLoot, (byte)(mob.Level + 1), killedcon, false);
-                        loot.AddFixed(item, 1);
+                        loot.AddFixed(item, 1, owner);
                     }
                     //tmp.GenerateItemQuality(killedcon);
                     //tmp.CapUtility(mob.Level + 1);
@@ -178,32 +198,76 @@ namespace DOL.GS {
         }
 
 
-        protected virtual bool RollDropChance(int chance)
+        /// <param name="chance">Percent, 0 to 100 (rules may make it fractional).</param>
+        protected virtual bool RollDropChance(double chance)
         {
-            return Util.Chance(chance);
+            return Util.Chance(chance / 100.0); // Util.Chance(double) takes a fraction
         }
 
-        public static GameLiving ResolveEquipmentLootOwner(GameObject killer)
+        /// <summary>Percent added to this participant's next roll for the rolls they missed (phase 5 bad-luck protection).</summary>
+        public const string BadLuckProperty = "LOOT_RANDOM_ITEM_BAD_LUCK";
+
+        public static double BadLuck(GameLiving participant) => participant?.TempProperties.GetProperty<double>(BadLuckProperty) ?? 0;
+
+        /// <summary>One roll with the participant's bad-luck bonus: a hit clears it, a miss adds BadLuckStep (up to BadLuckMax).</summary>
+        protected bool RollWithBadLuck(GameLiving participant, double chance, RandomItemLootRules rules)
         {
-            GameLiving owner = ResolveLootOwner(killer);
-            // Helpers never own loot; their real owner may receive the kill's
-            // normal loot through the existing reward-owner/pickup path.
-            if (owner is GameBot { IsTemporaryGroupHelper: true, IsAccountCompanion: false } helper)
-                owner = helper.Owner;
-            return IsLootParticipant(owner) ? owner : null;
+            double bonus = rules.BadLuckStep > 0 ? BadLuck(participant) : 0;
+            bool hit = RollDropChance(Math.Min(100, chance + bonus));
+            if (rules.BadLuckStep > 0 && participant != null)
+            {
+                participant.TempProperties.SetProperty(BadLuckProperty,
+                    hit ? 0.0 : Math.Min(rules.BadLuckMax, bonus + rules.BadLuckStep));
+            }
+            return hit;
         }
 
-        private static bool IsLootParticipant(GameLiving living)
+        /// <summary>
+        /// Personal loot: members roll in a random order so the drop cap favours nobody. A member who rolls an item gets one
+        /// made for their own class and realm, meant for them; a hit past the cap gives nothing and leaves their bad luck as
+        /// it was. A guaranteed drop goes to a random member who got nothing.
+        /// </summary>
+        private void RollPersonal(IEnumerable<GameLiving> members, double chance, int cap, int guaranteed, GameNPC mob,
+            int killedcon, LootList loot, RandomItemLootRules rules)
         {
-            // Account companions are real characters and roll for loot like any group member.
-            return living is GamePlayer || living is GameBot { IsAutonomousWorldBot: true, IsTemporaryGroupHelper: false } ||
-                   living is GameBot { IsAccountCompanion: true };
+            List<GameLiving> order = members.Where(IsLootParticipant).Distinct().OrderBy(_ => Util.Random(int.MaxValue - 1)).ToList();
+            var empty = new List<GameLiving>();
+            int drops = 0;
+            byte lootLevel = (byte)(mob.Level + 1);
+
+            foreach (GameLiving member in order)
+            {
+                if (drops >= cap)
+                {
+                    // past the cap a roll still happens (it always did), but can neither drop nor count as bad luck
+                    RollDropChance(chance);
+                    empty.Add(member);
+                    continue;
+                }
+
+                if (RollWithBadLuck(member, chance, rules))
+                {
+                    loot.AddFixed(GenerateItemTemplate(member, GetLootClass(member), lootLevel, killedcon), 1, member);
+                    drops++;
+                }
+                else
+                    empty.Add(member);
+            }
+
+            if (drops < cap && guaranteed > 0 && empty.Count > 0)
+            {
+                GameLiving lucky = empty[Util.Random(empty.Count - 1)];
+                if (rules.BadLuckStep > 0)
+                    lucky.TempProperties.SetProperty(BadLuckProperty, 0.0);
+                loot.AddFixed(GenerateItemTemplate(lucky, GetLootClass(lucky), lootLevel, killedcon), 1, lucky);
+            }
         }
 
-        private static IEnumerable<GameLiving> GetLootParticipants(Group group)
-        {
-            return group.GetMembersInTheGroup().Where(IsLootParticipant);
-        }
+        public static GameLiving ResolveEquipmentLootOwner(GameObject killer) => LootContext.ResolveOwner(killer);
+
+        private static bool IsLootParticipant(GameLiving living) => LootContext.IsLootParticipant(living);
+
+        private static IEnumerable<GameLiving> GetLootParticipants(Group group) => LootContext.GroupLootParticipants(group);
 
         private static eCharacterClass GetLootClass(GameLiving participant)
         {

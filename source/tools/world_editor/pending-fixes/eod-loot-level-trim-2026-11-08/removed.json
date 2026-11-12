@@ -1,0 +1,194 @@
+[
+ {
+  "table": "arachite greensilk",
+  "monster level": 5,
+  "item": "Hearthwood Branch",
+  "item level": 25
+ },
+ {
+  "table": "arachite greensilk",
+  "monster level": 5,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite greensilk",
+  "monster level": 5,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite greensilk",
+  "monster level": 5,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "arachite hatchling",
+  "monster level": 1,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite hatchling",
+  "monster level": 1,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite hatchling",
+  "monster level": 1,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "arachite priest",
+  "monster level": 16,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite priest",
+  "monster level": 16,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite priest",
+  "monster level": 16,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "arachite shadowslinker",
+  "monster level": 15,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite shadowslinker",
+  "monster level": 15,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite shadowslinker",
+  "monster level": 15,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "arachite weblasher",
+  "monster level": 16,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite weblasher",
+  "monster level": 16,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite weblasher",
+  "monster level": 16,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "arachite youngling",
+  "monster level": 11,
+  "item": "Svartalf Crafted Belt",
+  "item level": 40
+ },
+ {
+  "table": "arachite youngling",
+  "monster level": 11,
+  "item": "Svartalf Crafted Necklace",
+  "item level": 39
+ },
+ {
+  "table": "arachite youngling",
+  "monster level": 11,
+  "item": "Svartalf Crafted Ring",
+  "item level": 38
+ },
+ {
+  "table": "ash",
+  "monster level": 6,
+  "item": "Black Ash Soul Slayer",
+  "item level": 45
+ },
+ {
+  "table": "corpse candle",
+  "monster level": 12,
+  "item": "Painbound Focus Invoker Staff",
+  "item level": 36
+ },
+ {
+  "table": "disturbed presence",
+  "monster level": 14,
+  "item": "Ruby Encrusted Ring",
+  "item level": 51
+ },
+ {
+  "table": "escaped thrall",
+  "monster level": 3,
+  "item": "Icebound Bracer",
+  "item level": 51
+ },
+ {
+  "table": "giant frog",
+  "monster level": 4,
+  "item": "Breastplate of the Depths",
+  "item level": 24
+ },
+ {
+  "table": "giant frog",
+  "monster level": 4,
+  "item": "Cythrian Baldric",
+  "item level": 26
+ },
+ {
+  "table": "giant frog",
+  "monster level": 4,
+  "item": "Shadow-slicer",
+  "item level": 25
+ },
+ {
+  "table": "keltoi spiritualist",
+  "monster level": 25,
+  "item": "Insurgent's Vest",
+  "item level": 50
+ },
+ {
+  "table": "large skeleton",
+  "monster level": 5,
+  "item": "Pitted Golden Oak Bow",
+  "item level": 30
+ },
+ {
+  "table": "oak man",
+  "monster level": 9,
+  "item": "Enchanter Staff of the Arcane",
+  "item level": 44
+ },
+ {
+  "table": "spriggarn",
+  "monster level": 2,
+  "item": "Ruby Encrusted Ring",
+  "item level": 51
+ },
+ {
+  "table": "tomte shaman",
+  "monster level": 10,
+  "item": "Icebound Bracer",
+  "item level": 51
+ },
+ {
+  "table": "wildling",
+  "monster level": 0,
+  "item": "Icebound Bracer",
+  "item level": 51
+ }
+]

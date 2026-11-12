@@ -1,0 +1,2 @@
+[{"table": "ServerProperty", "insert": {"Key": "bot_watch_admin", "Category": "bots", "Value": "True", "DefaultValue": "False",
+  "Description": "Add read-only developer endpoints (/api/admin/...) to Bot Watch: live bot detail, stalled bots, players. Needs bot_watch. This PC only."}}]

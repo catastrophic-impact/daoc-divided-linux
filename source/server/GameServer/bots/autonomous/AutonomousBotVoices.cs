@@ -64,6 +64,8 @@ public static class AutonomousBotVoices
                 return reader.ReadToEnd();
             }
             VC corpus = VC.Parse(Read("chat.corpus.json"), Read("chat.voices.json"));
+            // Living Server 1.2: the lore bible's lore and rumour lines join the lore pool (docs/LORE.md).
+            corpus = corpus.WithLines(LoreChat.CorpusLines(LoreBible.Current));
             if (Log.IsInfoEnabled)
                 Log.Info($"Bot voices: loaded {corpus.Lines.Length} lines, {corpus.Scenes.Length} scenes, {corpus.Voices.Length} voices");
             return corpus;
@@ -87,11 +89,40 @@ public static class AutonomousBotVoices
     public static bool JustLeveled(GameBot bot) =>
         bot?.DatabaseID > 0 && LeveledAt.TryGetValue(bot.DatabaseID, out long leveled) && GameLoop.GameLoopTime - leveled < JustLeveledMs;
 
-    public static void NoteDeath(GameBot bot)
+    public static void NoteDeath(GameBot bot, GameObject killer = null, int attackers = 0)
     {
         if (bot?.DatabaseID > 0)
-            DiedAt[bot.DatabaseID] = GameLoop.GameLoopTime;
+        {
+            long now = GameLoop.GameLoopTime;
+            DiedAt[bot.DatabaseID] = now;
+            Deaths[bot.DatabaseID] = Death(now, killer, attackers);
+        }
     }
+
+    /// <summary>
+    /// What killed a bot, as its death is told (1.1.3, after RC6): <paramref name="Killer"/> is
+    /// <see cref="AutonomousDeathDiagnostics.ChatKillerKind"/> ("monster", "guard", "pet", "bot", "player", "none"),
+    /// <paramref name="Monster"/> the killing monster's kind ("shard golem", or null for a named one or another killer),
+    /// <paramref name="Attackers"/> how many were on the bot (0: unknown), <paramref name="KillerClass"/> the enemy's class.
+    /// </summary>
+    public sealed record DeathNote(long At, string Killer, string Monster, int Attackers, string KillerClass);
+
+    private static readonly ConcurrentDictionary<long, DeathNote> Deaths = new();
+
+    /// <summary>The note of a death at <paramref name="now"/> by <paramref name="killer"/>.</summary>
+    public static DeathNote Death(long now, GameObject killer, int attackers)
+    {
+        string kind = AutonomousDeathDiagnostics.ChatKillerKind(killer);
+        return new DeathNote(now, kind, kind == "monster" ? AutonomousChatFieldTalk.MonsterKind(killer?.Name, false) : null, Math.Max(0, attackers),
+            kind is "bot" or "player" or "pet" ? AutonomousDeathDiagnostics.KillerClassName(killer) : null);
+    }
+
+    /// <summary>
+    /// The bot's death in the last <see cref="JustDiedMs"/>, or null: a death line or story the bot tells then names what
+    /// really killed it (RC6: a paladin killed by one enemy bot said "died to frontier patrol near death stalkers ugh").
+    /// </summary>
+    public static DeathNote RecentDeath(GameBot bot) =>
+        bot?.DatabaseID > 0 && Deaths.TryGetValue(bot.DatabaseID, out DeathNote note) && GameLoop.GameLoopTime - note.At < JustDiedMs ? note : null;
 
     public static VC.Speaker SpeakerFor(GameBot bot)
     {
@@ -116,6 +147,8 @@ public static class AutonomousBotVoices
         if (!flags.Contains("in_dungeon") && !flags.Contains("in_capital")) flags.Add("outdoors");
         flags.Add(VC.TimeFlag(DateTime.Now.Hour));
         if (bot.IsPlayerLedGroup || AutonomousLivingServer.GroupHasPlayer(bot.Group)) flags.Add("in_player_group");
+        // Bot-led groups: the gamebots lead the party the player is in, so "you pull great" and "lead the way" don't fit.
+        if (BotLedGroups.IsHostedGroup(bot.Group)) flags.Add("bot_leads");
         if (bot.ResurrectionSpell != null && bot.ResurrectionSpell.Level <= bot.Level) flags.Add("can_rez");
         // Holiday chatter (bot_living_holidays): the PC's calendar, so the lines in holidays.lines can be said.
         if (AutonomousHolidays.On) flags.UnionWith(AutonomousHolidays.Flags(AutonomousHolidays.Now));
@@ -198,8 +231,23 @@ public static class AutonomousBotVoices
             string.Equals(destination, bot.CurrentZone?.Description, StringComparison.OrdinalIgnoreCase) ||
             string.Equals(destination, bot.CurrentRegion?.Description, StringComparison.OrdinalIgnoreCase))
             return null;
-        return destination;
+        // RC6 on the owner's PC: "which stable 4 group rendezvous?" in /faction. An internal goal name is no destination to talk about.
+        return IsPlaceName(destination) ? destination : null;
     }
+
+    /// <summary>
+    /// Whether a travel destination is a place a player would name (a zone, town, keep or dungeon), not an internal goal name
+    /// ("group rendezvous", "frontier patrol near ...", "staging"). Pure.
+    /// </summary>
+    public static bool IsPlaceName(string destination) =>
+        !string.IsNullOrWhiteSpace(destination) &&
+        !System.Text.RegularExpressions.Regex.IsMatch(destination, @"\b(rendezvous|patrol|objective|muster|staging|egress|matchmaking|formation|grind|assignment|waypoint)\b",
+            System.Text.RegularExpressions.RegexOptions.IgnoreCase) &&
+        // RC10 on the owner's PC: "which stable for master visur?" while the bot took the porter. A porter or trainer is no
+        // place, nor an internal portal side ("Odin Hib", "Emain Alb", "Home Mid").
+        !System.Text.RegularExpressions.Regex.IsMatch(destination,
+            @"^(master|channeler|stor gothi|gothi|stable ?master|porter|teleporter|trainer|merchant|guard|captain)\b|^(glasny|visur|annark)$|\b(alb|mid|hib)$|^home\b",
+            System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
     /// <summary>Whether a bot is in a dungeon. The capitals are one zone at the dungeon offset, so the server calls them
     /// dungeons; in the live test of se.4 a bot in Camelot said "lfg City of Camelot".</summary>
@@ -207,7 +255,10 @@ public static class AutonomousBotVoices
         !IsCapitalRegion(bot.CurrentRegionID) && (bot.CurrentRegion?.IsDungeon == true || bot.CurrentZone?.IsDungeon == true);
 
     /// <summary>A realm dungeon a bot of this level would use (Kirstena's 2002 ranges, checked against the world database).</summary>
-    public static string DungeonFor(eRealm realm, int level)
+    public static string DungeonFor(eRealm realm, int level) => DungeonFor(realm, level, Random.Shared);
+
+    /// <summary>A dungeon of the realm for a level, drawn with <paramref name="random"/>.</summary>
+    public static string DungeonFor(eRealm realm, int level, Random random)
     {
         (string Name, int Low, int High)[] dungeons = realm switch
         {
@@ -224,7 +275,7 @@ public static class AutonomousBotVoices
         var fitting = dungeons.Where(d => level >= d.Low - 2 && level <= d.High + 2).ToArray();
         if (fitting.Length == 0)
             fitting = dungeons.OrderBy(d => Math.Abs((d.Low + d.High) / 2 - level)).Take(1).ToArray();
-        return fitting.Length == 0 ? null : fitting[Random.Shared.Next(fitting.Length)].Name;
+        return fitting.Length == 0 ? null : fitting[random.Next(fitting.Length)].Name;
     }
 
     public static string CapitalOf(eRealm realm) => realm switch
@@ -268,13 +319,14 @@ public static class AutonomousBotVoices
         OfflineWorldBotRecord record = bot.PersistentRecord;
         string zone = bot.CurrentZone?.Description;
         string item = bot.Inventory?.AllItems.FirstOrDefault(entry => entry != null &&
-            entry.SlotPosition >= (int)eInventorySlot.FirstBackpack && entry.SlotPosition <= (int)eInventorySlot.LastBackpack)?.Name;
+            entry.SlotPosition >= (int)eInventorySlot.FirstBackpack && entry.SlotPosition <= (int)eInventorySlot.LastBackpack &&
+            AutonomousBotChatCoordinator.IsAdvertisableItemName(entry.Name))?.Name;
         // In a player's group the bot hunts what the player hunts, so its solo camp target and camp are stale. Play test
         // 2026-10-28: a friar brought along to Camelot Hills said "mountain algaes at Camelot Hills are the best xp for my
         // level", her last solo target (in Aldland) placed in the zone she stood in. Only a live fight is named then.
         bool withPlayer = bot.IsPlayerLedGroup;
-        string monster = withPlayer ? FightingNow(bot)
-            : !string.IsNullOrWhiteSpace(record?.TargetName) ? record.TargetName.Trim().ToLowerInvariant() : null;
+        // A capitalised target (a person, a guard, a named creature) is no kind of monster (AutonomousChatFieldTalk.MonsterKind).
+        string monster = withPlayer ? FightingNow(bot) : AutonomousChatFieldTalk.MonsterKind(record?.TargetName, false);
         var slots = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             ["me"] = bot.Name,
@@ -309,7 +361,7 @@ public static class AutonomousBotVoices
     /// <summary>The monster the bot is fighting right now (lower case), or null.</summary>
     private static string FightingNow(GameBot bot) =>
         bot.TargetObject is GameNPC { IsAlive: true } npc && npc is not GameBot && npc.Realm == eRealm.None &&
-        !string.IsNullOrWhiteSpace(npc.Name) ? npc.Name.Trim().ToLowerInvariant() : null;
+        !string.IsNullOrWhiteSpace(npc.Name) ? AutonomousChatFieldTalk.MonsterKind(npc.Name, false) : null;
 
     /// <summary>Values a whole conversation shares: one keep, one frontier, one enemy, one capital, one dungeon.</summary>
     public static Dictionary<string, string> SharedSlots(eRealm realm, int level, Random random, string currentDungeon = null)
@@ -456,19 +508,27 @@ public static class AutonomousBotVoices
             if (slots != null)
                 foreach (var pair in slots)
                     all[pair.Key] = pair.Value;
-            return Corpus.TryPick(new VC.Request(kind, speaker, all, Recent, DateTime.UtcNow, random)
+            // Beta 1.1.2: a reply or closing is kept free of musings, unasked Exchange plugs and repeated generic filler.
+            AutonomousChatFiller.ReplyScope scope = AutonomousChatFiller.Current;
+            Func<VC.Line, bool> allowed = kind is "reply" or "closing"
+                ? filter == null ? line => AutonomousChatFiller.ReplyAllowed(line, scope) : line => AutonomousChatFiller.ReplyAllowed(line, scope) && filter(line)
+                : filter;
+            bool picked = Corpus.TryPick(new VC.Request(kind, speaker, all, Recent, DateTime.UtcNow, random)
             {
                 Intent = intent,
                 Answers = answers,
                 Topic = topic,
                 RequireNeed = requireNeed,
-                Filter = filter,
+                Filter = allowed,
                 // Answering a player: a short reply may come back after 40 minutes. Anything else: after six hours,
                 // once the three-day pool for its kind is used up.
                 RelaxTo = relax ? ShortReplyRest : VC.RecentLines.Relaxed,
                 LocalHour = DateTime.Now.Hour,
                 NeedSlots = NeedSlotsFor(bot),
             }, out result);
+            if (picked && scope != null && kind is "reply" or "closing" && AutonomousChatFiller.IsGeneric(result.Text))
+                AutonomousChatFiller.NoteGeneric(scope.ChannelKey, scope.Now);
+            return picked;
         }
         catch (Exception exception)
         {
@@ -526,8 +586,14 @@ public static class AutonomousBotVoices
     }
 
     /// <summary>A text in this bot's writing style (knowledge answers and other fixed text).</summary>
-    public static string StyleFor(GameBot bot, string text) =>
-        !Enabled || bot == null || string.IsNullOrEmpty(text) ? text : VC.Style(text, Corpus.VoiceFor(bot.DatabaseID), Random.Shared);
+    public static string StyleFor(GameBot bot, string text)
+    {
+        if (!Enabled || bot == null || string.IsNullOrEmpty(text))
+            return text;
+        VC.Voice voice = Corpus.VoiceFor(bot.DatabaseID);
+        // Beta 1.1.2: the bot's own typing habits too (AutonomousChatIdiolect).
+        return AutonomousChatIdiolect.Apply(VC.Style(text, voice, Random.Shared), bot.DatabaseID, voice.Capitalize, Random.Shared);
+    }
 
     /// <summary>
     /// A line for a Living Server event (docs/LIVING-SERVER.md). Needs only the corpus, so it works
@@ -537,7 +603,7 @@ public static class AutonomousBotVoices
     /// </summary>
     public static bool TryEventLine(GameBot bot, string kind, out string text, string topic = null,
         IReadOnlyDictionary<string, string> slots = null, IEnumerable<string> flags = null, bool noRepeat = true,
-        string intent = null, string mood = null, Random random = null)
+        string intent = null, string mood = null, Random random = null, Func<VC.Line, bool> filter = null)
     {
         text = null;
         if (Corpus == null || bot == null || !bot.IsAutonomousWorldBot || bot.DatabaseID <= 0)
@@ -561,6 +627,7 @@ public static class AutonomousBotVoices
                 Intent = intent,
                 Topic = topic,
                 Mood = mood,
+                Filter = filter,
                 RelaxTo = VC.RecentLines.Relaxed,
                 LocalHour = DateTime.Now.Hour,
                 NeedSlots = NeedSlotsFor(bot),
@@ -611,13 +678,26 @@ public static class AutonomousBotVoices
     {
         NoteLevelUp(bot);
         SayMoment(bot, "ding", 0.35, 1_500);
+        // Beta 1.1.2, round 7: a ding to 50 is a story the realm hears.
+        if (bot?.Level == 50)
+            AutonomousBotChatCoordinator.TellStory("ding50", bot);
     }
 
-    public static void OnBotDeath(GameBot bot)
+    /// <summary>
+    /// A gamebot died (GameBot.ProcessDeath): what killed it and how many were on it are noted first, so the death's /say
+    /// moment, its /faction story and its field lines tell the real killer (1.1.3, after RC6).
+    /// </summary>
+    public static void OnBotDeath(GameBot bot, GameObject killer = null, int attackers = 0)
     {
-        NoteDeath(bot);
+        NoteDeath(bot, killer, attackers);
         SayMoment(bot, "death", 0.25, 3_000);
+        // Round 7: now and then a death becomes a short story in /faction.
+        if (bot != null && Random.Shared.NextDouble() < StoryDeathChance)
+            AutonomousBotChatCoordinator.TellStory("death", bot);
     }
+
+    /// <summary>How often a gamebot's death becomes a short /faction story (round 7).</summary>
+    public const double StoryDeathChance = 0.04;
 
     private static void SayMoment(GameBot bot, string kind, double chance, int delayMs)
     {

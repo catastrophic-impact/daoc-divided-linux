@@ -353,6 +353,8 @@ namespace DOL.UnitTests
             BotQuestPlan plan = AutonomousBotQuestPlanner.Build(Row("0|1", "wolf;0|bear;0", "cq_pelt;1|", ""), Info(new(), new()), out _);
             AutonomousBotQuests.Run run = Accepted(bot, plan);
 
+            // The drop is a real 1% roll, so the kill it comes on is not known (it came on the first one once, DR-255).
+            // What must hold on every kill: the step is done exactly when the pelt is in the pack.
             int kills = 0;
             while (run.Step == 1 && kills < 4000)
             {
@@ -360,9 +362,10 @@ namespace DOL.UnitTests
                 TestMob wolf = Mob("wolf");
                 AutonomousBotQuests.OnKilled(bot, wolf);
                 run.LastKillId = null;
+                Assert.That(run.Step == 2, Is.EqualTo(AutonomousBotQuests.Carried(bot, "cq_pelt") == 1),
+                    $"kill {kills}: the step closes only with the pelt");
             }
-            Assert.That(run.Step, Is.EqualTo(2));
-            Assert.That(kills, Is.GreaterThan(1), "A 1% drop does not come on the first kill in practice");
+            Assert.That(run.Step, Is.EqualTo(2), "4000 kills at 1% bring the pelt");
         }
 
         [Test]

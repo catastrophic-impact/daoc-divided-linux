@@ -1,0 +1,346 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T22:33:09.940370+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Mob",
+   "key": "3661bfe1-fe6c-4f82-94c5-ba83db3c34b0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "6f663214-2402-430e-a6e7-b4683635a059",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "00b4dbee-20eb-44a9-ad7e-4b2aed2c0228",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "94f8ed4b-d251-4041-8942-6b544e57b6f9",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "fe7caa59-4fca-4bed-9a82-9c8d07fb690c",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "30aff3bd-b499-4f0b-a62f-bca69ca21895",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "990a7080-413b-4460-b875-e94124b0879d",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "9ff6f0c6-6f4b-4eb3-8e47-9e503dfbb8d8",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "a866e0e9-d484-45c8-8ce7-5ad7ff0eb4e4",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "1f19f326-171c-4918-960a-d1770fef388a",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "64fe96b4-1d6c-47a9-8f05-23d3d4dbb2a6",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "c17d382a-00c6-47d8-acdb-acc893b9b70d",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "cc55cc62-b07c-4e49-abe9-bc7e76b3fe81",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "b5503cb8-1659-430a-9bbd-4bd1c97514c2",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "e8bf2ab8-be3c-454b-b075-582eb2549828",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "0d87e2a6-0ae7-4cd5-8c0e-5124da3c0317",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "d7a9a0d6-372b-4163-a42d-0e16d8068615",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "a666fdb9-1f0e-4cd4-a2d1-01c3709b181b",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "d4b312be-d60f-464f-afd0-3f0aa3617892",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "ae5aae60-88f7-4128-9493-24f244d15129",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "35fa4590-87a0-46b1-8ffa-43faf2dc2fc5",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "a9f307b2-7add-469f-9da3-538bab9abe11",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "12038070-7d2c-4e87-9ca9-c82685850b53",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 28
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "b37e2032-5a2e-41c3-a3fc-c6e40ccfb2ea",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "06e7876c-2c3c-488b-bbaf-4910445dab3a",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "3f453d39-3853-409c-9066-25f4b2967559",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "Flags": 20
+   },
+   "after": {
+    "ClassType": "DOL.GS.CatacombsObelisk",
+    "Flags": 16
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

@@ -19,16 +19,19 @@ namespace DOL.GS.PacketHandler
         private static Dictionary<string, List<PacketHandlerAttribute>> _cachedPreprocessorSearchResults = [];
         private static Lock _loadPacketHandlersLock = new();
         private static long _sendBufferPoolExhaustedCount;
+        private static long _lateQueuedCount;
+        private static long _lateQueuedLoggedAt;
 
         private readonly GameClient _client;
         private readonly PacketPreprocessing _packetPreprocessor = new();
         private IPacketHandler[] _packetHandlers = new IPacketHandler[256];
 
-        private readonly DrainArray<GSTCPPacketOut> _tcpPacketQueue = new();
-        private readonly DrainArray<GSUDPPacketOut> _udpToTcpPacketQueue = new();
+        // A packet queued while its queue is being sent (from a timer or another thread) is kept for the next send.
+        private readonly DrainArray<GSTCPPacketOut> _tcpPacketQueue = new(deferAddsDuringDrain: true);
+        private readonly DrainArray<GSUDPPacketOut> _udpToTcpPacketQueue = new(deferAddsDuringDrain: true);
         private readonly ConcurrentQueue<SocketAsyncEventArgs> _tcpSendArgsPool = [];
 
-        private readonly DrainArray<GSUDPPacketOut> _udpPacketQueue = new();
+        private readonly DrainArray<GSUDPPacketOut> _udpPacketQueue = new(deferAddsDuringDrain: true);
         private readonly ConcurrentQueue<SocketAsyncEventArgs> _udpSendArgsPool = [];
         private uint _udpCounter;
 
@@ -230,7 +233,8 @@ namespace DOL.GS.PacketHandler
 
             try
             {
-                _tcpPacketQueue.Add(packet);
+                if (!_tcpPacketQueue.Add(packet))
+                    OnQueuedDuringSend();
             }
             catch (Exception e)
             {
@@ -256,7 +260,8 @@ namespace DOL.GS.PacketHandler
             {
                 try
                 {
-                   _udpPacketQueue.Add(packet);
+                    if (!_udpPacketQueue.Add(packet))
+                        OnQueuedDuringSend();
                 }
                 catch (Exception e)
                 {
@@ -268,7 +273,8 @@ namespace DOL.GS.PacketHandler
             {
                 try
                 {
-                    _udpToTcpPacketQueue.Add(packet);
+                    if (!_udpToTcpPacketQueue.Add(packet))
+                        OnQueuedDuringSend();
                 }
                 catch (Exception e)
                 {
@@ -276,6 +282,21 @@ namespace DOL.GS.PacketHandler
                         log.Error($"{nameof(QueuePacket)} failed when adding to {nameof(_udpToTcpPacketQueue)}. Skipping this packet.", e);
                 }
             }
+        }
+
+        // Counts packets queued while their queue was being sent (they go out on the next send) and logs the caller's
+        // full stack at most once an hour, so the sender can be found without flooding the log.
+        private void OnQueuedDuringSend()
+        {
+            long count = Interlocked.Increment(ref _lateQueuedCount);
+            long now = Environment.TickCount64;
+            long last = Volatile.Read(ref _lateQueuedLoggedAt);
+
+            if ((last != 0 && now - last < 3600000) || Interlocked.CompareExchange(ref _lateQueuedLoggedAt, now, last) != last)
+                return;
+
+            if (log.IsWarnEnabled)
+                log.Warn($"PACKET_QUEUED_DURING_SEND total={count} client={_client} (kept for the next send; logged once an hour){Environment.NewLine}{Environment.StackTrace}");
         }
 
         public void SendPendingPackets()

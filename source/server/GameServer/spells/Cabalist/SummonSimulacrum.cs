@@ -39,8 +39,25 @@ namespace DOL.GS.Spells
 		public SummonSimulacrum(GameLiving caster, Spell spell, SpellLine line)
 			: base(caster, spell, line) { }
 
+		/// <summary>While a sacrificed simulacrum's power is held, no new one can be summoned (live 1.122b, DR-094).</summary>
+		public override bool CheckBeginCast(GameLiving selectedTarget, bool quiet)
+		{
+			if (SimulacrumSacrificeSpellHandler.ActiveOn(Caster) != null)
+			{
+				if (!quiet)
+					MessageToCaster("You cannot summon a simulacrum while you hold a sacrificed simulacrum's power!", eChatType.CT_SpellResisted);
+
+				return false;
+			}
+
+			return base.CheckBeginCast(selectedTarget, quiet);
+		}
+
 		public override bool CheckEndCast(GameLiving selectedTarget)
 		{
+			if (SimulacrumSacrificeSpellHandler.ActiveOn(Caster) != null)
+				return false;
+
 			if (Caster is GamePlayer && ((GamePlayer)Caster).ControlledBrain != null)
 			{
                 MessageToCaster(LanguageMgr.GetTranslation((Caster as GamePlayer).Client, "Summon.CheckBeginCast.AlreadyHaveaPet"), eChatType.CT_SpellResisted);

@@ -80,6 +80,7 @@ namespace DOL.GS.Commands
             { message = "Use /grind stop before /bots hunt."; return false; }
             if (!Sessions.TryAdd(player, new Session { Player = player, Group = player.Group }))
             { message = "Your bots are already hunting."; return false; }
+            PlayerBotStay.Release(BotsOf(player));      // hunting means roaming with you: a stay order ends
             message = $"Your bots are hunting within {HuntRadius} units of you: tanks pull, attackers join, healers stay with you. " +
                 "They start the next fight when everyone is ready. /bots follow calls them back.";
             return true;
@@ -91,6 +92,7 @@ namespace DOL.GS.Commands
         public static void CallBack(GamePlayer player)
         {
             Stop(player);
+            PlayerBotStay.Release(BotsOf(player));
             PlayerLedPullCoordinator.OnGroupThreat(player);
             foreach (GameBot bot in BotsOf(player))
             {
@@ -170,6 +172,7 @@ namespace DOL.GS.Commands
         "/bots hunt - tanks and attackers find their own fights near you, healers stay with you",
         "/bots attack - they attack your target now",
         "/bots follow - stop hunting, drop the fight and come back to you",
+        "/bots stay - hold the spot they stand on (they still defend themselves); /bots follow brings them back",
         "/bots status - who is following you and what they are doing",
         "/bots invites on|off - whether bots invite you to groups")]
     public sealed class PlayerBotOrdersCommand : AbstractCommandHandler, ICommandHandler
@@ -180,6 +183,7 @@ namespace DOL.GS.Commands
             string[] away = bots.Where(bot => !PlayerLedStragglers.IsWith(bot, player)).Select(bot => bot.Name).ToArray();
             return (with.Length > 0 ? $"Following you: {string.Join(", ", with)}. " : "") +
                    (away.Length > 0 ? $"On the way to you: {string.Join(", ", away)}. " : "") +
+                   (PlayerBotStay.Names(player, bots) is { Length: > 0 } staying ? $"Staying put: {staying}. " : "") +
                    (PlayerBotHunt.Status(player) is string status ? $"Hunting: {status}." : "Not hunting.");
         }
 
@@ -203,6 +207,15 @@ namespace DOL.GS.Commands
                 case "stop":
                     PlayerBotHunt.CallBack(player);
                     DisplayMessage(client, "Your bots stop what they are doing and come back to you.");
+                    break;
+                case "stay":
+                case "hold":
+                    PlayerBotHunt.Stop(player);
+                    int held = PlayerBotStay.Hold(player, PlayerBotHunt.BotsOf(player));
+                    DisplayMessage(client, held == 0
+                        ? "You have no bots following you. Invite some to your group first."
+                        : $"Your {(held == 1 ? "bot holds its" : $"{held} bots hold their")} spot. They still fight anything that attacks them " +
+                          "and still take /bots attack. /bots follow brings them back; leaving the region ends it.");
                     break;
                 case "status":
                     GameBot[] bots = PlayerBotHunt.BotsOf(player);

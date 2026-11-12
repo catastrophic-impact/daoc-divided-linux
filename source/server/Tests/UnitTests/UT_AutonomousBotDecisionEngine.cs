@@ -226,6 +226,23 @@ public class UT_AutonomousBotDecisionEngine
     }
 
     [Test]
+    public void AssembledPartyWhoseLeaderChoosesNoTargetEndsAfterFiveMinutes()
+    {
+        // DR-252: a Mularn party stood in formation for 8.5 hours because nothing bounded this wait.
+        long since = 1_000_000;
+        long deadline = AutonomousBotGroupCoordinator.TargetChoiceDeadlineMilliseconds;
+        Assert.Multiple(() =>
+        {
+            Assert.That(deadline, Is.EqualTo(300_000));
+            Assert.That(AutonomousBotGroupCoordinator.HasTargetChoiceTimedOut(0, long.MaxValue / 2), Is.False,
+                "0 means the party is not waiting for a target");
+            Assert.That(AutonomousBotGroupCoordinator.HasTargetChoiceTimedOut(since, since + deadline - 1), Is.False);
+            Assert.That(AutonomousBotGroupCoordinator.HasTargetChoiceTimedOut(since, since + deadline), Is.True);
+            Assert.That(AutonomousBotGroupCoordinator.HasTargetChoiceTimedOut(since, since + 8L * 3_600_000), Is.True);
+        });
+    }
+
+    [Test]
     public void GroupPullReadinessDoesNotRequireAnIdleMemberToHaveExactlyFullResources()
     {
         Assert.Multiple(() =>
@@ -308,6 +325,7 @@ public class UT_AutonomousBotDecisionEngine
         DateTime now = DateTime.UtcNow;
         var record = new OfflineWorldBotRecord
         {
+            Level = 50, // frontier RvR starts at level 40
             ObjectiveKind = "RvR",
             ObjectiveExpiresUtc = now.AddMinutes(1).ToString("O"),
             ObjectiveRvrEligibleUtc = now.AddMinutes(30).ToString("O"),

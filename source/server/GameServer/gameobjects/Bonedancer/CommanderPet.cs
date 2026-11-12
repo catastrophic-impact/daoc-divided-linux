@@ -133,6 +133,11 @@ namespace DOL.GS
 				50 => eCommanderType.SkeletalCommander,
 				51 => eCommanderType.BoneCommander,
 				52 => eCommanderType.DreadCommander,
+				// The dread commanders' own Public_DB templates and the Dread Lord's copy (DR-097).
+				211 => eCommanderType.DreadArcher,
+				212 => eCommanderType.DreadLich,
+				213 => eCommanderType.DreadGuardian,
+				AutonomousPetSupport.DreadLordTemplateId => eCommanderType.DreadLord,
 				_ => ResolveCommanderTypeByName(name),
 			};
 		}
@@ -891,7 +896,7 @@ namespace DOL.GS
 
 			base.SortSpells();
 
-			if (HarmfulSpells != null && HarmfulSpells.Count < 1)
+			if (HarmfulSpells == null || HarmfulSpells.Count < 1)
 				return;
 
 			if (CommanderType != eCommanderType.DreadGuardian && CommanderType != eCommanderType.DreadLich)

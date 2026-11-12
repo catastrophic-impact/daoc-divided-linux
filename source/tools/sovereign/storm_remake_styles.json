@@ -1,0 +1,612 @@
+[
+ {
+  "index": 0,
+  "line": "Hammer",
+  "name": "Thunderstroke",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Lightning strike. Builds 1 Tempest."
+ },
+ {
+  "index": 1,
+  "line": "Hammer",
+  "name": "Shatterguard",
+  "level": 3,
+  "open": "chain",
+  "after": "Thunderstroke",
+  "growth": 1.1,
+  "description": "Cracks the target's armor: 15% less absorption for 12 seconds."
+ },
+ {
+  "index": 2,
+  "line": "Hammer",
+  "name": "Thor's Judgement",
+  "level": 10,
+  "open": "chain",
+  "after": "Shatterguard",
+  "growth": 1.45,
+  "description": "Heavy blow. Spends Tempest: lightning arcs to 3 enemies plus 1 per charge, +20% per charge."
+ },
+ {
+  "index": 3,
+  "line": "Hammer",
+  "name": "Storm Counter",
+  "level": 5,
+  "open": "parry",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you parry. Lightning strike. Builds 1 Tempest."
+ },
+ {
+  "index": 4,
+  "line": "Hammer",
+  "name": "Rolling Thunder",
+  "level": 13,
+  "open": "chain",
+  "after": "Storm Counter",
+  "growth": 1.1,
+  "description": "Thunderclap: lightning hits every enemy within 350 of the target."
+ },
+ {
+  "index": 5,
+  "line": "Hammer",
+  "name": "Mjolnir's Answer",
+  "level": 38,
+  "open": "chain",
+  "after": "Rolling Thunder",
+  "growth": 1.45,
+  "description": "3-second stun and a great lightning strike."
+ },
+ {
+  "index": 6,
+  "line": "Hammer",
+  "name": "Thunder Aegis",
+  "level": 8,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. An ablative storm shield absorbs damage for you."
+ },
+ {
+  "index": 7,
+  "line": "Hammer",
+  "name": "Hammer of Reprisal",
+  "level": 28,
+  "open": "chain",
+  "after": "Thunder Aegis",
+  "growth": 1.1,
+  "description": "Returns the storm as a heavy lightning strike."
+ },
+ {
+  "index": 8,
+  "line": "Hammer",
+  "name": "Wall of Thunder",
+  "level": 40,
+  "open": "chain",
+  "after": "Hammer of Reprisal",
+  "growth": 1.45,
+  "description": "Your party gains an ablative shield; lightning strikes every enemy within 350 of you."
+ },
+ {
+  "index": 9,
+  "line": "Hammer",
+  "name": "Earthshaker",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. 40% snare for 8 seconds."
+ },
+ {
+  "index": 10,
+  "line": "Hammer",
+  "name": "Quake",
+  "level": 23,
+  "open": "chain",
+  "after": "Earthshaker",
+  "growth": 1.1,
+  "description": "The ground breaks: enemies within 250 of the target are stunned 2 seconds."
+ },
+ {
+  "index": 11,
+  "line": "Hammer",
+  "name": "Backbreaker",
+  "level": 20,
+  "open": "back",
+  "after": null,
+  "growth": 1.2,
+  "description": "From behind. Heavy blow, armor absorption -10% for 12 seconds."
+ },
+ {
+  "index": 12,
+  "line": "Hammer",
+  "name": "Spinecrack",
+  "level": 25,
+  "open": "chain",
+  "after": "Backbreaker",
+  "growth": 1.1,
+  "description": "Attack speed -25% for 12 seconds."
+ },
+ {
+  "index": 13,
+  "line": "Hammer",
+  "name": "Thunderfall",
+  "level": 43,
+  "open": "chain",
+  "after": "Spinecrack",
+  "growth": 1.5,
+  "description": "Capstone. Spends Tempest: a huge strike that splashes lightning within 350, +20% per charge."
+ },
+ {
+  "index": 14,
+  "line": "Hammer",
+  "name": "Hidden Thunder",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. A great lightning opener. Builds 2 Tempest."
+ },
+ {
+  "index": 15,
+  "line": "Hammer",
+  "name": "Silent Storm",
+  "level": 30,
+  "open": "chain",
+  "after": "Hidden Thunder",
+  "growth": 1.1,
+  "description": "3-second stun."
+ },
+ {
+  "index": 16,
+  "line": "Hammer",
+  "name": "Stormcaller",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Lightning strike that restores 10% of your power."
+ },
+ {
+  "index": 17,
+  "line": "Hammer",
+  "name": "Skybreaker",
+  "level": 35,
+  "open": "chain",
+  "after": "Stormcaller",
+  "growth": 1.3,
+  "description": "Lightning bursts from you, striking every enemy within 350."
+ },
+ {
+  "index": 18,
+  "line": "Hammer",
+  "name": "Gathering Storm",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Fills your Tempest to 5."
+ },
+ {
+  "index": 19,
+  "line": "Hammer",
+  "name": "Ragnarok's Hammer",
+  "level": 48,
+  "open": "chain",
+  "after": "Gathering Storm",
+  "growth": 1.6,
+  "description": "Signature. Spends Tempest: lightning strikes every enemy within 500, cracking their armor; +20% per charge."
+ },
+ {
+  "index": 20,
+  "line": "Axe",
+  "name": "Winterbite",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Frost wound: cold damage over 12 seconds. Builds 1 Tempest."
+ },
+ {
+  "index": 21,
+  "line": "Axe",
+  "name": "Bloodmark",
+  "level": 3,
+  "open": "chain",
+  "after": "Winterbite",
+  "growth": 1.1,
+  "description": "Bleed: body damage over 12 seconds."
+ },
+ {
+  "index": 22,
+  "line": "Axe",
+  "name": "Executioner's Storm",
+  "level": 10,
+  "open": "chain",
+  "after": "Bloodmark",
+  "growth": 1.45,
+  "description": "+25% per wound you have on the target, doubled below 25% health. Spends Tempest: +20% per charge."
+ },
+ {
+  "index": 23,
+  "line": "Axe",
+  "name": "Frost Rend",
+  "level": 5,
+  "open": "parry",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you parry. Cold strike and a 30% snare."
+ },
+ {
+  "index": 24,
+  "line": "Axe",
+  "name": "Royal Fury",
+  "level": 13,
+  "open": "chain",
+  "after": "Frost Rend",
+  "growth": 1.1,
+  "description": "Two quick strikes, lightning then frost. Builds 1 Tempest."
+ },
+ {
+  "index": 25,
+  "line": "Axe",
+  "name": "Wolf's Reckoning",
+  "level": 38,
+  "open": "chain",
+  "after": "Royal Fury",
+  "growth": 1.45,
+  "description": "A heavy frost blow, and your Storm Wolf's spirit strikes too."
+ },
+ {
+  "index": 26,
+  "line": "Axe",
+  "name": "Iceguard",
+  "level": 8,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. Ablative ice shield; the attacker is slowed 20%."
+ },
+ {
+  "index": 27,
+  "line": "Axe",
+  "name": "Winter's Reprisal",
+  "level": 28,
+  "open": "chain",
+  "after": "Iceguard",
+  "growth": 1.1,
+  "description": "Cold strike that heals you 5%."
+ },
+ {
+  "index": 28,
+  "line": "Axe",
+  "name": "Glacier Wall",
+  "level": 40,
+  "open": "chain",
+  "after": "Winter's Reprisal",
+  "growth": 1.45,
+  "description": "4-second stun; you gain 20% absorption for 10 seconds."
+ },
+ {
+  "index": 29,
+  "line": "Axe",
+  "name": "Frost Hook",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. Cold strike and a 40% snare."
+ },
+ {
+  "index": 30,
+  "line": "Axe",
+  "name": "Shiver",
+  "level": 23,
+  "open": "chain",
+  "after": "Frost Hook",
+  "growth": 1.1,
+  "description": "Attack speed -25% for 12 seconds."
+ },
+ {
+  "index": 31,
+  "line": "Axe",
+  "name": "Hamstring",
+  "level": 20,
+  "open": "back",
+  "after": null,
+  "growth": 1.2,
+  "description": "From behind. Bleed and a 50% snare."
+ },
+ {
+  "index": 32,
+  "line": "Axe",
+  "name": "Gutting Frost",
+  "level": 25,
+  "open": "chain",
+  "after": "Hamstring",
+  "growth": 1.1,
+  "description": "Heavy frost blow, +25% if the target bleeds from your wounds."
+ },
+ {
+  "index": 33,
+  "line": "Axe",
+  "name": "Widowmaker",
+  "level": 43,
+  "open": "chain",
+  "after": "Gutting Frost",
+  "growth": 1.5,
+  "description": "Capstone. Spends Tempest: an execution, doubled below 25% health, +15 critical chance."
+ },
+ {
+  "index": 34,
+  "line": "Axe",
+  "name": "Hidden Wrath",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. A great frost opener that bleeds. Builds 2 Tempest."
+ },
+ {
+  "index": 35,
+  "line": "Axe",
+  "name": "Silent Winter",
+  "level": 30,
+  "open": "chain",
+  "after": "Hidden Wrath",
+  "growth": 1.1,
+  "description": "3-second stun."
+ },
+ {
+  "index": 36,
+  "line": "Axe",
+  "name": "Hungering Frost",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Frost strike that feeds on the cold, healing you."
+ },
+ {
+  "index": 37,
+  "line": "Axe",
+  "name": "Frozen Heart",
+  "level": 35,
+  "open": "chain",
+  "after": "Hungering Frost",
+  "growth": 1.1,
+  "description": "Heals you 10% and breaks snares."
+ },
+ {
+  "index": 38,
+  "line": "Axe",
+  "name": "Mark of Fenrir",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "The target's resistances drop 15% for 15 seconds. Fills your Tempest to 5."
+ },
+ {
+  "index": 39,
+  "line": "Axe",
+  "name": "Fimbulwinter",
+  "level": 48,
+  "open": "chain",
+  "after": "Mark of Fenrir",
+  "growth": 1.6,
+  "description": "Signature. Spends Tempest: detonates your wounds on the target in one great frost blast."
+ },
+ {
+  "index": 40,
+  "line": "Shields",
+  "name": "Royal Rebuke",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Taunt. Builds 1 Tempest."
+ },
+ {
+  "index": 41,
+  "line": "Shields",
+  "name": "Break Their Guard",
+  "level": 3,
+  "open": "chain",
+  "after": "Royal Rebuke",
+  "growth": 1.1,
+  "description": "You gain 10% block chance for 10 seconds."
+ },
+ {
+  "index": 42,
+  "line": "Shields",
+  "name": "Crownfall",
+  "level": 10,
+  "open": "chain",
+  "after": "Break Their Guard",
+  "growth": 1.3,
+  "description": "4-second stun."
+ },
+ {
+  "index": 43,
+  "line": "Shields",
+  "name": "Hold the Throne",
+  "level": 5,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. Ablative storm shield on you."
+ },
+ {
+  "index": 44,
+  "line": "Shields",
+  "name": "Thunder Wall",
+  "level": 13,
+  "open": "chain",
+  "after": "Hold the Throne",
+  "growth": 1.1,
+  "description": "Lightning hits every enemy within 350 and taunts them."
+ },
+ {
+  "index": 45,
+  "line": "Shields",
+  "name": "The Unbroken Crown",
+  "level": 38,
+  "open": "chain",
+  "after": "Thunder Wall",
+  "growth": 1.45,
+  "description": "Your party gains an ablative shield. Spends Tempest: bigger shields and lightning within 350."
+ },
+ {
+  "index": 46,
+  "line": "Shields",
+  "name": "Stormguard Bash",
+  "level": 8,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. 3-second stun."
+ },
+ {
+  "index": 47,
+  "line": "Shields",
+  "name": "Shieldbreaker",
+  "level": 28,
+  "open": "chain",
+  "after": "Stormguard Bash",
+  "growth": 1.1,
+  "description": "Armor absorption -15% and attack speed -20% for 12 seconds."
+ },
+ {
+  "index": 48,
+  "line": "Shields",
+  "name": "Guardian's Oath",
+  "level": 40,
+  "open": "chain",
+  "after": "Shieldbreaker",
+  "growth": 1.3,
+  "description": "Your party gains 15% absorption for 10 seconds."
+ },
+ {
+  "index": 49,
+  "line": "Shields",
+  "name": "Shield Rush",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. 40% snare for 8 seconds."
+ },
+ {
+  "index": 50,
+  "line": "Shields",
+  "name": "Crushing Rim",
+  "level": 23,
+  "open": "chain",
+  "after": "Shield Rush",
+  "growth": 1.1,
+  "description": "2-second stun."
+ },
+ {
+  "index": 51,
+  "line": "Shields",
+  "name": "Rampart Slam",
+  "level": 20,
+  "open": "front",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the front. Interrupts casting. Builds 1 Tempest."
+ },
+ {
+  "index": 52,
+  "line": "Shields",
+  "name": "Wall of Midgard",
+  "level": 25,
+  "open": "chain",
+  "after": "Rampart Slam",
+  "growth": 1.1,
+  "description": "You gain 30% block chance for 8 seconds."
+ },
+ {
+  "index": 53,
+  "line": "Shields",
+  "name": "Throne of Storms",
+  "level": 43,
+  "open": "chain",
+  "after": "Wall of Midgard",
+  "growth": 1.5,
+  "description": "Capstone. Spends Tempest: taunts and strikes every enemy within 500, +20% per charge."
+ },
+ {
+  "index": 54,
+  "line": "Shields",
+  "name": "Hidden Crown",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. 4-second stun. Builds 2 Tempest."
+ },
+ {
+  "index": 55,
+  "line": "Shields",
+  "name": "Ambush Guard",
+  "level": 30,
+  "open": "chain",
+  "after": "Hidden Crown",
+  "growth": 1.1,
+  "description": "Ablative storm shield on you."
+ },
+ {
+  "index": 56,
+  "line": "Shields",
+  "name": "Bulwark",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Heals you 5%. Builds 1 Tempest."
+ },
+ {
+  "index": 57,
+  "line": "Shields",
+  "name": "Crown's Embrace",
+  "level": 35,
+  "open": "chain",
+  "after": "Bulwark",
+  "growth": 1.1,
+  "description": "Heals your party 10%."
+ },
+ {
+  "index": 58,
+  "line": "Shields",
+  "name": "Oathbinding",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Fills your Tempest to 5."
+ },
+ {
+  "index": 59,
+  "line": "Shields",
+  "name": "Stormwall",
+  "level": 48,
+  "open": "chain",
+  "after": "Oathbinding",
+  "growth": 1.6,
+  "description": "Signature. Spends Tempest: a party ablative shield and a lightning blast within 350, +20% per charge."
+ },
+ {
+  "index": 60,
+  "line": "Shields",
+  "name": "Stormslam",
+  "level": 12,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.3,
+  "description": "Anytime shield slam: a 9-second stun. Builds 1 Tempest."
+ }
+]

@@ -46,6 +46,10 @@ namespace DOL.GS.Tests
             Assert.That(BotReleaseBindPoints.NextQuickReturns(1, false, soon), Is.Zero, "another bind starts over");
             Assert.That(BotReleaseBindPoints.NextQuickReturns(1, true, BotReleaseBindPoints.QuickReturnMilliseconds), Is.Zero,
                 "a death long after the release starts over");
+            Assert.That(BotReleaseBindPoints.SendsToCapital(BotReleaseBindPoints.NextQuickReturns(0, true, soon, 3_000)), Is.True,
+                "dying again by the bind");
+            Assert.That(BotReleaseBindPoints.NextQuickReturns(1, true, soon, BotReleaseBindPoints.NearBindDeathRadius + 1), Is.Zero,
+                "dying again at a camp far from the bind is ordinary levelling, not a ringed bind");
         }
 
         [TestCase((ushort)1, eRealm.Albion)]

@@ -22,6 +22,18 @@ namespace DOL.GS.Trials
 
         public override int MaxHealth => _maxHealth;
 
+        /// <summary>
+        /// Only the trial's required mobs pay a kill. Optional extras (Ghillan's clones, respawning hatchlings, adds)
+        /// spawn without end and were farmed for full XP, coin and Atlantean Glass.
+        /// </summary>
+        public bool Rewards => Spec.Required;
+
+        public override long ExperienceValue => Rewards ? base.ExperienceValue : 0;
+
+        public override long GetExperienceValueForLevel(int level) => Rewards ? base.GetExperienceValueForLevel(level) : 0;
+
+        public override bool CanDropLoot => Rewards && base.CanDropLoot;
+
         public override void TakeDamage(GameObject source, eDamageType damageType, int damageAmount, int criticalAmount)
         {
             if (Spec.Objective || Immune || !Run.MayHurt(source) || !Spec.Hurts.HasFlag(KindOf(source, damageType)))

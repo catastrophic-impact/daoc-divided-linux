@@ -540,5 +540,22 @@ namespace DOL.GS
         ArtifactShatter,
         ArtifactProcPet,
         ArtifactSummonItems,
+        CostFreeChance,
+        HealAllOverTime,
+        SpecSkillBuff,
+        // Loyalty cloak abilities (DR-216, LoyaltyCloakHandlers.cs)
+        MeleeCritBuff,
+        ParryBlockBuff,
+        LoyalArcaneLeadership,
+        IgnoreBladeturn,
+        RefreshClassTimers,
+        GroupDDRadius,
+        ControlShrug,
+        DiseaseWard,
+        SelfStealth,
+        InCombatSpeed,
+        CharmableDecoy,
+        // Cabalist pet sacrifice line (DR-094, spells/Cabalist/SimulacrumSacrifice.cs)
+        SimulacrumSacrifice,
     }
 }

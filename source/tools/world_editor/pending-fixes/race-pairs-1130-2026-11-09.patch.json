@@ -1,0 +1,88 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T14:38:48.177684+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "StartupLocation",
+   "key": 693,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "StartupLoc_ID": 693,
+    "XPos": 532950,
+    "YPos": 549779,
+    "ZPos": 4800,
+    "Heading": 1535,
+    "Region": 51,
+    "MinVersion": 1130,
+    "RealmID": 1,
+    "RaceID": 2,
+    "ClassID": 12,
+    "ClientRegionID": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "StartupLocation",
+   "key": 694,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "StartupLoc_ID": 694,
+    "XPos": 287675,
+    "YPos": 355342,
+    "ZPos": 3488,
+    "Heading": 1791,
+    "Region": 151,
+    "MinVersion": 1130,
+    "RealmID": 2,
+    "RaceID": 14,
+    "ClassID": 21,
+    "ClientRegionID": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "StartupLocation",
+   "key": 695,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "StartupLoc_ID": 695,
+    "XPos": 749838,
+    "YPos": 816923,
+    "ZPos": 4412,
+    "Heading": 3605,
+    "Region": 100,
+    "MinVersion": 1130,
+    "RealmID": 2,
+    "RaceID": 8,
+    "ClassID": 31,
+    "ClientRegionID": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "StartupLocation",
+   "key": 696,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "StartupLoc_ID": 696,
+    "XPos": 773771,
+    "YPos": 755376,
+    "ZPos": 4600,
+    "Heading": 1363,
+    "Region": 100,
+    "MinVersion": 1130,
+    "RealmID": 2,
+    "RaceID": 7,
+    "ClassID": 28,
+    "ClientRegionID": 0,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

@@ -312,7 +312,8 @@ namespace DOL.GS.RealmAbilities
             if (storm.AddToWorld()) storm.Begin();
             DisableSkill(living);
         }
-        public static bool IsEnemyPet(GameLiving caster, GameLiving target) => target is GameNPC { Brain: IControlledBrain };
+        // Gamebots have a controlled brain too, but they are player stand-ins, not pets (DR-199).
+        public static bool IsEnemyPet(GameLiving caster, GameLiving target) => target is not GameBot && target is GameNPC { Brain: IControlledBrain };
         public override void AddEffectsInfo(IList<string> list) =>
             list.Add("A 30-second storm at your feet: enemies within 500 attack and cast 30% slower, and enemy pets inside flee in terror. Removes stealth.");
     }

@@ -1,0 +1,19 @@
+{
+ "tables added": 1766,
+ "rows": 9309,
+ "tables whose monsters are spawned": 1171,
+ "monster level bands (max level, by tens)": {
+  "0": 827,
+  "10": 229,
+  "20": 185,
+  "30": 154,
+  "40": 167,
+  "50": 130,
+  "60": 41,
+  "70": 35,
+  "80": 2,
+  "250": 1
+ },
+ "EoD rows naming items missing from the world": 32,
+ "tables with no EoD source": 494
+}

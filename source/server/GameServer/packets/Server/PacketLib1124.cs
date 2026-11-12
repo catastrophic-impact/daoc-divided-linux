@@ -382,7 +382,7 @@ namespace DOL.GS.PacketHandler
 
 				int flags = (GameServer.ServerRules.GetLivingRealm(m_gameClient.Player, bot) & 0x03) << 2;
 				if (!bot.IsAlive) flags |= 0x01;
-				if (bot.IsUnderwater) flags |= 0x02;
+				if (BotPlayerPresentation.Swimming(bot)) flags |= 0x02;
 				if (bot.IsStealthed) flags |= 0x10;
 				pak.WriteByte((byte) flags);
 

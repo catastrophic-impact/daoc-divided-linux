@@ -1,0 +1,461 @@
+490 edits, 456 weapons rows
+
+Problems:
+
+Weapons (key, name, realm, classes, use, use2, proc, proc2):
+  champion_ansuz_bonedancer_staff | Ansuz Bonedancer Staff | 2 | 27;29;30;59 | 811092 | 0 | 0 | 0
+  champion_ansuz_bonedancer_staff_v2 | Ansuz Bonedancer Staff | 2 | 27;29;30;59 | 811092 | 811094 | 0 | 0
+  champion_ansuz_bonedancer_staff_v3 | Ansuz Bonedancer Staff | 2 | 27;29;30;59 | 811092 | 811093 | 0 | 0
+  champion_ansuz_healer_hammer | Ansuz Healer Hammer | 2 | 26 | 811092 | 0 | 0 | 0
+  champion_ansuz_healer_hammer_v2 | Ansuz Healer Hammer | 2 | 26 | 811092 | 811077 | 0 | 0
+  champion_ansuz_healer_hammer_v3 | Ansuz Healer Hammer | 2 | 26 | 811092 | 811094 | 0 | 0
+  champion_ansuz_healer_two_handed_hammer | Ansuz Healer Two-handed Hammer | 2 | 26 | 811092 | 0 | 0 | 0
+  champion_ansuz_healer_two_handed_hammer_v2 | Ansuz Healer Two-handed Hammer | 2 | 26 | 811092 | 811077 | 0 | 0
+  champion_ansuz_healer_two_handed_hammer_v3 | Ansuz Healer Two-handed Hammer | 2 | 26 | 811092 | 811094 | 0 | 0
+  champion_ansuz_runemaster_staff | Ansuz Runemaster Staff | 2 | 29 | 811092 | 0 | 0 | 0
+  champion_ansuz_runemaster_staff_v2 | Ansuz Runemaster Staff | 2 | 29 | 811092 | 811094 | 0 | 0
+  champion_ansuz_runemaster_staff_v3 | Ansuz Runemaster Staff | 2 | 29 | 811092 | 811093 | 0 | 0
+  champion_ansuz_shaman_hammer | Ansuz Shaman Hammer | 2 | 28 | 811092 | 0 | 0 | 0
+  champion_ansuz_shaman_hammer_v2 | Ansuz Shaman Hammer | 2 | 28 | 811092 | 811094 | 0 | 0
+  champion_ansuz_shaman_hammer_v3 | Ansuz Shaman Hammer | 2 | 28 | 811092 | 811086 | 0 | 0
+  champion_ansuz_shaman_two_handed_hammer | Ansuz Shaman Two-handed Hammer | 2 | 28 | 811092 | 0 | 0 | 0
+  champion_ansuz_shaman_two_handed_hammer_v2 | Ansuz Shaman Two-handed Hammer | 2 | 28 | 811092 | 811094 | 0 | 0
+  champion_ansuz_shaman_two_handed_hammer_v3 | Ansuz Shaman Two-handed Hammer | 2 | 28 | 811092 | 811086 | 0 | 0
+  champion_ansuz_spiritmaster_staff | Ansuz Spiritmaster Staff | 2 | 27 | 811092 | 0 | 0 | 0
+  champion_ansuz_spiritmaster_staff_v2 | Ansuz Spiritmaster Staff | 2 | 27 | 811092 | 811094 | 0 | 0
+  champion_ansuz_spiritmaster_staff_v3 | Ansuz Spiritmaster Staff | 2 | 27 | 811092 | 811093 | 0 | 0
+  champion_ansuz_warlock_staff | Ansuz Warlock Staff | 2 | 59 | 811092 | 0 | 0 | 0
+  champion_ansuz_warlock_staff_v2 | Ansuz Warlock Staff | 2 | 59 | 811092 | 811094 | 0 | 0
+  champion_ansuz_warlock_staff_v3 | Ansuz Warlock Staff | 2 | 59 | 811092 | 811093 | 0 | 0
+  champion_armsman_dextera_blade | Armsman Dextera Blade | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_dextera_blade_v2 | Armsman Dextera Blade | 1 | 2 | 811082 | 0 | 811079 | 0
+  champion_armsman_dextera_blade_v3 | Armsman Dextera Blade | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_dextera_edge | Armsman Dextera Edge | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_dextera_edge_v2 | Armsman Dextera Edge | 1 | 2 | 811082 | 0 | 811091 | 0
+  champion_armsman_dextera_edge_v3 | Armsman Dextera Edge | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_dextera_mace | Armsman Dextera Mace | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_dextera_mace_v2 | Armsman Dextera Mace | 1 | 2 | 811082 | 0 | 811095 | 0
+  champion_armsman_dextera_mace_v3 | Armsman Dextera Mace | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_arch_mace | Armsman Satago Arch-Mace | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_arch_mace_v2 | Armsman Satago Arch-Mace | 1 | 2 | 811082 | 0 | 811095 | 0
+  champion_armsman_satago_arch_mace_v3 | Armsman Satago Arch-Mace | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_flamberge | Armsman Satago Flamberge | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_flamberge_v2 | Armsman Satago Flamberge | 1 | 2 | 811082 | 0 | 811079 | 0
+  champion_armsman_satago_flamberge_v3 | Armsman Satago Flamberge | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_halberd | Armsman Satago Halberd | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_halberd_v2 | Armsman Satago Halberd | 1 | 2 | 811082 | 0 | 811079 | 0
+  champion_armsman_satago_halberd_v3 | Armsman Satago Halberd | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_lance | Armsman Satago Lance | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_lance_v2 | Armsman Satago Lance | 1 | 2 | 811082 | 0 | 811091 | 0
+  champion_armsman_satago_lance_v3 | Armsman Satago Lance | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_mattock | Armsman Satago Mattock | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_mattock_v2 | Armsman Satago Mattock | 1 | 2 | 811082 | 0 | 811095 | 0
+  champion_armsman_satago_mattock_v3 | Armsman Satago Mattock | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_pike | Armsman Satago Pike | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_armsman_satago_pike_v2 | Armsman Satago Pike | 1 | 2 | 811082 | 0 | 811091 | 0
+  champion_armsman_satago_pike_v3 | Armsman Satago Pike | 1 | 2 | 811082 | 0 | 0 | 0
+  champion_blademaster_fuar_blade | Blademaster Fuar Blade | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_blademaster_fuar_blade_v2 | Blademaster Fuar Blade | 3 | 43 | 0 | 0 | 811075 | 811079
+  champion_blademaster_fuar_blade_v3 | Blademaster Fuar Blade | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_blademaster_fuar_hammer | Blademaster Fuar Hammer | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_blademaster_fuar_hammer_v2 | Blademaster Fuar Hammer | 3 | 43 | 0 | 0 | 811075 | 811095
+  champion_blademaster_fuar_hammer_v3 | Blademaster Fuar Hammer | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_blademaster_fuar_steel | Blademaster Fuar Steel | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_blademaster_fuar_steel_v2 | Blademaster Fuar Steel | 3 | 43 | 0 | 0 | 811075 | 811091
+  champion_blademaster_fuar_steel_v3 | Blademaster Fuar Steel | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_cleric_dextera_mace | Cleric Dextera Mace | 1 | 6 | 811092 | 0 | 0 | 0
+  champion_cleric_dextera_mace_v2 | Cleric Dextera Mace | 1 | 6 | 811092 | 811077 | 0 | 0
+  champion_cleric_dextera_mace_v3 | Cleric Dextera Mace | 1 | 6 | 811092 | 811094 | 0 | 0
+  champion_dochar_bard_blade | Dochar Bard Blade | 3 | 48 | 811085 | 0 | 0 | 0
+  champion_dochar_bard_blade_v2 | Dochar Bard Blade | 3 | 48 | 811085 | 0 | 811079 | 0
+  champion_dochar_bard_blade_v3 | Dochar Bard Blade | 3 | 48 | 811085 | 811094 | 0 | 0
+  champion_dochar_bard_hammer | Dochar Bard Hammer | 3 | 48 | 811085 | 0 | 0 | 0
+  champion_dochar_bard_hammer_v2 | Dochar Bard Hammer | 3 | 48 | 811085 | 0 | 811095 | 0
+  champion_dochar_bard_hammer_v3 | Dochar Bard Hammer | 3 | 48 | 811085 | 811094 | 0 | 0
+  champion_dochar_blademaster_blade | Dochar Blademaster Blade | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_dochar_blademaster_blade_v2 | Dochar Blademaster Blade | 3 | 43 | 0 | 0 | 811075 | 811079
+  champion_dochar_blademaster_blade_v3 | Dochar Blademaster Blade | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_dochar_blademaster_hammer | Dochar Blademaster Hammer | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_dochar_blademaster_hammer_v2 | Dochar Blademaster Hammer | 3 | 43 | 0 | 0 | 811075 | 811095
+  champion_dochar_blademaster_hammer_v3 | Dochar Blademaster Hammer | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_dochar_blademaster_steel | Dochar Blademaster Steel | 3 | 43 | 0 | 0 | 811075 | 0
+  champion_dochar_blademaster_steel_v2 | Dochar Blademaster Steel | 3 | 43 | 0 | 0 | 811075 | 811091
+  champion_dochar_blademaster_steel_v3 | Dochar Blademaster Steel | 3 | 43 | 811081 | 0 | 811075 | 0
+  champion_dochar_champion_blade | Dochar Champion Blade | 3 | 45 | 811081 | 0 | 0 | 0
+  champion_dochar_champion_blade_v2 | Dochar Champion Blade | 3 | 45 | 811081 | 0 | 811079 | 0
+  champion_dochar_champion_blade_v3 | Dochar Champion Blade | 3 | 45 | 811081 | 811082 | 0 | 0
+  champion_dochar_champion_hammer | Dochar Champion Hammer | 3 | 45 | 811081 | 0 | 0 | 0
+  champion_dochar_champion_hammer_v2 | Dochar Champion Hammer | 3 | 45 | 811081 | 0 | 811095 | 0
+  champion_dochar_champion_hammer_v3 | Dochar Champion Hammer | 3 | 45 | 811081 | 811082 | 0 | 0
+  champion_dochar_champion_steel | Dochar Champion Steel | 3 | 45 | 811081 | 0 | 0 | 0
+  champion_dochar_champion_steel_v2 | Dochar Champion Steel | 3 | 45 | 811081 | 0 | 811091 | 0
+  champion_dochar_champion_steel_v3 | Dochar Champion Steel | 3 | 45 | 811081 | 811082 | 0 | 0
+  champion_dochar_champion_warblade | Dochar Champion Warblade | 3 | 45 | 811081 | 0 | 0 | 0
+  champion_dochar_champion_warblade_v2 | Dochar Champion Warblade | 3 | 45 | 811081 | 0 | 811079 | 0
+  champion_dochar_champion_warblade_v3 | Dochar Champion Warblade | 3 | 45 | 811081 | 811082 | 0 | 0
+  champion_dochar_champion_warhammer | Dochar Champion Warhammer | 3 | 45 | 811081 | 0 | 0 | 0
+  champion_dochar_champion_warhammer_v2 | Dochar Champion Warhammer | 3 | 45 | 811081 | 0 | 811095 | 0
+  champion_dochar_champion_warhammer_v3 | Dochar Champion Warhammer | 3 | 45 | 811081 | 811082 | 0 | 0
+  champion_dochar_druid_blade | Dochar Druid Blade | 3 | 47 | 811092 | 0 | 0 | 0
+  champion_dochar_druid_blade_v2 | Dochar Druid Blade | 3 | 47 | 811092 | 811077 | 0 | 0
+  champion_dochar_druid_blade_v3 | Dochar Druid Blade | 3 | 47 | 811092 | 811094 | 0 | 0
+  champion_dochar_druid_hammer | Dochar Druid Hammer | 3 | 47 | 811092 | 0 | 0 | 0
+  champion_dochar_druid_hammer_v2 | Dochar Druid Hammer | 3 | 47 | 811092 | 811077 | 0 | 0
+  champion_dochar_druid_hammer_v3 | Dochar Druid Hammer | 3 | 47 | 811092 | 811094 | 0 | 0
+  champion_dochar_hero_blade | Dochar Hero Blade | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_blade_v2 | Dochar Hero Blade | 3 | 44 | 811082 | 0 | 811079 | 0
+  champion_dochar_hero_blade_v3 | Dochar Hero Blade | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_hammer | Dochar Hero Hammer | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_hammer_v2 | Dochar Hero Hammer | 3 | 44 | 811082 | 0 | 811095 | 0
+  champion_dochar_hero_hammer_v3 | Dochar Hero Hammer | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_spear | Dochar Hero Spear | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_spear_v2 | Dochar Hero Spear | 3 | 44 | 811082 | 0 | 811091 | 0
+  champion_dochar_hero_spear_v3 | Dochar Hero Spear | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_steel | Dochar Hero Steel | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_steel_v2 | Dochar Hero Steel | 3 | 44 | 811082 | 0 | 811091 | 0
+  champion_dochar_hero_steel_v3 | Dochar Hero Steel | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_warblade | Dochar Hero Warblade | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_warblade_v2 | Dochar Hero Warblade | 3 | 44 | 811082 | 0 | 811079 | 0
+  champion_dochar_hero_warblade_v3 | Dochar Hero Warblade | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_warhammer | Dochar Hero Warhammer | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_hero_warhammer_v2 | Dochar Hero Warhammer | 3 | 44 | 811082 | 0 | 811095 | 0
+  champion_dochar_hero_warhammer_v3 | Dochar Hero Warhammer | 3 | 44 | 811082 | 0 | 0 | 0
+  champion_dochar_nightshade_blade | Dochar Nightshade Blade | 3 | 49 | 0 | 0 | 811084 | 0
+  champion_dochar_nightshade_blade_v2 | Dochar Nightshade Blade | 3 | 49 | 0 | 0 | 811084 | 811079
+  champion_dochar_nightshade_blade_v3 | Dochar Nightshade Blade | 3 | 49 | 811081 | 0 | 811084 | 0
+  champion_dochar_nightshade_steel | Dochar Nightshade Steel | 3 | 49 | 0 | 0 | 811084 | 0
+  champion_dochar_nightshade_steel_v2 | Dochar Nightshade Steel | 3 | 49 | 0 | 0 | 811084 | 811091
+  champion_dochar_nightshade_steel_v3 | Dochar Nightshade Steel | 3 | 49 | 811081 | 0 | 811084 | 0
+  champion_dochar_ranger_blade | Dochar Ranger Blade | 3 | 50 | 0 | 0 | 0 | 0
+  champion_dochar_ranger_blade_v2 | Dochar Ranger Blade | 3 | 50 | 0 | 0 | 811079 | 0
+  champion_dochar_ranger_blade_v3 | Dochar Ranger Blade | 3 | 50 | 811081 | 0 | 0 | 0
+  champion_dochar_ranger_steel | Dochar Ranger Steel | 3 | 50 | 0 | 0 | 0 | 0
+  champion_dochar_ranger_steel_v2 | Dochar Ranger Steel | 3 | 50 | 0 | 0 | 811091 | 0
+  champion_dochar_ranger_steel_v3 | Dochar Ranger Steel | 3 | 50 | 811081 | 0 | 0 | 0
+  champion_dochar_recurve_bow | Dochar Recurve Bow | 3 | 50 | 811082 | 0 | 0 | 0
+  champion_dochar_recurve_bow_v2 | Dochar Recurve Bow | 3 | 50 | 811082 | 811087 | 0 | 0
+  champion_dochar_recurve_bow_v3 | Dochar Recurve Bow | 3 | 50 | 811082 | 0 | 811089 | 0
+  champion_dochar_valewalker_scythe | Dochar Valewalker Scythe | 3 | 56 | 0 | 0 | 0 | 0
+  champion_dochar_valewalker_scythe_v2 | Dochar Valewalker Scythe | 3 | 56 | 0 | 0 | 811079 | 0
+  champion_dochar_valewalker_scythe_v3 | Dochar Valewalker Scythe | 3 | 56 | 0 | 0 | 811075 | 0
+  champion_dochar_warden_blade | Dochar Warden Blade | 3 | 46 | 0 | 0 | 0 | 0
+  champion_dochar_warden_blade_v2 | Dochar Warden Blade | 3 | 46 | 0 | 0 | 811080 | 0
+  champion_dochar_warden_blade_v3 | Dochar Warden Blade | 3 | 46 | 811085 | 0 | 0 | 0
+  champion_dochar_warden_hammer | Dochar Warden Hammer | 3 | 46 | 0 | 0 | 0 | 0
+  champion_dochar_warden_hammer_v2 | Dochar Warden Hammer | 3 | 46 | 0 | 0 | 811080 | 0
+  champion_dochar_warden_hammer_v3 | Dochar Warden Hammer | 3 | 46 | 811085 | 0 | 0 | 0
+  champion_draiocht_animist_staff | Draiocht Animist Staff | 3 | 55 | 811092 | 0 | 0 | 0
+  champion_draiocht_animist_staff_v2 | Draiocht Animist Staff | 3 | 55 | 811092 | 811094 | 0 | 0
+  champion_draiocht_animist_staff_v3 | Draiocht Animist Staff | 3 | 55 | 811092 | 811093 | 0 | 0
+  champion_draiocht_bainshee_staff | Draiocht Bainshee Staff | 3 | 39 | 811092 | 0 | 0 | 0
+  champion_draiocht_bainshee_staff_v2 | Draiocht Bainshee Staff | 3 | 39 | 811092 | 811094 | 0 | 0
+  champion_draiocht_bainshee_staff_v3 | Draiocht Bainshee Staff | 3 | 39 | 811092 | 811093 | 0 | 0
+  champion_draiocht_eldritch_staff | Draiocht Eldritch Staff | 3 | 40 | 811092 | 0 | 0 | 0
+  champion_draiocht_eldritch_staff_v2 | Draiocht Eldritch Staff | 3 | 40 | 811092 | 811094 | 0 | 0
+  champion_draiocht_eldritch_staff_v3 | Draiocht Eldritch Staff | 3 | 40 | 811092 | 811093 | 0 | 0
+  champion_draiocht_enchanter_staff | Draiocht Enchanter Staff | 3 | 41 | 811092 | 0 | 0 | 0
+  champion_draiocht_enchanter_staff_v2 | Draiocht Enchanter Staff | 3 | 41 | 811092 | 811094 | 0 | 0
+  champion_draiocht_enchanter_staff_v3 | Draiocht Enchanter Staff | 3 | 41 | 811092 | 811093 | 0 | 0
+  champion_draiocht_harp | Draiocht Harp | 3 | 48 | 811092 | 0 | 0 | 0
+  champion_draiocht_harp_v2 | Draiocht Harp | 3 | 48 | 811092 | 811077 | 0 | 0
+  champion_draiocht_harp_v3 | Draiocht Harp | 3 | 48 | 811092 | 811085 | 0 | 0
+  champion_draiocht_mentalist_staff | Draiocht Mentalist Staff | 3 | 42 | 811092 | 0 | 0 | 0
+  champion_draiocht_mentalist_staff_v2 | Draiocht Mentalist Staff | 3 | 42 | 811092 | 811094 | 0 | 0
+  champion_draiocht_mentalist_staff_v3 | Draiocht Mentalist Staff | 3 | 42 | 811092 | 811093 | 0 | 0
+  champion_friar_dextera_mace | Friar Dextera Mace | 1 | 10 | 811081 | 0 | 0 | 0
+  champion_friar_dextera_mace_v2 | Friar Dextera Mace | 1 | 10 | 811081 | 0 | 0 | 0
+  champion_friar_dextera_mace_v3 | Friar Dextera Mace | 1 | 10 | 811081 | 811085 | 0 | 0
+  champion_friar_satago_quarter_staff | Friar Satago Quarter-Staff | 1 | 10 | 811081 | 0 | 0 | 0
+  champion_friar_satago_quarter_staff_v2 | Friar Satago Quarter-Staff | 1 | 10 | 811081 | 0 | 0 | 0
+  champion_friar_satago_quarter_staff_v3 | Friar Satago Quarter-Staff | 1 | 10 | 811081 | 811085 | 0 | 0
+  champion_heretic_dextera_barbed_chain | Heretic Dextera Barbed Chain | 1 | 33 | 811092 | 0 | 0 | 0
+  champion_heretic_dextera_barbed_chain_v2 | Heretic Dextera Barbed Chain | 1 | 33 | 811092 | 811094 | 0 | 0
+  champion_heretic_dextera_barbed_chain_v3 | Heretic Dextera Barbed Chain | 1 | 33 | 811092 | 811081 | 0 | 0
+  champion_heretic_dextera_flail | Heretic Dextera Flail | 1 | 33 | 811092 | 0 | 0 | 0
+  champion_heretic_dextera_flail_v2 | Heretic Dextera Flail | 1 | 33 | 811092 | 811094 | 0 | 0
+  champion_heretic_dextera_flail_v3 | Heretic Dextera Flail | 1 | 33 | 811092 | 811081 | 0 | 0
+  champion_heretic_dextera_mace | Heretic Dextera Mace | 1 | 33 | 811092 | 0 | 0 | 0
+  champion_heretic_dextera_mace_v2 | Heretic Dextera Mace | 1 | 33 | 811092 | 811094 | 0 | 0
+  champion_heretic_dextera_mace_v3 | Heretic Dextera Mace | 1 | 33 | 811092 | 811081 | 0 | 0
+  champion_infiltrator_dextera_blade | Infiltrator Dextera Blade | 1 | 9 | 0 | 0 | 811084 | 0
+  champion_infiltrator_dextera_blade_v2 | Infiltrator Dextera Blade | 1 | 9 | 0 | 0 | 811084 | 811079
+  champion_infiltrator_dextera_blade_v3 | Infiltrator Dextera Blade | 1 | 9 | 811081 | 0 | 811084 | 0
+  champion_infiltrator_dextera_edge | Infiltrator Dextera Edge | 1 | 9 | 0 | 0 | 811084 | 0
+  champion_infiltrator_dextera_edge_v2 | Infiltrator Dextera Edge | 1 | 9 | 0 | 0 | 811084 | 811091
+  champion_infiltrator_dextera_edge_v3 | Infiltrator Dextera Edge | 1 | 9 | 811081 | 0 | 811084 | 0
+  champion_infiltrator_laevus_blade | Infiltrator Laevus Blade | 1 | 9 | 0 | 0 | 811084 | 0
+  champion_infiltrator_laevus_blade_v2 | Infiltrator Laevus Blade | 1 | 9 | 0 | 0 | 811084 | 811079
+  champion_infiltrator_laevus_blade_v3 | Infiltrator Laevus Blade | 1 | 9 | 811081 | 0 | 811084 | 0
+  champion_infiltrator_laevus_edge | Infiltrator Laevus Edge | 1 | 9 | 0 | 0 | 811084 | 0
+  champion_infiltrator_laevus_edge_v2 | Infiltrator Laevus Edge | 1 | 9 | 0 | 0 | 811084 | 811091
+  champion_infiltrator_laevus_edge_v3 | Infiltrator Laevus Edge | 1 | 9 | 811081 | 0 | 811084 | 0
+  champion_mauler_dextera_fist_wrap | Mauler Dextera Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_dextera_fist_wrap_v2 | Mauler Dextera Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 811095
+  champion_mauler_dextera_fist_wrap_v3 | Mauler Dextera Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_dochar_fist_wrap | Mauler Dochar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_dochar_fist_wrap_v2 | Mauler Dochar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 811095
+  champion_mauler_dochar_fist_wrap_v3 | Mauler Dochar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_draiocht_war_staff | Mauler Draiocht War Staff | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_draiocht_war_staff_v2 | Mauler Draiocht War Staff | 3 | 62 | 0 | 0 | 811080 | 811095
+  champion_mauler_draiocht_war_staff_v3 | Mauler Draiocht War Staff | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_fuar_fist_wrap | Mauler Fuar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_fuar_fist_wrap_v2 | Mauler Fuar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 811095
+  champion_mauler_fuar_fist_wrap_v3 | Mauler Fuar Fist Wrap | 3 | 62 | 0 | 0 | 811080 | 0
+  champion_mauler_laevus_fist_wrap | Mauler Laevus Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_laevus_fist_wrap_v2 | Mauler Laevus Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 811095
+  champion_mauler_laevus_fist_wrap_v3 | Mauler Laevus Fist Wrap | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_satago_war_staff | Mauler Satago War Staff | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_satago_war_staff_v2 | Mauler Satago War Staff | 1 | 60 | 0 | 0 | 811080 | 811095
+  champion_mauler_satago_war_staff_v3 | Mauler Satago War Staff | 1 | 60 | 0 | 0 | 811080 | 0
+  champion_mauler_thurisaz_war_staff | Mauler Thurisaz War Staff | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_mauler_thurisaz_war_staff_v2 | Mauler Thurisaz War Staff | 2 | 61 | 0 | 0 | 811080 | 811095
+  champion_mauler_thurisaz_war_staff_v3 | Mauler Thurisaz War Staff | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_mercenary_dextera_blade | Mercenary Dextera Blade | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_dextera_blade_v2 | Mercenary Dextera Blade | 1 | 11 | 0 | 0 | 811080 | 811079
+  champion_mercenary_dextera_blade_v3 | Mercenary Dextera Blade | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_mercenary_dextera_edge | Mercenary Dextera Edge | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_dextera_edge_v2 | Mercenary Dextera Edge | 1 | 11 | 0 | 0 | 811080 | 811091
+  champion_mercenary_dextera_edge_v3 | Mercenary Dextera Edge | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_mercenary_dextera_mace | Mercenary Dextera Mace | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_dextera_mace_v2 | Mercenary Dextera Mace | 1 | 11 | 0 | 0 | 811080 | 811095
+  champion_mercenary_dextera_mace_v3 | Mercenary Dextera Mace | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_mercenary_laevus_blade | Mercenary Laevus Blade | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_laevus_blade_v2 | Mercenary Laevus Blade | 1 | 11 | 0 | 0 | 811080 | 811079
+  champion_mercenary_laevus_blade_v3 | Mercenary Laevus Blade | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_mercenary_laevus_edge | Mercenary Laevus Edge | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_laevus_edge_v2 | Mercenary Laevus Edge | 1 | 11 | 0 | 0 | 811080 | 811091
+  champion_mercenary_laevus_edge_v3 | Mercenary Laevus Edge | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_mercenary_laevus_mace | Mercenary Laevus Mace | 1 | 11 | 0 | 0 | 811080 | 0
+  champion_mercenary_laevus_mace_v2 | Mercenary Laevus Mace | 1 | 11 | 0 | 0 | 811080 | 811095
+  champion_mercenary_laevus_mace_v3 | Mercenary Laevus Mace | 1 | 11 | 811081 | 0 | 811080 | 0
+  champion_minstrel_dextera_blade | Minstrel Dextera Blade | 1 | 4 | 811081 | 0 | 0 | 0
+  champion_minstrel_dextera_blade_v2 | Minstrel Dextera Blade | 1 | 4 | 811081 | 0 | 811079 | 0
+  champion_minstrel_dextera_blade_v3 | Minstrel Dextera Blade | 1 | 4 | 811081 | 811085 | 0 | 0
+  champion_minstrel_dextera_edge | Minstrel Dextera Edge | 1 | 4 | 811081 | 0 | 0 | 0
+  champion_minstrel_dextera_edge_v2 | Minstrel Dextera Edge | 1 | 4 | 811081 | 0 | 811091 | 0
+  champion_minstrel_dextera_edge_v3 | Minstrel Dextera Edge | 1 | 4 | 811081 | 811085 | 0 | 0
+  champion_nightshade_fuar_blade | Nightshade Fuar Blade | 3 | 49 | 0 | 0 | 811084 | 0
+  champion_nightshade_fuar_blade_v2 | Nightshade Fuar Blade | 3 | 49 | 0 | 0 | 811084 | 811079
+  champion_nightshade_fuar_blade_v3 | Nightshade Fuar Blade | 3 | 49 | 811081 | 0 | 811084 | 0
+  champion_nightshade_fuar_steel | Nightshade Fuar Steel | 3 | 49 | 0 | 0 | 811084 | 0
+  champion_nightshade_fuar_steel_v2 | Nightshade Fuar Steel | 3 | 49 | 0 | 0 | 811084 | 811091
+  champion_nightshade_fuar_steel_v3 | Nightshade Fuar Steel | 3 | 49 | 811081 | 0 | 811084 | 0
+  champion_paladin_dextera_blade | Paladin Dextera Blade | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_dextera_blade_v2 | Paladin Dextera Blade | 1 | 1 | 0 | 0 | 811079 | 0
+  champion_paladin_dextera_blade_v3 | Paladin Dextera Blade | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_paladin_dextera_edge | Paladin Dextera Edge | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_dextera_edge_v2 | Paladin Dextera Edge | 1 | 1 | 0 | 0 | 811091 | 0
+  champion_paladin_dextera_edge_v3 | Paladin Dextera Edge | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_paladin_dextera_mace | Paladin Dextera Mace | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_dextera_mace_v2 | Paladin Dextera Mace | 1 | 1 | 0 | 0 | 811095 | 0
+  champion_paladin_dextera_mace_v3 | Paladin Dextera Mace | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_paladin_satago_great_edge | Paladin Satago Great-Edge | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_satago_great_edge_v2 | Paladin Satago Great-Edge | 1 | 1 | 0 | 0 | 811091 | 0
+  champion_paladin_satago_great_edge_v3 | Paladin Satago Great-Edge | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_paladin_satago_great_hammer | Paladin Satago Great-Hammer | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_satago_great_hammer_v2 | Paladin Satago Great-Hammer | 1 | 1 | 0 | 0 | 811095 | 0
+  champion_paladin_satago_great_hammer_v3 | Paladin Satago Great-Hammer | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_paladin_satago_great_sword | Paladin Satago Great-Sword | 1 | 1 | 0 | 0 | 0 | 0
+  champion_paladin_satago_great_sword_v2 | Paladin Satago Great-Sword | 1 | 1 | 0 | 0 | 811079 | 0
+  champion_paladin_satago_great_sword_v3 | Paladin Satago Great-Sword | 1 | 1 | 811085 | 0 | 0 | 0
+  champion_ranger_fuar_blade | Ranger Fuar Blade | 3 | 50 | 0 | 0 | 0 | 0
+  champion_ranger_fuar_blade_v2 | Ranger Fuar Blade | 3 | 50 | 0 | 0 | 811079 | 0
+  champion_ranger_fuar_blade_v3 | Ranger Fuar Blade | 3 | 50 | 811081 | 0 | 0 | 0
+  champion_ranger_fuar_steel | Ranger Fuar Steel | 3 | 50 | 0 | 0 | 0 | 0
+  champion_ranger_fuar_steel_v2 | Ranger Fuar Steel | 3 | 50 | 0 | 0 | 811091 | 0
+  champion_ranger_fuar_steel_v3 | Ranger Fuar Steel | 3 | 50 | 811081 | 0 | 0 | 0
+  champion_reaver_dextera_barbed_chain | Reaver Dextera Barbed Chain | 1 | 19 | 0 | 0 | 0 | 0
+  champion_reaver_dextera_barbed_chain_v2 | Reaver Dextera Barbed Chain | 1 | 19 | 0 | 0 | 811080 | 0
+  champion_reaver_dextera_barbed_chain_v3 | Reaver Dextera Barbed Chain | 1 | 19 | 811082 | 0 | 0 | 0
+  champion_reaver_dextera_blade | Reaver Dextera Blade | 1 | 19 | 0 | 0 | 0 | 0
+  champion_reaver_dextera_blade_v2 | Reaver Dextera Blade | 1 | 19 | 0 | 0 | 811080 | 0
+  champion_reaver_dextera_blade_v3 | Reaver Dextera Blade | 1 | 19 | 811082 | 0 | 0 | 0
+  champion_reaver_dextera_edge | Reaver Dextera Edge | 1 | 19 | 0 | 0 | 0 | 0
+  champion_reaver_dextera_edge_v2 | Reaver Dextera Edge | 1 | 19 | 0 | 0 | 811080 | 0
+  champion_reaver_dextera_edge_v3 | Reaver Dextera Edge | 1 | 19 | 811082 | 0 | 0 | 0
+  champion_reaver_dextera_flail | Reaver Dextera Flail | 1 | 19 | 0 | 0 | 0 | 0
+  champion_reaver_dextera_flail_v2 | Reaver Dextera Flail | 1 | 19 | 0 | 0 | 811080 | 0
+  champion_reaver_dextera_flail_v3 | Reaver Dextera Flail | 1 | 19 | 811082 | 0 | 0 | 0
+  champion_reaver_dextera_mace | Reaver Dextera Mace | 1 | 19 | 0 | 0 | 0 | 0
+  champion_reaver_dextera_mace_v2 | Reaver Dextera Mace | 1 | 19 | 0 | 0 | 811080 | 0
+  champion_reaver_dextera_mace_v3 | Reaver Dextera Mace | 1 | 19 | 811082 | 0 | 0 | 0
+  champion_scout_dextera_blade | Scout Dextera Blade | 1 | 3 | 0 | 0 | 0 | 0
+  champion_scout_dextera_blade_v2 | Scout Dextera Blade | 1 | 3 | 0 | 0 | 811079 | 0
+  champion_scout_dextera_blade_v3 | Scout Dextera Blade | 1 | 3 | 811081 | 0 | 0 | 0
+  champion_scout_dextera_bow | Scout Dextera Bow | 1 | 3 | 811082 | 0 | 0 | 0
+  champion_scout_dextera_bow_v2 | Scout Dextera Bow | 1 | 3 | 811082 | 811087 | 0 | 0
+  champion_scout_dextera_bow_v3 | Scout Dextera Bow | 1 | 3 | 811082 | 0 | 811090 | 0
+  champion_scout_dextera_edge | Scout Dextera Edge | 1 | 3 | 0 | 0 | 0 | 0
+  champion_scout_dextera_edge_v2 | Scout Dextera Edge | 1 | 3 | 0 | 0 | 811091 | 0
+  champion_scout_dextera_edge_v3 | Scout Dextera Edge | 1 | 3 | 811081 | 0 | 0 | 0
+  champion_thurisaz_berserker_axe | Thurisaz Berserker Axe | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_axe_v2 | Thurisaz Berserker Axe | 2 | 31 | 0 | 0 | 811075 | 811079
+  champion_thurisaz_berserker_axe_v3 | Thurisaz Berserker Axe | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_hammer | Thurisaz Berserker Hammer | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_hammer_v2 | Thurisaz Berserker Hammer | 2 | 31 | 0 | 0 | 811075 | 811095
+  champion_thurisaz_berserker_hammer_v3 | Thurisaz Berserker Hammer | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_heavy_axe | Thurisaz Berserker Heavy Axe | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_heavy_axe_v2 | Thurisaz Berserker Heavy Axe | 2 | 31 | 0 | 0 | 811075 | 811079
+  champion_thurisaz_berserker_heavy_axe_v3 | Thurisaz Berserker Heavy Axe | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_sword | Thurisaz Berserker Sword | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_sword_v2 | Thurisaz Berserker Sword | 2 | 31 | 0 | 0 | 811075 | 811079
+  champion_thurisaz_berserker_sword_v3 | Thurisaz Berserker Sword | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_axe | Thurisaz Berserker Two-handed Axe | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_axe_v2 | Thurisaz Berserker Two-handed Axe | 2 | 31 | 0 | 0 | 811075 | 811079
+  champion_thurisaz_berserker_two_handed_axe_v3 | Thurisaz Berserker Two-handed Axe | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_hammer | Thurisaz Berserker Two-handed Hammer | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_hammer_v2 | Thurisaz Berserker Two-handed Hammer | 2 | 31 | 0 | 0 | 811075 | 811095
+  champion_thurisaz_berserker_two_handed_hammer_v3 | Thurisaz Berserker Two-handed Hammer | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_sword | Thurisaz Berserker Two-handed Sword | 2 | 31 | 0 | 0 | 811075 | 0
+  champion_thurisaz_berserker_two_handed_sword_v2 | Thurisaz Berserker Two-handed Sword | 2 | 31 | 0 | 0 | 811075 | 811079
+  champion_thurisaz_berserker_two_handed_sword_v3 | Thurisaz Berserker Two-handed Sword | 2 | 31 | 811081 | 0 | 811075 | 0
+  champion_thurisaz_compound_bow | Thurisaz Compound Bow | 2 | 25 | 811082 | 0 | 0 | 0
+  champion_thurisaz_compound_bow_v2 | Thurisaz Compound Bow | 2 | 25 | 811082 | 811087 | 0 | 0
+  champion_thurisaz_compound_bow_v3 | Thurisaz Compound Bow | 2 | 25 | 811082 | 0 | 811088 | 0
+  champion_thurisaz_hunter_slashing_spear | Thurisaz Hunter Slashing Spear | 2 | 25 | 0 | 0 | 0 | 0
+  champion_thurisaz_hunter_slashing_spear_v2 | Thurisaz Hunter Slashing Spear | 2 | 25 | 0 | 0 | 811079 | 0
+  champion_thurisaz_hunter_slashing_spear_v3 | Thurisaz Hunter Slashing Spear | 2 | 25 | 811081 | 0 | 0 | 0
+  champion_thurisaz_hunter_spear | Thurisaz Hunter Spear | 2 | 25 | 0 | 0 | 0 | 0
+  champion_thurisaz_hunter_spear_v2 | Thurisaz Hunter Spear | 2 | 25 | 0 | 0 | 811091 | 0
+  champion_thurisaz_hunter_spear_v3 | Thurisaz Hunter Spear | 2 | 25 | 811081 | 0 | 0 | 0
+  champion_thurisaz_hunter_sword | Thurisaz Hunter Sword | 2 | 25 | 0 | 0 | 0 | 0
+  champion_thurisaz_hunter_sword_v2 | Thurisaz Hunter Sword | 2 | 25 | 0 | 0 | 811079 | 0
+  champion_thurisaz_hunter_sword_v3 | Thurisaz Hunter Sword | 2 | 25 | 811081 | 0 | 0 | 0
+  champion_thurisaz_hunter_two_handed_sword | Thurisaz Hunter Two-handed Sword | 2 | 25 | 0 | 0 | 0 | 0
+  champion_thurisaz_hunter_two_handed_sword_v2 | Thurisaz Hunter Two-handed Sword | 2 | 25 | 0 | 0 | 811079 | 0
+  champion_thurisaz_hunter_two_handed_sword_v3 | Thurisaz Hunter Two-handed Sword | 2 | 25 | 811081 | 0 | 0 | 0
+  champion_thurisaz_mauler_fist_wrap | Thurisaz Mauler Fist Wrap | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_thurisaz_mauler_fist_wrap_v2 | Thurisaz Mauler Fist Wrap | 2 | 61 | 0 | 0 | 811080 | 811095
+  champion_thurisaz_mauler_fist_wrap_v3 | Thurisaz Mauler Fist Wrap | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_thurisaz_mauler_hand_wrap | Thurisaz Mauler Hand Wrap | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_thurisaz_mauler_hand_wrap_v2 | Thurisaz Mauler Hand Wrap | 2 | 61 | 0 | 0 | 811080 | 811095
+  champion_thurisaz_mauler_hand_wrap_v3 | Thurisaz Mauler Hand Wrap | 2 | 61 | 0 | 0 | 811080 | 0
+  champion_thurisaz_savage_axe | Thurisaz Savage Axe | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_axe_v2 | Thurisaz Savage Axe | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_axe_v3 | Thurisaz Savage Axe | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_hammer | Thurisaz Savage Hammer | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_hammer_v2 | Thurisaz Savage Hammer | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_hammer_v3 | Thurisaz Savage Hammer | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_slashing_claw | Thurisaz Savage Slashing Claw | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_slashing_claw_v2 | Thurisaz Savage Slashing Claw | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_slashing_claw_v3 | Thurisaz Savage Slashing Claw | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_slashing_glaive | Thurisaz Savage Slashing Glaive | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_slashing_glaive_v2 | Thurisaz Savage Slashing Glaive | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_slashing_glaive_v3 | Thurisaz Savage Slashing Glaive | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_sword | Thurisaz Savage Sword | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_sword_v2 | Thurisaz Savage Sword | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_sword_v3 | Thurisaz Savage Sword | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_thrashing_claw | Thurisaz Savage Thrashing Claw | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_thrashing_claw_v2 | Thurisaz Savage Thrashing Claw | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_thrashing_claw_v3 | Thurisaz Savage Thrashing Claw | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_thrashing_glaive | Thurisaz Savage Thrashing Glaive | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_thrashing_glaive_v2 | Thurisaz Savage Thrashing Glaive | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_thrashing_glaive_v3 | Thurisaz Savage Thrashing Glaive | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_two_handed_axe | Thurisaz Savage Two-handed Axe | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_axe_v2 | Thurisaz Savage Two-handed Axe | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_axe_v3 | Thurisaz Savage Two-handed Axe | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_two_handed_hammer | Thurisaz Savage Two-handed Hammer | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_hammer_v2 | Thurisaz Savage Two-handed Hammer | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_hammer_v3 | Thurisaz Savage Two-handed Hammer | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_savage_two_handed_sword | Thurisaz Savage Two-handed Sword | 2 | 32 | 0 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_sword_v2 | Thurisaz Savage Two-handed Sword | 2 | 32 | 811081 | 0 | 0 | 0
+  champion_thurisaz_savage_two_handed_sword_v3 | Thurisaz Savage Two-handed Sword | 2 | 32 | 0 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_axe | Thurisaz Shadowblade Axe | 2 | 23 | 0 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_axe_v2 | Thurisaz Shadowblade Axe | 2 | 23 | 0 | 0 | 811084 | 811079
+  champion_thurisaz_shadowblade_axe_v3 | Thurisaz Shadowblade Axe | 2 | 23 | 811081 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_heavy_axe | Thurisaz Shadowblade Heavy Axe | 2 | 23 | 0 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_heavy_axe_v2 | Thurisaz Shadowblade Heavy Axe | 2 | 23 | 0 | 0 | 811084 | 811079
+  champion_thurisaz_shadowblade_heavy_axe_v3 | Thurisaz Shadowblade Heavy Axe | 2 | 23 | 811081 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_heavy_sword | Thurisaz Shadowblade Heavy Sword | 2 | 23 | 0 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_heavy_sword_v2 | Thurisaz Shadowblade Heavy Sword | 2 | 23 | 0 | 0 | 811084 | 811079
+  champion_thurisaz_shadowblade_heavy_sword_v3 | Thurisaz Shadowblade Heavy Sword | 2 | 23 | 811081 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_sword | Thurisaz Shadowblade Sword | 2 | 23 | 0 | 0 | 811084 | 0
+  champion_thurisaz_shadowblade_sword_v2 | Thurisaz Shadowblade Sword | 2 | 23 | 0 | 0 | 811084 | 811079
+  champion_thurisaz_shadowblade_sword_v3 | Thurisaz Shadowblade Sword | 2 | 23 | 811081 | 0 | 811084 | 0
+  champion_thurisaz_skald_axe | Thurisaz Skald Axe | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_axe_v2 | Thurisaz Skald Axe | 2 | 24 | 0 | 0 | 811079 | 0
+  champion_thurisaz_skald_axe_v3 | Thurisaz Skald Axe | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_skald_hammer | Thurisaz Skald Hammer | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_hammer_v2 | Thurisaz Skald Hammer | 2 | 24 | 0 | 0 | 811095 | 0
+  champion_thurisaz_skald_hammer_v3 | Thurisaz Skald Hammer | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_skald_sword | Thurisaz Skald Sword | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_sword_v2 | Thurisaz Skald Sword | 2 | 24 | 0 | 0 | 811079 | 0
+  champion_thurisaz_skald_sword_v3 | Thurisaz Skald Sword | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_axe | Thurisaz Skald Two-handed Axe | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_axe_v2 | Thurisaz Skald Two-handed Axe | 2 | 24 | 0 | 0 | 811079 | 0
+  champion_thurisaz_skald_two_handed_axe_v3 | Thurisaz Skald Two-handed Axe | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_hammer | Thurisaz Skald Two-handed Hammer | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_hammer_v2 | Thurisaz Skald Two-handed Hammer | 2 | 24 | 0 | 0 | 811095 | 0
+  champion_thurisaz_skald_two_handed_hammer_v3 | Thurisaz Skald Two-handed Hammer | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_sword | Thurisaz Skald Two-handed Sword | 2 | 24 | 0 | 0 | 0 | 0
+  champion_thurisaz_skald_two_handed_sword_v2 | Thurisaz Skald Two-handed Sword | 2 | 24 | 0 | 0 | 811079 | 0
+  champion_thurisaz_skald_two_handed_sword_v3 | Thurisaz Skald Two-handed Sword | 2 | 24 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_axe | Thurisaz Thane Axe | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_axe_v2 | Thurisaz Thane Axe | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_axe_v3 | Thurisaz Thane Axe | 2 | 21 | 811081 | 0 | 811079 | 0
+  champion_thurisaz_thane_hammer | Thurisaz Thane Hammer | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_hammer_v2 | Thurisaz Thane Hammer | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_hammer_v3 | Thurisaz Thane Hammer | 2 | 21 | 811081 | 0 | 811095 | 0
+  champion_thurisaz_thane_sword | Thurisaz Thane Sword | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_sword_v2 | Thurisaz Thane Sword | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_sword_v3 | Thurisaz Thane Sword | 2 | 21 | 811081 | 0 | 811079 | 0
+  champion_thurisaz_thane_two_handed_axe | Thurisaz Thane Two-handed Axe | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_axe_v2 | Thurisaz Thane Two-handed Axe | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_axe_v3 | Thurisaz Thane Two-handed Axe | 2 | 21 | 811081 | 0 | 811079 | 0
+  champion_thurisaz_thane_two_handed_hammer | Thurisaz Thane Two-handed Hammer | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_hammer_v2 | Thurisaz Thane Two-handed Hammer | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_hammer_v3 | Thurisaz Thane Two-handed Hammer | 2 | 21 | 811081 | 0 | 811095 | 0
+  champion_thurisaz_thane_two_handed_sword | Thurisaz Thane Two-handed Sword | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_sword_v2 | Thurisaz Thane Two-handed Sword | 2 | 21 | 811081 | 0 | 0 | 0
+  champion_thurisaz_thane_two_handed_sword_v3 | Thurisaz Thane Two-handed Sword | 2 | 21 | 811081 | 0 | 811079 | 0
+  champion_thurisaz_valkyrie_slashing_spear | Thurisaz Valkyrie Slashing Spear | 2 | 34 | 0 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_slashing_spear_v2 | Thurisaz Valkyrie Slashing Spear | 2 | 34 | 0 | 0 | 811080 | 811079
+  champion_thurisaz_valkyrie_slashing_spear_v3 | Thurisaz Valkyrie Slashing Spear | 2 | 34 | 811085 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_sword | Thurisaz Valkyrie Sword | 2 | 34 | 0 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_sword_v2 | Thurisaz Valkyrie Sword | 2 | 34 | 0 | 0 | 811080 | 811079
+  champion_thurisaz_valkyrie_sword_v3 | Thurisaz Valkyrie Sword | 2 | 34 | 811085 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_thrusting_spear | Thurisaz Valkyrie Thrusting Spear | 2 | 34 | 0 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_thrusting_spear_v2 | Thurisaz Valkyrie Thrusting Spear | 2 | 34 | 0 | 0 | 811080 | 811091
+  champion_thurisaz_valkyrie_thrusting_spear_v3 | Thurisaz Valkyrie Thrusting Spear | 2 | 34 | 811085 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_two_handed_sword | Thurisaz Valkyrie Two-handed Sword | 2 | 34 | 0 | 0 | 811080 | 0
+  champion_thurisaz_valkyrie_two_handed_sword_v2 | Thurisaz Valkyrie Two-handed Sword | 2 | 34 | 0 | 0 | 811080 | 811079
+  champion_thurisaz_valkyrie_two_handed_sword_v3 | Thurisaz Valkyrie Two-handed Sword | 2 | 34 | 811085 | 0 | 811080 | 0
+  champion_thurisaz_warrior_axe | Thurisaz Warrior Axe | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_axe_v2 | Thurisaz Warrior Axe | 2 | 22 | 811082 | 0 | 811079 | 0
+  champion_thurisaz_warrior_axe_v3 | Thurisaz Warrior Axe | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_hammer | Thurisaz Warrior Hammer | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_hammer_v2 | Thurisaz Warrior Hammer | 2 | 22 | 811082 | 0 | 811095 | 0
+  champion_thurisaz_warrior_hammer_v3 | Thurisaz Warrior Hammer | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_sword | Thurisaz Warrior Sword | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_sword_v2 | Thurisaz Warrior Sword | 2 | 22 | 811082 | 0 | 811079 | 0
+  champion_thurisaz_warrior_sword_v3 | Thurisaz Warrior Sword | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_axe | Thurisaz Warrior Two-handed Axe | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_axe_v2 | Thurisaz Warrior Two-handed Axe | 2 | 22 | 811082 | 0 | 811079 | 0
+  champion_thurisaz_warrior_two_handed_axe_v3 | Thurisaz Warrior Two-handed Axe | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_hammer | Thurisaz Warrior Two-handed Hammer | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_hammer_v2 | Thurisaz Warrior Two-handed Hammer | 2 | 22 | 811082 | 0 | 811095 | 0
+  champion_thurisaz_warrior_two_handed_hammer_v3 | Thurisaz Warrior Two-handed Hammer | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_sword | Thurisaz Warrior Two-handed Sword | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_thurisaz_warrior_two_handed_sword_v2 | Thurisaz Warrior Two-handed Sword | 2 | 22 | 811082 | 0 | 811079 | 0
+  champion_thurisaz_warrior_two_handed_sword_v3 | Thurisaz Warrior Two-handed Sword | 2 | 22 | 811082 | 0 | 0 | 0
+  champion_upsilon_cabalist_staff | Upsilon Cabalist Staff | 1 | 13 | 811092 | 0 | 0 | 0
+  champion_upsilon_cabalist_staff_v2 | Upsilon Cabalist Staff | 1 | 13 | 811092 | 811094 | 0 | 0
+  champion_upsilon_cabalist_staff_v3 | Upsilon Cabalist Staff | 1 | 13 | 811092 | 811093 | 0 | 0
+  champion_upsilon_harp | Upsilon Harp | 1 | 4 | 811092 | 0 | 0 | 0
+  champion_upsilon_harp_v2 | Upsilon Harp | 1 | 4 | 811092 | 811085 | 0 | 0
+  champion_upsilon_harp_v3 | Upsilon Harp | 1 | 4 | 811092 | 0 | 0 | 0
+  champion_upsilon_necromancer_staff | Upsilon Necromancer Staff | 1 | 12 | 811098 | 0 | 0 | 0
+  champion_upsilon_necromancer_staff_v2 | Upsilon Necromancer Staff | 1 | 12 | 811098 | 811093 | 0 | 0
+  champion_upsilon_necromancer_staff_v3 | Upsilon Necromancer Staff | 1 | 12 | 811098 | 811080 | 0 | 0
+  champion_upsilon_sorcerer_staff | Upsilon Sorcerer Staff | 1 | 8 | 811092 | 0 | 0 | 0
+  champion_upsilon_sorcerer_staff_v2 | Upsilon Sorcerer Staff | 1 | 8 | 811092 | 811094 | 0 | 0
+  champion_upsilon_sorcerer_staff_v3 | Upsilon Sorcerer Staff | 1 | 8 | 811092 | 811093 | 0 | 0
+  champion_upsilon_theurgist_staff | Upsilon Theurgist Staff | 1 | 5 | 811092 | 0 | 0 | 0
+  champion_upsilon_theurgist_staff_v2 | Upsilon Theurgist Staff | 1 | 5 | 811092 | 811094 | 0 | 0
+  champion_upsilon_theurgist_staff_v3 | Upsilon Theurgist Staff | 1 | 5 | 811092 | 811093 | 0 | 0
+  champion_upsilon_wizard_staff | Upsilon Wizard Staff | 1 | 7 | 811092 | 0 | 0 | 0
+  champion_upsilon_wizard_staff_v2 | Upsilon Wizard Staff | 1 | 7 | 811092 | 811094 | 0 | 0
+  champion_upsilon_wizard_staff_v3 | Upsilon Wizard Staff | 1 | 7 | 811092 | 811093 | 0 | 0
+  champion_vampiir_fuar_steel | Vampiir Fuar Steel | 3 | 58 | 0 | 0 | 811084 | 0
+  champion_vampiir_fuar_steel_v2 | Vampiir Fuar Steel | 3 | 58 | 0 | 0 | 811084 | 811091
+  champion_vampiir_fuar_steel_v3 | Vampiir Fuar Steel | 3 | 58 | 0 | 0 | 811084 | 0

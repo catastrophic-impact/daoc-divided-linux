@@ -1,0 +1,4 @@
+[
+ {"table": "ServerProperty", "where": {"Key": "keep_rp_base"}, "set": {"Value": "4500", "DefaultValue": "4500"}},
+ {"table": "ServerProperty", "where": {"Key": "tower_rp_base"}, "set": {"Value": "500", "DefaultValue": "500"}}
+]

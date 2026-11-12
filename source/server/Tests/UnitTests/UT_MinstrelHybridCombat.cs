@@ -20,6 +20,19 @@ namespace DOL.UnitTests
             Assert.That(BotBrain.PrefersSpellRange(new ClassWizard(), true, true), Is.True);
         }
 
+        /// <summary>DR-271: a player's grouped Shaman companion casts from range; autonomous and solo Shamans keep meleeing.</summary>
+        [Test]
+        public void GroupedShamanCompanionsStayAtSpellRange()
+        {
+            Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), true, false), Is.True);
+            Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), false, false), Is.False);
+            Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), true, true), Is.False);
+            Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), false, true), Is.False);
+            // Until it knows an attack spell it still melees, as a Druid does.
+            Assert.That(BotBrain.FightsAtSpellRange(true, true, () => false), Is.False);
+            Assert.That(BotBrain.FightsAtSpellRange(true, true, () => true), Is.True);
+        }
+
         [TestCase("DirectDamage", 0, true)]
         [TestCase("DirectDamage", 2, false)]
         [TestCase("Charm", 0, false)]

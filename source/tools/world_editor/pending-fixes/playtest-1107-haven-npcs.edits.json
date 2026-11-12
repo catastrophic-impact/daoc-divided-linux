@@ -1,0 +1,239 @@
+[
+ {
+  "table": "Mob",
+  "key": "08b2dc53-8173-4b6d-ae5a-b2423daa670b",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "27cf363b-cdb1-47b1-be53-d011a86fe0b9",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "b841f12c-072a-438f-8959-0ca123c7f892",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100006396",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100006486",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100006719",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100007024",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100007490",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100013067",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100015974",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100006396",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100006486",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100006719",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100007024",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100007490",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100013067",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100015974",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100006396",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100006486",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100006719",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100007024",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100007490",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100013067",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100015974",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "130_100001551",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "130_100001959",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "130_99999700",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ }
+]

@@ -24,5 +24,17 @@ namespace DOL.UnitTests
             Assert.That(BotBrain.IsServantDebuff(Payload("DamageOverTime", 0, 350)), Is.False);               // Billowing Death
             Assert.That(BotBrain.IsServantDebuff(Payload("DirectDamage", 0, 350)), Is.False);                 // Channeled Anger
         }
+
+        /// <summary>DR-253: the servant casts the payload, so its own distance to the target decides.</summary>
+        [Test]
+        public void TheServantMustBeInReachOfTheTarget()
+        {
+            Assert.That(BotBrain.ServantReach(Payload("ArmorFactorDebuff", 1500, 0)), Is.EqualTo(1500));       // Visions of Fate
+            Assert.That(BotBrain.ServantReach(Payload("StrengthConstitutionDebuff", 1500, 350)), Is.EqualTo(1500)); // Shroud of Affliction
+            Assert.That(BotBrain.ServantReach(Payload("DamageOverTime", 0, 350)), Is.EqualTo(280));             // Billowing Death bursts around the servant
+            Assert.That(BotBrain.ServantReach(Payload("DirectDamage", 0, 50)), Is.EqualTo(100));
+            Assert.That(BotBrain.ServantReach(Payload("DirectDamage", 0, 0)), Is.EqualTo(0));
+            Assert.That(BotBrain.ServantReach(null), Is.EqualTo(0));
+        }
     }
 }

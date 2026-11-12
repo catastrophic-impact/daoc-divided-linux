@@ -1512,6 +1512,10 @@ namespace DOL.GS
             else
                 m_releaseType = releaseCommand;
 
+            // The release happens from here on (the refusals and the wait are above).
+            if (m_releaseType is not eReleaseType.Duel)
+                ReleasedAfterLastDeath = true;
+
             int relX = 0;
             int relY = 0;
             int relZ = 0;
@@ -4077,18 +4081,24 @@ namespace DOL.GS
         }
 
         /// <summary>
+        /// True from /release until the next death. A released player is worth realm points again sooner than a
+        /// resurrected one (1.123b, DR-180). Not saved: after a relog the longer wait applies.
+        /// </summary>
+        public bool ReleasedAfterLastDeath { get; set; }
+
+        /// <summary>
         /// Realm point value of this player
         /// </summary>
         public override int RealmPointsValue
         {
             get
             {
-                // Pre-1.81 formula: https://camelotherald.fandom.com/wiki/Patch_Notes:_Version_1.81
+                // 1.81 formula (DR-174): https://camelotherald.fandom.com/wiki/Patch_Notes:_Version_1.81
+                // (level - 20)^2 plus 10 points per realm level.
                 // 25 at RR1, level 25.
-                // 225 at RR1, level 35, 245 at RR3, level 35.
-                // 900 at RR1, level 50. 990 at RR10, level 50.
-                int modifiedLevel = Level - 20;
-                return Math.Max(1, modifiedLevel * modifiedLevel) + RealmLevel;
+                // 225 at RR1, level 35, 425 at RR3, level 35.
+                // 900 at RR1, level 50. 1,800 at RR10, level 50.
+                return AutonomousBotRealmPointRewards.GetPlayerEquivalentRealmPointValue(Level, RealmLevel);
             }
         }
 
@@ -4330,25 +4340,40 @@ namespace DOL.GS
             }
         }
 
+        /// <summary>
+        /// Applies the level floor to an experience change. Returns the change to add to
+        /// <paramref name="experience"/> so it never ends below <paramref name="floor"/>, and gives in
+        /// <paramref name="earned"/> the part that was really gained: a top-up that only lifts stored
+        /// experience back up to the floor (a level set directly, an old save) is not earned.
+        /// </summary>
+        public static long ApplyExperienceFloor(long experience, long change, long floor, out long earned)
+        {
+            long applied = experience + change < floor ? floor - experience : change;
+            earned = applied > change ? Math.Min(applied, Math.Max(change, 0)) : applied;
+            return applied;
+        }
+
+        /// <summary>
+        /// Sets the level directly (GM commands, level NPCs) and puts experience at that level's
+        /// floor, so the next kill does not "top up" a whole level of unearned experience.
+        /// </summary>
+        public virtual void SetLevelDirect(byte level)
+        {
+            Level = level;
+            IsLevelSecondStage = false;
+            Experience = GetExperienceNeededForLevel(level);
+            Out.SendUpdatePoints();
+        }
+
         public void ForceGainExperience(long expTotal)
         {
-            if (IsLevelSecondStage)
-            {
-                if (Experience + expTotal < ExperienceForCurrentLevelSecondStage)
-                {
-                    expTotal = ExperienceForCurrentLevelSecondStage - Experience;
-                }
-            }
-            else if (Experience + expTotal < ExperienceForCurrentLevel)
-            {
-                expTotal = ExperienceForCurrentLevel - Experience;
-            }
-
-            Experience += expTotal;
+            long applied = ApplyExperienceFloor(Experience, expTotal, IsLevelSecondStage ? ExperienceForCurrentLevelSecondStage : ExperienceForCurrentLevel, out long earned);
+            Experience += applied;
+            expTotal = earned;
 
             Out.SendMessage(LanguageMgr.GetTranslation(Client.Account.Language, "GamePlayer.GainExperience.YouGet", expTotal.ToString("N0", System.Globalization.NumberFormatInfo.InvariantInfo)), eChatType.CT_Important, eChatLoc.CL_SystemWindow);
 
-            if (expTotal >= 0)
+            if (applied >= 0)
             {
                 //Level up
                 if (Level >= 5 && !CharacterClass.HasAdvancedFromBaseClass())
@@ -4370,6 +4395,77 @@ namespace DOL.GS
                 }
             }
             Out.SendUpdatePoints();
+        }
+
+        /// <summary>
+        /// Pays quest experience (owner 2026-10-30). While quest_xp_by_level is on, the quest's own amount (its share of
+        /// the level from ClassicQuests.ScaleXP, its fixed value, or a bounty's bulbs) is multiplied by this player's
+        /// quest rate, the xp_rate_by_level rate for the level (see QuestExperience), and capped at one level's worth,
+        /// so one payment can never pay two levels. It is handed to ForceGainExperience one boundary at a time (the
+        /// second stage at levels 40 to 49, then the next level, then the rest), so each call makes at most one
+        /// level-up or stage step and a payout that reaches the next level dings now, not again on the next kill. At
+        /// levels 40 to 48 one payment can still cross the level and reach the next level's second stage, since a
+        /// level's width there is more than half of the next one's; that is a level and a spec-point step, not two levels.
+        /// The setting is a kill switch (owner 2026-10-31, after review): off, the amount at <paramref name="flatRate"/>
+        /// goes to ForceGainExperience in one call, with no cap and no boundary steps, exactly as before 1.1.1. Data
+        /// quests, reward quests, bounties and the daily, weekly and battleground quests pay through here;
+        /// ForceGainExperience stays the raw path.
+        /// </summary>
+        /// <param name="baseXp">the quest's own amount, before any rate</param>
+        /// <param name="source">the quest, for the QUEST_XP log line</param>
+        /// <param name="flatRate">the rate the payout used before this setting: 1 for quests, xp_rate for bounties</param>
+        /// <returns>the experience added</returns>
+        public long GainQuestExperience(long baseXp, string source = null, double flatRate = 1.0)
+        {
+            if (baseXp <= 0)
+                return 0;
+
+            int level = Level;
+            bool byLevel = Properties.QUEST_XP_BY_LEVEL;
+            double rate = QuestExperience.Rate(level, flatRate); // the flat rate while the setting is off
+            long scaled = QuestExperience.Scaled(baseXp, rate);
+            long levelSpan = ExperienceForNextLevel - ExperienceForCurrentLevel;
+            long paid = QuestExperience.Payout(baseXp, rate, levelSpan, byLevel);
+
+            if (log.IsInfoEnabled)
+            {
+                log.Info($"QUEST_XP player=\"{Name}\" level={level}{(IsLevelSecondStage ? ".5" : string.Empty)} source=\"{source ?? "quest"}\" " +
+                         $"base={baseXp} rate={rate:0.###} scaled={scaled} paid={paid}{(paid < scaled ? " capped=one-level" : string.Empty)}" +
+                         (byLevel ? string.Empty : " quest_xp_by_level=off"));
+            }
+
+            long before = Experience;
+
+            if (!byLevel)
+            {
+                // The kill switch: one raw payment, as every quest made before 1.1.1. Experience past the next level
+                // is banked and the level follows on the next kill, as it did then.
+                ForceGainExperience(paid);
+                return Experience - before;
+            }
+
+            long remaining = paid;
+
+            // At most three steps (second stage, next level, the rest); the bound only guards against a stuck loop.
+            for (int step = 0; remaining > 0 && step < 4; step++)
+            {
+                long was = Experience;
+                long boundary = Level < MAX_LEVEL ? ExperienceForNextLevel : long.MaxValue;
+
+                if (Level >= 40 && Level < MAX_LEVEL && !IsLevelSecondStage)
+                    boundary = Math.Min(boundary, ExperienceForCurrentLevelSecondStage);
+
+                long toBoundary = boundary - was;
+                // Experience already banked at or past the boundary (the base-class trainer gate at level 5) is paid in one go, as before.
+                ForceGainExperience(toBoundary > 0 ? Math.Min(remaining, toBoundary) : remaining);
+
+                if (Experience <= was)
+                    break;
+
+                remaining -= Experience - was;
+            }
+
+            return Experience - before;
         }
 
         /// <summary>
@@ -4425,17 +4521,12 @@ namespace DOL.GS
             // Get Champion Experience too
             // GainChampionExperience(expTotal);
 
-            if (IsLevelSecondStage)
-            {
-                if (Experience + expTotal < ExperienceForCurrentLevelSecondStage)
-                {
-                    expTotal = ExperienceForCurrentLevelSecondStage - Experience;
-                }
-            }
-            else if (Experience + expTotal < ExperienceForCurrentLevel)
-            {
-                expTotal = ExperienceForCurrentLevel - Experience;
-            }
+            // The floor keeps a loss from dropping below the level (or half level). When the stored
+            // experience is already below the floor (a level set directly by a GM or an old save),
+            // it also tops the character up; that top-up was never earned, so only `earned` is
+            // reported and fed to Master Levels and artifacts.
+            long applied = ApplyExperienceFloor(Experience, expTotal, IsLevelSecondStage ? ExperienceForCurrentLevelSecondStage : ExperienceForCurrentLevel, out long earned);
+            expTotal = earned;
 
             if (arguments.SendMessage && expTotal > 0)
             {
@@ -4466,10 +4557,11 @@ namespace DOL.GS
                 Out.SendMessage(message, eChatType.CT_Important, eChatLoc.CL_SystemWindow);
             }
 
-            Experience += expTotal;
-            ArtifactLevels.AddXp(this, (long) (expTotal / Math.Max(0.01, arguments.AllowMultiply ? LevelRangeXpRates.PlayerRate(Level, CurrentRegion.IsRvR || CurrentZone.IsRvR) : 1)));
+            Experience += applied;
+            if (expTotal > 0)
+                ArtifactLevels.AddXp(this, (long) (expTotal / Math.Max(0.01, arguments.AllowMultiply ? LevelRangeXpRates.PlayerRate(Level, CurrentRegion.IsRvR || CurrentZone.IsRvR) : 1)));
 
-            if (expTotal >= 0)
+            if (applied >= 0)
             {
                 //Level up
                 if (Level >= 5 && !CharacterClass.HasAdvancedFromBaseClass())
@@ -4568,6 +4660,8 @@ namespace DOL.GS
         public virtual void OnLevelUp(int previouslevel)
         {
             MasterLevelRules.EnsureTraining(this);
+            if (previouslevel < MAX_LEVEL)
+                ChampionRules.RemindToVisitKing(this);
             IsLevelSecondStage = false;
             int isHardcore = 0;
             int realm = 0;
@@ -5241,6 +5335,26 @@ namespace DOL.GS
             // Companions assist only when they are nearby members of this exact
             // group. Solo bots and unrelated groups are intentionally excluded.
             BotBrain.NotifyNearbyGroupBots(this, ad);
+
+            // Storm Sovereign: every melee blow you block or parry builds one Tempest charge.
+            if (StormforgedRules.IsStormforged(CharacterClass.ID) && ad.IsMeleeAttack &&
+                ad.AttackResult is eAttackResult.Blocked or eAttackResult.Parried)
+                StormTempest.Add(this, StormRegalia.DefenseTempest(this));
+
+            // Pendragon Sovereign: every melee blow you block or parry earns Valor (2 with the full Regalia), and a melee hit
+            // taken earns 1 (at most once every 3 seconds). Guarded blows land on the Pendragon, so they count too.
+            if (PendragonRules.IsPendragon(CharacterClass.ID) && ad.IsMeleeAttack)
+            {
+                if (ad.AttackResult is eAttackResult.Blocked or eAttackResult.Parried)
+                    PendragonValor.Add(this, CamelotRegalia.DefenseValor(this));
+                else if (ad.AttackResult is eAttackResult.HitUnstyled or eAttackResult.HitStyle)
+                    PendragonValor.AddFromHit(this);
+            }
+
+            // Tuatha Sovereign: every melee blow you block, parry or evade marks the attacker.
+            if (PendragonRules.IsTuatha(CharacterClass.ID) && ad.IsMeleeAttack && ad.Attacker != null &&
+                ad.AttackResult is eAttackResult.Blocked or eAttackResult.Parried or eAttackResult.Evaded)
+                TuathaMarks.Add(this, ad.Attacker, TaraRegalia.DefenseMarks(this));
 
             switch (ad.AttackResult)
             {
@@ -6150,7 +6264,10 @@ namespace DOL.GS
             // no other way to keep correct message order...
             GameServer.ServerRules.OnPlayerKilled(this, killer);
             if (m_releaseType != eReleaseType.Duel)
+            {
                 DeathTime = PlayedTime;
+                ReleasedAfterLastDeath = false;
+            }
 
             CancelAllConcentrationEffects();
             //effectListComponent.CancelAll();
@@ -6547,7 +6664,23 @@ namespace DOL.GS
         /// <returns></returns>
         public virtual long GetCurrentMoney()
         {
-            return Money.GetMoney(Mithril, Platinum, Gold, Silver, Copper);
+            lock (_moneyLock)
+                return Money.GetMoney(Mithril, Platinum, Gold, Silver, Copper);
+        }
+
+        // Coins are five fields: an award and a purchase on two game loop threads at once could each read the old
+        // total and the last write would wipe out the other (DR-200, from OpenDAoC's Wallet fix 7f7ddffc9).
+        // Made on first use: tests and tools build players without running the constructor.
+        private Lock _moneyLockStorage;
+        private Lock _moneyLock => LazyInitializer.EnsureInitialized(ref _moneyLockStorage);
+
+        private void SetMoney(long money)
+        {
+            Mithril = Money.GetMithril(money);
+            Platinum = Money.GetPlatinum(money);
+            Gold = Money.GetGold(money);
+            Silver = Money.GetSilver(money);
+            Copper = Money.GetCopper(money);
         }
 
         public long ApplyGuildDues(long money)
@@ -6593,13 +6726,8 @@ namespace DOL.GS
         /// <param name="cl">message chat location</param>
         public virtual void AddMoney(long money, string messageFormat, eChatType ct, eChatLoc cl)
         {
-            long newMoney = GetCurrentMoney() + money;
-
-            Copper = Money.GetCopper(newMoney);
-            Silver = Money.GetSilver(newMoney);
-            Gold = Money.GetGold(newMoney);
-            Platinum = Money.GetPlatinum(newMoney);
-            Mithril = Money.GetMithril(newMoney);
+            lock (_moneyLock)
+                SetMoney(GetCurrentMoney() + money);
 
             Out.SendUpdateMoney();
 
@@ -6638,16 +6766,13 @@ namespace DOL.GS
         /// <returns>true if successfull, false if player doesn't have enough money</returns>
         public virtual bool RemoveMoney(long money, string messageFormat, eChatType ct, eChatLoc cl)
         {
-            if (money > GetCurrentMoney())
-                return false;
-
-            long newMoney = GetCurrentMoney() - money;
-
-            Mithril = Money.GetMithril(newMoney);
-            Platinum = Money.GetPlatinum(newMoney);
-            Gold = Money.GetGold(newMoney);
-            Silver = Money.GetSilver(newMoney);
-            Copper = Money.GetCopper(newMoney);
+            lock (_moneyLock)
+            {
+                long current = GetCurrentMoney();
+                if (money > current)
+                    return false;
+                SetMoney(current - money);
+            }
 
             Out.SendUpdateMoney();
 
@@ -6714,6 +6839,10 @@ namespace DOL.GS
                 if (Fishing.FishingCooking.TryUse(this, useItem))
                     return;
 
+                // The Bountycraft box of rare alchemy components.
+                if (BountyCraftItems.TryUse(this, useItem))
+                    return;
+
                 if (GameBoat.IsBoatItem(useItem.Id_nb))
                 {
                     GameBoat.Summon(this, useItem);
@@ -6728,6 +6857,13 @@ namespace DOL.GS
 
                 if (useItem.Item_Type != Slot.RANGED && (slot != Slot.HORSE || type != 0))
                     Out.SendMessage(LanguageMgr.GetTranslation(Client.Account.Language, "GamePlayer.UseSlot.AttemptToUse", useItem.GetName(0, false)), eChatType.CT_System, eChatLoc.CL_SystemWindow);
+
+                // Artifact credits used to stop at "You attempt to use ..." with no reason.
+                if (ArtifactCatalog.ArtifactOfCredit(useItem.Id_nb) is string creditFor)
+                {
+                    Out.SendMessage(ArtifactItem.CreditUseText(ArtifactCatalog.NameOf(creditFor)), eChatType.CT_System, eChatLoc.CL_SystemWindow);
+                    return;
+                }
 
                 switch (slot)
                 {
@@ -6875,6 +7011,15 @@ namespace DOL.GS
                         break;
                 }
 
+                // A locked artifact ability reads as no spell at all, so the use did nothing and said nothing.
+                // (A plain click on a weapon slot only switches or fires, so it says nothing here.)
+                if (useItem is ArtifactItem artifact && (type > 0 || slot is not (Slot.RIGHTHAND or Slot.LEFTHAND or Slot.TWOHAND or Slot.RANGED))
+                    && artifact.LockedUseMessage(type) is string locked)
+                {
+                    Out.SendMessage(locked, eChatType.CT_System, eChatLoc.CL_SystemWindow);
+                    return;
+                }
+
                 if (useItem.SpellID != 0 || useItem.SpellID1 != 0 || useItem.PoisonSpellID != 0)
                 {
                     if (IsSitting && useItem.Object_Type != (int) eObjectType.Poison)
@@ -6969,6 +7114,8 @@ namespace DOL.GS
 
                                                     if (aim == null)
                                                         Out.SendMessage("You need a target for that!", eChatType.CT_System, eChatLoc.CL_SystemWindow);
+                                                    else if (ItemSpellTargetProblem(spell, aim) is string problem)
+                                                        Out.SendMessage(problem, eChatType.CT_System, eChatLoc.CL_SystemWindow);   // the charge is kept
                                                     else if (spellHandler.StartSpell(aim, useItem))
                                                     {
                                                         if (useItem.Count > 1)
@@ -7623,6 +7770,9 @@ namespace DOL.GS
         /// <param name="chatType"></param>
         public override void MessageToSelf(string message, eChatType chatType)
         {
+            if (string.IsNullOrEmpty(message))
+                return; // an empty spell message is a blank line in the client
+
             Out.SendMessage(message, chatType, eChatLoc.CL_SystemWindow);
         }
 
@@ -8488,6 +8638,32 @@ namespace DOL.GS
             }
         }
 
+        /// <summary>
+        /// Why a charged item's harmful spell can't go at <paramref name="aim"/>, or null when it can. StartSpell skips
+        /// the cast checks and its target list drops an unattackable target quietly, so the Javelin of Flame said
+        /// "has been used", spent a charge and did nothing (DR-058). The attack rules' own message says why.
+        /// </summary>
+        public string ItemSpellTargetProblem(Spell spell, GameLiving aim)
+        {
+            if (spell == null || !spell.IsHarmful || aim == this || spell.Target is not eSpellTarget.ENEMY || spell.Range <= 0)
+                return null;
+
+            return ItemSpellTargetProblem(aim.IsAlive, IsWithinRadius(aim, spell.CalculateEffectiveRange(this)),
+                () => GameServer.ServerRules.IsAllowedToAttack(this, aim, false));
+        }
+
+        /// <summary>The decision, apart from the world: dead, too far, or the attack rules said no (they send their own message).</summary>
+        public static string ItemSpellTargetProblem(bool aimAlive, bool inRange, Func<bool> allowedToAttack)
+        {
+            if (!aimAlive)
+                return "Your target is dead!";
+
+            if (!inRange)
+                return "That target is too far away!";
+
+            return allowedToAttack() ? null : "You can't attack that target.";
+        }
+
         public void UpdateWaterBreathState(eWaterBreath state)
         {
             if (Client.Account.PrivLevel != 1)
@@ -8511,6 +8687,10 @@ namespace DOL.GS
                     {
                         Out.SendTimerWindow("Holding Breath", 30);
                         m_holdBreathTimer.Start(30000);
+                        // The timer bar alone was easy to miss on the Atlantis sea floor, where many artifact sites are.
+                        Out.SendMessage(Region.IsAtlantis(CurrentRegionID)
+                            ? "You are holding your breath (30 seconds). Water-breathing potions are sold in the Havens."
+                            : "You are holding your breath (30 seconds).", eChatType.CT_System, eChatLoc.CL_SystemWindow);
                     }
 
                     break;
@@ -8953,6 +9133,13 @@ namespace DOL.GS
             if (item is IGameInventoryItem inventoryItem)
                 inventoryItem.OnEquipped(this);
 
+            if (StormRegalia.IsPiece(item))
+                StormRegalia.Refresh(this, arriving: item);
+            else if (TaraRegalia.IsPiece(item))
+                TaraRegalia.Set.Refresh(this, arriving: item);
+            else if (CamelotRegalia.IsPiece(item))
+                CamelotRegalia.Set.Refresh(this, arriving: item);
+
             if (item.Item_Type is >= Slot.RIGHTHAND and <= Slot.RANGED)
             {
                 if (item.Hand == 1) // 2h
@@ -9106,6 +9293,13 @@ namespace DOL.GS
         {
             if (item == null)
                 return;
+
+            if (StormRegalia.IsPiece(item))
+                StormRegalia.Refresh(this, leaving: item);
+            else if (TaraRegalia.IsPiece(item))
+                TaraRegalia.Set.Refresh(this, leaving: item);
+            else if (CamelotRegalia.IsPiece(item))
+                CamelotRegalia.Set.Refresh(this, leaving: item);
 
             if (item.Item_Type is >= Slot.RIGHTHAND and <= Slot.RANGED)
             {
@@ -9658,6 +9852,13 @@ namespace DOL.GS
 
                 BattleGroup battleGroup = TempProperties.GetProperty<BattleGroup>(BattleGroup.BATTLEGROUP_PROPERTY);
 
+                // Personal loot left on the ground for this player goes to this player, not into the group's autosplit.
+                if (floorItem.IsPersonalTo(this, Group, battleGroup))
+                {
+                    floorItem.TryPickUp(this, this);
+                    return;
+                }
+
                 if (battleGroup == null || floorItem.TryPickUp(this, battleGroup) is TryPickUpResult.DoesNotWant)
                 {
                     Group group = Group;
@@ -10108,7 +10309,8 @@ namespace DOL.GS
 
                 var innerTasks = characterDataQuests.Select(async characterQuest =>
                 {
-                    var dbDataQuest = await DOLDB<DbDataQuest>.FindObjectByKeyAsync(characterQuest.DataQuestID);
+                    // As the data quest cache reads it: with the epic chains linked (EpicChainLinks, Living Server 1.2).
+                    var dbDataQuest = Quests.EpicChainLinks.Link(await DOLDB<DbDataQuest>.FindObjectByKeyAsync(characterQuest.DataQuestID));
 
                     if (dbDataQuest == null || (DataQuest.eStartType)dbDataQuest.StartType is DataQuest.eStartType.Collection)
                         return null;
@@ -10416,6 +10618,7 @@ namespace DOL.GS
                                     case "ArmorCrafting": i = 2; break;
                                     case "SiegeCrafting": i = 3; break;
                                     case "Alchemy": i = 4; break;
+                                    case "BountyCrafting": i = 5; break;
                                     case "MetalWorking": i = 6; break;
                                     case "LeatherCrafting": i = 7; break;
                                     case "ClothWorking": i = 8; break;
@@ -10467,6 +10670,12 @@ namespace DOL.GS
                 {
                     if (log.IsErrorEnabled)
                         log.Error($"{Name}: error in loading playerCraftingSkills => {DBCharacter.SerializedCraftingSkills}", e);
+                }
+
+                // Bountycraft (1.125) is on every character at 1 and never rises; saves from before it lack the line.
+                lock (_craftingLock)
+                {
+                    m_craftingSkills[eCraftingSkill.BountyCrafting] = 1;
                 }
 
                 bool IsCraftingSkillDefined(int craftingSkillToCheck)
@@ -11753,12 +11962,23 @@ namespace DOL.GS
         /// </summary>
         public virtual void CraftItem(ushort itemID)
         {
-            var recipe = RecipeDB.FindBy(itemID);
+            Recipe recipe = null;
+            try
+            {
+                recipe = RecipeDB.FindBy(itemID);
+            }
+            catch (KeyNotFoundException)
+            {
+                // a recipe already found invalid this session
+            }
 
-            if (recipe == null)
+            if (recipe?.Product == null)
             {
                 if (log.IsWarnEnabled)
                     log.Warn("[CRAFTING] Item " + itemID + " not found in recipe database!");
+                // the player is told instead of the craft silently doing nothing (2026-11-06: client recipes the server
+                // didn't know, e.g. Midgard spellcraft runes, failed without a word)
+                Out.SendMessage("That recipe is not known here.", eChatType.CT_System, eChatLoc.CL_SystemWindow);
                 return;
             }
 

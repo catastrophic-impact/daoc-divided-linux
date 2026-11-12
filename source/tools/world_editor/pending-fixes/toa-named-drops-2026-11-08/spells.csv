@@ -1,0 +1,48 @@
+Official spell,Our spell,Type,Copied from,Damage,Value,Duration,Target,Description
+3707,803707,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Heat damage to the target.
+3714,803714,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Cold damage to the target.
+3721,803721,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Spirit damage to the target.
+3728,803728,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Energy damage to the target.
+3749,803749,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Cold damage to the target.
+3774,803774,DirectDamage,801064,44.0,0.0,0,Enemy,Does 44.2 Heat damage to the target.
+3775,803775,DirectDamage,801064,51.0,0.0,0,Enemy,Does 51.0 Heat damage to the target.
+3784,803784,HealthRegenBuff,803785,0.0,29.0,20,Self,You regenerate 29 extra health.
+3788,803788,Heal,803787,0.0,130.0,0,Self,The target regains 130 hit points.
+3791,803791,EnduranceHeal,810165,0.0,20.0,0,Self,You regain 20 endurance.
+3792,803792,EnduranceHeal,803791,0.0,40.0,0,Self,You regain 40 endurance.
+3793,803793,EnduranceHeal,803791,0.0,60.0,0,Self,You regain 60 endurance.
+3795,803795,PowerHeal,801183,0.0,30.0,0,Self,The target regains 30 power points.
+3809,803809,CombatSpeedBuff,803424,0.0,17.0,600,Self,Increases your combat speed by 17%.
+3813,803813,HealthRegenBuff,803784,0.0,8.0,600,Self,You regenerate 8 extra health.
+3826,803826,DamageOverTime,803771,64.0,0.0,20,Enemy,Target takes 64 Matter damage every 4.000 seconds.
+3827,803827,DamageOverTime,803771,64.0,0.0,20,Enemy,Target takes 64 Body damage every 4.000 seconds.
+3831,803831,DamageAdd,803829,11.3,0.0,30,Self,Your melee attacks do additional 11.3 Energy damage.
+3832,803832,Lifedrain,651,65.0,-100,0,Enemy,The target takes 65.0 Body damage and the attacker is healed for 100% of the damage dealt.
+3833,803833,Lifedrain,803832,65.0,-100,0,Enemy,The target takes 65.0 Cold damage and the attacker is healed for 100% of the damage dealt.
+3834,803834,Lifedrain,803832,65.0,-100,0,Enemy,The target takes 65.0 Cold damage and the attacker is healed for 100% of the damage dealt.
+3840,803840,CombatSpeedBuff,803424,0.0,20.0,60,Self,Increases your combat speed by 20%.
+3841,803841,StrengthConstitutionDebuff,802091,0.0,56.0,60,Enemy,Target's strength and constitution are reduced by 56.
+3842,803842,StrengthConstitutionDebuff,802091,0.0,56.0,60,Enemy,Target's strength and constitution are reduced by 56.
+3843,803843,StrengthConstitutionDebuff,802091,0.0,56.0,60,Enemy,Target's strength and constitution are reduced by 56.
+3844,803844,DexterityQuicknessDebuff,810182,0.0,56.0,60,Enemy,Target's dexterity and quickness are reduced by 56.
+3845,803845,DexterityQuicknessDebuff,803844,0.0,56.0,60,Enemy,Target's dexterity and quickness are reduced by 56.
+3861,803861,DirectDamage,801064,331.0,0.0,0,Enemy,Does 331.5 Spirit damage to the target.
+3867,803867,AcuityBuff,810171,0.0,75.0,600,Self,Target's acuity are increased by 75.
+3868,803868,AcuityBuff,803867,0.0,75.0,600,Self,Target's acuity are increased by 75.
+3869,803869,AcuityBuff,803867,0.0,75.0,600,Self,Target's acuity are increased by 75.
+8783,808783,DamageAdd,803829,4.8,0.0,30,Self,Your melee attacks do additional 4.8 Spirit damage.
+8785,808785,ToHitDebuff,806982,0.0,5.0,15,Enemy,Target becomes disoriented for 15 sec. Reduces target's melee to-hit chance by 5%. Reduces target's spell resist piercing by 10%.
+8786,808786,SlashResistDebuff,811079,0.0,5.0,15,Enemy,Decreases the target's resistances to Slash damage by 5%.
+8788,808788,ThrustResistDebuff,811091,0.0,5.0,15,Enemy,Decreases the target's resistances to Thrust damage by 5%.
+8789,808789,ToHitBuff,802097,0.0,10.0,15,Self,Your melee attacks have a 10% bonus to land for the spell's duration.
+10157,810157,Heal,803787,0.0,-20.0,0,Self,The target regains 20% hit points.
+10160,810160,PowerHeal,801183,0.0,-20.0,0,Self,The target regains 20% power points.
+10174,810174,StrengthConstitutionBuff,803853,0.0,45.0,600,Self,Target's strength and constitution are increased by 45.
+10177,810177,DexterityQuicknessBuff,803856,0.0,45.0,600,Self,Target's dexterity and quickness are increased by 45.
+10181,810181,StrengthConstitutionDebuff,802091,0.0,40.0,60,Enemy,Target's strength and constitution are reduced by 40.
+10323,810323,FlexibleSkillBuff,803853,0.0,10.0,60,Self,Increases your Flexible by 10%.
+10461,810461,StrengthConstitutionBuff,803853,0.0,75.0,600,Self,Target's strength and constitution are increased by 75.
+10463,810463,BaseArmorFactorBuff,802849,0.0,75.0,600,Self,Increases your armor factor (AF) by 75.
+10464,810464,DexterityQuicknessBuff,803856,0.0,75.0,600,Self,Target's dexterity and quickness are increased by 75.
+11955,811955,AblativeArmor,802092,50.0,150.0,600,Self,"Target gains a temporary health buffer that absorbs 50% of the physical damage dealt, up to a maximum of 200 damage."
+12900,812900,HealAllOverTime,806953,0.0,3.0,30,Self,"You regenerate 3% health, endurance and power every 5 sec."

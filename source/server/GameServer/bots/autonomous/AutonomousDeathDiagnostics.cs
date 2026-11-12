@@ -20,9 +20,68 @@ namespace DOL.GS
             GamePlayer => "player",
             GameBot => "bot",
             GameNPC { Brain: DOL.AI.Brain.IControlledBrain } => "pet",
+            // A realm's guard or keep NPC is not a PvE monster (no boss-danger or repeat-death spot for it).
+            GameNPC { Realm: not eRealm.None } => "guard",
             GameNPC => "monster",
             _ => killer.GetType().Name,
         };
+
+        /// <summary>
+        /// A kill by another realm: a player, a gamebot, their pet or a guard. Night playtest 2026-11-04: such deaths were
+        /// learned as failed PvE camps (AUTONOMOUS_DEATH_ROUTE_REPLAN new_max_con=GREEN after an enemy bot's kill). Pure.
+        /// </summary>
+        public static bool IsEnemyRealmKill(eRealm victim, eRealm killer) => killer != eRealm.None && killer != victim;
+
+        public static bool IsEnemyRealmKill(eRealm victim, GameObject killer)
+        {
+            eRealm realm = killer switch
+            {
+                GameNPC { Brain: DOL.AI.Brain.IControlledBrain pet } when pet.GetLivingOwner() is { } owner => owner.Realm,
+                GameObject other => other.Realm,
+                _ => eRealm.None,
+            };
+            return IsEnemyRealmKill(victim, realm);
+        }
+
+        /// <summary>
+        /// The killer as a death is told in chat (1.1.3, after RC6): "guard" for a keep or town guard, "pet" for the pet of a
+        /// player or a bot, "monster" for a monster or a pet that is no one's (a charmed or summoned creature without a player or
+        /// bot owner), else <see cref="KillerKind"/> ("bot", "player", "none").
+        /// </summary>
+        public static string ChatKillerKind(GameObject killer) => killer switch
+        {
+            // RC7 on the owner's PC: a gamebot's brain is a controlled brain with no owner, so an enemy bot read as a monster
+            // ("adds in murdaigean hate me" after one enemy friar). A bot is a bot before anything else.
+            GameBot => "bot",
+            DOL.GS.Keeps.GameKeepGuard or GameGuard => "guard",
+            GameNPC { Brain: DOL.AI.Brain.IControlledBrain brain } => brain.GetLivingOwner() is GamePlayer or GameBot ? "pet" : "monster",
+            _ => KillerKind(killer),
+        };
+
+        /// <summary>The class of the enemy behind a kill (the player or bot, or a pet's owner), or null.</summary>
+        public static string KillerClassName(GameObject killer)
+        {
+            GameLiving who = killer is not GameBot && killer is GameNPC { Brain: DOL.AI.Brain.IControlledBrain brain } ? brain.GetLivingOwner() : killer as GameLiving;
+            return who switch
+            {
+                GamePlayer player => player.CharacterClass?.Name,
+                GameBot bot => bot.CharacterClass?.Name ?? bot.ClassName,
+                _ => null,
+            };
+        }
+
+        /// <summary>How many were on the bot (its attacker tracker), read before the death clears it.</summary>
+        public static int Attackers(GameBot bot)
+        {
+            try
+            {
+                return bot?.attackComponent?.AttackerTracker?.Attackers?.Count() ?? 0;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
 
         public static void Record(GameBot bot, GameObject killer, string activityBefore)
         {
@@ -41,7 +100,7 @@ namespace DOL.GS
             try
             {
                 GameLiving living = killer as GameLiving;
-                int attackers = bot.attackComponent?.AttackerTracker?.Attackers?.Count() ?? 0;
+                int attackers = Attackers(bot);
                 string con = living != null ? ConLevels.GetConColor(bot.GetConLevel(living)).ToString() : "-";
                 string goal = AutonomousObjectiveAssignments.GoalFor(AutonomousObjectiveAssignments.KindFor(bot), bot.PersistentRecord?.CurrentGoal);
                 bool arrived = bot.GoalDiagnosticAttempt?.ArrivedUtc != null;

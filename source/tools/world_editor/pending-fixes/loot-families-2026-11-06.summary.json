@@ -1,0 +1,178 @@
+{
+ "mob names given a table": 2253,
+ "spawns covered": 51686,
+ "skipped": {
+  "has a table": 2278,
+  "not a hostile mob": 4165,
+  "placeholder name": 1
+ },
+ "by family (names, spawns)": {
+  "animal": [
+   334,
+   8697
+  ],
+  "demon": [
+   15,
+   306
+  ],
+  "drake": [
+   15,
+   189
+  ],
+  "elemental": [
+   96,
+   2089
+  ],
+  "generic": [
+   497,
+   8130
+  ],
+  "giant": [
+   40,
+   639
+  ],
+  "humanoid": [
+   665,
+   8351
+  ],
+  "insect": [
+   118,
+   5428
+  ],
+  "magical": [
+   70,
+   1195
+  ],
+  "plant": [
+   67,
+   1265
+  ],
+  "reptile": [
+   66,
+   3537
+  ],
+  "sea": [
+   98,
+   10057
+  ],
+  "undead": [
+   172,
+   1803
+  ]
+ },
+ "chosen by": {
+  "fallback": 497,
+  "race": 1403,
+  "body type": 138,
+  "name": 215
+ },
+ "tables": 121,
+ "junk items": 120,
+ "edits": 2846,
+ "samples": {
+  "animal": [
+   "savage lynx (L16, race)",
+   "savage winterwolf (L53, race)",
+   "boar piglet (L1, race)",
+   "forest cat (L16, race)",
+   "pale horse (L50, race)",
+   "forest lion (L6, race)"
+  ],
+  "demon": [
+   "Aoife (L35, race)",
+   "Chthonic Knight Carabia (L65, race)",
+   "Mutilator Ezerak (L65, race)",
+   "Srandamar (L23, race)",
+   "Mutilator Odius (L66, race)",
+   "pine mephit (L29, race)"
+  ],
+  "drake": [
+   "bleeder hatchling (L9, race)",
+   "cinder drake (L28, race)",
+   "river drake hatchling (L3, race)",
+   "river drakeling (L5, race)",
+   "fearann wyvern ancient (L48, race)",
+   "fearann wyvern hatchling (L50, race)"
+  ],
+  "elemental": [
+   "hillock changeling (L36, race)",
+   "host of the wind (L16, race)",
+   "pixie scout (L8, race)",
+   "Pebble (L25, race)",
+   "rock elemental (L11, race)",
+   "ra of pine (L29, race)"
+  ],
+  "generic": [
+   "Lieutenant Gargantan (L68, fallback)",
+   "Trimbeak (L15, fallback)",
+   "Drihten's leornere (L65, fallback)",
+   "Jango (L62, fallback)",
+   "Te'Bui (L35, fallback)",
+   "Hresvelgr (L46, fallback)"
+  ],
+  "giant": [
+   "hrimthursa harrower (L75, race)",
+   "hrimthursa depredator (L75, race)",
+   "Stonecrush demolisher (L53, race)",
+   "jotun overlord (L64, race)",
+   "hrimthursa warrior (L44, race)",
+   "animus giant (L61, race)"
+  ],
+  "humanoid": [
+   "hill guard (L11, race)",
+   "highwayman (L7, race)",
+   "hill avenger (L12, race)",
+   "elfshot madman (L35, race)",
+   "sidhe coimirceoir (L65, race)",
+   "hobgoblin pincher (L16, race)"
+  ],
+  "insect": [
+   "vein spider (L5, body type)",
+   "tingler (L23, body type)",
+   "bloated spider (L10, body type)",
+   "tree spider (L2, body type)",
+   "large bloated spider (L13, body type)",
+   "vein spiderling (L1, body type)"
+  ],
+  "magical": [
+   "will o' wisp (L10, race)",
+   "atelic ooze (L61, race)",
+   "cold light (L22, race)",
+   "creeping crud (L2, race)",
+   "faerie wolf-crier (L4, race)",
+   "ghost light (L23, race)"
+  ],
+  "plant": [
+   "whispering willow (L33, race)",
+   "sapherd (L13, race)",
+   "oaken fellwood (L18, race)",
+   "death grip vines (L7, race)",
+   "young irewood (L25, race)",
+   "aged beech (L38, race)"
+  ],
+  "reptile": [
+   "green snake (L1, race)",
+   "grass snake (L5, race)",
+   "slough serpent (L1, race)",
+   "small snake (L1, race)",
+   "forest snake (L3, race)",
+   "lake adder (L10, race)"
+  ],
+  "sea": [
+   "rock crab (L9, name)",
+   "sand crab (L29, name)",
+   "carrion crab (L2, name)",
+   "soft-shelled crab (L1, name)",
+   "spiny eel (L3, name)",
+   "detrital crab (L42, name)"
+  ],
+  "undead": [
+   "shivering presence (L32, race)",
+   "myrk shadow (L30, race)",
+   "phantom page (L4, race)",
+   "undead explorer (L18, race)",
+   "weak skeleton (L1, race)",
+   "undead woodcarver (L26, race)"
+  ]
+ }
+}

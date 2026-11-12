@@ -73,7 +73,7 @@ namespace DOL.GS.Scripts
                     }
                     else {
                         player.Out.SendMessage("I have given you enough experience to reach level 10!", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                        player.Level = 10;
+                        player.SetLevelDirect(10);
                         return true;
                     }
                 case "20":
@@ -83,7 +83,7 @@ namespace DOL.GS.Scripts
                     }
                     else {
                         player.Out.SendMessage("I have given you enough experience to reach level 20!", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                        player.Level = 20;
+                        player.SetLevelDirect(20);
                         return true;
                     }
                 case "30":
@@ -93,7 +93,7 @@ namespace DOL.GS.Scripts
                     }
                     else {
                         player.Out.SendMessage("I have given you enough experience to reach level 30!", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                        player.Level = 30;
+                        player.SetLevelDirect(30);
                         return true;
                     }
                 case "40":
@@ -103,7 +103,7 @@ namespace DOL.GS.Scripts
                     }
                     else {
                         player.Out.SendMessage("I have given you enough experience to reach level 40!", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                        player.Level = 40;
+                        player.SetLevelDirect(40);
                         return true;
                     }
                 case "50":
@@ -113,12 +113,12 @@ namespace DOL.GS.Scripts
                     }
                     else {
                         player.Out.SendMessage("I have given you enough experience to reach level 50!", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                        player.Level = 50;
+                        player.SetLevelDirect(50);
                         return true;
                     }
                 case "reset":
                     player.Out.SendMessage("I have reset all your experience.\n\n Please relog your character to apply the change.", eChatType.CT_Say, eChatLoc.CL_PopupWindow);
-                    player.Level = 1;
+                    player.SetLevelDirect(1);
                     return true;
 
                 default: 

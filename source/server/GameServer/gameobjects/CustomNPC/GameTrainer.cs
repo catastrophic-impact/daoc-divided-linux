@@ -159,6 +159,10 @@ namespace DOL.GS
 				player.Out.SendChampionTrainerWindow((int)m_championTrainerType);
 			}
 
+			// DR-209: level 50s get their class's live epic armor and loyalty cloak here.
+			if (CanTrain(player))
+				ClassEpicGear.Offer(player, this);
+
 			return true;
 		}
 
@@ -209,6 +213,9 @@ namespace DOL.GS
 				}
 
 			}
+
+			if (CanTrain(player) && text == ClassEpicGear.GrantKeyword)
+				ClassEpicGear.Grant(player, this);
 
 			//Now we turn the npc into the direction of the person
 			TurnTo(player, 10000);

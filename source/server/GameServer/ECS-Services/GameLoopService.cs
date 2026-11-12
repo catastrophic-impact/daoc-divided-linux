@@ -12,6 +12,7 @@
         public override void Tick()
         {
             ProcessPostedActionsParallel();
+            ServerRules.RvrRealmPointRules.Tick(); // ended sieges pay their contribution pools (DR-182)
         }
     }
 }

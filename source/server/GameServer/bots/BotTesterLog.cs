@@ -243,7 +243,10 @@ namespace DOL.GS
                 Interlocked.Increment(ref stats.Refused);
                 BotState state = States.GetOrCreateValue(handler.Caster);
                 string reason = state.LastMessageTick == GameLoop.GameLoopTime && !string.IsNullOrEmpty(state.LastMessage)
-                    ? state.LastMessage : handler.Caster.IsBeingInterrupted ? "interrupted before casting" : "refused without a message";
+                    ? state.LastMessage
+                    : !string.IsNullOrEmpty(handler.RefuseReason) ? "refused: " + handler.RefuseReason
+                    : handler.Caster.IsBeingInterrupted ? "interrupted before casting"
+                    : $"refused without a message ({handler.GetType().Name})";
                 stats.Reason(reason);
                 Remember(bot, $"refused {handler.Spell.Name}: {reason}");
                 if (Verbose || Once($"refused:{bot.ObjectID}:{handler.Spell.ID}:{reason}", 300_000))

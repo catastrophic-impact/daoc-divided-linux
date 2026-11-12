@@ -68,6 +68,25 @@ namespace DOL.UnitTests
             Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 12), Is.EqualTo(120));
             Assert.That(OutOfCombatRecovery.Amount(player, eProperty.EnduranceRegenerationAmount, 1), Is.EqualTo(5));
         }
+        [Test]
+        public void BonusesAndRateSettingsStackOnTheFloor()
+        {
+            // Issue #10: items, mythirian regen, Champion passives and *_regen_amount_modifier used to vanish behind the floor.
+            Human player = Player();
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 12, 0, 1), Is.EqualTo(120));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 30, 20, 1), Is.EqualTo(140));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 18, 0, 1.5), Is.EqualTo(180));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 45, 20, 1.5), Is.EqualTo(210));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.EnduranceRegenerationAmount, 9, 8, 1), Is.EqualTo(13));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.EnduranceRegenerationAmount, 2, 1, 2), Is.EqualTo(12));
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.HealthRegenerationAmount, 25, 10, 1), Is.EqualTo(110));
+            // A debuff lowers the floor, never below the native amount.
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 1, -200, 1), Is.EqualTo(1));
+            player.IsSitting = true;
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.EnduranceRegenerationAmount, 12, 8, 1), Is.EqualTo(18));
+            player.IsSitting = false; player.Combat = true;
+            Assert.That(OutOfCombatRecovery.Amount(player, eProperty.PowerRegenerationAmount, 45, 20, 1.5), Is.EqualTo(45));
+        }
         [TestCase("combat")]
         [TestCase("attacking")]
         [TestCase("casting")]

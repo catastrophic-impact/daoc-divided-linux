@@ -40,8 +40,8 @@ namespace DOL.UnitTests
         public void HibernianTuathaDropsUseItsOwnWeaponsAndScale()
         {
             for (int i = 0; i < 50; i++)
-                Assert.That(GeneratedUniqueItem.GetHiberniaWeapon(eCharacterClass.TuathaSovereign), Is.AnyOf(eObjectType.Blades, eObjectType.Blunt,
-                    eObjectType.Piercing, eObjectType.LargeWeapons, eObjectType.CelticSpear, eObjectType.Shield));
+                Assert.That(GeneratedUniqueItem.GetHiberniaWeapon(eCharacterClass.TuathaSovereign), Is.AnyOf(eObjectType.Scythe, eObjectType.Blades,
+                    eObjectType.Shield));   // 2026-11-06 remake: Scythe, Blades and Shield
             Assert.That(GeneratedUniqueItem.GetHiberniaArmorType(eCharacterClass.TuathaSovereign, 50), Is.EqualTo(eObjectType.Scale));
         }
 

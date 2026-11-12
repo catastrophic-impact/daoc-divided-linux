@@ -59,6 +59,44 @@ namespace DOL.GS
             }
         }
 
+        /// <summary>The member-list entry of an offline character row (also what AddGuild builds at load).</summary>
+        public static GuildMemberView ViewOf(DbCoreCharacter character) => new(
+            character.ObjectId,
+            character.Name,
+            character.Level.ToString(),
+            character.Class.ToString(),
+            character.GuildRank.ToString(),
+            "0",
+            character.LastPlayed.ToShortDateString(),
+            character.GuildNote,
+            null);
+
+        /// <summary>An offline character added to a guild (GuildAltJoin): its entry in the guild's member list.</summary>
+        public static void AddCharacterToGuildMemberViews(Guild guild, DbCoreCharacter character)
+        {
+            if (guild == null || character == null)
+                return;
+
+            lock (_lock)
+            {
+                if (_guildMemberViews.TryGetValue(guild, out Dictionary<string, GuildMemberView> value))
+                    value[character.ObjectId] = ViewOf(character);
+            }
+        }
+
+        /// <summary>An offline character removed from a guild (/gc remove): drops its member-list entry.</summary>
+        public static void RemoveCharacterFromGuildMemberViews(Guild guild, string characterId)
+        {
+            if (guild == null || string.IsNullOrEmpty(characterId))
+                return;
+
+            lock (_lock)
+            {
+                if (_guildMemberViews.TryGetValue(guild, out Dictionary<string, GuildMemberView> value))
+                    value.Remove(characterId);
+            }
+        }
+
         /// <summary>A gamebot member's entry (AutonomousBotGuilds; keyed "bot:id", never a character ObjectId).</summary>
         public static void AddBotToGuildMemberViews(Guild guild, GuildMemberView view)
         {
@@ -488,20 +526,7 @@ namespace DOL.GS
             Dictionary<string, GuildMemberView> guildMemberViews = new(characters.Count);
 
             foreach (DbCoreCharacter character in characters)
-            {
-                GuildMemberView member = new(
-                    character.ObjectId,
-                    character.Name,
-                    character.Level.ToString(),
-                    character.Class.ToString(),
-                    character.GuildRank.ToString(),
-                    "0",
-                    character.LastPlayed.ToShortDateString(),
-                    character.GuildNote,
-                    null);
-
-                guildMemberViews.Add(character.ObjectId, member);
-            }
+                guildMemberViews.Add(character.ObjectId, ViewOf(character));
 
             _guildMemberViews.Add(guild, guildMemberViews);
         }

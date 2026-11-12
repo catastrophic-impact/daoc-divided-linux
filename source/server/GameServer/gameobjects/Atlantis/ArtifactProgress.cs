@@ -151,13 +151,59 @@ namespace DOL.GS
             return _tables.Value.Names.FirstOrDefault(pair => pair.Value.Equals(name, StringComparison.OrdinalIgnoreCase)).Key;
         }
 
+        /// <summary>
+        /// Whether the scholar should offer this version: the right realm and class, a weapon or armour type of the
+        /// player's own realm, a left-hand weapon only for classes that fight with one, and a skill the class has
+        /// (a Warrior was offered nine Crocodile's Tooth versions, one of them usable).
+        /// </summary>
         public static bool CanUse(GamePlayer player, DbItemTemplate template)
         {
-            if (template.Realm != 0 && template.Realm != (int) player.Realm)
+            if (!IsVersionFor(player.Realm, player.CharacterClass.ID, player.CharacterClass.CanUseLefthandedWeapon, template))
                 return false;
 
-            return string.IsNullOrEmpty(template.AllowedClasses)
-                || template.AllowedClasses.Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).Contains(player.CharacterClass.ID.ToString());
+            return GameServer.ServerRules is DOL.GS.ServerRules.AbstractServerRules rules
+                ? rules.CheckClassAbilityToUseItem(player, template)
+                : player.HasAbilityToUseItem(template);
+        }
+
+        /// <summary>The realm, class, item-type and hand part of <see cref="CanUse"/>, which needs no skills.</summary>
+        public static bool IsVersionFor(eRealm realm, int classId, bool canUseLeftHand, DbItemTemplate template)
+        {
+            if (template.Realm != 0 && template.Realm != (int) realm)
+                return false;
+
+            if (!string.IsNullOrEmpty(template.AllowedClasses)
+                && !template.AllowedClasses.Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).Contains(classId.ToString()))
+                return false;
+
+            eObjectType type = (eObjectType) template.Object_Type;
+            eRealm native = NativeRealm(type);
+
+            if (native != eRealm.None && native != realm)
+                return false;
+
+            if (type is eObjectType.Studded or eObjectType.Chain && realm == eRealm.Hibernia)
+                return false;
+
+            if (template.Item_Type == (int) eInventorySlot.LeftHandWeapon && type != eObjectType.Shield && !canUseLeftHand)
+                return false;
+
+            return true;
+        }
+
+        /// <summary>The realm whose classes use this weapon or armour type, or None when every realm does.</summary>
+        public static eRealm NativeRealm(eObjectType type)
+        {
+            return type switch
+            {
+                eObjectType.CrushingWeapon or eObjectType.SlashingWeapon or eObjectType.ThrustWeapon or eObjectType.TwoHandedWeapon
+                    or eObjectType.PolearmWeapon or eObjectType.Longbow or eObjectType.Crossbow or eObjectType.Flexible => eRealm.Albion,
+                eObjectType.Sword or eObjectType.Hammer or eObjectType.Axe or eObjectType.Spear or eObjectType.CompositeBow
+                    or eObjectType.Thrown or eObjectType.LeftAxe or eObjectType.HandToHand => eRealm.Midgard,
+                eObjectType.RecurvedBow or eObjectType.Blades or eObjectType.Blunt or eObjectType.Piercing or eObjectType.LargeWeapons
+                    or eObjectType.CelticSpear or eObjectType.Scythe or eObjectType.Reinforced or eObjectType.Scale => eRealm.Hibernia,
+                _ => eRealm.None,
+            };
         }
 
         public static List<DbItemTemplate> VersionsFor(GamePlayer player, string artifactId)

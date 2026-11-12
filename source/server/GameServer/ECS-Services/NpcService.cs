@@ -24,11 +24,28 @@ namespace DOL.GS
 
         public override void Tick()
         {
+            // Serial steps before the parallel brain dispatch are timed for SERVER_STALL (DR-203).
+            long step = AiTurnStallMonitor.SerialStart();
             ProcessPostedActionsParallel();
-            AutonomousBotRegistry.PrepareBrainTick();
-            AutonomousWorldBotController.PrepareRvrPlanningTick();
-            AutonomousBotGroupCoordinator.PrepareCoordinatorTick();
-            AutonomousWorldBotController.PrepareCampPlanningTick();
+            AiTurnStallMonitor.EndSerial("NpcService.PostedActions", step);
+            // Living Server 1.2, AI_PROFILE: the serial planning below runs on the game loop before any brain thinks;
+            // its time and each step's are measured (the idea of one scope around it is lometur's fleet scope, #137).
+            long serialStart = AiProfile.Timestamp();
+            step = AiTurnStallMonitor.SerialStart();
+            using (AiProfile.Scope(AiSystem.SerialBrainRegistry))
+                AutonomousBotRegistry.PrepareBrainTick();
+            AiTurnStallMonitor.EndSerial("BotRegistry.PrepareBrainTick", step);
+            using (AiProfile.Scope(AiSystem.SerialRvrPlanning))
+                AutonomousWorldBotController.PrepareRvrPlanningTick();
+            step = AiTurnStallMonitor.SerialStart();
+            using (AiProfile.Scope(AiSystem.SerialCoordinator))
+                AutonomousBotGroupCoordinator.PrepareCoordinatorTick();
+            AiTurnStallMonitor.EndSerial("GroupCoordinator.PrepareCoordinatorTick", step);
+            step = AiTurnStallMonitor.SerialStart();
+            using (AiProfile.Scope(AiSystem.SerialCampPlanning))
+                AutonomousWorldBotController.PrepareCampPlanningTick();
+            AiTurnStallMonitor.EndSerial("CampPlanning.PrepareCampPlanningTick", step);
+            AiProfile.EndSerial(serialStart);
             int lastValidIndex;
 
             try
@@ -43,7 +60,12 @@ namespace DOL.GS
                 return;
             }
 
+            step = AiTurnStallMonitor.SerialStart();
+            long parallelStart = AiProfile.Timestamp();
             GameLoop.ExecuteForEach(_list, lastValidIndex + 1, TickInternal);
+            AiProfile.EndParallel(parallelStart);
+            // The whole parallel dispatch; compare it with the slowest single turn in the same SERVER_STALL line.
+            AiTurnStallMonitor.EndSerial("NpcService.BrainDispatch", step);
 
             if (Diagnostics.CheckServiceObjectCount)
                 Diagnostics.PrintServiceObjectCount(ServiceName, ref EntityCount, _list.Count);
@@ -68,7 +90,9 @@ namespace DOL.GS
 
                     long startTick = MonotonicTime.NowMs;
                     NavQueryProfile.Reset();
-                    brain.Think();
+                    // AI_PROFILE: every turn is charged to the kind of its body (gamebot, companion, pet or NPC).
+                    using (AiProfile.Enabled ? AiProfile.Scope(AiProfile.ThinkKind(brain, npc)) : default)
+                        brain.Think();
                     long stopTick = MonotonicTime.NowMs;
 
                     long elapsed = stopTick - startTick;

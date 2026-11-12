@@ -1,0 +1,371 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T23:19:04.925456+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "LineXSpell",
+   "key": "Bead_END",
+   "op": "delete",
+   "before": {
+    "LineName": "Potions",
+    "SpellID": 31056,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "Bead_END"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "Bead_HEAL",
+   "op": "delete",
+   "before": {
+    "LineName": "Potions",
+    "SpellID": 31055,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "Bead_HEAL"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "Bead_POM",
+   "op": "delete",
+   "before": {
+    "LineName": "Potions",
+    "SpellID": 31057,
+    "Level": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "Bead_POM"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_30115",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 30115,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_30115"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_30125",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 30125,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_30125"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_31053",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 31053,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_31053"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_31054",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 31054,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_31054"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32140",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32140,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32140"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32156",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32156,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32156"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32162",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32162,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32162"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32179",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32179,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32179"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32191",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32191,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32191"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32211",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32211,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32211"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32231",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32231,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32231"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32233",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32233,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32233"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_32280",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 32280,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_32280"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_33333",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 33333,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_33333"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_34000",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 34000,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_34000"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_4075",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 4075,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_4075"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_9067",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 9067,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_9067"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "item_effects_9175",
+   "op": "delete",
+   "before": {
+    "LineName": "Item Effects",
+    "SpellID": 9175,
+    "Level": 1,
+    "LastTimeRowUpdated": "2022-04-27 00:00:00",
+    "LineXSpell_ID": "item_effects_9175"
+   },
+   "after": {}
+  },
+  {
+   "table": "LineXSpell",
+   "key": "Potion_Heal_230",
+   "op": "delete",
+   "before": {
+    "LineName": "Potions",
+    "SpellID": 8052,
+    "Level": 20,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "Potion_Heal_230"
+   },
+   "after": {}
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "22012_tradalva",
+   "op": "update",
+   "before": {
+    "Spells": "0"
+   },
+   "after": {
+    "Spells": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "22013_tradman",
+   "op": "update",
+   "before": {
+    "Spells": "0"
+   },
+   "after": {
+    "Spells": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "3e68d407-24af-460d-82db-b32775519473",
+   "op": "update",
+   "before": {
+    "Spells": "5405;309348"
+   },
+   "after": {
+    "Spells": "5405"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "4e2458359-ab7f-48ad-93499-147f51a462bd",
+   "op": "update",
+   "before": {
+    "Spells": "610203"
+   },
+   "after": {
+    "Spells": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98397189",
+   "op": "update",
+   "before": {
+    "Spells": "610203"
+   },
+   "after": {
+    "Spells": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "852a95c4-e9a1-481b-97ac-79634c355ca2",
+   "op": "update",
+   "before": {
+    "Spells": "62208;62209;62217;62220;62221;62222;62223;62224;62225;62226;62227;62228;62229;62230;62231;62232;62233;62234;62235;62236"
+   },
+   "after": {
+    "Spells": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "fb5b33a0-593e-4e85-9ac3-6b15b389e825",
+   "op": "update",
+   "before": {
+    "Spells": "62209;62218"
+   },
+   "after": {
+    "Spells": ""
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

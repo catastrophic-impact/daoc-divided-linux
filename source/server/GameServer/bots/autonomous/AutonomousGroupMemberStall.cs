@@ -130,7 +130,9 @@ namespace DOL.GS
                 if (!trail.RecoverRequested)
                     return false;
                 if (!member.IsAlive || !leader.IsAlive || member.CurrentRegionID != leader.CurrentRegionID ||
-                    member.IsOnStableMasterRoute || member.InCombat || member.IsCasting ||
+                    // Discord report 2026-11-05 (Abermenai): "enemy bots teleport to my character". A member moved to a
+                    // leader in a fight appears beside the leader's enemy, so it waits until the fight is over.
+                    member.IsOnStableMasterRoute || member.InCombat || member.IsCasting || leader.InCombat ||
                     member.GetDistanceTo(leader) <= 600)
                 {
                     trail.RecoverRequested = false;

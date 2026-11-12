@@ -1,0 +1,8674 @@
+{
+ "summary": {
+  "changed": 911,
+  "by_source": {
+   "herald-realm": 322,
+   "model": 21,
+   "objtype": 433,
+   "name-word": 61,
+   "herald-stem": 58,
+   "herald-any": 16
+  },
+  "by_realm": {
+   "3": 278,
+   "2": 298,
+   "1": 324,
+   "0": 11
+  },
+  "by_new_type": {
+   "Thrust": 211,
+   "Slash": 402,
+   "Crush": 298
+  },
+  "by_object_type": {
+   "21": 58,
+   "26": 28,
+   "19": 62,
+   "11": 71,
+   "6": 62,
+   "23": 29,
+   "25": 34,
+   "13": 78,
+   "20": 45,
+   "22": 44,
+   "4": 48,
+   "14": 32,
+   "3": 56,
+   "24": 46,
+   "7": 37,
+   "12": 70,
+   "2": 47,
+   "27": 6,
+   "8": 46,
+   "28": 10,
+   "17": 2
+  },
+  "left_alone_unresolved": 42,
+  "skipped_protected": 0,
+  "trusted_nouns": {
+   "sword": 2,
+   "mace": 1,
+   "staff": 1,
+   "pike": 3,
+   "rapier": 3,
+   "stiletto": 3,
+   "falchion": 2,
+   "hammer": 1,
+   "scepter": 1,
+   "gladius": 3,
+   "cleaver": 2,
+   "axe": 2,
+   "scimitar": 2,
+   "club": 1,
+   "piercer": 3,
+   "blade": 2,
+   "slicer": 2,
+   "trident": 3,
+   "impaler": 3,
+   "longsword": 2,
+   "crusher": 1,
+   "halberd": 2,
+   "scythe": 2,
+   "edge": 3,
+   "dirk": 3,
+   "mallet": 1,
+   "cutter": 2,
+   "whip": 2,
+   "wrap": 1,
+   "star": 1,
+   "flail": 1,
+   "sabre": 2,
+   "claymore": 2,
+   "pick": 3,
+   "lance": 3,
+   "cudgel": 1,
+   "harpoon": 3,
+   "rod": 1,
+   "smasher": 1,
+   "fork": 3,
+   "adze": 3
+  }
+ },
+ "changed": [
+  {
+   "Id_nb": "Acidspire",
+   "Name": "Acidspire",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Adems_Antiquated_Scythe",
+   "Name": "Adem's Antiquated Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Adems_Antiquated_Sword",
+   "Name": "Adem's Antiquated Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Agmundrs_Foe_Slayer",
+   "Name": "Agmundr's Foe Slayer",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ancient_Ebony_Mattock",
+   "Name": "Ancient Ebony Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ancient_Stag_Spine_Scythe",
+   "Name": "Ancient Stag Spine Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ancient_Stag_Spine_Spear",
+   "Name": "Ancient Stag Spine Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ancient_Vitrolic_Fang",
+   "Name": "Ancient Vitrolic Fang",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Anhylaws_Tooth",
+   "Name": "Anhylaw's Tooth",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Anluans_Audacious_Axe",
+   "Name": "Anluan's Audacious Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Anluans_Audacious_Sword",
+   "Name": "Anluan's Audacious Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Arachnid_Destroyer",
+   "Name": "Arachnid Destroyer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Arcanite_Acaeus_Rapier",
+   "Name": "Arcanite Acaeus Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Adze_of_Dissolusion",
+   "Name": "Arcanite Adze of Dissolusion",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Adze_of_Dissolution",
+   "Name": "Arcanite Adze of Dissolution",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Adze_of_the_Whispering_Wind",
+   "Name": "Arcanite Adze of the Whispering Wind",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Akils_Fury",
+   "Name": "Arcanite Akil's Fury",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Astral_Conflagrant_Short_Sword",
+   "Name": "Arcanite Astral Conflagrant Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Astral_Hammer_of_Impedance",
+   "Name": "Arcanite Astral Hammer of Impedance",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Astral_Voltaic_Battle_Spear",
+   "Name": "Arcanite Astral Voltaic Battle Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 12,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Barbed_Adze_of_the_Storms_Eye",
+   "Name": "Arcanite Barbed Adze of the Storm's Eye",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Barbed_Tail_Sword",
+   "Name": "Arcanite Barbed Tail Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Blade_of_Disdain",
+   "Name": "Arcanite Blade of Disdain",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Blade_of_Silent_Oblivion",
+   "Name": "Arcanite Blade of Silent Oblivion",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Blade_of_the_Tainted",
+   "Name": "Arcanite Blade of the Tainted",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Broadsword_of_the_Zenith",
+   "Name": "Arcanite Broadsword of the Zenith",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Club_of_Disdain",
+   "Name": "Arcanite Club of Disdain",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Club_of_the_Scaled",
+   "Name": "Arcanite Club of the Scaled",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Corroded_Spear",
+   "Name": "Arcanite Corroded Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Crackling_Wind_Harpoon",
+   "Name": "Arcanite Crackling Wind Harpoon",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Cudgel_of_the_Whispering_Wind",
+   "Name": "Arcanite Cudgel of the Whispering Wind",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Cyclopean_Cloud_Skewer",
+   "Name": "Arcanite Cyclopean Cloud Skewer",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Dagger_of_the_Taur",
+   "Name": "Arcanite Dagger of the Taur",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Desert_Shadow_Scythe",
+   "Name": "Arcanite Desert Shadow Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Desert_Venom_Scythe",
+   "Name": "Arcanite Desert Venom Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Desert_Venom_Vanquisher",
+   "Name": "Arcanite Desert Venom Vanquisher",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 12,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Dreadfin_Dire_Sword",
+   "Name": "Arcanite Dreadfin Dire Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Dreadfin_Frenzy_Trident",
+   "Name": "Arcanite Dreadfin Frenzy Trident",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Duamutefs_Rapier_of_Dread",
+   "Name": "Arcanite Duamutef's Rapier of Dread",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Elven_Dagger_of_the_Breeze",
+   "Name": "Arcanite Elven Dagger of the Breeze",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Fiery_Impaler",
+   "Name": "Arcanite Fiery Impaler",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Fiery_Sunderer",
+   "Name": "Arcanite Fiery Sunderer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanite_Golden_Sword",
+   "Name": "Arcanite Golden Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Gorgon_Scythe",
+   "Name": "Arcanite Gorgon Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Great_Spear_of_Detonation",
+   "Name": "Arcanite Great Spear of Detonation",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 12,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Great_Sword_of_the_Detonation",
+   "Name": "Arcanite Great Sword of the Detonation",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Hammer_of_Demise",
+   "Name": "Arcanite Hammer of Demise",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Hammer_of_Detonation",
+   "Name": "Arcanite Hammer of Detonation",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Hammer_of_the_Breeze",
+   "Name": "Arcanite Hammer of the Breeze",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Hissing_Adze",
+   "Name": "Arcanite Hissing Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Hissing_Dire_Trident",
+   "Name": "Arcanite Hissing Dire Trident",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Imsetys_Scythe_of_Dread",
+   "Name": "Arcanite Imsety's Scythe of Dread",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Kirkleiss_Scythe",
+   "Name": "Arcanite Kirkleis's Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Landrines_Adze",
+   "Name": "Arcanite Landrine's Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Laodameias_Scythe",
+   "Name": "Arcanite Laodameia's Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Laodameias_Trident",
+   "Name": "Arcanite Laodameia's Trident",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Mace_of_the_Pure",
+   "Name": "Arcanite Mace of the Pure",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Mace_of_the_Storms_Eye",
+   "Name": "Arcanite Mace of the Storm's Eye",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Mace_of_the_Zenith",
+   "Name": "Arcanite Mace of the Zenith",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Magma_Forged_Blade_of_Ruin",
+   "Name": "Arcanite Magma Forged Blade of Ruin",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Malisons_Mace",
+   "Name": "Arcanite Malison's Mace",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Mallet_of_Landrine",
+   "Name": "Arcanite Mallet of Landrine",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Meloss_Wave_Hammer",
+   "Name": "Arcanite Melos's Wave Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Meloss_Wave_Sword",
+   "Name": "Arcanite Melos's Wave Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Melos_Wave_Hammer",
+   "Name": "Arcanite Melos Wave Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Miasmic_Blade",
+   "Name": "Arcanite Miasmic Blade",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanite_Naxoss_Tidal_Mace",
+   "Name": "Arcanite Naxos's Tidal Mace",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Naxoss_Tidal_Rapier",
+   "Name": "Arcanite Naxos's Tidal Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Naxoss_Tidal_Sword",
+   "Name": "Arcanite Naxos's Tidal Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Needle",
+   "Name": "Arcanite Needle",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Neriad_Sharktooth_Spear",
+   "Name": "Arcanite Neriad Sharktooth Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Petrified_Tentacle_Sword",
+   "Name": "Arcanite Petrified Tentacle Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Qebehsenuefs_Blade_of_Dread",
+   "Name": "Arcanite Qebehsenuef's Blade of Dread",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Reef-Lords_Dire_Hammer",
+   "Name": "Arcanite Reef-Lord's Dire Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Reef-Lords_Rapier",
+   "Name": "Arcanite Reef-Lord's Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Reef-Lords_Short_Sword",
+   "Name": "Arcanite Reef-Lord's Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Scintillating_Blade",
+   "Name": "Arcanite Scintillating Blade",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Scythe_of_Desolation",
+   "Name": "Arcanite Scythe of Desolation",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Scythe_of_Disdain",
+   "Name": "Arcanite Scythe of Disdain",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Scythe_of_Dissolution",
+   "Name": "Arcanite Scythe of Dissolution",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Scythe_of_the_Tainted",
+   "Name": "Arcanite Scythe of the Tainted",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sea_Rotted_Club",
+   "Name": "Arcanite Sea Rotted Club",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sea_Rotted_Dagger",
+   "Name": "Arcanite Sea Rotted Dagger",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Serpent-Blood_Long_Sword",
+   "Name": "Arcanite Serpent-Blood Long Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Serpentine_Sword",
+   "Name": "Arcanite Serpentine Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Siphon_of_Souls",
+   "Name": "Arcanite Siphon of Souls",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Skyross_Sword",
+   "Name": "Arcanite Skyros's Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sobekhoteps_Scythe",
+   "Name": "Arcanite Sobekhotep's Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sobekhoteps_War_Scythe",
+   "Name": "Arcanite Sobekhotep's War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Soul_Leech",
+   "Name": "Arcanite Soul Leech",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Soul_Plunder",
+   "Name": "Arcanite Soul Plunder",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Soul_Wind",
+   "Name": "Arcanite Soul Wind",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Spear_of_Detonation",
+   "Name": "Arcanite Spear of Detonation",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 12,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Spear_of_the_Taur",
+   "Name": "Arcanite Spear of the Taur",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Statuesque_Sword",
+   "Name": "Arcanite Statuesque Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Statuesque_Trident",
+   "Name": "Arcanite Statuesque Trident",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Stone_Bone_Crusher",
+   "Name": "Arcanite Stone Bone Crusher",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Stone_Bone_Impaler",
+   "Name": "Arcanite Stone Bone Impaler",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Stone_Bone_Slicer",
+   "Name": "Arcanite Stone Bone Slicer",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Striking_Serpent_Club",
+   "Name": "Arcanite Striking Serpent Club",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Striking_Serpent_Great_Sword",
+   "Name": "Arcanite Striking Serpent Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Sword_of_Casta",
+   "Name": "Arcanite Sword of Casta",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sword_of_Demise",
+   "Name": "Arcanite Sword of Demise",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanite_Sword_of_Demise1",
+   "Name": "Arcanite Sword of Demise",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Sword_of_the_Whispering_Wind",
+   "Name": "Arcanite Sword of the Whispering Wind",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Tainted_Inquisitors_Spear",
+   "Name": "Arcanite Tainted Inquisitors Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Taurs_Wrath",
+   "Name": "Arcanite Taurs Wrath",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Traitors_Scythe",
+   "Name": "Arcanite Traitors Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Trident_of_Casta",
+   "Name": "Arcanite Trident of Casta",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Trident_of_Disdain",
+   "Name": "Arcanite Trident of Disdain",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Trident_of_the_Sea",
+   "Name": "Arcanite Trident of the Sea",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_War_Adze_of_the_Zenith",
+   "Name": "Arcanite War Adze of the Zenith",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Whirlwind_Cruel_Spear",
+   "Name": "Arcanite Whirlwind Cruel Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanite_Whirlwind_Harvest_Scythe",
+   "Name": "Arcanite Whirlwind Harvest Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Acaeus_Rapier",
+   "Name": "Arcanium Acaeus Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Akils_Fury",
+   "Name": "Arcanium Akil's Fury",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Akils_Fury1",
+   "Name": "Arcanium Akil's Fury",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Akils_Storm",
+   "Name": "Arcanium Akil's Storm",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Conflagrant_Short_Sword",
+   "Name": "Arcanium Astral Conflagrant Short Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Divine_Light1",
+   "Name": "Arcanium Astral Divine Light",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Kinetic_Whip",
+   "Name": "Arcanium Astral Kinetic Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Voltaic_Great_Hammer",
+   "Name": "Arcanium Astral Voltaic Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 12,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Voltaic_War_Pick",
+   "Name": "Arcanium Astral Voltaic War Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 12,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Casta",
+   "Name": "Arcanium Axe of Casta",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Demise",
+   "Name": "Arcanium Axe of Demise",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Demise1",
+   "Name": "Arcanium Axe of Demise",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Demise2",
+   "Name": "Arcanium Axe of Demise",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Desolation",
+   "Name": "Arcanium Axe of Desolation",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Ruination",
+   "Name": "Arcanium Axe of Ruination",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Ruination1",
+   "Name": "Arcanium Axe of Ruination",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_Ruination2",
+   "Name": "Arcanium Axe of Ruination",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_the_Tainted",
+   "Name": "Arcanium Axe of the Tainted",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_the_Whispering_Wind",
+   "Name": "Arcanium Axe of the Whispering Wind",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_the_Whispering_Wind1",
+   "Name": "Arcanium Axe of the Whispering Wind",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Axe_of_the_Zenith",
+   "Name": "Arcanium Axe of the Zenith",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Barbed_Mace_of_Conflict",
+   "Name": "Arcanium Barbed Mace of Conflict",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Barbed_Tail_Axe",
+   "Name": "Arcanium Barbed Tail Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Barbed_Tail_Sword",
+   "Name": "Arcanium Barbed Tail Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Battle_Axe_of_Detonation",
+   "Name": "Arcanium Battle Axe of Detonation",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Blade_of_the_Tainted",
+   "Name": "Arcanium Blade of the Tainted",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cinquedea_of_the_Storms_Eye",
+   "Name": "Arcanium Cinquedea of the Storm's Eye",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Claw_of_Ruination",
+   "Name": "Arcanium Claw of Ruination",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Claymore_of_the_Whirlwind",
+   "Name": "Arcanium Claymore of the Whirlwind",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Club_of_Demise",
+   "Name": "Arcanium Club of Demise",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Club_of_Detonation",
+   "Name": "Arcanium Club of Detonation",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Club_of_the_Breeze",
+   "Name": "Arcanium Club of the Breeze",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Corroded_Axe",
+   "Name": "Arcanium Corroded Axe",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Corroded_Sword",
+   "Name": "Arcanium Corroded Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Crackling_Wind_Great_Axe",
+   "Name": "Arcanium Crackling Wind Great Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Crackling_Wind_Inquisitors_Trident",
+   "Name": "Arcanium Crackling Wind Inquisitors Trident",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Crackling_Wind_Sabre_Axe",
+   "Name": "Arcanium Crackling Wind Sabre Axe",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Crackling_Wind_Spear",
+   "Name": "Arcanium Crackling Wind Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 10,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Crusher_of_Silent_Oblivion",
+   "Name": "Arcanium Crusher of Silent Oblivion",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cudgel_of_Demise",
+   "Name": "Arcanium Cudgel of Demise",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Cudgel_of_Demise1",
+   "Name": "Arcanium Cudgel of Demise",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Cudgel_of_the_Taur",
+   "Name": "Arcanium Cudgel of the Taur",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cudgel_of_the_Whispering_Wind",
+   "Name": "Arcanium Cudgel of the Whispering Wind",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Cudgel_of_the_Whispering_Wind1",
+   "Name": "Arcanium Cudgel of the Whispering Wind",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Chaser1",
+   "Name": "Arcanium Cyclopean Cloud Chaser",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Driver1",
+   "Name": "Arcanium Cyclopean Cloud Driver",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Herder",
+   "Name": "Arcanium Cyclopean Cloud Herder",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Skewer",
+   "Name": "Arcanium Cyclopean Cloud Skewer",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Sky_Scraper1",
+   "Name": "Arcanium Cyclopean Sky Scraper",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dagger_of_Demise",
+   "Name": "Arcanium Dagger of Demise",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dagger_of_Detonation",
+   "Name": "Arcanium Dagger of Detonation",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 12,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dagger_of_Ruination",
+   "Name": "Arcanium Dagger of Ruination",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dagger_of_the_Storms_Eye",
+   "Name": "Arcanium Dagger of the Storm's Eye",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Shadow_Axe",
+   "Name": "Arcanium Desert Shadow Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Shadow_Pick",
+   "Name": "Arcanium Desert Shadow Pick",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Shadow_Spear",
+   "Name": "Arcanium Desert Shadow Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Shadow_Sword",
+   "Name": "Arcanium Desert Shadow Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Venom_Greave",
+   "Name": "Arcanium Desert Venom Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 2,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Venom_Hammer",
+   "Name": "Arcanium Desert Venom Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Venom_Sap",
+   "Name": "Arcanium Desert Venom Sap",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dirk_of_Conflict",
+   "Name": "Arcanium Dirk of Conflict",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dreadfin_Dire_Hammer",
+   "Name": "Arcanium Dreadfin Dire Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Dreadfin_Frenzy_Trident",
+   "Name": "Arcanium Dreadfin Frenzy Trident",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Duamutefs_Axe_of_Dread",
+   "Name": "Arcanium Duamutef's Axe of Dread",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Duamutefs_Rapier_of_Dread",
+   "Name": "Arcanium Duamutef's Rapier of Dread",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Equalizers_Axe",
+   "Name": "Arcanium Equalizer's Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Equalizers_Hammer",
+   "Name": "Arcanium Equalizer's Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Equalizers_Sword",
+   "Name": "Arcanium Equalizer's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Falchion_of_the_Zenith",
+   "Name": "Arcanium Falchion of the Zenith",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Fang_Greave_of_Detonation",
+   "Name": "Arcanium Fang Greave of Detonation",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 12,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Featherweight_Battle_Spear",
+   "Name": "Arcanium Featherweight Battle Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Featherweight_Great_Hammer",
+   "Name": "Arcanium Featherweight Great Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Featherweight_Great_Sword",
+   "Name": "Arcanium Featherweight Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Featherweight_War_Cleaver",
+   "Name": "Arcanium Featherweight War Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Fiery_Cleaver",
+   "Name": "Arcanium Fiery Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Fiery_Impaler",
+   "Name": "Arcanium Fiery Impaler",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Fiery_Sunderer",
+   "Name": "Arcanium Fiery Sunderer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Fiery_Sunderer1",
+   "Name": "Arcanium Fiery Sunderer",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Flail_of_Desolation",
+   "Name": "Arcanium Flail of Desolation",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Flail_of_the_Tainted",
+   "Name": "Arcanium Flail of the Tainted",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Golden_Sword",
+   "Name": "Arcanium Golden Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Golden_Sword1",
+   "Name": "Arcanium Golden Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Gorgon_Axe1",
+   "Name": "Arcanium Gorgon Axe",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Grand_Axe",
+   "Name": "Arcanium Grand Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Grand_Glaive",
+   "Name": "Arcanium Grand Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Great_Axe_of_Dissolution",
+   "Name": "Arcanium Great Axe of Dissolution",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Great_Hammer_of_Detonation",
+   "Name": "Arcanium Great Hammer of Detonation",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Great_Hammer_of_Detonation1",
+   "Name": "Arcanium Great Hammer of Detonation",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 12,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Great_Sword_of_Dissolution",
+   "Name": "Arcanium Great Sword of Dissolution",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Great_Sword_of_the_Pure",
+   "Name": "Arcanium Great Sword of the Pure",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Great_War_Axe_of_Detonation",
+   "Name": "Arcanium Great War Axe of Detonation",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Great_War_Hammer_of_Detonation",
+   "Name": "Arcanium Great War Hammer of Detonation",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Greave_of_Desolation",
+   "Name": "Arcanium Greave of Desolation",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Greave_of_the_Storms_Eye",
+   "Name": "Arcanium Greave of the Storm's Eye",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Blood",
+   "Name": "Arcanium Hammer of Blood",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Demise",
+   "Name": "Arcanium Hammer of Demise",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Detonation",
+   "Name": "Arcanium Hammer of Detonation",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Disdain",
+   "Name": "Arcanium Hammer of Disdain",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Silent_Oblivion",
+   "Name": "Arcanium Hammer of Silent Oblivion",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_Silent_Oblivion1",
+   "Name": "Arcanium Hammer of Silent Oblivion",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Breeze",
+   "Name": "Arcanium Hammer of the Breeze",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Pure",
+   "Name": "Arcanium Hammer of the Pure",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Scaled",
+   "Name": "Arcanium Hammer of the Scaled",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Scaled1",
+   "Name": "Arcanium Hammer of the Scaled",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Sea",
+   "Name": "Arcanium Hammer of the Sea",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Sea1",
+   "Name": "Arcanium Hammer of the Sea",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Taur",
+   "Name": "Arcanium Hammer of the Taur",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Whirlwind",
+   "Name": "Arcanium Hammer of the Whirlwind",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Hammer_of_the_Zenith",
+   "Name": "Arcanium Hammer of the Zenith",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hissing_Axe",
+   "Name": "Arcanium Hissing Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hissing_Morning_Star",
+   "Name": "Arcanium Hissing Morning Star",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Hissing_Trident",
+   "Name": "Arcanium Hissing Trident",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hrunduns_Cleansing_Flame",
+   "Name": "Arcanium Hrundun's Cleansing Flame",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Hrunduns_Cleansing_Flame1",
+   "Name": "Arcanium Hrundun's Cleansing Flame",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hrunduns_Cleansing_Flame2",
+   "Name": "Arcanium Hrundun's Cleansing Flame",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Hrunduns_Cleansing_Flame3",
+   "Name": "Arcanium Hrundun's Cleansing Flame",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Imsetys_Claw_of_Dread",
+   "Name": "Arcanium Imsety's Claw of Dread",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Imsetys_Morning_Star_of_Dread",
+   "Name": "Arcanium Imsety's Morning Star of Dread",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Inquisitors_Pick_of_the_Whirlwind",
+   "Name": "Arcanium Inquisitor's Pick of the Whirlwind",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Jagged_Bone_Broadsword",
+   "Name": "Arcanium Jagged Bone Broadsword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Kirkleiss_Flail",
+   "Name": "Arcanium Kirkleis's Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Kirkleiss_Greave",
+   "Name": "Arcanium Kirkleis's Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Landrines_Dirk",
+   "Name": "Arcanium Landrine's Dirk",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Landrines_Sword",
+   "Name": "Arcanium Landrine's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Laodameias_Chain",
+   "Name": "Arcanium Laodameia's Chain",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Laodameias_Fist",
+   "Name": "Arcanium Laodameia's Fist",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Laodameias_Hammer",
+   "Name": "Arcanium Laodameia's Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Laodameias_Sword",
+   "Name": "Arcanium Laodameia's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Laodameias_Whip",
+   "Name": "Arcanium Laodameia's Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Long_Hammer_of_Detonation",
+   "Name": "Arcanium Long Hammer of Detonation",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 12,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Lost_Hammer_of_Pious_Wrath",
+   "Name": "Arcanium Lost Hammer of Pious Wrath",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_Blood",
+   "Name": "Arcanium Mace of Blood",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_Demise",
+   "Name": "Arcanium Mace of Demise",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_Detonation",
+   "Name": "Arcanium Mace of Detonation",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_Ruination",
+   "Name": "Arcanium Mace of Ruination",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_the_Breeze",
+   "Name": "Arcanium Mace of the Breeze",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_the_Pure",
+   "Name": "Arcanium Mace of the Pure",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mace_of_the_Zenith",
+   "Name": "Arcanium Mace of the Zenith",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Magma_Forged_Axe_of_Ruin",
+   "Name": "Arcanium Magma Forged Axe of Ruin",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Magma_Forged_Blade_of_Ruin",
+   "Name": "Arcanium Magma Forged Blade of Ruin",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Malisons_Hammer",
+   "Name": "Arcanium Malison's Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mallet_of_Landrine",
+   "Name": "Arcanium Mallet of Landrine",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Mallet_of_Landrine1",
+   "Name": "Arcanium Mallet of Landrine",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Meloss_Wave_Hammer",
+   "Name": "Arcanium Melos's Wave Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Meloss_Wave_Mace",
+   "Name": "Arcanium Melos's Wave Mace",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Meloss_Wave_Sword",
+   "Name": "Arcanium Melos's Wave Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Meloss_Wave_Sword1",
+   "Name": "Arcanium Melos's Wave Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Miasmic_Pick",
+   "Name": "Arcanium Miasmic Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Miasmic_Sword",
+   "Name": "Arcanium Miasmic Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Moon_Claw_of_Detonation",
+   "Name": "Arcanium Moon Claw of Detonation",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 12,
+   "new": 2,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Axe",
+   "Name": "Arcanium Naxos's Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Tidal_Axe",
+   "Name": "Arcanium Naxos's Tidal Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Tidal_Hammer",
+   "Name": "Arcanium Naxos's Tidal Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Tidal_Mace",
+   "Name": "Arcanium Naxos's Tidal Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Tidal_Sword",
+   "Name": "Arcanium Naxos's Tidal Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Naxoss_Tidal_Sword1",
+   "Name": "Arcanium Naxos's Tidal Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Needle",
+   "Name": "Arcanium Needle",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Negals_Blade-Breaker",
+   "Name": "Arcanium Negal's Blade-Breaker",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Neriad_Sharktooth_Spear",
+   "Name": "Arcanium Neriad Sharktooth Spear",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Petrified_Sword",
+   "Name": "Arcanium Petrified Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Petrified_Tentacle_Axe1",
+   "Name": "Arcanium Petrified Tentacle Axe",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Petrified_Tentacle_Sword",
+   "Name": "Arcanium Petrified Tentacle Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Qebehsenuefs_Blade_of_Dread",
+   "Name": "Arcanium Qebehsenuef's Blade of Dread",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Qebehsenuefs_Blade_of_Dread1",
+   "Name": "Arcanium Qebehsenuef's Blade of Dread",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Rapier_of_Demise",
+   "Name": "Arcanium Rapier of Demise",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Rapier_of_Dissolution",
+   "Name": "Arcanium Rapier of Dissolution",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Reef-Lords_Axe",
+   "Name": "Arcanium Reef-Lord's Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Reef-Lords_Dirk",
+   "Name": "Arcanium Reef-Lord's Dirk",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Reef-Lords_Handaxe",
+   "Name": "Arcanium Reef-Lord's Handaxe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Reef-Lords_Mace",
+   "Name": "Arcanium Reef-Lord's Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Reef-Lords_Toothpick",
+   "Name": "Arcanium Reef-Lord's Toothpick",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Salamander_Tail1",
+   "Name": "Arcanium Salamander Tail",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sap_of_Disdain",
+   "Name": "Arcanium Sap of Disdain",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Scintillating_Blade",
+   "Name": "Arcanium Scintillating Blade",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Scintillating_War_Axe",
+   "Name": "Arcanium Scintillating War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sea_Rotted_Mace",
+   "Name": "Arcanium Sea Rotted Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sea_Rotted_Sword",
+   "Name": "Arcanium Sea Rotted Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Serpent-Blood_War_Axe",
+   "Name": "Arcanium Serpent-Blood War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Serpent-Blood_War_Axe1",
+   "Name": "Arcanium Serpent-Blood War Axe",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Serpentine_War_Axe",
+   "Name": "Arcanium Serpentine War Axe",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Skyross_Glaive",
+   "Name": "Arcanium Skyros's Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Skyross_Sword",
+   "Name": "Arcanium Skyros's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sobekhoteps_Greave",
+   "Name": "Arcanium Sobekhotep's Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Sobekhoteps_Morning_Star",
+   "Name": "Arcanium Sobekhotep's Morning Star",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Sobekhoteps_Whip",
+   "Name": "Arcanium Sobekhotep's Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Spear_of_the_Taur",
+   "Name": "Arcanium Spear of the Taur",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Spiked_Flail_of_the_Zenith",
+   "Name": "Arcanium Spiked Flail of the Zenith",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Statuesque_Coffin_Axe",
+   "Name": "Arcanium Statuesque Coffin Axe",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Statuesque_Great_Sword",
+   "Name": "Arcanium Statuesque Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Statuesque_Sword_of_Stealth",
+   "Name": "Arcanium Statuesque Sword of Stealth",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Cleaver",
+   "Name": "Arcanium Stone Bone Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Crusher",
+   "Name": "Arcanium Stone Bone Crusher",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Cutter",
+   "Name": "Arcanium Stone Bone Cutter",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Grinder1",
+   "Name": "Arcanium Stone Bone Grinder",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Impaler",
+   "Name": "Arcanium Stone Bone Impaler",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Slicer",
+   "Name": "Arcanium Stone Bone Slicer",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Slicer1",
+   "Name": "Arcanium Stone Bone Slicer",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stratus",
+   "Name": "Arcanium Stratus",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Stratus1",
+   "Name": "Arcanium Stratus",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Cobras_Reach1",
+   "Name": "Arcanium Striking Cobra's Reach",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Cobras_Sword",
+   "Name": "Arcanium Striking Cobra's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Serpent_Great_Sword",
+   "Name": "Arcanium Striking Serpent Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Serpent_Great_Sword1",
+   "Name": "Arcanium Striking Serpent Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Serpent_Sword",
+   "Name": "Arcanium Striking Serpent Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Serpent_Trident",
+   "Name": "Arcanium Striking Serpent Trident",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sundering_Axe",
+   "Name": "Arcanium Sundering Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_Casta",
+   "Name": "Arcanium Sword of Casta",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_Demise",
+   "Name": "Arcanium Sword of Demise",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_Disdain",
+   "Name": "Arcanium Sword of Disdain",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_Ruination",
+   "Name": "Arcanium Sword of Ruination",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_Ruination1",
+   "Name": "Arcanium Sword of Ruination",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_the_Storms_Eye",
+   "Name": "Arcanium Sword of the Storm's Eye",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_the_Whispering_Wind",
+   "Name": "Arcanium Sword of the Whispering Wind",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Sword_of_the_Zenith",
+   "Name": "Arcanium Sword of the Zenith",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Tainted_Inquisitors_Pick",
+   "Name": "Arcanium Tainted Inquisitors Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Taurs_Fang",
+   "Name": "Arcanium Taur's Fang",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Thorn",
+   "Name": "Arcanium Thorn",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Thunderous_Cleaver",
+   "Name": "Arcanium Thunderous Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Traitors_Greave",
+   "Name": "Arcanium Traitors Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Traitors_Whip",
+   "Name": "Arcanium Traitors Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Trident_of_Casta",
+   "Name": "Arcanium Trident of Casta",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Trident_of_Demise",
+   "Name": "Arcanium Trident of Demise",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Trident_of_Disdain1",
+   "Name": "Arcanium Trident of Disdain",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Trident_of_the_Zenith",
+   "Name": "Arcanium Trident of the Zenith",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Wesauls_Deft_Cleaver",
+   "Name": "Arcanium Wesaul's Deft Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Wesauls_Fang_Greave",
+   "Name": "Arcanium Wesaul's Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 12,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Wesauls_Featherweight_Hammer",
+   "Name": "Arcanium Wesaul's Featherweight Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Wesauls_War_Spike",
+   "Name": "Arcanium Wesaul's War Spike",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 12,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Arcanium_Wesauls__Featherweight_Axe",
+   "Name": "Arcanium Wesaul's  Featherweight Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Whip_of_the_Storm's_Eye",
+   "Name": "Arcanium Whip of the Storm's Eye",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Whip_of_the_Storms_Eye",
+   "Name": "Arcanium Whip of the Storms Eye",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Dire_Mace",
+   "Name": "Arcanium Whirlwind Dire Mace",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Great_Hammer",
+   "Name": "Arcanium Whirlwind Great Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Great_Sword",
+   "Name": "Arcanium Whirlwind Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Military_Fork",
+   "Name": "Arcanium Whirlwind Military Fork",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Spear",
+   "Name": "Arcanium Whirlwind Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Tall_Hammer",
+   "Name": "Arcanium Whirlwind Tall Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Arcanium_Zahur's_Club",
+   "Name": "Arcanium Zahur's Club",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Zahur's_Hammer",
+   "Name": "Arcanium Zahur's Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Arcanium_Zilistiphles_Claw",
+   "Name": "Arcanium Zilistiphle's Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Arcanium_Zilistiphles_Cleaver",
+   "Name": "Arcanium Zilistiphle's Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Artegs_Deflecting_Great_Falcata",
+   "Name": "Arteg's Deflecting Great Falcata",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Atrocious_Arachnid_Axe",
+   "Name": "Atrocious Arachnid Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Atrocious_Arachnid_Greave",
+   "Name": "Atrocious Arachnid Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Axe_of_the_Half_Orc",
+   "Name": "Axe of the Half Orc",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Bairees_Leg_Bone",
+   "Name": "Bairee's Leg Bone",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Baleful_Greenblud_Mace",
+   "Name": "Baleful Greenblud Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Baleful_Greenblud_Parrying_Mace",
+   "Name": "Baleful Greenblud Parrying Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Balns_Sulfuric_Slicer",
+   "Name": "Baln's Sulfuric Slicer",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Barbed_Whip_of_Reanimation",
+   "Name": "Barbed Whip of Reanimation",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Bedevilled_Afterlife_Axe",
+   "Name": "Bedevilled Afterlife Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Bedevilled_Afterlife_Spear",
+   "Name": "Bedevilled Afterlife Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Bedevilled_Sword",
+   "Name": "Bedevilled Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Benthic_Adze",
+   "Name": "Benthic Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Battleaxe",
+   "Name": "Benthic Battleaxe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Battle_Spear",
+   "Name": "Benthic Battle Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Bishops_Mace",
+   "Name": "Benthic Bishops Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Coffin_Mace",
+   "Name": "Benthic Coffin Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Dire_Hammer",
+   "Name": "Benthic Dire Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Double_Bladed_Axe",
+   "Name": "Benthic Double Bladed Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Falchion",
+   "Name": "Benthic Falchion",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "benthic_fist_wrap",
+   "Name": "Benthic Fist Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Great_Club",
+   "Name": "Benthic Great Club",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Great_Hammer",
+   "Name": "Benthic Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Great_Hammer2",
+   "Name": "Benthic Great Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Great_Sword",
+   "Name": "Benthic Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Great_Sword2",
+   "Name": "Benthic Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Great_Sword3",
+   "Name": "Benthic Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Hammer",
+   "Name": "Benthic Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "benthic_hand_wrap",
+   "Name": "Benthic Hand Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Hooked_Spear",
+   "Name": "Benthic Hooked Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Long_Sword",
+   "Name": "Benthic Long Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Lucerne_Hammer",
+   "Name": "Benthic Lucerne Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Magus_Staff",
+   "Name": "Benthic Magus Staff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Magus_Staff2",
+   "Name": "Benthic Magus Staff",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Magus_Staff3",
+   "Name": "Benthic Magus Staff",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Mauler_Shod_Staff",
+   "Name": "Benthic Mauler Shod Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Mauler_Staff",
+   "Name": "Benthic Mauler Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Military_Fork",
+   "Name": "Benthic Military Fork",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Moon_Claw",
+   "Name": "Benthic Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_Pick_Flail",
+   "Name": "Benthic Pick Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Benthic_Quarterstaff",
+   "Name": "Benthic Quarterstaff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Rapier",
+   "Name": "Benthic Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Short_Sword",
+   "Name": "Benthic Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Short_Sword2",
+   "Name": "Benthic Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_Spiked_Flail",
+   "Name": "Benthic Spiked Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Benthic_Stiletto",
+   "Name": "Benthic Stiletto",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_War_Adze",
+   "Name": "Benthic War Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_War_Axe",
+   "Name": "Benthic War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_War_Hammer",
+   "Name": "Benthic War Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Benthic_War_Pick",
+   "Name": "Benthic War Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Benthic_War_Scythe",
+   "Name": "Benthic War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Blackhearted_Spear",
+   "Name": "Blackhearted Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Black_Ash_Soul_Slayer",
+   "Name": "Black Ash Soul Slayer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Blunted_Tusk_Hammer",
+   "Name": "Blunted Tusk Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Borjads_Spear",
+   "Name": "Borjad's Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Brilliant_Balns_Sulfuric_Slicer",
+   "Name": "Brilliant Baln's Sulfuric Slicer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Brilliant_Cerulescent_Strife_Mace",
+   "Name": "Cerulescent Strife Mace",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Brilliant_Dagger_of_Soulshade",
+   "Name": "Brilliant Dagger of Soulshade",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Hammer_of_the_Soulshade",
+   "Name": "Brilliant Hammer of the Soulshade",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Malroch's_Flaying_Knife",
+   "Name": "Brilliant Malroch's Flaying Knife",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Rod_of_the_Soulshade",
+   "Name": "Brilliant Rod of the Soulshade",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Saeors_Fiery_Hammer",
+   "Name": "Brilliant Saeor's Fiery Hammer",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Saeors_Fiery_Sword",
+   "Name": "Brilliant Saeor's Fiery Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Saeors_Sword",
+   "Name": "Brilliant Saeor's Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Smoldering_Ruby_Spear",
+   "Name": "Brilliant Smoldering Ruby Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Brilliant_Stiletto_of_Light",
+   "Name": "Stiletto of Light",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Brilliant_Stiletto_of_Soulshade",
+   "Name": "Brilliant Stiletto of Soulshade",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Brilliant_Twisted_Evil_Diamond_Scepter",
+   "Name": "Brilliant Twisted Evil Diamond Scepter",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Broken_Piston_Fragment",
+   "Name": "Broken Piston Fragment",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Callejos_Bladed_Fang_Greave",
+   "Name": "Callejo's Bladed Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Cerulescent_Discord_Hammer",
+   "Name": "Cerulescent Discord Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Charn's_Churlish_Dirk",
+   "Name": "Charn's Churlish Dirk",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Charn's_Churlish_Sword",
+   "Name": "Charn's Churlish Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Charon's_Cold_Steel",
+   "Name": "Charon's Cold Steel",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Chieftain_Tocas_Fist",
+   "Name": "Chieftain Toca's Fist",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ciardhals_Calamitous_Axe",
+   "Name": "Ciardhal's Calamitous Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ciardhals_Calamitous_Hammer",
+   "Name": "Ciardhal's Calamitous Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cinereous_Strife_Sword",
+   "Name": "Cinereous Strife Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Clughs_Cleaver",
+   "Name": "Clugh's Cleaver",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Crescent_Reaver",
+   "Name": "Crescent Reaver",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Curis_of_Anticipation",
+   "Name": "Curis of Anticipation",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cursed_Crypt_Hammer",
+   "Name": "Cursed Crypt Hammer",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cursed_Crypt_Jambiya",
+   "Name": "Cursed Crypt Jambiya",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cursed_Crypt_Pole_Axe",
+   "Name": "Cursed Crypt Pole Axe",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cursed_Crypt_Stiletto",
+   "Name": "Cursed Crypt Stiletto",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Cursed_Crypt_Whip",
+   "Name": "Cursed Crypt Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Dagger_of_Dangerous_Tidings",
+   "Name": "Dagger of Dangerous Tidings",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Darkstrike_Fervent_Runed_Coffin_Hammer",
+   "Name": "Darkstrike Fervent Runed Coffin Hammer",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Darting_Warlord_Spear",
+   "Name": "Darting Warlord Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Dealrach_Gorm_Great_Sword",
+   "Name": "Dealrach Gorm Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Dealrach_Sgarlaid_Hammer",
+   "Name": "Dealrach Sgarlaid Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 1,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Death_Knell_Great_Hammer",
+   "Name": "Death Knell Great Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Deliahs_Wand",
+   "Name": "Deliah's Wand",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Demon_Scale_Whip",
+   "Name": "Demon Scale Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Despoiled_Great_Hammer",
+   "Name": "Despoiled Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Devilish_Master's_Spear",
+   "Name": "Devilish Master's Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Devilish_Master's_Sword",
+   "Name": "Devilish Master's Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Director_Botok's_Heavy_Whip",
+   "Name": "Director Botok's Heavy Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Director_Botoks_Heavy_Whip",
+   "Name": "Director Botok's Heavy Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Dirk_of_Fiendish_Fantasy",
+   "Name": "Dirk of Fiendish Fantasy",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Dirk_of_Pandemonium",
+   "Name": "Dirk of Pandemonium",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Doomsong_Bardiche",
+   "Name": "Doomsong Bardiche",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Dorsal_Fin",
+   "Name": "Dorsal Fin",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Draargus_Halberd",
+   "Name": "Dra'argus' Halberd",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Drakoran_Gladius",
+   "Name": "Drakoran Gladius",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Draugr_Commander_Axe",
+   "Name": "Draugr Commander Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Dreaded_Frostbound_Fang",
+   "Name": "Dreaded Frostbound Fang",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Dread_Flail",
+   "Name": "Dread Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Drygaus_Leg_Spear",
+   "Name": "Drygau's Leg Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duraeks__Flanged_Mace",
+   "Name": "Dura'ek's  Flanged Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Cinder",
+   "Name": "Duskwood Cinder",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Cinder1",
+   "Name": "Duskwood Cinder",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Cinder2",
+   "Name": "Duskwood Cinder",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Ember",
+   "Name": "Duskwood Ember",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Ember1",
+   "Name": "Duskwood Ember",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Ember2",
+   "Name": "Duskwood Ember",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Flurry",
+   "Name": "Duskwood Flurry",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 10,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Hrunduns_Cleansing_Flame",
+   "Name": "Duskwood Hrundun's Cleansing Flame",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Landrines_Hammer",
+   "Name": "Duskwood Landrine's Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Duskwood_Spear_of_Ruination",
+   "Name": "Duskwood Spear of Ruination",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Duskwood_Thorn",
+   "Name": "Duskwood Thorn",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Earthen_Excavator",
+   "Name": "Earthen Excavator",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Eiorharn's_Limb_Hewer",
+   "Name": "Eiorharn's Limb Hewer",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "empyrean_bonewalkers_staff",
+   "Name": "Empyrean Bonewalker's Staff",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Erubescent_Strike_Dirk",
+   "Name": "Erubescent Strike Dirk",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Excrucio_Facio",
+   "Name": "Excrucio Facio",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Exhaustive_Adroit_Blighted_Spike_Whip",
+   "Name": "Exhaustive Adroit Blighted Spike Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Exhaustive_Bluntbender_Briny_Duelist_Rapier",
+   "Name": "Exhaustive Bluntbender Briny Duelist Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Fate_Slayer's_Chitin_Leg",
+   "Name": "Fate Slayer's Chitin Leg",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Festering_Great_Hammer",
+   "Name": "Festering Great Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Festering_Reflex_Axe",
+   "Name": "Festering Reflex Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Flail_of_Eternal_Rest",
+   "Name": "Flail of Eternal Rest",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Flawless_Dreaded_Soul_Splitter",
+   "Name": "Flawless Dreaded Soul Splitter",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Flawless_Soul_Tormentors_Claw",
+   "Name": "Flawless Soul Tormentor's Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Dark_Jeweled_Scepter",
+   "Name": "Flawless Twisted Dark Jeweled Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Evil_Diamond_Scepter",
+   "Name": "Flawless Twisted Evil Diamond Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Evil_Emerald_Scepter",
+   "Name": "Flawless Twisted Evil Emerald Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Evil_Malachite_Scepter",
+   "Name": "Flawless Twisted Evil Malachite Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Evil_Peridot_Scepter",
+   "Name": "Flawless Twisted Evil Peridot Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Flawless_Twisted_Evil_Sapphire_Scepter",
+   "Name": "Flawless Twisted Evil Sapphire Scepter",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Forged_Fang",
+   "Name": "Forged Fang",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Frenzied_Blackhearted_Axe",
+   "Name": "Frenzied Blackhearted Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Funereal_Gloom_Rapier",
+   "Name": "Funereal Gloom Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Funereal_Gloom_Short_Sword",
+   "Name": "Funereal Gloom Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gatekeeper's_Large_Hammer",
+   "Name": "Gatekeeper's Large Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Generals_Gavel",
+   "Name": "General's Gavel",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ghostly_Blade_of_Vengence",
+   "Name": "Ghostly Blade of Vengence",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Giant_Barbed_Arrow",
+   "Name": "Giant Barbed Arrow",
+   "Realm": 0,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Giant_Edged_Shard_of_Arcanium",
+   "Name": "Giant Edged Shard of Arcanium",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gladius_of_Otherworld_Fury",
+   "Name": "Gladius of Otherworld Fury",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Glistening_Great_Sword",
+   "Name": "Glistening Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Glistening_Shillelagh",
+   "Name": "Glistening Shillelagh",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Glistening_Stiletto",
+   "Name": "Glistening Stiletto",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Glistening_War_Spear",
+   "Name": "Glistening War Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Glowing_Haggert's_Bane",
+   "Name": "Haggert's Bane",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gnoll's_Sword_of_Battle",
+   "Name": "Gnoll's Sword of Battle",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gnoll-forged_Morning_Star",
+   "Name": "Gnoll-forged Morning Star",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Goblin_Axe_of_Reflex",
+   "Name": "Goblin Axe of Reflex",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Goblin_Fired_Scimitar",
+   "Name": "Goblin Fired Scimitar",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Goblin_Forged_Scimitar",
+   "Name": "Goblin Forged Scimitar",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Gorvos_Bloodied_Mace",
+   "Name": "Gorvos' Bloodied Mace",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gorvos_Frozen_Bardiche",
+   "Name": "Gorvos' Frozen Bardiche",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gorvos_Ice_Blade",
+   "Name": "Gorvos' Ice Blade",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Gracklar's_Grievous_Axe",
+   "Name": "Gracklar's Grievous Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Grannichs_Hammer",
+   "Name": "Grannich's Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Granny's_Needle",
+   "Name": "Granny's Needle",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Grass_Stained_Dagger",
+   "Name": "Grass Stained Dagger",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Great_Sword_of_Fiendish_Fantasy",
+   "Name": "Great Sword of Fiendish Fantasy",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Great_Sword_of_the_Forlorn_Miner",
+   "Name": "Great Sword of the Forlorn Miner",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Great_Sword_of_the_Plutonian_Follower",
+   "Name": "Great Sword of the Plutonian Follower",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Griffon_Talon_Sword",
+   "Name": "Griffon Talon Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Grinning_Gargoyle_Fang",
+   "Name": "Grinning Gargoyle Fang",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Grinning_Gargoyle_Spear",
+   "Name": "Grinning Gargoyle Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Grinning_Gargoyle_Sword",
+   "Name": "Grinning Gargoyle Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_Conquest",
+   "Name": "Hammer of Conquest",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_Eternal_Retribution",
+   "Name": "Hammer of Eternal Retribution",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_Eternal_Retribution1",
+   "Name": "Hammer of Eternal Retribution",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_Intricate_Designs",
+   "Name": "Hammer of Intricate Designs",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_the_Smith",
+   "Name": "Hammer of the Smith",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hammer_of_the_Woebegone_Miner",
+   "Name": "Hammer of the Woebegone Miner",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Heavenly_Light_Hammer",
+   "Name": "Heavenly Light Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Hostile_Garganuan_Giant_Hand_Axe",
+   "Name": "Hostile Garganuan Giant Hand Axe",
+   "Realm": 2,
+   "Object_Type": 17,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Iarnvidiurs_Pilfered_Dagger",
+   "Name": "Iarnvidiur's Pilfered Dagger",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ice_Forged_Battle_Hammer",
+   "Name": "Ice Forged Battle Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ice_Forged_Battle_Sword",
+   "Name": "Ice Forged Battle Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ignition_Adroit_Wind-wrought_Dire_Mace",
+   "Name": "Ignition Adroit Wind-wrought Dire Mace",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Infernal_Daemonite_Rapier",
+   "Name": "Infernal Daemonite Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Jambiya_of_the_Grotesque_Gargoyle",
+   "Name": "Jambiya of the Grotesque Gargoyle",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Jekeels_Cleaver",
+   "Name": "Jekeel's Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Jekeels_Decimator",
+   "Name": "Jekeel's Decimator",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Jekeels_Destroyer",
+   "Name": "Jekeel's Destroyer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Juggernaut_Great_Falcata",
+   "Name": "Juggernaut Great Falcata",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kators_Cutter",
+   "Name": "Kator's Cutter",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Keantoths_Destroyer",
+   "Name": "Keantoth's Destroyer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kels_Sword_of_Justification",
+   "Name": "Kel's Sword of Justification",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Khrin's_Claw",
+   "Name": "Khrin's Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Knuckle_Basher",
+   "Name": "Knuckle Basher",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kobold's_Dirk_of_Expertise",
+   "Name": "Kobold's Dirk of Expertise",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Krackenschteins_Broadsword",
+   "Name": "Krackenschtein's Broadsword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Krackenschteins_Great_Sword",
+   "Name": "Krackenschtein's Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kul's_Iron-tipped_Whip",
+   "Name": "Kul's Iron-tipped Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kul's_Spiked_Chain",
+   "Name": "Kul's Spiked Chain",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kuls_Iron-tipped_Whip",
+   "Name": "Kul's Iron-tipped Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kuls_Spiked_Chain",
+   "Name": "Kul's Spiked Chain",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Kvasirs_Sword_of_Blight",
+   "Name": "Kvasir's Sword of Blight",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Large_Blade_of_the_Lunatic",
+   "Name": "Large Blade of the Lunatic",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Legions_Soul_Crusher",
+   "Name": "Legion's Soul Crusher",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Adze",
+   "Name": "Lithic Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_battleaxe",
+   "Name": "Lithic Battleaxe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_battle_spear",
+   "Name": "Lithic Battle Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Bishops_Mace",
+   "Name": "Lithic Bishops Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Coffin_Mace",
+   "Name": "Lithic Coffin Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_dire_hammer",
+   "Name": "Lithic Dire Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_double_bladed_axe",
+   "Name": "Lithic Double Bladed Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Falchion",
+   "Name": "Lithic Falchion",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_fist_wrap",
+   "Name": "Lithic Fist Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_great_club",
+   "Name": "Lithic Great Club",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Great_Hammer",
+   "Name": "Lithic Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Lithic_Great_Hammer2",
+   "Name": "Lithic Great Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 14,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "lithic_great_sword",
+   "Name": "Lithic Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Lithic_Great_Sword2",
+   "Name": "Lithic Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 14,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Lithic_Great_Sword3",
+   "Name": "Lithic Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Hammer",
+   "Name": "Lithic Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_hand_wrap",
+   "Name": "Lithic Hand Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_hooked_spear",
+   "Name": "Lithic Hooked Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 14,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Lithic_Longsword",
+   "Name": "Lithic Longsword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Long_Sword",
+   "Name": "Lithic Long Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Lucerne_Hammer",
+   "Name": "Lithic Lucerne Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 14,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "lithic_magus_staff",
+   "Name": "Lithic Magus Staff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Magus_Staff2",
+   "Name": "Lithic Magus Staff",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Magus_Staff3",
+   "Name": "Lithic Magus Staff",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Mauler_Shod_Staff",
+   "Name": "Lithic Mauler Shod Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Mauler_Shod_Staff3",
+   "Name": "Lithic Mauler Shod Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Mauler_Staff",
+   "Name": "Lithic Mauler Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Military_Fork",
+   "Name": "Lithic Military Fork",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 14,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "lithic_moon_claw",
+   "Name": "Lithic Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 14,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Lithic_Pick_Flail",
+   "Name": "Lithic Pick Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Lithic_Quarterstaff",
+   "Name": "Lithic Quarterstaff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Rapier",
+   "Name": "Lithic Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Short_Sword",
+   "Name": "Lithic Short Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_Short_Sword2",
+   "Name": "Lithic Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_spiked_flail",
+   "Name": "Lithic Spiked Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Lithic_Stiletto",
+   "Name": "Lithic Stiletto",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_War_Adze",
+   "Name": "Lithic War Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 14,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "lithic_war_axe",
+   "Name": "Lithic War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_War_Hammer",
+   "Name": "Lithic War Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 14,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Lithic_War_Pick",
+   "Name": "Lithic War Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 14,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "lithic_war_scythe",
+   "Name": "Lithic War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 14,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Luminescent_Sickle_of_the_Unicorn",
+   "Name": "Luminescent Sickle of the Unicorn",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Cleaver",
+   "Name": "Luminous Malroch's Cleaver",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Cleaver",
+   "Name": "Malroch's Flawless Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Cleaver1",
+   "Name": "Malroch's Flawless Cleaver",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Cleaver2",
+   "Name": "Malroch's Flawless Cleaver",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Flaying_Knife",
+   "Name": "Malroch's Flawless Flaying Knife",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Flaying_Knife1",
+   "Name": "Malroch's Flawless Flaying Knife",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Flaying_Knife2",
+   "Name": "Malroch's Flawless Flaying Knife",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Tenderizer",
+   "Name": "Malroch's Flawless Tenderizer",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Luminous_Malroch's_Flawless_Tenderizer1",
+   "Name": "Malroch's Flawless Tenderizer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Lustrous_Director's_Devastator",
+   "Name": "Director's Devastator",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Lustrous_Fomorians_Betrayal",
+   "Name": "Fomorian's Betrayal",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mace_of_Arachnophobia",
+   "Name": "Mace of Arachnophobia",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mace_of_Reanimation",
+   "Name": "Mace of Reanimation",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mace_of_Spores",
+   "Name": "Mace of Spores",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mace_of_the_Gargantuan",
+   "Name": "Mace of the Gargantuan",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mace_of_the_Watery_Underground",
+   "Name": "Mace of the Watery Underground",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 12,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Dagger",
+   "Name": "Maleficent Darkspire Dagger",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Dire_Rapier",
+   "Name": "Maleficent Darkspire Dire Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Dire_Sword",
+   "Name": "Maleficent Darkspire Dire Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Dirk",
+   "Name": "Maleficent Darkspire Dirk",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Great_Hammer",
+   "Name": "Maleficent Darkspire Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Great_Sword",
+   "Name": "Maleficent Darkspire Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Halberd",
+   "Name": "Maleficent Darkspire Halberd",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Hammer",
+   "Name": "Maleficent Darkspire Hammer",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Martial_Mace",
+   "Name": "Maleficent Darkspire Martial Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Martial_Rapier",
+   "Name": "Maleficent Darkspire Martial Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Martial_Sword",
+   "Name": "Maleficent Darkspire Martial Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Mattock",
+   "Name": "Maleficent Darkspire Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Mattrock",
+   "Name": "Maleficent Darkspire Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Morning_Star",
+   "Name": "Maleficent Darkspire Morning Star",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Pike",
+   "Name": "Maleficent Darkspire Pike",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Spiked_Hammer",
+   "Name": "Maleficent Darkspire Spiked Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Maleficent_Darkspire_Whip",
+   "Name": "Maleficent Darkspire Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Malevolent_Great_Sword",
+   "Name": "Malevolent Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Malroch's_Cleaver",
+   "Name": "Malroch's Cleaver",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Margs_Big_Slasher",
+   "Name": "Marg's Big Slasher",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mattock_of_Decimation",
+   "Name": "Mattock of Decimation",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Meandering_Dreams_Mace",
+   "Name": "Meandering Dreams Mace",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Miasmatic_Axe",
+   "Name": "Miasmatic Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Militia_Great_Mace_of_Night",
+   "Name": "Militia Great Mace of Night",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Militia_Great_Sword_of_Light",
+   "Name": "Militia Great Sword of Light",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Mithril_Grishkars_Deflecting_Sword",
+   "Name": "Mithril Grishkar's Deflecting Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Mithril_Grishkars_Dodging_Axe",
+   "Name": "Mithril Grishkar's Dodging Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Mithril_Grishkars_Feather-weight_Trident",
+   "Name": "Mithril Grishkar's Feather-weight Trident",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 15,
+   "new": 3,
+   "how": "model"
+  },
+  {
+   "Id_nb": "Mithril_Grishkars_Shielding_Hammer",
+   "Name": "Mithril Grishkar's Shielding Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Monstrous_Proboscis",
+   "Name": "Monstrous Proboscis",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Morning_Star_of_Entrancing_Reverie",
+   "Name": "Morning Star of Entrancing Reverie",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Morvalt_Bladed_Ericril",
+   "Name": "Morvalt Bladed Ericril",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Murderer",
+   "Name": "Murderer",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Murois_Weighted_Battlemace",
+   "Name": "Muroi's Weighted Battlemace",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Night's_Essence_Mattock",
+   "Name": "Night's Essence Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Nightmare_Fang",
+   "Name": "Nightmare Fang",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Niveous_Effluvium_Lochaber_Axe",
+   "Name": "Niveous Effluvium Lochaber Axe",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Noble_Arcane_Great_Sword",
+   "Name": "Noble Arcane Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Noble_Arcane_Rapier",
+   "Name": "Noble Arcane Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Noble_Arcane_Spear",
+   "Name": "Noble Arcane Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Noble_Arcane_War_Scythe",
+   "Name": "Noble Arcane War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Nokkvis_Vile_Slayer",
+   "Name": "Nokkvi_s Vile Slayer",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Numinous_Hammer_of_Numsi",
+   "Name": "Numinous Hammer of Numsi",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Numious_Scythe_of_Numsi",
+   "Name": "Numious Scythe of Numsi",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Obsidian_Inferno_Blade",
+   "Name": "Obsidian Inferno Blade",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Orcish_Otherworld_Scimitar",
+   "Name": "Orcish Otherworld Scimitar",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Otherworld_Espionage_Whip",
+   "Name": "Otherworld Espionage Whip",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Outcast_Gnoll_Hammer",
+   "Name": "Outcast Gnoll Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Outcast_Half_Orc_Mace",
+   "Name": "Outcast Half Orc Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Outcast_Half_Orc_Sword",
+   "Name": "Outcast Half Orc Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pester's_Barbed_Tail",
+   "Name": "Pester's Barbed Tail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 14,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pestilent_Sickle",
+   "Name": "Pestilent Sickle",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pestulant_War_Scythe",
+   "Name": "Pestulant War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Petrified_Syver_Spear",
+   "Name": "Petrified Syver Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pike_of_the_Watery_Underground",
+   "Name": "Pike of the Watery Underground",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pitted_Beven's_Blade",
+   "Name": "Pitted Beven's Blade",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 11,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pitted_Director's_Devastator",
+   "Name": "Pitted Director's Devastator",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Possessed_Afterlife_Sword",
+   "Name": "Possessed Afterlife Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Primeval_Great_Tusk_Hammer",
+   "Name": "Primeval Great Tusk Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Prismatic_Falcata",
+   "Name": "Prismatic Falcata",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Adze",
+   "Name": "Pyroclasmic Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_battleaxe",
+   "Name": "Pyroclasmic Battleaxe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_battle_spear",
+   "Name": "Pyroclasmic Battle Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Bishops_Mace",
+   "Name": "Pyroclasmic Bishops Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Coffin_Mace",
+   "Name": "Pyroclasmic Coffin Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Dire_Hammer",
+   "Name": "Pyroclasmic Dire Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Double_Bladed_Axe",
+   "Name": "Pyroclasmic Double Bladed Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Falchion",
+   "Name": "Pyroclasmic Falchion",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_fist_wrap",
+   "Name": "Pyroclasmic Fist Wrap",
+   "Realm": 1,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_great_club",
+   "Name": "Pyroclasmic Great Club",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Great_Hammer",
+   "Name": "Pyroclasmic Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Great_Hammer2",
+   "Name": "Pyroclasmic Great Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "pyroclasmic_great_sword",
+   "Name": "Pyroclasmic Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Great_Sword2",
+   "Name": "Pyroclasmic Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Great_Sword3",
+   "Name": "Pyroclasmic Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Hammer",
+   "Name": "Pyroclasmic Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_hand_wrap",
+   "Name": "Pyroclasmic Hand Wrap",
+   "Realm": 1,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_hooked_spear",
+   "Name": "Pyroclasmic Hooked Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Longsword",
+   "Name": "Pyroclasmic Longsword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Long_Sword",
+   "Name": "Pyroclasmic Longsword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Lucerne_Hammer",
+   "Name": "Pyroclasmic Lucerne Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "pyroclasmic_magus_staff",
+   "Name": "Pyroclasmic Magus Staff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Magus_Staff2",
+   "Name": "Pyroclasmic Magus Staff",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Magus_Staff3",
+   "Name": "Pyroclasmic Magus Staff",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Mauler_Shod_Staff",
+   "Name": "Pyroclasmic Mauler Shod Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Mauler_Staff",
+   "Name": "Pyroclasmic Mauler Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Military_Fork",
+   "Name": "Pyroclasmic Military Fork",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "pyroclasmic_moon_claw",
+   "Name": "Pyroclasmic Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Pick_Flail",
+   "Name": "Pyroclasmic Pick Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Quarterstaff",
+   "Name": "Pyroclasmic Quarterstaff",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Rapier",
+   "Name": "Pyroclasmic Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Short_Sword",
+   "Name": "Pyroclasmic Short Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Short_Sword2",
+   "Name": "Pyroclasmic Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_spiked_flail",
+   "Name": "Pyroclasmic Spiked Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Pyroclasmic_Stiletto",
+   "Name": "Pyroclasmic Stiletto",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_war_adze",
+   "Name": "Pyroclasmic War Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_war_axe",
+   "Name": "Pyroclasmic War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "pyroclasmic_war_hammer",
+   "Name": "Pyroclasmic War Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Pyroclasmic_War_Pick",
+   "Name": "Pyroclasmic War Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "pyroclasmic_war_scythe",
+   "Name": "Pyroclasmic War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Quixotic_Quarry_Dagger",
+   "Name": "Quixotic Quarry Dagger",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Quixotic_Quarry_Spear",
+   "Name": "Quixotic Quarry Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Rapier_of_Begrudging_Fealty",
+   "Name": "Rapier of Begrudging Fealty",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Rapier_of_the_Forsaken",
+   "Name": "Rapier of the Forsaken",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Ratfang",
+   "Name": "Ratfang",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Rawrs_Whip_of_Raucousness",
+   "Name": "Rawr's Whip of Raucousness",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Regurgitated_Hammer",
+   "Name": "Regurgitated Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Renders_Bone_Breaker",
+   "Name": "Render's Bone Breaker",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Rocksmasher",
+   "Name": "Rocksmasher",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Royal_Arcane_Great_Sword",
+   "Name": "Royal Arcane Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Royal_Arcane_Morning_Star",
+   "Name": "Royal Arcane Morning Star",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Royal_Arcane_Sword",
+   "Name": "Royal Arcane Sword",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Royal_Arcane_War_Mattock",
+   "Name": "Royal Arcane War Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Runic_Granite_Great_Sword",
+   "Name": "Runic Granite Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sallours_War_Cleaver",
+   "Name": "Sallours' War Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sarel_Sebian_Smasher",
+   "Name": "Sarel Sebian Smasher",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Scimitar_of_Snarg",
+   "Name": "Scimitar of Snarg",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Scoundrels_Rapier",
+   "Name": "Scoundrel's Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Scoundrels_Sword",
+   "Name": "Scoundrel's Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Screaks_Tooth_Sword",
+   "Name": "Screak's Tooth Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Scythe_of_Despairing_Souls",
+   "Name": "Scythe of Despairing Souls",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Scythe_of_Labyrinthine_Corridors",
+   "Name": "Scythe of Labyrinthine Corridors",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sectum_Debello",
+   "Name": "Sectum Debello",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shadow_Bound_Great_Axe",
+   "Name": "Shadow Bound Great Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shadow_Bound_Great_Sword",
+   "Name": "Shadow Bound Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shadow_Bound_Moon_Claw",
+   "Name": "Shadow Bound Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 15,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Shadow_Crystal_Great_Mace",
+   "Name": "Shadow Crystal Great Mace",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shadow_Crystal_Great_Sword",
+   "Name": "Shadow Crystal Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shard_of_Light",
+   "Name": "Shard of Light",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Adremels_Avernal_Impaler",
+   "Name": "Shimmering Adremel's Avernal Impaler",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Shimmering_Adremels_Flawless_Avernal_Hammer",
+   "Name": "Shimmering Adremel's Flawless Avernal Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Shimmering_Adremels_Flawless_Avernal_Impaler",
+   "Name": "Shimmering Adremel's Flawless Avernal Impaler",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 3,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Shimmering_Balns_Flawless_Fuliginous_Cleaver1",
+   "Name": "Baln's Flawless Fuliginous Cleaver",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Shimmering_Basher_of_Undetectable_Wounds",
+   "Name": "Basher of Undetectable Wounds",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Blazing_Fortifying_Arcane_War_Axe",
+   "Name": "Shimmering Blazing Fortifying Arcane War Axe",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Cralch_MeVult_Stone_Hammer",
+   "Name": "Cralch Me'vult Stone Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Crescent_of_Light",
+   "Name": "Crescent of Light",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Cured_Drakoran_Tail_and_Spine",
+   "Name": "Cured Drakoran Tail and Spine",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Dagars_Battle_Hammer",
+   "Name": "Dagar's Battle Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Dagars_Great_Axe",
+   "Name": "Dagar's Great Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Dagars_Great_Spiked_Hammer",
+   "Name": "Dagar's Great Spiked Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Diamond_Mattock",
+   "Name": "Diamond Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Dirk_of_Agonism",
+   "Name": "Shimmering Dirk of Agonism",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Doomsong_Guard",
+   "Name": "Doomsong Guard",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Erubescent_Discord_Short_Sword",
+   "Name": "Erubescent Discord Short Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Fiacha_Quas_Claw",
+   "Name": "Fiacha Qua's Claw",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Fiery_Headsman's_Axe",
+   "Name": "Fiery Headsman's Axe",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Hammer_of_the_Soulshade",
+   "Name": "Flawless Hammer of the Soulshade",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Rod_of_the_Dark_Soul",
+   "Name": "Flawless Rod of the Dark Soul",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Rod_of_the_Soulshade",
+   "Name": "Flawless Rod of the Soulshade",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Rod_of_the_Soulshade1",
+   "Name": "Flawless Rod of the Soulshade",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Twisted_Evil_Amber_Scepter",
+   "Name": "Shimmering Flawless Twisted Evil Amber Scepter",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Twisted_Evil_Ivory_Scepter",
+   "Name": "Flawless Twisted Evil Ivory Scepter",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Twisted_Evil_Jade_Scepter",
+   "Name": "Flawless Twisted Evil Jade Scepter",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Twisted_Evil_Onyx_Scepter",
+   "Name": "Flawless Twisted Evil Onyx Scepter",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Twisted_Evil_Ruby_Scepter",
+   "Name": "Shimmering Flawless Twisted Evil Ruby Scepter",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Flawless_Vexed_Evil_Sapphire_Scepter",
+   "Name": "Shimmering Flawless Vexed Evil Sapphire Scepter",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Gatekeeper's_Bone_Trident",
+   "Name": "Gatekeeper's Bone Trident",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Gnawed_Bone",
+   "Name": "Gnawed Bone",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Golden_Alloy_Great_Sword",
+   "Name": "Golden Alloy Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Gruls_Glorious_Trident",
+   "Name": "Grul's Glorious Trident",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Gruls_Spear",
+   "Name": "Grul's Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Halberd_of_the_Cursed_Defender",
+   "Name": "Halberd of the Cursed Defender",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Icebound_Effluvium_Warhammer",
+   "Name": "Icebound Effluvium Warhammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Lusos_Claws",
+   "Name": "Luso's Claws",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 12,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Shimmering_Nesnuirs_Spiked_Axe",
+   "Name": "Nesnuir's Spiked Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Norse_Shoulder_Bone_Axe",
+   "Name": "Norse Shoulder Bone Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Oghamist_Pick_Hammer",
+   "Name": "Oghamist Pick Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Oros_Flawless_Stiletto_of_Night",
+   "Name": "Oro's Flawless Stiletto of Night",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Polished_Hammer_of_Eldspar",
+   "Name": "Polished Hammer of Eldspar",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Raven_Clan_Battle_Sword",
+   "Name": "Raven Clan Battle Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Saeors_Flawless_Fiery_Flail",
+   "Name": "Saeor's Flawless Fiery Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Saeors_Flawless_Serrated_Cleaver",
+   "Name": "Saeor's Flawless Serrated Cleaver",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Scale_Crusher",
+   "Name": "Scale Crusher",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Solemn_Destroyer",
+   "Name": "Solemn Destroyer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Soul_Forge",
+   "Name": "Soul Forge",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Stately_Arcane_Sword",
+   "Name": "Stately Arcane Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Sword_of_the_Tormented_Soul",
+   "Name": "Sword of the Tormented Soul",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shimmering_Twisted_Evil_Ruby_Scepter",
+   "Name": "Shimmering Twisted Evil Ruby Scepter",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Shimmering_Verdant_Justice",
+   "Name": "Verdant Justice",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Shiv_of_Shadows",
+   "Name": "Shiv of Shadows",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Short_Sword_of_Eternal_Retribution",
+   "Name": "Short Sword of Eternal Retribution",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Short_Sword_of_Eternal_Retribution1",
+   "Name": "Short Sword of Eternal Retribution",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sibylline_Club",
+   "Name": "Sibylline Club",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sibylline_Sword",
+   "Name": "Sibylline Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sight_Blighter",
+   "Name": "Sight Blighter",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sinister_Miasmatic_Axe",
+   "Name": "Sinister Miasmatic Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sinister_Rocksmasher",
+   "Name": "Sinister Rocksmasher",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Slender_Skuggande_Leg",
+   "Name": "Slender Skuggande Leg",
+   "Realm": 2,
+   "Object_Type": 8,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Slime_Jambiya_of_Reflex",
+   "Name": "Slime Jambiya of Reflex",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Snarg's_Shank",
+   "Name": "Snarg's Shank",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Soulripper",
+   "Name": "Soulripper",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Soul_Torn_Demon_Mace",
+   "Name": "Soul Torn Demon Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Spear_of_Decimation",
+   "Name": "Spear of Decimation",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Spear_of_Lifeless_Dreams",
+   "Name": "Spear of Lifeless Dreams",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Spear_of_the_Cave_Mauler",
+   "Name": "Spear of the Cave Mauler",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Spear_of_the_Elements",
+   "Name": "Spear of the Elements",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Spore_Cloud_Spear",
+   "Name": "Spore Cloud Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 12,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Stately_Arcane_Spiked_Axe",
+   "Name": "Stately Arcane Spiked Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Strong_Fist_Dagger",
+   "Name": "Strong Fist Dagger",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Strong_Fist_Sword",
+   "Name": "Strong Fist Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sunless_Dweller's_Dagger",
+   "Name": "Sunless Dweller's Dagger",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Haunted_Visions",
+   "Name": "Sword of Haunted Visions",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Lifeless_Dreams",
+   "Name": "Sword of Lifeless Dreams",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Necromantic_Illusions",
+   "Name": "Sword of Necromantic Illusions",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 14,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Obeisance",
+   "Name": "Sword of Obeisance",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 10,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Sword_of_Pandemonium",
+   "Name": "Sword of Pandemonium",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Sorrow",
+   "Name": "Sword of Sorrow",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Sword_of_Sorrow1",
+   "Name": "Sword of Sorrow",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Syssros_Dirk",
+   "Name": "Sys'sro's Dirk",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Syssros_War_Mace",
+   "Name": "Sys'sro's War Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 12,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Tempestuous_Adze",
+   "Name": "Tempestuous Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Bishops_Mace",
+   "Name": "Tempestuous Bishops Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Coffin_Mace",
+   "Name": "Tempestuous Coffin Mace",
+   "Realm": 1,
+   "Object_Type": 2,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Dire_Hammer",
+   "Name": "Tempestuous Dire Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Double_Bladed_Axe",
+   "Name": "Tempestuous Double Bladed Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Falchion",
+   "Name": "Tempestuous Falchion",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "tempestuous_fist_wrap",
+   "Name": "Tempestuous Fist Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Club",
+   "Name": "Tempestuous Great Club",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Hammer",
+   "Name": "Tempestuous Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Hammer2",
+   "Name": "Tempestuous Great Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 15,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Sword",
+   "Name": "Tempestuous Great Sword",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Sword2",
+   "Name": "Tempestuous Great Sword",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 15,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Great_Sword3",
+   "Name": "Tempestuous Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Hammer",
+   "Name": "Tempestuous Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "tempestuous_hand_wrap",
+   "Name": "Tempestuous Hand Wrap",
+   "Realm": 1,
+   "Object_Type": 27,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Hooked_Spear",
+   "Name": "Tempestuous Hooked Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 15,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Longsword",
+   "Name": "Tempestuous Longsword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Long_Sword",
+   "Name": "Tempestuous Long Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Lucerne_Hammer",
+   "Name": "Tempestuous Lucerne Hammer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 15,
+   "new": 1,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Magus_Staff2",
+   "Name": "Tempestuous Magus Staff",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Mauler_Shod_Staff",
+   "Name": "Tempestuous Mauler Shod Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Mauler_Staff",
+   "Name": "Tempestuous Mauler Staff",
+   "Realm": 0,
+   "Object_Type": 28,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Military_Fork",
+   "Name": "Tempestuous Military Fork",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 15,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Moon_Claw",
+   "Name": "Tempestuous Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 15,
+   "new": 2,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_Pick_Flail",
+   "Name": "Tempestuous Pick Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 15,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Tempestuous_Rapier",
+   "Name": "Tempestuous Rapier",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Short_Sword",
+   "Name": "Tempestuous Short Sword",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_Spiked_Flail",
+   "Name": "Tempestuous Spiked Flail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 15,
+   "new": 1,
+   "how": "name-word"
+  },
+  {
+   "Id_nb": "Tempestuous_Stiletto",
+   "Name": "Tempestuous Stiletto",
+   "Realm": 1,
+   "Object_Type": 4,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_War_Adze",
+   "Name": "Tempestuous War Adze",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 15,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_War_Axe",
+   "Name": "Tempestuous War Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_War_Hammer",
+   "Name": "Tempestuous War Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 15,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Tempestuous_War_Pick",
+   "Name": "Tempestuous War Pick",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": 3,
+   "how": "herald-stem"
+  },
+  {
+   "Id_nb": "Tempestuous_War_Scythe",
+   "Name": "Tempestuous War Scythe",
+   "Realm": 3,
+   "Object_Type": 26,
+   "old": 15,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Thuxras_Rooty_Spear",
+   "Name": "Thuxra's Rooty Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Thuxras_Twiggy_Spear",
+   "Name": "Thuxra's Twiggy Spear",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Treibh_Shaman_Reflex_Blade",
+   "Name": "Treibh Shaman Reflex Blade",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Treibh_Shaman_Reflex_Hammer",
+   "Name": "Treibh Shaman Reflex Hammer",
+   "Realm": 3,
+   "Object_Type": 20,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Treibh_Shaman_Reflex_Rapier",
+   "Name": "Treibh Shaman Reflex Rapier",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 13,
+   "new": 3,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Trident_of_Light",
+   "Name": "Trident of Light",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Trident_of_Night",
+   "Name": "Trident of Night",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Troloss_Twig_Cutter",
+   "Name": "Troloss' Twig Cutter",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 10,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Trophy_of_a_Thane",
+   "Name": "Trophy of a Thane",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "Vengeance_of_Deliah",
+   "Name": "Vengeance of Deliah",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Venom-doused_Sickle",
+   "Name": "Venom-doused Sickle",
+   "Realm": 0,
+   "Object_Type": 19,
+   "old": 12,
+   "new": 2,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Venomspire",
+   "Name": "Venomspire",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Veraerius_Great_Hammer",
+   "Name": "Vera'erius' Great Hammer",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Verdant_Honor",
+   "Name": "Verdant Honor",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Vicarious_Spider_Blade",
+   "Name": "Vicarious Spider Blade",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Bracing_Arch_Hammer",
+   "Name": "Villianous Darkspire Bracing Arch Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Claw_Greave",
+   "Name": "Villianous Darkspire Claw Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Dire_Axe",
+   "Name": "Villianous Darkspire Dire Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Dire_Sword",
+   "Name": "Villianous Darkspire Dire Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Great_Axe",
+   "Name": "Villianous Darkspire Great Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Great_Sword",
+   "Name": "Villianous Darkspire Great Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Hand_Axe",
+   "Name": "Villianous Darkspire Hand Axe",
+   "Realm": 2,
+   "Object_Type": 17,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Martial_Arch_Hammer",
+   "Name": "Villianous Darkspire Martial Arch Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Martial_Axe",
+   "Name": "Villianous Darkspire Martial Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Martial_Hammer",
+   "Name": "Villianous Darkspire Martial Hammer",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Martial_Sword",
+   "Name": "Villianous Darkspire Martial Sword",
+   "Realm": 2,
+   "Object_Type": 11,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Moon_Claw",
+   "Name": "Villianous Darkspire Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Villianous_Darkspire_Spear",
+   "Name": "Villianous Darkspire Spear",
+   "Realm": 2,
+   "Object_Type": 14,
+   "old": 11,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Vronks_Goblin_Greave",
+   "Name": "Vronk's Goblin Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Vumsis_Spear_of_Vengeance",
+   "Name": "Vumsi's Spear of Vengeance",
+   "Realm": 3,
+   "Object_Type": 23,
+   "old": 13,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Vumsis_Sword_of_Vengeance",
+   "Name": "Vumsi's Sword of Vengeance",
+   "Realm": 3,
+   "Object_Type": 19,
+   "old": 12,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "War_Cleaver_of_the_Kobold_Recluse",
+   "Name": "War Cleaver of the Kobold Recluse",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Weaponmaster's_Axe",
+   "Name": "Weaponmaster's Axe",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 15,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Wenoiaks_Boom_Stick",
+   "Name": "Weno'iak's Boom Stick",
+   "Realm": 1,
+   "Object_Type": 8,
+   "old": 13,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Wugaks_Big_Hammer",
+   "Name": "Wugak's Big Hammer",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Wulfen Blight Claw",
+   "Name": "Wulfen Blight Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Wulfen_Blight_Claw",
+   "Name": "Wulfen Blight Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": 3,
+   "how": "herald-any"
+  },
+  {
+   "Id_nb": "Wulfen_Night_Fang",
+   "Name": "Wulfen Night Fang",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Xagas_Enshrouded_Staff",
+   "Name": "Xaga's Enshrouded Staff",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Xagas_Tethered_Staff",
+   "Name": "Xaga's Tethered Staff",
+   "Realm": 3,
+   "Object_Type": 8,
+   "old": 11,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Zenith's_Cleaver_of_Keenness",
+   "Name": "Zenith's Cleaver of Keenness",
+   "Realm": 2,
+   "Object_Type": 13,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Zenith's_Hammer_of_Power",
+   "Name": "Zenith's Hammer of Power",
+   "Realm": 2,
+   "Object_Type": 12,
+   "old": 10,
+   "new": 1,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Zogg's_Great_Sword_of_Zeal",
+   "Name": "Zogg's Great Sword of Zeal",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": 2,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "Zogg's_Rapier_of_Zeal",
+   "Name": "Zogg's Rapier of Zeal",
+   "Realm": 3,
+   "Object_Type": 21,
+   "old": 10,
+   "new": 3,
+   "how": "herald-realm"
+  },
+  {
+   "Id_nb": "cq_alb_golden_scimitar",
+   "Name": "Golden Scimitar",
+   "Realm": 1,
+   "Object_Type": 3,
+   "old": 12,
+   "new": 2,
+   "how": "objtype"
+  },
+  {
+   "Id_nb": "offline50_20261027_c60_s12_t28",
+   "Name": "Offline level 50 Mauler 28/12",
+   "Realm": 1,
+   "Object_Type": 28,
+   "old": 13,
+   "new": 1,
+   "how": "objtype"
+  }
+ ],
+ "unresolved": [
+  {
+   "Id_nb": "Arcanite_Akils_Storm",
+   "Name": "Arcanite Akil's Storm",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Astral_Divine_Light",
+   "Name": "Arcanite Astral Divine Light",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Cyclopean_Cloud_Chaser",
+   "Name": "Arcanite Cyclopean Cloud Chaser",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Cyclopean_Cloud_Driver",
+   "Name": "Arcanite Cyclopean Cloud Driver",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Cyclopean_Cloud_Shaper",
+   "Name": "Arcanite Cyclopean Cloud Shaper",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Cyclopean_Sky_Scraper",
+   "Name": "Arcanite Cyclopean Sky Scraper",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Grand_Troll_Splitter",
+   "Name": "Arcanite Grand Troll Splitter",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite_Stone_Bone_Grinder",
+   "Name": "Arcanite Stone Bone Grinder",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanite__Whirlwind_Troll_Splitter",
+   "Name": "Arcanite  Whirlwind Troll Splitter",
+   "Realm": 3,
+   "Object_Type": 22,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Akils_Storm1",
+   "Name": "Arcanium Akil's Storm",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Astral_Divine_Light",
+   "Name": "Arcanium Astral Divine Light",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Chain_of_Detonation",
+   "Name": "Arcanium Chain of Detonation",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Chain_of_Ruination",
+   "Name": "Arcanium Chain of Ruination",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Chaser",
+   "Name": "Arcanium Cyclopean Cloud Chaser",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Driver",
+   "Name": "Arcanium Cyclopean Cloud Driver",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Cloud_Gatherer",
+   "Name": "Arcanium Cyclopean Cloud Gatherer",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Cyclopean_Sky_Scraper",
+   "Name": "Arcanium Cyclopean Sky Scraper",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Desert_Venom_Vanquisher",
+   "Name": "Arcanium Desert Venom Vanquisher",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 12,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Fang_of_the_Tainted",
+   "Name": "Arcanium Fang of the Tainted",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Glaive_of_Detonation",
+   "Name": "Arcanium Glaive of Detonation",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 12,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Hissing_Claw_Greave",
+   "Name": "Arcanium Hissing Claw Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 14,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Salamander_Tail",
+   "Name": "Arcanium Salamander Tail",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Salamander_Tail2",
+   "Name": "Arcanium Salamander Tail",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Serpentine_Moon_Claw",
+   "Name": "Arcanium Serpentine Moon Claw",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Skyros_Glaive",
+   "Name": "Arcanium Skyro's Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Stone_Bone_Grinder",
+   "Name": "Arcanium Stone Bone Grinder",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Striking_Cobras_Reach",
+   "Name": "Arcanium Striking Cobra's Reach",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Taurs_Wrath",
+   "Name": "Arcanium Taurs Wrath",
+   "Realm": 1,
+   "Object_Type": 24,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Arcanium_Whirlwind_Saracen_Glaive",
+   "Name": "Arcanium Whirlwind Saracen Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 10,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Benthic_Fang_Greave",
+   "Name": "Benthic Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Benthic_Glaive",
+   "Name": "Benthic Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Glowing_Sebian_War_Mattock",
+   "Name": "Sebian War Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Legions_Flawless_Soul_Splitter",
+   "Name": "Legion's Flawless Soul Splitter",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "lithic_fang_greave",
+   "Name": "Lithic Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 14,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "lithic_glaive",
+   "Name": "Lithic Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 14,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Pitted_Whisperer_of_Death",
+   "Name": "Pitted Whisperer of Death",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 11,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "pyroclasmic_fang_greave",
+   "Name": "Pyroclasmic Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "pyroclasmic_glaive",
+   "Name": "Pyroclasmic Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Royal_Arcane_Mattock",
+   "Name": "Royal Arcane Mattock",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 15,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Shimmering_Beliathans_Ravager",
+   "Name": "Shimmering Beliathan's Ravager",
+   "Realm": 1,
+   "Object_Type": 6,
+   "old": 13,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Tempestuous_Fang_Greave",
+   "Name": "Tempestuous Fang Greave",
+   "Realm": 2,
+   "Object_Type": 25,
+   "old": 15,
+   "new": null,
+   "how": null
+  },
+  {
+   "Id_nb": "Tempestuous_Glaive",
+   "Name": "Tempestuous Glaive",
+   "Realm": 1,
+   "Object_Type": 7,
+   "old": 15,
+   "new": null,
+   "how": null
+  }
+ ],
+ "protected": []
+}

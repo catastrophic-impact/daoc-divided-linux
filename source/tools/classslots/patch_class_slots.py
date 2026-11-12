@@ -144,8 +144,11 @@ CAMERA_MAX_EDITS = [
 # Animation and ground-contact code tests that flag for nonzero (the hover); the skin and model code
 # (texture/tint builder 0x4174E2, 'Head%d' 0x47361F, model load 0x45013E and the getter 0x5ADFEB
 # feeding 0x470241) reads it too. Class 67 gets the value 2; those skin readers then require exactly 1.
-# Off for now: the owner chose no hover until the Tuatha is otherwise right. The stubs stay verified.
-TUATHA_HOVER = False
+# 2026-11-06: on for a test build. Two more readers were found that still read 2 as Vampiir: 0x42236C feeds the
+# character model builder 0x47044D (the likely cause of the Vampiir skin on an earlier hover test), and 0x59BD31/0x59BD5A
+# (UI). And the hover-move animation (0x42CE14) needs speed over 250, so at a normal run a Vampiir runs; the hover-only
+# class gets a threshold of 0 there instead (the owner wants the hover at any speed).
+TUATHA_HOVER = True
 HOVER_CLASS = 67
 HOVER_SELECT = 0x402A66, '807e1d3a0f94c0', 0x402A6D       # cmp [esi+0x1d],0x3a; sete al
 HOVER_WORLD = 0x417FD4, '0f94c0807dc001', 0x417FDB        # sete al; cmp byte [ebp-0x40],1
@@ -157,7 +160,14 @@ VAMPIIR_ONLY = [
     (0x47361F, '8a8ec4190000', 0x473625, 'cl'),            # Head%d model
     (0x45013E, '3888c4190000', 0x450144, 'setne'),         # model load (preview), setne cl at 0x450148
     (0x5ADFF0, '8a80c4190000', 0x5ADFF6, 'al'),            # IsVampiir getter (model load 0x416AE2)
+    (0x42236C, '389ec41900008945e80f95c1', 0x422378, 'model_setne'),  # isVampiir argument to model builder 0x47044D
+    (0x59BD31, '80b8c4190000007511', 0x59BD3A, 'ui_jne'),  # UI setting skipped for a Vampiir
+    (0x59BD5A, '80b8c4190000007511', 0x59BD63, 'ui_jne'),
 ]
+VAMPIIR_UI_SKIP = {0x59BD31: 0x59BD4B, 0x59BD5A: 0x59BD74}
+# Hover-move animation picker: speed in eax, object in ebx. Over 0xFA it goes on to the Vampiir test at 0x42CE1B,
+# otherwise to the ordinary run/walk/back choice at 0x42CE3D. The hover-only class (flag 2) uses a threshold of 0.
+HOVER_SPEED = 0x42CE14, '3dfa0000007e22', 0x42CE1B, 0x42CE3D
 VAMPIIR_NOT_TINT = 0x4176E1
 
 # Creation screen (vtable 0x95AEE8, constructor 0x59FC9B, allocated at 0x5999DD): its 16 class-button
@@ -341,7 +351,24 @@ def vampiir_only_stub(asm, original, back, kind):
         asm.rel(bytes.fromhex('0f85'), VAMPIIR_NOT_TINT)
     elif kind == 'setne':
         asm.raw('80b8c419000001 0f94c1 84c9')               # ZF clear only for a real Vampiir
+    elif kind == 'model_setne':
+        asm.raw('8945e8')                                   # the moved mov [ebp-0x18],eax
+        asm.raw('80bec419000001 0f94c1')                    # cl = 1 only for a real Vampiir
+    elif kind == 'ui_jne':
+        asm.raw('80b8c419000001')                           # cmp byte [eax+0x19c4],1
+        asm.rel(bytes.fromhex('0f84'), VAMPIIR_UI_SKIP[back - 9])
     asm.jmp(back)
+
+
+def hover_speed_stub(asm):
+    site, original, vampiir_test, ordinary = HOVER_SPEED
+    asm.raw('80bbc419000002 750d')                          # cmp byte [ebx+0x19c4],2; jne stock
+    asm.raw('85c0')                                         # hover-only class: any forward speed
+    asm.rel(bytes.fromhex('0f8e'), ordinary)
+    asm.jmp(vampiir_test)
+    asm.raw('3dfa000000')                                   # stock: speed over 250
+    asm.rel(bytes.fromhex('0f8e'), ordinary)
+    asm.jmp(vampiir_test)
 
 
 def flight_stub(asm):
@@ -439,6 +466,8 @@ def patch(original):
         for site, original, back, kind in VAMPIIR_ONLY:
             stubs[f'vampiir_{site:x}'] = asm.here
             vampiir_only_stub(asm, original, back, kind)
+        stubs['hover_speed'] = asm.here
+        hover_speed_stub(asm)
     adapter_names = []
     for index in range(16, BUTTONS):
         adapter_names.append(va + 0x800 + len(strings))
@@ -480,6 +509,7 @@ def patch(original):
         hook(HOVER_WORLD[0], HOVER_WORLD[1], stubs['hover_world'])
         for site, original, back, kind in VAMPIIR_ONLY:
             hook(site, original, stubs[f'vampiir_{site:x}'])
+        hook(HOVER_SPEED[0], HOVER_SPEED[1], stubs['hover_speed'])
     hook(ADAPTER_HOOK, ADAPTER_ORIGINAL, stubs['adapters'])
     for realm_name, realm in REALMS.items():
         hook(realm['hook'], realm['original'], stubs[realm_name])

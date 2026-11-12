@@ -29,9 +29,9 @@ namespace DOL.GS.Tests
             Assert.That(BafFriends.Radius(500, true), Is.EqualTo(250), "a solo dungeon pull reaches 250");
             Assert.That(BafFriends.Radius(500, true, 4), Is.EqualTo(700));
             Assert.That(BafFriends.Radius(500, true, 8), Is.EqualTo(BafFriends.DungeonReinforcementRadius));
-            Assert.That(BafFriends.SameFight(true, 50_000, 10_000), Is.True, "still fighting: no new round of adds");
-            Assert.That(BafFriends.SameFight(false, 50_000, 10_000), Is.False);
-            Assert.That(BafFriends.SameFight(true, 200_000, 10_000), Is.False);
+            Assert.That(BafFriends.StillInFight(true, true, true, 50_000, 10_000), Is.True, "still fighting: no new round of adds");
+            Assert.That(BafFriends.StillInFight(false, true, true, 50_000, 10_000), Is.False, "that fight's monsters are dead");
+            Assert.That(BafFriends.StillInFight(true, true, false, 50_000, 10_000), Is.False, "no longer angry at the puller's side");
             Assert.That(BafFriends.CloseRadius(0), Is.EqualTo(0), "a monster with no aggro range brings nobody outdoors");
         });
 

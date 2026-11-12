@@ -54,11 +54,8 @@ namespace DOL.GS
                 player.MLGranted = true;
                 player.Out.SendMessage("Master Level training is active. Experience now advances your Master Levels; /ml lets you change your path.", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
             }
-            if (!player.Champion)
-            {
-                player.Champion = true;
-                player.Out.SendMessage("Champion training is active. Realm points from PvP/RvR now advance your Champion Levels.", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
-            }
+            // Champion training is no longer switched on here: the player starts it at the King in the throne room
+            // (ChampionRules.BecomeChampion). Characters who already have it keep it.
         }
 
         public static void GainExperience(GamePlayer player, long experience)
@@ -215,6 +212,7 @@ namespace DOL.GS
             if (sender is GamePlayer player)
             {
                 EnsureTraining(player);
+                ChampionRules.RemindToVisitKing(player);
                 if (player.MLLevel > 0 || player.ChampionLevel > 0)
                     SyncPassives(player);
             }

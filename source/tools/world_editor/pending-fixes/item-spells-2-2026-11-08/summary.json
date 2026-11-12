@@ -1,0 +1,28 @@
+{
+ "spells built": 24,
+ "spells corrected": 0,
+ "spells not built": 33,
+ "items updated": 65,
+ "rebuild without a rule": [
+  [
+   812050,
+   "Direct Damage (12050)",
+   "DirectDamage",
+   "no rule for \"{'Effect': 'Siege Lore', 'Bonus multiplier': '20', 'Target': 'Group', 'Range': '2000', 'Duration': '2:00 min', 'Casting time': 'instant', '- Requirement': 'Restricted to Gaheris Frontiers.'}\""
+  ],
+  [
+   813354,
+   "Heal (13354)",
+   "Heal",
+   "no rule for \"stat enhancement\""
+  ]
+ ],
+ "items still missing an ability": 91,
+ "edits": 136,
+ "by table": {
+  "Spell": 27,
+  "LineXSpell": 27,
+  "SpellXCustomValues": 17,
+  "ItemTemplate": 65
+ }
+}

@@ -26,7 +26,7 @@ namespace DOL.GS.Spells
 
             if (heal > 0)
             {
-                MessageToCaster("You steal " + heal + " power point" + (heal == 1 ? "." : "s."), eChatType.CT_Spell);
+                MessageToCaster(CasterSentence(m_caster, $"steal {Points(heal, "power")}.", $"steals {Points(heal, "power")}."), eChatType.CT_Spell);
             }
             else
             {

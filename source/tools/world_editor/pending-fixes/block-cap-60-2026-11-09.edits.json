@@ -1,0 +1,5 @@
+[
+  {"table": "ServerProperty", "where": {"Category": "rates", "Key": "block_cap"},
+   "set": {"Value": "0.6", "DefaultValue": "0.6",
+           "Description": "Block Rate Cap Modifier - Edit this to change the highest possible block rate against an enemy (Hard Cap) in game e.g .60 = 60%. Applies between players and bots only; live is 60% since 1.96"}}
+]

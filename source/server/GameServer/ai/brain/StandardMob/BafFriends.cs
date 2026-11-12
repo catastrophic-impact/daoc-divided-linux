@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DOL.GS;
 using DOL.GS.ServerProperties;
 
@@ -44,25 +46,84 @@ namespace DOL.AI.Brain
         public static int DungeonRadius(int attackers) =>
             Math.Min(DungeonReinforcementRadius, 250 + 150 * (Math.Max(1, attackers) - 1));
 
-        private const string BafFightProperty = "OfflineDAoC.BafFightTick";
-        public const long BafFightMilliseconds = 120_000;
+        private const string BafFightProperty = "OfflineDAoC.BafFight";
+        /// <summary>A safety cap: a fight that brought friends never blocks new adds for longer than this.</summary>
+        public const long BafFightMaxMilliseconds = 600_000;
 
-        /// <summary>Pure rule: a puller still in combat within two minutes of the last adds is in the same fight.</summary>
-        public static bool SameFight(bool inCombat, long now, long lastBaf) =>
-            inCombat && lastBaf > 0 && now - lastBaf < BafFightMilliseconds;
-
-        public static bool InBafFight(GamePlayer puller)
+        /// <summary>The monsters of the last pull that brought friends (the pulled one and its adds), and when.</summary>
+        private sealed class BafFight
         {
-            long now = GameLoop.GameLoopTime;
-            long last = puller.TempProperties.GetProperty<long>(BafFightProperty);
-            if (!SameFight(puller.InCombat, now, last))
-                return false;
-            puller.TempProperties.SetProperty(BafFightProperty, now); // the fight goes on
-            return true;
+            public GameNPC[] Monsters;
+            public long Since;
         }
 
-        public static void MarkBafFight(GamePlayer puller) =>
-            puller.TempProperties.SetProperty(BafFightProperty, GameLoop.GameLoopTime);
+        /// <summary>
+        /// Pure rule: a monster of the last pull that brought friends keeps that fight going while it is alive, in the
+        /// world and still angry at the puller's side (the player, the group and their pets), for at most
+        /// <see cref="BafFightMaxMilliseconds"/>. The old rule was "two minutes since the last adds", and every refused
+        /// pull restarted those two minutes, so after one pull that brought friends every monster came alone for as long
+        /// as the player kept pulling (True165 b3e8db903).
+        /// </summary>
+        public static bool StillInFight(bool alive, bool inWorld, bool angryAtPullerSide, long now, long since) =>
+            alive && inWorld && angryAtPullerSide && now - since < BafFightMaxMilliseconds;
+
+        /// <summary>
+        /// Whether the puller's side is still in the fight that last brought friends (owner 2026-10-29: in Keltoi Fogou a
+        /// respawned group joined a fight already under way): one of that pull's monsters is alive and still angry at
+        /// them. When none is, the record is dropped and the next pull brings friends as usual.
+        /// </summary>
+        public static bool InBafFight(GamePlayer puller)
+        {
+            if (puller == null)
+                return false;
+            BafFight fight = puller.TempProperties.GetProperty<BafFight>(BafFightProperty);
+            if (fight?.Monsters == null)
+                return false;
+            long now = GameLoop.GameLoopTime;
+            List<GameLiving> side = null;
+            foreach (GameNPC monster in fight.Monsters)
+            {
+                if (monster == null)
+                    continue;
+                side ??= PullerSide(puller);
+                bool angry = monster.Brain is StandardMobBrain brain && brain.HasAggro && side.Any(brain.HasAggroOn);
+                if (StillInFight(monster.IsAlive, monster.ObjectState == GameObject.eObjectState.Active, angry, now, fight.Since))
+                    return true;
+            }
+            puller.TempProperties.RemoveProperty(BafFightProperty);
+            return false;
+        }
+
+        /// <summary>Remembers the monsters of a pull that brought friends: the pulled one and its adds.</summary>
+        public static void MarkBafFight(GamePlayer puller, GameNPC pulled, IEnumerable<GameNPC> adds)
+        {
+            if (puller == null)
+                return;
+            var monsters = new List<GameNPC>();
+            if (pulled != null)
+                monsters.Add(pulled);
+            if (adds != null)
+                monsters.AddRange(adds.Where(add => add != null));
+            puller.TempProperties.SetProperty(BafFightProperty, new BafFight { Monsters = monsters.ToArray(), Since = GameLoop.GameLoopTime });
+        }
+
+        /// <summary>The puller, its group's members (players and companions) and their pets.</summary>
+        private static List<GameLiving> PullerSide(GamePlayer puller)
+        {
+            var side = new List<GameLiving>();
+            List<GameLiving> members = puller.Group?.GetMembersInTheGroup();
+            if (members == null || members.Count == 0)
+                members = [puller];
+            foreach (GameLiving member in members)
+            {
+                if (member == null)
+                    continue;
+                side.Add(member);
+                if (member.ControlledBrain?.Body is GameNPC pet)
+                    side.Add(pet);
+            }
+            return side;
+        }
 
         /// <summary>In sight along the walkable ground (the navmesh); where there is no navmesh, assumed so.</summary>
         public static bool InSight(GameNPC pulled, GameNPC other)

@@ -225,6 +225,8 @@ namespace DOL.GS.Commands
 
 			if (Util.Chance(CalculateRepairChance(player,obj)))
 			{
+				int healthBefore = obj.Health;
+
 				if (obj is GameKeepDoor)
 				{
 					GameKeepDoor door = obj as GameKeepDoor;
@@ -254,9 +256,9 @@ namespace DOL.GS.Commands
 				 * Players will receive approximately 10% of the amount repaired in realm points.
 				 * (Note that realm points for repairing a door or outpost piece will not work in the battlegrounds.)
 				 */
-				// tolakram - we have no idea how many hit points a live door has so this code is not accurate
-				// int amount = (finish - start) * obj.Level;  // level of non claimed keep is 4
-				// player.GainRealmPoints(Math.Min(150, amount));
+				// DR-178: 10% of the hit points really repaired, capped (repair_rp_percent, repair_rp_cap): our doors
+				// and walls have far more hit points than a live player's repair was worth.
+				DOL.GS.ServerRules.RvrRealmPointRules.OnRepair(player, obj, obj.Health - healthBefore);
 			}
 			else
 			{

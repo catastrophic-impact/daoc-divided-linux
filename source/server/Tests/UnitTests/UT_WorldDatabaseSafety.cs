@@ -293,6 +293,137 @@ namespace DOL.UnitTests
             Assert.That(new FileInfo(world + "-wal").Length, Is.Zero);
         }
 
+        // ---- the realm event ledger moves to runtime\data
+
+        [Test]
+        public void TheLedgerMovesFromTheServerFolder_AndMergesWhenBothExist()
+        {
+            string runtime = Path.Combine(_folder, "runtime");
+            string legacy = Path.Combine(runtime, "server", RealmEventRecordStore.FileName);
+            string data = Path.Combine(runtime, "data", RealmEventRecordStore.FileName);
+            Directory.CreateDirectory(Path.GetDirectoryName(legacy));
+
+            Assert.That(RealmEventRecordStore.Locate(runtime), Is.EqualTo(data), "nothing yet: the new place");
+            Assert.That(RealmEventRecordStore.MoveLegacy(legacy, data), Is.EqualTo("none"));
+
+            RealmEventRecordStore.Save(legacy, new[] { Record("a"), Record("b") });
+            Assert.That(RealmEventRecordStore.Locate(runtime), Is.EqualTo(legacy), "the launcher reads the old file until the server moves it");
+            Assert.That(RealmEventRecordStore.MoveLegacy(legacy, data), Is.EqualTo("moved"));
+            Assert.That(File.Exists(legacy), Is.False);
+            Assert.That(RealmEventRecordStore.Read(data, "", "", "", "", 0).Total, Is.EqualTo(2));
+            Assert.That(RealmEventRecordStore.Locate(runtime), Is.EqualTo(data));
+
+            // An older build ran again after a rollback and wrote to the old place: its events are added, none twice.
+            RealmEventRecordStore.Save(legacy, new[] { Record("b"), Record("c") });
+            Assert.That(RealmEventRecordStore.MoveLegacy(legacy, data), Is.EqualTo("merged 1"));
+            Assert.That(File.Exists(legacy), Is.False);
+            Assert.That(RealmEventRecordStore.Read(data, "", "", "", "", 0).Rows.Select(r => r.Id).OrderBy(id => id), Is.EqualTo(new[] { "a", "b", "c" }));
+        }
+
+        // ---- network defaults
+
+        [Test]
+        public void TheCodeDefaultsReachThisPcOnly_AndAMissingConfigIsWrittenThatWay()
+        {
+            var config = new GameServerConfiguration();
+            Assert.That(config.IP, Is.EqualTo(IPAddress.Loopback));
+            Assert.That(config.UDPIP, Is.EqualTo(IPAddress.Loopback));
+            Assert.That(config.RegionIP, Is.EqualTo(IPAddress.Loopback));
+            Assert.That(config.EnableUPnP, Is.False);
+            Assert.That(config.DetectRegionIP, Is.False);
+            Assert.That(config.ExposureWarnings(), Is.Empty);
+            Assert.That(Parse(config.DBConnectionString).JournalMode, Is.EqualTo(SQLiteJournalModeEnum.Wal));
+            Assert.That(Parse(config.DBConnectionString).SyncMode, Is.EqualTo(SynchronizationModes.Normal));
+
+            var file = new FileInfo(Path.Combine(_folder, "config", "serverconfig.xml"));
+            file.Directory.Create();
+            config.SaveToXMLFile(file);
+            string written = File.ReadAllText(file.FullName);
+            Assert.That(written, Does.Contain("<IP>127.0.0.1</IP>").And.Contain("<UdpIP>127.0.0.1</UdpIP>").And.Contain("<EnableUPnP>False</EnableUPnP>"));
+
+            var loaded = new GameServerConfiguration();
+            loaded.LoadFromXMLFile(file);
+            Assert.That(loaded.IP, Is.EqualTo(IPAddress.Loopback));
+            Assert.That(loaded.EnableUPnP, Is.False);
+        }
+
+        [Test]
+        public void APlayersOpenConfigKeepsWorking_AndIsNamedInTheLog()
+        {
+            var file = new FileInfo(Path.Combine(_folder, "serverconfig.xml"));
+            File.WriteAllText(file.FullName, "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<root>\r\n  <Server>\r\n    <Port>10300</Port>\r\n" +
+                                             "    <IP>0.0.0.0</IP>\r\n    <UdpIP>0.0.0.0</UdpIP>\r\n    <EnableUPnP>True</EnableUPnP>\r\n" +
+                                             "    <DetectRegionIP>True</DetectRegionIP>\r\n  </Server>\r\n</root>\r\n");
+            var config = new GameServerConfiguration();
+            config.LoadFromXMLFile(file);
+
+            Assert.That(config.IP, Is.EqualTo(IPAddress.Any), "the player's choice stays");
+            Assert.That(config.EnableUPnP, Is.True);
+            IReadOnlyList<string> warnings = config.ExposureWarnings();
+            Assert.That(warnings, Has.Count.EqualTo(2));
+            Assert.That(warnings[0], Does.StartWith("Your server can be reached from other computers").And.Contain("TCP 0.0.0.0").And.Contain("127.0.0.1"));
+            Assert.That(warnings[1], Does.StartWith("UPnP is on").And.Contain("<EnableUPnP>False</EnableUPnP>"));
+
+            File.WriteAllText(file.FullName, "<?xml version=\"1.0\" encoding=\"utf-8\"?><root><Server><Port>10300</Port></Server></root>");
+            var sparse = new GameServerConfiguration();
+            sparse.LoadFromXMLFile(file);
+            Assert.That(sparse.IP, Is.EqualTo(IPAddress.Loopback), "a setting the file leaves out takes the safe default");
+            Assert.That(sparse.UDPIP, Is.EqualTo(IPAddress.Loopback));
+            Assert.That(sparse.ExposureWarnings(), Is.Empty);
+
+            File.WriteAllText(file.FullName, "<?xml version=\"1.0\" encoding=\"utf-8\"?><root><Server><IP>192.168.1.20</IP><UdpIP>127.0.0.1</UdpIP></Server></root>");
+            var lan = new GameServerConfiguration();
+            lan.LoadFromXMLFile(file);
+            Assert.That(lan.ExposureWarnings().Single(), Does.Contain("TCP 192.168.1.20:10300").And.Not.Contain("UDP"));
+        }
+
+        [Test]
+        public void UpnpMappings_AreRemovedOnStop_OnlyTheOnesThisServerAdded()
+        {
+            var gateway = new FakeGateway();
+            var config = new GameServerConfiguration { EnableUPnP = true, DetectRegionIP = true };
+            var mappings = new UpnpPortMappings(gateway);
+            mappings.Open(config);
+
+            Assert.That(gateway.Open, Is.EquivalentTo(new[] { (10400, ProtocolType.Udp), (10300, ProtocolType.Tcp) }));
+            Assert.That(config.RegionIP, Is.EqualTo(IPAddress.Parse("203.0.113.7")));
+            Assert.That(mappings.Close(), Is.EqualTo(2));
+            Assert.That(gateway.Open, Is.Empty);
+            Assert.That(mappings.Close(), Is.Zero, "a second stop removes nothing");
+
+            // TCP refused by the router: the UDP mapping that was added is still removed; a hand-made one stays.
+            var partial = new FakeGateway { RefuseTcp = true };
+            partial.Open.Add((7000, ProtocolType.Tcp));
+            var some = new UpnpPortMappings(partial);
+            some.Open(config);
+            Assert.That(some.Added, Is.EqualTo(new[] { (10400, ProtocolType.Udp) }));
+            Assert.That(some.Close(), Is.EqualTo(1));
+            Assert.That(partial.Open, Is.EqualTo(new[] { (7000, ProtocolType.Tcp) }));
+
+            var none = new UpnpPortMappings(new FakeGateway { Present = false });
+            none.Open(config);
+            Assert.That(none.Added, Is.Empty);
+            Assert.That(none.Close(), Is.Zero);
+        }
+
+        private sealed class FakeGateway : IUpnpGateway
+        {
+            public bool Present = true, RefuseTcp;
+            public readonly List<(int, ProtocolType)> Open = new();
+            public bool Discover() => Present;
+            public IEnumerable<string> DescribeMappings() => Open.Select(o => o.ToString());
+
+            public void ForwardPort(int internalPort, int externalPort, ProtocolType protocol, string description, IPAddress internalIp)
+            {
+                if (RefuseTcp && protocol == ProtocolType.Tcp)
+                    throw new InvalidOperationException("refused");
+                Open.Add((externalPort, protocol));
+            }
+
+            public void DeleteForwardingRule(int port, ProtocolType protocol) => Open.Remove((port, protocol));
+            public IPAddress GetExternalIP() => IPAddress.Parse("203.0.113.7");
+        }
+
         // ---- helpers
 
         private string NewWorld(string name, int rows)

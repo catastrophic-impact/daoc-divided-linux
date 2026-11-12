@@ -1,0 +1,5827 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T23:19:02.265706+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "MerchantItem",
+   "key": "00a56485-8108-4bc6-85b5-c0977237f72a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "00b359f7-052c-4c5c-a99d-63679bfea399",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "02bb2c94-deb8-479b-9713-69961210cd51",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "039a4a99-7e51-4f3e-9167-efbc1fec7743",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "03b2aed7-0ace-40df-a11f-441b213d4646",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "040c8e12-8b41-41e9-b96b-52505ca5539b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "heartwood_staff4"
+   },
+   "after": {
+    "ItemTemplateID": "heartwood_staff2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "042d6a80-dbc2-4f30-8f5a-6804fc71e95a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0436cc8d-9996-4f68-b49b-4b06214f4657",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "04c07d81-7510-49df-b374-c0c9f25b08a0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "04d01ad5-7f06-4370-a235-92d498c3942c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0558e94b-a033-4af8-a25d-a24a357e3e67",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "05d70470-39a5-4271-a418-affb9ca599e7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0628be09-aeac-4747-96aa-1943dfc8bf38",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "062e310c-248e-471a-8feb-d6e66b40186e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "06dd945c-a4d9-4d84-af9d-2fe8a8f9e1d7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "075ff8ea-f039-41f1-b0f4-c7b6d0654db7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "078af808-f680-4d72-bf91-af49833a1b3f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0833491a-39dc-4ef8-96be-8ed4d729b354",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0840549e-9c21-4595-83cf-86bb2e247fa4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "08cfbcea-2cd3-4c90-9592-2cb608ca3891",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "093dcdd2-4709-469b-b046-0f5b12f3fff8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0ad041cc-7d93-4a40-8371-f0846bea0627",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_mjuklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_mjuklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0b280d63-9dee-4ecf-8d2c-fc12b59e2ef8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_mjuklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_mjuklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0b3d952a-8589-4f9d-bed3-0f979aed4d5f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0b8a22e0-23e5-4d34-bf8c-6eef119116ab",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0bb8f19c-2476-4036-ad1e-a5601de8d4ec",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0bcd1b88-bb1d-40cb-b11d-6a035d9dc69a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0be538ae-78df-4efe-a04a-2dc9bcad7cc8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0c0033c5-e465-4b2b-b443-d73bc0a6ea41",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0ce7f001-1876-4df7-a9ca-38bbc72d8dcc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0d9528ef-3eab-469e-be0e-3a8cbc3e3247",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0e3f81c7-9e75-4677-9f72-354cd422cec6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_heater_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_heater_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0ec3a8c9-2a59-4f93-b461-d608d8fdd5b7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0ef739d5-d47e-4da1-8274-91b744b67426",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0f267b79-b69a-4f6a-8d21-125ecd41e495",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0f96996d-6d18-4b16-b26d-6a24d1dfd6df",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0fbfdb54-c65a-4e28-b6bf-95951fd0394a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0fe20ed7-fbef-4e64-94fc-b9c17ecc2175",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "0fe6083e-ab24-4aba-ad61-cd9bdd01d800",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1095d2ca-3f46-45e8-a13f-6921584b4304",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "109f3fee-bdcb-48ce-b51a-ff89f8de34fe",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "10b38d06-ef3b-4202-8101-e1dedaed9d3f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "10d5cc2b-07b0-436f-8c94-5bf889d734da",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "110560f6-1b39-4b43-9d8b-21ca9ed8375f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1165a699-7613-4b74-b3dd-7bd6a3d519a5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_mjuklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_mjuklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "11809ae0-21e5-4523-b03b-d82c6c20bd6e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1194553d-8bc7-4ba4-a8e9-1e284cca1484",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "11bd284a-c1b9-4cbe-9245-52759ca7b493",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "122a370c-f95f-4305-a5e8-c8c00515a201",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_short_bow5"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_short_bow3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "123b4701-3fc4-4092-80eb-a62e81c0f1ad",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "12a73f28-610b-43f8-b90a-c8b6b9df9227",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "13323543-fee5-4d31-b4d1-10667bf28853",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "142755f5-4b6b-4aec-beb9-68216972420d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "143fa56d-9d38-4e8c-af93-6d1b52af98fd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_heater_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_heater_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1493cc7a-3af3-43ef-b187-0584404d9992",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "14cb1652-6ca5-49f5-97e1-9da21ed45f68",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "14cdeb5a-6521-429b-a82d-ca067a085f3e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "15b3dc6b-08aa-4555-9b2d-847b8db6d3c1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_heater_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_heater_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "15f1d11c-8097-4422-ad1a-ad59922945b1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "16dfcad3-79d7-41ec-8b74-95acfe545d84",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1734f678-6a36-4f09-9b79-30b40b3b8394",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "17683788-88bf-431d-a93c-a0a6a663779f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "17eeee9c-834f-4ce7-b296-1ffe0efb895e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_mjuklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_mjuklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "18965f15-434f-4eb6-827a-965969dd1215",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "18b40ebc-c927-4bb9-918a-b90936ae7364",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "18bc4d81-77fe-4f08-82f1-208bdacb4cea",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1a1fa033-f386-4241-a442-39d37045bce3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1a88cf89-1e81-4d80-8559-82365e9fa270",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1aeace8a-cb7a-4b8b-85dd-aa9a30998e36",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1b1c21e7-8050-48f5-a0db-1d241bdce203",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1caacad8-18b1-41b6-b41c-60d79927614b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1cc53525-1cab-49f3-a0e0-3c2eafad79c0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1d6f91f7-f7bc-4169-bf69-af76b5fdca4a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1d7039e6-6603-47ea-b6e4-18c6e279f0ea",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1ece0e09-3784-470f-8851-10ad112f5b0b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_mjuklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_mjuklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "1fde69dd-495d-44ae-8cb6-df8cadb805e9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2078a56b-38ec-4800-9e64-e5e3553f1c85",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "20b1f32f-d7de-4ec9-9e6f-09f0d701d137",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "20e87564-3b45-41db-810a-f5bec74fc525",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "211e3952-4d29-449d-8498-17805bd2b8ab",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "211f232c-680f-4d93-96c2-1306c0251d3a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "213f245c-2050-4f16-bbfe-190e96754ca1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_round_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_round_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "214dae21-9782-4b83-a0e2-7689ae7e8c58",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_war_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_war_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "21dcf135-6313-4993-b099-4c4adc714ee8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "21ea85df-58f3-4bac-bbe7-badbb4a347b3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "22518414-22a2-431b-b212-adcea09ee103",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "229bc83a-3d2b-458b-8afe-e3372f4c0d3f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "22cbd9fe-27b0-4e35-b007-401c61bd6579",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "238e7fbe-b266-414d-af6f-46ae7c0961dd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "239944ea-8cd7-42c1-8a36-58cdcffebf53",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_recurve_bow4"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_recurve_bow3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "23f7fb3a-a543-48d4-9f34-5e9294ecad20",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2467ba6e-6b11-4014-956a-da949031c464",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "24738a42-bf48-4f41-afd7-869c0586e3da",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2490bd07-9ac6-45c2-a3de-afa0492e7a72",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "249b8578-529f-4a5c-b1bc-7d49fe4e5072",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "252159c0-6181-4636-ba24-8001962759cf",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "254eeae3-ab16-41f4-80dd-63f10bf126f0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2691546d-2ee1-45ff-b0d7-b0481d1097b8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "27413d14-05d5-40e5-818e-8f436cdee41d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "27be06f2-b1bc-455e-b44e-ad19638cab40",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_block_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_block_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "283dab45-0b73-492f-a053-f86ca99d52bb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "28ba9c3c-4f50-41e6-8165-26a2d1118b0f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "28ed6465-af5c-463e-aae4-e82c820ad1be",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2a6575f0-7dd4-4c24-a5e0-5e968e93581e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2a8517de-7416-48d6-ad58-45ad7349a702",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2a898559-a11e-44d2-ba7a-cb31c95ea39b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2ad45ead-6971-42ab-acd0-dea394e8277d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_round_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_round_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2b301d11-2bca-4fd0-80c8-0649ca44ba95",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2b346508-1fb4-44ba-a9db-d5fdf990f77b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "2ce0ba98-2b28-44d9-8b51-812c735a406d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "316753cc-8f49-4162-be62-1bf56bbfe895",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "316e3bde-0888-48e3-91ce-2beaca5ed67e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "31832b1e-32f3-4f9a-ab02-3a2fd15b8475",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3308a0d9-6e04-4c30-9172-7cdc30a73158",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "33141c7b-e4bf-4ce0-90a0-65d3df801978",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3323e44d-4f91-4ea9-8a45-9a0e19424415",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "33494dca-6f35-4ced-bc23-c8d5d9a102fe",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3357fb26-e916-45be-8eed-cc9de2c799ed",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3365ec34-004f-48fa-aa41-0b95a39f26bb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "338ad1b1-98f7-4a95-ab80-f8cedabc5e95",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_block_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_block_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3394da91-8559-4969-8274-f1b1a387c826",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3451167f-89f9-4653-a0b7-aeb3cee5ea72",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "34940d81-f835-45d8-a910-41a36c29f8ed",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "34e3722e-dc26-45ee-a48c-66128d2188bc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "34f1edb9-ae9f-4a93-b81b-11a95334ee25",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "35508e00-21fd-42c7-bd0b-2a6ec1d168ef",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "heartwood_staff4"
+   },
+   "after": {
+    "ItemTemplateID": "heartwood_staff2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "362a8169-fc09-44f2-9015-331df8807463",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "36df1a8a-b90e-4201-bece-82c0337bb105",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "36e41c13-5d26-431d-acd0-af0dbff9cc1b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "clout_bodkin_arrows4"
+   },
+   "after": {
+    "ItemTemplateID": "clout_bodkin_arrows3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "36e7efb1-5664-4931-8ff5-d6a8661b622c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "37d2ddee-7f20-4e77-a230-cbff78bc922c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "37f77013-b351-48ce-8671-fd67001f319d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "38ba76c6-fe8d-4b24-bab1-a219b73907ad",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3a145d6b-c253-455a-8309-8666e5db6ae2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3a4beecf-16ec-44d0-bc20-60347419ec7d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3a6f7046-8565-4a35-b053-f95761f2cb23",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3bf1ce37-bf33-4b33-9b82-f0482ef96fc0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3c0ed5d9-ffc8-4fe7-99fe-517f09667570",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3c10adaf-1ff9-4ceb-9728-a345445e33fc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3c820b93-2c2d-4fe9-ba5f-c6e53d70f796",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3c858e70-0497-4f45-960c-0ba97f8641f5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3cac5420-762c-493c-913a-71f2a7d99960",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3de3e550-a992-4659-9a5a-b29b550b6278",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3e7bd98d-3525-4d23-9a86-8314f431188b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3eb18b9f-e02e-458c-b61d-114e979f0b41",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3ece57e1-9e38-4d1d-974f-7a2a6ba99d01",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3f3a2dbb-d5e6-403c-a462-0595f8b31019",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3f4e9a87-3d85-49a7-8028-cbc79720951b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3f59194b-35c0-4e47-84cd-39ff40c0cb34",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3f7ca431-d1eb-4181-9069-98d1977a8be7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "3ff867e2-3c5d-4d10-8896-29d280418718",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "40098851-ad76-4afe-aff9-d55463610cc7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "40337d24-7dab-4589-a19a-3d8ad795dc98",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "40a7a51c-e636-4507-9ed4-2531fd7b9880",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "427b65ae-7837-4191-9311-09d685347faa",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "42dbc0a0-913d-4a35-b0d0-29f162f1a4bf",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "42f34275-85a9-4bc2-a687-58f5ffeab521",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "43141ec0-5415-4c15-bd10-4f1ceb274d31",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "43202aa8-7597-473d-87c7-c1ac0836c69f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "435d2bce-2542-4146-9b4e-cbe4203bfb0f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "442e6c14-ff8a-4963-8aef-ada09fba259a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "451b4943-5a4d-4859-9abd-b1537e130f91",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "45f60e55-68a8-4a14-ab3b-8f442ec27aea",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4638c072-286f-4d1d-8b9d-ccdd5f81d9b3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "47039181-8386-4672-83493-79fbc5286430",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_war_axe4"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_war_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "47039181-8386-4672-8493-79fbc5286430",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_war_axe4"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_war_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "472c83eb-0883-4acb-bf1b-7f1b66a0bc11",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "479ca04d-7ab1-4ccd-85b2-0080d8180335",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "47ffe2b1-b526-4f4e-b99c-f0e4ab971e95",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "488a7f48-baf7-4114-8802-cdcada9cc3ff",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "48a97fc8-cc26-4244-bee4-dbda69da2b8d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "48b2afa7-125e-4f0c-ae11-80394c676c98",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "48c66730-88f1-4382-8aaf-a7d9de93d079",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "48e4a99a-6f33-4753-b382-f01da0a72d7a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "490dcf58-ca45-402e-97b8-1393d70087e4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4a1d0830-8253-4e27-9711-1ea264e1e4cc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4a289e54-b223-4f65-9b1f-d95a9f738593",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4b53a7af-3191-4c16-8fd6-6bfce608ea27",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4b7e7112-cfcc-40cb-9601-c79cc93262af",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4b870c0c-6cfa-42e3-8a0d-322536ff92d0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4b942a78-caa4-4e18-907f-11b8bc8a37d2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4c18cdac-e582-432a-971a-f5f6a3f9a627",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4c375092-b594-48cb-a5d6-eed1831295f8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4d691ee9-ed14-4d3e-8b2b-493ca4a6ccfe",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4e029e1a-cbcd-425f-bcb1-b1a6af34a3d4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "4fd7dc5e-683e-4d75-bf3a-f8572a1409b0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "footed_clout_broadhead_arrows4"
+   },
+   "after": {
+    "ItemTemplateID": "footed_clout_broadhead_arrows3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "51192c17-eb17-4bbe-8bde-9e232b43d407",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5137e911-6e03-4bf0-941c-7839d230c1d5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "51ae39f3-0348-4a7d-9a46-16eeb7eca3b4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "521912ec-14f6-485d-af57-53b0ec178f3c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "527a6978-f305-422e-b5d4-a4f484105d71",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "52987418-a5b8-4821-ae6c-6a84d47e4705",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "52b3c66d-9e4b-415d-9ee2-e70123c5832b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "53489eec-7430-4d0c-85a8-a3736c155746",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "536f1ab0-b173-4efb-8791-1265eba86a03",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "53a06167-dbd1-4266-9780-96e6a4ea3412",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "565718dc-121e-4c66-89d9-12fb3e42f593",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5719114e-ad56-4e60-996f-dd67a6900649",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "57d3bfc1-ce80-41c8-a3f4-e9511526d4b7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "581fba1f-1b4a-4815-ad7a-57cfe826db4c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "583c39bb-69e1-48b6-90be-1e1afaab1c8d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "58ca1a18-a120-43e2-93aa-a0c24b5969a1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "592d27ff-b559-4130-8e07-fa7f5410f84b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "59cf477c-ef2f-4353-8b54-3cfb07b3e7b2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5a0dbd14-3f0c-4ebc-8f75-a085cd86caec",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5a2b6d84-37ad-4ab0-ba66-16aeee40c940",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5aeee236-1cbb-4470-a87f-26e3610d84c9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5afda592-eb2c-4b40-b004-e7cb2fa555be",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5c6553cf-d0b5-4144-a914-7a4c480028fb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5d8e84cd-1fd6-4b58-b010-ca5bf73be701",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5dd24696-5b04-4257-abca-80f369359925",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "5e8e5bc0-2dd7-419a-abc2-b48bed7bafec",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_mjuklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_mjuklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "608228a3-f6f7-47b5-b7fe-5d88d458ebcd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "60c0e065-1a97-4921-bd02-162230e8c6f5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "617ea493-5c89-4066-9bc9-d39403b19b06",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "61f4d729-1838-4f33-b340-55ac02db34ce",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "62ba1103-138f-4162-9a89-b295ca5b9754",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "630cce95-bb83-4e30-9d01-a05f97e14027",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "63c1dad1-13f3-446f-8698-336c58e6b1be",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "656a50cb-38c1-466c-8b66-e5e767ceec49",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6594b020-22a1-4911-b08b-5ac70c47b067",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "65babc04-9e62-491b-8228-11ecd48aab15",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "65fd0b6e-2d8e-49ba-b95f-2c8f0d2cd92c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "663b0a13-76aa-463c-b178-c894b62d207c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "67629d5d-e0e2-40ac-a6e4-c7f6953a7fb8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "679a7d45-647b-4a15-b12e-e0261ea1eb22",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "682d227c-52bf-498c-ad59-01773e0c43a9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_round_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_round_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "68bf58d7-b41d-4f60-9d31-920f4f2e8701",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "68d4b351-8162-46e0-be1b-1cfc3444e284",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "698f27c6-367d-45f2-85cf-65d0d70525aa",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_mjuklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_mjuklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6997a40f-80db-4f61-bddb-cf9a86ee0515",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "69aa3462-ce10-477f-903a-958b0a2637a0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6a26cf90-2329-4ed5-9d6a-4a9a0356efd8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6b1340e1-19d5-4533-b12c-e7f394ed9085",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6b22e932-b2a2-46a0-b41d-913f1039ce38",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6b595013-16f1-424e-8705-25ac9d7a546d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6bab1ead-91f2-48ed-94d9-a9117c804bf2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6bda4bbd-3f75-441d-afb9-362020a7c01a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6c47c409-e1dd-4599-bf3a-b4521d630552",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6cbdc98e-299c-4c32-b6ae-d6be93ea5c97",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6cc6dbce-62e9-4f61-b9cb-af5c8eac9f57",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_war_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_war_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6dd2bb33-c271-4dc4-a27d-18f5ef0b78df",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6f3ce5e2-3ec5-4d59-9d48-034a9035f020",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6f573411-3a2e-4151-8b54-e97b0716cf91",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "6fcccdf3-fff8-4d6e-ba0a-f572629a4886",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "70cd08f1-35bc-435c-84ba-764f8e155680",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "70e75345-7c7f-4adc-8692-3616d05b2d46",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "71605d4e-f28c-4980-96a1-551bc2dfaade",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "71a2d8a5-1f94-434a-9257-eb135492e1c2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "71cba248-b348-4a85-ac83-8db7a3b8062b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7245bf48-b27a-4d0a-8a354-f8e0da7e8db1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_hand_axe4"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7245bf48-b27a-4d0a-8a54-f8e0da7e8db1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_hand_axe4"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "72cd1927-915c-4882-ae23-ed2e989e1e23",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "72fa1d8c-9b63-4f46-a6c2-6b1593b64f51",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7410e76d-a4da-4766-869c-29bf2816f681",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "clout_broadhead_arrows4"
+   },
+   "after": {
+    "ItemTemplateID": "clout_broadhead_arrows3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "74277ade-dfdf-4e85-8cb0-04d5e665a480",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "74ad918f-071d-4e2a-a74f-c8aa57d45db2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "76357d2c-3641-4f5f-a4aa-916276742cb1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "76470afc-637b-4984-8768-c54b4c8b600e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "76772586-8827-4ad7-b0c2-e5c174b5b873",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "76cb28b9-b3fe-462b-a454-8a300e890ba6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "772be461-17a5-437c-a974-bfae70cf4760",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "777a4802-985b-475a-8173-3ac5a7d44733",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "79155a5d-f7ae-4923-96b6-0c2c2ce35dbb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "79239f33-0592-4306-aaf8-137676ae089e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "79594267-c0bf-4343-a6f3-431516be9d27",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "795c916e-115b-4568-b61a-22499fed00f7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "79b262fe-a357-47c3-bbb6-c2f18a4beee3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "79f24e49-8966-4b48-9ce2-c8402f329239",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_mjuklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_mjuklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7a6d558e-ccb4-46a8-a871-fc3eecbaf8d0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7a79d003-8ba1-4769-a7fe-d94fccc3ed67",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_mjuklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_mjuklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7aa0f409-c3c8-4eb4-aafd-f0ea1ac20e50",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7abcd64d-ab52-408a-930a-2718a904e097",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7ad1a771-11f9-43ce-b962-bb656e515548",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7ae240ad-e1b1-4a4f-8e56-76d84bd31376",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7c06e1b4-5503-487b-a639-cb3aca96e574",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7c6aae1c-a8f7-4e79-871a-ae0379341c7e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7d28ea29-8df7-493e-aa88-a355dec4ad7f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7e92201b-65c2-4218-a8c3-d7f4714353a9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7ef8db82-e722-4ac0-876d-c38d6137160a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7f24b6d2-465b-4bea-a9f4-842d5acc7f0f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "7f39aee3-544b-418a-98e5-5fd5b2ccc367",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "80044cc9-36e1-4897-9623-67303b8bf1a2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_mjuklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_mjuklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "802a5f4a-e4fa-4f31-a9d6-11f7f17aabcb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8152b0bb-8648-4f83-8497-4a505ef32ed9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "81a294d1-461f-4b2f-9c58-a9cc527d7d48",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "81c5b654-c1e1-4702-9909-7c223346aeba",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "81e321d2-9f94-416c-8677-5e6eedb1e890",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_mjuklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_mjuklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "82897ec7-4148-4d21-b97f-e55318826b2f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "832a44b7-9a67-4286-b243-351fb1542096",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_mjuklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_mjuklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "836b0e1d-876d-4d90-8034-4678b76a57c3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "83e9e1b2-fe1d-4863-8957-3940da7e4f55",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "83f20915-5d73-49e5-92cf-48fb2340faa3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "840dfe9a-0f22-421d-bb32-8c72ed6e5b84",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8470f569-0a31-4c36-887c-8d570f44d2a4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "84ce8e9f-23ee-4fb2-8c1b-11b1671e64dc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "85cdfeb7-debe-44d8-96e2-c5b6ad7c2e8c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "87547260-b848-4fd2-85ee-aad9cfc35d95",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_mjuklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_mjuklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8851d595-0c19-4bcf-8553-6a60b2b4102a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "888727b6-9562-4618-abd4-5a2c26c02f8d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "88de498d-5efb-41a3-ab1a-38363640032d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "88f665f8-be9a-4b9d-b2ef-839ef1e5483c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "897fb427-5877-4711-a916-a6f5e7e094f3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "89a53a6e-8fa0-41cc-8337-881367087cfa",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8acd4f6b-9658-40fb-97e8-f4d6d9c5e65d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8b7b9277-8717-4a2f-9fcf-2fe92ec09f56",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8bc7d196-66de-4d55-83c5-2a49cf1bf6df",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8c24a6fb-6f47-45b2-9bfc-cde825cc4c01",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_mjuklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_mjuklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8c374708-08bf-402e-9f85-1794a5dbfa77",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8c7b6da9-cf0a-4b41-8a51-58017ab7cc16",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8cc7f032-8404-4d67-a873-e09ace91aeeb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8dd73068-eb7f-4997-99ef-cca92b5b9801",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8e20f57c-df74-4a86-936f-f959ac387ab8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8e57ac25-0597-4f81-ac19-243dfc002d41",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8e9933f7-07fa-4318-83e7-6e79c8fb4d01",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8e9b62e8-9835-41ea-ac5c-c9bdd04d7ca2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8e9e8033-6907-4675-9e9c-ece8b31fa034",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8ed389f6-7ec9-4b00-8326-57529e39277a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8ede786e-8626-44bd-add3-0ff8129c25f0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "8f0c7f42-725d-42da-9afc-3f2d0a9034df",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "903772aa-1ce6-41bb-ba89-79dcbc75f981",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "918d2698-076e-43db-a522-f783c4489232",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "91957b94-5c85-4211-9132-d509493af264",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "91d0cfa9-c4a5-42a8-85a1-7b1d90e67c0e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9279d307-7d3b-4a43-a641-1351aad5fab8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_heater_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_heater_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9293ca8f-b8c5-4b82-96e8-1b01e3a9bb73",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "92b21e00-47ce-4c1e-992b-81282160b0a3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "930a4def-9e00-4e56-87bc-b4633ac5a282",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "935117d9-78a1-4726-99d1-161bc559702e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "93723af6-ac9f-4074-962d-c5e5ffa31c83",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "93f755d5-dbf0-4115-9265-8acbfcee6144",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "952b96cc-b5bd-4623-bd67-d8bb9a8b76c5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_mjuklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_mjuklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9537c4ba-4f54-40e7-998e-2f76b3a39737",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9574cdeb-4429-4dc6-85c8-24cbd5df6b99",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "96209bef-f0b5-4704-a54a-36fa69802487",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9653fb59-52bf-4a48-81ae-7363e14b20b6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "96b8cb21-8d8a-4c04-bd91-1442a271c2ef",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "96d266f1-3676-419f-ac93-7f1fff3a8441",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "971dfc25-8180-4cfd-bf5b-68937db721f3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "97725372-9819-4ed8-8548-1a42ed25f549",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "980bcb8b-871e-4840-bc03-1b1c5f239541",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "98430810-e051-4384-b8ee-02120ad5dca4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "991398d1-719e-440a-8b66-224f4e974cfb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "99f75492-82b5-4d98-a377-bb02019abbbc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9a41006f-19b0-4e2f-9c5b-b80af2c40d48",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9baeb650-237b-42ae-9bb0-e8d138e8d943",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9c0b1e29-98c3-4ba0-898e-bcae160f2e4f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9c2dd92e-653d-4167-bf7e-cb638e712140",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9c46bd01-fb17-47ee-a2cb-51d2d278cbdc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9d23f147-7491-445d-9009-4662be43edea",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9d334483-5c4f-42a3-b401-467596a47210",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9e473173-adb3-4dc8-b0a6-735071d0b177",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "iron_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9f587156-84ae-40d4-b3ed-5674ffa5186d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9fad9cf7-b594-49ff-80c3-68f03a019744",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9fb0eb9a-9d9e-4130-b8ee-548b29e084cd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9fd1aa25-082f-4f84-91e9-879ea0ffd544",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "9fd2310b-a282-49f1-b469-e6542f83f341",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_great_recurve_bow4"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_great_recurve_bow3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a0734241-90b5-44bc-8b29-61e2a1ffb53c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a10470c9-ca6a-4abe-8eb7-4db74f669818",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a261c565-f78e-48f4-bd3a-1d16679076ce",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a2b58ad0-d9eb-4f7c-893e-8fe4302a1a67",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a32a948d-f33c-4032-b294-6b2a3131cf16",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "steel_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a3cab640-c6e5-414a-b936-fed2f2a05269",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a3e7c315-a961-4108-a4a4-3e18f475a7a0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a3f25954-5653-4e50-a527-b675bc92ad40",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a3f51c07-b3d0-4544-bab2-f8f6cfe5d09b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a5856b65-93b7-4108-b6b2-8bb206321696",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a6192d54-aa9f-48bf-a9b2-0c2694ae7a68",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a6231b26-7795-465b-ad6c-ad37eaa63d5a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a74d1a3c-19cb-4174-b5c8-8dc063e091fe",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a79c568b-dc4a-420f-a404-feeb86049619",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_mjuklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_mjuklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a811ab98-1638-4095-91d4-b557353a53b8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a812af51-6895-4ec7-9347-08284e0515cd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a842c784-2e8d-43ef-8691-597c0386f08c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a8fab304-b7dc-459d-9d28-403656ceef03",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "a906f4e3-28d3-491a-9947-1f63dd2e5736",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_mjuklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_mjuklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "aa48faa7-b8ff-4b44-bee4-9aa4974a68c8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "mithril_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "mithril_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ab697e15-8ebb-46cc-962f-018b842bf411",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_round_shield8"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_round_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ab6e24ff-63aa-4305-9e5a-467f791f11fc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "acb52f76-fa76-4b9f-b6b7-2666f27c3e27",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "acf3b018-95ab-42cd-b0f7-b5a16601c3b2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "adf30f8f-bc53-4a6e-a43f-a129f44d5e35",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "adf61e2a-f125-498f-818d-fdc50132dff5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ae2147ce-47c9-4dbc-a169-3a0c2bbfe73c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "aed77482-5667-4d5f-8f32-6ce1c9b265b2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "af71e806-5a5f-412b-a2d4-28038498d7e4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "af800e5c-0b62-40b5-b917-a79ebb3e7d0c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b10b3400-bc04-43e4-a8fc-ffef846a51e6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b1584ac6-aa58-4fd5-a73a-762311910d4d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b1d82520-a6ce-4759-98d7-bcf131f1d55a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b2212596-d8e0-45f4-b151-8c6076eebc49",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b267d133-187a-42c1-9529-b2429e95cb11",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b2db2a67-5cbe-42d9-a530-ae5e13196435",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b324155f-ab56-455e-904f-19f8e43c960c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b406a1b0-c658-4ef5-ac46-6025fc802a56",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b43603f3-a0bf-4afb-8e9e-c9d1dd1fe407",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b56c85d0-1d09-4e86-b972-33529259f805",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b5de7c2e-0fb3-4f95-966c-5c226df835ef",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b67894f5-f7f6-41f6-92de-c515a972fbdf",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b693d652-59e5-4edb-ac67-9cda6c22aeb3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b6c3c42f-8cb5-4f82-9251-717a8367c1d8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_mjuklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_mjuklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b6fdc13f-0b46-4677-8eb2-5e9f20d985f8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "b84bd24b-5966-4855-b7d9-58d4fadb574d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "bb5410e1-49be-429f-849c-ad8901c5c29b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "bc8ad0d1-c77a-44df-8d46-500e1dad670a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "bd95c5d2-582c-495d-8282-439f4b5f16ed",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "be811c9f-130e-485a-8b63-33819c11108b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "bf3060d4-b9e2-429b-a22a-ac5a93b6e0b3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "bf96f310-678e-456d-8ef5-844afb83a86f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c008090a-f9c1-4ac7-aa44-8e4264650534",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c02b4f46-8be2-4433-ac5d-fff6af4335bd",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c0790145-7108-4b6a-8578-f0ed3790aeaa",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c08b6933-d31a-46d1-b5f8-3d003cdada94",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c08d75d1-0996-49d7-abd2-68e0d9c21393",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c0c87ab7-253f-4e1e-9af8-b5984913e333",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c11798fb-3052-47ed-b701-795cc73d9f40",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_mjuklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_mjuklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c202d62d-2f70-4541-b733-8bf661e6f8f8",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_mjuklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_mjuklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c2b11073-f040-4769-8079-0ffdb8e91e30",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c2fdaf54-e4bb-4861-a5c9-2f78d39ebd8f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c4c402be-088d-4b9f-a268-e5dc0914cc49",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c517665d-441a-4301-853b-b309676c9c0a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "iron_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "iron_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c559d0c3-c03b-4793-b420-d6e5bea19af9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "c82f862a-e870-4823-b56e-d7cd7a805e0d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ca7c1008-9d75-40a7-859e-0f24fe29e210",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ca99b4d8-7989-45ec-a51e-e8c2debc579d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "caa54594-bd72-4d99-ac04-3f3d28a9b78a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "caf53410-00a3-4730-983c-3e82c238c202",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cb165816-fb04-4f18-9189-d57771c52724",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cb31f30f-db65-4063-91bc-bc4430aa480d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_hand_axe3"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_hand_axe2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cbdea67a-d74e-4ae8-8e4b-0c44ced0d395",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_medium_block_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_medium_block_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cc83fb60-570a-4df4-a2c6-2817e70221a4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ccde3a0c-5bae-4e75-98d3-a695eef96adb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ce721df9-b215-4cfb-968a-1f6d181ac392",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ce870cbc-04d2-4322-98a6-ee4baaeff8d5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cf02baf0-3c90-45e4-ab6c-18945e68eaf6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "cf9d1ebd-2a87-44e9-a323-aedc76264047",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_mjuklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_mjuklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d03aaf36-c7e0-4c15-8694-124ca5272572",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d0a2ac09-263e-4829-b1c5-6f295e5bee5e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d10972df-887e-48d6-a9dc-d54ab2929f98",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d145af5c-e576-49d3-9ce3-172ef26f1792",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d14aec85-29cd-4dff-976f-aadf3abcc059",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "fine_alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "fine_alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d1b8007d-1dad-4c52-a068-c187c59d90d4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d1d468d7-4c81-44e9-a050-62770a45e812",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d2aea7e2-3c26-4287-a2c1-07891adf6e88",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d2f340c8-de95-41c0-8d7b-92feecf2223d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d33f0c94-d12a-4a0a-99d6-fdf4df5318d7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d4626b0d-469d-48dd-9dee-0b3472324e36",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_pick_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_pick_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d582badd-8b3a-4623-ac0c-3f7224bd96c6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d5c1a376-06f1-4995-be8c-ad9d5e55766b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d62843a7-7676-435d-ac11-b59684369fb6",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d662d07a-f193-433e-b181-15fd94e735f3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d7d9b7db-4052-4a45-ac26-6fe57d4b6421",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d7e65b18-25e1-4ec6-bed4-0b3af6fc1e6b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d7ecf421-17f3-482f-aa89-1853c1fab810",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d85cc068-f6cf-47cf-8850-0371c3df10c7",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d8a20583-29d7-4197-9034-076cba58e6df",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d9443067-b75a-44cc-88de-0af1e71ae6be",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "d99fb88f-1037-4ea5-a8e1-a6429ac74c7b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "daa4e8cb-923c-487c-9d67-7853201c75a4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "dafc40bc-dcd4-4b3e-a01f-29de4a287596",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "dc4f7d1a-f9fc-4246-a377-ec4838bbede2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "hard_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "dc649658-2a6b-4d09-a763-1bf8de298435",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "dd260b8d-1545-4134-bb69-9feb9fce21cb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_starklaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_starklaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "dd9b3cf5-e757-4e3d-95b7-1a0916b6defb",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "de22dbe2-87c7-4580-a4d4-2b64b18f5f14",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "de6e6a18-2af3-4c6b-8dbd-81c958e44396",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "de732d17-1d81-4d9c-9afb-5777a6c41a89",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "deca6b6f-c1fe-47ae-93ea-8ee7017570b3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "df6a472b-1964-4431-8234-e0ede74b87cc",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_svarlaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e27eca89-c9e1-4bc0-9dee-c3a4c3372722",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e2858cc7-f29f-4146-bfaf-a321b9b6a6b3",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e2aa8053-1b5b-4b70-99c1-4058dbb121a0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e3732fc1-d4b9-447f-b523-2780caad9983",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e4323a23-53e6-4d3a-97e7-db9f1dfdced4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e5137dc8-ce3d-4e17-9a36-7f6f725621c4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e578666b-6241-457e-b338-74b7592ff59e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e68be45f-c008-49f7-ab1a-184738c42d49",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e738c816-89eb-4b68-a2d9-b78cfe71055e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e7bb28c6-be04-41cb-b6e8-d3325f8d6517",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e8afb3fd-538e-471e-bba6-7db37225cad4",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_war_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e8d44888-3fcc-4bae-b058-b252a93ced88",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e9238e47-db84-427f-933d-b702ec207f92",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "e95a94a4-763a-42fc-94fb-3d43154d7c70",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ea4a73e9-32f5-4a69-a12a-003442f58dde",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ea87dd55-4ec3-4796-9807-6034bce0a603",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb0a6f0d-e479-4c26-86f5-0dfdef9ad8da",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_mjuklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "cured_mjuklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb2419cc-404c-4e8c-b6f5-68cfa06db3c9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb58e157-5758-4097-ba08-b6a645c70b8d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb5b8e16-c3f7-4c43-b379-545477e65632",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_coif3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb63b1b7-067f-48ee-abda-7fd057658576",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_barbed_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_barbed_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "eb9080f6-c2ee-4858-8168-d5fc1dee3c25",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_stiletto"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_stiletto3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ebb8c376-e879-4168-8e37-7ec5b2a5a1de",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_svarlaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_svarlaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ebc493e9-7b87-40b7-a256-3a37bda2b401",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ec2a4e47-0278-49b6-9f86-9c66f7d3de9b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ec648799-1fc5-4f1a-b1ef-6d3d53079f39",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ecdc53bf-a396-4624-8493-12e9c2bed540",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_boots"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_boots2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ed85f334-f358-4204-bc67-c37e4096dc18",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ef95f0dd-8910-4679-ab37-f5795b4aea18",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f0027980-e28d-43c1-9338-bcfa6bf7222c",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f0237c1b-9769-4f31-b79c-cbc2e2d00d6b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_starklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_starklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f0645fe4-0bff-4e41-a9e1-cf846c7d7aa5",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f071e50d-c527-446a-9ad2-fc4b249f646f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f0b22426-509d-4003-9280-7bc157eab6b0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f101beda-c1c9-4ace-b832-172e1b92d69f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "rigid_svarlaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f1b30e66-fa14-4572-b46d-a17d621af30a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f254b36b-b22d-4f31-abfa-f8ade1abb56f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_rapier"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_rapier3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f363c7e8-5791-480b-85c6-006dd2700a85",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_osnadurtha_boots3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f40d539a-5cb3-426c-9d8f-4d2447d89c86",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f4a1284f-dbb8-433d-9dd0-83eea1ed15e1",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f4a59e7b-c890-4f7c-b232-c9fd39f44d82",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f53fa0b0-ad70-4903-8295-2efc0b10ad8e",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_mjuklaedar_gloves"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_mjuklaedar_gloves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f74388c4-1b3c-4d2e-aaa7-bfcf7f1df698",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f7463e0a-e14f-4036-841c-fca1d76f6452",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f7932b47-745c-4883-8e1d-46e970a2e154",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f7de3e20-1df2-4909-88e6-7a47d8a94b5b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "rawhide_mjuklaedar_leggings"
+   },
+   "after": {
+    "ItemTemplateID": "rawhide_mjuklaedar_leggings2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f7f497aa-d86b-4127-aef0-604916837a7a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "alloy_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "alloy_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f817e41d-85ac-4ff3-9649-ca74eb56bc79",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cobalt_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "cobalt_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f829bd4c-faae-47fb-a006-69716b8dea0d",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin"
+   },
+   "after": {
+    "ItemTemplateID": "tanned_svarlaedar_jerkin2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f86122d6-9beb-4c37-be5a-8f770c5b07a2",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "quartz_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "quartz_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "f8e7771f-4da5-40f8-a0f0-d5b023f4f0d0",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fa0f8c39-5e11-42c3-abf6-74455dacdbee",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_long_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_long_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fbe2a357-121b-4db5-a699-824e0f0a6a8f",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "dolomite_dirk"
+   },
+   "after": {
+    "ItemTemplateID": "dolomite_dirk3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fce1b003-9124-4eea-8f1c-5c9e6db1d47a",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "cured_mjuklaedar_sleeves"
+   },
+   "after": {
+    "ItemTemplateID": "cured_mjuklaedar_sleeves2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fce1cbcd-bf1c-4150-b6f1-e40fa4db9c23",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_curved_dagger"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_curved_dagger3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fd92eba8-bec6-4b5a-b9cd-cb65c13dc590",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "oaken_large_block_shield6"
+   },
+   "after": {
+    "ItemTemplateID": "oaken_large_block_shield3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fda2938e-528d-4d04-a619-4851a3f94dea",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "steel_battle_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "steel_battle_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fdc94358-6ec5-41df-84aa-b6c0f8e89b1b",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_short_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_short_spear3"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "fde1781e-f0e4-468f-9c70-3a99831d8ced",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "bronze_small_hammer"
+   },
+   "after": {
+    "ItemTemplateID": "bronze_small_hammer2"
+   }
+  },
+  {
+   "table": "MerchantItem",
+   "key": "ffa8ad08-5faf-4720-a571-de78060101f9",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "ferrite_war_spear"
+   },
+   "after": {
+    "ItemTemplateID": "ferrite_war_spear3"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

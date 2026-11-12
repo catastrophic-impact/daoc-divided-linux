@@ -33,8 +33,10 @@ namespace DOL.GS.PropertyCalc
             if (debuff < 0)
                 debuff = -debuff;
 
-            regen += living.BaseBuffBonusCategory[property] + living.AbilityBonus[property] + living.ItemBonus[property] - debuff;
-            regen += ModernItemBonusRules.MythicalRegen(living, property);
+            // Everything above the level base; it also stacks on the out-of-combat refill floor (issue #10).
+            double bonus = living.BaseBuffBonusCategory[property] + living.AbilityBonus[property] + living.ItemBonus[property] - debuff
+                + ModernItemBonusRules.MythicalRegen(living, property);
+            regen += bonus;
 
             // One rule for real players and GameBots (autonomous gamebots and /spawn companions), owner 2026-11-03: a list
             // caster below half power regenerates at half speed only while mana_regen_amount_halved_below_50_percent is on
@@ -50,8 +52,9 @@ namespace DOL.GS.PropertyCalc
                 regen /= 2;
             }
 
-            regen *= ServerProperties.Properties.MANA_REGEN_AMOUNT_MODIFIER;
-            return OutOfCombatRecovery.Amount(living, property, Math.Max(1, (int) regen));
+            double modifier = ServerProperties.Properties.MANA_REGEN_AMOUNT_MODIFIER;
+            regen *= modifier;
+            return OutOfCombatRecovery.Amount(living, property, Math.Max(1, (int) regen), bonus, modifier);
         }
 
         /// <summary>The classic penalty's condition, the same for a player and a bot: a list caster below 50% power.</summary>

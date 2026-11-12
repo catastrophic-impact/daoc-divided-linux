@@ -56,4 +56,24 @@ public static class AutonomousRouteRecoveryPolicy
     public static bool CanContinuePartial(PathfindingStatus status, Vector3 origin, Vector3 current) =>
         status == PathfindingStatus.PartialPathFound &&
         Vector3.DistanceSquared(origin, current) >= ForwardProgressRequired * ForwardProgressRequired;
+
+    public enum UnroutedMemberAction { Wait, Recall, Leave }
+    public const long UnroutedMemberMilliseconds = 60_000;
+
+    /// <summary>A party member with no legal connection to its leader: home after a minute, out of the party a minute later.</summary>
+    public static UnroutedMemberAction UnroutedMemberStep(long withoutRouteMilliseconds, bool recalled) =>
+        withoutRouteMilliseconds < UnroutedMemberMilliseconds ? UnroutedMemberAction.Wait
+        : recalled ? UnroutedMemberAction.Leave : UnroutedMemberAction.Recall;
+
+    /// <summary>An escape that would put the bot within this of where it stands moves nothing.</summary>
+    public const float EscapeInPlaceRadius = 300;
+
+    public static bool IsEscapeInPlace(ushort fromRegion, Vector3 from, ushort toRegion, Vector3 to) =>
+        fromRegion == toRegion && Vector2.DistanceSquared(new(from.X, from.Y), new(to.X, to.Y)) <= EscapeInPlaceRadius * EscapeInPlaceRadius;
+
+    /// <summary>A between-task destination (merchant or broker, RvR staging, town idle, crafting), not an XP camp or quest.</summary>
+    public static bool IsBetweenTaskCamp(string campId) =>
+        !string.IsNullOrEmpty(campId) && (campId.StartsWith("service-", System.StringComparison.Ordinal) ||
+                                         campId.StartsWith("rvr-stage-", System.StringComparison.Ordinal) ||
+                                         campId == "town-idle" || campId.StartsWith("craft", System.StringComparison.Ordinal));
 }

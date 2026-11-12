@@ -81,10 +81,13 @@ namespace DOL.GS
                 LeaveQuestCamp(bot);
                 return true;
             }
-            AutonomousBotQuests.Goal goal = AutonomousBotQuests.GoalFor(bot, run);
+            AutonomousBotQuests.Goal goal = AutonomousBotQuests.GoalFor(bot, run, out string blocked);
             if (goal == null)
             {
-                AutonomousBotQuests.Abandon(bot, run, "The step has no place in the world");
+                // DR-076: every spot of the step is far over this bot's level or behind a monster that is. Set it aside
+                // (the bot may level, or the camp move) and give it up once it has been set aside too often.
+                if (blocked == null || !AutonomousBotQuests.Park(bot, run, AutonomousBotQuests.Classify(blocked), blocked))
+                    AutonomousBotQuests.Abandon(bot, run, blocked ?? "The step has no place in the world");
                 LeaveQuestCamp(bot);
                 return true;
             }

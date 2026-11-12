@@ -17,6 +17,12 @@ namespace DOL.GS.Spells
 		/// Execute heal spell
 		/// </summary>
 		/// <param name="target"></param>
+		/// <summary>
+		/// A negative Value is a percent of the target's endurance. The percent used to be rounded to a whole number before
+		/// the multiply (Round(-10 * -0.01) = 0), so every heal under 50% restored nothing (found 2026-11-08 with the
+		/// Bountycraft omni heals).</summary>
+		public static int PercentOf(double value, int maxEndurance) => (int)Math.Round(value * -0.01 * maxEndurance);
+
 		public override bool StartSpell(GameLiving target)
 		{
 			var targets = SelectTargets(target);
@@ -30,7 +36,7 @@ namespace DOL.GS.Spells
 			{
 				if (Spell.Value < 0 && healTarget != null)
 					// Restore a percentage of the target's endurance
-					spellValue = (int)Math.Round(Spell.Value * -0.01) * healTarget.MaxEndurance;
+					spellValue = PercentOf(Spell.Value, healTarget.MaxEndurance);
 
 				healed |= HealTarget(healTarget, spellValue);
 			}

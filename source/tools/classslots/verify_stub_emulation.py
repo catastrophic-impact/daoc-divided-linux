@@ -62,7 +62,13 @@ from unicorn import UC_HOOK_CODE
 def reader(site,back,kind,flag):
     mu=machine();obj=0x104000
     for r in (UC_X86_REG_ESI,UC_X86_REG_EAX):mu.reg_write(r,obj)
-    mu.reg_write(UC_X86_REG_EBX,0);mu.reg_write(UC_X86_REG_ECX,0);mu.mem_write(obj+0x19c4,bytes([flag]))
+    mu.reg_write(UC_X86_REG_EBX,0);mu.reg_write(UC_X86_REG_ECX,0);mu.reg_write(UC_X86_REG_EBP,0x10a000);mu.mem_write(obj+0x19c4,bytes([flag]))
+    if kind=='ui_jne':
+        skip=P.VAMPIIR_UI_SKIP[site];hit=[]
+        def h(mu,addr,size,_):
+            if addr in (back,skip):hit.append(addr);mu.emu_stop()
+        mu.hook_add(UC_HOOK_CODE,h);mu.emu_start(site,0,count=50)
+        return 1 if hit==[skip] else 0
     if kind=='cmp_je':
         stops=(back,P.VAMPIIR_NOT_TINT);hit=[]
         def h(mu,addr,size,_):
@@ -72,8 +78,19 @@ def reader(site,back,kind,flag):
     if kind=='setne':
         run(mu,site,0x45014b);return mu.reg_read(UC_X86_REG_ECX)&0xff
     run(mu,site,back)
-    return mu.reg_read(UC_X86_REG_ECX if kind=='cl' else UC_X86_REG_EAX)&0xff
+    return mu.reg_read(UC_X86_REG_ECX if kind in ('cl','model_setne') else UC_X86_REG_EAX)&0xff
 for site,original,back,kind in (P.VAMPIIR_ONLY if P.TUATHA_HOVER else []):
     got=[reader(site,back,kind,f) for f in (0,1,2)]
     good=got==[0,1,0];print('vampiir-only reader',hex(site),kind,'flag 0/1/2 ->',got,'ok',good);ok&=good
+# Hover-move animation: the hover-only class (flag 2) takes it at any forward speed, a Vampiir still only over 250.
+def speed(flag,spd):
+    mu=machine();obj=0x104000;mu.reg_write(UC_X86_REG_EBX,obj);mu.reg_write(UC_X86_REG_EAX,spd);mu.mem_write(obj+0x19c4,bytes([flag]))
+    site,_,vamp,ordinary=P.HOVER_SPEED;hit=[]
+    def h(mu,addr,size,_):
+        if addr in (vamp,ordinary):hit.append(addr);mu.emu_stop()
+    mu.hook_add(UC_HOOK_CODE,h);mu.emu_start(site,0,count=50)
+    return 'hover' if hit==[vamp] else 'ordinary'
+if P.TUATHA_HOVER:
+    for flag,spd,want in ((2,40,'hover'),(2,191,'hover'),(2,0,'ordinary'),(2,-50,'ordinary'),(1,191,'ordinary'),(1,300,'hover'),(0,191,'ordinary')):
+        got=speed(flag,spd);good=got==want;print('hover speed flag',flag,'speed',spd,'->',got,'ok',good);ok&=good
 print('ALL OK' if ok else 'FAILED')

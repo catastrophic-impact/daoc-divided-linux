@@ -740,6 +740,10 @@ namespace DOL.GS
         {
         }
 
+        public void SendGroupFinderSettings(byte[] settings) { }
+
+        public void SendGroupOptions(byte[] settings) { }
+
         public void SendXFireInfo(byte flag)
         {
         }

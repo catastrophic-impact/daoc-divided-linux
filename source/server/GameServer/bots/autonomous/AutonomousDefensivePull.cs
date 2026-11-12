@@ -62,6 +62,15 @@ namespace DOL.GS
             !SavageBotCombatPolicy.MustMeleePull((eCharacterClass)bot.CharacterClass.ID) &&
             (PullSpell(bot) != null || BotRangedCombat.CanUse(bot, bot.Inventory?.GetItem(eInventorySlot.DistanceWeapon)));
 
+        /// <summary>How far this puller reaches without moving: its bow or crossbow, else its longest pull spell; 0 = melee.
+        /// (True 1.65 0.5, 07cb3a860.)</summary>
+        public static int RangedPullReach(GameBot bot)
+        {
+            if (!HasRangedPull(bot)) return 0;
+            int bow = HasUsableDistanceWeapon(bot) ? BotRangedCombat.EstimatedRange(bot) : 0;
+            return Math.Max(bow, PullSpell(bot)?.Range ?? 0);
+        }
+
         public static bool OwnsRangedPosition(GameNPC npc) => npc is GameBot bot && bot.Group != null &&
             States.TryGetValue(bot.Group, out State state) && state.Active && state.Shooter == bot;
 

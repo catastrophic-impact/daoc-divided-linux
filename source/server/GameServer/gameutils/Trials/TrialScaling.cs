@@ -8,7 +8,9 @@ namespace DOL.GS.Trials
     /// </summary>
     public static class TrialScaling
     {
-        public const double MinimumScale = 0.25;
+        // One player of a group of eight (DR-115): at 0.25 a lone player was sized as two and Master Level 7's
+        // group steps could not be finished alone. A raid trial stops at the same floor (two of sixteen).
+        public const double MinimumScale = 0.125;
         public const double MaximumScale = 2.0;
         public const int GroupSize = 8;
         public const int RaidSize = 16;

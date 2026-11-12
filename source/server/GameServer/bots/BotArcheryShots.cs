@@ -24,6 +24,17 @@ namespace DOL.GS
 
         public static bool IsSoloShot(Spell spell) => spell.Name.Contains("Solo Shot");
 
+        /// <summary>How long an archer that was hit in melee fights in melee before it tries its bow again.</summary>
+        public const long MeleePressureFallbackMilliseconds = 6_000;
+
+        /// <summary>
+        /// A shot is not started while a monster beside the archer is interrupting it: night playtest 2026-11-04, Power Shot
+        /// was interrupted 26 times of 36 and a Hunter started a draw four times in nine seconds with an ant on it. The bot
+        /// fights in melee instead (BotBrain.RequestArcherMeleeFallback). Pure.
+        /// </summary>
+        public static bool HoldShotUnderMeleePressure(bool beingInterruptedByOther, bool attackerInMeleeRange) =>
+            beingInterruptedByOther && attackerInMeleeRange;
+
         private static double DamagePerSecond(Spell spell) => spell.Damage / Math.Max(1, spell.CastTime);
 
         /// <summary>

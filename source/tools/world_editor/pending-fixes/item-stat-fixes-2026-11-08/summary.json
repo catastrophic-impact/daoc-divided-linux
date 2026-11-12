@@ -1,0 +1,27 @@
+{
+ "items changed": 3205,
+ "items changed by realm": {
+  "1": 1109,
+  "0": 78,
+  "2": 1052,
+  "3": 966
+ },
+ "items with each kind of change": {
+  "DPS_AF": 1008,
+  "Bonus lines": 1870,
+  "Realm": 643,
+  "SPD_ABS": 852,
+  "Type_Damage": 57
+ },
+ "values held back (far from ours)": {
+  "another level version (whole item left)": 780
+ },
+ "spells created": 0,
+ "skipped": {
+  "changed by an earlier non-official patch": 2044,
+  "own package": 4240,
+  "ToA named drop or artifact": 1944,
+  "mythirian": 85
+ },
+ "edits": 3205
+}

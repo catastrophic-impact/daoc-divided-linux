@@ -6,7 +6,13 @@ namespace DOL.GS
 {
     public static class OutOfCombatRecovery
     {
-        public static int Amount(GameLiving living, eProperty resource, int native)
+        /// <summary>
+        /// Outside combat a player gets at least the refill floor (<c>rest_*_seconds</c>). Issue #10 (owner 2026-11-06): the floor
+        /// used to replace the computed rate, so items, mythirian regen, Champion passives, buffs and the
+        /// <c>*_regen_amount_modifier</c> settings did nothing outside combat. Now <paramref name="bonus"/> (every source on top of
+        /// the level base, debuffs taken off) is added to the floor and the sum is scaled by <paramref name="modifier"/>.
+        /// </summary>
+        public static int Amount(GameLiving living, eProperty resource, int native, double bonus = 0, double modifier = 1)
         {
             if (!Properties.FASTER_OUT_OF_COMBAT_RECOVERY || living is not GamePlayer ||
                 !living.IsAlive || living.InCombat || living.IsAttacking || living.IsCasting || living.IsCrowdControlled ||
@@ -35,7 +41,7 @@ namespace DOL.GS
                     break;
                 default: return native;
             }
-            return Floor(native, maximum, interval, seconds, resting);
+            return Floor(native, maximum, interval, seconds, resting, bonus, modifier);
         }
 
         private static bool PetFighting(GameNPC pet)
@@ -49,11 +55,13 @@ namespace DOL.GS
             return false;
         }
 
-        public static int Floor(int native, int maximum, int intervalMs, int seconds, bool sitting)
+        public static int Floor(int native, int maximum, int intervalMs, int seconds, bool sitting, double bonus = 0, double modifier = 1)
         {
             if (seconds <= 0 || maximum <= 0) return native;
             double stance = sitting ? Math.Max(1, Properties.REST_SITTING_MULTIPLIER) : 1;
-            return Math.Max(native, (int)Math.Min(int.MaxValue, Math.Ceiling(maximum * (double)intervalMs / (seconds * 1000.0) * stance)));
+            double floor = maximum * (double)intervalMs / (seconds * 1000.0) * stance;
+            double stacked = Math.Max(0, (floor + bonus) * Math.Max(0, modifier));
+            return Math.Max(native, (int)Math.Min(int.MaxValue, Math.Ceiling(stacked)));
         }
     }
 }

@@ -98,6 +98,7 @@ namespace DOL.AI.Brain
         {
             _brain.Body.Flags &= ~GameNPC.eFlags.STEALTH;
             _aggroEndTime = GameLoop.GameLoopTime + LEAVE_WHEN_OUT_OF_COMBAT_FOR;
+            _brain.StartLeash();
             base.Enter();
         }
 
@@ -123,6 +124,10 @@ namespace DOL.AI.Brain
                 _brain.FSM.SetCurrentState(eFSMStateType.IDLE);
                 return;
             }
+
+            // Live mobs give up and walk home when pulled too far from their camp.
+            if (_brain.CheckLeash())
+                return;
 
             _brain.AttackMostWanted();
 
@@ -205,6 +210,7 @@ namespace DOL.AI.Brain
         {
             if (_brain.Body.IsNearSpawn)
             {
+                _brain.EndLeash();
                 _brain.FSM.SetCurrentState(eFSMStateType.IDLE);
                 _brain.Body.TurnTo(_brain.Body.SpawnHeading);
                 return;

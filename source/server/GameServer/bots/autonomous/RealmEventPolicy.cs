@@ -55,6 +55,8 @@ namespace DOL.GS
         public static double EffectiveDefenseRatio => SiegeDefenseBalance.Ratio(DefenseRatio);
 
         public static int AttackerCap(bool relic) => relic ? RelicAttackers : KeepAttackers;
+        /// <summary>The attackers' cap in use: the full cap, trimmed by the siege balance once the defenders' share is at its limit.</summary>
+        public static int EffectiveAttackerCap(bool relic) => SiegeDefenseBalance.AttackerCap(AttackerCap(relic));
         /// <summary>
         /// Defenders a siege takes: the defense share of the attacking army, measured on its larger size, when it marched or
         /// now, at least 8 and at most the cap. 2026-10-19/20: the share was taken of the army that marched (10-60) while
@@ -68,6 +70,14 @@ namespace DOL.GS
         /// </summary>
         public static bool BreaksOffToDefend(int defenders, int defenderCap, int attackers, int marchedAttackers, int forceSize) =>
             defenders * 2 < defenderCap && attackers - forceSize >= (Math.Max(attackers, marchedAttackers) + 1) / 2;
+
+        /// <summary>
+        /// Whether a bot siege calls its keep's realm when the attacking army marches (scouts see it leave its border keep), not
+        /// when it reaches the walls (1.1.3, AutonomousRvrEventLayer.CallDefendersAtMarch). A player's attack keeps its own
+        /// immediate defense, and the losing realm's one retake keeps its rules; the legacy unscheduled sieges are unchanged.
+        /// </summary>
+        public static bool DefendersCalledAtMarch(bool siegeScheduling, bool defenseReaction, bool retake) =>
+            siegeScheduling && !defenseReaction && !retake;
 
         /// <summary>No defense muster once the battle is on and attackers are at the keep (owner, 2026-10-20).</summary>
         public static bool DefendersSkipMuster(bool battleStarted, int attackersPresent) => battleStarted && attackersPresent > 0;

@@ -161,8 +161,11 @@ public static class AutonomousObjectiveAssignments
 
     public static bool IsRvrEligible(OfflineWorldBotRecord record, DateTime utcNow)
     {
+        // Frontier RvR starts at level 40 whatever the settings say (AutonomousBotGoalPolicy.FrontierRvrMinimumLevel).
+        if (record != null && !AutonomousBotGoalPolicy.LevelAllowsFrontierRvr(record.Level))
+            return false;
         if (AutonomousBotGoalPolicy.IsConfigured)
-            return record == null || AutonomousBotGoalPolicy.Settings.ForLevel(record.Level).RvR > 0;
+            return record == null || AutonomousBotGoalPolicy.WeightsFor(record.Level).RvR > 0;
         if (record?.ObjectiveRvrEligibleUtc == PveCompletionRequired) return false;
         return record == null || string.IsNullOrWhiteSpace(record.ObjectiveRvrEligibleUtc) ||
                !DateTime.TryParse(record.ObjectiveRvrEligibleUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out DateTime eligibleUtc) ||
@@ -189,6 +192,24 @@ public static class AutonomousObjectiveAssignments
     {
         var weights = AutonomousBotGoalPolicy.Settings.ForLevel(levelFifty ? 50 : 20);
         return Allocate(count, weights.SoloPve / 100d, weights.GroupPve / 100d, weights.RvR / 100d, weights.Battlegrounds / 100d);
+    }
+
+    /// <summary>
+    /// The 20-49 band's targets from its members' own levels: each bot counts with its level's weights
+    /// (AutonomousBotGoalPolicy.WeightsFor), so the band's RvR share only comes from bots of level 40 and up.
+    /// </summary>
+    public static Allocation TargetForMidLevelPopulation(IReadOnlyList<int> levels)
+    {
+        if (levels == null || levels.Count == 0)
+            return new Allocation(0, 0, 0, 0);
+        double solo = 0, group = 0, rvr = 0, battlegrounds = 0;
+        foreach (int level in levels)
+        {
+            var weights = AutonomousBotGoalPolicy.WeightsFor(level);
+            solo += weights.SoloPve; group += weights.GroupPve; rvr += weights.RvR; battlegrounds += weights.Battlegrounds;
+        }
+        double total = levels.Count * 100d;
+        return Allocate(levels.Count, solo / total, group / total, rvr / total, battlegrounds / total);
     }
 
     /// <summary>Below level 20 only the configured solo/group weights are used.</summary>
@@ -252,7 +273,7 @@ public static class AutonomousObjectiveAssignments
 
             DateTime utcNow = DateTime.UtcNow;
             GameBot[] roster = AutonomousBotRegistry.Snapshot()
-                .Where(bot => bot.IsAutonomousWorldBot && !bot.IsTemporaryGroupHelper && !bot.IsPlayerLedGroup &&
+                .Where(bot => bot.IsAutonomousWorldBot && !bot.IsTemporaryGroupHelper && !BotDutyLeases.IsSpokenForByPlayer(bot) &&
                               bot.PersistentRecord != null && !AutonomousBeggars.Is(bot))
                 .ToArray();
             // The existing one-minute pass is also a backstop for a service bot
@@ -263,7 +284,7 @@ public static class AutonomousObjectiveAssignments
             // Group/warband deadlines belong to the coordinator, not individual
             // members' old allocation timestamps. Snapshot once per allocation pass.
             var groupOwned = roster.Where(bot => bot.Group != null &&
-                !bot.Group.GetMembersInTheGroup().Any(member => member is GamePlayer)).ToHashSet();
+                (!bot.Group.GetMembersInTheGroup().Any(member => member is GamePlayer) || BotLedGroups.IsHostedGroup(bot.Group))).ToHashSet();
             foreach (GameBot bot in roster.Where(bot => !groupOwned.Contains(bot)))
                 if (NormalizeLegacyTimedAssignment(bot.PersistentRecord, utcNow))
                 {
@@ -314,7 +335,9 @@ public static class AutonomousObjectiveAssignments
 
                 Allocation target = bucket.Key.Band == 0
                     ? TargetForLowLevelPopulation(members.Length)
-                    : TargetForPopulation(members.Length, bucket.Key.Band == 50);
+                    : bucket.Key.Band == 20
+                        ? TargetForMidLevelPopulation(members.Select(member => (int)member.Level).ToArray())
+                        : TargetForPopulation(members.Length, true);
                 target = LimitBattlegrounds(target, members.Count(CanTakeBattleground));
                 int currentRvr = members.Count(bot => Is(bot, eAutonomousObjectiveKind.RvR));
                 foreach (GameBot bot in members.Where(bot => bot.Group == null &&
@@ -326,9 +349,15 @@ public static class AutonomousObjectiveAssignments
                         ? eAutonomousObjectiveKind.RvR : eAutonomousObjectiveKind.SoloPve;
                     if (AutonomousBotGoalPolicy.IsConfigured)
                     {
-                        var weights = AutonomousBotGoalPolicy.Settings.ForLevel(bot.Level);
+                        var weights = AutonomousBotGoalPolicy.WeightsFor(bot.Level);
                         if (!weights.Allows((int)fallback))
                             fallback = AutonomousBotGoalPolicy.Choose(bot.Level, excludeGroup: true);
+                    }
+                    // No frontier tour below 40 (Assign enforces it too): the log and the RvR count say what is assigned.
+                    if (fallback == eAutonomousObjectiveKind.RvR && !AutonomousBotGoalPolicy.LevelAllowsFrontierRvr(bot.Level))
+                    {
+                        fallback = eAutonomousObjectiveKind.SoloPve;
+                        useRvr = false;
                     }
                     if (useRvr) currentRvr++;
                     DOL.Logging.LoggerManager.Create(typeof(AutonomousObjectiveAssignments)).Warn(
@@ -566,6 +595,9 @@ public static class AutonomousObjectiveAssignments
         // Recovery and task-boundary callers cannot reintroduce a disabled goal.
         if (AutonomousBotGoalPolicy.IsConfigured && !forcedRaid)
             kind = AutonomousBotGoalPolicy.EnsureAllowed(bot.Level, kind);
+        // No frontier tour below level 40, configured or not (night playtest 2026-11-04).
+        if (kind == eAutonomousObjectiveKind.RvR && !forcedRaid && !AutonomousBotGoalPolicy.LevelAllowsFrontierRvr(bot.Level))
+            kind = eAutonomousObjectiveKind.SoloPve;
         // No healer free for the queue at this level: solo instead of a 20-minute wait that ends solo anyway (AutonomousGroupSupply).
         if (kind == eAutonomousObjectiveKind.GroupPve && !forcedRaid && !AutonomousGroupSupply.ShouldQueue(bot))
         {

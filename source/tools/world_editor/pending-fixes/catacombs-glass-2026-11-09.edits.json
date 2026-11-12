@@ -1,0 +1,244 @@
+[
+{
+"table": "ServerProperty",
+"where": {
+"Category": "loot",
+"Key": "artifact_glass_regions"
+},
+"set": {
+"Value": "73,30,130,78,35,135,79,36,136,80,37,137,83,40,140,88,45,145,89,46,146,90,47,147,91,58,59,63,65,66,67,68,92,94,95,96,97,99,109,148,149,162,189,195,197,226,227,228,229,243,352,376,390,429,430,433,435,436,443",
+"Description": "Comma separated regions where mobs can drop Atlantean Glass (Atlantis; Catacombs and Darkness Rising since 2026-11-09)."
+}
+},
+{
+"table": "Mob",
+"key": "100004021",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98390578",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98393836",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98396451",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98396815",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98397111",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "NpcTemplate",
+"key": "98397180",
+"set": {
+"ClassType": "DOL.GS.GameAtlanteanGlassMerchant"
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Tunic_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Pants_leather_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Pants_Reinforce_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Helm_leather_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Vest_leather_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Boots_Reinforce_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Pants_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Vest_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Gloves_leather4_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Sleeves_Reinforce_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Boots_leather_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Sleeves_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Helm_Reinforce_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Vest_Reinforce2_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Gloves_leather3_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Leggings_Scale_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Gloves_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Boots_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Sleeves_leather_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Gloves_leather2_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Helm_hib",
+"set": {
+"Price": 10
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Robe_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Vest_Reinforce_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Vest_Scale_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Pants_Reinforce2_hib",
+"set": {
+"Price": 15
+}
+},
+{
+"table": "ItemTemplate",
+"key": "Spellbound_Cobalt_Gauntlets_Reinforce_hib",
+"set": {
+"Price": 10
+}
+}
+]

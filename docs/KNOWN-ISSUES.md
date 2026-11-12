@@ -1,8 +1,62 @@
-# Living Server Beta 1.0: known issues and what's not tested yet
+# Living Server Beta 1.1.3: known issues and what's not tested yet
 
 For players. What to expect, what hasn't been checked in game, and known problems. The full list
-of changes is in [CHANGELOG-LIVING-SERVER.md](https://github.com/chris4aker/OfflineDAoC-SocialExpansion/blob/main/CHANGELOG-LIVING-SERVER.md).
-The Living Server was called the Social Expansion up to 0.37-se.2; Beta 1.0 is that build.
+of changes is in [CHANGELOG-LIVING-SERVER.md](https://github.com/chris4aker/OfflineDAoC-LivingServer/blob/main/CHANGELOG-LIVING-SERVER.md).
+The Living Server was called the Social Expansion up to 0.37-se.2; Beta 1.0 was that build, and Beta 1.1
+(2026-10-29) added the talking update, the living world, 2003-style names, the one-click Setup and the fixes
+taken from other forks and from Offline DAoC 0.38.
+
+A feature here counts as working only once it has been seen working on a real install. Until then it says "tests
+only".
+
+## Seen on a real install, and fixed in 1.1.3 by tests only
+
+These were seen on the owner's PC with 1.1.2 or the 1.1.3 release candidates and are fixed in this update. The fixes
+haven't been watched on a real install yet, so treat them as likely, not certain.
+
+- **Chat that didn't sound like a real server:** most bot questions in /faction got no answer, realm news came out of
+  a bot's mouth like a herald's announcement, a bot could look for a group and form one in the same minute, items were
+  asked about for classes that can't use them, and Albion bots talked about Midgard's frontier as if it were home.
+- **A raid started from the launcher could wait forever for one bot**, and one bot stuck in another dungeon held a
+  Krondon raid at its gathering town until it was killed by hand. A raid now goes after 15 minutes with nine in ten.
+- **Orshom's Fire killed a hundred raiders in one Krondon raid.** Raiders now stay out of it.
+- **Attackers took most keeps** (12 of 16 bot sieges in one night), mostly because defenders were called only when
+  the battle began. They're now called as the enemy army marches, and the balance aims at about half.
+- **Gamebots waited 15 minutes in their capital for a frontier porter** (779 times in one night). They now go to the
+  border keep first.
+- **The server stalled for a second or more on a busy night.** Two heavy searches are capped. The 4-6 second stalls
+  were in Krondon raids before Scurceol's orb fix, which also bounds that search; it hasn't been timed on a real install.
+
+## Still not right
+
+- **Bots don't fall when they die.** The game client plays the lying-dead pose only for player characters. The only
+  death animation it plays for any other character also removes it from the world, so a fallen bot couldn't be rezzed.
+  There's no safe way around it without changing the game client.
+- **A bot stuck searching for a camp for minutes** (464 times in one night, mostly level 50s at Tir na Nog's bind):
+  the cause isn't found yet. The bot now clears its search memory after 3 minutes and the log records what it held,
+  so the next report should show why.
+- **Bot parties never take a new member once they set off**, so an "lfm" post from a bot party is only a last call
+  while it forms.
+- **A bot that offers to group may walk on before you meet.** It doesn't wait where it was; if it's too far by the time
+  you invite, it tells you where it is.
+
+## Beta 1.1.3: what has been seen on a real install
+
+- **Xanxicar's stomp fix:** one Albion raid of 280 bots killed him in 23 minutes with no wipe (a build before the chat
+  fixes; the stomp code is the same).
+- **Scurceol Hyrde's orbs:** a raid of 200 shot the four orbs down from the floor in 10 minutes and killed him 50
+  seconds later, with no raider killed by him or his orbs (third release candidate; the raid fixes made after it are
+  tests only).
+- **The two Darkness Falls exits:** clicked once each with an Albion character; both went to Albion's exit in Camelot
+  Hills. Not tried yet from Midgard or Hibernia.
+- **Chat, before today's fixes:** a bot that grouped with the player greeted them once when they met again, answered
+  the player's /faction question about a camp, and offered to group after the player's /lfg post.
+- **Chat, sixth to twelfth release candidates** (about five hours by day, Real clock): true answers to the player's
+  /faction questions within 16-34 seconds; a friend's honest answer to small talk; a far bot saying where it is; an idle
+  duo that stays quiet; the way to a zone; 88-100% of bot questions answered within a minute. Each build's log showed a
+  few lines that didn't fit, all fixed; the last one (an offer from across the zone saying "same mobs") is tests only. A
+  bot answering your own /trade post hasn't been seen yet.
+- **Setup waiting out a busy download server:** tests only.
 
 ## Always on
 
@@ -28,7 +82,35 @@ These apply even with every Living Server switch off:
   ignored most of them. An insult has to be aimed at someone to count. Place answers match whole
   words, name class trainers, and are worded like a player.
 
-## How it was tested
+## Beta 1.1: what hasn't been checked yet
+
+- **Quests and quest markers.** Beta 1.1 carries HearthDAoC's quest changes (name matching, delivery items, the
+  25-quest journal, one marker scheme, the epic chains) and they have **not been played in game**. 1.1.2 added
+  quest credit for your bot group's kills, hand-ins above the quest's level and quest XP by level: tests only. The
+  epic chains are not linked until a world script runs, which the installer doesn't do yet. Details are in
+  [QUESTING.md](QUESTING.md).
+- **Sieges at a normal bot count.** Their timers really run from 1.1 on (they were off in every earlier build),
+  so musters, marches, repels and the four-hour cap fire where they used to be skipped. Checked only on the test
+  copy at about 1,000 bots.
+- **Three fixes to raid and storyline moments** came after the last play test: Leeroy jumping the pull, his
+  /faction shout and his after-raid comment; a storyline protagonist dying mid-episode.
+- **Smaller rosters:** automatic raids open only when a realm has 80 eligible level-50 bots online, so a small
+  roster rarely gets them, and a roster filled only with the Lv.1 and Lv.50 buttons has no bots between levels 20
+  and 49 until they level.
+- **The talking update's own in-game list** (combat calls in a real fight, a keep's news retold a minute later,
+  /lfg and /trade in the original client, chat volume at 900 bots a realm) is still being worked through.
+
+## Beta 1.1.2 and 1.1.3: updates from the launcher and Setup
+
+- **Not yet tried on a real Windows PC.** 1.1.3 is the first release the launcher can offer as an update. CI tests
+  the update path without the window on a fake game folder, and Setup's choice of package against GitHub. Still to check by hand: the GET UPDATE button, the dialog and its three
+  choices, the download progress line, the install window and its "Press Enter" step, the launcher opening again
+  and saying how it went, a 0.37c game (both launchers), a game folder in a path with spaces, Setup installing a
+  downloaded package all the way through its window, and SmartScreen or antivirus reactions to the PowerShell step.
+- **Releases marked as prereleases are never offered.** GitHub's "latest release" leaves them out, so a build is
+  offered only once its release is published as a full release (Beta 1.1.1 and 1.1.2 are full releases).
+
+## How it was tested (Beta 1.0)
 
 - **Automated:** every build runs the full server test suite (3,400+ tests) and the installer tests
   before it's packaged.
@@ -86,16 +168,22 @@ meetup fix drop two no-shows (in the server log).
   - A bot in the frontier may answer your "inc" with "omw" without coming.
   - Bots don't know what you are doing beyond your words: a "gz" is answered only by a bot that just
     levelled, and other replies guess from the words alone.
-  - Chat volume hasn't been tuned for very large rosters (1,000+ bots a realm).
-  - In development for Beta 1.1 (the talking update, [bot-voices/TALKING-UPDATE.md](bot-voices/TALKING-UPDATE.md)):
-    true-only lines, conversation threads, combat calls, bot tells and /lfg and /trade traffic. They're tested
-    without a running world only; its "Not checked in game yet" list is what's left.
+  - Chat volume: see "/faction can get too busy" at the top.
+  - Chat has been tested one line at a time, not as conversations over several turns.
 - **Added the 0.37c new client after installing this?** Run `INSTALL.cmd` again so the new client's
   launcher gets the Living Server tab and its gate fixes too.
-- **Versions:** Beta 1.0 is for 0.37 / 0.37b only, and the installer refuses anything else. When
-  shadowofze releases the next update, run `PREPARE-FOR-UPDATE.cmd` before updating (it also puts the
-  released game files back), and wait for a Living Server build for that version before installing one
-  again.
+- **Versions:** Living Server is for Offline DAoC 0.37 / 0.37b / 0.37c only, and the installer refuses anything
+  else. On 2026-10-31 shadowofze put Offline DAoC on hold ("will not receive any more updates"; the 0.37 downloads
+  stay up), so there is no 0.38 to wait for: 0.37 stays the game, and the later fixes from his unreleased work
+  come to you through Living Server releases instead. If an update of his ever does appear, run
+  `PREPARE-FOR-UPDATE.cmd` before applying it (it also puts the released game files back, all but the Living Server
+  loading screen) and wait for a Living
+  Server build for that version before installing one again.
+- **The new client's own fixes in Living Server's source weren't shipped (Beta 1.0 and 1.1).** `/target <name>`
+  filling the target window, the FACE/FOLLOW/STICK buttons, the stick toggle, `/lfg` and `/trade` shown as realm
+  channels and the PLAY double-click guard were fixed in `source/new-client` and played on the owner's PC, but the
+  installer only ships the gate models; a 0.37c player has shadowofze's unchanged client. The quest-marker colour
+  fix (1.1.1) is the first client script the installer carries, and the others follow the same way in 1.2.
 - **Memory over very long sessions:** Windows handles grow about 1,700 an hour with 600 bots per realm
   (a lock inside each monster's stat table keeps the event it waited on once). That is a few MB of
   Windows memory a day; the server's own memory stays flat (about 1.7 GB live at 1,800 bots).
@@ -113,8 +201,30 @@ meetup fix drop two no-shows (in the server log).
 - **Moving to 0.37:** `PREPARE-FOR-UPDATE.cmd` was used for a real update (the owner's 0.36c game to 0.37c).
   `carry_social_tables.py` was tested on test folders and databases only.
 
+## Save safety and network (1.1.2)
+
+- **Seen on the owner's install** (2026-11-05 and 2026-11-08): the server logged WAL confirmed, the integrity check
+  `ok` and a written daily backup. The installer's database copy and the ledger move
+  have been checked in automated tests (Linux and the Windows CI). A start should log
+  `DB_SAFETY ...`, `DB_SAFETY journal_mode=wal confirmed` and `DB_INTEGRITY ... result=ok`. About 5 minutes later it
+  should log `DB_BACKUP result=written`.
+- **"Your server can be reached from other computers" in the log.** Your `runtime\server\config\serverconfig.xml`
+  listens beyond this PC (`<IP>` or `<UdpIP>` is `0.0.0.0` or a network address), or has UPnP on. The server still
+  does what your config says; 1.1.2 changes only the defaults used when a setting is missing. If you don't host
+  friends, stop the server and set these in that file:
+  - `<IP>127.0.0.1</IP>`
+  - `<UdpIP>127.0.0.1</UdpIP>`
+  - `<EnableUPnP>False</EnableUPnP>`
+  - `<DetectRegionIP>False</DetectRegionIP>`
+
+  If there is a `runtime\server\win-x64\config\serverconfig.xml` too, change it the same way. With UPnP on, the
+  server now removes the router mappings it added when it stops. A server that is force-closed can't remove them, so
+  they stay until the next clean stop or until you remove them in the router.
+- **Disk space.** Seven daily copies and three installer copies of a 500 MB world take about 5 GB. Lower
+  `db_backup_keep` to keep fewer.
+
 ## Reporting a problem
 
-Open an issue on [GitHub](https://github.com/chris4aker/OfflineDAoC-SocialExpansion/issues).
+Open an issue on [GitHub](https://github.com/chris4aker/OfflineDAoC-LivingServer/issues).
 Include the `FORK_BUILD` line from `runtime\server\logs\server.log` (it names the build and which
 features are on) and what you were doing.

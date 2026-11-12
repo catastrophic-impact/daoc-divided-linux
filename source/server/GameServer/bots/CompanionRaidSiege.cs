@@ -68,7 +68,7 @@ namespace DOL.GS
         private static readonly ConcurrentDictionary<AbstractGameKeep, long> FriendlyKeepsUnderAttack = new();
         // Melee raid bots drop a target they cannot walk to (a wall archer) and leave it alone for a while.
         private static readonly ConcurrentDictionary<(GameBot Bot, GameLiving Target), long> Unreachable = new();
-        private static readonly ConcurrentDictionary<GameBot, (GameLiving Target, int Failures, long Next)> ReachWatch = new();
+        private static readonly WeakKeyMap<GameBot, (GameLiving Target, int Failures, long Next)> ReachWatch = new();
         private const long UnreachableCheckMilliseconds = 4_000;
         private const long UnreachableIgnoreMilliseconds = 2 * 60_000;
 
@@ -645,6 +645,11 @@ namespace DOL.GS
             if (failures < 2) { ReachWatch[bot] = (target, failures, now + UnreachableCheckMilliseconds); return; }
             ReachWatch[bot] = (null, 0, now + UnreachableCheckMilliseconds);
             Unreachable[(bot, target)] = now + UnreachableIgnoreMilliseconds;
+            // Entries are only removed when looked up again; drop expired ones so dead targets don't pile up.
+            if (Unreachable.Count > 256)
+                foreach (var entry in Unreachable)
+                    if (entry.Value < now)
+                        Unreachable.TryRemove(entry.Key, out _);
             brain.RemoveFromAggroList(target);
             bot.StopAttack();
             bot.StopMovingOnPath();

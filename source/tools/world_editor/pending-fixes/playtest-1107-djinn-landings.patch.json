@@ -1,0 +1,827 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-08T01:29:28.269682+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Teleport",
+   "key": "djinn_1_an_uat",
+   "op": "update",
+   "before": {
+    "X": 25720,
+    "Z": 15120
+   },
+   "after": {
+    "X": 26420,
+    "Z": 15117
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_an_uat",
+   "op": "update",
+   "before": {
+    "X": 25720,
+    "Z": 15120
+   },
+   "after": {
+    "X": 26420,
+    "Z": 15117
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_an_uat",
+   "op": "update",
+   "before": {
+    "X": 25720,
+    "Z": 15120
+   },
+   "after": {
+    "X": 26420,
+    "Z": 15117
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_antioos",
+   "op": "update",
+   "before": {
+    "X": 45823,
+    "Y": 17245,
+    "Z": 16170
+   },
+   "after": {
+    "X": 46469,
+    "Y": 17512,
+    "Z": 16074
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_antioos",
+   "op": "update",
+   "before": {
+    "X": 45823,
+    "Y": 17245,
+    "Z": 16170
+   },
+   "after": {
+    "X": 46469,
+    "Y": 17512,
+    "Z": 16074
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_antioos",
+   "op": "update",
+   "before": {
+    "X": 45823,
+    "Y": 17245,
+    "Z": 16170
+   },
+   "after": {
+    "X": 46469,
+    "Y": 17512,
+    "Z": 16074
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_anubite",
+   "op": "update",
+   "before": {
+    "X": 35282,
+    "Y": 43734,
+    "Z": 13456
+   },
+   "after": {
+    "X": 35864,
+    "Y": 44122,
+    "Z": 13600
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_anubite",
+   "op": "update",
+   "before": {
+    "X": 35282,
+    "Y": 43734,
+    "Z": 13456
+   },
+   "after": {
+    "X": 35864,
+    "Y": 44122,
+    "Z": 13600
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_anubite",
+   "op": "update",
+   "before": {
+    "X": 35282,
+    "Y": 43734,
+    "Z": 13456
+   },
+   "after": {
+    "X": 35864,
+    "Y": 44122,
+    "Z": 13600
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_casta",
+   "op": "update",
+   "before": {
+    "X": 55046,
+    "Z": 15392
+   },
+   "after": {
+    "X": 55746,
+    "Z": 15404
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_casta",
+   "op": "update",
+   "before": {
+    "X": 55046,
+    "Z": 15392
+   },
+   "after": {
+    "X": 55746,
+    "Z": 15404
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_casta",
+   "op": "update",
+   "before": {
+    "X": 55046,
+    "Z": 15392
+   },
+   "after": {
+    "X": 55746,
+    "Z": 15404
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_chamber_of_ammut",
+   "op": "update",
+   "before": {
+    "X": 50486,
+    "Y": 36739,
+    "Z": 17104
+   },
+   "after": {
+    "X": 50874,
+    "Y": 37321,
+    "Z": 17107
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_chamber_of_ammut",
+   "op": "update",
+   "before": {
+    "X": 50486,
+    "Y": 36739,
+    "Z": 17104
+   },
+   "after": {
+    "X": 50256,
+    "Y": 37293,
+    "Z": 17107
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_chamber_of_ammut",
+   "op": "update",
+   "before": {
+    "X": 50486,
+    "Y": 36739,
+    "Z": 17104
+   },
+   "after": {
+    "X": 50874,
+    "Y": 37321,
+    "Z": 17107
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_chimera",
+   "op": "update",
+   "before": {
+    "X": 549139,
+    "Y": 558294,
+    "Z": 10672
+   },
+   "after": {
+    "X": 549527,
+    "Y": 558876,
+    "Z": 10673
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_chimera",
+   "op": "update",
+   "before": {
+    "X": 549139,
+    "Y": 558294,
+    "Z": 10672
+   },
+   "after": {
+    "X": 549527,
+    "Y": 558876,
+    "Z": 10673
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_chimera",
+   "op": "update",
+   "before": {
+    "X": 549139,
+    "Y": 558294,
+    "Z": 10672
+   },
+   "after": {
+    "X": 549527,
+    "Y": 558876,
+    "Z": 10673
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_entrance",
+   "op": "update",
+   "before": {
+    "X": 33021,
+    "Y": 29980,
+    "Z": 15975
+   },
+   "after": {
+    "X": 32864,
+    "Y": 30764,
+    "Z": 16013
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_entrance",
+   "op": "update",
+   "before": {
+    "X": 33021,
+    "Y": 29980,
+    "Z": 15975
+   },
+   "after": {
+    "X": 32864,
+    "Y": 30764,
+    "Z": 16013
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_entrance",
+   "op": "update",
+   "before": {
+    "X": 33021,
+    "Y": 29980,
+    "Z": 15975
+   },
+   "after": {
+    "X": 32864,
+    "Y": 30764,
+    "Z": 16013
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_katorii_s",
+   "op": "update",
+   "before": {
+    "X": 35078,
+    "Z": 15677
+   },
+   "after": {
+    "X": 35678,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_katorii_s",
+   "op": "update",
+   "before": {
+    "X": 35078,
+    "Z": 15677
+   },
+   "after": {
+    "X": 35678,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_katorii_s",
+   "op": "update",
+   "before": {
+    "X": 35078,
+    "Z": 15677
+   },
+   "after": {
+    "X": 35678,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_kepa",
+   "op": "update",
+   "before": {
+    "X": 61186,
+    "Y": 18776,
+    "Z": 16938
+   },
+   "after": {
+    "X": 61832,
+    "Y": 19043,
+    "Z": 16842
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_kepa",
+   "op": "update",
+   "before": {
+    "X": 61186,
+    "Y": 18776,
+    "Z": 16938
+   },
+   "after": {
+    "X": 61832,
+    "Y": 19043,
+    "Z": 16842
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_kepa",
+   "op": "update",
+   "before": {
+    "X": 61186,
+    "Y": 18776,
+    "Z": 16938
+   },
+   "after": {
+    "X": 61832,
+    "Y": 19043,
+    "Z": 16842
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_land_of_atum",
+   "op": "update",
+   "before": {
+    "X": 245096,
+    "Y": 451887,
+    "Z": 7875
+   },
+   "after": {
+    "X": 245927,
+    "Y": 452442,
+    "Z": 7683
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_land_of_atum",
+   "op": "update",
+   "before": {
+    "X": 245096,
+    "Y": 451887,
+    "Z": 7875
+   },
+   "after": {
+    "X": 245927,
+    "Y": 452442,
+    "Z": 7683
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_land_of_atum",
+   "op": "update",
+   "before": {
+    "X": 245096,
+    "Y": 451887,
+    "Z": 7875
+   },
+   "after": {
+    "X": 245927,
+    "Y": 452442,
+    "Z": 7683
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_laodameia",
+   "op": "update",
+   "before": {
+    "X": 64261,
+    "Z": 16946
+   },
+   "after": {
+    "X": 64961,
+    "Z": 16938
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_laodameia",
+   "op": "update",
+   "before": {
+    "X": 64261,
+    "Z": 16946
+   },
+   "after": {
+    "X": 64961,
+    "Z": 16938
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_laodameia",
+   "op": "update",
+   "before": {
+    "X": 64261,
+    "Z": 16946
+   },
+   "after": {
+    "X": 64961,
+    "Z": 16938
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_medusa",
+   "op": "update",
+   "before": {
+    "X": 68431,
+    "Y": 19899,
+    "Z": 17898
+   },
+   "after": {
+    "X": 69158,
+    "Y": 21654,
+    "Z": 18161
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_medusa",
+   "op": "update",
+   "before": {
+    "X": 68431,
+    "Y": 19899,
+    "Z": 17898
+   },
+   "after": {
+    "X": 69158,
+    "Y": 21654,
+    "Z": 18161
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_medusa",
+   "op": "update",
+   "before": {
+    "X": 68431,
+    "Y": 19899,
+    "Z": 17898
+   },
+   "after": {
+    "X": 69158,
+    "Y": 21654,
+    "Z": 18161
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_moirai",
+   "op": "update",
+   "before": {
+    "X": 38526,
+    "Y": 22822
+   },
+   "after": {
+    "X": 38258,
+    "Y": 23468
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_moirai",
+   "op": "update",
+   "before": {
+    "X": 38526,
+    "Y": 22822
+   },
+   "after": {
+    "X": 38258,
+    "Y": 23468
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_moirai",
+   "op": "update",
+   "before": {
+    "X": 38526,
+    "Y": 22822
+   },
+   "after": {
+    "X": 38258,
+    "Y": 23468
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_northeast",
+   "op": "update",
+   "before": {
+    "X": 36628,
+    "Y": 20449,
+    "Z": 15660
+   },
+   "after": {
+    "X": 36294,
+    "Y": 20947,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_northeast",
+   "op": "update",
+   "before": {
+    "X": 36628,
+    "Y": 20449,
+    "Z": 15660
+   },
+   "after": {
+    "X": 36294,
+    "Y": 20947,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_northeast",
+   "op": "update",
+   "before": {
+    "X": 36628,
+    "Y": 20449,
+    "Z": 15660
+   },
+   "after": {
+    "X": 36294,
+    "Y": 20947,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_sinovia",
+   "op": "update",
+   "before": {
+    "X": 58117,
+    "Y": 35070,
+    "Z": 14982
+   },
+   "after": {
+    "X": 57980,
+    "Y": 34383,
+    "Z": 14874
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_sinovia",
+   "op": "update",
+   "before": {
+    "X": 58117,
+    "Y": 35070,
+    "Z": 14982
+   },
+   "after": {
+    "X": 57980,
+    "Y": 34383,
+    "Z": 14874
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_sinovia",
+   "op": "update",
+   "before": {
+    "X": 58117,
+    "Y": 35070,
+    "Z": 14982
+   },
+   "after": {
+    "X": 57980,
+    "Y": 34383,
+    "Z": 14874
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_southwest",
+   "op": "update",
+   "before": {
+    "X": 27385,
+    "Y": 27129,
+    "Z": 15663
+   },
+   "after": {
+    "X": 27973,
+    "Y": 27246,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_southwest",
+   "op": "update",
+   "before": {
+    "X": 27385,
+    "Y": 27129,
+    "Z": 15663
+   },
+   "after": {
+    "X": 27973,
+    "Y": 27246,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_southwest",
+   "op": "update",
+   "before": {
+    "X": 27385,
+    "Y": 27129,
+    "Z": 15663
+   },
+   "after": {
+    "X": 27973,
+    "Y": 27246,
+    "Z": 15678
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_talos",
+   "op": "update",
+   "before": {
+    "X": 481060,
+    "Y": 691913,
+    "Z": 16457
+   },
+   "after": {
+    "X": 481706,
+    "Y": 692180,
+    "Z": 16400
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_talos",
+   "op": "update",
+   "before": {
+    "X": 481060,
+    "Y": 691913,
+    "Z": 16457
+   },
+   "after": {
+    "X": 481706,
+    "Y": 692180,
+    "Z": 16400
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_talos",
+   "op": "update",
+   "before": {
+    "X": 481060,
+    "Y": 691913,
+    "Z": 16457
+   },
+   "after": {
+    "X": 481706,
+    "Y": 692180,
+    "Z": 16400
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_typhon_himself",
+   "op": "update",
+   "before": {
+    "X": 50626,
+    "Y": 19816,
+    "Z": 14733
+   },
+   "after": {
+    "X": 51180,
+    "Y": 20045,
+    "Z": 14741
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_typhon_himself",
+   "op": "update",
+   "before": {
+    "X": 50626,
+    "Y": 19816,
+    "Z": 14733
+   },
+   "after": {
+    "X": 51180,
+    "Y": 20045,
+    "Z": 14741
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_typhon_himself",
+   "op": "update",
+   "before": {
+    "X": 50626,
+    "Y": 19816,
+    "Z": 14733
+   },
+   "after": {
+    "X": 51180,
+    "Y": 20045,
+    "Z": 14741
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_1_vazul_s_fortress",
+   "op": "update",
+   "before": {
+    "X": 550863,
+    "Y": 535697
+   },
+   "after": {
+    "X": 551529,
+    "Y": 536694
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_2_vazul_s_fortress",
+   "op": "update",
+   "before": {
+    "X": 550863,
+    "Y": 535697
+   },
+   "after": {
+    "X": 551529,
+    "Y": 536694
+   }
+  },
+  {
+   "table": "Teleport",
+   "key": "djinn_3_vazul_s_fortress",
+   "op": "update",
+   "before": {
+    "X": 550863,
+    "Y": 535697
+   },
+   "after": {
+    "X": 551529,
+    "Y": 536694
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

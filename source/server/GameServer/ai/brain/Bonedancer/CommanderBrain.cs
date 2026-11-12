@@ -211,26 +211,32 @@ namespace DOL.AI.Brain
 				Spell spellDebuff = pet.CommSpellDebuff;
 				Spell spellOther = pet.CommSpellOther;
 
+				// A spell still on its recast timer or out of reach was requested anyway and refused by the spell
+				// handler on every think (overnight run 2026-11-09: Crawl, Extinguish Lifeforce, Pet Lifetap and
+				// Exacerbate Pain failed 55-82% of casts as "spell on cooldown"). Skip to the next choice instead.
+				bool Ready(Spell spell) => spell != null && IsReadyOn(Body, spell, living);
+
 				Spell cast = null;
 				switch (pet.PreferredSpell)
 				{
 					case CommanderPet.eCommanderPreferredSpell.Debuff:
-						if (spellDebuff != null && !living.HasEffect(spellDebuff))
+						if (Ready(spellDebuff) && !living.HasEffect(spellDebuff))
 							cast = spellDebuff;
 						break;
 					case CommanderPet.eCommanderPreferredSpell.Other:
-						cast = spellOther;
+						if (Ready(spellOther))
+							cast = spellOther;
 						break;
 				}
 
 				if (cast == null)
 				{
 					// Pick a damage spell
-					if (spellDot != null && !living.HasEffect(spellDot))
+					if (Ready(spellDot) && !living.HasEffect(spellDot))
 						cast = spellDot;
-					else if (spellDamageDebuff != null && (!living.HasEffect(spellDamageDebuff) || spellDamage == null))
+					else if (Ready(spellDamageDebuff) && (!living.HasEffect(spellDamageDebuff) || !Ready(spellDamage)))
 						cast = spellDamageDebuff;
-					else if (spellDamage != null)
+					else if (Ready(spellDamage))
 						cast = spellDamage;
 				}
 
@@ -241,9 +247,13 @@ namespace DOL.AI.Brain
 			if (casted)
 			{
 				// Check instant spells, but only cast one to prevent spamming
-				if (Body.CanCastInstantHarmfulSpells)
+				if (Body.CanCastInstantHarmfulSpells && Body.TargetObject is GameLiving instantTarget)
 					foreach (Spell spell in Body.InstantHarmfulSpells)
 					{
+						if (!IsReadyOn(Body, spell, instantTarget) ||
+							(spell.Duration > 0 && instantTarget.HasEffect(spell)))
+							continue;
+
 						if (Body.CastSpell(spell, m_mobSpellLine))
 							break;
 					}
@@ -255,6 +265,11 @@ namespace DOL.AI.Brain
 
 			return casted;
 		}
+
+		/// <summary>The spell is off its recast timer and the target is within its range.</summary>
+		public static bool IsReadyOn(GameNPC body, Spell spell, GameLiving target) =>
+			body.GetSkillDisabledDuration(spell) <= 0 &&
+			body.IsWithinRadius(target, spell.CalculateEffectiveRange(body));
 
 		public override int ModifyDamageWithTaunt(int damage)
 		{

@@ -73,6 +73,18 @@ namespace DOL.GS
             return battleGroup != null && Owners.Contains(battleGroup);
         }
 
+        /// <summary>
+        /// True when this drop is the player's own personal loot: the player owns it and neither their group nor
+        /// battlegroup does. A hand pickup of such an item must not go through the group's autosplit.
+        /// </summary>
+        public bool IsPersonalTo(GamePlayer player, IGameStaticItemOwner group, IGameStaticItemOwner battleGroup)
+        {
+            return player != null
+                && Owners.Contains(player)
+                && (group == null || !Owners.Contains(group))
+                && (battleGroup == null || !Owners.Contains(battleGroup));
+        }
+
         public void AssertLockAcquisition()
         {
             if (!_pickUpLock.IsHeldByCurrentThread)

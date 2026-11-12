@@ -199,24 +199,27 @@ namespace DOL.GS.Spells
                 return false;
             }
 
+            // Report the hit points really restored: a 823 heal on someone missing 460 heals 460 (it used to say 823).
+            (int baseShown, int criticalShown) = SplitRestored(effectiveAmount, (int) Math.Floor(preCriticalAmount));
+
             if (ShouldSendMessageAsSelfHeal(Caster, target))
             {
-                MessageToCaster($"You heal yourself for {preCriticalAmount:0} hit points.", eChatType.CT_Spell);
+                MessageToCaster($"You heal yourself for {baseShown} hit points.", eChatType.CT_Spell);
 
                 if (effectiveAmount < amount)
                     MessageToCaster("You are fully healed.", eChatType.CT_Spell);
             }
             else
             {
-                MessageToCaster($"You heal {target.GetName(0, false)} for {preCriticalAmount:0} hit points!", eChatType.CT_Spell);
+                MessageToCaster($"You heal {target.GetName(0, false)} for {baseShown} hit points!", eChatType.CT_Spell);
                 MessageToLiving(target, $"You are healed by {m_caster.GetName(0, false)} for {effectiveAmount:0} hit points.", eChatType.CT_Spell);
 
                 if (effectiveAmount < amount)
                     MessageToCaster($"{target.GetName(0, true)} is fully healed.", eChatType.CT_Spell);
             }
 
-            if (effectiveAmount > 0 && criticalAmount > 0)
-                MessageToCaster($"You heal for an extra {criticalAmount:0} hit points! ({criticalChance:0.##}%)", eChatType.CT_Spell);
+            if (criticalShown > 0 && criticalAmount > 0)
+                MessageToCaster($"You heal for an extra {criticalShown} hit points! ({criticalChance:0.##}%)", eChatType.CT_Spell);
 
             foreach (GameLiving attacker in target.attackComponent.AttackerTracker.Attackers)
             {
@@ -244,7 +247,19 @@ namespace DOL.GS.Spells
             }
 
             playerCaster?.Statistics.AddToHitPointsHealed((uint) effectiveAmount);
+            ServerRules.RvrRealmPointRules.OnHeal(Caster, target, Spell, effectiveAmount); // 1.81 realm points for RvR heals (DR-176)
             return true;
+        }
+
+        /// <summary>
+        /// Splits the hit points a heal really restored into the normal part and the critical extra, the normal part
+        /// first: the critical line only shows what the normal heal didn't already cover.
+        /// </summary>
+        public static (int Base, int Critical) SplitRestored(int restored, int preCritical)
+        {
+            restored = Math.Max(0, restored);
+            int baseShown = Math.Min(restored, Math.Max(0, preCritical));
+            return (baseShown, restored - baseShown);
         }
 
         public override void CalculateDamageVariance(GameLiving target, out double min, out double max)

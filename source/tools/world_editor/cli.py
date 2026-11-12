@@ -35,19 +35,19 @@ from contextlib import closing
 from pathlib import Path
 
 if __package__:
-    from .editor import Editor, connect, WORKSPACE, REPO
+    from .editor import Editor, connect, WORKSPACE, REPO, DATA_REPO
     from .app import runtime_of
     from . import audit
 else:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from world_editor.editor import Editor, connect, WORKSPACE, REPO
+    from world_editor.editor import Editor, connect, WORKSPACE, REPO, DATA_REPO
     from world_editor.app import runtime_of
     from world_editor import audit
 
 PROFILES = {
     'classic': WORKSPACE / 'Classic',
     'stormforged': WORKSPACE / 'Stormforged',
-    'modern': REPO / 'artifacts/modern-client-test',
+    'modern': DATA_REPO / 'artifacts/modern-client-test',
 }
 
 

@@ -43,6 +43,7 @@ class ClassSlotPatchTests(unittest.TestCase):
         if slots.TUATHA_HOVER:
             hooks.update({slots.HOVER_SELECT[0]: 7, slots.HOVER_WORLD[0]: 7})
             hooks.update({site: len(bytes.fromhex(original)) for site, original, _, _ in slots.VAMPIIR_ONLY})
+            hooks[slots.HOVER_SPEED[0]] = len(bytes.fromhex(slots.HOVER_SPEED[1]))
         hooks.update({realm['hook']: len(bytes.fromhex(realm['original'])) for realm in slots.REALMS.values()})
         allowed = set()
         for va, size in hooks.items():

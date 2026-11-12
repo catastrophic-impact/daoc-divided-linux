@@ -8,8 +8,9 @@ namespace DOL.GS
     /// <summary>
     /// Offline Champion Levels: realm points earned at level 50 become champion experience (cl_rp_rate),
     /// CL1-15. Each realm has one Champion path that trains itself: reaching a Champion Level grants that
-    /// level's ability (RealmChampionSpecialization, ChampionAbilities). Champion training starts on its own
-    /// at level 50; there is no king quest or champion trainer.
+    /// level's ability (RealmChampionSpecialization, ChampionAbilities). Champion training starts when a
+    /// level 50 player speaks to their realm's King in the throne room (BecomeChampion, owner 2026-11-09);
+    /// until then realm points give no champion experience. Characters that already had it keep it.
     /// </summary>
     public static class ChampionRules
     {
@@ -32,8 +33,45 @@ namespace DOL.GS
             if (experience <= 0)
                 return;
             MasterLevelRules.EnsureTraining(player);
+            if (!player.Champion)
+                return;
             // Quest source: the amount is already converted, so skip the old XP-based conversion.
             player.GainChampionExperience(experience, eXPSource.Quest);
+        }
+
+        public enum KingAnswer { NotLevelFifty, WrongRealm, AlreadyChampion, NowChampion }
+
+        /// <summary>
+        /// The King starts Champion training. Unlike the old KingNPC path this never clears champion levels or
+        /// experience, so a character that somehow has progress keeps it.
+        /// </summary>
+        public static KingAnswer BecomeChampion(GamePlayer player, eRealm kingRealm)
+        {
+            if (player.Level < GamePlayer.MAX_LEVEL || PathFor(player.Realm) == null)
+                return KingAnswer.NotLevelFifty;
+            if (kingRealm != eRealm.None && player.Realm != kingRealm)
+                return KingAnswer.WrongRealm;
+            if (player.Champion)
+                return KingAnswer.AlreadyChampion;
+            player.Champion = true;
+            return KingAnswer.NowChampion;
+        }
+
+        public static string KingNameFor(eRealm realm) => realm switch
+        {
+            eRealm.Albion => "King Constantine",
+            eRealm.Midgard => "King Eirik",
+            eRealm.Hibernia => "King Lug Lamfhota",
+            _ => "your King"
+        };
+
+        /// <summary>Tells a level 50 player who has not started Champion training where to go.</summary>
+        public static void RemindToVisitKing(GamePlayer player)
+        {
+            if (player == null || player.Champion || player.Level < GamePlayer.MAX_LEVEL || PathFor(player.Realm) == null)
+                return;
+            player.Out?.SendMessage($"Champion training has not begun. Ask the Royal Guard in your capital for an audience with {KingNameFor(player.Realm)} in the throne room to begin it.",
+                eChatType.CT_Important, eChatLoc.CL_SystemWindow);
         }
     }
 

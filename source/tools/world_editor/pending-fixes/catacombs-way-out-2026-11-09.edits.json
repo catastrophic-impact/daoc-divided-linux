@@ -1,0 +1,148 @@
+[
+ {
+  "table": "Mob",
+  "copy": "e373e658-0874-4696-98df-951f521ee498",
+  "key": "veil-rift-warden",
+  "set": {
+   "Name": "Veil Warden",
+   "Guild": "Tir na Nog",
+   "ClassType": "DOL.GS.SimpleTeleporter",
+   "Region": 92,
+   "X": 58350,
+   "Y": 28650,
+   "Z": 11285,
+   "Heading": 1024,
+   "Realm": 3,
+   "PackageID": "The veil only opens one way. I can send you back to Tir na Nog:"
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "veil-rift-to-tnn",
+  "insert": {
+   "Type": "Tir na Nog",
+   "TeleportID": "Tir na Nog",
+   "Realm": 3,
+   "RegionID": 201,
+   "X": 33176,
+   "Y": 32914,
+   "Z": 8008,
+   "Heading": 2048,
+   "Teleport_ID": "veil-rift-to-tnn"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-655",
+  "insert": {
+   "Id": 655,
+   "TargetRegion": 10,
+   "TargetX": 32689,
+   "TargetY": 24326,
+   "TargetZ": 8447,
+   "TargetHeading": 3080,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-655"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-656",
+  "insert": {
+   "Id": 656,
+   "TargetRegion": 101,
+   "TargetX": 31753,
+   "TargetY": 27073,
+   "TargetZ": 8830,
+   "TargetHeading": 6,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-656"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-657",
+  "insert": {
+   "Id": 657,
+   "TargetRegion": 201,
+   "TargetX": 33176,
+   "TargetY": 32914,
+   "TargetZ": 8008,
+   "TargetHeading": 2048,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-657"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-681",
+  "insert": {
+   "Id": 681,
+   "TargetRegion": 339,
+   "TargetX": 33825,
+   "TargetY": 40420,
+   "TargetZ": 16000,
+   "TargetHeading": 2052,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-681"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-682",
+  "insert": {
+   "Id": 682,
+   "TargetRegion": 341,
+   "TargetX": 31745,
+   "TargetY": 40999,
+   "TargetZ": 16000,
+   "TargetHeading": 2064,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-682"
+  }
+ },
+ {
+  "table": "ZonePoint",
+  "key": "dr-wayout-683",
+  "insert": {
+   "Id": 683,
+   "TargetRegion": 340,
+   "TargetX": 32171,
+   "TargetY": 40855,
+   "TargetZ": 15999,
+   "TargetHeading": 2074,
+   "SourceX": 0,
+   "SourceY": 0,
+   "SourceZ": 0,
+   "SourceRegion": 0,
+   "Realm": 0,
+   "ClassType": "",
+   "ZonePoint_ID": "dr-wayout-683"
+  }
+ }
+]

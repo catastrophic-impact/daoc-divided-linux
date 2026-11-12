@@ -21,7 +21,7 @@ namespace DOL.GS
             eCharacterClass.Valkyrie or eCharacterClass.MaulerAlb or eCharacterClass.MaulerMid or eCharacterClass.MaulerHib or
             eCharacterClass.Stormforged or eCharacterClass.PendragonSovereign or eCharacterClass.TuathaSovereign;
         public static bool Eligible(GameBot bot) => bot is { IsAutonomousWorldBot: true, IsPlayerLedGroup: false, IsAlive: true } &&
-            bot.CharacterClass != null && CanOperate((eCharacterClass)bot.CharacterClass.ID);
+            !BotDutyLeases.IsSpokenForByPlayer(bot) && bot.CharacterClass != null && CanOperate((eCharacterClass)bot.CharacterClass.ID);
 
         /// <summary>Attackers: two rams, the trebuchet (triple damage against doors), a catapult, ballistas.
         /// Defenders: ballistas against siege, catapults on the attackers; never a trebuchet, whose 2,000 minimum

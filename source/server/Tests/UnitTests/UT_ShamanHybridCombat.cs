@@ -18,7 +18,8 @@ namespace DOL.UnitTests
             foreach (bool grouped in new[] { false, true })
             foreach (bool autonomous in new[] { false, true })
             {
-                Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), grouped, autonomous), Is.False);
+                // DR-271: a player's grouped Shaman companion stays at range; every other Shaman melees.
+                Assert.That(BotBrain.PrefersSpellRange(new ClassShaman(), grouped, autonomous), Is.EqualTo(grouped && !autonomous));
                 Assert.That(BotBrain.PrefersSpellRange(new ClassSpiritmaster(), grouped, autonomous), Is.True);
                 Assert.That(BotBrain.PrefersSpellRange(new ClassRunemaster(), grouped, autonomous), Is.True);
             }

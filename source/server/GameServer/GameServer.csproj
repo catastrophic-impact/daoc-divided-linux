@@ -6,6 +6,7 @@
     <ItemGroup>
         <EmbeddedResource Include="gameutils/modern-races-1130.json" LogicalName="DOL.GS.ModernRaceRegistrations.json" />
         <EmbeddedResource Include="gameutils/BotWatch.html" LogicalName="DOL.GS.BotWatch.html" />
+        <EmbeddedResource Include="world/data/zone_water.json" LogicalName="DOL.GS.ZoneWater.json" />
     </ItemGroup>
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
@@ -71,6 +72,12 @@
         <EmbeddedResource Include=".\bots\autonomous\data\darkness_falls_raid_event_mobs.json" />
         <EmbeddedResource Include=".\bots\autonomous\data\darkness_falls_navigation_proofs.json" />
         <TranslationFiles Include=".\language\**\*.txt" />
+        <!-- The epic chains (EpicChainLinks): the data file tools/claude-version/epic_chains.py reads, built in. -->
+        <EmbeddedResource Include="..\..\..\tools\claude-version\epic_chains_data.json" LogicalName="epic_chains_data.json" />
+        <EmbeddedResource Include=".\bots\autonomous\data\chat\chat-budget.json" />
+        <!-- Living Server 1.2: the lore bible (docs/LORE.md), read by the lore engine and the lore channels. Keep one include (CS1508). -->
+        <EmbeddedResource Include=".\bots\autonomous\data\lore\**\*.json" />
+        <EmbeddedResource Include=".\bots\autonomous\data\encounter_adds.json" />
         <APIDocs Include=".\API\docs\*" />
         <Content Include="API\docs\index.css" />
         <Content Include="API\docs\index.html" />

@@ -25,6 +25,7 @@ public sealed partial class AutonomousWorldBotController
     private long _dragonRallyRetry;
     private bool TravelRealmExpedition(GameBot bot, AutonomousRealmRaid.View order)
     {
+        using var aiProfile = AiProfile.Scope(AiSystem.ControllerRaidTravel); // AI_PROFILE: measures only
         if (GameLoop.GameLoopTime < _expeditionRouteRetry) return true;
         var c = order.Camp;
         if (_camp == null || _camp.RegionId != c.RegionId || _camp.X != c.X || _camp.Y != c.Y || _camp.Z != c.Z)
@@ -205,6 +206,12 @@ public sealed partial class AutonomousWorldBotController
     public static bool ShouldRegroupStrandedMember(int failures, bool alive, bool inCombat) =>
         alive && !inCombat && failures >= StrandedExpeditionFailureLimit;
 
+    /// <summary>Failures at one spot after which a member with no regroup point is released from its raid.</summary>
+    public const int StrandedExpeditionReleaseLimit = 4;
+
+    public static bool ShouldReleaseStrandedMember(int failures, bool alive, bool inCombat) =>
+        alive && !inCombat && failures >= StrandedExpeditionReleaseLimit;
+
     private void TryRegroupStrandedExpeditionMember(GameBot bot)
     {
         Vector3 here = new(bot.X, bot.Y, bot.Z);
@@ -212,6 +219,16 @@ public sealed partial class AutonomousWorldBotController
             new(_strandedExpeditionPosition.X, _strandedExpeditionPosition.Y)) <= StrandedExpeditionRadius * StrandedExpeditionRadius
             ? _strandedExpeditionFailures + 1 : 1;
         _strandedExpeditionPosition = here;
+        if (ShouldReleaseStrandedMember(_strandedExpeditionFailures, bot.IsAlive, bot.InCombat) &&
+            !AutonomousRealmRaid.TryDungeonRegroupPoint(bot, out _, out _))
+        {
+            // Night 2026-11-04: Albion raiders held in Hall of the Corrupt, outside the raid's region, retried for 72 minutes
+            // (1,105 REALM_EXPEDITION_ROUTE_RETRY) and escaped to Camelot and back 536 times. With no regroup point and
+            // the same failure at the same spot, the member leaves the raid and chooses solo work.
+            _strandedExpeditionFailures = 0;
+            if (AutonomousBotGroupCoordinator.ReleaseStrandedRaider(bot, "No legal route to the raid from here"))
+                return;
+        }
         if (!ShouldRegroupStrandedMember(_strandedExpeditionFailures, bot.IsAlive, bot.InCombat) ||
             !AutonomousRealmRaid.TryDungeonRegroupPoint(bot, out ushort region, out Vector3 front) ||
             Vector3.DistanceSquared(here, front) <= 300 * 300)

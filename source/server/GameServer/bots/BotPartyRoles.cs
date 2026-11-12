@@ -90,6 +90,21 @@ namespace DOL.GS
             return false;
         }
 
+        /// <summary>A tank that also heals (the Paladin): its job in a party is to hold the monsters, not to heal.</summary>
+        public static bool IsHybridTank(eCharacterClass characterClass) =>
+            For(characterClass) == BotPartyRole.Tank && IsHealingClass(characterClass);
+
+        /// <summary>Below this a hybrid tank in a party heals before it fights (BOT-AI-2026-11-07 item 5).</summary>
+        public const int HybridTankHealPercent = 50;
+
+        /// <summary>
+        /// Tank first (DR-122): in a player's party a hybrid tank melees and taunts, and heals only when a member is below
+        /// <see cref="HybridTankHealPercent"/>. Every other healer, a hybrid tank on its own, and one in a bot party (whose
+        /// coordinator may have given it the healer's job) heal first as before. Pure.
+        /// </summary>
+        public static bool HealsBeforeFighting(eCharacterClass characterClass, bool playerLedParty, int partySize, int lowestMemberHealthPercent) =>
+            !IsHybridTank(characterClass) || !playerLedParty || partySize < 2 || lowestMemberHealthPercent < HybridTankHealPercent;
+
         public static bool IsTank(GameBot bot) => bot?.CharacterClass != null &&
             For((eCharacterClass)bot.CharacterClass.ID) == BotPartyRole.Tank;
 

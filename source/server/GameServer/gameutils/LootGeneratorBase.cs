@@ -58,17 +58,17 @@ namespace DOL.GS
 			return loot;
 		}
 
-		/// <summary>Resolve a real player, autonomous bot, or either one's controlled pet.</summary>
-		protected static GameLiving ResolveLootOwner(GameObject killer)
+		/// <summary>
+		/// Generate loot from the kill's shared context. LootMgr calls this one. A generator whose GenerateLoot(mob, killer)
+		/// builds a context and calls this must override this one too, or the two call each other.
+		/// </summary>
+		public virtual LootList GenerateLoot(LootContext context)
 		{
-			if (killer is GamePlayer || killer is GameBot)
-				return killer as GameLiving;
-
-			if (killer is GameNPC npc && npc.Brain is IControlledBrain controlled)
-				return controlled.GetLivingOwner() ?? controlled.GetPlayerOwner();
-
-			return null;
+			return GenerateLoot(context.Mob, context.Killer);
 		}
+
+		/// <summary>Resolve a real player, autonomous bot, or either one's controlled pet.</summary>
+		protected static GameLiving ResolveLootOwner(GameObject killer) => LootContext.ResolveKiller(killer);
 
 		protected internal static bool CanReceiveRealmDrop(GameLiving owner, DbItemTemplate drop)
 		{

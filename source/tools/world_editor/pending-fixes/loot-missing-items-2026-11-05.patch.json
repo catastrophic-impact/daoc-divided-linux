@@ -1,0 +1,448 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-06T01:43:53.528097+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Defiled Cowl",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Defiled Cowl"
+   },
+   "after": {
+    "ItemTemplateID": "Defiled_Cowl"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Ebon Vanquisher's Warchain",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Ebon Vanquisher's Warchain"
+   },
+   "after": {
+    "ItemTemplateID": "Ebon Vanquishers Warchain"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Eloquent Chain Necklace",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Eloquent Chain Necklace"
+   },
+   "after": {
+    "ItemTemplateID": "Eloquent_Chain_Necklace"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Medallion of Avoidance",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Medallion of Avoidance"
+   },
+   "after": {
+    "ItemTemplateID": "Medallion_of_Avoidance"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Medallion of Dark Beauty",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Medallion of Dark Beauty"
+   },
+   "after": {
+    "ItemTemplateID": "Medallion_of_Dark_Beauty"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Shadow Templar Medallion",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Shadow Templar Medallion"
+   },
+   "after": {
+    "ItemTemplateID": "Shadow_Templar_Medallion"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Stone Boned Choker",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Stone Boned Choker"
+   },
+   "after": {
+    "ItemTemplateID": "Stone_Boned_Choker"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Tome of Lichdom",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Tome of Lichdom"
+   },
+   "after": {
+    "ItemTemplateID": "Tome_of_Lichdom"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Unearthly Cowl",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Unearthly Cowl"
+   },
+   "after": {
+    "ItemTemplateID": "Unearthly_Cowl"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Warlord's Golden Flail",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Warlord's Golden Flail"
+   },
+   "after": {
+    "ItemTemplateID": "Warlords_Golden_Flail"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Warlord's Golden Flayer",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Warlord's Golden Flayer"
+   },
+   "after": {
+    "ItemTemplateID": "Warlords_Golden_Flayer"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Warlord's Golden Glaive",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Warlord's Golden Glaive"
+   },
+   "after": {
+    "ItemTemplateID": "Warlords_Golden_Glaive"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Apocalypse_Warlord's Golden War Mace",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Warlord's Golden War Mace"
+   },
+   "after": {
+    "ItemTemplateID": "Warlords_Golden_War_Mace"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Dura'ek the Empowered_Dura'ek's Cloak of the Embrace",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Dura'ek's Cloak of the Embrace"
+   },
+   "after": {
+    "ItemTemplateID": "Duraeks_Cloak_of_the_Embrace"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Golestandt_Cloak of the Maelstrom",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Cloak of the Maelstrom"
+   },
+   "after": {
+    "ItemTemplateID": "Cloak_of_the_Maelstrom"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Golestandt_Ring_of_Pumice",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Ring_of_Pumice"
+   },
+   "after": {
+    "ItemTemplateID": "Ring_of_the_Pumice"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Maldahar the Glimmer Prince_Fairich Sgath Bracer",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Fairich Sgath Bracer"
+   },
+   "after": {
+    "ItemTemplateID": "Fairich_Sgath_Bracer"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Moran the Mighty_Ring_of_Pumice",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Ring_of_Pumice"
+   },
+   "after": {
+    "ItemTemplateID": "Ring_of_the_Pumice"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Morval_Obsidian_Sword_XPI",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Morval_Obsidian_Sword"
+   },
+   "after": {
+    "ItemTemplateID": "Morvalt_Obsidian_Sword"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Scurceol Hyrde_Diamond Studded Mace Of Stars",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Diamond Studded Mace Of Stars"
+   },
+   "after": {
+    "ItemTemplateID": "Diamond_Studded_Mace_Of_Stars"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Scurceol Hyrde_Shield Of Constellations",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Shield Of Constellations"
+   },
+   "after": {
+    "ItemTemplateID": "Shield_Of_Constellations"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Scurceol Hyrde_Staff of the Last Briton Hero",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Staff of the Last Briton Hero"
+   },
+   "after": {
+    "ItemTemplateID": "Staff_Of_The_Last_Briton_hero"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Spectral Provisioner_Tear of Petulance",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Tear of Petulance"
+   },
+   "after": {
+    "ItemTemplateID": "Tear_of_Petulance"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Weno'iak the Enlightened_Weno'iak Belt",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Weno'iak Belt"
+   },
+   "after": {
+    "ItemTemplateID": "Wenoiak_Belt"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Weno'iak the Enlightened_Weno'iak Jewel",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Weno'iak Jewel"
+   },
+   "after": {
+    "ItemTemplateID": "Wenoiak_Jewel"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Weno'iak the Enlightened_Weno'iak's Pendant",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Weno'iak's Pendant"
+   },
+   "after": {
+    "ItemTemplateID": "Wenoiaks_Pendant"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Weno'iak the Enlightened_Weno'iak's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Weno'iak's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Wenoiaks_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Constructor's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Constructor's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Constructors_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Defender's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Defender's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Defender's_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Duelist's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Duelist's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal Duelist`s Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Friar's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Friar's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Friars_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Impersonator's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Impersonator's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Impersonators_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Mage's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Mage's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal Mage`s Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Note Singer's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Note Singer's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Note_Singer's_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Soul Raiser's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Soul Raiser's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Soul_Raiser's_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Soul Stealer's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Soul Stealer's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal Soul Stealer`s Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Soul's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Soul's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Souls_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Templar's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Templar's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal Templar`s Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Thinker's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Thinker's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal_Thinker's_Ring"
+   }
+  },
+  {
+   "table": "LootTemplate",
+   "key": "Xanxicar_Royal Tracker's Ring",
+   "op": "update",
+   "before": {
+    "ItemTemplateID": "Royal Tracker's Ring"
+   },
+   "after": {
+    "ItemTemplateID": "Royal Tracker`s Ring"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

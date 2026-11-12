@@ -162,6 +162,21 @@ namespace DOL.GS
             return levels;
         }
 
+        /// <summary>
+        /// What the owner reads when a companion joins. Auto-spend stays off by default (owner 2026-11-11, DR-273), so the
+        /// message says so and how to turn it on: a player waited for a Berserker to train itself.
+        /// </summary>
+        public static string JoinMessage(string name, int level, string className, bool autoSpend, int unspentPoints)
+        {
+            string message = $"{name}, your level {level} {className}, joins your group with its own gear. " +
+                             "Everything it earns is saved to its character.";
+            if (autoSpend)
+                return message + $" {name} spends its own specialization points.";
+            string points = unspentPoints > 0 ? $"{name} has {unspentPoints} specialization points to spend. " : "";
+            return message + $" {points}You train {name} yourself (/companion spec {name}), " +
+                   $"or type /companion autospend {name} on to let it spend its own points.";
+        }
+
         /// <summary>How well a bot plan matches what the character already trained.</summary>
         public static int PlanFit(IEnumerable<PlanLine> plan, Func<string, int> trained) =>
             (plan ?? Enumerable.Empty<PlanLine>()).Sum(line => Math.Max(0, trained(line.Spec) - 1));

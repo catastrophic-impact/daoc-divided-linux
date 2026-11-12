@@ -46,6 +46,8 @@ namespace DOL.GS.Trials
                 return "This trial is under way.";
             if (TrialManager.MissingSteps(player, Definition) is { Length: > 0 } missing)
                 return $"You must first finish step{(missing.Length > 1 ? "s" : "")} {string.Join(", ", missing)} of Master Level {Definition.ML}.";
+            if (Definition.Refuse?.Invoke(player) is string refused)
+                return refused;
             return player.MLLevel + 1 == Definition.ML && !player.HasFinishedMLStep(Definition.ML, Definition.Step)
                 ? "When your party is ready, say [begin]."
                 : "You can't earn credit here, but you may help others. Say [begin] when your party is ready.";

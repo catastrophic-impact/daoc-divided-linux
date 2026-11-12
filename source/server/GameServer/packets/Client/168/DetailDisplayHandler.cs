@@ -1013,6 +1013,11 @@ namespace DOL.GS.PacketHandler.Client.v168
 					#endregion
 			}
 
+			// An item with nothing to show (a quest item: no description, no weapon or armour lines) still gets its window,
+			// with only its name: with no answer at all the client kept showing the last item's tooltip (2026-11-06: a Golden
+			// Chain showed the player's Regal Mithrian Cloak; 46 "no info" warnings for it in one evening).
+			if (objectInfo.Count == 0 && invItem != null && objectType is 1 or 10)
+				objectInfo.Add(" ");
 			if (objectInfo.Count > 0)
 				client.Out.SendCustomTextWindow(caption, objectInfo);
 			else if ((objectType < 24 || objectType > 28) && objectType < 150) // only warn for non v1.110+ objects

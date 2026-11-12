@@ -1,0 +1,23 @@
+{
+ "toa monster names": 1082,
+ "official ToA drop monsters": 144,
+ "tables added": 389,
+ "LootTemplate rows": 3667,
+ "MobXLootTemplate rows": 11,
+ "items set to official stats": 1306,
+ "items already official": 14,
+ "items created": 456,
+ "spells created": 47,
+ "spells not built": [],
+ "official drops not made (no donor)": [],
+ "EoD rows naming items missing from the world": [],
+ "edits": 5544,
+ "by table": {
+  "ItemTemplate": 1762,
+  "LootOTD": 10,
+  "LootTemplate": 3667,
+  "MobXLootTemplate": 11,
+  "Spell": 47,
+  "LineXSpell": 47
+ }
+}

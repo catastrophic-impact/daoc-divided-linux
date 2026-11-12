@@ -107,6 +107,9 @@ namespace DOL.GS
 			get { return m_size; }
 			set
 			{
+				if (m_size == value)
+					return; // same size: nothing to tell clients (pets that sync every tick sent a packet each time)
+
 				m_size = value;
 				if (ObjectState == eObjectState.Active)
 				{
@@ -3616,10 +3619,11 @@ namespace DOL.GS
 					spell.Duration = (int) Math.Ceiling(spell.Duration * scalingFactor);
 					break;
 				}
+				case eSpellType.OffensiveProc:
+				case eSpellType.DefensiveProc:
 				case eSpellType.StyleTaunt:
 				case eSpellType.CurePoison:
 				case eSpellType.CureDisease:
-				case eSpellType.OffensiveProc:
 					return spell;
 				default:
 				{

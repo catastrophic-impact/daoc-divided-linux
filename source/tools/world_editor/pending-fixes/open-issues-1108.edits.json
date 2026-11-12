@@ -1,0 +1,471 @@
+[
+ {
+  "table": "NpcTemplate",
+  "copy": "bd-4",
+  "key": "bd-dread-lord",
+  "set": {
+   "TemplateId": 89,
+   "Name": "dread lord",
+   "Model": "2220",
+   "Size": "60"
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-linked-live-v1-77280",
+  "set": {
+   "LifeDrainReturn": 89
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-linked-live-v1-77281",
+  "set": {
+   "LifeDrainReturn": 213
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-linked-live-v1-77287",
+  "set": {
+   "LifeDrainReturn": 212
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-hybrid-live-v1-74107",
+  "set": {
+   "Type": "CostFreeChance",
+   "Value": 2,
+   "Description": "Champion's Ambience (1.129 Valor): group spells and styles have a 2% chance to cost no power or endurance."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-hybrid-live-v1-74108",
+  "set": {
+   "Type": "CostFreeChance",
+   "Value": 4,
+   "Description": "Champion's Demeanor (1.129 Valor): group spells and styles have a 4% chance to cost no power or endurance."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-hybrid-live-v1-74109",
+  "set": {
+   "Type": "CostFreeChance",
+   "Value": 6,
+   "Description": "Champion's Presence (1.129 Valor): group spells and styles have a 6% chance to cost no power or endurance."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-hybrid-live-v1-74110",
+  "set": {
+   "Type": "CostFreeChance",
+   "Value": 8,
+   "Description": "Champion's Aspect (1.129 Valor): group spells and styles have a 8% chance to cost no power or endurance."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "local-hybrid-live-v1-74111",
+  "set": {
+   "Type": "CostFreeChance",
+   "Value": 10,
+   "Description": "Champion's Aura (1.129 Valor): group spells and styles have a 10% chance to cost no power or endurance."
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100006366",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100006809",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100007342",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100007484",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100007683",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100009313",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100010246",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100011078",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100011194",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100011990",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100012316",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100012584",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100012735",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100014330",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100016032",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "alb_100016231",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100006366",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100006809",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100007342",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100007484",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100007683",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100009313",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100010246",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100011078",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100011194",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100011990",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100012316",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100012584",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100012735",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100014330",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100016032",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100016231",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100006366",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100006809",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100007342",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100007484",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100007683",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100009313",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100010246",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100011078",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100011194",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100011990",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100012316",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100012584",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100012735",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100014330",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100016032",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100016231",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "f0218036-7b24-5b7d-a623-1afbabf4f02a",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0
+  }
+ }
+]

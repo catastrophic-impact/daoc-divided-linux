@@ -23,11 +23,37 @@ public static class AutonomousBotRealmPointRewards
     public static bool IsEligibleVictim(GameNPC npc) =>
         npc is GameBot { IsAutonomousWorldBot: true, IsTemporaryGroupHelper: false };
 
+    internal const string ReleasedAfterDeathProperty = "autonomous.rvr.released.after.death";
+
+    /// <summary>
+    /// 1.124 (DR-175): realm points from killing a player are raised by 25% before any other bonus.
+    /// kill_rp_bonus_percent, 0 turns it off.
+    /// </summary>
+    public static int ApplyKillBonus(int realmPoints) =>
+        realmPoints <= 0 ? realmPoints : (int)(realmPoints * (100L + Math.Max(0, Properties.KILL_RP_BONUS_PERCENT)) / 100);
+
+    /// <summary>
+    /// 1.123b (DR-180): seconds after a death until the victim is worth realm points again. 2 minutes when it
+    /// released, 5 when it was resurrected.
+    /// </summary>
+    public static int RealmPointWorthSeconds(bool released)
+    {
+        int resurrected = Math.Max(0, Properties.RP_WORTH_SECONDS);
+        return released ? Math.Min(resurrected, Math.Max(0, Properties.RP_WORTH_SECONDS_RELEASED)) : resurrected;
+    }
+
+    /// <summary>A gamebot released to its bind point: the shorter wait applies to its next death.</summary>
+    public static void NoteReleased(GameBot bot) => bot?.TempProperties?.SetProperty(ReleasedAfterDeathProperty, true);
+
+    /// <summary>Realm points each realm level adds to what a player or gamebot is worth (1 before patch 1.81).</summary>
+    public const int RealmPointsPerRealmLevel = 10;
+
     public static int GetPlayerEquivalentRealmPointValue(byte level, int realmLevel)
     {
-        // This is the pre-1.81 player formula used by GamePlayer.RealmPointsValue.
+        // The player formula since 1.81 (DR-174), shared with GamePlayer.RealmPointsValue: (level - 20)^2 for the
+        // level, plus 10 points per realm level. 900 at level 50 RR1, 1,800 at level 50 RR10.
         int modifiedLevel = level - 20;
-        return Math.Max(1, modifiedLevel * modifiedLevel) + realmLevel;
+        return Math.Max(1, modifiedLevel * modifiedLevel) + Math.Max(0, realmLevel) * RealmPointsPerRealmLevel;
     }
 
     public static int CalculateRealmPointReward(int victimRealmPointValue, int victimRealmLevel,
@@ -42,7 +68,7 @@ public static class AutonomousBotRealmPointRewards
 
         int baseRealmPoints = victimRealmPointValue / participantCount;
         baseRealmPoints = Math.Min(baseRealmPoints, awarderRealmPointValue * 2);
-        int realmPoints = (int)(baseRealmPoints * Math.Min(1.0, damagePercent));
+        int realmPoints = ApplyKillBonus((int)(baseRealmPoints * Math.Min(1.0, damagePercent)));
 
         if (applyRealmRankAdjustment)
         {
@@ -126,6 +152,19 @@ public static class AutonomousBotRealmPointRewards
                     $"at={victim.X},{victim.Y},{victim.Z}");
     }
 
+    /// <summary>
+    /// RVR_PLAYER_REWARD: what a real player got for a gamebot kill, and why it was nothing when it was. Discord report
+    /// 2026-11-05 (Abermenai): "no RPs or XP from any kill", and no log could say which rule stopped it.
+    /// </summary>
+    private static void LogPlayerReward(GameBot victim, GamePlayer player, string outcome, int realmPoints, int bountyPoints,
+        long experience, bool worth, double damagePercent, string reason)
+    {
+        if (!RvrLog.IsInfoEnabled) return;
+        RvrLog.Info($"RVR_PLAYER_REWARD player={player.Name} level={player.Level} victim={victim.Name} victimLevel={victim.Level} " +
+                    $"outcome={outcome} rp={realmPoints} bp={bountyPoints} xp={experience} worth={worth} " +
+                    $"damage={damagePercent * 100:0.#}% region={victim.CurrentRegionID}" + (reason == null ? "" : $" reason=\"{reason}\""));
+    }
+
     public static void Award(GameBot killedBot, GameObject killer)
     {
         LogRvrDeath(killedBot, killer);
@@ -135,8 +174,10 @@ public static class AutonomousBotRealmPointRewards
         long now = GameLoop.GameLoopTime;
         long previousDeath = killedBot.TempProperties.GetProperty<long>(
             LastRealmPointDeathTickProperty, -1);
-        long worthInterval = Math.Max(0, Properties.RP_WORTH_SECONDS) * 1000L;
+        bool releasedSincePreviousDeath = killedBot.TempProperties.GetProperty(ReleasedAfterDeathProperty, false);
+        long worthInterval = RealmPointWorthSeconds(releasedSincePreviousDeath) * 1000L;
         bool isWorthRealmPoints = previousDeath < 0 || now - previousDeath >= worthInterval;
+        killedBot.TempProperties.SetProperty(ReleasedAfterDeathProperty, false);
 
         // Every death resets the same repeat-kill window used for a real player,
         // including a death caused by an NPC or by somebody who receives no RP.
@@ -158,6 +199,12 @@ public static class AutonomousBotRealmPointRewards
                 : pair.Value;
         }
 
+        // A hostile player fighting this bot with no damage on record (a full heal clears the list) gets nothing at all.
+        if (RvrLog.IsInfoEnabled)
+            foreach (GamePlayer nearby in killedBot.GetPlayersInRadius(WorldMgr.MAX_EXPFORKILL_DISTANCE))
+                if (nearby.Realm != killedBot.Realm && nearby.TargetObject == killedBot && !hostileContributors.ContainsKey(nearby))
+                    LogPlayerReward(killedBot, nearby, "uncredited", 0, 0, 0, isWorthRealmPoints, 0, "no damage on record");
+
         double totalDamage = hostileContributors.Sum(pair => pair.Value);
         if (totalDamage <= 0)
             return;
@@ -174,10 +221,25 @@ public static class AutonomousBotRealmPointRewards
             // Persistent gamebots remain part of the damage denominator, just
             // like another real participant, but this path only pays connected
             // players. Temporary companions have already resolved to the owner.
-            if (pair.Key is not GamePlayer player ||
-                player.ObjectState is not GameObject.eObjectState.Active ||
+            // A gamebot in a player's group adds its damage and itself to that group's share, as for a monster kill
+            // (ProcessXpGainers). Discord report 2026-11-05 (Abermenai): a player grouped with gamebots got nothing for
+            // the kills the bots made, because the group's share counted players only.
+            if (pair.Key is GameBot { Group: { } botGroup } groupBot && botGroup.GetPlayersInTheGroup().Count > 0)
+            {
+                if (groupBot.ObjectState is GameObject.eObjectState.Active &&
+                    groupBot.IsWithinRadius(killedBot, WorldMgr.MAX_EXPFORKILL_DISTANCE))
+                {
+                    AddContribution(groupBot, pair.Value, botGroup, groupContributions);
+                }
+                continue;
+            }
+            if (pair.Key is not GamePlayer player)
+                continue;
+            if (player.ObjectState is not GameObject.eObjectState.Active ||
                 !player.IsWithinRadius(killedBot, WorldMgr.MAX_EXPFORKILL_DISTANCE))
             {
+                LogPlayerReward(killedBot, player, "skipped", 0, 0, 0, isWorthRealmPoints, pair.Value / totalDamage,
+                    player.ObjectState is not GameObject.eObjectState.Active ? "not in the world" : "out of reward range");
                 continue;
             }
 
@@ -215,6 +277,8 @@ public static class AutonomousBotRealmPointRewards
                     realmPointsEarned = CalculateRealmPointReward(victimValue, killedBot.RealmLevel,
                         player.RealmPointsValue, player.RealmLevel, contributorCount,
                         groupContributorCount, damagePercent, applyRankAdjustment);
+
+                    realmPointsEarned = RvrRealmPointRules.OnKillRealmPoints(player, realmPointsEarned); // DR-181, DR-182
 
                     if (realmPointsEarned > 0)
                         player.GainRealmPoints(realmPointsEarned, true);
@@ -256,34 +320,72 @@ public static class AutonomousBotRealmPointRewards
                 bool soloKill = damagePercent >= 1.0 && contributorCount == 1;
                 player.UpdateKillStatsOnPlayerKill(killedBot.Realm, deathBlow, soloKill, realmPointsEarned);
                 BotTesterLog.PvpReward(killedBot, player, realmPointsEarned, bountyPointsPaid, experiencePaid, isWorthRealmPoints, damagePercent);
+                LogPlayerReward(killedBot, player, "paid", realmPointsEarned, bountyPointsPaid, experiencePaid, isWorthRealmPoints,
+                    damagePercent, !isWorthRealmPoints ? "killed recently" : realmPointsEarned == 0 ? "realm point share rounds to 0" : null);
             }
         }
     }
 
     /// <summary>
     /// Gamebots earn realm points for PvP kills like players: a share of the victim's value by
-    /// their part of the damage, with the same group bonus. Only persistent gamebots of a hostile
-    /// realm within reward range (pets resolve to their bot).
+    /// their part of the damage, with the same group bonus. Only persistent gamebots and account
+    /// companions of a hostile realm within reward range (pets resolve to their bot). /spawn helpers earn nothing.
     /// </summary>
     public static void PayGamebots(GameLiving victim, int victimRealmPointValue, int victimRealmLevel,
         IReadOnlyDictionary<GameLiving, double> hostileContributors, double totalDamage)
     {
         if (victim == null || victimRealmPointValue <= 0 || totalDamage <= 0) return;
-        var bots = hostileContributors
-            .Where(pair => pair.Key is GameBot { IsAutonomousWorldBot: true, IsTemporaryGroupHelper: false } bot &&
-                bot.Realm != eRealm.None && (DOL.GS.ServerRules.HybridCoopRules.Enabled ? DOL.GS.ServerRules.HybridCoopRules.RewardEnemies(bot, victim) : bot.Realm != victim.Realm) && bot.ObjectState == GameObject.eObjectState.Active &&
-                bot.IsWithinRadius(victim, WorldMgr.MAX_EXPFORKILL_DISTANCE))
+        var inRange = hostileContributors
+            .Where(pair => pair.Key != null && pair.Key.ObjectState == GameObject.eObjectState.Active &&
+                pair.Key.IsWithinRadius(victim, WorldMgr.MAX_EXPFORKILL_DISTANCE))
+            .ToArray();
+        var bots = inRange
+            .Where(pair => pair.Key is GameBot bot && EarnsRealmPoints(bot) &&
+                bot.Realm != eRealm.None && (DOL.GS.ServerRules.HybridCoopRules.Enabled ? DOL.GS.ServerRules.HybridCoopRules.RewardEnemies(bot, victim) : bot.Realm != victim.Realm))
             .Select(pair => (Bot: (GameBot)pair.Key, Damage: pair.Value)).ToArray();
         foreach (var (bot, damage) in bots)
         {
-            int groupCount = bot.Group == null ? 1 : Math.Max(1, bots.Count(other => other.Bot.Group == bot.Group));
-            double groupDamage = bot.Group == null ? damage : bots.Where(other => other.Bot.Group == bot.Group).Sum(other => other.Damage);
+            int groupCount;
+            double groupDamage;
+            if (bot.Group == null)
+            {
+                groupCount = 1;
+                groupDamage = damage;
+            }
+            else if (bot.IsAccountCompanion)
+            {
+                // An account companion takes its group's split like a player in that group: every contributor in the
+                // group (players, gamebots, companions) counts, as Award pays the players. Owner 2026-11-09:
+                // companions earned no realm points beside their player.
+                var group = inRange.Where(other => other.Key.Group == bot.Group).ToArray();
+                groupCount = Math.Max(1, group.Length);
+                groupDamage = group.Sum(other => other.Value);
+            }
+            else
+            {
+                groupCount = Math.Max(1, bots.Count(other => other.Bot.Group == bot.Group));
+                groupDamage = bots.Where(other => other.Bot.Group == bot.Group).Sum(other => other.Damage);
+            }
+            double damagePercent = Math.Min(1.0, groupDamage / totalDamage);
             int points = CalculateRealmPointReward(victimRealmPointValue, victimRealmLevel,
                 GetPlayerEquivalentRealmPointValue(bot.Level, bot.RealmLevel), bot.RealmLevel,
-                groupCount, groupCount, Math.Min(1.0, groupDamage / totalDamage), true);
+                groupCount, groupCount, damagePercent, true);
+            points = RvrRealmPointRules.OnKillRealmPoints(bot, points); // DR-181, DR-182
             if (points > 0) bot.GainRealmPoints(points, true);
+
+            // Bounty points as a player gets them (same split, cap and battleground rule); gamebots keep none.
+            if (bot.IsAccountCompanion && (Properties.ALLOW_BPS_IN_BGS || victim.CurrentZone?.IsBG != true))
+            {
+                int bountyPoints = CalculateBountyPointReward(GetPlayerEquivalentBountyPointValue(victim.Level),
+                    GetPlayerEquivalentBountyPointValue(bot.Level), groupCount, damagePercent);
+                if (bountyPoints > 0) bot.GainBountyPoints(bountyPoints);
+            }
         }
     }
+
+    /// <summary>Persistent gamebots and account companions earn realm points; /spawn helpers do not.</summary>
+    public static bool EarnsRealmPoints(GameBot bot) =>
+        bot is { IsAutonomousWorldBot: true, IsTemporaryGroupHelper: false } or { IsAccountCompanion: true };
 
     /// <summary>A player killed in PvP pays the gamebots that fought them (players are paid by the rules).</summary>
     public static void PayGamebotsForPlayerKill(GamePlayer killedPlayer)

@@ -157,7 +157,7 @@ namespace DOL.GS
         {
             if (target == null || target.IsPortalKeep || target.IsRelicCarrier || target.OwningRealm == eRealm.None ||
                 attacker is not (eRealm.Albion or eRealm.Midgard or eRealm.Hibernia) || attacker == target.OwningRealm) return false;
-            lock (Sync)
+            using (AiProfile.Lock(Sync, AiSystem.LockRvrEvents))
             {
                 // A siege the bots planned (owner 2026-10-07): the player is helping it, not starting one. The fight
                 // counts as an observed attack, but no player defense, warning or horn.
@@ -190,7 +190,7 @@ namespace DOL.GS
         {
             if (now < _nextDefensePulse) return;
             _nextDefensePulse = now + 5000;
-            lock (Sync)
+            using (AiProfile.Lock(Sync, AiSystem.LockRvrEvents))
             {
                 Expire(now);
                 foreach (var pair in DefenseAlarms.ToArray())
@@ -251,19 +251,19 @@ namespace DOL.GS
                         DefenseWarnings[pair.Key] = warning with { Next = now + 5000 };
                     }
                 }
-                if (!Events.Values.Any(e => e.BattleStarted)) return;
+                if (!Events.Values.Any(RecruitsDefenders)) return;
             }
 
             // Resolve coordinator IDs BEFORE taking the event lock (the group
             // coordinator consults event state while holding its own lock).
             var forces = AutonomousBotRegistry.Snapshot()
-                .Where(b => b.IsAutonomousWorldBot && !b.IsTemporaryGroupHelper && !b.IsPlayerLedGroup &&
+                .Where(b => b.IsAutonomousWorldBot && !b.IsTemporaryGroupHelper && !BotDutyLeases.IsSpokenForByPlayer(b) &&
                     b.Level == 50 && b.IsAlive && b.ObjectState == GameObject.eObjectState.Active &&
                     AutonomousObjectiveAssignments.Is(b, eAutonomousObjectiveKind.RvR))
                 .GroupBy(AutonomousBotGroupCoordinator.RvrForceId)
                 .Select(g => new ResponseForce(new Force(g.Key, g.First().Realm, g.First().Group?.MemberCount ?? g.Count(), 50, 0,
                     MemberIds: g.Select(b => b.DatabaseID).ToArray()), g.ToArray())).ToArray();
-            lock (Sync)
+            using (AiProfile.Lock(Sync, AiSystem.LockRvrEvents))
             {
                 foreach (var candidate in forces)
                 foreach (var active in Events.Values.Where(e => e.BattleStarted && Participants(e, candidate.Force.Realm).ContainsKey(candidate.Force.GroupId)))
@@ -275,7 +275,9 @@ namespace DOL.GS
                         active.Present[bot.DatabaseID] = (candidate.Force.GroupId, bot.Realm, now, bot, new(bot.X, bot.Y, bot.Z), bot.CurrentRegionID);
                     else active.Present.Remove(bot.DatabaseID);
                 }
-                foreach (var active in Events.Values.Where(e => e.BattleStarted && IsLatestDefenseFocus(e))
+                // A bot siege whose army was seen marching gathers its defenders before the battle (CallDefendersAtMarch);
+                // attackers and the third realm are recruited only once the battle is on.
+                foreach (var active in Events.Values.Where(e => RecruitsDefenders(e) && IsLatestDefenseFocus(e))
                              .OrderByDescending(e => e.LastPressureTick).ToArray())
                 {
                     int before = active.Attackers.Values.Sum() + active.Defenders.Values.Sum() + active.ThirdRealm.Values.Sum();
@@ -286,6 +288,7 @@ namespace DOL.GS
                                  Vector2.DistanceSquared(new(b.X, b.Y), new(active.Target.X, active.Target.Y)) : float.MaxValue)))
                     {
                         Force force = candidate.Force;
+                        if (!active.BattleStarted && force.Realm != active.DefenderRealm) continue;
                         if (Participants(active, force.Realm).ContainsKey(force.GroupId)) continue;
                         if (ReleasedForces.ContainsKey(force.GroupId) ||
                             CarrierEvents.Values.Any(c => c.Participants.Values.Any(r => r.ContainsKey(force.GroupId)))) continue;
@@ -298,7 +301,7 @@ namespace DOL.GS
                         // Missing/dead members may catch up. Only mixed-level,
                         // non-RvR or player-led parties are ineligible.
                         if (candidate.Members.Any(b => b.Group != null && b.Group.GetMembersInTheGroup().Any(m =>
-                            m is not GameBot member || member.Level != 50 || member.IsPlayerLedGroup ||
+                            m is not GameBot member || member.Level != 50 || BotDutyLeases.IsSpokenForByPlayer(member) ||
                             !member.IsAutonomousWorldBot || !AutonomousObjectiveAssignments.Is(member, eAutonomousObjectiveKind.RvR)))) continue;
                         var previous = Events.Values.FirstOrDefault(e => Participants(e, force.Realm).ContainsKey(force.GroupId));
                         if (previous != null && (!previous.DefenseReaction || !active.DefenseReaction ||
@@ -313,10 +316,17 @@ namespace DOL.GS
                             foreach (long id in force.MemberIds) previous.Present.Remove(id);
                         }
                         foreach (GameBot bot in candidate.Members)
+                        {
                             bot.TempProperties.SetProperty("RvrEventForce", force.GroupId);
+                            BotDutyLeases.Claim(bot, eDutyLeaseKind.RvrEvent, force.GroupId, DutyLeaseReason.RvrForce, active.Target.Name);
+                        }
                         // The keep's own realm gathers first and marches in as one wave (allies and third realm do not).
                         if (active.DefenseReaction && force.Realm == active.DefenderRealm && !active.DefenseMustering && !active.DefenseMarching)
                             BeginDefenseMuster(active, now, PlayerDefenseMusterMilliseconds);
+                        // A bot siege's defenders called at the march gather at their muster and man the walls together.
+                        else if (!active.DefenseReaction && !active.BattleStarted && SiegeScheduling && force.Realm == active.DefenderRealm &&
+                                 !active.DefenseMustering && !active.DefenseMarching)
+                            BeginDefenseMuster(active, now);
                     }
                     int assigned = active.Attackers.Values.Sum() + active.Defenders.Values.Sum() + active.ThirdRealm.Values.Sum();
                     if (assigned != before)

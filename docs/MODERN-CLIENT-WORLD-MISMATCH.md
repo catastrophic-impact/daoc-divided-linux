@@ -241,6 +241,19 @@ Classic and Stormforged editions.
   archive. The zones beyond (11, 12, 210) are the same in both clients and their walls end where the patched ones do.
 - **Open:** checked against the client's data only. Enforcement of the patched table has not been seen in a real client.
 
+**Border-keep gates still walled on DR-dev-0.1a (reported 2026-11-05):**
+- **Symptom:** at Castle Sauvage, Snowdonia Fortress, Svasud Faste and Druim Cain the gate opens but the player can't walk
+  out. The chat shows `Invalid ZonePoint. Wrong ID or mismatching realm. (ID: 191)` at Vindsaul Faste and `(ID: 193)` at
+  Druim Cain.
+- **Cause:** live's `zonejump.csv` in zones 0, 3, 100, 102, 206 and 207 has a `Frontier` jump just past each border keep's
+  frontier gate (zone points 188, 189, 191 and 193, to New Frontiers) and untargeted `Border` / `artfix` lines around it
+  (Svasud Faste and Druim Ligen have only these). The classic tables have none of these rows, the server has no such zone
+  points, and the client stops the player there. With the `bound.csv` patch the walls themselves are open: tracing the patched
+  wall maps outward from each gate reaches the frontier zone as on classic, and Svasud Faste's and Druim Cain's were never closed.
+- **Fix:** `make_client_patch.py` `GATE_JUMPS` drops those rows (each named; another table is refused) and numbers the rest
+  1, 2, ... again, in each zone's dat and csv archive. The Old Frontiers zones' tables are the same in both clients.
+- **Open:** not yet seen in a real client.
+
 **Frenzy models (reported 2026-11-01):** model ids 3, 4, 12 and 13 are the classic table's own copies of Vendo Man, Stag Man and
 their small forms. On 1.130 they are "empty" and coconut figures, so a Berserker played the frenzy and never morphed. Both
 tables have the same forms at 582, 583, 859 and 2032, which the effects now use.

@@ -289,6 +289,7 @@ namespace DOL.GS
 			{
 				AutonomousBotGoalPolicy.Initialize(Configuration.RootDirectory);
 				BotDiagnostics.Initialize(Configuration.RootDirectory);
+				ZoneWater.LogStatus();
 				//Manually set ThreadPool min thread count.
 				ThreadPool.GetMinThreads(out int minWorkerThreads, out int minIOCThreads);
 				ThreadPool.GetMaxThreads(out int maxWorkerThreads, out int maxIOCThreads);

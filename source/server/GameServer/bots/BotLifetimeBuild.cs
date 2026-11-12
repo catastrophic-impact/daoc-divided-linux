@@ -29,6 +29,24 @@ namespace DOL.GS
             return true;
         }
 
+        /// <summary>
+        /// Night 2026-11-04: 25 of 64 Storm Sovereigns kept their saved Sword or Spear plan after the Hammer/Axe/Shield
+        /// remake and logged "No usable Sword weapon" once a minute all night (5,789 warnings): the class no longer has
+        /// those lines, so the plan could never be trained or armed. A saved plan fits the class when every line it trains
+        /// is one of the class's specializations, or one the class's fresh plan also trains. An empty or unreadable plan
+        /// "fits": <see cref="Restore"/> already refuses it and the fresh plan is used.
+        /// </summary>
+        public static bool FitsClass(string saved, Func<string, bool> classHasSpec, IEnumerable<string> freshPlanLines)
+        {
+            if (string.IsNullOrWhiteSpace(saved)) return true;
+            BotSpec plan;
+            try { plan = JsonSerializer.Deserialize<BotSpec>(saved, Options); }
+            catch (JsonException) { return true; }
+            if (plan?.SpecLines == null) return true;
+            var fresh = new HashSet<string>(freshPlanLines ?? [], StringComparer.OrdinalIgnoreCase);
+            return plan.SpecLines.All(line => string.IsNullOrWhiteSpace(line.Spec) || classHasSpec(line.Spec) || fresh.Contains(line.Spec));
+        }
+
         public static void AlignWithInvestedWeapons(BotSpec plan, Func<string, int> trained)
         {
             eObjectType[] primary = { eObjectType.Sword, eObjectType.Axe, eObjectType.Hammer,

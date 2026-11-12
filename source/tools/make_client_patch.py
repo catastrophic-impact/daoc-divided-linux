@@ -24,6 +24,8 @@ Live walled off the frontier gates of Castle Sauvage, Snowdonia Fortress and Dru
 client enforces, closes the gate and the way out of the zone, so the gate opens and the player still can't walk through
 (issue #2, a bound wall exactly where the 2026-10-28 walk links cross). Those zones' dat and csv archives get Member
 edits that swap the closing walls for the classic client's, whose ends meet the neighbouring zones' unchanged walls.
+Live also put zone jumps at all six border keeps' frontier gates (a Frontier jump to New Frontiers and untargeted Border /
+artfix lines); GATE_JUMPS takes them out of those zones' zonejump.csv, so the gates lead into the old frontiers again.
 
 An entry with From makes a new file from another stock file: Abermenai's terrain is Thidranki's with the archive renamed
 (add_abermenai_terrain.py).
@@ -32,6 +34,13 @@ The private fishing rod (tools/pet-art/install_fishing_rod.py, the server's fish
 with nothing retail in it: items/offline_fishrod01.nif is made From the player's own quarterstaff NIF with only our vertex
 positions and bounding sphere, and one gamedata.mpk entry with Members adds our three rows to objects.csv and items.csv,
 one member after the other. Building the patch needs numpy (the rod's mesh code).
+
+The Sovereign Regalia art (tools/sovereign-art: Storm Regalia objects 4929-4933, 4937 and 4942, Regalia of Tara and of
+Camelot 4950-4963) is our painted skins on stock meshes: each kit's two skin archives (pskin061/mskin070, pskin062/mskin071,
+pskin063/mskin072) are made From a stock skin archive and ship whole, since every texture in them is ours, and its
+pskins.csv, mskins.csv and objects.csv rows join the rod's in the one gamedata.mpk entry. The archives use a fixed member
+time, so the same textures give the same bytes. Building them needs Pillow. One texture is not only ours, by the owner's
+decision (2026-11-08): the Storm winged helm's wings are the stock ToA winged helm skin's feathers recoloured.
 
 Marfach Caverns (region 276) is the one exception to shipping nothing retail, by the owner's decision (2026-10-30): 1.130
 has no copy of its map, so dat276.mpk and its sounds.dat (about 20 KB, read from the classic client when the patch is
@@ -70,6 +79,19 @@ GATE_WALLS = [
 ]
 GATE_ARCHIVES = ['zones/zone{0:03}/dat{0:03}.mpk', 'zones/zone{0:03}/csv{0:03}.mpk']
 BOUND = 'bound.csv'
+# (zone, the zonejump.csv rows to drop, as "number,name"): live put a Frontier jump to New Frontiers just past each border
+# keep's frontier gate and untargeted Border / artfix lines around it; the classic tables have none of them. The server
+# has no such zone points, so the client stopped every player at the gate ("Invalid ZonePoint ... (ID: 191)" at
+# Vindsaul Faste, DR-dev-0.1a report 2026-11-05). The rows left are numbered 1, 2, ... again.
+GATE_JUMPS = [
+    (0, ['10,Border', '11,Border', '12,Frontier']),                                            # Castle Sauvage
+    (3, ['1,Frontier', '2,Border', '3,Border']),                                               # Snowdonia Fortress
+    (100, ['12,Border', '13,Border', '14,Border', '15,Border', '28,artfix967', '29,artfix967']),  # Svasud Faste
+    (102, ['1,Frontier', '2,Border', '3,Border', '4,Border', '5,Border']),                     # Vindsaul Faste
+    (206, ['3,Frontier', '4,Border', '5,Border', '6,Border', '7,Border', '12,artfix', '13,artfix']),  # Druim Cain
+    (207, ['10,Border', '11,Border', '12,Border', '13,Border', '24,ArtFix', '25,ArtFix', '26,ArtFix', '27,ArtFix']),  # Druim Ligen
+]
+ZONE_JUMP = 'zonejump.csv'
 # The stock zones the server uses under other regions: (zone, stock region, server region, the name to show).
 ZONE_REGIONS = [(250, 166, 250, b'Caledonia'), (251, 167, 251, b'Murdaigean'), (252, 168, 252, b'Thidranki')]
 # (new file, the stock file its edit replaces): the classic client's files, see the docstring.
@@ -77,6 +99,14 @@ PET_ART = Path(__file__).resolve().parents[2] / 'tools/pet-art'
 ROD_SOURCE, ROD_PATH = 'items/b_st_quarterstaff01.nif', 'items/offline_fishrod01.nif'
 GAMEDATA = 'gamedata.mpk'
 ROD_CATALOGS = ('objects.csv', 'items.csv')
+SOVEREIGN_ART = Path(__file__).resolve().parents[2] / 'tools/sovereign-art'
+# The Regalia kits (tools/sovereign-art/<kit>/install_<kit>_set.py): our painted skins on stock meshes, under new IDs.
+REGALIA_KITS = ('storm', 'tara', 'camelot')
+# The stock archive each new skin archive is made From (any file every 1.130 client has; its bytes don't ship).
+REGALIA_FROM = 'items/pskins/pskin008.mpk'
+REGALIA_STAMP = 1794009600  # 2026-11-07 00:00 UTC, the archives' member time: the same bytes on every build
+# Every catalog member the patch adds rows to, in the order the gamedata.mpk entry edits them.
+GAMEDATA_CATALOGS = ('objects.csv', 'items.csv', 'pskins.csv', 'mskins.csv')
 MARFACH_FILES = [('zones/zone276/dat276.mpk', 'zones/zone247/dat247.mpk'), ('zones/zone276/sounds.dat', 'zones/zone247/sounds.dat')]
 # The sections the server's regions need and the stock table lacks, as the classic table has them.
 ADDED_SECTIONS = '''
@@ -393,15 +423,52 @@ def open_gate_walls(bound: bytes, zone: int) -> bytes:
     return b'\r\n'.join(lines)
 
 
-def gate_wall_entry(client: Path, path: str, zone: int) -> dict:
+def without_gate_jumps(table: bytes, zone: int) -> bytes:
+    """A zone's zonejump.csv without its GATE_JUMPS rows, the rest numbered again; another table is refused."""
+    drop = next(rows for jump_zone, rows in GATE_JUMPS if jump_zone == zone)
+    lines = table.split(b'\r\n')
+    found = [at for at, line in enumerate(lines) if any(line.startswith(row.encode('latin1') + b',') for row in drop)]
+    if len(found) != len(drop):
+        raise ValueError(f'zone{zone}: zonejump.csv is not the table this patch knows')
+    kept = [line for at, line in enumerate(lines) if at not in found]
+    number = 0
+    for at, line in enumerate(kept):
+        if line.strip():
+            number += 1
+            kept[at] = b'%d,%s' % (number, line.split(b',', 1)[1])
+    return b'\r\n'.join(kept)
+
+
+def has_member(archive: bytes, member: str) -> bool:
+    _, rows, _ = archive_parts(archive)
+    return any(row[:256].split(b'\0')[0].decode('latin1').lower() == member.lower() for row in rows)
+
+
+def gate_entry(client: Path, path: str, zone: int) -> dict:
+    """One border-keep zone archive: GATE_WALLS opens bound.csv, GATE_JUMPS takes the gate's zone jumps out of zonejump.csv."""
     stock = (client / path).read_bytes()
-    bound = member_of(stock, BOUND)
-    patched_bound = open_gate_walls(bound, zone)
-    patched = with_member(stock, patched_bound, BOUND)
-    entry = dict(Path=path, Member=BOUND, InputSha256=sha(stock), OutputSha256=sha(patched), OutputSize=len(patched),
-                 Edits=encoded(edits(bound, patched_bound)))
+    parts, patched = [], stock
+    if any(wall[0] == zone for wall in GATE_WALLS):
+        parts.append((BOUND, lambda table: open_gate_walls(table, zone)))
+    if any(jump[0] == zone for jump in GATE_JUMPS) and has_member(stock, ZONE_JUMP):
+        parts.append((ZONE_JUMP, lambda table: without_gate_jumps(table, zone)))
+    members = []
+    for member, change in parts:
+        table = member_of(patched, member)
+        new_table = change(table)
+        members.append(dict(Member=member, Edits=encoded(edits(table, new_table))))
+        patched = with_member(patched, new_table, member)
+    entry = dict(Path=path, InputSha256=sha(stock), OutputSha256=sha(patched), OutputSize=len(patched))
+    if len(members) == 1:
+        entry |= members[0]
+    else:
+        entry |= dict(Edits=[], Members=members)
     assert apply(stock, entry) == patched
     return entry
+
+
+def gate_zones() -> list:
+    return sorted({wall[0] for wall in GATE_WALLS} | {jump[0] for jump in GATE_JUMPS})
 
 
 def in_place_edits(original: bytes, patched: bytes):
@@ -428,10 +495,10 @@ def fishing_rod():
     return install_fishing_rod
 
 
-def rod_entries(client: Path) -> list:
+def rod_entries(client: Path) -> tuple:
     """The fishing rod every player's client needs for the server's fishing_pole_model 4927 (and 4928): the rod NIF made
     from the player's own quarterstaff (only the new vertex positions and bounding sphere ship), and our three catalog
-    rows added to gamedata.mpk's objects.csv and items.csv (only those rows ship)."""
+    rows for gamedata.mpk's objects.csv and items.csv (gamedata_entry; only those rows ship)."""
     rod = fishing_rod()
     rod.ITEMS = client / 'items'
     stock_nif = (client / ROD_SOURCE).read_bytes()
@@ -440,27 +507,98 @@ def rod_entries(client: Path) -> list:
     nif_entry = dict(Path=ROD_PATH, From=ROD_SOURCE, InputSha256=sha(stock_nif), OutputSha256=sha(nif), OutputSize=len(nif),
                      Edits=encoded(in_place_edits(stock_nif, nif)))
     assert apply(stock_nif, nif_entry) == nif
-
     game = (client / GAMEDATA).read_bytes()
-    catalogs = {name: member_of(game, name) for name in ROD_CATALOGS}
-    added = rod.new_rows(catalogs['objects.csv'], catalogs['items.csv'])
+    return [nif_entry], rod.new_rows(member_of(game, 'objects.csv'), member_of(game, 'items.csv'))
+
+
+def regalia_kit(name: str):
+    """A Regalia installer module (tools/sovereign-art; needs Pillow), imported only when a patch is built."""
+    import importlib.util
+    path = SOVEREIGN_ART / name / f'install_{name}_set.py'
+    spec = importlib.util.spec_from_file_location(f'regalia_{name}', path)
+    kit = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = kit
+    spec.loader.exec_module(kit)
+    return kit
+
+
+def regalia_entries(client: Path) -> tuple:
+    """The Sovereign Regalia art (Storm, Tara, Camelot): each kit's two skin archives, made From a stock archive and shipped
+    whole (our painted textures only; the stock DDS lends its header layout), its private mesh copies (Tara's refitted Lug
+    helmets: only the changed transform bytes ship), and its catalog rows for gamedata_entry."""
+    game = (client / GAMEDATA).read_bytes()
+    files = {name: member_of(game, name) for name in GAMEDATA_CATALOGS}
+    stock = (client / REGALIA_FROM).read_bytes()
+    entries, rows = [], {}
+    for name in REGALIA_KITS:
+        kit = regalia_kit(name)
+        for path, ours in zip(kit.S.skin_targets(kit), kit.S.skin_archives(client, kit, REGALIA_STAMP)):
+            entry = dict(Path=path, From=REGALIA_FROM, InputSha256=sha(stock), OutputSha256=sha(ours), OutputSize=len(ours),
+                         Edits=encoded(replace_whole(stock, ours)))
+            assert apply(stock, entry) == ours
+            entries.append(entry)
+        for path, source, stock_nif, ours in kit.S.mesh_files(client, kit):   # private mesh copies (Tara's Crown of Lugh)
+            entry = dict(Path=path, From=source, InputSha256=sha(stock_nif), OutputSha256=sha(ours), OutputSize=len(ours),
+                         Edits=encoded(in_place_edits(stock_nif, ours)))
+            assert apply(stock_nif, entry) == ours
+            entries.append(entry)
+        for catalog, added in kit.S.catalog_rows(files, kit).items():
+            rows.setdefault(catalog, []).extend(added)
+    return entries, rows
+
+
+def csv_line(row: list) -> str:
+    """A catalog row as the client's tables write it (the installers' line_of)."""
+    import csv
+    import io
+    out = io.StringIO()
+    csv.writer(out, lineterminator='').writerow(row)
+    return out.getvalue()
+
+
+def row_insertions(stock: bytes, table: bytes) -> list:
+    """(at, 0, lines) for each run of lines `table` inserts into `stock`; anything but insertions is refused."""
+    old, new = stock.split(b'\r\n'), table.split(b'\r\n')
+    starts, position = [], 0
+    for line in old:
+        starts.append(position)
+        position += len(line) + 2
+    out = []
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, old, new, autojunk=False).get_opcodes():
+        if tag == 'equal':
+            continue
+        if tag != 'insert':
+            raise ValueError('a stock row would change')
+        out.append((starts[i1] if i1 < len(old) else len(stock) + 2, 0, b''.join(line + b'\r\n' for line in new[j1:j2])))
+    if out and out[-1][0] > len(stock):
+        raise ValueError('rows after the last line are not supported')
+    assert splice(stock, encoded(out)) == table
+    return out
+
+
+def gamedata_entry(client: Path, added: dict) -> dict:
+    """One gamedata.mpk entry adding our catalog rows ({catalog: [row, ...]}), one member after the other. Only our rows
+    ship: each member's edits are insertions of exactly those lines."""
+    game = (client / GAMEDATA).read_bytes()
     members, patched = [], game
-    for name in ROD_CATALOGS:
-        table = catalogs[name]
-        for row in added[name]:
-            table = rod.bs.add_row(table, row)
-        changes = changed_middle(catalogs[name], table)
-        inserted = b''.join(block for _, _, block in changes).decode('latin1').strip('\r\n').split('\r\n')
-        assert [line.split(',', 1)[0] for line in inserted] == [row[0] for row in added[name]], f'{name}: more than our rows'
-        members.append(dict(Member=name, Edits=encoded(changes), Rows=inserted))
+    for name in [catalog for catalog in GAMEDATA_CATALOGS if added.get(catalog)]:
+        stock = member_of(game, name)
+        lines = [csv_line(row) for row in added[name]]
+        table = with_rows(stock.decode('latin1'), lines)
+        assert table is not None, f'{name}: one of our IDs holds another row in the stock table'
+        table = table.encode('latin1')
+        changes = row_insertions(stock, table)
+        inserted = [line for _, _, block in changes for line in block.decode('latin1').split('\r\n') if line]
+        assert sorted(inserted) == sorted(lines), f'{name}: more than our rows'
+        members.append(dict(Member=name, Edits=encoded(changes), Rows=lines))
         patched = with_member(patched, table, name)
     # AnyBuild: players' gamedata.mpk is often not this one (live updates it without game.dll, other clients change it), so
     # the launcher adds the Rows by ID to any build and only the stock one is hash-checked end to end.
-    game_entry = dict(Path=GAMEDATA, InputSha256=sha(game), OutputSha256=sha(patched), OutputSize=len(patched), Edits=[],
-                      Members=members, AnyBuild=True)
-    assert apply(game, game_entry) == patched
-    assert adapt(game, game_entry) == patched, 'rows placed by ID differ from the stock edits'
-    return [nif_entry, game_entry]
+    entry = dict(Path=GAMEDATA, InputSha256=sha(game), OutputSha256=sha(patched), OutputSize=len(patched), Edits=[],
+                 Members=members, AnyBuild=True)
+    assert apply(game, entry) == patched
+    assert adapt(game, entry) == patched, 'rows placed by ID differ from the stock edits'
+    return entry
 
 
 def build(client: Path, classic: Path, splash: Path = SPLASH) -> dict:
@@ -482,9 +620,13 @@ def build(client: Path, classic: Path, splash: Path = SPLASH) -> dict:
     files.append(zone_table_entry((client / 'zones/zones.mpk').read_bytes()))
     files.extend(abermenai_entry(client, kind) for kind in add_abermenai_terrain.KINDS)
     files.extend(marfach_entry(client, classic, path, stock_path) for path, stock_path in MARFACH_FILES)
-    files.extend(gate_wall_entry(client, path.format(zone), zone) for zone in sorted({wall[0] for wall in GATE_WALLS})
-                 for path in GATE_ARCHIVES)
-    files.extend(rod_entries(client))
+    files.extend(gate_entry(client, path.format(zone), zone) for zone in gate_zones() for path in GATE_ARCHIVES)
+    rod_files, rows = rod_entries(client)
+    regalia_files, regalia_rows = regalia_entries(client)
+    for catalog, added in regalia_rows.items():
+        rows.setdefault(catalog, []).extend(added)
+    files.extend(rod_files + regalia_files)
+    files.append(gamedata_entry(client, rows))
     return dict(Format=FORMAT, ClientVersion=CLIENT_VERSION, Files=files)
 
 

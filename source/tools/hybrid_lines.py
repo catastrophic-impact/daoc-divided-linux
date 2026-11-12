@@ -169,8 +169,13 @@ def siege_songs(line, group, art, names):
 LATER = [
     *siege_songs('Battlesongs', 74130, 'Spirit Bolstering Chant',
                  ['Rhythm of the Siege', 'Accent of the Siege', 'Intonation of the Siege', 'Pulse of the Siege', 'Count of the Siege']),
-    *siege_songs('Valor', 74230, "Saint's Energy",
-                 ["Champion's Ambience", "Champion's Demeanor", "Champion's Presence", "Champion's Aspect", "Champion's Aura"]),
+    # 1.129: the Valor auras are a 2/4/6/8/10% chance for spells and styles to cost no power or endurance, not siege
+    # songs (DR-101, world fix open-issues-1108; server CostFreeChance).
+    *family('Valor', 74230, "Saint's Energy",
+            [(lv, name, dict(Value=v)) for (lv, v), name in zip(((6, 2), (16, 4), (26, 6), (36, 8), (46, 10)),
+             ["Champion's Ambience", "Champion's Demeanor", "Champion's Presence", "Champion's Aspect", "Champion's Aura"])],
+            Type='CostFreeChance', Target='Group', Duration=8, Range=1500, Pulse=1, Frequency=70, Power=0, CastTime=0, RecastDelay=5,
+            SharedTimerGroup=74230),
     *siege_songs('Instruments', 74410, 'Simple Song of Travel',
                  ['Ballad of Albion', 'Chant of Albion', 'Chorus of Albion', 'Song of Albion', 'Anthem of Albion']),
     # Skald wards (1.121): the next mesmerize (1) or magical stun (2) on another realm member is stopped and the ward used up.

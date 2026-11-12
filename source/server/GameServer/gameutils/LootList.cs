@@ -41,12 +41,18 @@ namespace DOL.GS
 		/// </summary>
 		private readonly List<DbItemTemplate> m_fixedItemDrops;
 
+		/// <summary>
+		/// Who each fixed drop is meant for (same index as m_fixedItemDrops), or null for the kill's normal owners.
+		/// </summary>
+		private readonly List<GameLiving> m_fixedIntendedOwners;
+
 		public LootList() : this(1) { }
 
 		public LootList(int dropCount)
 		{
 			DropCount = dropCount;
 			m_fixedItemDrops = new List<DbItemTemplate>(2);
+			m_fixedIntendedOwners = new List<GameLiving>(2);
 			m_randomItemDrops = new List<LootEntry>(15);
 		}
 
@@ -56,8 +62,19 @@ namespace DOL.GS
 		/// <param name="loot"></param>
 		public void AddFixed(DbItemTemplate loot, int dropCount)
 		{
+			AddFixed(loot, dropCount, null);
+		}
+
+		/// <summary>
+		/// Adds dropCount pieces of this item to the fixed drops, offered first to intendedOwner when it drops.
+		/// </summary>
+		public void AddFixed(DbItemTemplate loot, int dropCount, GameLiving intendedOwner)
+		{
 			for (int drop = 0; drop < dropCount; drop++)
+			{
 				m_fixedItemDrops.Add(loot);
+				m_fixedIntendedOwners.Add(intendedOwner);
+			}
 		}
 
 		public void AddRandom(int chance, DbItemTemplate loot, int count = 1)
@@ -80,6 +97,7 @@ namespace DOL.GS
 			if (list.m_fixedItemDrops != null)
 			{
 				m_fixedItemDrops.AddRange(list.m_fixedItemDrops);
+				m_fixedIntendedOwners.AddRange(list.m_fixedIntendedOwners);
 			}
 
 			if (list.DropCount > DropCount)
@@ -92,8 +110,21 @@ namespace DOL.GS
 		/// <returns></returns>
 		public DbItemTemplate[] GetLoot()
 		{
-			List<DbItemTemplate> loot = new List<DbItemTemplate>(m_fixedItemDrops.Count + DropCount);
-			loot.AddRange(m_fixedItemDrops);
+			LootDrop[] drops = GetDrops();
+			DbItemTemplate[] items = new DbItemTemplate[drops.Length];
+			for (int i = 0; i < drops.Length; i++)
+				items[i] = drops[i].Item;
+			return items;
+		}
+
+		/// <summary>
+		/// Rolls the loot once: every fixed drop with its intended owner, then DropCount random winners (no owner).
+		/// </summary>
+		public LootDrop[] GetDrops()
+		{
+			List<LootDrop> loot = new List<LootDrop>(m_fixedItemDrops.Count + DropCount);
+			for (int i = 0; i < m_fixedItemDrops.Count; i++)
+				loot.Add(new LootDrop(m_fixedItemDrops[i], m_fixedIntendedOwners[i]));
 
 			if (DropCount > 0)
 			{
@@ -143,7 +174,7 @@ namespace DOL.GS
 					for (int i = 0; (i < DropCount && lootCandidates.Count != 0); i++)
 					{
 						int tmpidx = Util.Random(lootCandidates.Count - 1);
-						loot.Add(lootCandidates[tmpidx].ItemTemplate);
+						loot.Add(new LootDrop(lootCandidates[tmpidx].ItemTemplate, null));
 						if (--(lootCandidates[tmpidx].Count) <= 0)
 							lootCandidates.SwapRemoveAt(tmpidx);
 					}
@@ -154,6 +185,11 @@ namespace DOL.GS
 			return loot.ToArray();
 		}
 	}
+
+	/// <summary>
+	/// One item that dropped, and who it is meant for: null leaves it to the kill's normal owners.
+	/// </summary>
+	public readonly record struct LootDrop(DbItemTemplate Item, GameLiving IntendedOwner);
 
 	/// <summary>
 	/// Container class for entries in the randomdroplist

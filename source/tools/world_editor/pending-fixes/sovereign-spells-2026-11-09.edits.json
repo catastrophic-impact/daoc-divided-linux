@@ -1,0 +1,1052 @@
+[
+ {
+  "table": "Spell",
+  "key": "9ba28f99-fb3a-4cef-86bc-597daaf6c466",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "39307e11-0c9b-497a-aa28-fca41ee723c2",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "4e1446c7-88eb-49ab-9bc1-cedb88d2b346",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e14b3867-fcec-4fbc-93c8-6e69f5297bbb",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "8e5da57f-4dc0-47bd-8480-6c67906434d3",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9fa732d7-d8c3-40a7-96a6-e55b2a6046fc",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e41efd0c-55d3-4272-b597-f0ab5647ebbc",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "63e9f09c-9c9a-4f0c-8d65-272c368029e2",
+  "set": {
+   "Description": "Holy fire bolt. Instant with 3 or more Valor. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9923fb72-bdcb-4034-a06c-bd19b4c3c548",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "11f1bdba-49b0-4bd6-b50d-3f61d0022fae",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "1e02c5c7-d8c0-4dcd-aa95-4e91846ca305",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9bcde0d5-26e4-473e-9001-09397f882ab4",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2bd40527-cb4f-4dae-93bd-620232a68b1b",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "fa3997ca-5067-48c1-b9f7-4bf3e11ff422",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "a67d6ea1-425d-4d8d-bc30-6268c651eddb",
+  "set": {
+   "Description": "An ally (or you) gains 20% absorption and a holy ward of 10% of its health for 15 seconds; you gain 1 Valor. 15-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "c365c85c-e362-45ca-93e9-652ce15269cf",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "56eaa74f-9dfa-43a8-b63b-8c8225f409e0",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9392d81c-221b-4d5b-badd-2776c95c0606",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "94746d6e-57f0-470a-a851-667fe3c2945d",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9c21b529-d47f-41a1-9df9-58d2277d25c6",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "8c4f3d9c-3aef-40ce-9c92-a42f23d33bbc",
+  "set": {
+   "Description": "Your party heals 10% at once, +2% per Valor held (none spent), and more over 12 seconds. 30-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "364ab250-30df-44f2-a344-84bff6886f79",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "60f1f5aa-f7df-42a2-9632-a7104eb21b67",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2f13f46e-7902-4e7c-a03d-44db7ddec4a8",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "baf467cc-7f4b-4fbd-9eaa-f88277abb7a5",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "68b03411-f5b1-468c-803d-aa3949074fa0",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "0dff6852-0b23-40b5-9636-f386b0292f75",
+  "set": {
+   "Description": "Maintained: sword hits burn with holy fire, polearm hits splash holy fire on an enemy nearby, every block or parry returns holy fire; extra magic resistance outside the buff cap. Valor held: +10% holy fire per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "d4b9116a-c226-44b8-8139-b960772bc687",
+  "set": {
+   "Description": "Your party gains a holy ward of 10% of its health and +10% block and parry for 15 seconds. 30-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "f57dcd99-79b2-4a0f-829a-2746fe493d94",
+  "set": {
+   "Description": "Your party gains a holy ward of 10% of its health and +10% block and parry for 15 seconds. 30-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "ad35ecec-4b72-4909-ba8c-458f29cc39a0",
+  "set": {
+   "Description": "Your party gains a holy ward of 10% of its health and +10% block and parry for 15 seconds. 30-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e222d526-5aa4-46c7-a3a4-d4b27fb792ff",
+  "set": {
+   "Description": "Your party gains a holy ward of 10% of its health and +10% block and parry for 15 seconds. 30-second reuse. Valor held: +10% ward per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "1fd9bc72-0a00-4763-946a-cd2b4d54b948",
+  "set": {
+   "Description": "Stuns the target for 4 seconds (6 with 3 or more Valor) and snares enemies within 300 of it by 40%. 20-second reuse. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e83b2d3f-67f6-48f8-bc9a-3c9745444d27",
+  "set": {
+   "Description": "Stuns the target for 4 seconds (6 with 3 or more Valor) and snares enemies within 300 of it by 40%. 20-second reuse. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "659e344e-00e9-4f43-ac27-eaef129a0e0a",
+  "set": {
+   "Description": "Stuns the target for 4 seconds (6 with 3 or more Valor) and snares enemies within 300 of it by 40%. 20-second reuse. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "eb6f572b-27ae-45d6-9cbf-58b011195c26",
+  "set": {
+   "Description": "Stuns the target for 4 seconds (6 with 3 or more Valor) and snares enemies within 300 of it by 40%. 20-second reuse. Valor held: +10% damage per point, none spent."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "d6c20ba2-779f-4d84-9e40-234b40d4825a",
+  "set": {
+   "Description": "Holy ground at your feet for 30 seconds: burns enemies inside and heals allies 3% every 3 seconds. Each pulse: +10% damage and healing per Valor held."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "16a00f8e-c029-44f8-8320-1711136489c0",
+  "set": {
+   "Description": "Holy ground at your feet for 30 seconds: burns enemies inside and heals allies 3% every 3 seconds. Each pulse: +10% damage and healing per Valor held."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64117",
+  "set": {
+   "Description": "Throw a royal blade and teleport beside an enemy within 2100. Strong primary impact, half damage around it; +10 critical chance on the primary hit from stealth. Earns 1 Valor; +10% damage per Valor held. Instant; 15-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64149",
+  "set": {
+   "Description": "Throw a royal blade and teleport beside an enemy within 2100. Strong primary impact, half damage around it; +10 critical chance on the primary hit from stealth. Earns 1 Valor; +10% damage per Valor held. Instant; 15-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64181",
+  "set": {
+   "Description": "Throw a royal blade and teleport beside an enemy within 2100. Strong primary impact, half damage around it; +10 critical chance on the primary hit from stealth. Earns 1 Valor; +10% damage per Valor held. Instant; 15-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64213",
+  "set": {
+   "Description": "Throw a royal blade and teleport beside an enemy within 2100. Strong primary impact, half damage around it; +10 critical chance on the primary hit from stealth. Earns 1 Valor; +10% damage per Valor held. Instant; 15-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64245",
+  "set": {
+   "Description": "Throw a royal blade and teleport beside an enemy within 2100. Strong primary impact, half damage around it; +10 critical chance on the primary hit from stealth. Earns 1 Valor; +10% damage per Valor held. Instant; 15-second reuse."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "f490d238-f84e-423b-bb53-50046bfe5efd",
+  "set": {
+   "Description": "A ring at your feet for 30 seconds: burns enemies inside and heals allies 3% every 3 seconds. In the Unseelie Court it also drains half its damage to you; in the Seelie Court it heals 6%."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "8da102b2-14ab-4a0f-913b-536b5cffed73",
+  "set": {
+   "Description": "A ring at your feet for 30 seconds: burns enemies inside and heals allies 3% every 3 seconds. In the Unseelie Court it also drains half its damage to you; in the Seelie Court it heals 6%."
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64006",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64038",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64070",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64102",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64134",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64166",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64198",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64230",
+  "set": {
+   "Icon": 5822
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64212",
+  "set": {
+   "Icon": 6804
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64244",
+  "set": {
+   "Icon": 6804
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "364ab250-30df-44f2-a344-84bff6886f79",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "60f1f5aa-f7df-42a2-9632-a7104eb21b67",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2f13f46e-7902-4e7c-a03d-44db7ddec4a8",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "baf467cc-7f4b-4fbd-9eaa-f88277abb7a5",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "68b03411-f5b1-468c-803d-aa3949074fa0",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "0dff6852-0b23-40b5-9636-f386b0292f75",
+  "set": {
+   "Icon": 1691
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64013",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64045",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64077",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64109",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64141",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64173",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64205",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64237",
+  "set": {
+   "Icon": 1504
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9923fb72-bdcb-4034-a06c-bd19b4c3c548",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "11f1bdba-49b0-4bd6-b50d-3f61d0022fae",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "1e02c5c7-d8c0-4dcd-aa95-4e91846ca305",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9bcde0d5-26e4-473e-9001-09397f882ab4",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2bd40527-cb4f-4dae-93bd-620232a68b1b",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "fa3997ca-5067-48c1-b9f7-4bf3e11ff422",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "a67d6ea1-425d-4d8d-bc30-6268c651eddb",
+  "set": {
+   "Icon": 14396
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64204",
+  "set": {
+   "Icon": 7036
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64236",
+  "set": {
+   "Icon": 7036
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64182",
+  "set": {
+   "Icon": 11206
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64214",
+  "set": {
+   "Icon": 11206
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "pendragon-64246",
+  "set": {
+   "Icon": 11206
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73006",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73038",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73070",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73102",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73134",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73166",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73198",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73230",
+  "set": {
+   "Icon": 5483
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73212",
+  "set": {
+   "Icon": 13080
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "tuatha-73244",
+  "set": {
+   "Icon": 13080
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "ca698272-fa1f-4e45-a508-fefd49d15e2d",
+  "set": {
+   "Icon": 10801
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "39ce1a7b-06de-41e6-aef9-d78ff2574cb7",
+  "set": {
+   "Icon": 780
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "52c0afd9-0c2d-497b-8645-2ab247d008ed",
+  "set": {
+   "ClientEffect": 7298,
+   "Icon": 7298
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "a07f5184-f623-47bd-bf78-641ca7ad84bc",
+  "set": {
+   "ClientEffect": 7298,
+   "Icon": 7298
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "c8a23ab1-37e3-42fe-9969-65f26a43d7ce",
+  "set": {
+   "ClientEffect": 7298,
+   "Icon": 7298
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "be662223-6f00-4502-91db-576ed512c578",
+  "set": {
+   "ClientEffect": 7298,
+   "Icon": 7298
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "7d0fc2dd-2843-48e2-8639-01a58e438c0a",
+  "set": {
+   "ClientEffect": 7298,
+   "Icon": 7298
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "a50d8239-1c83-415a-bb30-b3a208d097c4",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "859c16b3-7ef8-4fe9-b508-d021c76e6766",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e7e15b75-6d4f-46c6-b5ea-74dfb440f0bb",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "779c3d2e-44d0-480f-af60-f1598ff751b8",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "3606efa9-c8e5-44bb-8ec1-4e0b235ee767",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "3eeb6f59-237b-4690-9a2a-b6e0866a88f2",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "b1b64491-1a79-4dc7-808a-8cad00801be9",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "0d6c495b-b97b-4308-9a47-8c3adf3e5440",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "47c4f1c2-ebdf-49cd-9839-eb7982407d33",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "b03a8ecb-f3a3-4088-b241-cc1b89f52344",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "8a6e0377-8636-4bba-ac1f-50f12c464238",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "7a412bc9-5099-4034-85ba-f94d7778a047",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "d9b2cf6f-985b-4921-9871-621c7aedd805",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "da44615e-dd4f-465c-b509-4eac2131262e",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2e97dbfe-bcc9-4dd4-bb0c-ea2d273cb3b3",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "7759ae52-344e-4b04-9e4f-ca717dd583a6",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "37a4bd24-715f-4f10-9110-f5786037b793",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "dd554e07-3b1b-4766-b3af-a5cefd5a40b4",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2cec6390-82b4-49eb-a247-a0adcb407acb",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "3a2908e3-5e8e-4efe-b1ab-13d0a4b07f6b",
+  "set": {
+   "ClientEffect": 4106,
+   "Icon": 4106
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "aa836554-cc6b-4727-82c0-c7ec5b902746",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "393bd76c-72aa-4126-914a-d4dcf66c05bf",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "7736b8bb-e2ca-4461-a9b0-057fb20898b6",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "1107552c-0fac-4b98-838b-85c0655887d1",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "68b79119-39f7-4380-9079-ccde7ddffc4f",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "93f46757-3954-41a7-91bb-95dafa46a15e",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "c8a81f61-9f11-49fe-a38a-5094486a24aa",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "bc764ea4-b80f-4a47-9188-4889602b16f1",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "ab86b40a-9305-473d-a854-b32d1a605898",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "4f22a75d-cecd-4dc8-ac7f-732ec4a6caf7",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "b980b069-b5e7-43b0-888e-f9cc33460f7c",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "3d3d683d-aa2c-4f48-bd37-1e9a61312bb2",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "2adf887d-5e06-44ea-9a43-6d584e9757d9",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "9afdba6d-006f-48eb-9dcb-f7a1e83cd0b4",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "c53a8fb5-01f8-4dfb-8381-49a837a7142a",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "a4cf75cc-2c0d-4a19-8fa3-ed233cf20876",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "eedfbb99-8854-4431-8281-d14662df74f5",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "e429454c-b2cf-4a43-a6a3-39c502ff7fce",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "44c30d5a-5cc6-466b-976a-28e14c5c51cc",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "Spell",
+  "key": "6e30ba2a-6205-416f-83f4-3066fa80aa72",
+  "set": {
+   "ClientEffect": 5274,
+   "Icon": 5274
+  }
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "ea841735-e091-43a2-bf60-d852df2aaa35"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "91761f8b-c46d-4859-8e0c-9cdc5139f2de"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "1bed2be4-f381-4be2-aaf8-1e05beb53272"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "03b2e72f-cf52-4e4c-b75c-941d3157f1af"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "4ce61753-889a-4d97-8c30-494e3946f841"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "72d48f50-2f28-4343-b4bb-008a87d8f0c6"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "9343f7cb-aee0-4b0c-88ba-b93c459e4b66"
+ },
+ {
+  "table": "ClassXRealmAbility_Atlas",
+  "delete": "0d561993-1688-409b-8ae3-53d8a16c4a16"
+ },
+ {
+  "table": "Ability",
+  "key": "377",
+  "set": {
+   "Name": "Royal Mastery"
+  }
+ },
+ {
+  "table": "Ability",
+  "key": "399",
+  "set": {
+   "Name": "Sidhe Mastery"
+  }
+ }
+]

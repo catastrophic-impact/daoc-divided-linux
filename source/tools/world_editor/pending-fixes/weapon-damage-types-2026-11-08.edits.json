@@ -1,0 +1,6379 @@
+[
+ {
+  "table": "ItemTemplate",
+  "key": "Acidspire",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Adems_Antiquated_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Adems_Antiquated_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Agmundrs_Foe_Slayer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ancient_Ebony_Mattock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ancient_Stag_Spine_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ancient_Stag_Spine_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ancient_Vitrolic_Fang",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Anhylaws_Tooth",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Anluans_Audacious_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Anluans_Audacious_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arachnid_Destroyer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Acaeus_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Adze_of_Dissolusion",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Adze_of_Dissolution",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Adze_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Akils_Fury",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Astral_Conflagrant_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Astral_Hammer_of_Impedance",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Astral_Voltaic_Battle_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Barbed_Adze_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Barbed_Tail_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Blade_of_Disdain",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Blade_of_Silent_Oblivion",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Blade_of_the_Tainted",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Broadsword_of_the_Zenith",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Club_of_Disdain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Club_of_the_Scaled",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Corroded_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Crackling_Wind_Harpoon",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Cudgel_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Cyclopean_Cloud_Skewer",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Dagger_of_the_Taur",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Desert_Shadow_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Desert_Venom_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Desert_Venom_Vanquisher",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Dreadfin_Dire_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Dreadfin_Frenzy_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Duamutefs_Rapier_of_Dread",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Elven_Dagger_of_the_Breeze",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Fiery_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Fiery_Sunderer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Golden_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Gorgon_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Great_Spear_of_Detonation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Great_Sword_of_the_Detonation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Hammer_of_Demise",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Hammer_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Hammer_of_the_Breeze",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Hissing_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Hissing_Dire_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Imsetys_Scythe_of_Dread",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Kirkleiss_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Landrines_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Laodameias_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Laodameias_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Mace_of_the_Pure",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Mace_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Mace_of_the_Zenith",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Magma_Forged_Blade_of_Ruin",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Malisons_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Mallet_of_Landrine",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Meloss_Wave_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Meloss_Wave_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Melos_Wave_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Miasmic_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Naxoss_Tidal_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Naxoss_Tidal_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Naxoss_Tidal_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Needle",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Neriad_Sharktooth_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Petrified_Tentacle_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Qebehsenuefs_Blade_of_Dread",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Reef-Lords_Dire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Reef-Lords_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Reef-Lords_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Scintillating_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Scythe_of_Desolation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Scythe_of_Disdain",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Scythe_of_Dissolution",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Scythe_of_the_Tainted",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sea_Rotted_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sea_Rotted_Dagger",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Serpent-Blood_Long_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Serpentine_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Siphon_of_Souls",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Skyross_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sobekhoteps_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sobekhoteps_War_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Soul_Leech",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Soul_Plunder",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Soul_Wind",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Spear_of_Detonation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Spear_of_the_Taur",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Statuesque_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Statuesque_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Stone_Bone_Crusher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Stone_Bone_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Stone_Bone_Slicer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Striking_Serpent_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Striking_Serpent_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sword_of_Casta",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sword_of_Demise",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sword_of_Demise1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Sword_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Tainted_Inquisitors_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Taurs_Wrath",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Traitors_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Trident_of_Casta",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Trident_of_Disdain",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Trident_of_the_Sea",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_War_Adze_of_the_Zenith",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Whirlwind_Cruel_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanite_Whirlwind_Harvest_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Acaeus_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Akils_Fury",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Akils_Fury1",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Akils_Storm",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Astral_Conflagrant_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Astral_Divine_Light1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Astral_Kinetic_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Astral_Voltaic_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Astral_Voltaic_War_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Casta",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Demise",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Demise1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Demise2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Desolation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Ruination",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Ruination1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_Ruination2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_the_Tainted",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_the_Whispering_Wind1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Axe_of_the_Zenith",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Barbed_Mace_of_Conflict",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Barbed_Tail_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Barbed_Tail_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Battle_Axe_of_Detonation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Blade_of_the_Tainted",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cinquedea_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Claw_of_Ruination",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Claymore_of_the_Whirlwind",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Club_of_Demise",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Club_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Club_of_the_Breeze",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Corroded_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Corroded_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Crackling_Wind_Great_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Crackling_Wind_Inquisitors_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Crackling_Wind_Sabre_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Crackling_Wind_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Crusher_of_Silent_Oblivion",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cudgel_of_Demise",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cudgel_of_Demise1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cudgel_of_the_Taur",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cudgel_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cudgel_of_the_Whispering_Wind1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cyclopean_Cloud_Chaser1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cyclopean_Cloud_Driver1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cyclopean_Cloud_Herder",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cyclopean_Cloud_Skewer",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Cyclopean_Sky_Scraper1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dagger_of_Demise",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dagger_of_Detonation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dagger_of_Ruination",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dagger_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Shadow_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Shadow_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Shadow_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Shadow_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Venom_Greave",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Venom_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Desert_Venom_Sap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dirk_of_Conflict",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dreadfin_Dire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Dreadfin_Frenzy_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Duamutefs_Axe_of_Dread",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Duamutefs_Rapier_of_Dread",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Equalizers_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Equalizers_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Equalizers_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Falchion_of_the_Zenith",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Fang_Greave_of_Detonation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Featherweight_Battle_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Featherweight_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Featherweight_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Featherweight_War_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Fiery_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Fiery_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Fiery_Sunderer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Fiery_Sunderer1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Flail_of_Desolation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Flail_of_the_Tainted",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Golden_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Golden_Sword1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Gorgon_Axe1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Grand_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Grand_Glaive",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_Axe_of_Dissolution",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_Hammer_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_Hammer_of_Detonation1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_Sword_of_Dissolution",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_Sword_of_the_Pure",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_War_Axe_of_Detonation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Great_War_Hammer_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Greave_of_Desolation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Greave_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Blood",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Demise",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Disdain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Silent_Oblivion",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_Silent_Oblivion1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Breeze",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Pure",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Scaled",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Scaled1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Sea",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Sea1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Taur",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Whirlwind",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hammer_of_the_Zenith",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hissing_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hissing_Morning_Star",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hissing_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hrunduns_Cleansing_Flame",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hrunduns_Cleansing_Flame1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hrunduns_Cleansing_Flame2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Hrunduns_Cleansing_Flame3",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Imsetys_Claw_of_Dread",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Imsetys_Morning_Star_of_Dread",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Inquisitors_Pick_of_the_Whirlwind",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Jagged_Bone_Broadsword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Kirkleiss_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Kirkleiss_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Landrines_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Landrines_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Laodameias_Chain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Laodameias_Fist",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Laodameias_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Laodameias_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Laodameias_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Long_Hammer_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Lost_Hammer_of_Pious_Wrath",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_Blood",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_Demise",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_Detonation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_Ruination",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_the_Breeze",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_the_Pure",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mace_of_the_Zenith",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Magma_Forged_Axe_of_Ruin",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Magma_Forged_Blade_of_Ruin",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Malisons_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mallet_of_Landrine",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Mallet_of_Landrine1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Meloss_Wave_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Meloss_Wave_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Meloss_Wave_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Meloss_Wave_Sword1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Miasmic_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Miasmic_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Moon_Claw_of_Detonation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Tidal_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Tidal_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Tidal_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Tidal_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Naxoss_Tidal_Sword1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Needle",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Negals_Blade-Breaker",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Neriad_Sharktooth_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Petrified_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Petrified_Tentacle_Axe1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Petrified_Tentacle_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Qebehsenuefs_Blade_of_Dread",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Qebehsenuefs_Blade_of_Dread1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Rapier_of_Demise",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Rapier_of_Dissolution",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Reef-Lords_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Reef-Lords_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Reef-Lords_Handaxe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Reef-Lords_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Reef-Lords_Toothpick",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Salamander_Tail1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sap_of_Disdain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Scintillating_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Scintillating_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sea_Rotted_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sea_Rotted_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Serpent-Blood_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Serpent-Blood_War_Axe1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Serpentine_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Skyross_Glaive",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Skyross_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sobekhoteps_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sobekhoteps_Morning_Star",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sobekhoteps_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Spear_of_the_Taur",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Spiked_Flail_of_the_Zenith",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Statuesque_Coffin_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Statuesque_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Statuesque_Sword_of_Stealth",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Crusher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Cutter",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Grinder1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Slicer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stone_Bone_Slicer1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stratus",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Stratus1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Cobras_Reach1",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Cobras_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Serpent_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Serpent_Great_Sword1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Serpent_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Striking_Serpent_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sundering_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_Casta",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_Demise",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_Disdain",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_Ruination",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_Ruination1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_the_Whispering_Wind",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Sword_of_the_Zenith",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Tainted_Inquisitors_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Taurs_Fang",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Thorn",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Thunderous_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Traitors_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Traitors_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Trident_of_Casta",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Trident_of_Demise",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Trident_of_Disdain1",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Trident_of_the_Zenith",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Wesauls_Deft_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Wesauls_Fang_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Wesauls_Featherweight_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Wesauls_War_Spike",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Wesauls__Featherweight_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whip_of_the_Storm's_Eye",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whip_of_the_Storms_Eye",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Dire_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Military_Fork",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Whirlwind_Tall_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Zahur's_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Zahur's_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Zilistiphles_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Arcanium_Zilistiphles_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Artegs_Deflecting_Great_Falcata",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Atrocious_Arachnid_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Atrocious_Arachnid_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Axe_of_the_Half_Orc",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Bairees_Leg_Bone",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Baleful_Greenblud_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Baleful_Greenblud_Parrying_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Balns_Sulfuric_Slicer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Barbed_Whip_of_Reanimation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Bedevilled_Afterlife_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Bedevilled_Afterlife_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Bedevilled_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Battleaxe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Battle_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Bishops_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Coffin_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Dire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Double_Bladed_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Falchion",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "benthic_fist_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Hammer2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Great_Sword3",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "benthic_hand_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Hooked_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Long_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Lucerne_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Magus_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Magus_Staff2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Magus_Staff3",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Mauler_Shod_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Mauler_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Military_Fork",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Moon_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Pick_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Quarterstaff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Short_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Spiked_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_War_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_War_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_War_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Benthic_War_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Blackhearted_Spear",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Black_Ash_Soul_Slayer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Blunted_Tusk_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Borjads_Spear",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Balns_Sulfuric_Slicer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Cerulescent_Strife_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Dagger_of_Soulshade",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Hammer_of_the_Soulshade",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Malroch's_Flaying_Knife",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Rod_of_the_Soulshade",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Saeors_Fiery_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Saeors_Fiery_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Saeors_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Smoldering_Ruby_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Stiletto_of_Light",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Stiletto_of_Soulshade",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Brilliant_Twisted_Evil_Diamond_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Broken_Piston_Fragment",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Callejos_Bladed_Fang_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cerulescent_Discord_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Charn's_Churlish_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Charn's_Churlish_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Charon's_Cold_Steel",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Chieftain_Tocas_Fist",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ciardhals_Calamitous_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ciardhals_Calamitous_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cinereous_Strife_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Clughs_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Crescent_Reaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Curis_of_Anticipation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cursed_Crypt_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cursed_Crypt_Jambiya",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cursed_Crypt_Pole_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cursed_Crypt_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Cursed_Crypt_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dagger_of_Dangerous_Tidings",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Darkstrike_Fervent_Runed_Coffin_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Darting_Warlord_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dealrach_Gorm_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dealrach_Sgarlaid_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Death_Knell_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Deliahs_Wand",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Demon_Scale_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Despoiled_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Devilish_Master's_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Devilish_Master's_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Director_Botok's_Heavy_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Director_Botoks_Heavy_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dirk_of_Fiendish_Fantasy",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dirk_of_Pandemonium",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Doomsong_Bardiche",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dorsal_Fin",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Draargus_Halberd",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Drakoran_Gladius",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Draugr_Commander_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dreaded_Frostbound_Fang",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Dread_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Drygaus_Leg_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duraeks__Flanged_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Cinder",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Cinder1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Cinder2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Ember",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Ember1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Ember2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Flurry",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Hrunduns_Cleansing_Flame",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Landrines_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Spear_of_Ruination",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Duskwood_Thorn",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Earthen_Excavator",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Eiorharn's_Limb_Hewer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "empyrean_bonewalkers_staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Erubescent_Strike_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Excrucio_Facio",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Exhaustive_Adroit_Blighted_Spike_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Exhaustive_Bluntbender_Briny_Duelist_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Fate_Slayer's_Chitin_Leg",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Festering_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Festering_Reflex_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flail_of_Eternal_Rest",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Dreaded_Soul_Splitter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Soul_Tormentors_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Dark_Jeweled_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Evil_Diamond_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Evil_Emerald_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Evil_Malachite_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Evil_Peridot_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Flawless_Twisted_Evil_Sapphire_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Forged_Fang",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Frenzied_Blackhearted_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Funereal_Gloom_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Funereal_Gloom_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gatekeeper's_Large_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Generals_Gavel",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ghostly_Blade_of_Vengence",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Giant_Barbed_Arrow",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Giant_Edged_Shard_of_Arcanium",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gladius_of_Otherworld_Fury",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Glistening_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Glistening_Shillelagh",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Glistening_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Glistening_War_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Glowing_Haggert's_Bane",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gnoll's_Sword_of_Battle",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gnoll-forged_Morning_Star",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Goblin_Axe_of_Reflex",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Goblin_Fired_Scimitar",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Goblin_Forged_Scimitar",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gorvos_Bloodied_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gorvos_Frozen_Bardiche",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gorvos_Ice_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Gracklar's_Grievous_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Grannichs_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Granny's_Needle",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Grass_Stained_Dagger",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Great_Sword_of_Fiendish_Fantasy",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Great_Sword_of_the_Forlorn_Miner",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Great_Sword_of_the_Plutonian_Follower",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Griffon_Talon_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Grinning_Gargoyle_Fang",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Grinning_Gargoyle_Spear",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Grinning_Gargoyle_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_Conquest",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_Eternal_Retribution",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_Eternal_Retribution1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_Intricate_Designs",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_the_Smith",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hammer_of_the_Woebegone_Miner",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Heavenly_Light_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Hostile_Garganuan_Giant_Hand_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Iarnvidiurs_Pilfered_Dagger",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ice_Forged_Battle_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ice_Forged_Battle_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ignition_Adroit_Wind-wrought_Dire_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Infernal_Daemonite_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Jambiya_of_the_Grotesque_Gargoyle",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Jekeels_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Jekeels_Decimator",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Jekeels_Destroyer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Juggernaut_Great_Falcata",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kators_Cutter",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Keantoths_Destroyer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kels_Sword_of_Justification",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Khrin's_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Knuckle_Basher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kobold's_Dirk_of_Expertise",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Krackenschteins_Broadsword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Krackenschteins_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kul's_Iron-tipped_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kul's_Spiked_Chain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kuls_Iron-tipped_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kuls_Spiked_Chain",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Kvasirs_Sword_of_Blight",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Large_Blade_of_the_Lunatic",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Legions_Soul_Crusher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_battleaxe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_battle_spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Bishops_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Coffin_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_dire_hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_double_bladed_axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Falchion",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_fist_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_great_club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Great_Hammer2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_great_sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Great_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Great_Sword3",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_hand_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_hooked_spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Longsword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Long_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Lucerne_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_magus_staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Magus_Staff2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Magus_Staff3",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Mauler_Shod_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Mauler_Shod_Staff3",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Mauler_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Military_Fork",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_moon_claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Pick_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Quarterstaff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Short_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_spiked_flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_War_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_war_axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_War_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lithic_War_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "lithic_war_scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminescent_Sickle_of_the_Unicorn",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Cleaver1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Cleaver2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Flaying_Knife",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Flaying_Knife1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Flaying_Knife2",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Tenderizer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Luminous_Malroch's_Flawless_Tenderizer1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lustrous_Director's_Devastator",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Lustrous_Fomorians_Betrayal",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mace_of_Arachnophobia",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mace_of_Reanimation",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mace_of_Spores",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mace_of_the_Gargantuan",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mace_of_the_Watery_Underground",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Dagger",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Dire_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Dire_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Halberd",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Martial_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Martial_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Martial_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Mattock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Mattrock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Morning_Star",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Pike",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Spiked_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Maleficent_Darkspire_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Malevolent_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Malroch's_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Margs_Big_Slasher",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mattock_of_Decimation",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Meandering_Dreams_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Miasmatic_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Militia_Great_Mace_of_Night",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Militia_Great_Sword_of_Light",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mithril_Grishkars_Deflecting_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mithril_Grishkars_Dodging_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mithril_Grishkars_Feather-weight_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Mithril_Grishkars_Shielding_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Monstrous_Proboscis",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Morning_Star_of_Entrancing_Reverie",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Morvalt_Bladed_Ericril",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Murderer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Murois_Weighted_Battlemace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Night's_Essence_Mattock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Nightmare_Fang",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Niveous_Effluvium_Lochaber_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Noble_Arcane_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Noble_Arcane_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Noble_Arcane_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Noble_Arcane_War_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Nokkvis_Vile_Slayer",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Numinous_Hammer_of_Numsi",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Numious_Scythe_of_Numsi",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Obsidian_Inferno_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Orcish_Otherworld_Scimitar",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Otherworld_Espionage_Whip",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Outcast_Gnoll_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Outcast_Half_Orc_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Outcast_Half_Orc_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pester's_Barbed_Tail",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pestilent_Sickle",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pestulant_War_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Petrified_Syver_Spear",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pike_of_the_Watery_Underground",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pitted_Beven's_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pitted_Director's_Devastator",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Possessed_Afterlife_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Primeval_Great_Tusk_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Prismatic_Falcata",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_battleaxe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_battle_spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Bishops_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Coffin_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Dire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Double_Bladed_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Falchion",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_fist_wrap",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_great_club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Great_Hammer2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_great_sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Great_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Great_Sword3",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_hand_wrap",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_hooked_spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Longsword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Long_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Lucerne_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_magus_staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Magus_Staff2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Magus_Staff3",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Mauler_Shod_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Mauler_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Military_Fork",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_moon_claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Pick_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Quarterstaff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Short_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_spiked_flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_war_adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_war_axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_war_hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Pyroclasmic_War_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "pyroclasmic_war_scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Quixotic_Quarry_Dagger",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Quixotic_Quarry_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Rapier_of_Begrudging_Fealty",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Rapier_of_the_Forsaken",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Ratfang",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Rawrs_Whip_of_Raucousness",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Regurgitated_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Renders_Bone_Breaker",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Rocksmasher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Royal_Arcane_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Royal_Arcane_Morning_Star",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Royal_Arcane_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Royal_Arcane_War_Mattock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Runic_Granite_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sallours_War_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sarel_Sebian_Smasher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Scimitar_of_Snarg",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Scoundrels_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Scoundrels_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Screaks_Tooth_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Scythe_of_Despairing_Souls",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Scythe_of_Labyrinthine_Corridors",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sectum_Debello",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadow_Bound_Great_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadow_Bound_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadow_Bound_Moon_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadow_Crystal_Great_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadow_Crystal_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shard_of_Light",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Adremels_Avernal_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Adremels_Flawless_Avernal_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Adremels_Flawless_Avernal_Impaler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Balns_Flawless_Fuliginous_Cleaver1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Basher_of_Undetectable_Wounds",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Blazing_Fortifying_Arcane_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Cralch_MeVult_Stone_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Crescent_of_Light",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Cured_Drakoran_Tail_and_Spine",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Dagars_Battle_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Dagars_Great_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Dagars_Great_Spiked_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Diamond_Mattock",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Dirk_of_Agonism",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Doomsong_Guard",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Erubescent_Discord_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Fiacha_Quas_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Fiery_Headsman's_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Hammer_of_the_Soulshade",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Rod_of_the_Dark_Soul",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Rod_of_the_Soulshade",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Rod_of_the_Soulshade1",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Twisted_Evil_Amber_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Twisted_Evil_Ivory_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Twisted_Evil_Jade_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Twisted_Evil_Onyx_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Twisted_Evil_Ruby_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Flawless_Vexed_Evil_Sapphire_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Gatekeeper's_Bone_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Gnawed_Bone",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Golden_Alloy_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Gruls_Glorious_Trident",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Gruls_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Halberd_of_the_Cursed_Defender",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Icebound_Effluvium_Warhammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Lusos_Claws",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Nesnuirs_Spiked_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Norse_Shoulder_Bone_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Oghamist_Pick_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Oros_Flawless_Stiletto_of_Night",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Polished_Hammer_of_Eldspar",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Raven_Clan_Battle_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Saeors_Flawless_Fiery_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Saeors_Flawless_Serrated_Cleaver",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Scale_Crusher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Solemn_Destroyer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Soul_Forge",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Stately_Arcane_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Sword_of_the_Tormented_Soul",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Twisted_Evil_Ruby_Scepter",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shimmering_Verdant_Justice",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shiv_of_Shadows",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Short_Sword_of_Eternal_Retribution",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Short_Sword_of_Eternal_Retribution1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sibylline_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sibylline_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sight_Blighter",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sinister_Miasmatic_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sinister_Rocksmasher",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Slender_Skuggande_Leg",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Slime_Jambiya_of_Reflex",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Snarg's_Shank",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Soulripper",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Soul_Torn_Demon_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Spear_of_Decimation",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Spear_of_Lifeless_Dreams",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Spear_of_the_Cave_Mauler",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Spear_of_the_Elements",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Spore_Cloud_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Stately_Arcane_Spiked_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Strong_Fist_Dagger",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Strong_Fist_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sunless_Dweller's_Dagger",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Haunted_Visions",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Lifeless_Dreams",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Necromantic_Illusions",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Obeisance",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Pandemonium",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Sorrow",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Sword_of_Sorrow1",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Syssros_Dirk",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Syssros_War_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Bishops_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Coffin_Mace",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Dire_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Double_Bladed_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Falchion",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "tempestuous_fist_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Club",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Hammer2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Sword2",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Great_Sword3",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "tempestuous_hand_wrap",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Hooked_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Longsword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Long_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Lucerne_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Magus_Staff2",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Mauler_Shod_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Mauler_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Military_Fork",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Moon_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Pick_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Short_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Spiked_Flail",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_Stiletto",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_War_Adze",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_War_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_War_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_War_Pick",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Tempestuous_War_Scythe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Thuxras_Rooty_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Thuxras_Twiggy_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Treibh_Shaman_Reflex_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Treibh_Shaman_Reflex_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Treibh_Shaman_Reflex_Rapier",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Trident_of_Light",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Trident_of_Night",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Troloss_Twig_Cutter",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Trophy_of_a_Thane",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Vengeance_of_Deliah",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Venom-doused_Sickle",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Venomspire",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Veraerius_Great_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Verdant_Honor",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Vicarious_Spider_Blade",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Bracing_Arch_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Claw_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Dire_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Dire_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Great_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Great_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Hand_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Martial_Arch_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Martial_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Martial_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Martial_Sword",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Moon_Claw",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Villianous_Darkspire_Spear",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Vronks_Goblin_Greave",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Vumsis_Spear_of_Vengeance",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Vumsis_Sword_of_Vengeance",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "War_Cleaver_of_the_Kobold_Recluse",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Weaponmaster's_Axe",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Wenoiaks_Boom_Stick",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Wugaks_Big_Hammer",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Wulfen Blight Claw",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Wulfen_Blight_Claw",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Wulfen_Night_Fang",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Xagas_Enshrouded_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Xagas_Tethered_Staff",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Zenith's_Cleaver_of_Keenness",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Zenith's_Hammer_of_Power",
+  "set": {
+   "Type_Damage": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Zogg's_Great_Sword_of_Zeal",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Zogg's_Rapier_of_Zeal",
+  "set": {
+   "Type_Damage": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "cq_alb_golden_scimitar",
+  "set": {
+   "Type_Damage": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "offline50_20261027_c60_s12_t28",
+  "set": {
+   "Type_Damage": 1
+  }
+ }
+]

@@ -63,6 +63,9 @@ namespace DOL.UnitTests
             GameLiving actor=(GameLiving)RuntimeHelpers.GetUninitializedObject(bot?typeof(Bot):typeof(Human));
             foreach (var name in new[]{"BaseBuffBonusCategory","SpecBuffBonusCategory","AbilityBonus","ItemBonus"})
                 typeof(GameLiving).GetField("<"+name+">k__BackingField",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(actor,new PropertyIndexer());
+            var abilities=new System.Collections.Generic.Dictionary<string,Ability>();
+            typeof(GameLiving).GetField("m_abilities",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(actor,abilities);
+            typeof(GameLiving).GetField("_abilitiesLock",BindingFlags.Instance|BindingFlags.NonPublic).SetValue(actor,new System.Threading.Lock());
             var calculator=new EnduranceRegenerationAmountCalculator();
             var property=eProperty.EnduranceRegenerationAmount;
             int without=calculator.CalcValue(actor,property);
@@ -71,7 +74,10 @@ namespace DOL.UnitTests
             actor.BaseBuffBonusCategory[property]=5;
             Assert.That(calculator.CalcValue(actor,property),Is.EqualTo(without+5));
             actor.AbilityBonus[property]=1;
+            abilities["AtlasOF_Tireless"]=new DOL.GS.RealmAbilities.AtlasOF_RAEndRegenEnhancer(new DbAbility{KeyName="AtlasOF_Tireless",Name="Tireless"},1);
             Assert.That(calculator.CalcValue(actor,property),Is.EqualTo(without+5),"Previously purchased Tireless must not stack another point");
+            actor.AbilityBonus[property]=5;   // the paid point plus the Champion Level 5 passive (+4), issue #10
+            Assert.That(calculator.CalcValue(actor,property),Is.EqualTo(without+9),"The Champion passive stacks with buffs");
         }
         [TestCase(0,0,0,0,true,1)]
         [TestCase(0,1,0,0,true,1)]
@@ -79,6 +85,14 @@ namespace DOL.UnitTests
         [TestCase(5,1,0,0,false,6)]
         [TestCase(0,0,0,1,true,0)]
         public void TirelessFloorPreservesLegacyRulesWithoutGrant(double buffs,double ability,double items,int debuff,bool free,double expected)=>
-            Assert.That(EnduranceRegenerationAmountCalculator.ActiveRegeneration(buffs,ability,items,debuff,free),Is.EqualTo(expected));
+            Assert.That(EnduranceRegenerationAmountCalculator.ActiveRegeneration(buffs,ability,items,debuff,free,(int)Math.Min(ability,1)),Is.EqualTo(expected));
+        // Issue #10: the Champion Level 5 passive (+4 ability bonus) stacks with buffs, items and the free Tireless.
+        [TestCase(0,4,0,0,0,5)]
+        [TestCase(5,4,0,0,0,9)]
+        [TestCase(5,5,0,0,1,9)]
+        [TestCase(0,5,3,0,1,7)]
+        [TestCase(5,4,0,2,0,7)]
+        public void ChampionPassiveStacksWithFreeTireless(double buffs,double ability,double items,int debuff,int paid,double expected)=>
+            Assert.That(EnduranceRegenerationAmountCalculator.ActiveRegeneration(buffs,ability,items,debuff,true,paid),Is.EqualTo(expected));
     }
 }

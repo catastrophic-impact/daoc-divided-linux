@@ -8,7 +8,9 @@ from mauler_test_data import apply,definitions,validate_icons,PACKAGE
 
 class MaulerDataTests(unittest.TestCase):
     def setUp(self):
-        self.root=REPO/'artifacts/modern-client-test';self.db=sqlite3.connect(':memory:');self.db.row_factory=sqlite3.Row
+        self.root=REPO/'artifacts/modern-client-test'
+        if not (self.root/'runtime/data/opendaoc.sqlite3.db').exists():self.skipTest('needs the modern test install beside this checkout')
+        self.db=sqlite3.connect(':memory:');self.db.row_factory=sqlite3.Row
         with closing(sqlite3.connect((self.root/'runtime/data/opendaoc.sqlite3.db').as_uri()+'?mode=ro',uri=True)) as src:src.backup(self.db)
     def tearDown(self):self.db.close()
     def test_migration_preserves_saves_warlock_and_existing_spells(self):

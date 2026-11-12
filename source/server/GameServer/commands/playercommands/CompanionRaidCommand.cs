@@ -12,9 +12,9 @@ namespace DOL.GS.Commands
                 DisplayMessage(client, "Use /raid 40 or /raid 80. The total includes your character.");
                 return;
             }
-            if (client.Player.Level != 50)
+            if (client.Player.Level < 50)
             {
-                DisplayMessage(client, "Companion raids are available at level 50.");
+                DisplayMessage(client, "Companion raids are available from level 50.");
                 return;
             }
             DisplayMessage(client, CompanionRaid.Open(client.Player, capacity)

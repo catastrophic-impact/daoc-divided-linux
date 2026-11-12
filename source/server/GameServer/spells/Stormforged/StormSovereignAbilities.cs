@@ -17,11 +17,22 @@ namespace DOL.GS.Spells
         {
             int normalized = PendragonRules.NormalizeSpell(id);
             return normalized >= FirstId && normalized < 62656 || normalized >= 62700 && normalized < 62735 ||
-                normalized == RR5SpellId || id is >= 64335 and <= 64341 or >= 73335 and <= 73341;
+                normalized == RR5SpellId || id is >= 64335 and <= 64341 or >= 73335 and <= 73341 ||
+                StormRemakeStyles.OwnsEffect(id) || StormRemakeSpells.Owns(id) ||
+                TuathaRemakeStyles.OwnsEffect(id) || TuathaRemakeSpells.Owns(id) || TaraRegaliaSpells.Owns(id) ||
+                PendragonRemakeStyles.OwnsEffect(id) || PendragonRemakeSpells.Owns(id) || PendragonRemakeSpells.IsValorIcon(id) ||
+                CamelotRegaliaSpells.Owns(id);
         }
         public static int Key(int id) => (PendragonRules.NormalizeSpell(id) - FirstId) % 32;
-        public static bool Toggle(int id) => PendragonRules.IsRoyalRank(id) && Key(id) is 6 or 13 or 14 or 15 or 22;
-        public static bool IsHammerfall(int id) => PendragonRules.IsRoyalRank(id) && Key(id) == 21;
+        /// <summary>One number per ability across all its ranks: the royal key, or 100 + key for the Storm remake spells.</summary>
+        public static int AbilityKey(int id) => StormRemakeSpells.Owns(id) ? 100 + StormRemakeSpells.Key(id) :
+            TuathaRemakeSpells.Owns(id) ? 200 + TuathaRemakeSpells.Key(id) :
+            PendragonRemakeSpells.Owns(id) ? 300 + PendragonRemakeSpells.Key(id) : Key(id);
+        public static bool IsRankedAbility(int id) => PendragonRules.IsRoyalRank(id) || StormRemakeSpells.Owns(id) || TuathaRemakeSpells.Owns(id) ||
+            PendragonRemakeSpells.Owns(id);
+        public static bool Toggle(int id) => PendragonRules.IsRoyalRank(id) && Key(id) is 6 or 13 or 14 or 15 or 22 || StormRemakeSpells.Toggle(id) || TuathaRemakeSpells.Toggle(id) ||
+            PendragonRemakeSpells.Toggle(id);
+        public static bool IsHammerfall(int id) => PendragonRules.IsRoyalRank(id) && Key(id) == 21 || StormRemakeSpells.Key(id) == StormRemakeSpells.Hammerfall;
         public static bool HasVeil(GameLiving living) => living.effectListComponent.GetSpellEffects(eEffect.MasterLevel)
             .Any(effect => !effect.IsEnding && !effect.IsDisabled && PendragonRules.IsRoyalRank(effect.SpellHandler.Spell.ID) && Key(effect.SpellHandler.Spell.ID)==22);
         public static double Scale(int level) => Math.Clamp(level, 1, 50) / 50.0;
@@ -48,10 +59,41 @@ namespace DOL.GS.Spells
             double crown = StormforgedHeroicRules.HasAvatar(owner) ? CrownStealMultiplier : 1.0;
             int health = (int)((melee ? MeleeHealthSteal : SpellHealthSteal) * crown);
             int resource = (int)((melee ? MeleeResourceSteal : SpellResourceSteal) * crown);
+            int before = owner.Health;
             owner.ChangeHealth(owner, eHealthChangeType.Spell, StormforgedRules.RestorePerHit(dealt, health));
             owner.ChangeMana(owner, eManaChangeType.Spell, StormforgedRules.RestorePerHit(dealt, resource));
             owner.ChangeEndurance(owner, eEnduranceChangeType.Spell, StormforgedRules.RestorePerHit(dealt, resource));
+            if (owner is GamePlayer player)
+                NoteSiphon(player, owner.Health - before, GameLoop.GameLoopTime);
         }
+
+        // The siphon was silent, so a Pendragon saw ~half of a Judgment's damage come back with no line (playtest
+        // 2026-11-07). One line per second, the health of every hit in it summed.
+        private sealed class SiphonNote { public long LastMessage = long.MinValue / 2; public int Pending; }
+        private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<GamePlayer, SiphonNote> _siphonNotes = new();
+        public const int SiphonMessageIntervalMs = 1000;
+
+        /// <summary>Adds restored health to the player's siphon line; returns the text sent now, or null while it waits.</summary>
+        public static string NoteSiphon(GamePlayer player, int restored, long now)
+        {
+            if (restored <= 0)
+                return null;
+            var note = _siphonNotes.GetOrCreateValue(player);
+            lock (note)
+            {
+                note.Pending += restored;
+                if (now - note.LastMessage < SiphonMessageIntervalMs)
+                    return null;
+                string text = SiphonText(player, note.Pending);
+                note.Pending = 0;
+                note.LastMessage = now;
+                player.Out?.SendMessage(text, eChatType.CT_Spell, eChatLoc.CL_SystemWindow);
+                return text;
+            }
+        }
+
+        public static string SiphonText(GameLiving owner, int amount) =>
+            $"Your {(PendragonRules.IsPendragon(owner) ? "holy fire" : PendragonRules.IsTuatha(owner) ? "spirit" : "lightning")} restores {amount} health.";
 
         public static IEnumerable<(int Id, MLAbility Ability)> Build()
         {
@@ -151,13 +193,14 @@ namespace DOL.GS.Spells
 
         public static void Strike(MasterLevelAbilityHandler h, GameLiving target, double damage, eDamageType type=eDamageType.Energy, int critBonus=0)
         {
+            if(target==null || !target.IsAlive) return;
             var spell = new Spell(new DbSpell { SpellID=h.Spell.ID*1000+990,Name=h.Spell.Name,Type="DirectDamage",Target="Enemy",
                 Damage=damage,DamageType=(int)PendragonRules.RoyalDamage(h.Caster, type),ClientEffect=h.Spell.ClientEffect,Icon=h.Spell.Icon },50) { InternalID=h.Spell.InternalID };
             h.Caster.Stealth(false);
             new SovereignDamage(h.Caster,spell,h.SpellLine,critBonus).StartSpell(target);
         }
 
-        private static void Hammerfall(StormSovereignHandler h, GameLiving target)
+        internal static void Hammerfall(StormSovereignHandler h, GameLiving target)
         {
             var owner=h.Caster;
             if(target==null || !target.IsAlive || target.CurrentRegion!=owner.CurrentRegion ||
@@ -173,9 +216,12 @@ namespace DOL.GS.Spells
                 wolf.Body.Stealth(false);
                 if(wolf.AggressionState!=DOL.AI.Brain.eAggressionState.Passive) wolf.Attack(target);
             }
-            Strike(h,target,h.Spell.Damage,eDamageType.Energy,h.FromStealth?10:0);
+            // Pendragon King's Advance: +10% damage per Valor held, and the charge itself earns 1 Valor.
+            double valor=PendragonRules.IsPendragon(owner)?PendragonValor.Held(owner):1;
+            Strike(h,target,h.Spell.Damage*valor,eDamageType.Energy,h.FromStealth?10:0);
             foreach(var enemy in h.Enemies(owner,h.Spell.Radius).Where(t=>t!=target))
-                Strike(h,enemy,h.Spell.Damage*0.5);
+                Strike(h,enemy,h.Spell.Damage*0.5*valor);
+            if(PendragonRules.IsPendragon(owner)) PendragonValor.Add(owner,1);
         }
 
         private static MLAbility Style(int index)
@@ -236,7 +282,7 @@ namespace DOL.GS.Spells
             if(StormSovereignAbilities.Toggle(Spell.ID))
                 foreach(var effect in Caster.effectListComponent.GetSpellEffects(eEffect.MasterLevel))
                     if(!effect.IsEnding && effect.SpellHandler.Spell.ID==Spell.ID) { effect.End(); return false; }
-            if(StormSovereignAbilities.Key(Spell.ID)==17 && !Caster.IsStealthed) {
+            if((PendragonRules.IsRoyalRank(Spell.ID) && StormSovereignAbilities.Key(Spell.ID)==17 || StormRemakeSpells.Key(Spell.ID)==StormRemakeSpells.HuntersMark) && !Caster.IsStealthed) {
                 MessageToCaster(Spell.Name+" requires stealth.",eChatType.CT_SpellResisted); return false;
             }
             return base.CheckBeginCast(target);
@@ -246,6 +292,34 @@ namespace DOL.GS.Spells
             Caster.Mana -= PowerCost(target);
             base.FinishSpellCast(target);
         }
+        // Storm remake: with Tempest, Royal Thunder, Stormbreak, Winter's Grasp and Hammerfall are instant and cost no power.
+        private bool TempestPays => StormRemakeSpells.PaysWithTempest(Spell.ID) && StormTempest.Charges(Caster) > 0;
+        // Tuatha: Spirit Lance is instant on a target with 3 or more of your marks.
+        private bool MarkedLance => TuathaRemakeSpells.Key(Spell.ID) == TuathaRemakeSpells.SpiritLance &&
+            Caster.TargetObject is GameLiving target && TuathaMarks.Count(Caster, target) >= 3;
+        // Pendragon: Crownfire Lance is instant with 3 or more Valor.
+        private bool ValorLance => PendragonRemakeSpells.Key(Spell.ID) == PendragonRemakeSpells.CrownfireLance && PendragonValor.Count(Caster) >= 3;
+        public override int CalculateCastingTime() => TempestPays || MarkedLance || ValorLance ? 0 : base.CalculateCastingTime();
+        public override int PowerCost(GameLiving target) => TempestPays ? 0 : base.PowerCost(target);
+        public override void ApplyEffectOnTarget(GameLiving target)
+        {
+            // A Sovereign style whose hit already killed the target still runs its whole effect: builds and spends,
+            // splash onto the others, self heals and wards. Its helpers skip the corpse. (Playtest 2026-11-07: Thor's
+            // Judgement did not arc or spend on a kill, a killing Pendragon Judgment did nothing.)
+            if(target is { IsAlive: false } && IsSovereignStyleEffect(Spell.ID))
+            {
+                RunAbility(target);
+                return;
+            }
+            base.ApplyEffectOnTarget(target);
+        }
+        public static bool IsSovereignStyleEffect(int spellId) =>
+            StormRemakeStyles.OwnsEffect(spellId) || PendragonRemakeStyles.OwnsEffect(spellId) || TuathaRemakeStyles.OwnsEffect(spellId);
+        /// <summary>
+        /// An internal spell a Sovereign style effect casts: its strikes (Strike, id x 1000 + 990) and its stock sub-spells
+        /// (Cast, id x 1000 + index). These are unresistable, like the style itself.
+        /// </summary>
+        public static bool IsSovereignStyleSubSpell(int spellId) => spellId >= 1000 && IsSovereignStyleEffect(spellId / 1000);
         public override ECSGameSpellEffect CreateECSEffect(in ECSGameEffectInitParams init) =>
             ECSGameEffectFactory.Create(init,static(in i)=>new StormSovereignEffect(i));
     }

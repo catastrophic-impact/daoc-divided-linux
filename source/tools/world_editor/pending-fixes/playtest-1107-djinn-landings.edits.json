@@ -1,0 +1,515 @@
+[
+ {
+  "table": "Teleport",
+  "key": "djinn_1_an_uat",
+  "set": {
+   "X": 26420,
+   "Y": 29570,
+   "Z": 15117
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_an_uat",
+  "set": {
+   "X": 26420,
+   "Y": 29570,
+   "Z": 15117
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_an_uat",
+  "set": {
+   "X": 26420,
+   "Y": 29570,
+   "Z": 15117
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_antioos",
+  "set": {
+   "X": 46469,
+   "Y": 17512,
+   "Z": 16074
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_antioos",
+  "set": {
+   "X": 46469,
+   "Y": 17512,
+   "Z": 16074
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_antioos",
+  "set": {
+   "X": 46469,
+   "Y": 17512,
+   "Z": 16074
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_anubite",
+  "set": {
+   "X": 35864,
+   "Y": 44122,
+   "Z": 13600
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_anubite",
+  "set": {
+   "X": 35864,
+   "Y": 44122,
+   "Z": 13600
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_anubite",
+  "set": {
+   "X": 35864,
+   "Y": 44122,
+   "Z": 13600
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_casta",
+  "set": {
+   "X": 55746,
+   "Y": 19623,
+   "Z": 15404
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_casta",
+  "set": {
+   "X": 55746,
+   "Y": 19623,
+   "Z": 15404
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_casta",
+  "set": {
+   "X": 55746,
+   "Y": 19623,
+   "Z": 15404
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_chamber_of_ammut",
+  "set": {
+   "X": 50874,
+   "Y": 37321,
+   "Z": 17107
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_chamber_of_ammut",
+  "set": {
+   "X": 50256,
+   "Y": 37293,
+   "Z": 17107
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_chamber_of_ammut",
+  "set": {
+   "X": 50874,
+   "Y": 37321,
+   "Z": 17107
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_chimera",
+  "set": {
+   "X": 549527,
+   "Y": 558876,
+   "Z": 10673
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_chimera",
+  "set": {
+   "X": 549527,
+   "Y": 558876,
+   "Z": 10673
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_chimera",
+  "set": {
+   "X": 549527,
+   "Y": 558876,
+   "Z": 10673
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_entrance",
+  "set": {
+   "X": 32864,
+   "Y": 30764,
+   "Z": 16013
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_entrance",
+  "set": {
+   "X": 32864,
+   "Y": 30764,
+   "Z": 16013
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_entrance",
+  "set": {
+   "X": 32864,
+   "Y": 30764,
+   "Z": 16013
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_katorii_s",
+  "set": {
+   "X": 35678,
+   "Y": 13048,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_katorii_s",
+  "set": {
+   "X": 35678,
+   "Y": 13048,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_katorii_s",
+  "set": {
+   "X": 35678,
+   "Y": 13048,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_kepa",
+  "set": {
+   "X": 61832,
+   "Y": 19043,
+   "Z": 16842
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_kepa",
+  "set": {
+   "X": 61832,
+   "Y": 19043,
+   "Z": 16842
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_kepa",
+  "set": {
+   "X": 61832,
+   "Y": 19043,
+   "Z": 16842
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_land_of_atum",
+  "set": {
+   "X": 245927,
+   "Y": 452442,
+   "Z": 7683
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_land_of_atum",
+  "set": {
+   "X": 245927,
+   "Y": 452442,
+   "Z": 7683
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_land_of_atum",
+  "set": {
+   "X": 245927,
+   "Y": 452442,
+   "Z": 7683
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_laodameia",
+  "set": {
+   "X": 64961,
+   "Y": 19713,
+   "Z": 16938
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_laodameia",
+  "set": {
+   "X": 64961,
+   "Y": 19713,
+   "Z": 16938
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_laodameia",
+  "set": {
+   "X": 64961,
+   "Y": 19713,
+   "Z": 16938
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_medusa",
+  "set": {
+   "X": 69158,
+   "Y": 21654,
+   "Z": 18161
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_medusa",
+  "set": {
+   "X": 69158,
+   "Y": 21654,
+   "Z": 18161
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_medusa",
+  "set": {
+   "X": 69158,
+   "Y": 21654,
+   "Z": 18161
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_moirai",
+  "set": {
+   "X": 38258,
+   "Y": 23468,
+   "Z": 16170
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_moirai",
+  "set": {
+   "X": 38258,
+   "Y": 23468,
+   "Z": 16170
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_moirai",
+  "set": {
+   "X": 38258,
+   "Y": 23468,
+   "Z": 16170
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_northeast",
+  "set": {
+   "X": 36294,
+   "Y": 20947,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_northeast",
+  "set": {
+   "X": 36294,
+   "Y": 20947,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_northeast",
+  "set": {
+   "X": 36294,
+   "Y": 20947,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_sinovia",
+  "set": {
+   "X": 57980,
+   "Y": 34383,
+   "Z": 14874
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_sinovia",
+  "set": {
+   "X": 57980,
+   "Y": 34383,
+   "Z": 14874
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_sinovia",
+  "set": {
+   "X": 57980,
+   "Y": 34383,
+   "Z": 14874
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_southwest",
+  "set": {
+   "X": 27973,
+   "Y": 27246,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_southwest",
+  "set": {
+   "X": 27973,
+   "Y": 27246,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_southwest",
+  "set": {
+   "X": 27973,
+   "Y": 27246,
+   "Z": 15678
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_talos",
+  "set": {
+   "X": 481706,
+   "Y": 692180,
+   "Z": 16400
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_talos",
+  "set": {
+   "X": 481706,
+   "Y": 692180,
+   "Z": 16400
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_talos",
+  "set": {
+   "X": 481706,
+   "Y": 692180,
+   "Z": 16400
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_typhon_himself",
+  "set": {
+   "X": 51180,
+   "Y": 20045,
+   "Z": 14741
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_typhon_himself",
+  "set": {
+   "X": 51180,
+   "Y": 20045,
+   "Z": 14741
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_typhon_himself",
+  "set": {
+   "X": 51180,
+   "Y": 20045,
+   "Z": 14741
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_1_vazul_s_fortress",
+  "set": {
+   "X": 551529,
+   "Y": 536694,
+   "Z": 11038
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_2_vazul_s_fortress",
+  "set": {
+   "X": 551529,
+   "Y": 536694,
+   "Z": 11038
+  }
+ },
+ {
+  "table": "Teleport",
+  "key": "djinn_3_vazul_s_fortress",
+  "set": {
+   "X": 551529,
+   "Y": 536694,
+   "Z": 11038
+  }
+ }
+]

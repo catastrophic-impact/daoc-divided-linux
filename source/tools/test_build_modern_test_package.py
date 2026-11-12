@@ -18,6 +18,17 @@ class ModernPackageTests(unittest.TestCase):
         for path in ['server/GameServer.dll', 'server/navmesh/roads.json', 'OfflineDAoC.exe', 'server/config/serverconfig.xml']:
             self.assertTrue(b.keep_runtime(Path(path)), path)
 
+    def test_the_release_stamp_names_the_version_and_package(self):
+        text = b.release_stamp('DR-dev-0.1d Fishing Update', 'DividedRealms-DR-dev-0.1d-Fishing-Update', 'abc123')
+        info = dict(line.split('=', 1) for line in text.splitlines())
+        self.assertEqual(info['Version'], 'DR-dev-0.1d')
+        self.assertEqual(info['Label'], 'DR-dev-0.1d Fishing Update')
+        self.assertEqual(info['Package'], 'DividedRealms-DR-dev-0.1d-Fishing-Update')
+        self.assertEqual(info['Repository'], 'rambodolphin13/DividedRealms')
+        self.assertEqual(info['Commit'], 'abc123')
+        self.assertTrue(text.endswith('\r\n'))
+        self.assertNotIn('natex', text.lower())
+
     def test_the_world_path_becomes_package_relative(self):
         with tempfile.TemporaryDirectory() as folder:
             config = Path(folder) / 'serverconfig.xml'
@@ -41,6 +52,14 @@ class ModernPackageTests(unittest.TestCase):
         self.assertEqual(dict(con.execute('SELECT Id_nb, Model FROM ItemTemplate')), dict(pole_a=442, pole_b=442, staff=442, sword=4))
         self.assertEqual(dict(con.execute('SELECT `Key`, Value FROM ServerProperty')), dict(fishing_pole_model='442', fishing_sits='True'))
         self.assertEqual(b.use_stock_models(con, ROD, ROD_SETTING), dict(item_templates=0, server_properties=0))
+
+    def test_an_item_on_a_private_model_the_patch_lacks_is_found(self):
+        # DR-dev-0.1d shipped the Storm Regalia on objects 4929-4942, which no release client has.
+        con = sqlite3.connect(':memory:')
+        con.execute('CREATE TABLE ItemTemplate (Id_nb TEXT, Model INTEGER)')
+        con.executemany('INSERT INTO ItemTemplate VALUES (?, ?)', [('sword', 4), ('pole', 4927), ('tara_regalia_hauberk', 4950),
+                                                                   ('storm_regalia_hauberk', 4929), ('cloak_25th_anniversary_albion', 4924)])
+        self.assertEqual(b.models_without_art(con, 4923, {4927, 4928, 4950}), [('storm_regalia_hauberk', 4929)])
 
     def test_host_for_friends_is_switched_off(self):
         with tempfile.TemporaryDirectory() as folder:

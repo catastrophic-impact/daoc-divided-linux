@@ -1,0 +1,805 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-08T18:17:10.373102+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "NpcTemplate",
+   "key": "bd-dread-lord",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "TemplateId": 89,
+    "TranslationId": null,
+    "Name": "dread lord",
+    "Suffix": null,
+    "ClassType": "",
+    "GuildName": "",
+    "ExamineArticle": null,
+    "MessageArticle": null,
+    "Model": "2220",
+    "FactionID": 0,
+    "Gender": 0,
+    "Size": "60",
+    "Level": "0",
+    "MaxSpeed": 200,
+    "EquipmentTemplateID": "",
+    "ItemsListTemplateID": null,
+    "Flags": 0,
+    "MeleeDamageType": 1,
+    "ParryChance": 10,
+    "EvadeChance": 10,
+    "BlockChance": 30,
+    "LeftHandSwingChance": 0,
+    "Spells": "",
+    "Styles": "157|22;186|22;545|22;221|22",
+    "Strength": 0,
+    "Constitution": 0,
+    "Dexterity": 0,
+    "Quickness": 0,
+    "Intelligence": 0,
+    "Piety": 0,
+    "Charisma": 0,
+    "Empathy": 0,
+    "Abilities": "",
+    "AggroLevel": 0,
+    "AggroRange": 0,
+    "Race": 0,
+    "BodyType": 0,
+    "MaxDistance": 0,
+    "TetherRange": 0,
+    "VisibleWeaponSlots": 0,
+    "ReplaceMobValues": 0,
+    "PackageID": "bd pet",
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "NpcTemplate_ID": "bd-dread-lord"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-linked-live-v1-77280",
+   "op": "update",
+   "before": {
+    "LifeDrainReturn": 52
+   },
+   "after": {
+    "LifeDrainReturn": 89
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-linked-live-v1-77281",
+   "op": "update",
+   "before": {
+    "LifeDrainReturn": 52
+   },
+   "after": {
+    "LifeDrainReturn": 213
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-linked-live-v1-77287",
+   "op": "update",
+   "before": {
+    "LifeDrainReturn": 52
+   },
+   "after": {
+    "LifeDrainReturn": 212
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-hybrid-live-v1-74107",
+   "op": "update",
+   "before": {
+    "Type": "SiegeProtection",
+    "Value": 10.0,
+    "Description": "Champion's Ambience (live 1.130a Valor)."
+   },
+   "after": {
+    "Type": "CostFreeChance",
+    "Value": 2,
+    "Description": "Champion's Ambience (1.129 Valor): group spells and styles have a 2% chance to cost no power or endurance."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-hybrid-live-v1-74108",
+   "op": "update",
+   "before": {
+    "Type": "SiegeProtection",
+    "Value": 20.0,
+    "Description": "Champion's Demeanor (live 1.130a Valor)."
+   },
+   "after": {
+    "Type": "CostFreeChance",
+    "Value": 4,
+    "Description": "Champion's Demeanor (1.129 Valor): group spells and styles have a 4% chance to cost no power or endurance."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-hybrid-live-v1-74109",
+   "op": "update",
+   "before": {
+    "Type": "SiegeProtection",
+    "Value": 30.0,
+    "Description": "Champion's Presence (live 1.130a Valor)."
+   },
+   "after": {
+    "Type": "CostFreeChance",
+    "Value": 6,
+    "Description": "Champion's Presence (1.129 Valor): group spells and styles have a 6% chance to cost no power or endurance."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-hybrid-live-v1-74110",
+   "op": "update",
+   "before": {
+    "Type": "SiegeProtection",
+    "Value": 40.0,
+    "Description": "Champion's Aspect (live 1.130a Valor)."
+   },
+   "after": {
+    "Type": "CostFreeChance",
+    "Value": 8,
+    "Description": "Champion's Aspect (1.129 Valor): group spells and styles have a 8% chance to cost no power or endurance."
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-hybrid-live-v1-74111",
+   "op": "update",
+   "before": {
+    "Type": "SiegeProtection",
+    "Value": 50.0,
+    "Description": "Champion's Aura (live 1.130a Valor)."
+   },
+   "after": {
+    "Type": "CostFreeChance",
+    "Value": 10,
+    "Description": "Champion's Aura (1.129 Valor): group spells and styles have a 10% chance to cost no power or endurance."
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100006366",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100006809",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100007342",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100007484",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100007683",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100009313",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100010246",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100011078",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100011194",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100011990",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100012316",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100012584",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100012735",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100014330",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100016032",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "alb_100016231",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100006366",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100006809",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100007342",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100007484",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100007683",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100009313",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100010246",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100011078",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100011194",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100011990",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100012316",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100012584",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100012735",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100014330",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100016032",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "mid_100016231",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100006366",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100006809",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100007342",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100007484",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100007683",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100009313",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100010246",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100011078",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100011194",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100011990",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100012316",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100012584",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100012735",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100014330",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100016032",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "100016231",
+   "op": "update",
+   "before": {
+    "AggroLevel": 60,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "f0218036-7b24-5b7d-a623-1afbabf4f02a",
+   "op": "update",
+   "before": {
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

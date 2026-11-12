@@ -808,24 +808,35 @@ namespace DOL.AI.Brain
 
 		/// <summary>
 		/// Perform some checks on 'm_orderAttackTarget'. Returns it if it's still a valid target, sets it to null otherwise.
+		/// Offline DAoC 2026-11-05: the field is read once. NpcService threw a NullReferenceException here (an Animist
+		/// turret, TurretBrain.CalculateNextAttackTarget via AttackMostWanted) when the order target was cleared on another
+		/// thread between the null check and its use, and the server removed the turret. A body that has left the world has
+		/// no target either.
 		/// </summary>
 		protected virtual GameLiving CheckAttackOrderTarget()
 		{
-			if (m_orderAttackTarget != null && !CompanionEngagementMode.Allows(Body, m_orderAttackTarget))
-                m_orderAttackTarget = null;
-			if (m_orderAttackTarget == null)
+			// Read the order once. Attack(), Disengage() and the owner's bot logic set it from other threads, so it
+			// could turn null between the checks below (NullReferenceException 2026-11-06 19:21 crashed the NPC
+			// tick and removed a grove protector from the world). Only clear it if it is still the order we checked,
+			// so a new order given meanwhile is kept.
+			GameLiving target = m_orderAttackTarget;
+			if (target == null)
 				return null;
 
-			if (!m_orderAttackTarget.IsAlive ||
-				m_orderAttackTarget.ObjectState is not GameObject.eObjectState.Active ||
-				LosesStealthedTarget(m_orderAttackTarget) ||
-				!GameServer.ServerRules.IsAllowedToAttack(Body, m_orderAttackTarget, true))
+			GameNPC body = Body;
+			if (body == null || body.ObjectState is not GameObject.eObjectState.Active ||
+				!CompanionEngagementMode.Allows(body, target) ||
+				EpicEncounterTactics.PetMustNotHit(body, target) ||
+				!target.IsAlive ||
+				target.ObjectState is not GameObject.eObjectState.Active ||
+				LosesStealthedTarget(target) ||
+				!GameServer.ServerRules.IsAllowedToAttack(body, target, true))
 			{
-				m_orderAttackTarget = null;
+				Interlocked.CompareExchange(ref m_orderAttackTarget, null, target);
 				return null;
 			}
 
-			return m_orderAttackTarget;
+			return target;
 		}
 
 		protected override GameLiving CalculateNextAttackTarget()
@@ -850,6 +861,16 @@ namespace DOL.AI.Brain
                     Body.TargetObject = null;
                 }
             }
+			// Epic wave 3 (1.2): a bot's pet never takes a target no pet may hit (Funus, whom a pet's hit heals to full).
+			foreach (GameLiving enemy in AggroList.Keys)
+				if (EpicEncounterTactics.PetMustNotHit(Body, enemy)) RemoveFromAggroList(enemy);
+			if (Body.TargetObject is GameLiving forbidden && EpicEncounterTactics.PetMustNotHit(Body, forbidden))
+			{
+				Body.StopAttack();
+				Body.StopFollowing();
+				if (Body.castingComponent?.SpellHandler?.Spell?.IsHarmful == true) Body.StopCurrentSpellcast();
+				Body.TargetObject = null;
+			}
 			if (!IsActive)
 				return;
 
@@ -861,6 +882,7 @@ namespace DOL.AI.Brain
 					owner_npc.TargetObject != null &&
 					owner_npc.TargetObject is GameLiving &&
 					CompanionEngagementMode.Allows(Body, owner_npc.TargetObject as GameLiving) &&
+					!EpicEncounterTactics.PetMustNotHit(Body, owner_npc.TargetObject as GameLiving) &&
 					GameServer.ServerRules.IsAllowedToAttack(owner_npc, owner_npc.TargetObject as GameLiving, false))
 				{
 					if (!CheckSpells(eCheckSpellType.Offensive))
@@ -946,6 +968,9 @@ namespace DOL.AI.Brain
 				}
 			};
 			if (ownerClass.HasValue && !PetMayDefendOwner(ownerClass.Value))
+				return;
+			// A bot's pet doesn't defend its owner against a monster no pet may hit (Funus heals to full from a pet's hit).
+			if (ad?.Attacker is GameLiving attacker && EpicEncounterTactics.PetMustNotHit(Body, attacker))
 				return;
 
 			switch (ad.AttackResult)

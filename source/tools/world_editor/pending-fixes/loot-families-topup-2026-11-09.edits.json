@@ -1,0 +1,7211 @@
+[
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f3c0f877-e1cc-5829-a403-e21e7c831cf7",
+   "MobName": "Haki",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91eab5d8-8460-560a-8172-c2bd09141f8b",
+   "MobName": "Rat-catcher",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "05b68a00-4418-5b67-beda-37e60321d81d",
+   "MobName": "Stinky",
+   "LootTemplateName": "family animal 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d9f667a4-b509-5d99-8977-01398c746e38",
+   "MobName": "Ciar",
+   "LootTemplateName": "family undead 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "37a46536-97de-5776-b5ea-550a591b888a",
+   "MobName": "Mad Sprite",
+   "LootTemplateName": "family humanoid 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "00f694c0-1c33-5abb-8535-263b93a5bb38",
+   "MobName": "Gokstad",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c40cf9e2-18bd-56db-8a6e-3724aed85f5a",
+   "MobName": "Daffyd Difwych",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a0061017-6995-5869-bc93-c086fae468df",
+   "MobName": "King Vero",
+   "LootTemplateName": "family insect 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1e18dcc7-7db3-5db1-ad8b-84c186cdffbe",
+   "MobName": "Piece of Scum",
+   "LootTemplateName": "family elemental 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "43739aba-6d75-5afb-9f3e-9c8203fbfb9b",
+   "MobName": "Celain Eirich",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "51e1afc9-c369-5bfc-bf63-34e8e19fd595",
+   "MobName": "Druid Disenchanter",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "20ba919e-6787-5b03-90ee-f10ada1e4d0b",
+   "MobName": "lone wolf",
+   "LootTemplateName": "family animal 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "203b758c-20de-5a53-8988-e525f0c071cf",
+   "MobName": "vendo grunt",
+   "LootTemplateName": "family humanoid 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b3ac50f2-7be2-5445-9eeb-5f3f19630847",
+   "MobName": "Rognvald",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ae660091-3682-5d72-a766-dc555c00f0e2",
+   "MobName": "Taldos' companion",
+   "LootTemplateName": "family undead 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cb807159-4dd7-5f4b-9d49-f6e4f9bf38b7",
+   "MobName": "Koramenna",
+   "LootTemplateName": "family plant 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0006c978-864d-5410-99de-30e041a6bb66",
+   "MobName": "lava monster",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "57ed853c-58b8-53b9-8161-ea016e4ff511",
+   "MobName": "Unseelie henchman",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "22b7c1f4-6876-5768-8d2c-16d1dc15ac6c",
+   "MobName": "carrion worm",
+   "LootTemplateName": "family insect 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3670ba83-720d-5929-af65-935062442a87",
+   "MobName": "Bailey",
+   "LootTemplateName": "family insect 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0ff27e09-52f9-5a3c-906e-052ab629d946",
+   "MobName": "Darkmare",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1af311d2-9e9e-5b03-a65a-f83951486f53",
+   "MobName": "Mystical Steed",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7924a786-3e83-5e46-a6ad-d246eedf5691",
+   "MobName": "cave spider hatchling",
+   "LootTemplateName": "family insect 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e1ad7f25-ffa1-514a-bce5-074d3e7ee8dc",
+   "MobName": "fanatical hand of Ymir",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b28ce544-24e3-530f-973e-666c11b12267",
+   "MobName": "mossy cave sprite",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "315c853a-c0d1-5b4a-984a-cc4ff94b5669",
+   "MobName": "maniacal master of prey",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f4703edd-d64d-5b6c-b176-e84d2509c1cf",
+   "MobName": "glashtin tailor",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "98a13810-1b4c-5081-9f82-1b8703638d76",
+   "MobName": "tomb spider hatchling",
+   "LootTemplateName": "family insect 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "41dc2439-4e40-5ec4-bbee-cf7947ea564f",
+   "MobName": "tormented possessed inconnu",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2e9c095a-5582-5806-a535-dffe93f593a1",
+   "MobName": "tomb spiderling",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c8aee74f-7796-58d7-a8b7-9c86b70402a7",
+   "MobName": "spirit champion",
+   "LootTemplateName": "family undead 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ab892c0c-f86e-528a-af13-fac1234d0124",
+   "MobName": "outcast thallooniagh packmaster",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f7b3f0a-0ed9-59ef-9845-60c24a2fe20b",
+   "MobName": "outcast broken tusk cutter",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ae4651c9-a752-5bd8-b02b-3250238109df",
+   "MobName": "maniacal shadow master",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8f158f63-8abe-5299-92e9-a995e02b92fe",
+   "MobName": "crazed marauder",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1da93fa5-e050-5e20-a1ba-9f2018e7fef8",
+   "MobName": "outcast strong fist grunt",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "21f9aa6b-8024-58d6-a1ee-4905162bccaf",
+   "MobName": "glashtin master craftsman",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4d7148da-608f-5671-842d-309be48704d2",
+   "MobName": "terracite rabble rouser",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "66eaf3ff-c4f9-54d6-95fe-5c5a5b323276",
+   "MobName": "maniacal protector of Kelgor",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c908b4d6-735a-5ff6-b492-794f430a7ecc",
+   "MobName": "cave spiderling",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d20d57f4-320c-5489-9664-da82398fdd25",
+   "MobName": "outcast blackmane seer",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3b689c7f-120b-5202-a86b-9ef44beb3403",
+   "MobName": "frenzied hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "43eda068-6db4-5d26-b5bc-394e1841be2b",
+   "MobName": "disturbed vigilante",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "082f1fad-2d8b-5bdf-aadf-0c71de67608b",
+   "MobName": "large cave spider",
+   "LootTemplateName": "family insect 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c2ac9fdd-2832-5660-88a2-8f01ee564862",
+   "MobName": "glashtin sniffo",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91005782-1b5e-59b9-a3f4-953f6c46e84d",
+   "MobName": "crazed summoner",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f52c83f0-2b7e-5d38-970a-d025200d15ee",
+   "MobName": "glashtin eldah drommo",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "44162938-bec4-5ca3-9fcc-d1e743113a2f",
+   "MobName": "fanatical fist of Kelgor",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "80d1128c-1846-578e-b38d-ddc7d7c7324b",
+   "MobName": "glashtin whelp",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ba626d4b-6d94-59c5-afa4-fd96ee813d07",
+   "MobName": "outcast thallooniagh taskmaster",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9ababe99-c49e-5926-9cb6-02223b461c08",
+   "MobName": "glashtin drommo",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b2566038-5ae6-5115-9f13-9ea248db8b86",
+   "MobName": "lithic gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9b7ed45f-8a66-532c-9e82-802b3fd07cc8",
+   "MobName": "crazed wilding",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e594c50d-262d-56fc-8606-92c0c5766a4f",
+   "MobName": "outcast broken tusk brawler",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "17f646f8-5881-5dcb-a563-471691030500",
+   "MobName": "fanatical hand of Loki",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "929bf9ce-2f35-53c5-b104-41b674c1c917",
+   "MobName": "wayward phantom",
+   "LootTemplateName": "family undead 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "12bd1ca7-decc-5833-9856-afc7e8fc32a5",
+   "MobName": "quartz gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "21080baf-f8f7-5423-85ca-662bcfc9d0a8",
+   "MobName": "incendiary gargoyle",
+   "LootTemplateName": "family elemental 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b5c3697d-38f7-5054-9085-b90090a5a82c",
+   "MobName": "guard of Vanjorndor",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fa4f07a4-8f71-5ef7-9228-96c505b7f43f",
+   "MobName": "fanatical tribal chieftain",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1a8bfa99-321f-501a-bc51-84bbcb5152c1",
+   "MobName": "ancient tomb spider",
+   "LootTemplateName": "family insect 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "72897ba5-984f-560a-aa41-50e5cf39e474",
+   "MobName": "glashtin pokah",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4858763b-6953-522e-bf61-cf5166d6f512",
+   "MobName": "baby gargoyle",
+   "LootTemplateName": "family elemental 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "81e247d3-4dbe-5bca-9d2e-4e6a038ff14a",
+   "MobName": "disturbed blade dancer",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b8b3bc88-5454-5ad5-a005-d4ef311e8ed6",
+   "MobName": "outcast bloody axe brute",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f20d44a0-8179-54f8-a0d6-94ef609b2866",
+   "MobName": "Guilak",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aca7e5ad-c5e3-59fc-b12c-683a29dd6a91",
+   "MobName": "glashtin lil'gob",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9fcede59-f38a-51bc-be6b-dbdcc02ee095",
+   "MobName": "crazed pathfinder",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d6339359-2101-5bd8-b45a-c691e862f297",
+   "MobName": "outcast green blud archer",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "138e19a8-4ff4-50c0-b61c-b23c4784319e",
+   "MobName": "terracite militiaman",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dc95e228-a861-5f77-8095-7c81cce801cc",
+   "MobName": "glashtin master metal worker",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "387979d6-57d0-5eed-88bd-def4ae7e39ae",
+   "MobName": "glashtin eldah mojobo",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "359cf510-5545-5252-a826-86f4fc0f04b5",
+   "MobName": "deranged theurgist",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "beeaf37d-5458-5691-9341-38988e926d5b",
+   "MobName": "glashtin taskmaster",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "290add39-75be-5bba-a236-cdc82cb2de8c",
+   "MobName": "cracked gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f46233d1-b22e-577c-8f87-03db74ea33cf",
+   "MobName": "outcast bloodmoon brute",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fd76a31a-2e50-5941-8870-c1dc7c9a5456",
+   "MobName": "terracite isolationist",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cd4be8e3-7921-50ce-8aac-c41614b583da",
+   "MobName": "glashtin li'l gob",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "66e7485a-c28c-528f-a4f5-02bab345e542",
+   "MobName": "glashtin eldah slosho",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1f893925-38ce-57c9-9e7c-62ca507ede9b",
+   "MobName": "outcast broken tusk thief",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "10db912f-1481-5011-8c16-07438b27b2a2",
+   "MobName": "quickstride gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a2b18434-fcd2-5fd3-8f15-3ca03054b471",
+   "MobName": "splintered gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a916c85b-8996-554f-bb4a-dff24dbf99e8",
+   "MobName": "glashtin tinkerer",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "28aae077-5933-5abb-9bf8-4f78826ca65e",
+   "MobName": "large albino cave sprite",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "73ffc1e4-486e-5384-8907-74c0edd5f92e",
+   "MobName": "fanatical hand of Bragi",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "175f7758-59c3-56d1-8ce9-2ea7f192e509",
+   "MobName": "ferocious hound",
+   "LootTemplateName": "family animal 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "87026210-81b5-59e1-bf68-cf275fbd6b17",
+   "MobName": "glashtin teknishun",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ff846b79-3bb3-5271-b6f8-e8f13f57fcc6",
+   "MobName": "haunted animator",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8f889c33-ecaa-5cd6-bbf3-4e65c3e827e7",
+   "MobName": "blistering gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "557d1b8c-7535-5f67-82b8-8657fdd0021e",
+   "MobName": "gargoyle hunter",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0bae9a3c-6e31-5623-b0aa-761cef519c27",
+   "MobName": "glashtin chopper",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "40ce306c-16f5-5b2e-bfce-0293100e425c",
+   "MobName": "demented sorcerer prime",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e2e53d77-97c9-58ba-b290-e9a867399944",
+   "MobName": "glashtin weaponsmith",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "825f1412-9ee9-5911-a06e-ebd86e232e2d",
+   "MobName": "glashtin gob'teen",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "daa2a59c-4d29-505f-a814-0b4617f20bf1",
+   "MobName": "fanatical hand of Skadi",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0e2057af-2c00-5953-a1f0-f0cd00183a12",
+   "MobName": "weak gargoyle",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a005c76-ff4a-5433-aa27-08904a5a2f29",
+   "MobName": "crazed huntsman",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9fc9d018-d060-5641-ab24-b3d0124e0463",
+   "MobName": "glashtin fixah",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c3b1a990-ca1b-51f6-9b41-7ecd590bf441",
+   "MobName": "burning gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ea5566c5-4673-5203-88d8-3166479efa1c",
+   "MobName": "disturbed artificer",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4e57688f-7aab-51a0-9df4-68e1802c3176",
+   "MobName": "savage hound",
+   "LootTemplateName": "family animal 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "52aab076-3e2a-5032-8412-15b4aba380ae",
+   "MobName": "fanatical packmaster",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d3b81b83-7083-57c4-b5fb-185fd4e0f3ea",
+   "MobName": "glashtin mekanik",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cf9417d6-41a4-5173-a6d3-44e11a346f82",
+   "MobName": "terracite scrapper",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "31e21455-b0ed-5631-af38-e390fb4eea0a",
+   "MobName": "crazed warlock",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4f6b4cb6-0c8e-50f9-996f-1aac7eae3be7",
+   "MobName": "glashtin digger",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "80b907f5-abd7-5356-94ac-650a2809005d",
+   "MobName": "crazed tribal elder",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b093d159-65f8-5d94-ac84-db77363b1701",
+   "MobName": "bloated tomb spider",
+   "LootTemplateName": "family insect 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "75c73f5f-88ee-5b84-be7c-c3e10e18cb3f",
+   "MobName": "glashtin master artisan",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d2f329a0-0361-5a90-a589-bbbff1acb888",
+   "MobName": "glashtin gargoyle wrangler",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cfd1d310-f308-5ec6-b0a8-15873baf7de7",
+   "MobName": "glashtin hammerer",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a397235a-8fa1-52dd-bbf3-01bf873eaa8c",
+   "MobName": "fanatical hand of Odin",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f5bcbf73-9f92-5b9d-bf53-4d691ad03b0e",
+   "MobName": "follower of Keantoth",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9f800562-2f6f-5f09-9e28-be4a5be9459f",
+   "MobName": "chipped gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4fc150fc-f71d-5ab0-85ae-d78a5c446ff9",
+   "MobName": "pleurotus minor",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "321f0c3c-e9cf-580e-8d47-44343dec969c",
+   "MobName": "crazed savage warrior",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "33d1ebae-01b7-5bcc-834f-5b3f65c43572",
+   "MobName": "outcast gnoll scruff",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "be259b90-ec72-59f9-82c9-86fa207345f2",
+   "MobName": "glashtin ozzozzin",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ce6cd487-02d5-5d58-b56e-64975ff81255",
+   "MobName": "outcast scratchfoot doomsayer",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dc9ee312-95ad-57f1-983e-3c3f544bad7d",
+   "MobName": "terracite jingoist",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7c8342da-aaf0-5eb7-aabd-86f266a4d0ca",
+   "MobName": "large mossy cave sprite",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3d02350a-a563-53d9-a271-e257602b0698",
+   "MobName": "outcast green blud warrior",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2d96d2eb-ea14-56b4-a8d1-15c51c10834e",
+   "MobName": "glashtin bellowsman",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9895d93b-bb82-5390-ac29-0578f367d0aa",
+   "MobName": "glashtin odolt'gob",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "532ef25d-fbfb-5337-9aba-fc8ec25306c0",
+   "MobName": "glashtin surveyor",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "79d685ad-6705-57bd-86bf-454535247cb8",
+   "MobName": "fiery gargoyle fledgling",
+   "LootTemplateName": "family elemental 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "57b23e45-5fcf-54ed-9ed1-27ee8012ecaa",
+   "MobName": "crazed deceptor",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "77644ed2-37ee-52b8-b265-6a0204bf04da",
+   "MobName": "outcast bloody axe archer",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2932bf5a-ddbb-5457-b603-c5072d89e69b",
+   "MobName": "crazed lurker",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6aec02c1-9ddb-5a1c-a0b0-d8270cddac1d",
+   "MobName": "terracite poacher",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4ea72203-3a5c-5645-9f10-e0a050627570",
+   "MobName": "incandescent gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4e398628-5f80-5e9e-8ccc-f48fcdaa1955",
+   "MobName": "fanatical hand of Hel",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3cf964ad-75f6-5c2c-9d69-f2bac5dfde91",
+   "MobName": "maniacal warmonger",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c549f7d9-5865-5054-ad45-1bd34c8f417a",
+   "MobName": "crazed spiritmancer",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "753c7ed4-0f53-5f5b-a426-24cd6989704d",
+   "MobName": "ghosted hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "92dd49dc-a92b-53ba-a0fa-543d253a86ef",
+   "MobName": "outcast broken tusk mage",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ef8c24b3-62e7-5978-bd47-eaf978d69e56",
+   "MobName": "gargoyle bonesnapper",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "690a30bb-c437-50f4-bfe7-50f6f6597d17",
+   "MobName": "disturbed defender",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f3cad24-9ad0-5383-8daf-dd96ea3423fd",
+   "MobName": "glashtin tunneller",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ad7b5d14-bfb5-52b2-acf6-018712585edd",
+   "MobName": "pleurotus major",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7d6aaa73-57c8-58bf-80f9-a975e0e595c8",
+   "MobName": "maniacal shamanic visionary",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "14adc93b-6054-58ee-acd2-9fa6271e0ea4",
+   "MobName": "outcast thallooniagh slinkfoot",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fdad7b46-d014-55bf-8575-14c1fa94b0e6",
+   "MobName": "glashtin smelter",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a40e053f-2046-5609-a67c-6ecaf8231c65",
+   "MobName": "disturbed stalwart",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "748233cb-6176-515f-be60-93eeeb6bc2e1",
+   "MobName": "terracite mold shaman",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c7487795-3ca6-5adc-9d1d-70fd8ea311fb",
+   "MobName": "forlorn gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dff29ff7-7f26-5178-a7ee-6ff667b47d0f",
+   "MobName": "glashtin stabzu",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8463e0f9-ce48-56e6-bb42-76a612e22bb1",
+   "MobName": "jade simulacrum",
+   "LootTemplateName": "family magical 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3c2664fd-64ef-57a0-9946-a27ab1fa00e4",
+   "MobName": "Caerid",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "118b7dbd-343d-59f2-abf0-7db1af881e4e",
+   "MobName": "demented master reanimator",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "93057f09-dc9f-5284-9a1d-88a3a777db1d",
+   "MobName": "glashtin stikko",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "150a34b6-a79b-5a6d-be91-a98901e08db8",
+   "MobName": "thunderclap gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a5e69f52-2436-52ad-9608-7fb1287a6d5c",
+   "MobName": "outcast bloody axe scout",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ec7fbe6-8148-5d60-a17a-2db250c11b17",
+   "MobName": "hardened gargoyle",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f5a6f02-5fca-59e4-8647-5381406644c6",
+   "MobName": "glashtin worker",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a1cfa511-69a8-5a9f-a581-cb89bbb2c1c7",
+   "MobName": "outcast broken tusk howler",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fe084131-629c-56d5-8299-e0a1a93ab577",
+   "MobName": "glashtin repairman",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a79f3fd2-b5c5-5c82-a0b1-3515287e8c96",
+   "MobName": "glashtin drone",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0bf74fcc-049a-559f-90d1-1c626c5dab40",
+   "MobName": "sulphurous gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "360ec828-22cb-5d72-a0c2-3c3bc52f6a12",
+   "MobName": "glashtin watchman ",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9bb75d95-4998-52c1-8c2c-43e6f4ef2c45",
+   "MobName": "terracite trapper",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a533f90a-2d1f-5d6a-a4c6-420c3cc36002",
+   "MobName": "ferocious astralist",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f08d3039-c4fe-5e5a-847d-490e065ce892",
+   "MobName": "maniacal bonemage",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f3dd9dea-af0f-516b-ae5b-015c28a2702a",
+   "MobName": "dark elf thought walker",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "430b2baf-a150-5eda-a073-0ea99ded8b61",
+   "MobName": "dark elf blademaster",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "43703c74-bc45-5340-aeaf-2277824d506b",
+   "MobName": "veil shard",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d960f942-5c14-540d-bf59-fd7a3af10fe8",
+   "MobName": "dark elf blackguard",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "497379f5-1cd5-5d9d-a396-9f6999d594b9",
+   "MobName": "dark elf illusionist",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e5ca2779-523a-51dd-9215-06b82b63daca",
+   "MobName": "scaanagh servitor",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d8b16b68-eac5-5ba7-9982-99ca49436928",
+   "MobName": "splintered marrach gargoyle",
+   "LootTemplateName": "family elemental 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f8e9c30d-4a30-5955-b154-5657060e7581",
+   "MobName": "marrach gargoyle guardian",
+   "LootTemplateName": "family elemental 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "05086b26-d72a-556e-ab5c-b43725be178c",
+   "MobName": "dark elf stylist",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "109ca909-8a6c-527b-9e75-6fb28e6c34b0",
+   "MobName": "unseelie darkblade",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ef153c88-b9f2-528d-9f0b-7a3d4039842e",
+   "MobName": "scaanagh healer",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d8065d45-b1dc-58fa-8419-1d99863fb2c4",
+   "MobName": "dark elf adept",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e5839296-a207-5438-9752-d281815eebbd",
+   "MobName": "scaanagh defender",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aea54faf-3f13-5286-bf18-941c449aa20b",
+   "MobName": "unseelie visionary",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "28890e20-d95e-55c9-802e-a0ecb43e63f4",
+   "MobName": "dark elf assassin",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7b42e9a9-bc0a-5eb4-b247-2255362ceb6a",
+   "MobName": "dark elf handmaiden",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9cf0513f-4e05-5e83-9f7c-436b38aaabe5",
+   "MobName": "scaanagh oracle",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "498bf7aa-4452-5706-ac58-52dd9a9f6157",
+   "MobName": "scaanagh blade weaver",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b03ce2c0-90f4-5568-a3ef-314326108ac2",
+   "MobName": "Talal",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c53749f0-29ea-5572-852d-53588c7b73f1",
+   "MobName": "unseelie illusionist",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "34cf130f-822b-58d0-813a-50f454e8ba5c",
+   "MobName": "scaanagh song weaver",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ffa3f021-b4cf-5f9a-a12f-9255e989c681",
+   "MobName": "chiseled marrach gargoyle",
+   "LootTemplateName": "family elemental 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d4ba5e7d-41b2-50a3-9c73-f9f537e8f164",
+   "MobName": "cracked marrach gargoyle",
+   "LootTemplateName": "family elemental 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d3cce56f-a0c0-569a-bb2e-a8ced0b4bdf9",
+   "MobName": "spellbound scaanagh",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6096da7f-4297-5175-83ad-40e8ef0fa900",
+   "MobName": "unseelie scythewielder",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "21452411-9d51-5c1e-af41-75767cd032c9",
+   "MobName": "scaanagh protector",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "920fb7f9-7c71-55e4-8069-8f93c5c985eb",
+   "MobName": "dark elf nightshade",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "039eddba-8cd5-556e-900f-09b51674a8da",
+   "MobName": "Amaluque the Blackguard",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a762ec0b-b4e9-5db4-b104-4483e7d8f5bf",
+   "MobName": "dark elf seneschal",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "44d6e10d-2203-5f5c-a53e-74d249d48cd7",
+   "MobName": "unseelie conjurer",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ede93056-6356-50db-8dc1-05f58463d2f5",
+   "MobName": "dark elf doomguard",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9f1f28ce-850c-5934-a59a-2d58787eb1d5",
+   "MobName": "dark elf mentalist",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d7fa12f1-8e39-5fcf-9463-fc5cedb795ff",
+   "MobName": "unseelie blade weaver",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "11725e95-fde1-53dd-848c-3530136041c5",
+   "MobName": "dark elf ambassador",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3125ab3a-703e-5141-a8a1-faaef85285d5",
+   "MobName": "Gargoyle Herald",
+   "LootTemplateName": "family elemental 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ef0061e8-ee04-5564-a73f-8ff782dc62c9",
+   "MobName": "dark elf enchantress",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "688e6e52-ab65-5c6b-beb4-dd62d6e7a15a",
+   "MobName": "Nuraasha's follower",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7dfcedf5-acc0-53d1-8165-8fc093f12c21",
+   "MobName": "dark elf veilwalker",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c56c7b41-5f02-58da-842b-45d1f0f492f4",
+   "MobName": "Molteyr",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9608e875-fbbe-5967-9a6c-ae6095234126",
+   "MobName": "Unseelie Emissary",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "06c03354-90de-52d4-be21-cb678323730d",
+   "MobName": "dark elf invoker",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d1744c0b-1d94-5976-a969-ca0c969cd583",
+   "MobName": "scaanagh",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c5cb936c-eac8-5443-ac22-fa714d6de348",
+   "MobName": "dark elf charmer",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "be57e584-2986-5a5e-bcfd-af2d3bf1ec17",
+   "MobName": "Baron Lanador",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9e82c596-1775-5b35-b49d-b1342ac41114",
+   "MobName": "Seneschal Ciaran S'gath",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "01dae52c-df49-50df-8cdf-6a580a3d9191",
+   "MobName": "dark elf incanter",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6eb3e229-7cfc-52b4-b677-2b09899fb488",
+   "MobName": "scaanagh conjurer",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a568c1e3-be14-5b00-8fd0-de5b642ae324",
+   "MobName": "ancient marrach gargoyle",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "111933df-a848-59dd-9718-6b6e8cbc55e1",
+   "MobName": "scaanagh mind weaver",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9bbc48cb-d931-5b57-8f8e-76e3707ddeb5",
+   "MobName": "scaanagh glamourist",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "05718563-80ec-5380-afd7-b9e06ea7bd0e",
+   "MobName": "dark elf eldritch",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f013b87d-665f-577a-81c0-0566e2725b86",
+   "MobName": "Elerion",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91484af1-4174-5df9-ad01-49909cb7ef01",
+   "MobName": "unseelie guardian",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6727eb3d-31a9-5596-97d9-a06000bdb4be",
+   "MobName": "fragmented marrach gargoyle ",
+   "LootTemplateName": "family elemental 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "49de41aa-0181-5eb5-8a9b-2319bcedf32e",
+   "MobName": "Dark Elf Agent",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3ee2a2e6-fbc5-5c90-9be2-caa0868f666b",
+   "MobName": "unseelie diplomat",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "789fc2cd-5afe-5a66-a0c6-9331ebb6aace",
+   "MobName": "Overseer Brahder",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5c0e8cd6-41bc-5cf0-a4ba-a4689fca3ddb",
+   "MobName": "Izzafein the Bladist",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ed20ef5d-71aa-55c4-b753-530e5435cf2f",
+   "MobName": "dark elf elite guard",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9ef58a7a-9927-5a06-a058-56941756e309",
+   "MobName": "unseelie tracker",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a3a236df-ea8d-553a-887e-aac0381853bf",
+   "MobName": "scaanagh darkshade",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "996e2b8d-6bb8-50ff-bbc3-97aa890bb443",
+   "MobName": "unseelie chanter",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "97a6f859-904d-541a-b86b-ec8055b021ec",
+   "MobName": "scaanagh magius",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1405ff76-fa8d-5f1d-980e-32910904e6fd",
+   "MobName": "outcast scratchfoot howler",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b869d535-676c-58f8-9940-5bb730fa0056",
+   "MobName": "maniacal spiritist adept",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9c41517b-e9f6-5d01-be25-e4bca901d695",
+   "MobName": "outcast broken tusk shaman",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e94c967c-9ac6-5abd-989a-9d513b9848e4",
+   "MobName": "outcast bloody axe healer",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7fe371f4-54f2-5ee3-a705-2710c3d338c0",
+   "MobName": "outcast bloodmoon shaman",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cfb60fc6-ffb7-5226-b2cf-fbb22678795c",
+   "MobName": "albino cave sprite",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2d923d6b-f979-5e84-8c00-75110fac915a",
+   "MobName": "terracite blade",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4a4f08b2-fc8e-5ee5-b799-8ac78e0fa74e",
+   "MobName": "terracite warrior",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "44d532d8-e734-57dd-bf12-db810260ada5",
+   "MobName": "mossy cave spriteling",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "56763aea-f5c4-547c-9479-41db3f600e2d",
+   "MobName": "haunted deathseeker",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9a1f7d44-30fa-5fb0-99db-3e8989202b86",
+   "MobName": "terracite oracle",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "42219ef7-7320-51bf-bdfd-b06a87bd2bc4",
+   "MobName": "albino cave spriteling",
+   "LootTemplateName": "family demon 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "96b7fde7-442a-594d-b05f-6f54baafbd6b",
+   "MobName": "glashtin mojobo",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b219f2d9-edd4-5916-84fc-8ef11b0c144b",
+   "MobName": "terracite witch doctor",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aa97620f-9fe5-508b-8c39-4a406dc60872",
+   "MobName": "glashtin slosho",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0ade8b26-f9a9-5c95-a37f-471df507f40d",
+   "MobName": "Darvez",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "80059453-68d3-5834-b4e2-6ec7aa2c5301",
+   "MobName": "haunted spiritist",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "20b61d2a-30e7-59ab-a7a5-390592cf21e6",
+   "MobName": "Reimir",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a0e875fe-7421-5b0e-99d1-e6f9c6a0832a",
+   "MobName": "terracite sage",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ad4b37e-6651-5156-abd4-378f994b44bf",
+   "MobName": "conspiring master spiritist",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5c2b263a-89df-555b-8fe5-b3438aab8f36",
+   "MobName": "phantom wisp",
+   "LootTemplateName": "family undead 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0e404722-3eef-5769-8fd2-24c0e7d547ab",
+   "MobName": "surestrike gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "14d950db-93c7-544b-965e-e8026bcb00d4",
+   "MobName": "morose gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c847f609-3bdc-51a2-9ef9-4b724c1ffed3",
+   "MobName": "rock gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "27511561-efc3-5f13-8e01-be5ace363e96",
+   "MobName": "death's head hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "45824bbc-ad57-5b91-a80c-6095d4f1f0dd",
+   "MobName": "wandering phantom",
+   "LootTemplateName": "family undead 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c4405e9d-b2f5-591c-aea1-cdd2c245dc63",
+   "MobName": "miserable gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "44bfa914-d804-514b-92fa-f3f02c2c3826",
+   "MobName": "haunted malefice",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bf5c1746-7bbc-5850-b746-8a646f16d5d1",
+   "MobName": "conspiring reanimator",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cd237f18-ee42-51fd-ab61-8e4e17d1045e",
+   "MobName": "aberrant phantom",
+   "LootTemplateName": "family undead 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3fe04308-53f0-509b-8936-ebb64c39fa74",
+   "MobName": "crazed phantom",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d4010bf2-71e2-5507-a7a0-f29016881acc",
+   "MobName": "roaming phantom",
+   "LootTemplateName": "family undead 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "022cb2a8-b338-5d7a-b6ca-9f52ed561646",
+   "MobName": "conspiring enigmatic",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "be249be7-36f4-5ba7-b5bc-09bbaa8ab34a",
+   "MobName": "glashtin engineer",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f441dbec-9c6c-51fa-98f0-dc338882b2e2",
+   "MobName": "glashtin gargoyle behaviorist",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6e9b01b8-c5a8-5bb0-a6a4-0b4db408777f",
+   "MobName": "steam cloud",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "13823bac-3a3b-5c24-8890-5c8d647f9fc4",
+   "MobName": "glashtin polisher",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e5c7a257-a208-5399-b64f-e5736cb635bb",
+   "MobName": "raging gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "51ddef2a-0763-5315-821f-29673ff68379",
+   "MobName": "Inquisitor Ugglok",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e1dcee1a-6b89-542a-b838-c944d2817d8a",
+   "MobName": "simmering gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "81560983-f5ef-57ba-85eb-2e16627cc792",
+   "MobName": "glashtin master smith",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f9f66a38-828c-5463-bede-1ba33e86d2b2",
+   "MobName": "rockribbed gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aaa562bc-9adb-5e26-959e-be43a5350e61",
+   "MobName": "fanatical hand of Tyr",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "867d5c4e-0638-5b86-85a1-673017ad17fd",
+   "MobName": "Migan's Hound",
+   "LootTemplateName": "family animal 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "94bb4388-af57-5ad6-80e3-83ad89e0eee4",
+   "MobName": "maniacal lord of Sagas",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "81a9cb45-fbc2-5451-a36a-4664c8235d20",
+   "MobName": "unwilling kobold",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aefbf873-3179-53bc-99aa-eef5ae1b77cc",
+   "MobName": "maniacal pitmaster",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bda295ad-bc38-5d05-a2c3-60d4bfe0cb72",
+   "MobName": "berserk hand of Skadi",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a4303e2c-08d1-57b7-9643-cbe2bf0701c7",
+   "MobName": "Benzar",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "29ff9ea5-2fb9-5727-aae6-be67ad27a500",
+   "MobName": "Gorluk",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ba6336d2-347c-5298-a2c6-d4478002adcd",
+   "MobName": "festering hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91c48373-c5a2-5c8d-bb4a-3287adfbb205",
+   "MobName": "Migan",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fa670be1-3914-57af-9256-479a4b6a430d",
+   "MobName": "Jorlan",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ee6571f8-ad22-5baa-b94f-7f4bc1cc8ee5",
+   "MobName": "deranged wizard",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5f2c7fbd-f6c8-567d-80e7-8eae2bf6aaa5",
+   "MobName": "granite gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b3d13519-0e28-5fcf-a6e9-99b0ab900fd9",
+   "MobName": "demented phantom",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ebbbeff8-599a-5547-80fb-2a67556b3bfe",
+   "MobName": "decomposing hound",
+   "LootTemplateName": "family animal 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b7589169-b1af-54ea-b725-27b273719837",
+   "MobName": "stoneskin gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2155e8e1-b43e-5b8f-b16c-781dfeb422dc",
+   "MobName": "tomb spider",
+   "LootTemplateName": "family insect 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a3f417e-e68d-5e34-9cb3-85f2b4b0833b",
+   "MobName": "Somahryk",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "583dba15-9e59-5fb7-9d9d-568ba8767486",
+   "MobName": "outcast strong fist lurker",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3a291499-bdc2-5d0f-9c7b-aed5787f3bc3",
+   "MobName": "outcast thallooniagh brawler",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fde80ecb-7da9-56a8-b613-4d66828048f3",
+   "MobName": "outcast thallooniagh brute",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d8d0d5ad-6c3d-5a02-8f1a-9ec13dfe530a",
+   "MobName": "outcast thallooniagh witch doctor",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "acfb1f81-66d9-5382-b095-841ecd965993",
+   "MobName": "outcast strong fist priest",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b06f1a6b-4371-5b74-8da3-cb3cb7cccd41",
+   "MobName": "outcast thallooniagh warlock",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "66068293-c24f-5970-98ac-0e628157b345",
+   "MobName": "raving evocator",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cf961d80-25fd-5fb7-b73e-f3c2445a4b2c",
+   "MobName": "outcast strong fist protector",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "441f25ff-da28-55cc-a72a-77b0215997bf",
+   "MobName": "outcast thallooniagh rogue",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cdc6ccd9-0f74-5abb-a9bf-176fe5654310",
+   "MobName": "maniacal spellbinder",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a76b06e-613f-56f8-90a6-5ef16ceb8f43",
+   "MobName": "raving conjurerer",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a9f363ba-f1f9-5f09-868d-35eef50e408d",
+   "MobName": "outcast strong fist seer",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c565859d-9996-59aa-b354-4b6cd371c041",
+   "MobName": "Frenzied Squire",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "90bcf4ab-942c-5537-999a-7f54125e71c4",
+   "MobName": "Rinvan",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "11c88f73-e814-5367-a53a-5a68099f4806",
+   "MobName": "Outcast Thallooniagh Attendant",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "235ef5c3-713f-5cfa-bdb3-01cf76d2df68",
+   "MobName": "Bonebreaker",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8d49b1d9-5463-564f-acb4-94f23fa3a8d2",
+   "MobName": "maniacal honor guard",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b286699b-4357-5ac1-8dba-d314727de910",
+   "MobName": "outcast thallooniagh shaman",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e4a3e864-86af-5360-9da4-fc9fffe06dce",
+   "MobName": "Kardarak",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fc567d00-7fa9-50f6-9835-29f2dbb6f72c",
+   "MobName": "Shaman Garals",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2caeacb7-81cf-502a-9818-1167f9c4dd20",
+   "MobName": "Joral",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6620939f-53c2-539d-bd18-12abfe6e6be3",
+   "MobName": "possessed raider",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "88b0f919-90fb-5170-b1e5-863d7810a31d",
+   "MobName": "possessed harvester",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1afd29e1-15d3-5c06-ba5b-8853c5fa632d",
+   "MobName": "outcast bloody axe stoneloader",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ac2f6775-9157-5a4e-a590-182bbb5a8391",
+   "MobName": "outcast scratchfoot sneak",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8635a0be-a490-583d-bb8e-05bb9eafc548",
+   "MobName": "outcast bloody axe siegemaster",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "41fe012b-96f3-592c-b02c-25b64297a1c2",
+   "MobName": "floating energy",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "31ff8991-50db-5fbb-9f62-5faa73a47b82",
+   "MobName": "field catapult",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dcfde627-7730-59f3-9ac5-99d3c7545e30",
+   "MobName": "outcast bloody axe guard",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b038bfa9-7a2a-56dc-a528-ced2969ff91a",
+   "MobName": "pleurotus",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ed01eb23-669f-53ee-95b1-a48c7985a06f",
+   "MobName": "crazed monitor of ymir",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "caa5062b-d47b-5981-b135-4c77da5f1046",
+   "MobName": "outcast blackmane skulker",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c13a4725-b7d1-5dc8-bf88-4bc4dcc0cfaa",
+   "MobName": "crazed primordial",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4f51b3b1-6d39-5ece-ae68-2452b4a16a91",
+   "MobName": "crazed runecarver",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "73abec7e-0050-5f5b-ac8f-3781e72ea4b6",
+   "MobName": "glashtin stabbzu",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9629e0ce-38fe-5ead-9d23-566b1719169a",
+   "MobName": "outcast broken tusk conjuror",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6b07157b-b175-5a7c-9820-44851b2e6a0b",
+   "MobName": "disturbed marksman",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b9cd9259-3c75-5bc9-8c74-6ace8bdbe01f",
+   "MobName": "crazed runemancer",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bc54c84b-922b-5ced-bb1a-99cbcf26067f",
+   "MobName": "ferocious mind weaver",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1699c9fd-be2a-554a-b7b1-bedef5b48d6a",
+   "MobName": "glashtin riveter",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a0929f03-d53f-547d-b351-b701f728c339",
+   "MobName": "terracite stalker",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "efb10e19-034b-5e17-b708-bb7d241e46ff",
+   "MobName": "soft gargoyle",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "df47aef3-d56f-5295-b210-95d7e7d1028d",
+   "MobName": "maniacal runic adept",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b0e1fcf5-d7f9-538a-b222-2bb7e4299ecb",
+   "MobName": "outcast broken tusk diviner",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5cb41a09-dc06-59d6-9f06-16273598a69f",
+   "MobName": "half orc overseer",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a1d83d94-7b8f-5af4-95a6-eb355c2a0d1d",
+   "MobName": "glashtin eldah ozzozzin",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "573bf78a-1bd8-54c2-8762-28ad85a34cdd",
+   "MobName": "crazed priest",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6a185975-cbee-5f0d-a845-fe00031a5350",
+   "MobName": "outcast bloody axe battler",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "240ab595-78d0-56c3-8010-5b93ed92163b",
+   "MobName": "disturbed possessor",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3bbe5956-53d1-552e-9b2e-227419f54652",
+   "MobName": "young gargoyle",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "71387dd1-2284-5470-b5c7-e704679cc102",
+   "MobName": "glashtin gargoyle trainer",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a1d87ef3-d829-5c13-b450-466b3867f0b5",
+   "MobName": "glashtin gargoyle beastmaster",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d8275fa0-690f-55a7-87a1-ee7f5816fe08",
+   "MobName": "deranged sorcerer",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0c4ff587-8cf2-5e1b-8849-4c2b5e879256",
+   "MobName": "crazed tale-spinner",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8c45de17-fd13-501b-a12e-0cfbb4bbf5dc",
+   "MobName": "glashtin goblin sprout",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "653f4675-89a6-5490-8a53-010ef393c1b2",
+   "MobName": "deranged cabalist",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c0177367-5031-5837-b4dd-204c390bffae",
+   "MobName": "glashtin forger",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d9315bb2-1296-5ba5-aa81-2476bb512295",
+   "MobName": "chiseled gargoyle",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "03610805-5de2-5fb5-828e-b7b7489a7bee",
+   "MobName": "noxious gargoyle",
+   "LootTemplateName": "family elemental 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "12663833-6cda-5558-b613-abd9854b25a3",
+   "MobName": "fiery gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3a5b5911-a483-55de-9b13-5b9eb9491b6b",
+   "MobName": "Fiorion",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "864fa621-36c9-5a76-b8e6-4e7db66461d0",
+   "MobName": "basalt gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ad33dd6-5d1c-5d9f-9e7f-e7e8984db4e1",
+   "MobName": "frenzied magus",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7db43f02-3537-5d10-991a-a3da1d96f42d",
+   "MobName": "flaring gargoyle",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1f4a74e2-7524-5c4f-bfb6-9983bb2ac1dd",
+   "MobName": "crazed elder",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a1186baf-fa8e-5b3a-9893-7694a6bd991f",
+   "MobName": "Kobold",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "97af1897-4b1e-586d-85df-bffe236d26fb",
+   "MobName": "glashtin root harvester",
+   "LootTemplateName": "family plant 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6a38f747-cf68-5453-aed0-2f10539a4b8b",
+   "MobName": "aged gargoyle",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5bb1d327-fa2d-5dcb-9f06-4765167b2ad5",
+   "MobName": "brittle gargoyle",
+   "LootTemplateName": "family elemental 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "74859f1e-f4d4-5691-997e-6d84bcc397a5",
+   "MobName": "terracite spore warrior",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f8b8bf1-96e4-5713-a997-c8101ae18085",
+   "MobName": "terracite spearman",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "43b013b5-14e2-5877-839c-c4bd630d01ad",
+   "MobName": "Klydor",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d0f1cf6a-bf47-5a7f-bdfc-b1fd0dd368b8",
+   "MobName": "Narvek",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ea8f6a6d-729c-5838-b067-25057ccf279d",
+   "MobName": "crazed tribal warrior",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "842ba4d5-7672-53ab-8ff1-ac46f6d5af6f",
+   "MobName": "glashtin toolmaker",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "947ca87d-64de-5c88-bb72-93bf8fc32991",
+   "MobName": "craggy hide gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b5fe1d67-e040-5ce2-9005-34dbe2ecbf8c",
+   "MobName": "terracite bladedancer",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "17433fc3-c3af-53e9-aaab-9f6a94203959",
+   "MobName": "Thotan",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "23e2c5bf-c79e-5e5d-aaf7-7558fb9835f8",
+   "MobName": "outcast broken tusk conscript",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5192d517-c571-5dec-bf23-7f8f0c841312",
+   "MobName": "disturbed gladiator",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7ce67602-5cf6-52bf-8162-07dd9ef38c7d",
+   "MobName": "canis ater dam",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "83a9539d-5c15-5105-b2d8-2f05e4dd95a8",
+   "MobName": "half orc executioner",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ca8a6315-b84b-5a13-954a-52fe89f1137f",
+   "MobName": "terracite impaler",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "640a1346-7ccb-5936-9a15-09d4cd20bcce",
+   "MobName": "Lytami",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7dcdc983-4ffd-549d-9a31-a92e7628a2fc",
+   "MobName": "glashtin quencher",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7ae283be-e98e-5a18-86c2-6f8a9846cae2",
+   "MobName": "terracite spellsinger",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "321f53bb-3b3b-5c0f-9ba3-c1c4f9d558ef",
+   "MobName": "frenzied soul renderer",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3cbbd1b3-ab1f-5a9c-ae7f-e3167bc6598a",
+   "MobName": "glashtin scrappah",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "67ca0cf7-727a-55af-9e68-f8d5ef36daf4",
+   "MobName": "amber simulacrum",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8173ad46-06ce-5413-a462-e69725fc91d1",
+   "MobName": "fungal minion",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "616964c8-6931-506e-985e-ec56f0fec47e",
+   "MobName": "Herym's Kin",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "95f994db-7aba-5179-9a77-8ec03afac351",
+   "MobName": "glashtin toiler",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "217c2367-c460-5d40-b6d6-774b823a0335",
+   "MobName": "terracite healer",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8f53c3ad-666a-5d53-95bc-46376fc80696",
+   "MobName": "pleurotus ",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2696cc0c-24c7-539b-9376-2a1e70d6fe58",
+   "MobName": "glashtin l'il gob",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "29c91980-81dd-5f67-aa3e-c3de9a984e48",
+   "MobName": "canis ater brawler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "42dac9a1-70eb-56a3-83fa-f5e1a5806e21",
+   "MobName": "glashtin artisan",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ce193f6d-26be-5d80-98fe-9283ce5c8392",
+   "MobName": "Disciple Jozz",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e9b20f26-3825-56ca-baf0-f4bb6dcc39f2",
+   "MobName": "glashtin master metalworker",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4281feeb-0ee4-534f-acf1-fcdbb0a5139d",
+   "MobName": "glashtin stoker",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2168b86a-e88c-5b3a-93f2-58aa5b4b095b",
+   "MobName": "outcast thallooniagh earth caller",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "106a07bf-5dab-5dc5-b811-8f2ad779f49d",
+   "MobName": "glashtin armorer",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f5e85175-cb7f-5bc0-9deb-e53319c6b145",
+   "MobName": "tortured hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "057c343c-7047-5b21-8226-9221fcb160bd",
+   "MobName": "gnoll forager",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f34e457f-c156-5440-8a75-a457acca47d3",
+   "MobName": "glashtin rootjack",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5ce3c136-bdb3-595d-9a6a-1625edbab087",
+   "MobName": "terracite harbinger",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8aab4075-7eef-5cb8-acd3-b4bf99676ff0",
+   "MobName": "terracite hunter",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "828165da-5b52-5ab4-bbe3-cc24967075c5",
+   "MobName": "Salome Igara",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "59f7957e-c651-5ca1-8907-b496b8078f1a",
+   "MobName": "Ru'ua",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c095b79e-2ecd-5b46-a0c1-6e420b701f12",
+   "MobName": "Chieftain Khurunos",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b6b5aa76-1e27-575e-b433-6783b32fe2b2",
+   "MobName": "glashtin anvil polisher",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "86e52419-0922-50b4-8ee5-4491971de518",
+   "MobName": "canis ater nursemaid",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ede2c545-cb20-5450-abe1-e5cb417ede10",
+   "MobName": "crazed general",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6fee7416-b08e-51b9-963a-0a2ba8c6d816",
+   "MobName": "crazed skirmisher",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5041efe8-637b-585c-911d-033939b97884",
+   "MobName": "possessed hound youth",
+   "LootTemplateName": "family animal 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "04bcb937-55cc-561e-a9f9-7845904578c3",
+   "MobName": "gnoll pup",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2ab81a84-e280-5957-8035-9f55799dac98",
+   "MobName": "bereft gargoyle",
+   "LootTemplateName": "family elemental 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a8d11b5e-3bdc-5d9f-a473-6483359feb0b",
+   "MobName": "torchlight",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c70b5a45-ac23-5daa-9eb5-e4b8c022a7f1",
+   "MobName": "gnoll protector",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a424baab-5288-5ea2-b1f5-4cb7ee3beee2",
+   "MobName": "demented cabalist prime",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d79e09e1-2ddf-5f6e-aafd-c1da06ae0466",
+   "MobName": "gargoyle warrior",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6b2a37ef-ff8c-558a-afe3-52ed21796f00",
+   "MobName": "terracite champion",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6b4f4b3c-2e9e-54ca-a41c-08ee5c62bc29",
+   "MobName": "disturbed prodigy",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "efce940a-b9d7-5a32-907f-487f8ac36e0e",
+   "MobName": "forest emissary",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "17240ee1-69be-5c53-be1e-731b02b4dd2f",
+   "MobName": "outcast scratchfoot looter",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "63920f53-1fc8-583b-8031-63ae8cf4b642",
+   "MobName": "outcast thallooniagh seer",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "213d6f04-ceb5-5b69-8831-38134d0dca67",
+   "MobName": "maniacal squire guard",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "54c03173-6aab-5810-bbfc-e39fb6b90d60",
+   "MobName": "glashtin hobnail",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ff432bc0-a43b-567f-a15b-f1aba313d9b2",
+   "MobName": "possessed deceptor",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "522b2582-f9b6-5e2b-b48d-d68653ad217e",
+   "MobName": "Calum Strathers",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e010ff1a-5d18-5ce9-abe3-7f8017f33897",
+   "MobName": "outcast bloody axe seer",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "10c60b8b-c4ea-55c8-b5f3-24904efd10f6",
+   "MobName": "pitmaster guard",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f9a65ad2-f541-506f-893f-6c387d9b3c59",
+   "MobName": "haunted entrancer",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0c62feb2-1f9e-5bd2-b1d9-8df175e8c0f2",
+   "MobName": "outcast strong fist gruntling",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "952165b1-11cf-54c8-894f-1ab71db47ac9",
+   "MobName": "Onaru",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5353b1cc-ac8d-5637-bce1-deab589460a1",
+   "MobName": "Outcast Thallooniagh Augur",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e113f89b-8939-598a-94c4-9137bd501343",
+   "MobName": "Saetere",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7bcf826f-b30b-5a9c-bd86-d733e4946fc3",
+   "MobName": "Docile Cave Spider",
+   "LootTemplateName": "family insect 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "569f48e1-8290-5734-a9a1-a8b4ec08f8bc",
+   "MobName": "Disciple Kelf",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5ca64cdd-57ae-5251-bead-7cf76faadab4",
+   "MobName": "outcast thallooniagh gruntling",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ce9d0c07-b49e-5282-acd1-e03780b3602c",
+   "MobName": "fungal minon",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "62a28398-7bc5-5bdc-8e33-9b2b5588adc9",
+   "MobName": "fanatical shadowblade",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fdac645f-aa74-54e3-9f6e-1ce1df2cc37f",
+   "MobName": "crazed hymn weaver",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "359f152c-0f9d-5a0c-ac9c-f3ff3fa59c43",
+   "MobName": "fanatical runemaster",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ceb7614d-53e1-5e3c-b35d-1e7c44ee3f21",
+   "MobName": "summoned gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4403bd5a-57e0-5786-a953-39cef745d3aa",
+   "MobName": "berserk hand of Tyr",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b8556c5f-b3c2-56dc-9528-3d3e417347bb",
+   "MobName": "glashtin smith",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "10e043fa-9a2e-5e9d-9b10-97b69629e3a2",
+   "MobName": "outcast thallooniagh channeler",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e3dad775-475f-541a-abca-ec75718975fd",
+   "MobName": "darkstrike gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dfaf4a86-8518-5dfb-9e2d-2716cc99fc14",
+   "MobName": "Lucint",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ca811c4e-1202-5f9e-814d-d6dea368ceb0",
+   "MobName": "maniacal prophet",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4d953912-6b2b-5869-a9bc-5bc7c4ec2189",
+   "MobName": "terracite scout",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "251c8631-969a-57ef-a731-5c31c09b4b6c",
+   "MobName": "bloated cave spider",
+   "LootTemplateName": "family insect 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2c66e44f-d29a-58e8-bff0-466c1a8e3d4b",
+   "MobName": "outcast scratchfoot battler",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7f7ec194-4609-58ea-9c3b-3087db284a98",
+   "MobName": "possessed kidnapper",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2296fa8a-0b0a-5ed3-ad58-3601a4222801",
+   "MobName": "Chieftan Khurunos",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fad81da4-c383-5d84-9d16-df143ae207fa",
+   "MobName": "Lomer",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c360e2cd-4274-5e85-9d18-75da9784a00b",
+   "MobName": "glashtin watchman",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f70649f0-e4af-503a-956b-89c8227a49c8",
+   "MobName": "terracite skald",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1fbb045d-46f3-54d6-9569-d94a6ff0f772",
+   "MobName": "terracite grunt",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "07a8b60a-d889-5812-a4e5-6a6a3319c73f",
+   "MobName": "fanatical warrior",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7d6e5927-ad58-5c72-b3f8-b3858033c6a7",
+   "MobName": "feral hound",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cf7d53a7-2020-5298-8124-fe37056d35a2",
+   "MobName": "fanatical hunter",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7ff965f0-1881-5249-9705-cab334a31668",
+   "MobName": "Paavu",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "13c43a65-bd7a-5add-9e8f-3724642f0090",
+   "MobName": "plutonian priest",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "25e99162-656c-5026-88d3-525419d2ecf2",
+   "MobName": "plutonian overseer",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "53d30cc5-d290-5f33-982b-85796ad21f62",
+   "MobName": "tenebrous prelate",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b00cf0aa-1fe6-5ea0-932b-58e56c74182e",
+   "MobName": "tenebrous infantryman",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f43ec40f-eaf7-5505-af35-03695e3c385d",
+   "MobName": "plutonian blade",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e1d9d323-f2ce-5163-a44e-d7df178ba6a4",
+   "MobName": "tenebrous brawler",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9ff41af0-6271-52aa-802f-c7e49f3b98a6",
+   "MobName": "plutonian lurker",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2cd36f03-da57-50cb-b1b2-d10bd19d1146",
+   "MobName": "plutonian alchemist",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ef5cb8d9-1579-5727-8419-e63f1c566d27",
+   "MobName": "tenebrous imbuer",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e0b4bf9c-f0fc-5277-81ab-dc6fc8a7e20c",
+   "MobName": "tenebrous soldier",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bac9177b-cee1-5e54-afad-081d92b4ec09",
+   "MobName": "plutonian enforcer",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "90078960-b434-5403-bef6-19e6dc540b38",
+   "MobName": "plutonian invoker",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ef414534-1601-5958-b63d-5e208e5e1e33",
+   "MobName": "plutonian blackguard",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2dd8f21a-278a-5e24-993b-a98827137231",
+   "MobName": "tenebrous reaver",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bedbcef7-8211-5db7-80aa-b3c7476ca538",
+   "MobName": "plutonian assassin",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "205b33ac-7db2-5f8c-bb73-35af04c740dc",
+   "MobName": "plutonian medium",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "24342bf2-6bca-502e-a820-57c3b821f410",
+   "MobName": "plutonian ritualist",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3c395938-bd6f-50d7-8cf8-924504de557c",
+   "MobName": "tenebrous blue hand",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c4a6f2fa-570b-5dae-aa35-5a68f681f252",
+   "MobName": "plutonian shade",
+   "LootTemplateName": "family undead 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1feebf42-68ff-5ecf-8cad-2e0a88c0afdd",
+   "MobName": "plutonian herbalist",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "000144f6-c9c8-5d76-8980-1797c2800a15",
+   "MobName": "tenebrous curate",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2a96fdbb-eaf3-58e6-bf78-873c231ccc30",
+   "MobName": "plutonian soothsayer",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "057389c1-7f26-562d-81c4-9434400ab055",
+   "MobName": "plutonian warlord",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d90613fd-b526-58c7-a7a0-1d7a1aff18b3",
+   "MobName": "plutonian temple guard",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a46280f9-50f5-5328-b346-ac66cd62e9bb",
+   "MobName": "plutonian acolyte",
+   "LootTemplateName": "family humanoid 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a2fd648e-6384-5896-ae22-cd4b54a64405",
+   "MobName": "tenebrous protector",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b71bf69b-a838-576d-9829-60742e0ca71e",
+   "MobName": "plutonian temple patron",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d7d20bff-0b70-5f07-8439-0ab17edb2892",
+   "MobName": "plutonian high priest",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c36f9bc2-1abd-51e4-a17d-3eafebffd7a4",
+   "MobName": "plutonian wizard",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6985a6e9-5329-5fdc-b724-61609238f9ee",
+   "MobName": "tenebrous elementalist",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b5267682-5282-50e0-bfb1-ab6656fb3067",
+   "MobName": "tenebrous assassin",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91b97476-5428-50de-8fcc-a342dd3a4348",
+   "MobName": "Priest Krecik",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9949d800-2ea6-51a5-99e4-d0ee36fc7b1d",
+   "MobName": "tenebrous spellbinder",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6162d441-f1a5-5d96-b41c-335e45279612",
+   "MobName": "tenebrous creator",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "26f4e9b4-a426-5bac-abf1-40cb8850245a",
+   "MobName": "Kalis the Shade",
+   "LootTemplateName": "family undead 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c41e3116-4722-50c1-8355-816bdb588189",
+   "MobName": "High Priest Aulus",
+   "LootTemplateName": "family humanoid 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1bd5012c-5a10-588f-a410-a8ec627ff4f0",
+   "MobName": "terracite protector",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "760b33c5-7369-55c8-af83-76cfdabf1ff1",
+   "MobName": "Bror",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6b4e72a0-6fbc-5c44-b168-a99fa7b08140",
+   "MobName": "obsidian gargoyle",
+   "LootTemplateName": "family elemental 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "75c2064e-aca3-562e-84e4-bb3114a5245c",
+   "MobName": "canis ater shaman",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e9b4ed91-fd1a-5aa8-80e4-ae417a9664a9",
+   "MobName": "afflicted possessed inconnu",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ea8706f3-5181-55fe-a7b6-7628a174719c",
+   "MobName": "canis ater pup",
+   "LootTemplateName": "family animal 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "25d24d87-a830-5267-ac30-c2f7bfe62bf8",
+   "MobName": "canis ater spearman",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "534e873c-c05f-52b2-837a-64ee04b8668f",
+   "MobName": "haunted priest of Arawn",
+   "LootTemplateName": "family humanoid 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a9578afc-d58b-52a5-b9fa-96ffb5c28617",
+   "MobName": "half orc advisor",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5c4f1395-77cf-5f51-a748-e3a010a3937a",
+   "MobName": "canis ater skirmisher",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7d9293e2-a718-5fdc-90ab-6007b411cc6d",
+   "MobName": "Warboss Gorndran",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5b7748ad-3ca9-5ac1-a462-85f0dd76e811",
+   "MobName": "half orc assassin",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9778fdb4-ed4a-5290-8b90-eb1ddc7091d4",
+   "MobName": "Alphonse DeMettie",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2bf118c8-1ad9-514f-8369-e58ea61e7980",
+   "MobName": "genoite",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d7720919-d546-5b91-9a4f-ad99d428d80f",
+   "MobName": "half orc eliminator",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "054d0c00-1700-533b-93a6-c924709508a4",
+   "MobName": "Thranok",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1c4311e6-9fc9-541e-88e7-889a8481290d",
+   "MobName": "blazing gargoyle",
+   "LootTemplateName": "family elemental 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f6b5c7bd-bbc0-5777-8870-78712c7180c4",
+   "MobName": "raving conjurerer guard",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2fac92c7-83b7-5f4b-9180-497b227def2a",
+   "MobName": "spouting gargoyle",
+   "LootTemplateName": "family elemental 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0cc81346-b5a7-514e-a8fa-f8e35256a880",
+   "MobName": "Strong Fist Ambassador",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5608df0e-8de3-57fb-8164-5924f8c659fb",
+   "MobName": "General Gar",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a21ff5f-cfa4-56d9-b329-1c7db2db24cc",
+   "MobName": "Brugar",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2dc55d24-0af0-5c65-b017-bdcf2c5740c5",
+   "MobName": "Guardian Daul",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e874bebb-d09d-5b97-b805-b222ea0ac211",
+   "MobName": "gnoll sire",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ac17b689-459c-5247-b500-362a83d624b8",
+   "MobName": "gnoll scavenger",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ab99db46-a248-5043-911f-daadbe2f7ccc",
+   "MobName": "Emissary Conlen",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5e05f62b-7a34-5b29-a337-428d76465105",
+   "MobName": "Sesur",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0595648f-e946-5f51-bcdd-b084de830e16",
+   "MobName": "Kraid",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8c980fe3-d41e-5cfe-8c51-f93341228f91",
+   "MobName": "Kuulo",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "18dee876-ec75-5324-ad76-022d075a53d7",
+   "MobName": "Chef Brakle",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "353fdd10-cb3f-5982-a8a9-5269a05ddbc8",
+   "MobName": "terracite guard",
+   "LootTemplateName": "family humanoid 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d01ab12e-118c-5475-b19c-487a158bd4d9",
+   "MobName": "crazed guard",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "84557896-37de-539a-8932-e6fbd82874b1",
+   "MobName": "soothing gargoyle",
+   "LootTemplateName": "family elemental 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "73e59faf-f7a6-5f68-971d-0738a55846d0",
+   "MobName": "Disciple Viln",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f87fb989-7901-5ef5-83f9-71ed2f083984",
+   "MobName": "Karridas",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "39afd716-0bed-5720-b7fb-acf6914b4a5a",
+   "MobName": "Tronsil",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a38f449-e704-54ce-a437-a4aae6281b98",
+   "MobName": "gnoll dam",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e6baaa42-219f-5412-8b64-d86d0eef856c",
+   "MobName": "half orc eradicator",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "520aeec3-a518-59f6-8d83-248caf1ddcfc",
+   "MobName": "Disciple Borsh",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "007c58f5-0444-59d3-8e19-e308fb4334ed",
+   "MobName": "Cerra",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4fa32543-6eab-53c5-9808-0ad5ffece901",
+   "MobName": "half orc bandit",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b939f114-c0b1-5710-a61c-22ea6ca95c34",
+   "MobName": "Viedyn",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "76e53aa2-026b-58f3-8e82-86fb14fe25fc",
+   "MobName": "orb trail",
+   "LootTemplateName": "family generic 9",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d17533eb-8ddf-5f89-8a0a-7d0e3bda6cdb",
+   "MobName": "exiled darkfang mystic",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "93f69dd9-0640-57ba-bf40-4da768f8368d",
+   "MobName": "darkwood gatherer",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dbc00ec6-497b-572a-bdf5-dce08cee1971",
+   "MobName": "tenebrous wizard",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f4d38df7-7c6d-5ae2-b823-244159b617d2",
+   "MobName": "half orc priestess Oshka",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "68bd1bdf-8ff5-5cfa-bdc7-ecafeb198fc4",
+   "MobName": "half orc lurker",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fccb27bb-d013-595d-bba7-34b565fdfaf7",
+   "MobName": "green blud prisoner",
+   "LootTemplateName": "family generic 8",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "342fd60a-0f96-523a-a771-07cbca91c1e0",
+   "MobName": "exiled darkfang wyld",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9179d85a-90cd-5a2c-859b-1fd7255592a0",
+   "MobName": "blackmane wizard",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8b694962-d7ed-5ab4-8091-181deef062a1",
+   "MobName": "broken tusk stormcaller",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7a9ce659-060d-5652-8838-7633b54a6526",
+   "MobName": "darkfang thug",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a805f542-22d6-5127-bc93-ff74e0893aba",
+   "MobName": "green blud shaman",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8feb4aee-7b3c-56c2-b199-b1e5852c4df4",
+   "MobName": "snaggletooth convoker",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "168b4ba4-04e2-5a3a-a371-d75becc232e1",
+   "MobName": "snaggletooth scout",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0325218c-56b9-5f49-a18b-28fa92b3a32c",
+   "MobName": "thallooinagh channeler",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8ad976ff-a733-5be2-9b9d-5e23e868e916",
+   "MobName": "tenebrous mine rat",
+   "LootTemplateName": "family animal 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d2f284dc-bcfc-573d-bfc8-e9c7170cb6be",
+   "MobName": "half orc youth",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9e4152f1-8119-5de4-9bdf-33c8376fbb10",
+   "MobName": "gnoll spotter",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "330d1812-b8a3-5e90-b626-71d0f72dee21",
+   "MobName": "bloodmoon conscript",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2879f006-a865-5dd7-8d65-f9f3e11c2c05",
+   "MobName": "tenebrous guardian",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d0ade02c-611a-5df5-9586-af809a076e6f",
+   "MobName": "thallooinagh witch doctor",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a788fcaa-7dcb-56fa-a5da-e653912887c4",
+   "MobName": "darkwood petty thief",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "79edca95-60de-5d84-a7d5-ebf279f5a03c",
+   "MobName": "glashtin wretch",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a9cb1c49-5636-538b-aeb4-736024839fa3",
+   "MobName": "ghostly darkfang guard",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "279e4696-df63-5b5b-a8c6-d8fdd39723a9",
+   "MobName": "tenebrous legionnaire",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d6e70ab4-dac5-5573-8c1a-63d0307603d8",
+   "MobName": "bloodmoon shaman",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aba848fa-598b-54ba-9b83-73a54adadcd6",
+   "MobName": "snaggletooth prowler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7b56209a-19dc-5c0e-8328-14cb64fe7094",
+   "MobName": "thallooinagh scrounger",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3a792fc2-538c-513e-b974-8ce5645b8033",
+   "MobName": "half orc worg pup",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b45f248f-be98-5064-a3e7-ff7a515f8656",
+   "MobName": "glashtin thundercaller",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ed2842d7-c3c4-59e3-b12c-356c146ecec9",
+   "MobName": "jagged fang wolfkin",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b44933ec-1486-5429-b25b-645c1a2ac55b",
+   "MobName": "blackmane rogue",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fb5493dc-b672-5d73-a6ca-03a663861f73",
+   "MobName": "blackmane ritualist",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "959eb315-2a28-5ece-9801-2588f294e11f",
+   "MobName": "jagged fang sneak",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7d3c854b-3f71-596e-b6c6-b0fe6126816e",
+   "MobName": "tenebrous mine spider",
+   "LootTemplateName": "family insect 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ba7b3765-cb7d-5877-974f-e523762e36e8",
+   "MobName": "darkfang wyld",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f52827d-052a-5a13-947c-32607ca6b2b1",
+   "MobName": "bloody axe archer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9010f9a7-e2d7-585c-b2ea-f8ada2eaacab",
+   "MobName": "thallooinagh elder",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b3fc2ce8-91a2-5667-aac6-f235c889e23e",
+   "MobName": "half orc protector",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8a321815-0aa8-5955-bb42-007f6516b3e6",
+   "MobName": "bloodmoon brawler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "11072971-21ec-55f6-95c0-764dcebf8f1d",
+   "MobName": "plutonian warrior",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4e75f474-f116-5d2e-a27f-1f7fabdc37c0",
+   "MobName": "grayfur ruffian",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c24daf3c-8256-57df-b95b-3430052e4d19",
+   "MobName": "glashtin hooligan",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7e613903-7125-5ac0-8872-0cfdd61c0469",
+   "MobName": "exiled darkfang guard",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b743575a-5403-5739-aa31-bfbffac02066",
+   "MobName": "darkfang guard",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3c59747c-1712-5d4e-a676-30230440e622",
+   "MobName": "broken tusk shaman",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "03c04420-2765-50f7-a761-245588ab91eb",
+   "MobName": "grayfur thrall",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0fd1abc9-4e3d-57d3-a553-cb440a287893",
+   "MobName": "scarab",
+   "LootTemplateName": "family insect 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a6e45ece-2f39-5dde-a8d6-ac98dd8f81ab",
+   "MobName": "green blud slinkfoot",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "637049fe-7d60-5d0a-931a-cf496dc05b05",
+   "MobName": "thallooinagh brawler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c0a0f0de-b096-5980-a3ac-3ec2308c7e6d",
+   "MobName": "ghostly darkfang mystic",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "424391c5-4f23-5eaf-968a-2d6de3859dec",
+   "MobName": "thallooinagh brute",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fd746f48-a74d-5817-a888-329ef7d69a55",
+   "MobName": "blackmane howler",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3b74bc8a-e2ae-58f3-b934-50c3c9a82576",
+   "MobName": "darkwood tracker",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "025c9f15-6537-5ef1-a94e-0c53829b7809",
+   "MobName": "snaggletooth pilferer",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "003df352-61b4-5ef2-b682-0f339d0768ee",
+   "MobName": "broken tusk flameweaver",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2ac368ca-6363-5518-bfc3-8a7b5ff67888",
+   "MobName": "darkfang vagrant",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "375df037-eb8a-51fc-bf4a-59e920f129f4",
+   "MobName": "thallooinagh champion",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7bd71d52-eeb9-5426-9623-de80c177b8af",
+   "MobName": "exiled darkfang thug",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c4fadd26-9725-5293-9691-ae25cf6571d0",
+   "MobName": "jagged fang slave",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0e83493d-4e3d-5362-ae62-103a4a814ca2",
+   "MobName": "half orc grunt",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "18161bc4-eeac-5ee0-92b4-8debec2c4bde",
+   "MobName": "thallooinagh warlock",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4b8b4d9e-92e8-548a-bc50-508d0d60d4dd",
+   "MobName": "green blud witch doctor",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9671b5d9-48b4-5471-997c-2d54818e6b0d",
+   "MobName": "grayfur bruiser",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8347e668-e143-5e6b-9a41-8002363f7b76",
+   "MobName": "energy orb",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "42d88324-33bc-522a-ae84-3f86328785d6",
+   "MobName": "Heran",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "45ad17e6-ee97-50df-b5c4-244f39b5d779",
+   "MobName": "scratchfoot witch doctor",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f057e3e9-d4ee-5e3c-8db8-cc61d3894d04",
+   "MobName": "jagged fang grunt",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "dcf2271b-add2-52b1-94d8-fa90a80219d5",
+   "MobName": "broken tusk skulker",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "85288a29-6354-5c8e-95a9-9ea6dff05b4a",
+   "MobName": "scratchfoot champion",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e9b7dac5-3e62-5e24-8490-c69d6490a302",
+   "MobName": "gnoll youngling",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bf310edb-2fc8-528b-a620-a0c26e8b30bb",
+   "MobName": "darkwood assassin",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "17143efa-367d-5670-8eab-a5161fa8d1fc",
+   "MobName": "scratchfoot warrior",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "25c7286d-4d75-53af-aced-821bec68ef02",
+   "MobName": "green blud archer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b03bfa84-88e8-5d7f-9f20-ae30e6d388ac",
+   "MobName": "bloodmoon footpad",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6d45aa1a-85f4-5999-8adb-acc69749b0fa",
+   "MobName": "darkwood marauder",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e41a80fb-e505-55ef-bf06-107e40cd6752",
+   "MobName": "scratchfoot herbalist",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c4c2d7df-477d-546b-a03f-e7e4f8870947",
+   "MobName": "bloody axe priest",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f97f35f2-ead9-5847-9425-a75d80d67fc6",
+   "MobName": "bloody axe seer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f2682fc8-0bf5-563f-be86-eedb3fc69907",
+   "MobName": "Bjalnor",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cc41ce5e-3c06-5083-909d-cc61a08bcad3",
+   "MobName": "snaggletooth scrounger",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d18e091a-bca8-5280-a615-5363d430e67e",
+   "MobName": "grayfur shaman",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "773179e6-0654-54ef-91ae-2484d5658ffb",
+   "MobName": "tenebrous stalker",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "254eb5c3-959e-5df3-b9d0-920ab8296877",
+   "MobName": "tenebrous spawn",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ca1c4481-f04b-5a37-a01f-a0bd44cd2ae8",
+   "MobName": "snaggletooth mender",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3dd54f50-f8c4-5bea-a983-58d22176600e",
+   "MobName": "tenebrous zealot",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "61373a09-a196-5870-aa14-d3225f68b223",
+   "MobName": "tenebrous deacon",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "57ff6f2f-f534-5965-8c7f-99a8e301a678",
+   "MobName": "darkfang apprentice",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "028dc829-4d6e-5e8c-b8fb-be48f3b095a5",
+   "MobName": "tenebrous infiltrator",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9a8fbedf-c563-5eea-ba8a-f2bd664fa6e3",
+   "MobName": "snaggletooth enhancer",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2655be44-2256-5932-aef4-c7c4dc65d76d",
+   "MobName": "tenebrous priest",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "82828792-201b-536a-8b82-cb3d09a8a75a",
+   "MobName": "tenebrous channeler",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7192a276-6d3e-5b29-9ab4-3774c2fb0e85",
+   "MobName": "tenebrous doomguard",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "543a77f9-bab0-51ea-a6d3-77bc1efaa4e1",
+   "MobName": "tenebrous invoker",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a6d9dbe6-9f16-5cfd-9268-2fb5b01172c2",
+   "MobName": "snaggletooth scrapper",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2b5502fe-6116-5923-8ddf-1957ee1b5413",
+   "MobName": "tenebrous high channeler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "701f4a95-bdbe-5a87-8566-816a61648787",
+   "MobName": "snaggletooth battler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7445bfa8-e938-5d40-8293-2b7b2adbdf3c",
+   "MobName": "snaggletooth exterminator",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2ec72451-cde0-5497-b962-bc2fec6688a5",
+   "MobName": "tenebrous necromancer",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4773725d-5dbd-5159-8c52-f100795dd747",
+   "MobName": "darkfang mystic",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9db6fd7b-00ce-5ad0-bd85-539b66d1d734",
+   "MobName": "tenebrous warrior",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cd59ffe7-d13c-5eee-a3cf-44895a5f93a5",
+   "MobName": "Envoy Rastorn",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b2137b4d-0de3-59f6-834d-20da06ae4fec",
+   "MobName": "Vagrant Gornarl",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2b1f57ed-dfb0-57fc-8c24-3de491f5e9b0",
+   "MobName": "disturbed protector",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7623945c-da6c-5318-8c96-f6f0f083bf14",
+   "MobName": "darkwood green",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "54fd8b32-e832-52f8-8739-ab19ae818897",
+   "MobName": "darkwood youth",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8c7347fa-38dd-520d-a39b-973cc8ec4918",
+   "MobName": "disturbed soul",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b342a1d6-df0a-5fb5-8908-ec81d39162f4",
+   "MobName": "disturbed guardian",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "82a8d475-dff2-5a68-b1df-516774fc03d5",
+   "MobName": "darkwood champion",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "66120ab6-ff78-55df-9969-91ed485f9e14",
+   "MobName": "darkwood contriver",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0eaeebd4-5d91-5b0c-a064-6d2c2ec1e30e",
+   "MobName": "darkwood brute",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "37c3fd75-58b8-59d6-86eb-1fa0730a607f",
+   "MobName": "ravenous soul",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f6074e9b-f42d-5f61-9f68-aa3f36c8a785",
+   "MobName": "darkwood pillager",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "14edd33b-e7cb-5354-8974-26b63384a1d3",
+   "MobName": "darkwood plunderer",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e91e28e7-d9c4-5f13-8fef-91cac62be197",
+   "MobName": "angry soul",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "683c5940-d183-5bb0-8d71-bb5491227a01",
+   "MobName": "darkwood medic",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c9adc515-441f-51f2-813f-e50443dccd25",
+   "MobName": "darkwood foxman",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4e534548-acfb-5196-a3bc-c32b35b67687",
+   "MobName": "earthbound spirit",
+   "LootTemplateName": "family undead 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "eda4faf4-4645-5089-8f3b-cec3e8321a28",
+   "MobName": "darkwood trickster",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "747483b0-8d17-55f7-a8a4-1fb05c290487",
+   "MobName": "shrieking soul",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cc08261e-91a5-5470-9d04-3ad5e556c0a7",
+   "MobName": "darkwood pilferer",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "34c2f4c7-2d36-546e-a35c-352b41dfe2af",
+   "MobName": "darkwood channeller",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "992026c5-eb54-5a4d-9916-1d3b2427e050",
+   "MobName": "disturbed warrior",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "348aa13b-f121-5342-9edc-2cec073c97d8",
+   "MobName": "ghostly excavator",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "22e0b79d-6707-5ef5-abba-44ea8b6b87d0",
+   "MobName": "wicked soul",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d795db74-cb13-5d56-8040-124e68f42ef7",
+   "MobName": "shackled soul",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4796f9b3-9301-57e4-a402-d3943685ac48",
+   "MobName": "Darkwood Captain",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "eb4e7628-c3ae-5dc9-933c-235263904c92",
+   "MobName": "earthbound soul",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f55099ae-cf74-5492-ad28-12fa2d57ff2a",
+   "MobName": "cursed soul",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "537d18ee-9b77-5324-807c-c3b8f56dff63",
+   "MobName": "distraught soul",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c961a81c-034e-5de0-8746-40e54d34733a",
+   "MobName": "Bryandin",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3e6313fa-b303-581c-992e-8980772c5715",
+   "MobName": "wandering excavator",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "588b8d2e-dc48-5ec9-9d63-a6aba45e595d",
+   "MobName": "darkwood lackey",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b47a56bb-aa8f-5196-ba38-27d0d113a162",
+   "MobName": "darkwood vagrant",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7f5bd662-c80c-5445-bd0d-d23cc72f6ee5",
+   "MobName": "disturbed oarsman",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6d06470a-4206-52a8-96ce-914c92131c65",
+   "MobName": "darkwood graverobber",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2d0f76f7-7bf9-53cd-b772-fc6bbf3ff0ff",
+   "MobName": "darkwood forager",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "59a675b9-572d-5ed2-8e2c-b762622263f5",
+   "MobName": "Maiden of the Storm",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "11d29b03-d1d3-5841-a4be-7d645e9f16aa",
+   "MobName": "disturbed magi",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "93a0d122-eaf1-59ed-8f62-97be44dc5b57",
+   "MobName": "darkwood naturalist",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "957ef7eb-02e7-5469-8a09-9b7254045a3f",
+   "MobName": "disturbed mender",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "02698297-abd0-5b40-a3b4-baa73b688e41",
+   "MobName": "disturbed pathfinder",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "83088242-f9ba-5a27-86fd-70f01b9ff076",
+   "MobName": "disturbed knight",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "184399ab-9b55-511e-85dd-e37efecd1941",
+   "MobName": "darkwood seeker",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b669e4d7-4480-502f-af7c-18f6bd4c4c6d",
+   "MobName": "earthbound spectre",
+   "LootTemplateName": "family undead 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "760053c9-2731-5f41-9e21-a48b2af27680",
+   "MobName": "darkwood treasure hunter",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "72bbab0f-d292-5eb7-839e-b275199de448",
+   "MobName": "darkwood disciplinarian",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2ca170dc-5dd8-5dd4-86c3-ba1e6e6207ce",
+   "MobName": "darkwood deserter",
+   "LootTemplateName": "family humanoid 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7c672fd1-8a6d-5b49-aa31-a1ee01631be1",
+   "MobName": "darkwood sawbones",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f26001f5-38c8-5904-8d6c-e8818006284f",
+   "MobName": "disturbed lookout",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "de000a8a-4ed0-5131-b71c-2913cd61e1bc",
+   "MobName": "Spirit of Fralder",
+   "LootTemplateName": "family undead 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c777d3a3-428c-536b-8f4f-b7f4d045cd5b",
+   "MobName": "darkwood trustee",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c41ab90b-ed6b-52b5-b773-8a7de6d3313c",
+   "MobName": "darkwood pugilist",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "26bea642-1813-592f-8316-46e2c78d9c63",
+   "MobName": "Idegir",
+   "LootTemplateName": "family generic 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b23f6e2e-7321-5bbd-92fe-1b7fd9ca103a",
+   "MobName": "baneful soul",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8fed769b-a184-553d-b3ad-1aaebb188c8f",
+   "MobName": "darkwood pagan",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "09d39b40-1343-550a-b4b1-39813615282b",
+   "MobName": "probationary bandit",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "569804a3-81e5-5d31-9b62-df787fce0349",
+   "MobName": "malefic soul",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0b03e3b9-463e-5da2-a848-782e64dcbfde",
+   "MobName": "Maiden of the Spirit",
+   "LootTemplateName": "family undead 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "de791d51-ce5c-5135-bd45-bed79de8ec09",
+   "MobName": "darkwood brawler",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4c8a909f-45bf-5891-99fc-71520a230ad7",
+   "MobName": "disturbed thane",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ed42011c-b367-51eb-834c-57b710bb60c6",
+   "MobName": "darkwood caitiff",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "87b2e672-02d9-586d-be29-e0fd743da0e0",
+   "MobName": "Virthor's Guard",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "00340097-d225-5cc2-921d-b3425c4ad09c",
+   "MobName": "Virthor",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "98e36f09-7241-5359-ad1c-4c2789b4f7bd",
+   "MobName": "darkwood healer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "017ee0e0-aecd-560e-ab38-0400fe782440",
+   "MobName": "Batty Bill",
+   "LootTemplateName": "family generic 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "81e909c4-acac-55b3-9497-df521af36605",
+   "MobName": "darkwood preacher",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d1df58cd-6abc-5351-9ecf-8e288aac5fad",
+   "MobName": "darkwood eradicator",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fc7bf7cc-1301-5fa3-9b48-a370a30a6af3",
+   "MobName": "jagged fang wolf pup",
+   "LootTemplateName": "family animal 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "73b0276e-f3be-5f98-844d-e9a8c1cbce1f",
+   "MobName": "glashtin sneak",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cb863579-c26a-54f8-a80c-61bc1a2d450e",
+   "MobName": "thallooinagh rogue",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1427e072-1747-5c3f-acdd-a17e2011630a",
+   "MobName": "jagged fang wolf",
+   "LootTemplateName": "family animal 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "68b65ad5-c735-5e60-bb0c-230da199a374",
+   "MobName": "half orc marauder",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aa7e8739-a39d-54f6-aeff-5129596ab3ea",
+   "MobName": "jagged fang taskmaster",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "65b2fcaf-4b58-50dc-bd34-fffc2353d9be",
+   "MobName": "half orc worg",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "72a9a90b-16dd-5740-9d47-3c921b68bce2",
+   "MobName": "thallooinagh hedge mage",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "10b22325-0e1a-55cf-8764-792598f62ddb",
+   "MobName": "ghostly darkfang wyld",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "14721f73-202e-5476-bac7-4fc0a3e63386",
+   "MobName": "darkwood highwayman",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8981fc2f-3516-5a4d-a780-a79df60c3880",
+   "MobName": "darkwood enforcer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "4f263540-2e69-5e7d-9c73-0da352227b47",
+   "MobName": "half orc priest",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2b249e40-7158-58a7-8da1-5dc66def0c38",
+   "MobName": "grayfur diabolist",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "82cc44eb-2b48-5a1f-9184-8a96b3c0c2da",
+   "MobName": "green blud bonesnapper",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c433dfb8-e349-5ceb-821f-4d9aac723e01",
+   "MobName": "darkwood bandit",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "98fe31fb-4152-55c3-9ee9-5c56ad1f83af",
+   "MobName": "mine rat hoarder",
+   "LootTemplateName": "family animal 2",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a322a41f-f4fd-523b-ac89-9032bfa636b9",
+   "MobName": "snaggletooth invoker",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "63d0f7b5-bbfa-5b7c-a559-591ca1d30c2b",
+   "MobName": "ghostly darkfang thug",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "834f8d59-276b-5c8d-b4fe-27782b48fb35",
+   "MobName": "blackmane packmaster",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7e11bdc3-c282-5768-89a9-649f3f3e45bc",
+   "MobName": "glashtin bully",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "31fda4c7-6e16-5760-9400-273c7ae23a0e",
+   "MobName": "thallooinagh seer",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e078e50a-e529-5809-850f-9a9360d165e0",
+   "MobName": "half orc seer",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c4632374-a352-56ec-99ff-743f3ccc20e4",
+   "MobName": "thallooinagh oathbinder",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "17bdfa9f-d3d1-5457-bfa4-b82c7d3e409c",
+   "MobName": "green blud warrior",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b8811116-7052-5988-af4b-85ad5ac72e07",
+   "MobName": "snaggletooth obliterator",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ae5df2a4-a1c7-509e-b561-a751abfbc716",
+   "MobName": "thallooinagh warrior",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "5423a5c1-55f5-58da-9e80-e389bd778319",
+   "MobName": "blackmane oracle",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d3b8427b-3e21-519c-a7a1-7f1cc7fef9d6",
+   "MobName": "glashtin forge master",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "de049b42-ac95-536b-b4fb-f1a1dd177c03",
+   "MobName": "darkwood soothsayer",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "fde118d0-ed27-5300-982d-aef304e27485",
+   "MobName": "grayfur elementalist",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cacd348c-c1d2-5b1e-a4cd-4666252e4e5a",
+   "MobName": "grayfur clanite",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9638f280-bedc-5e9b-94c2-ae65a46fd2ac",
+   "MobName": "glashtin delinquent",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "42f44218-74bf-5c38-b8f0-31996401cac7",
+   "MobName": "thallooinagh slinkfoot",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f60f70ac-fbd3-5a1f-8f45-7c4609ad5462",
+   "MobName": "glashtin brewer",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "487a67d3-17a4-5363-a491-c4a8f2b580a1",
+   "MobName": "tenebrous mercenary",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0c7318e5-0c77-57e0-aeb9-bd5cec5a33dd",
+   "MobName": "tenebrous lord channeler",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "18b38750-5ff8-55d4-9dd8-ff9978523f06",
+   "MobName": "ghostly darkfang apprentice",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ad4a8d65-f056-5c0e-8557-58eeb9dc3f9c",
+   "MobName": "snaggletooth shaderunner",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ab233106-b899-535b-94ae-e2c92e87355e",
+   "MobName": "darkwood herbalist",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "69e186de-6b47-51ee-9cf8-fa341baa63fc",
+   "MobName": "glashtin slave",
+   "LootTemplateName": "family humanoid 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "bc90eb88-dfde-5005-9324-20a87baaca4d",
+   "MobName": "jagged fang whelp",
+   "LootTemplateName": "family generic 3",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cadd3373-0caa-5555-8d74-c57ee532482f",
+   "MobName": "ghostly darkfang vagrant",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "076072c6-3156-5a22-8029-c9fb10ca2005",
+   "MobName": "darkwood eliminator",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8c3acdbc-2d64-5bb8-9d0f-f5e060e79282",
+   "MobName": "glashtin overseer",
+   "LootTemplateName": "family humanoid 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6e36330b-fbcf-5fb6-841d-cc528e81dbcd",
+   "MobName": "tenebrous cleric",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "55e4bdd9-77a4-53a6-81da-6e242fd37826",
+   "MobName": "bloodmoon channeler",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e031b770-0ec9-5b0d-aa2f-bd3bc7f93a35",
+   "MobName": "tenebrous watcher",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "62b73d58-8d9e-5c5c-8b28-1b20156184d6",
+   "MobName": "darkwood forester",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d1772f89-3070-5ba8-a39f-0018688174e8",
+   "MobName": "Overseer Zadak",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7ef1c6e8-f6ee-5243-b537-e1495f33af61",
+   "MobName": "bloodmoon warlock",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "2fec73a7-0048-5585-9935-e338fb22ef1d",
+   "MobName": "thallooinagh herbalist",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c84e81c6-1fe0-5423-b811-2dc574c9faef",
+   "MobName": "thallooinagh taskmaster",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3b54541f-e793-5468-879d-28385924f1ef",
+   "MobName": "jagged fang seer",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "58235683-5145-5fe2-a8d6-6ec8fcedfe7a",
+   "MobName": "tenebrous gray knight",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "63f38d24-7cbb-59f8-893d-4af4dd67d844",
+   "MobName": "thallooinagh shaman",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b2b5002b-9262-5379-9868-bbf302127f62",
+   "MobName": "exiled darkfang vagrant",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "420a2ea1-68fb-5739-9702-4e36f5f59e0b",
+   "MobName": "darkwood pickpocket",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8b4670f7-ffc6-5ec0-88de-6411921d3e64",
+   "MobName": "thallooinagh earth caller",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6298a686-b26c-5ab2-947d-8c2aab871b13",
+   "MobName": "Vagrant Kerrzd",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7729747e-101d-5e99-b563-5c37a48766bb",
+   "MobName": "glashtin slavemaster",
+   "LootTemplateName": "family humanoid 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "293fbba3-25fb-5a2d-b967-ef721f7df9e3",
+   "MobName": "Nepenthe",
+   "LootTemplateName": "family generic 7",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ebef70fe-7eae-5ff9-af3b-1ac8bf044cf5",
+   "MobName": "Vagrant Grrnaw",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6b29d4b0-35c6-5bd2-9be9-5cb72a417dd1",
+   "MobName": "exiled darkfang apprentice",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3c0fa918-52f7-5f31-ae9f-e9d6e172dfec",
+   "MobName": "darkwood raider",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e8f3ccba-67da-55ae-a04f-19ff4267c53d",
+   "MobName": "thallooinagh guard",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "61d361f5-98dd-5def-a0c6-060f8b1a91af",
+   "MobName": "Subcommander Klargla",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "63da0dc3-efc7-5d9e-a4d5-b3b028e1a5e7",
+   "MobName": "Councilor of the Darkfang",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "05076980-ac00-58a0-9f16-79f70d3b879d",
+   "MobName": "darkwood lordling",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f9c27bc0-abed-598c-9db4-ec935d77bc79",
+   "MobName": "darkwood ambusher",
+   "LootTemplateName": "family generic 4",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "91149ef1-78ff-5f6f-a1c2-86e64c9e9eee",
+   "MobName": "glashtin big basher",
+   "LootTemplateName": "family humanoid 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "30b4a6aa-3bea-55f5-95ce-1479a6f0bc8c",
+   "MobName": "Phantom Mine Cart",
+   "LootTemplateName": "family undead 1",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1bbb7c79-fd3e-5ec3-a2ab-7d972daf82af",
+   "MobName": "Vagrant Mardaw",
+   "LootTemplateName": "family generic 5",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "eb2c6af0-df70-5e62-b329-8939a3a7bbb8",
+   "MobName": "Quartermaster Shax",
+   "LootTemplateName": "family generic 6",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "55de3798-9f79-54d7-ba62-95ff7ea1642c",
+   "MobName": "Astaroth's worms",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ecd6b5d-3804-5d64-8820-3642216bcb42",
+   "MobName": "fire demon",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "cef53b9f-36a3-5811-923e-4299b0d09e48",
+   "MobName": "Belial's child",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "359a0c9a-b974-5b2d-b145-589608b3bdd8",
+   "MobName": "Aspect of Belial",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e99de547-1e16-5a66-9fe6-4a5efe493a12",
+   "MobName": "Astaroth's frontguard",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0baebf34-dd1d-5c22-a219-a6e5f2222e16",
+   "MobName": "Moloch's spawn",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6af227df-3ca5-50e3-9a03-8123b95ea976",
+   "MobName": "Xaphan's soldier",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "aa61d613-1c6a-5886-ab19-5115980e6ef3",
+   "MobName": "Belial",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "553aceec-d8ac-5aab-9777-246ce7a2ba08",
+   "MobName": "infernalist worshipper",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3532bb59-d6d7-5aa2-addd-fe539e406a84",
+   "MobName": "Eye of Moloch",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "f234b0dc-aa90-5950-97f6-7a1ff135ff24",
+   "MobName": "Chtonic Knight Nexus",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c2c855bb-2eb4-5339-9a4c-55f21e73790e",
+   "MobName": "lesser succubus",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "89421a90-dba9-5b65-86b6-3a478f237441",
+   "MobName": "Earl Torvatus",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "1240475e-2752-55fb-bf2e-5b65b91ed12c",
+   "MobName": "Moloch",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d39ef5eb-7dd0-5ede-b496-01a7dd54ee32",
+   "MobName": "Soremaiden of Asteroth",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "76306d49-8d96-5aaf-b7d6-8e32b29f08f8",
+   "MobName": "Inquisitor Bailos",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "28c3d333-db00-54df-973d-17ded906e68b",
+   "MobName": "Earl Serapis",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ba270c0e-1efc-559e-b72b-f676e873aa28",
+   "MobName": "Inquisitor Dar'nail",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "757717f0-21a6-52f3-abc7-34e3a2060cd3",
+   "MobName": "Chtonic Knight Carabia",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "546a8e35-df88-59ca-b804-ac0077220305",
+   "MobName": "Earl Morax",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3bb36434-27dc-56f5-b017-63990ce6d694",
+   "MobName": "Chtonic Knight Azel",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3d82aa6a-e425-5b46-9039-3b72819660e9",
+   "MobName": "Abaddon",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "639541ea-d4d1-5434-a0a1-a3f49a891595",
+   "MobName": "Inquisitor Admoreth",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0b3acf05-1f06-589e-89f0-602297ec4313",
+   "MobName": "angry cave sprite",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ec036c69-7241-5f1a-887b-84578d434235",
+   "MobName": "Chtonic Knight Beleth",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ac575616-7b54-5568-9c12-92973c5533fe",
+   "MobName": "Chtonic Knight Zalar",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b3cd3000-cede-56c7-b6e4-31bcdf220fea",
+   "MobName": "Uamhas' Brood",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "ffe7a2c7-509a-5d04-b005-b095751ce745",
+   "MobName": "Uamhas",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "47e87600-308e-5d33-91f7-aa634b98e9ad",
+   "MobName": "Uamhas' Child",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "6ed19339-cffe-5db9-97d0-a052794dd844",
+   "MobName": "condemned infernalist",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a852a29e-a677-5cac-a41b-f65726290969",
+   "MobName": "master infernalist",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c2f9fc23-9c41-527d-84b4-9ef7613f09a4",
+   "MobName": "Aspect of Uamhas",
+   "LootTemplateName": "family generic 10",
+   "DropCount": 1
+  }
+ }
+]

@@ -652,12 +652,23 @@ namespace DOL.GS.ServerRules
             if (living == null || item == null)
                 return false;
 
-            GamePlayer player = living as GamePlayer;
-            IGamePlayer playerLike = living as IGamePlayer;
-
             // GMs can equip everything
-            if (player != null && player.Client.Account.PrivLevel > (uint)ePrivLevel.Player)
+            if (living is GamePlayer player && player.Client.Account.PrivLevel > (uint)ePrivLevel.Player)
                 return true;
+
+            return CheckClassAbilityToUseItem(living, item);
+        }
+
+        /// <summary>
+        /// Whether the living's realm, class and skills allow the item, without the GM pass
+        /// (artifact scholars offer a GM only the versions their class could use).
+        /// </summary>
+        public bool CheckClassAbilityToUseItem(GameLiving living, DbItemTemplate item)
+        {
+            if (living == null || item == null)
+                return false;
+
+            IGamePlayer playerLike = living as IGamePlayer;
 
             // allow usage of all house items
             if ((item.Object_Type == 0 || item.Object_Type >= (int)eObjectType._FirstHouse) && item.Object_Type <= (int)eObjectType._LastHouse)
@@ -1083,6 +1094,11 @@ namespace DOL.GS.ServerRules
             {
                 GamePlayer player = pair.Key;
 
+                // Live gave a player who died during the fight nothing for the kill. Their damage still
+                // counts toward their group's share, so the living members are paid as before.
+                if (!CanEarnNpcKillReward(player))
+                    continue;
+
                 lock (player.AwardLock)
                 {
                     AwardPlayerOnNpcKill(player, totalDamage, killedNpc, playerCountAndDamage, groupCountAndDamage, battlegroupCountAndDamage);
@@ -1136,7 +1152,8 @@ namespace DOL.GS.ServerRules
                 if (mostDamagingGroup != null)
                     itemOwners.Add(mostDamagingGroup);
 
-                if (mostDamagingPlayer?.Owner != null)
+                // A dead player doesn't auto-loot into their bags; their group (if any) still can.
+                if (mostDamagingPlayer?.Owner != null && (mostDamagingPlayer.Owner is not GamePlayer topPlayer || CanEarnNpcKillReward(topPlayer)))
                     itemOwners.Add(mostDamagingPlayer);
 
                 if (mostDamagingBot?.Owner != null)
@@ -1676,22 +1693,84 @@ namespace DOL.GS.ServerRules
             killedNpc is Keeps.GameKeepGuard or GameBot ||
             killedNpc.Brain is IControlledBrain && AutonomousBotRealmPointRewards.ResolveRootRewardOwner(killedNpc) is GamePlayer or GameBot;
 
+        private static readonly IGameStaticItemOwner.OwnerEqualityComparer _itemOwnerComparer = new();
+
+        /// <summary>
+        /// Who tries to auto-pick a drop up, in order (loot redesign phase 1): the participant the drop is meant for, then the
+        /// kill's owners by damage, each once. An autonomous raid share keeps its own split, and a dead player is skipped.
+        /// </summary>
+        public static List<(IGameStaticItemOwner Owner, bool Intended)> PickUpOrder(GameLiving intendedOwner, IEnumerable<ItemOwnerTotalDamagePair> itemOwners)
+        {
+            var order = new List<(IGameStaticItemOwner Owner, bool Intended)>();
+            var owners = itemOwners.Where(pair => pair?.Owner != null).Select(pair => pair.Owner).ToList();
+
+            if (intendedOwner is IGameStaticItemOwner intended && !owners.Any(owner => owner is RealmRaidLootOwner) &&
+                (intendedOwner is not GamePlayer player || CanEarnNpcKillReward(player)))
+            {
+                order.Add((intended, true));
+            }
+
+            foreach (IGameStaticItemOwner owner in owners)
+            {
+                if (!order.Any(entry => _itemOwnerComparer.Equals(entry.Owner, owner)))
+                    order.Add((owner, false));
+            }
+
+            return order;
+        }
+
+        /// <summary>
+        /// Attempts auto pick up in order; returns false when the item should be left on the ground. Every owner tried may
+        /// also pick it up by hand later. A blocked owner (full bags, out of range) stops the kill's owners from trying
+        /// further, as before. An intended owner who is blocked hands the item on to them. An intended player with autoloot
+        /// off keeps it (personal loot, phase 5): it stays on the ground for them alone to pick up. A bot that turns it
+        /// down hands it on, since a bot never picks up by hand.
+        /// </summary>
+        public static bool TryAutoPickUp(GameStaticItemTimed item, List<(IGameStaticItemOwner Owner, bool Intended)> itemOwners)
+        {
+            foreach ((IGameStaticItemOwner owner, bool intended) in itemOwners)
+            {
+                item.AddOwner(owner);
+                TryPickUpResult result = item.TryAutoPickUp(owner);
+
+                if (result is TryPickUpResult.Success)
+                    return true;
+                else if (result is TryPickUpResult.DoesNotWant)
+                {
+                    if (intended && owner is GamePlayer)
+                        return false;
+                    continue;
+                }
+                else if (result is TryPickUpResult.Blocked)
+                {
+                    if (intended)
+                        continue;
+                    break;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>A player who is dead when the mob dies gets no experience, realm points or auto-loot from it.</summary>
+        public static bool CanEarnNpcKillReward(GamePlayer player) => player != null && player.IsAlive;
+
         public virtual void DropLoot(GameNPC killedNpc, GameObject killer, SortedSet<ItemOwnerTotalDamagePair> itemOwners)
         {
             List<GamePlayer> playersInRadius = killedNpc.GetPlayersInRadius(WorldMgr.INFO_DISTANCE);
 
-            DbItemTemplate[] drops = LootMgr.GetLoot(killedNpc, killer);
-            RunTelemetry.Loot(killedNpc, killer, drops);
+            LootDrop[] drops = LootMgr.GetDrops(killedNpc, killer);
+            RunTelemetry.Loot(killedNpc, killer, drops.Select(drop => drop.Item).ToArray());
 
-            foreach (DbItemTemplate itemTemplate in drops)
+            foreach (LootDrop drop in drops)
             {
-                if (GameMoney.IsItemMoney(itemTemplate.Name))
-                    CreateMoney(killedNpc, itemTemplate, itemOwners, playersInRadius);
+                if (GameMoney.IsItemMoney(drop.Item.Name))
+                    CreateMoney(killedNpc, drop.Item, PickUpOrder(drop.IntendedOwner, itemOwners), playersInRadius);
                 else
-                    CreateItem(killedNpc, itemTemplate, itemOwners, playersInRadius);
+                    CreateItem(killedNpc, drop.Item, PickUpOrder(drop.IntendedOwner, itemOwners), playersInRadius);
             }
 
-            static void CreateMoney(GameNPC killedNpc, DbItemTemplate itemTemplate, SortedSet<ItemOwnerTotalDamagePair> itemOwners, List<GamePlayer> playersInRadius)
+            static void CreateMoney(GameNPC killedNpc, DbItemTemplate itemTemplate, List<(IGameStaticItemOwner Owner, bool Intended)> itemOwners, List<GamePlayer> playersInRadius)
             {
                 GameMoney money = new(itemTemplate.Price, killedNpc)
                 {
@@ -1701,24 +1780,13 @@ namespace DOL.GS.ServerRules
 
                 NotifyNearbyPlayers(killedNpc, money, playersInRadius);
 
-                // Attempt auto pick up.
-                foreach (ItemOwnerTotalDamagePair itemOwner in itemOwners)
-                {
-                    money.AddOwner(itemOwner.Owner);
-                    TryPickUpResult result = money.TryAutoPickUp(itemOwner.Owner);
-
-                    if (result is TryPickUpResult.Success)
-                        return;
-                    else if (result is TryPickUpResult.DoesNotWant)
-                        continue;
-                    else if (result is TryPickUpResult.Blocked)
-                        break;
-                }
+                if (TryAutoPickUp(money, itemOwners))
+                    return;
 
                 money.AddToWorld();
             }
 
-            static void CreateItem(GameNPC killedNpc, DbItemTemplate itemTemplate, SortedSet<ItemOwnerTotalDamagePair> itemOwners, List<GamePlayer> nearbyPlayers)
+            static void CreateItem(GameNPC killedNpc, DbItemTemplate itemTemplate, List<(IGameStaticItemOwner Owner, bool Intended)> itemOwners, List<GamePlayer> nearbyPlayers)
             {
                 GameInventoryItem inventoryItem;
 
@@ -1753,22 +1821,12 @@ namespace DOL.GS.ServerRules
 
                 NotifyNearbyPlayers(killedNpc, item, nearbyPlayers);
 
-                // Attempt auto pick up.
-                foreach (ItemOwnerTotalDamagePair itemOwner in itemOwners)
-                {
-                    item.AddOwner(itemOwner.Owner);
-                    TryPickUpResult result = item.TryAutoPickUp(itemOwner.Owner);
-
-                    if (result is TryPickUpResult.Success)
-                        return;
-                    else if (result is TryPickUpResult.DoesNotWant)
-                        continue;
-                    else if (result is TryPickUpResult.Blocked)
-                        break;
-                }
+                if (TryAutoPickUp(item, itemOwners))
+                    return;
 
                 item.AddToWorld();
             }
+
 
             static void NotifyNearbyPlayers(GameNPC killedNpc, GameStaticItemTimed item, List<GamePlayer> nearbyPlayers)
             {
@@ -2075,7 +2133,7 @@ namespace DOL.GS.ServerRules
                 return;
             }
 
-            isWorthAnything = killedPlayer.DeathTime + Properties.RP_WORTH_SECONDS <= killedPlayer.PlayedTime;
+            isWorthAnything = killedPlayer.DeathTime + AutonomousBotRealmPointRewards.RealmPointWorthSeconds(killedPlayer.ReleasedAfterLastDeath) <= killedPlayer.PlayedTime;
             double damagePercent = CalculateDamagePercent();
             int baseRpReward;
             int baseBpReward;
@@ -2149,7 +2207,7 @@ namespace DOL.GS.ServerRules
 
             void RewardRealmPoints(out int realmPointsEarned)
             {
-                int realmPoints = (int) (baseRpReward * damagePercent);
+                int realmPoints = AutonomousBotRealmPointRewards.ApplyKillBonus((int) (baseRpReward * damagePercent));
                 DbBattleground battleground = GameServer.KeepManager.GetBattleground(playerToAward.CurrentRegionID);
 
                 // Only award RPs if the player is under the battleground's cap.
@@ -2157,6 +2215,7 @@ namespace DOL.GS.ServerRules
                     realmPoints = (int) (realmPoints * (1.0 + 2.0 * (killedPlayer.RealmLevel - playerToAward.RealmLevel) / 900.0));
 
                 realmPoints += CalculateGroupBonus();
+                realmPoints = RvrRealmPointRules.OnKillRealmPoints(playerToAward, realmPoints); // outnumbered realm bonus, siege pool (DR-181, DR-182)
 
                 if (realmPoints > 0)
                     playerToAward.GainRealmPoints(realmPoints, true);
@@ -2559,7 +2618,7 @@ namespace DOL.GS.ServerRules
             else
             {
                 rpBase = Properties.TOWER_RP_BASE;
-                rpMultiplier = Properties.TOWER_RP_CLAIM_MULTIPLIER;
+                rpMultiplier = Properties.TOWER_RP_MULTIPLIER; // was the claim multiplier (100) by mistake (DR-179)
             }
 
             int value = rpBase + (keep.BaseLevel - 50) * rpMultiplier;

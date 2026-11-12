@@ -37,12 +37,22 @@ namespace DOL.GS
             _originalModel = Owner.Model;
             _avatarModel = (ushort)SpellHandler.Spell.Value;
             Owner.Model = _avatarModel;
+            // Tuatha: the Morrigan form bursts in with a major Ethereal flash (owner 2026-11-06: the old form looked basic).
+            if (PendragonRules.IsTuatha(Owner) && Owner.CurrentRegion != null)
+                foreach (GamePlayer viewer in Owner.GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
+                    viewer.Out.SendSpellEffectAnimation(Owner, Owner, TuathaMarks.BurstFlash, 0, false, 1);
             if (StormSovereignAbilities.Owns(SpellHandler.Spell.ID))
             {
                 Owner.AbilityBonus[eProperty.ArmorAbsorption] += SovereignCrownAbsorption;
                 Owner.AbilityBonus[eProperty.MeleeDamage] += SovereignCrownMeleeDamage;
                 Owner.AbilityBonus[eProperty.MeleeSpeed] += SovereignCrownHaste;
                 MLMod.Refresh(Owner);
+                // Storm Sovereign: the crown fills Tempest, and finishers spend nothing while it lasts.
+                if (Owner is GamePlayer { CharacterClass: var cls } && StormforgedRules.IsStormforged(cls.ID))
+                    StormTempest.Set(Owner, StormTempest.MaxCharges);
+                // Pendragon: the Lion of Albion fills Valor, and Judgments spend none while it lasts (PendragonValor.Spend).
+                if (PendragonRules.IsPendragon(Owner))
+                    PendragonValor.Set(Owner, PendragonValor.Max(Owner));
             }
         }
 

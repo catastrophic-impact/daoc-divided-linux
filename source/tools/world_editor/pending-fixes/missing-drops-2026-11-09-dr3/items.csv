@@ -1,0 +1,7 @@
+Id_nb,Name,Realm,Level,Object_Type,Result,Official id,Monster,Bonuses,Notes
+md_grimeil_s_ring_of_the_grotesque_hib,Grimeil's Ring of the Grotesque,3,50,41,new,16062,grimeil,148:12 10:40 210:40 12:6 15:5 14:5,model from 3_Directors_Ring_of_Anarchy; level 50 (level requirement)
+md_malairt_s_bracer_of_the_mad_hib,Malairt's Bracer of the Mad,3,50,41,new,16066,malairt,148:12 2:15 202:5 11:6 18:5 12:5,model from Black_Sapphire_Bracer; level 50 (level requirement)
+md_myrkr_s_gem_of_madness_mid,Myrkr's Gem of Madness,2,50,41,new,16057,myrkr,148:12 10:40 210:40 15:6 12:5 18:5,model from Cleaving_Gem; level 50 (level requirement)
+md_ofridr_s_bracer_of_oppression_mid,Ofridr's Bracer of Oppression,2,50,41,new,16060,ofridr,148:12 2:15 202:5 11:6 18:5 12:5,model from Bracer_of_Etheric_Oppression; level 50 (level requirement)
+md_soltinn_s_ring_of_spite_mid,Soltinn's Ring of Spite,2,50,41,new,16056,soltinn,148:12 10:40 210:40 12:6 15:5 14:5,model from 2_Directors_Ring_of_Anarchy; level 50 (level requirement)
+md_teugmhail_s_necklace_of_terror_hib,Teugmhail's Necklace of Terror,3,50,41,new,16065,teugmhail,148:12 1:15 201:5 18:6 11:5 16:5,model from Desmonas_Necklace1; level 50 (level requirement)

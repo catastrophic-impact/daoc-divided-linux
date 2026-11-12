@@ -1,0 +1,662 @@
+{
+ "spells built": [
+  [
+   803411,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Dual Wield by 10%."
+  ],
+  [
+   803381,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Staff by 10%."
+  ],
+  [
+   803377,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Slash by 10%."
+  ],
+  [
+   803378,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Thrust by 10%."
+  ],
+  [
+   803379,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Crush by 10%."
+  ],
+  [
+   803451,
+   "DmgReductionAndPowerReturn",
+   10.0,
+   15,
+   "Blocks 10.0% damage and returns 10.0% to the caster as power."
+  ],
+  [
+   807705,
+   "SpecSkillBuff",
+   10.0,
+   15,
+   "Raises the target's ability in a given skill."
+  ],
+  [
+   807687,
+   "DmgReductionAndPowerReturn",
+   20.0,
+   15,
+   "Blocks a portion of damage dealt to the target and gives power to the caster."
+  ],
+  [
+   803476,
+   "CastingSpeedDebuff",
+   35.0,
+   30,
+   "Bedazzles target, causing it to suffer a 35% chance to miscast and a 0% chance t"
+  ],
+  [
+   806952,
+   "StealthSkillBuff",
+   35.0,
+   90,
+   "Your have a 35% increased chance to uncover hidden opponents. Your ability to st"
+  ],
+  [
+   803657,
+   "DefensiveProc",
+   853657.0,
+   420,
+   "Triggers the following spell with a 15% chance when being attacked."
+  ],
+  [
+   803686,
+   "OffensiveProc",
+   853686.0,
+   600,
+   "Triggers the following spell with a 5% chance on own attacks."
+  ],
+  [
+   803412,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Left Axe by 10%."
+  ],
+  [
+   803696,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Sword by 10%."
+  ],
+  [
+   803695,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Axe by 10%."
+  ],
+  [
+   803384,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Axe by 10%."
+  ],
+  [
+   803383,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Sword by 10%."
+  ],
+  [
+   803385,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Hammer by 10%."
+  ],
+  [
+   803386,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Spear by 10%."
+  ],
+  [
+   803387,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Scythe by 10%."
+  ],
+  [
+   803413,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Celtic Dual by 10%."
+  ],
+  [
+   803389,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Blades by 10%."
+  ],
+  [
+   803390,
+   "SpecSkillBuff",
+   10.0,
+   60,
+   "Increases your Blunt by 10%."
+  ],
+  [
+   807678,
+   "OffensiveProc",
+   857678.0,
+   10,
+   "Offensive Proc"
+  ]
+ ],
+ "spells corrected": [],
+ "spells not built": {
+  "3430": "no rule for \"{'Penalty to all stats': '35', 'Vulnerability to melee': '5%', 'Target': 'Targeted', 'Range': '500', 'Duration': '20s', 'Casting time': 'instant', 'Damage': 'Body'}\"",
+  "13604": "no rule for \"illusion\"",
+  "7700": "no rule for \"{}\"",
+  "7706": "no rule for \"{}\"",
+  "7701": "no rule for \"{}\"",
+  "9568": "no rule for \"{'Value': '100', 'Target': 'Self', 'Duration': '30 sec', 'Casting time': 'instant'}\"",
+  "8558": "no rule for \"cost reduction\"",
+  "7729": "no rule for \"{}\"",
+  "11441": "no rule for \"{'Target': 'Self', 'Casting time': 'instant', 'Effect': 'Recovery', 'Range': '1500'}\"",
+  "10534": "no rule for \"speed enhancement\"",
+  "5880": "no rule for \"summon elemental\"",
+  "7707": "no rule for \"resistance enhancement\"",
+  "7704": "no rule for \"{}\"",
+  "8969": "no rule for \"pet command\"",
+  "7667": "no rule for \"{}\"",
+  "12833": "no rule for \"omni heal\"",
+  "13605": "no rule for \"illusion\"",
+  "3427": "no rule for \"resistance enhancement\"",
+  "7717": "no rule for \"illusion\"",
+  "7721": "no rule for \"{}\"",
+  "7666": "no rule for \"buff shear\"",
+  "7711": "no rule for \"arcane leadership\"",
+  "7722": "no rule for \"buff shear\"",
+  "5881": "no rule for \"summon elemental\"",
+  "13606": "no rule for \"illusion\"",
+  "4014": "no rule for \"summon turret\"",
+  "7682": "no rule for \"{}\"",
+  "7670": "no rule for \"{'Underhill Stalker and Compatriot': 'Gains a snare style.', 'Underhill Ally': 'Gains a defensive snare-proc.', 'Underhil Companion': 'Gains a cold damage snare/nuke.', 'Underhill Zealot': 'No effect.'}\"",
+  "7673": "no rule for \"{}\"",
+  "7686": "no rule for \"increase melee critical damage chance\"",
+  "7691": "no rule for \"speed decrease\"",
+  "5882": "no rule for \"summon elemental\"",
+  "7723": "no rule for \"stun\""
+ },
+ "rebuild without a rule": [
+  [
+   812050,
+   "Direct Damage (12050)",
+   "DirectDamage",
+   "no rule for \"{'Effect': 'Siege Lore', 'Bonus multiplier': '20', 'Target': 'Group', 'Range': '2000', 'Duration': '2:00 min', 'Casting time': 'instant', '- Requirement': 'Restricted to Gaheris Frontiers.'}\""
+  ],
+  [
+   813354,
+   "Heal (13354)",
+   "Heal",
+   "no rule for \"stat enhancement\""
+  ]
+ ],
+ "items updated": [
+  [
+   "bounty_darkflame_infiltrator_blade_alb",
+   {
+    "ProcSpellID1": 803411
+   }
+  ],
+  [
+   "bounty_darkflame_infiltrator_edge_alb",
+   {
+    "ProcSpellID1": 803411
+   }
+  ],
+  [
+   "bounty_chthonian_friar_quarter_staff_alb",
+   {
+    "ProcSpellID": 803381
+   }
+  ],
+  [
+   "bounty_darkflame_minstrel_blade_alb",
+   {
+    "ProcSpellID": 803377
+   }
+  ],
+  [
+   "bounty_darkflame_minstrel_edge_alb",
+   {
+    "ProcSpellID": 803378
+   }
+  ],
+  [
+   "bounty_darkflame_heretic_mace_alb",
+   {
+    "ProcSpellID": 803379
+   }
+  ],
+  [
+   "bounty_darkflame_reaver_blade_alb",
+   {
+    "ProcSpellID": 803377
+   }
+  ],
+  [
+   "bounty_darkflame_reaver_edge_alb",
+   {
+    "ProcSpellID": 803378
+   }
+  ],
+  [
+   "bounty_darkflame_reaver_mace_alb",
+   {
+    "ProcSpellID": 803379
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_halberd_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_pike_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_mattock_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_flamberge_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_lance_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_chthonian_armsman_arch_mace_alb",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_unyielding_assassin_vest_alb",
+   {
+    "ProcSpellID": 807705
+   }
+  ],
+  [
+   "bounty_freezing_assassin_vest_alb",
+   {
+    "ProcSpellID": 807705
+   }
+  ],
+  [
+   "bounty_freezing_demon_vest_alb",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_otherworldly_physical_bracer_all",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_elemental_bracer_all",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_soul_bracer_all",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_uther_s_otherworldly_resilient_cloak_all",
+   {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_uther_s_otherworldly_stalwart_cloak_all",
+   {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_uther_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_glacial_shadowblade_sword_mid",
+   {
+    "ProcSpellID1": 803412
+   }
+  ],
+  [
+   "bounty_blighted_shadowblade_heavy_sword_mid",
+   {
+    "ProcSpellID1": 803696
+   }
+  ],
+  [
+   "bounty_glacial_shadowblade_axe_mid",
+   {
+    "ProcSpellID1": 803695
+   }
+  ],
+  [
+   "bounty_blighted_shadowblade_heavy_axe_mid",
+   {
+    "ProcSpellID1": 803695
+   }
+  ],
+  [
+   "bounty_glacial_thane_axe_mid",
+   {
+    "ProcSpellID": 803384
+   }
+  ],
+  [
+   "bounty_blighted_thane_heavy_axe_mid",
+   {
+    "ProcSpellID": 803384
+   }
+  ],
+  [
+   "bounty_glacial_thane_sword_mid",
+   {
+    "ProcSpellID": 803383
+   }
+  ],
+  [
+   "bounty_blighted_thane_heavy_sword_mid",
+   {
+    "ProcSpellID": 803383
+   }
+  ],
+  [
+   "bounty_glacial_thane_hammer_mid",
+   {
+    "ProcSpellID": 803385
+   }
+  ],
+  [
+   "bounty_blighted_thane_heavy_hammer_mid",
+   {
+    "ProcSpellID": 803385
+   }
+  ],
+  [
+   "bounty_glacial_valkyrie_sword_mid",
+   {
+    "ProcSpellID": 803383
+   }
+  ],
+  [
+   "bounty_blighted_valkyrie_heavy_sword_mid",
+   {
+    "ProcSpellID": 803383
+   }
+  ],
+  [
+   "bounty_blighted_valkyrie_slashing_spear_mid",
+   {
+    "ProcSpellID": 803386
+   }
+  ],
+  [
+   "bounty_blighted_valkyrie_spear_mid",
+   {
+    "ProcSpellID": 803386
+   }
+  ],
+  [
+   "bounty_blighted_warrior_heavy_axe_mid",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_blighted_warrior_heavy_sword_mid",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_blighted_warrior_heavy_hammer_mid",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_howling_bewitched_vest_mid",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_freezing_bewitched_vest_mid",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_otherworldly_physical_bracer_all2",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_elemental_bracer_all2",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_soul_bracer_all2",
+   {
+    "SpellID1": 803476,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_ymir_s_otherworldly_resilient_cloak_all",
+   {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_ymir_s_otherworldly_stalwart_cloak_all",
+   {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_ymir_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_malignant_valewalker_scythe_hib",
+   {
+    "ProcSpellID": 803387
+   }
+  ],
+  [
+   "bounty_venomous_nightshade_steel_hib",
+   {
+    "ProcSpellID1": 803413
+   }
+  ],
+  [
+   "bounty_venomous_nightshade_blade_hib",
+   {
+    "ProcSpellID1": 803413
+   }
+  ],
+  [
+   "bounty_venomous_warden_blade_hib",
+   {
+    "ProcSpellID": 803389
+   }
+  ],
+  [
+   "bounty_venomous_warden_hammer_hib",
+   {
+    "ProcSpellID": 803390
+   }
+  ],
+  [
+   "bounty_malignant_hero_warhammer_hib",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_malignant_hero_warblade_hib",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_malignant_hero_celtic_spear_hib",
+   {
+    "ProcSpellID": 803451
+   }
+  ],
+  [
+   "bounty_shrouded_reaper_robe_hib",
+   {
+    "ProcSpellID": 807678
+   }
+  ],
+  [
+   "bounty_shrouded_death_vest_hib",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_freezing_death_vest_hib",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_cliodna_s_otherworldly_resilient_cloak_all",
+   {
+    "SpellID": 806952,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cliodna_s_otherworldly_stalwart_cloak_all",
+   {
+    "SpellID": 803686,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_unyielding_demon_robe_alb",
+   {
+    "ProcSpellID": 807687
+   }
+  ],
+  [
+   "bounty_freezing_reaper_vest_hib",
+   {
+    "ProcSpellID": 807678
+   }
+  ],
+  [
+   "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID1": 803657,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ]
+ ]
+}

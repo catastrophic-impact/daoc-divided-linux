@@ -533,6 +533,14 @@ namespace DOL.GS
 			DbItemTemplate template = this.TradeItems.GetItem(pagenumber, (eMerchantWindowSlot)slotnumber);
 			if (template == null) return;
 
+			// Bountycraft molds are bought in stacks no bigger than the buyer's realm rank (1.125).
+			int allowed = BountyCraftItems.AllowedCount(template, number, player.RealmLevel);
+			if (allowed < number)
+			{
+				player.Out.SendMessage($"At your realm rank you can buy {allowed} {template.Name} at a time.", eChatType.CT_System, eChatLoc.CL_SystemWindow);
+				number = allowed;
+			}
+
 			//Calculate the amout of items
 			int amountToBuy = number;
 			if (template.PackSize > 0)

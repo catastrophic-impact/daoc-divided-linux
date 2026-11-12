@@ -87,14 +87,18 @@ namespace DOL.GS
             }
             foreach (var notice in screen)
                 if (GameWideAnnouncements.Enabled(notice.Value.Kind))
+                {
+                    LoreAtmosphere.NoteNews(notice.Key.Item2);   // realm news always wins over atmosphere lines (Living Server 1.2)
                     foreach (GamePlayer player in ClientService.Instance.GetPlayersOfRealm(notice.Key.Item2))
-                    player.Out.SendMessage(notice.Value.Text, PacketHandler.eChatType.CT_ScreenCenter, PacketHandler.eChatLoc.CL_SystemWindow);
+                        player.Out.SendMessage(notice.Value.Text, PacketHandler.eChatType.CT_ScreenCenter, PacketHandler.eChatLoc.CL_SystemWindow);
+                }
         }
 
         public static void Pulse(long now)
         {
             FlushScreen();
             GameWideAnnouncements.Flush();
+            LoreAtmosphere.Pulse(now);
             AutonomousChatNews.Pulse(now);
             bool voices = AutonomousBotVoices.Enabled;
             List<(string EventId, eRealm Realm, string Text, string Topic, IReadOnlyDictionary<string, string> Slots)> outgoing = new();
@@ -141,8 +145,12 @@ namespace DOL.GS
                     AutonomousBotChatCoordinator.TrySayEventNews(speaker ?? fallback, speaker != null, notice.Topic, notice.Slots))
                     continue;
                 GameBot herald = speaker ?? fallback;
+                // A realm notice is the realm's big moment (1.1.3: a tagged event, not held by the ceiling).
+                using var eventTag = AutonomousChatExchange.Tag("event", AutonomousChatExchange.NewId(), 0, "herald", herald);
+                // A bot says it as a player would (1.1.3, after RC5: "Krondon: recruiting up to 120 level-50 adventurers via
+                // Caer Diogel; at least 93 must arrive before assault." in a bot's mouth); only the herald keeps the written notice.
                 AutonomousBotChatCoordinator.BroadcastFaction(herald?.Name ?? "Realm herald", notice.Realm,
-                    herald != null ? AutonomousBotVoices.StyleFor(herald, notice.Text) : notice.Text);
+                    herald != null ? AutonomousBotVoices.StyleFor(herald, RealmEventSpoken.Say(notice.Text, notice.Slots, Random.Shared)) : notice.Text);
             }
         }
     }

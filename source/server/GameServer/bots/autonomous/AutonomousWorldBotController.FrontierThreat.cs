@@ -56,6 +56,43 @@ public sealed partial class AutonomousWorldBotController
         return true;
     }
 
+    /// <summary>
+    /// Night 2026-11-04: 104 watchdog rescues in Darkness Falls (65 Hibernians, 39 Albions "Fighting" an enemy bot with
+    /// inCombat=False) and 5,538 AUTONOMOUS_UNREACHABLE_TARGET lines: the two sides stood on floors about 4,950 units
+    /// apart. DropStaleFight left every enemy bot alone, and the frontier threat scan picked them again after each
+    /// two-minute ignore. In a dungeon an enemy more than <see cref="CrossFloorHeight"/> above or below is not a target,
+    /// unless it is firing on this realm from at most <see cref="CrossFloorFiringHeight"/> away (a ledge, not a floor).
+    /// </summary>
+    public const int CrossFloorHeight = 300;
+    public const int CrossFloorFiringHeight = 1000;
+    private const long CrossFloorIgnoreMilliseconds = 10 * 60_000;
+
+    public static bool IsCrossFloorEnemy(bool inDungeon, int heightDifference, bool firingOnRealm) =>
+        inDungeon && Math.Abs(heightDifference) > CrossFloorHeight &&
+        !(firingOnRealm && Math.Abs(heightDifference) <= CrossFloorFiringHeight);
+
+    private static bool InDungeon(GameLiving living) => living.CurrentRegion?.IsDungeon == true || living.CurrentZone?.IsDungeon == true;
+
+    private bool DropCrossFloorEnemy(BotBrain brain, GameBot bot, GameLiving target)
+    {
+        if (target == null || !target.IsAlive || target.Realm == bot.Realm || target.Realm == eRealm.None ||
+            AutonomousRealmRaid.GetView(bot.Group) != null ||
+            !IsCrossFloorEnemy(InDungeon(bot), target.Z - bot.Z, FiringOnRealm(bot, target)))
+            return false;
+        long now = GameLoop.GameLoopTime;
+        _ignoredPvpTargets[target] = now + CrossFloorIgnoreMilliseconds;
+        brain.RemoveFromAggroList(target);
+        bot.StopAttack();
+        bot.StopMovingOnPath();
+        if (bot.TargetObject == target)
+            bot.TargetObject = null;
+        if (!brain.HasAggro && brain.FSM.GetCurrentState()?.StateType == eFSMStateType.AGGRO)
+            brain.FSM.SetCurrentState(eFSMStateType.IDLE);
+        if (BotDiagnostics.Enabled) Log.Info($"AUTONOMOUS_CROSS_FLOOR_ENEMY bot={bot.Name} id={bot.DatabaseID} realm={GlobalConstants.RealmToName(bot.Realm)} " +
+                 $"target=\"{target.Name}\" heightAbove={target.Z - bot.Z} region={bot.CurrentRegionID} position={bot.X},{bot.Y},{bot.Z}");
+        return true;
+    }
+
     private bool IsIgnoredPvpTarget(GameLiving target) =>
         _ignoredPvpTargets.TryGetValue(target, out long until) && until > GameLoop.GameLoopTime;
 
@@ -124,12 +161,21 @@ public sealed partial class AutonomousWorldBotController
     // Called before optional upkeep and the world controller's rendezvous,
     // recovery and follow returns. Assignment/level do not restrict defense.
     // It starts real combat without replacing the bot's durable task or event.
+    public const int RvrObjectiveRadius = 2500;
+
+    private static bool NearRvrObjective(GameBot bot, CampDestination objective) =>
+        IsNearRvrObjective(objective != null && objective.RegionId == bot.CurrentRegionID, bot.X, bot.Y, objective?.X ?? 0, objective?.Y ?? 0);
+
+    public static bool IsNearRvrObjective(bool sameRegion, int x, int y, int objectiveX, int objectiveY) =>
+        sameRegion && (long)(x - objectiveX) * (x - objectiveX) + (long)(y - objectiveY) * (y - objectiveY) <= (long)RvrObjectiveRadius * RvrObjectiveRadius;
+
     public bool TryEngageFrontierThreat(BotBrain brain)
     {
         GameBot bot = brain?.BotBody;
         // L4: a relic carrier does not go looking for fights; Tick decides whether it is cornered.
         if (GameRelic.IsPlayerCarryingRelic(bot)) return false;
-        if (bot?.IsAutonomousWorldBot == true && IsBattleground(bot) && (BreakPvpStalemate(brain, bot) || BreakUnreachableTarget(brain, bot))) return false;
+        if (bot?.IsAutonomousWorldBot == true && IsBattleground(bot) && (DropCrossFloorEnemy(brain, bot, bot.TargetObject as GameLiving) ||
+            BreakPvpStalemate(brain, bot) || BreakUnreachableTarget(brain, bot))) return false;
         bool defending = AutonomousRvrDefense.IsCommittedDefender(bot);
         bool siegeFighter = AutonomousRvrDefense.IsCommittedSiegeFighter(bot);
         GameLiving previousEngine = defending ? bot.TargetObject as GameSiegeWeapon ?? _siegeWeapon?.TargetObject as GameSiegeWeapon : null;
@@ -139,12 +185,16 @@ public sealed partial class AutonomousWorldBotController
             (brain.HasAggro || bot.InCombat || bot.IsAttacking) && previousEngine == null ||
             brain.FSM.GetCurrentState()?.StateType == eFSMStateType.PASSIVE ||
             !_frontierThreat.Due(GameLoop.GameLoopTime, bot.DatabaseID) || IsSafeArea(bot)) return false;
+        // AI_PROFILE: only the scan itself is timed, not the cheap checks above that skip it.
+        using var aiProfile = AiProfile.Scope(AiSystem.FrontierThreatScan);
 
         var nav = PathfindingProvider.Instance;
         if (!nav.IsAvailable || !nav.HasNavmesh(bot.CurrentZone)) return false;
         // Cheap rejections first (most nearby livings are friendly bots); the area lookup last
         // (IsSafeArea/GetAreasOfZone were ~64 MB per 40 s of allocations in run 11).
+        bool inDungeon = InDungeon(bot);
         bool Eligible(GameLiving target) => target != bot && !target.IsStealthed && !IsIgnoredPvpTarget(target) &&
+            !IsCrossFloorEnemy(inDungeon, target.Z - bot.Z, FiringOnRealm(bot, target)) &&
             target.ObjectState == GameObject.eObjectState.Active && target.IsAlive &&
             target.Realm != bot.Realm && target.Realm != eRealm.None && target.CurrentRegionID == bot.CurrentRegionID &&
             AutonomousRvrTargetPolicy.IsEligible(bot.Realm, target.Realm, target.IsAlive,
@@ -163,14 +213,22 @@ public sealed partial class AutonomousWorldBotController
                 bot.IsWithinRadius(friendly, 1000) && BotSiegeRuntime.HoldingPosition(friendly) ? 0 : 1)
             .ThenBy(bot.GetDistanceTo).ToArray();
         AutonomousLivingServer.ObserveEnemies(bot, nearby);
+        RvrAwarenessProfile rvrProfile = RvrProfile();
+        // Defenders and siege bots count as "at the objective" (no reaction delay) only near it, not for the whole march:
+        // a marching Bainshee killed a still player from 3,240 units with no notice (playtest 2026-11-07).
+        bool atObjective = (defending || siegeFighter) && NearRvrObjective(bot, _rvrDestination);
         bool Visible(GameLiving target) => FiringOnRealm(bot, target) || nav.HasLineOfSight(bot.CurrentZone,
             new(bot.X, bot.Y, bot.Z + 48), new(target.X, target.Y, target.Z + 48), nav.BlockingDoorAvoidanceFilters);
         var visible = siegeFighter
             ? _frontierThreat.VisiblePriority(nearby.Where(AutonomousRvrDefense.IsCombatant).ToArray(),
                 nearby.OfType<GameSiegeWeapon>().Cast<GameLiving>().ToArray(), Visible)
-            : _frontierThreat.Visible(nearby, target => FiringOnRealm(bot, target) || nav.HasLineOfSight(bot.CurrentZone,
+            : _frontierThreat.Visible(nearby, target => FiringOnRealm(bot, target) ||
+                // RvR perception: no ray for a player this bot couldn't notice on this scan anyway (observer cap, range).
+                !RvrSkipsLineOfSight(bot, target, atObjective, rvrProfile, GameLoop.GameLoopTime) && nav.HasLineOfSight(bot.CurrentZone,
                 new(bot.X, bot.Y, bot.Z), new(target.X, target.Y, target.Z), nav.DefaultFilters));
         var visibleTargets=visible.ToArray();
+        // RvR perception (owner 2026-11-01): enemy players, companions and pets only once noticed and after a reaction delay.
+        visibleTargets = PerceiveRvrTargets(bot, visibleTargets, atObjective);
         var operatorThreats=visibleTargets.Where(target=>target.IsAttacking && target.TargetObject is GameBot friendly &&
             friendly.Realm==bot.Realm && bot.IsWithinRadius(friendly,1000) && BotSiegeRuntime.HoldingPosition(friendly)).ToArray();
         GameLiving enemy = SelectDistributedRvrTarget(bot, operatorThreats.Length>0 ? operatorThreats : visibleTargets);

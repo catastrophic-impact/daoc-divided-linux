@@ -133,17 +133,29 @@ def install(chain: Path, runtime: Path):
     shutil.copy2(chain / INDEX, target / INDEX)
 
 
+def applied_versions(con: sqlite3.Connection) -> set[str]:
+    """The steps a world has had, from its offline_patch_log (none when the table is missing)."""
+    if not con.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='offline_patch_log'").fetchone():
+        return set()
+    return {row[0] for row in con.execute('SELECT Version FROM offline_patch_log')}
+
+
 def check(chain: Path, starts: list[tuple[str, Path]], target_db: Path) -> dict:
     """The whole chain applied to each start must give the target world, re-rolled monster fields aside."""
-    steps = [json.loads((chain / s['File']).read_text(encoding='utf-8')) for s in load(chain)['Steps']]
+    steps = [(s['Version'], json.loads((chain / s['File']).read_text(encoding='utf-8'))) for s in load(chain)['Steps']]
     result = {}
     for name, db in starts:
         with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
             work = Path(tmp) / 'world.db'
             shutil.copy2(db, work)
             with sqlite3.connect(work) as con:
-                for step in steps:
-                    make_patch.apply_world_update(con, step)
+                # As the launcher does (WorldUpdates.cs): a step the world already has (offline_patch_log) is skipped.
+                # Replaying old steps on a newer world flipped rows later releases had changed back (setup review
+                # 2026-11-06: "Mob changed 28" even from DR-dev-0.1b).
+                done = applied_versions(con)
+                for version, step in steps:
+                    if version not in done:
+                        make_patch.apply_world_update(con, step)
             diff = make_patch.world_update(work, target_db, policy(), 'check')
         wrong = [t['Table'] for t in diff['NewTables']] + [f'{c["Table"]}.{c["Column"]}' for c in diff['NewColumns']]
         rerolled = 0

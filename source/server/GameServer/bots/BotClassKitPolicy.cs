@@ -14,9 +14,10 @@ namespace DOL.GS
     {
         // Sovereign ability keys (StormSovereignAbilities.Make) a bot keeps up: the timed group buffs
         // (speed, absorption, to-hit and damage). The self heal is used below half health.
-        private static readonly HashSet<int> SovereignGroupBuffs = [7, 8, 9];
-        private const int SovereignSelfHeal = 10;
-        private const int SovereignStealthOpener = 17;
+        // Storm remake (StormSovereignAbilities.AbilityKey): Royal Decree 100, Rally to the Crown 101, Hunter's Mark 104.
+        private static readonly HashSet<int> SovereignGroupBuffs = [7, 8, 9, 100];
+        private static readonly HashSet<int> SovereignSelfHeals = [10, 101];
+        private static readonly HashSet<int> SovereignStealthOpeners = [17, 104];
 
         /// <summary>False for a spell whose handler is meant for a player at the keyboard.</summary>
         public static bool IsUsableByBot(Spell spell)
@@ -43,7 +44,7 @@ namespace DOL.GS
                 case eSpellType.StormSovereignAbility:
                     // Toggles would switch themselves off on every recast, and the stealth opener needs stealth.
                     return !StormSovereignAbilities.Toggle(spell.ID) &&
-                        !(PendragonRules.IsRoyalRank(spell.ID) && StormSovereignAbilities.Key(spell.ID) == SovereignStealthOpener);
+                        !(StormSovereignAbilities.IsRankedAbility(spell.ID) && SovereignStealthOpeners.Contains(StormSovereignAbilities.AbilityKey(spell.ID)));
             }
 
             return true;
@@ -78,8 +79,8 @@ namespace DOL.GS
         /// (2,608 Stormforged pull timeouts in the 2026-11-01 overnight run).
         /// </summary>
         public static bool WaitsForContact(Spell spell, bool inCombat) => !inCombat &&
-            spell?.SpellType == eSpellType.StormSovereignAbility && PendragonRules.IsRoyalRank(spell.ID) &&
-            SovereignGroupBuffs.Contains(StormSovereignAbilities.Key(spell.ID));
+            spell?.SpellType == eSpellType.StormSovereignAbility && StormSovereignAbilities.IsRankedAbility(spell.ID) &&
+            SovereignGroupBuffs.Contains(StormSovereignAbilities.AbilityKey(spell.ID));
 
         /// <summary>A cast-time kit spell owns the turn. An instant one goes out and the bot still attacks.</summary>
         public static bool OwnsTurn(Spell spell) => spell?.IsInstantCast == false;
@@ -150,10 +151,10 @@ namespace DOL.GS
                     return bot.HealthPercent < NethuniBelowHealthPercent && ModernMauler.GiftReady(bot, spell) ? bot : null;
 
                 case eSpellType.StormSovereignAbility:
-                    if (!PendragonRules.IsRoyalRank(spell.ID))
+                    if (!StormSovereignAbilities.IsRankedAbility(spell.ID))
                         return null;
-                    int key = StormSovereignAbilities.Key(spell.ID);
-                    if (key == SovereignSelfHeal)
+                    int key = StormSovereignAbilities.AbilityKey(spell.ID);
+                    if (SovereignSelfHeals.Contains(key))
                         return bot.HealthPercent < 50 ? bot : null;
                     if (SovereignGroupBuffs.Contains(key))
                         return HasSovereignEffect(bot, key) ? null : bot;
@@ -176,10 +177,10 @@ namespace DOL.GS
         private static bool IsBestRank(GameBot bot, Spell spell)
         {
             bool sovereign = spell.SpellType == eSpellType.StormSovereignAbility;
-            int key = sovereign ? StormSovereignAbilities.Key(spell.ID) : 0;
+            int key = sovereign ? StormSovereignAbilities.AbilityKey(spell.ID) : 0;
             return !bot.Spells.Any(other => other != null && other.ID != spell.ID && other.SpellType == spell.SpellType &&
                 other.Level <= bot.Level && other.Level > spell.Level &&
-                (!sovereign || StormSovereignAbilities.Key(other.ID) == key) &&
+                (!sovereign || StormSovereignAbilities.AbilityKey(other.ID) == key) &&
                 (spell.SpellType != eSpellType.DeathKnightForm || IsDefaultDeathKnightForm(other)) &&
                 (spell.SpellType != eSpellType.MaulerGift || other.SharedTimerGroup == spell.SharedTimerGroup));
         }
@@ -192,6 +193,6 @@ namespace DOL.GS
         private static bool HasSovereignEffect(GameBot bot, int key) =>
             bot.effectListComponent.GetSpellEffects().Any(effect =>
                 effect is { IsEnding: false } && effect.SpellHandler?.Spell is Spell active &&
-                StormSovereignAbilities.Owns(active.ID) && StormSovereignAbilities.Key(active.ID) == key);
+                StormSovereignAbilities.Owns(active.ID) && StormSovereignAbilities.AbilityKey(active.ID) == key);
     }
 }

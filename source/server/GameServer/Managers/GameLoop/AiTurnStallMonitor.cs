@@ -60,13 +60,56 @@ namespace DOL.GS
         public static bool IsStallMinute(double worstTickMs, double gcPauseMs) =>
             worstTickMs >= StallMilliseconds || gcPauseMs >= StallMilliseconds;
 
+        // DR-203 (overnight 2026-11-10): from 05:16 every minute had a 2.6-2.7 s NpcService tick whose slowest AI
+        // turns were only 80-370 ms, so the time went somewhere the turn monitor cannot see. NpcService runs its
+        // setup steps (coordinator maintenance, raid pulses, group forming, camp catalog) serially before the
+        // parallel brain dispatch; their worst time per minute is kept here and named in SERVER_STALL.
+        public const long SerialStepMilliseconds = 20;
+        private static readonly Dictionary<string, long> SerialWorst = new(StringComparer.Ordinal);
+
+        /// <summary>A serial (game-loop thread) step's time; only steps of 20 ms or more are kept.</summary>
+        public static void RecordSerial(string step, long milliseconds)
+        {
+            if (milliseconds < SerialStepMilliseconds) return;
+            lock (Sync)
+            {
+                if (!SerialWorst.TryGetValue(step, out long worst) || milliseconds > worst)
+                    SerialWorst[step] = milliseconds;
+            }
+        }
+
+        public static long SerialStart() => System.Diagnostics.Stopwatch.GetTimestamp();
+
+        public static void EndSerial(string step, long started) =>
+            RecordSerial(step, (System.Diagnostics.Stopwatch.GetTimestamp() - started) * 1000 / System.Diagnostics.Stopwatch.Frequency);
+
+        /// <summary>This minute's slowest serial steps, slowest first, and starts the next minute.</summary>
+        public static (string Step, long Milliseconds)[] TakeSerialMinute()
+        {
+            lock (Sync)
+            {
+                var steps = SerialWorst.OrderByDescending(pair => pair.Value)
+                    .Select(pair => (pair.Key, pair.Value)).ToArray();
+                SerialWorst.Clear();
+                return steps;
+            }
+        }
+
         /// <summary>A whole-process GC pause stops every thread, so every service shows the same spike.</summary>
         public static string LikelyCause(double worstTickMs, double gcPauseMs, Turn[] top) =>
+            LikelyCause(worstTickMs, gcPauseMs, top, []);
+
+        public static string LikelyCause(double worstTickMs, double gcPauseMs, Turn[] top,
+            (string Step, long Milliseconds)[] serial) =>
             gcPauseMs >= worstTickMs * 0.6 ? "garbage-collection pause (all threads stopped)" :
             top.Length > 0 && top[0].Milliseconds >= worstTickMs * 0.6 ? $"slow AI turn: {top[0].Name} ({top[0].Brain})" :
+            serial.Length > 0 && serial[0].Milliseconds >= worstTickMs * 0.4 ? $"serial NPC step: {serial[0].Step}" :
             "mixed: many medium AI turns in one tick";
 
         public static string Describe(Turn[] top) =>
             top.Length == 0 ? "none" : string.Join("; ", top.Select(t => $"{t.Name} {t.Brain} {t.Milliseconds}ms"));
+
+        public static string DescribeSerial((string Step, long Milliseconds)[] serial) =>
+            serial.Length == 0 ? "none" : string.Join("; ", serial.Take(TopTurns).Select(s => $"{s.Step} {s.Milliseconds}ms"));
     }
 }

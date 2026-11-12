@@ -606,7 +606,10 @@ namespace DOL.GS
                 visited[index] = true;
                 var existing = list[index];
 
-                if (existing.Item1 != primary || existing.Item2 != secondary)
+                // `Skill` overloads `==` to compare IDs, which would keep a stale instance with the same ID.
+                // This happens when the class changes, since the player gets new `Specialization` instances
+                // (gartmeier/OpenDAoC-Core e88631910).
+                if (!ReferenceEquals(existing.Item1, primary) || !ReferenceEquals(existing.Item2, secondary))
                     list[index] = new(primary, secondary);
             }
         }

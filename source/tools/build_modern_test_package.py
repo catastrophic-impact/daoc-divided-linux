@@ -21,6 +21,9 @@ The install (the developer's modern test, only read) gives the server folder and
     the launcher copies the player's own 1.130 client into runtime/client-modern/app and patches the copy.
   * tools/connect-local1130.exe (upstream's connect.exe with its 1.130 edit), tools/dotnet (the .NET runtime), the
     START cmd, READ ME FIRST, the licences and docs.
+  * RELEASE.txt, the version stamp the launcher's update check reads (release_stamp), and PACKAGE MANIFEST.sha256, the
+    SHA-256 of every file, which the launcher's updater checks a downloaded package against. Name the package folder
+    DividedRealms-<version>-<name> (the zip takes its name) so the updater finds it on the release page.
 No retail client file ships (checked), and nothing is started.
 
 Build the server and launcher first without the developer's paths in the binaries (the package check refuses them):
@@ -55,14 +58,19 @@ CONNECTOR = 'connect-local1130.exe'
 # (world-workshop) is installed from the repository's clean package build instead of the install's copy.
 # server-backups holds deploy backups (developer builds), herald the launcher's Herald page written from this game's records.
 # world-updates is written from the repository's chain (the install may have an older one).
-RUNTIME_SKIP_DIRS = {'client-modern', 'world-workshop', 'world-workshop-data', 'server-backups', 'herald', 'world-updates'}
+RUNTIME_SKIP_DIRS = {'client-modern', 'world-workshop', 'world-workshop-data', 'server-backups', 'herald', 'world-updates',
+                     '.dr'}  # .dr: the private DevKit's server supervisor state (lock, console log)
 WORLD_WORKSHOP = 'artifacts/world-workshop-package/WorldWorkshop'
 DARKNESS_FALLS_PROOFS = Path(__file__).resolve().parents[1] / 'server/GameServer/bots/autonomous/data/darkness_falls_navigation_proofs.json'
 # host-for-friends.json and the firewall script are the developer's Host for Friends state (friends' addresses, local paths).
 RUNTIME_SKIP_NAMES = {'modern-client.json', 'modern-profile-verification.json', 'modern-client-setup-error.txt', 'client-patch.json',
                       'host-for-friends.json', 'host-for-friends-firewall.cmd', 'serverconfig.before-host-for-friends.xml',
                       # The developer's overlay choices: shipped, they would switch the fight card and panels off for everyone.
-                      'overlay.json'}
+                      'overlay.json',
+                      # The launcher's Bot AI diagnostics switch: a diagnostics file, which check_package refuses.
+                      'bot-diagnostics.on',
+                      # The private DevKit's deploy record (INSTALLED.json): names this PC's folders and builds.
+                      'INSTALLED.json'}
 LAUNCHER_FILES = ('OfflineDAoC.dll', 'OfflineDAoC.exe', 'OfflineDAoC.pdb', 'OfflineDAoC.deps.json', 'OfflineDAoC.runtimeconfig.json',
                   'Join Friend.cmd')
 TEXT_SUFFIXES = {'.json', '.xml', '.txt', '.md', '.cmd', '.config', '.ini', '.csv'}
@@ -84,6 +92,28 @@ def use_stock_models(con, models: dict | None = None, properties: dict | None = 
     changed = sum(con.execute('UPDATE ServerProperty SET Value = ? WHERE `Key` = ? AND Value <> ?', (value, key, value)).rowcount
                      for key, value in (STOCK_SERVER_PROPERTIES if properties is None else properties).items())
     return dict(item_templates=templates, server_properties=changed)
+
+def private_models_without_art(con, pristine: Path, patch: dict) -> list:
+    """(item, model) for every item drawn with an object above the stock objects.csv's last ID that the client patch doesn't
+    add. DR-dev-0.1d shipped the Storm Regalia on objects 4929-4942, which only the developer's client has."""
+    import make_client_patch as m
+    stock = {m.row_id(line) for line in m.member_of((pristine / m.GAMEDATA).read_bytes(), 'objects.csv').decode('latin1').split('\r\n')}
+    stock.discard(None)
+    game = next(f for f in patch['Files'] if f['Path'] == m.GAMEDATA)
+    added = {m.row_id(row) for part in game['Members'] if part['Member'] == 'objects.csv' for row in part['Rows']}
+    return models_without_art(con, max(stock), added)
+
+
+def models_without_art(con, last_stock_object: int, added: set) -> list:
+    return [(item, model) for item, model in con.execute('SELECT Id_nb, Model FROM ItemTemplate WHERE Model > ? ORDER BY Id_nb',
+                                                          (last_stock_object,))
+            if model not in added and model not in LATER_LIVE_OBJECTS]
+
+
+# Live objects newer than the pristine copy the patch is built from: the 25th-anniversary cloaks (live patch 2026-10-26).
+# A current live client draws them; they are not private art.
+LATER_LIVE_OBJECTS = {4924, 4925, 4926}
+
 
 START_CMD = r'''@echo off
 setlocal
@@ -141,6 +171,9 @@ Updating from an earlier test build: close the launcher, extract the new downloa
 folder and choose to replace every file. Your world and characters are kept: the launcher adds
 the new build's world fixes to your world (after a backup in runtime\\backups) and patches your
 client copy again (it may ask for your Dark Age of Camelot folder once).
+From this build on, the launcher can also do this for you: it looks for a newer release once a
+day (Options > Update and repair > CHECK FOR UPDATES to look now; you can turn the daily check
+off there) and installs it with your saves and settings kept. See docs/PLAY-MODERN-TEST.md.
 
 This is a development test build. See docs/PLAY-MODERN-TEST.md and docs/PROGRESS-2026-10.md.
 '''
@@ -148,6 +181,23 @@ This is a development test build. See docs/PLAY-MODERN-TEST.md and docs/PROGRESS
 
 def sha(path: Path) -> str:
     return release.sha(path)
+
+
+# The package's version stamp, at the top of the package beside EDITION.txt (and listed in PACKAGE MANIFEST.sha256). The
+# launcher's update check (source/tools/OfflineDaoc.Launcher/Updates) reads Version to know which release a folder is,
+# and only offers updates to a folder that has it (or an older package's EDITION.txt) and the manifest.
+RELEASE_STAMP = 'RELEASE.txt'
+REPOSITORY = 'rambodolphin13/DividedRealms'
+
+
+def release_stamp(label: str, package: str, commit: str = '') -> str:
+    """Key=value lines: Version is the label's first word (the release tag, e.g. DR-dev-0.1d), Package the top folder and
+    zip name (without .zip)."""
+    lines = [f'Version={label.split()[0]}', f'Label={label}', f'Package={package}', f'Repository={REPOSITORY}']
+    if commit:
+        lines.append(f'Commit={commit}')
+    lines.append(f'BuiltUtc={datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}')
+    return '\r\n'.join(lines) + '\r\n'
 
 
 def keep_runtime(relative: Path) -> bool:
@@ -272,6 +322,10 @@ def build(install: Path, pristine: Path, classic: Path, repo: Path, out: Path, l
         withheld = {item: con.execute('DELETE FROM MerchantItem WHERE ItemTemplateID = ?', (item,)).rowcount
                     for item in WITHHELD_MERCHANT_ITEMS}
         stock_models = use_stock_models(con)
+        unknown = private_models_without_art(con, pristine, patch)
+        if unknown:
+            raise SystemExit('Items name private models the client patch does not add (map them in PRIVATE_MODELS or add the '
+                             f'art to make_client_patch.py): {unknown[:20]}')
         con.commit()
         world = release.verify_clean(con, policy, defaults)
     con.close()     # the world file is renamed below
@@ -327,6 +381,11 @@ def build(install: Path, pristine: Path, classic: Path, repo: Path, out: Path, l
     title = f'Divided Realms {label}'
     (out / 'READ ME FIRST.txt').write_text(READ_ME.format(label=label, rule='=' * len(title)).replace('\n', '\r\n'), encoding='utf-8')
     (out / 'EDITION.txt').write_text(f'{title}: the original 1.130 client (bring your own), modern test classes.\r\n', encoding='utf-8')
+    commit = subprocess.run(['git', '-C', str(repo), 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip()
+    (out / RELEASE_STAMP).write_text(release_stamp(label, out.name, commit), encoding='utf-8')
+    if not out.name.startswith(f'DividedRealms-{release_version}'):
+        print(f'WARNING: the launcher looks for DividedRealms-{release_version}-<name>.zip on the release page; '
+              f'this package is {out.name}.zip, so the launcher will not offer it as an update.', flush=True)
     for name in ('LICENSE', 'THIRD_PARTY.md'):
         shutil.copy2(repo / name, out / name)
     # Only the docs the repository tracks: the developer's local hand-off and research notes never ship.

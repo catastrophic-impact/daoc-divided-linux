@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -12,6 +13,13 @@ namespace DOL.UnitTests;
 [TestFixture, NonParallelizable]
 public class UT_BotWeaponStats
 {
+    private EpicTestServerScope _server;
+    private PetTestLanguageScope _language;
+
+    // SkillBase and GameObject need the empty test server when this fixture runs on its own.
+    [SetUp] public void StartTestServer() { _server = new EpicTestServerScope(); _language = new PetTestLanguageScope(); }
+    [TearDown] public void StopTestServer() { _language.Dispose(); _server.Dispose(); }
+
     private static DbItemTemplate LargeWeapon(int dps = 15, int speed = 45, int quality = 89) => new()
     {
         Id_nb = Guid.NewGuid().ToString(), Name = "database two-hander", Level = 1,
@@ -219,6 +227,151 @@ public class UT_BotWeaponStats
         public override int WeaponSpecLevel(DbInventoryItem item) => 1;
         public override double Effectiveness { get => 1; set { } }
     }
+    private sealed class ClassedBot : GameBot
+    {
+        private ClassedBot() : base((OfflineWorldBotRecord)null) { }
+        public ICharacterClass Class;
+        public override byte Level { get; set; }
+        public override ICharacterClass CharacterClass => Class;
+        public override bool HasAbilityToUseItem(DbItemTemplate item) => true;
+    }
+
+    [TestCase(typeof(ClassBard), false)]
+    [TestCase(typeof(ClassDruid), false)]
+    [TestCase(typeof(ClassChampion), false)]
+    [TestCase(typeof(ClassBlademaster), true)]
+    public void OnlyDualWieldClassesTakeAnOffhandWeapon(Type cls, bool offhand)
+    {
+        var bot = (ClassedBot)RuntimeHelpers.GetUninitializedObject(typeof(ClassedBot));
+        bot.Level = 20;
+        bot.Class = (ICharacterClass)Activator.CreateInstance(cls);
+        DbItemTemplate sword = LargeWeapon();
+        sword.Object_Type = (int)eObjectType.Blades;
+        sword.Item_Type = Slot.LEFTHAND;
+        sword.Hand = 0;
+        DbInventoryItem item = GameInventoryItem.Create(sword);
+        item.LevelRequirement = 1;
+
+        Assert.That(BotWeaponStats.CanWieldOffhandWeapon(bot), Is.EqualTo(offhand));
+        Assert.That(BotWeaponStats.FitsConfiguredSlot(bot, item, eInventorySlot.LeftHandWeapon), Is.EqualTo(offhand));
+        Assert.That(BotWeaponStats.FitsConfiguredSlot(bot, item, eInventorySlot.RightHandWeapon), Is.True);
+    }
+
+    [Test]
+    public void ChampionTrainedInLargeWeaponsFitsTheTwoHandedBuildBetterThanTheLevelOnePick()
+    {
+        var trained = new Dictionary<string, int>
+        {
+            [Specs.Large_Weapons] = 25, [Specs.Valor] = 25, [Specs.Blades] = 1,
+        };
+        int Fit(BotSpec plan)
+        {
+            BotLifetimeBuild.AlignWithInvestedWeapons(plan, line => trained.GetValueOrDefault(line));
+            return AccountCompanionRules.PlanFit(
+                plan.SpecLines.Select(line => new AccountCompanionRules.PlanLine(line.Spec, (int)line.SpecCap, line.levelRatio)),
+                line => trained.GetValueOrDefault(line));
+        }
+
+        BotSpec oneHand = new ChampionBotSpec(eSpecType.OneHandAndShield);
+        BotSpec twoHand = new ChampionBotSpec(eSpecType.TwoHanded);
+        Assert.That(oneHand.Is2H, Is.False);
+        Assert.That(twoHand.Is2H, Is.True);
+        Assert.That(Fit(twoHand), Is.GreaterThan(Fit(oneHand)));
+    }
+
+    private static int Fit(BotSpec plan, Func<string, int> trained) =>
+        AccountCompanionRules.PlanFit(
+            plan.SpecLines.Select(line => new AccountCompanionRules.PlanLine(line.Spec, (int)line.SpecCap, line.levelRatio)),
+            trained);
+
+    private static System.Collections.Generic.IEnumerable<eCharacterClass> ClassesWithBotBuilds() =>
+        Enum.GetValues<eCharacterClass>().Where(cls =>
+            BotSpec.GetSpec(cls, BotSpec.GetSpecializationChoices(cls)[0]) != null).Distinct();
+
+    /// <summary>
+    /// Every class, every build: a companion whose plan was picked at level 1 (the class's first
+    /// build) but whose owner trained another build's lines ends up on a plan that fits those
+    /// lines at least as well, carrying the weapon line the owner trained most.
+    /// </summary>
+    [Test]
+    public void EveryClassCompanionFollowsTheBuildItsOwnerTrained()
+    {
+        var failures = new List<string>();
+        int checkedBuilds = 0;
+        foreach (eCharacterClass cls in ClassesWithBotBuilds())
+        {
+            var choices = BotSpec.GetSpecializationChoices(cls);
+            string levelOnePlan = BotLifetimeBuild.Encode(BotSpec.GetSpec(cls, choices[0]));
+            foreach (eSpecType choice in choices)
+            {
+                for (int roll = 0; roll < 6; roll++)
+                {
+                    BotSpec source = BotSpec.GetSpec(cls, choice);
+                    if (source == null) continue;
+                    var points = source.SpecLines
+                        .Where(line => !string.IsNullOrWhiteSpace(line.Spec))
+                        .GroupBy(line => line.Spec)
+                        .ToDictionary(group => group.Key, group => Math.Max(1, (int)(group.Max(line => line.SpecCap) * 0.6)));
+                    int Trained(string line) => line != null && points.TryGetValue(line, out int value) ? value : 1;
+
+                    BotSpec picked = GameBot.PickCompanionBuild(cls, levelOnePlan, null, Trained, out _);
+                    checkedBuilds++;
+                    if (picked == null) { failures.Add($"{cls}/{choice}: no plan"); continue; }
+                    if (Fit(picked, Trained) < Fit(source, Trained))
+                        failures.Add($"{cls}/{choice}: kept {picked.SpecType} fit {Fit(picked, Trained)} < {source.SpecType} fit {Fit(source, Trained)}");
+
+                    string weaponLine = new[] { source.WeaponOneType, source.WeaponTwoType }
+                        .Where(type => type != 0 && BotWeaponStats.IsMeleeWeapon(type))
+                        .Select(SkillBase.ObjectTypeToSpec)
+                        .Where(line => !string.IsNullOrEmpty(line) && Trained(line) > 1)
+                        .OrderByDescending(Trained).FirstOrDefault();
+                    if (weaponLine != null && !picked.SpecLines.Any(line => line.Spec == weaponLine))
+                        failures.Add($"{cls}/{choice}: trained {weaponLine} but plan {picked.SpecType} has no such line");
+                }
+            }
+        }
+        Assert.That(checkedBuilds, Is.GreaterThan(100));
+        Assert.That(failures.Distinct(), Is.Empty);
+    }
+
+    /// <summary>A plan with an offhand weapon only for classes that can dual wield, and the reverse.</summary>
+    [Test]
+    public void EveryOffhandBuildBelongsToADualWieldClass()
+    {
+        var failures = new List<string>();
+        foreach (eCharacterClass cls in ClassesWithBotBuilds())
+        {
+            var characterClass = ScriptMgr.FindCharacterClass((int)cls);
+            if (characterClass == null) continue;
+            foreach (eSpecType choice in BotSpec.GetSpecializationChoices(cls))
+                for (int roll = 0; roll < 6; roll++)
+                {
+                    BotSpec plan = BotSpec.GetSpec(cls, choice);
+                    bool offhand = plan?.SpecType is eSpecType.DualWield or eSpecType.DualWieldAndShield or eSpecType.LeftAxe;
+                    if (offhand && !characterClass.CanUseLefthandedWeapon)
+                        failures.Add($"{cls}/{choice} plans {plan.SpecType} but the class cannot dual wield");
+                }
+        }
+        Assert.That(failures.Distinct(), Is.Empty);
+    }
+
+    /// <summary>The class rule itself: exactly the live dual wielders and Maulers.</summary>
+    [Test]
+    public void DualWieldClassesAreTheLiveOnes()
+    {
+        var expected = new[]
+        {
+            eCharacterClass.Mercenary, eCharacterClass.Infiltrator, eCharacterClass.Blademaster,
+            eCharacterClass.Nightshade, eCharacterClass.Ranger, eCharacterClass.Berserker,
+            eCharacterClass.Shadowblade, eCharacterClass.Savage,
+            eCharacterClass.MaulerAlb, eCharacterClass.MaulerMid, eCharacterClass.MaulerHib,
+        };
+        var actual = Enum.GetValues<eCharacterClass>().Distinct()
+            .Where(cls => ScriptMgr.FindCharacterClass((int)cls)?.CanUseLefthandedWeapon == true)
+            .ToArray();
+        Assert.That(actual, Is.EquivalentTo(expected));
+    }
+
     private sealed class MeleeEligibilityBot : GameBot
     {
         private MeleeEligibilityBot() : base((OfflineWorldBotRecord)null) { }

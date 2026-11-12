@@ -135,7 +135,8 @@ namespace DOL.GS
             }
             finally
             {
-                if (Properties.CRAFTING_ADJUST_PRODUCT_PRICE)
+                // a recipe id missing from the world loads as null; pricing it threw out of the craft request
+                if (Properties.CRAFTING_ADJUST_PRODUCT_PRICE && recipe?.Product != null)
                     recipe.SetRecommendedProductPriceInDB();
                 recipeCache[recipeDatabaseID] = recipe;
             }

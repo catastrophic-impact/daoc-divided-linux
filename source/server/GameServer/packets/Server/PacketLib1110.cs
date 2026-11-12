@@ -56,15 +56,23 @@ namespace DOL.GS.PacketHandler
 		/// <summary>
 		/// Stormforged spells (62000-62239) have their own tooltips, as do and the offline Master Level and Champion abilities
 		/// (63000-63199) with the stock effects they apply (ability ID * 1000 + n),
-		/// and the Valkyrie test kit (64990-65150, tooltips 27000-27160; 65151+ are stock spells).
+		/// and the Valkyrie test kit (64990-65150, tooltips 27000-27160; 65151+ are stock spells),
+		/// and the Storm and Tuatha Sovereign remake styles, spells and regalia item abilities (63500-63860, 65600-65727) with their stock effects.
 		/// Their icons are borrowed, so the icon's stock tooltip would be wrong.
 		/// </summary>
 		public static bool UsesOwnTooltipIdentity(int spellId)
 		{
             if (DOL.GS.Spells.ModernMauler.Owns(spellId) || DOL.GS.Spells.ModernWarlock.Owns(spellId))
                 return true;
-			return spellId is >= 64000 and <= 64572 or >= 73000 and <= 73572 or >= 73000000 and <= 73572999 or >= 64990 and <= 65150 or >= 65200 and <= 65260 or >= 64000000 and <= 64572999 or >= 62000 and <= 62239 or >= 62400 and <= 62972 or >= 63000 and <= 63199 or >= 62400000 and <= 62960999 or >= 63000000 and <= 63199999;
+			return spellId is >= 64000 and <= 64572 or >= 73000 and <= 73572 or >= 73000000 and <= 73572999 or >= 64990 and <= 65150 or >= 65200 and <= 65260 or >= 64000000 and <= 64572999 or >= 62000 and <= 62239 or >= 62400 and <= 62972 or >= 63000 and <= 63199 or >= 62400000 and <= 62960999 or >= 63000000 and <= 63199999 || IsStormRemake(spellId);
 		}
+
+		private static bool IsStormRemake(int spellId) =>
+			spellId is >= DOL.GS.Spells.StormRemakeStyles.FirstEffectId and <= 63860 or >= DOL.GS.Spells.StormRemakeStyles.FirstEffectId * 1000 and <= 63860999 ||
+			DOL.GS.Spells.TuathaRemakeSpells.Owns(spellId) || spellId is >= DOL.GS.Spells.TuathaRemakeSpells.FirstId * 1000 and <= 65727999 ||
+			// Pendragon remake: style effects 63900-63960, spells and Valor icons 65800-65927, with their stock effects.
+			spellId is >= DOL.GS.Spells.PendragonRemakeStyles.FirstEffectId and <= 63960 or >= DOL.GS.Spells.PendragonRemakeStyles.FirstEffectId * 1000 and <= 63960999 ||
+			spellId is >= DOL.GS.Spells.PendragonRemakeSpells.FirstId and <= 65927 or >= DOL.GS.Spells.PendragonRemakeSpells.FirstId * 1000 and <= 65927999;
 
         /// <summary>
 		/// New system in v1.110+ for delve info. delve is cached by client in extra file, stored locally.
@@ -242,8 +250,14 @@ namespace DOL.GS.PacketHandler
 
 						if (spell.HasSubSpell)
 						{
-							if (m_gameClient.CanSendTooltip(24, SkillBase.GetSpellByID(spell.SubSpellID).InternalID))
-								SendDelveInfo(DetailDisplayHandler.DelveSpell(m_gameClient, SkillBase.GetSpellByID(spell.SubSpellID)));
+							// SubSpellID can be 0 when the secondaries come from MultipleSubSpells.
+							foreach (int subSpellId in spell.MultipleSubSpells.Prepend(spell.SubSpellID))
+							{
+								Spell subSpell = subSpellId > 0 ? SkillBase.GetSpellByID(subSpellId) : null;
+
+								if (subSpell != null && m_gameClient.CanSendTooltip(24, subSpell.InternalID))
+									SendDelveInfo(DetailDisplayHandler.DelveSpell(m_gameClient, subSpell));
+							}
 						}
 
 						if (spell.SpellType == eSpellType.DefensiveProc || spell.SpellType == eSpellType.OffensiveProc)

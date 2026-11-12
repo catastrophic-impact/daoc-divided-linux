@@ -132,7 +132,8 @@ namespace DOL.GS
                     !AutonomousDarknessFallsNavigation.MayQueueRuntimePath(pathfindingResult,
                         rentedNodeBuffer, position, target) &&
                     !AutonomousDarknessFallsNavigation.MayQueueOwnExitGroundPath(Owner.Realm,
-                        pathfindingResult, rentedNodeBuffer, position, target))
+                        pathfindingResult, rentedNodeBuffer, position, target) &&
+                    !TryStrictDarknessFallsPrefix(zone, position, target, filters, rentedNodeBuffer, ref pathfindingResult))
                 {
                     // DF navigation is only safe as a complete certified 3D
                     // corridor. Do not advance along a partial route or an
@@ -177,6 +178,26 @@ namespace DOL.GS
             {
                 ArrayPool<WrappedPathfindingNode>.Shared.Return(rentedNodeBuffer);
             }
+        }
+
+        /// <summary>
+        /// A long Darkness Falls walk whose corridor Detour cut at its 256-polygon search limit (a partial path) walks
+        /// the cut corridor's own end first, when that end is itself a complete strict DF segment (re-queried and
+        /// re-validated; partial again from there, and the usual continuation replots). Living Server 803882dec: after
+        /// Prince Ba'alorien the Hibernian raid's path to Princess Nahemah's muster was cut at 25380,25567,18128; every
+        /// raider got NoPathFound, gave up the goal and the event camp was quarantined. Both halves are strict.
+        /// </summary>
+        private static bool TryStrictDarknessFallsPrefix(Zone zone, Vector3 position, Vector3 target, EDtPolyFlags[] filters,
+            WrappedPathfindingNode[] nodes, ref PathfindingResult result)
+        {
+            if (!AutonomousDarknessFallsNavigation.IsTruncatedCorridor(result, nodes, position, target))
+                return false;
+            Vector3 end = nodes[result.NodeCount - 1].Position;
+            PathfindingResult prefix = PathfindingProvider.Instance.GetPathStraight(zone, position, end, filters, nodes);
+            if (!AutonomousDarknessFallsNavigation.MayQueueRuntimePath(prefix, nodes, position, end))
+                return false;
+            result = new(PathfindingStatus.PartialPathFound, prefix.NodeCount);
+            return true;
         }
 
         /// <summary>
@@ -541,7 +562,7 @@ namespace DOL.GS
                 {
                     if (listed++ >= 4) break;
                     GameKeepDoor keepDoor = door as GameKeepDoor;
-                    text.Append($"[{door.DoorId} {door.GetType().Name} {door.State} realm={door.Realm} " +
+                    text.Append($"[{door.DoorId} {door.GetType().Name} {door.State} realm={GlobalConstants.RealmToName(door.Realm)} " +
                                 $"keep={keepDoor?.Component?.Keep?.KeepID.ToString() ?? "-"} portal={keepDoor?.Component?.Keep?.IsPortalKeep} " +
                                 $"usable={(keepDoor != null && CanUseFriendlyKeepDoor(Owner, keepDoor))} interact={door.CanBeOpenedViaInteraction} " +
                                 $"dist={Owner.GetDistanceTo(door)}]");

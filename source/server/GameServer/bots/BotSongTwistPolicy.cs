@@ -151,6 +151,23 @@ namespace DOL.GS
                 ?? (available.Contains(eSpellType.SpeedEnhancement) ? eSpellType.SpeedEnhancement : null);
         }
 
+        public const int SkaldRestChantHealthPercent = 50;
+
+        /// <summary>
+        /// The chant a Skald holds in a fight. Night playtest 2026-11-04: Skalds died at 92% power with their chants unused,
+        /// because every performer stopped its song in combat, and the one-song hold swapped between travel and regen out of
+        /// it. A Skald fights with its damage add (Chant of the Brawl and up) going, or its Song of Rest when someone in the
+        /// group is below half health; travel speed never in a fight.
+        /// </summary>
+        public static eSpellType? SkaldCombatHold(ICollection<eSpellType> available, int lowestHealthPercent)
+        {
+            if (lowestHealthPercent < SkaldRestChantHealthPercent && available.Contains(eSpellType.HealthRegenBuff))
+                return eSpellType.HealthRegenBuff;
+            if (available.Contains(eSpellType.DamageAdd))
+                return eSpellType.DamageAdd;
+            return available.Contains(eSpellType.HealthRegenBuff) ? eSpellType.HealthRegenBuff : null;
+        }
+
         /// <summary>The one chant a Paladin holds (owner 2026-10-30: endurance in a fight), grouped or solo.</summary>
         public static eSpellType PaladinHold(ICollection<eSpellType> available) =>
             new[] { eSpellType.EnduranceRegenBuff, eSpellType.DamageAdd, eSpellType.SpecArmorFactorBuff, eSpellType.CombatHeal }

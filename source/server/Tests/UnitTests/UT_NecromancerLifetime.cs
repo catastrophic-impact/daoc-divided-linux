@@ -31,6 +31,7 @@ namespace DOL.UnitTests
             private Bot() : base((OfflineWorldBotRecord)null) { }
             public override bool IsAlive => Health > 0;
             public override int Health { get; set; }
+            public override int MaxHealth => 200;
             public override byte Level { get; set; }
             public override ushort Model { get; set; }
             public override ICharacterClass CharacterClass => new ClassNecromancer();
@@ -119,15 +120,17 @@ namespace DOL.UnitTests
         }
 
         [Test]
-        public void RealPetDeathStillClearsShadeAndLeavesOneHp()
+        // Owner 2026-11-05: a bot Necromancer losing its servant keeps the player rule, at most 10% of its health (was 1 HP).
+        public void RealPetDeathStillClearsShadeAndLeavesTenPercent()
         {
             var (owner, pet, brain) = CreateBot(false);
+            owner.Health = 150;
             owner.Shade(true);
             pet.Health = 0;
             Assert.That(owner.RemoveControlledBrain(brain), Is.True);
             Assert.That(owner.ControlledBrain, Is.Null);
             Assert.That(owner.IsShade, Is.False);
-            Assert.That(owner.Health, Is.EqualTo(1));
+            Assert.That(owner.Health, Is.EqualTo(20));
         }
 
         [TestCase(false)]

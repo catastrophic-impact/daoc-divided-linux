@@ -16,11 +16,22 @@ namespace DOL.GS.PropertyCalc
     {
         public EnduranceRegenerationAmountCalculator() { }
 
-        public static double ActiveRegeneration(double buffs, double ability, double items, int debuff, bool freeTireless)
+        public static double ActiveRegeneration(double buffs, double ability, double items, int debuff, bool freeTireless, int paidTireless = 0)
         {
-            // Native Tireless is a floor, not another stacking point. Existing paid
-            // Tireless continues to work without double-counting the free grant.
-            return (freeTireless ? Math.Max(buffs + items, Math.Max(1, ability)) : buffs + ability + items) - Math.Abs(debuff);
+            // Native Tireless is a floor, not another stacking point, and a paid Tireless realm ability (paidTireless, its
+            // ability bonus) is not counted again on top of the free grant. Every other ability bonus, such as the Champion
+            // Level 5 passive, stacks (issue #10: it used to be lost behind the floor's Math.Max).
+            if (!freeTireless)
+                return buffs + ability + items - Math.Abs(debuff);
+            double paid = Math.Clamp(paidTireless, 0, Math.Max(0, ability));
+            return Math.Max(buffs + items, Math.Max(1, paid)) + (ability - paid) - Math.Abs(debuff);
+        }
+
+        /// <summary>The ability bonus a paid Tireless realm ability gives (0 without it).</summary>
+        public static int PaidTireless(GameLiving living)
+        {
+            RealmAbilities.RAEndRegenEnhancer tireless = living.GetAbility<RealmAbilities.RAEndRegenEnhancer>();
+            return tireless == null ? 0 : tireless.GetAmountForLevel(tireless.Level);
         }
 
         public override int CalcValue(GameLiving living, eProperty property)
@@ -43,15 +54,18 @@ namespace DOL.GS.PropertyCalc
 
             // Buffs allow to regenerate endurance even in combat and while moving.
             double regen = ActiveRegeneration(living.BaseBuffBonusCategory[property], living.AbilityBonus[property],
-                living.ItemBonus[property], debuff, living.HasAbility(Abilities.Tireless));
+                living.ItemBonus[property], debuff, living.HasAbility(Abilities.Tireless), PaidTireless(living));
 
             regen += ModernItemBonusRules.MythicalRegen(living, property);
+            // Buffs, items, abilities and mythirian regen also stack on the out-of-combat refill floor (issue #10).
+            double bonus = regen;
             bool playerRules = living is GamePlayer || living is GameBot;
             if (playerRules)
                 regen += ClassicRestRegeneration.BaseEndurancePerTick(living.IsSitting, living.InCombat, living.IsMoving);
 
-            regen *= ServerProperties.Properties.ENDURANCE_REGEN_AMOUNT_MODIFIER;
-            return OutOfCombatRecovery.Amount(living, property, Math.Max(0, (int) regen));
+            double modifier = ServerProperties.Properties.ENDURANCE_REGEN_AMOUNT_MODIFIER;
+            regen *= modifier;
+            return OutOfCombatRecovery.Amount(living, property, Math.Max(0, (int) regen), bonus, modifier);
         }
     }
 }

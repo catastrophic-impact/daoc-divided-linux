@@ -181,7 +181,7 @@ public static class AutonomousBotCraftOrders
         return recipes
             .Where(recipe => recipe?.Product != null && !recipe.Product.IsStackable &&
                              (recipe.Product.Realm == 0 || recipe.Product.Realm == (int)realm) &&
-                             AutonomousBotCrafting.FitsLevel(recipe.Product.Level, buyerLevel) && Quote(recipe) <= budget)
+                             FitsCommissionLevel(recipe.Product.Level, buyerLevel) && Quote(recipe) <= budget)
             .Select(recipe => (Recipe: recipe, Gain: upgradeGain(recipe)))
             .Where(candidate => candidate.Gain > 0)
             .OrderByDescending(candidate => candidate.Gain)
@@ -189,6 +189,18 @@ public static class AutonomousBotCraftOrders
             .Select(candidate => candidate.Recipe)
             .FirstOrDefault(hasCrafter);
     }
+
+    /// <summary>
+    /// Night 2026-11-04: 2 craft orders against 88 the night before. Almost no bot was under level 20 any more, the crafters'
+    /// skill ended at a median of 8 (top 28), and an order had to fit the buyer's 10-level window, so no crafter could make
+    /// anything a buyer would take. Gamebots start without armor and earn it, so a lower piece is still a real upgrade to
+    /// many of them (the order also needs <see cref="UpgradeGain"/> above 0): an order may be up to this many levels below
+    /// its buyer.
+    /// </summary>
+    public const int CommissionLevelWindow = 20;
+
+    public static bool FitsCommissionLevel(int productLevel, int buyerLevel) =>
+        productLevel <= buyerLevel && productLevel + CommissionLevelWindow >= buyerLevel;
 
     /// <summary>How much the product would raise what the buyer wears in its slot, by the equipment upgrade rules; 0 if
     /// it is no upgrade.</summary>

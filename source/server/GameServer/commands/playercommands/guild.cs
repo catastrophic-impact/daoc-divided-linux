@@ -436,6 +436,53 @@ namespace DOL.GS.Commands
 						client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.InviteSent", obj.Name, client.Player.Guild.Name), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 						break;
 					}
+					// Divided Realms: add another character of your own account, online or not (GuildAltJoin).
+					case "addalt":
+					{
+						Guild guild = client.Player.Guild;
+						bool mayInvite = guild != null && guild.HasRank(client.Player, Guild.eRank.Invite);
+						IList<DbCoreCharacter> accountCharacters = GuildAltJoin.AccountCharacters(client.Account.Name);
+
+						if (args.Length < 3)
+						{
+							GuildAltJoin.Refusal general = GuildAltJoin.Check(guild, mayInvite, client.Player.InternalID, client.Account.Name, null);
+							if (general is GuildAltJoin.Refusal.NotInGuild or GuildAltJoin.Refusal.NoInvitePrivilege)
+							{
+								client.Out.SendMessage(GuildAltJoin.RefusalText(general, null, guild?.Name), eChatType.CT_System, eChatLoc.CL_SystemWindow);
+								return;
+							}
+							client.Out.SendMessage("'/gc addalt <name>' adds another character of your account to the guild, even when it is offline.", eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
+							List<DbCoreCharacter> eligible = GuildAltJoin.Eligible(guild, mayInvite, client.Player.InternalID, client.Account.Name, accountCharacters);
+							client.Out.SendMessage(eligible.Count == 0
+								? "None of your other characters can join (they must be of this realm and in no guild)."
+								: "Can join: " + string.Join(", ", eligible.Select(c => c.Name)), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
+							return;
+						}
+
+						string altName = args[2];
+						DbCoreCharacter alt = GuildAltJoin.FindAlt(accountCharacters, altName);
+						GuildAltJoin.Refusal refusal = GuildAltJoin.Check(guild, mayInvite, client.Player.InternalID, client.Account.Name, alt);
+						if (refusal != GuildAltJoin.Refusal.None)
+						{
+							client.Out.SendMessage(GuildAltJoin.RefusalText(refusal, alt?.Name ?? altName, guild?.Name), eChatType.CT_System, eChatLoc.CL_SystemWindow);
+							return;
+						}
+
+						// An account has one character in the game at a time, but if this one is online it joins the normal way
+						// (its live row would overwrite an offline save).
+						GamePlayer onlineAlt = ClientService.Instance.GetPlayerByExactName(alt.Name);
+						bool added = onlineAlt != null
+							? guild.AddPlayer(onlineAlt)
+							: GuildAltJoin.AddOffline(guild, alt, client.Player.Name);
+						if (!added)
+						{
+							client.Out.SendMessage($"{alt.Name} could not be added to the guild.", eChatType.CT_System, eChatLoc.CL_SystemWindow);
+							return;
+						}
+						if (onlineAlt == null)
+							client.Out.SendMessage($"{alt.Name} is now in {guild.Name}. The guild shows on that character the next time you log in with it.", eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
+						break;
+					}
 					case "remove":
 					{
 						if (client.Player.Guild == null)
@@ -524,6 +571,8 @@ namespace DOL.GS.Commands
 							ch.GuildID = string.Empty;
 							ch.GuildRank = 9;
 							GameServer.Database.SaveObject(ch);
+							// Without this the offline character stayed in the member list until a restart.
+							GuildMgr.RemoveCharacterFromGuildMemberViews(client.Player.Guild, ch.ObjectId);
 						}
 
 						break;
@@ -2581,6 +2630,7 @@ namespace DOL.GS.Commands
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildLeader"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildAccept"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildInvite"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
+			client.Out.SendMessage("'/gc addalt <name>' to add another character of your account to the guild, even offline", eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildWho"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildList"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);
 			client.Out.SendMessage(LanguageMgr.GetTranslation(client.Account.Language, "Scripts.Player.Guild.Help.GuildAlli"), eChatType.CT_Guild, eChatLoc.CL_SystemWindow);

@@ -77,6 +77,7 @@ namespace DOL.Network
                 return false;
 
             InitializeUdpSocket();
+            WarnIfReachableFromOtherComputers();
 
             if (Configuration.EnableUPnP)
                 ConfigureUpnp();
@@ -325,6 +326,25 @@ namespace DOL.Network
                 {
                     listenArgs.AcceptSocket = null;
                 }
+            }
+        }
+
+        /// <summary>The router UPnP talks to (tests replace it).</summary>
+        protected virtual IUpnpGateway CreateUpnpGateway()
+        {
+            return new UpnpNatGateway();
+        }
+
+        /// <summary>
+        /// One warning line per way this server can be reached beyond this PC (Living Server 1.1.2). A player's own
+        /// serverconfig.xml keeps working as it is; the log says what it allows and how to turn it off.
+        /// </summary>
+        private void WarnIfReachableFromOtherComputers()
+        {
+            foreach (string warning in Configuration.ExposureWarnings())
+            {
+                if (log.IsWarnEnabled)
+                    log.Warn($"NETWORK_EXPOSURE {warning}");
             }
         }
 

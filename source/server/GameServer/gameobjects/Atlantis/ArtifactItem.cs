@@ -126,7 +126,41 @@ namespace DOL.GS
             if (spellId == 0)
                 return 0;
 
-            return ArtifactLevel >= ArtifactLevels.AbilityUnlockLevel(Array.IndexOf(AbilityIds(), spellId)) ? spellId : 0;
+            return ArtifactLevel >= UnlockLevelOf(spellId) ? spellId : 0;
+        }
+
+        private int UnlockLevelOf(int spellId) => ArtifactLevels.AbilityUnlockLevel(Array.IndexOf(AbilityIds(), spellId));
+
+        /// <summary>
+        /// Why a use of this artifact does nothing yet: the ability behind use 1 (type 0 or 1) or use 2 (type 2) is
+        /// still locked. Null when it is open or there is none. Used to fail silently with "You attempt to use...".
+        /// </summary>
+        public string LockedUseMessage(int type)
+        {
+            int spellId = type == 2 ? Template.SpellID1 : Template.SpellID;
+
+            if (spellId == 0)
+                return null;
+
+            int unlock = UnlockLevelOf(spellId);
+            int level = ArtifactLevel;
+
+            if (level >= unlock)
+                return null;
+
+            Spell spell = SkillBase.FindSpell(spellId, SkillBase.GetSpellLine(GlobalSpellsLines.Item_Effects));
+            return LockedText(Name, spell?.Name, unlock, level);
+        }
+
+        public static string LockedText(string artifact, string ability, int unlock, int level)
+        {
+            return $"{(string.IsNullOrEmpty(ability) ? "This ability" : ability)} on your {artifact} unlocks at artifact level {unlock}. It is level {level}: wear it while you earn experience to raise it.";
+        }
+
+        /// <summary>The line a credit item gives when used: credits are only turned in.</summary>
+        public static string CreditUseText(string artifactName)
+        {
+            return $"This credit is not used directly. Give it to an Artifact Scholar to receive {artifactName}.";
         }
 
         private (int Type, int Value)[] CurrentBonuses()

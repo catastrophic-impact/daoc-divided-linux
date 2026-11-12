@@ -354,5 +354,13 @@ namespace DOL.UnitTests
             var filter = typeof(PlayerMobNavigator).GetMethod("ProtectedRealm", BindingFlags.NonPublic | BindingFlags.Static);
             Assert.That(filter.Invoke(null, new object[] { (ushort)region, (ushort)zone }), Is.EqualTo(expected));
         }
+
+        // True 1.65 0.5: the search reaches as far as the puller does, between 1,000 and 2,000.
+        [TestCase(0, 1000)]      // a melee puller walks up, as before
+        [TestCase(1200, 1100)]   // a crossbow
+        [TestCase(1500, 1400)]   // a pull spell
+        [TestCase(2300, 2000)]   // never past 2,000
+        public void TheGrindSearchReachesAsFarAsThePuller(int reach, int radius) =>
+            Assert.That(PlayerCompanionGrind.SearchRadius(reach), Is.EqualTo(radius));
     }
 }

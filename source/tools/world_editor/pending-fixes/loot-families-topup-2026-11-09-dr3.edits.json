@@ -1,0 +1,227 @@
+[
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "54bf78a4-fe3d-540a-be4b-e84c36106a76",
+   "MobName": "Aspect of Myrkr",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "9fc2bfb8-40a5-5f55-a761-73048e7b211d",
+   "MobName": "Banahogg's Spawn",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "333c99ed-a5b8-5641-9da4-e7d77dd51f0e",
+   "MobName": "Banahogg",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d1e5373e-ee75-501c-844b-be4830729333",
+   "MobName": "Chthonic Knight Azel",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c05466a8-d286-5011-9240-034686da0021",
+   "MobName": "Chthonic Knight Beleth",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e2e9a0f8-3394-54b6-bf74-b062c337964c",
+   "MobName": "Chthonic Knight Nexus",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "60bb9ba7-257e-5a88-9eb4-4917ac5f8357",
+   "MobName": "Chthonic Knight Zalar",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "a3ec6fe3-37a5-5815-bfbc-bcd397be2689",
+   "MobName": "Eye of Banahogg",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "d53398b2-2076-5b9b-9359-ee9d8f132aa7",
+   "MobName": "Farbjodr",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "e902cea9-19f5-5133-a7cf-3ebe0c8e91cf",
+   "MobName": "Inquisitor Mehalia",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "61a90c9a-397e-59bb-a3da-b89437ef2bd9",
+   "MobName": "Marquis Grigori",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "3667150c-48fa-51b2-b5b9-95902ac66dec",
+   "MobName": "Myrkr",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "119de48f-b010-56fd-9d54-aea8df5b320e",
+   "MobName": "Myrkr's Child",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "57281927-3a95-5c2d-b103-c08b74bf4c2a",
+   "MobName": "Ofridr's Front Guard",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "c0d413ee-f9af-5f63-86e8-f95af120893a",
+   "MobName": "Ofridr's Worms",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "39e4a4cb-df92-5f27-99ab-f88eccdf8718",
+   "MobName": "Soltinn's Soldier",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "975cb3e5-8ed2-560d-8c0d-1e19d0cfa0ae",
+   "MobName": "Soremaiden of Ofridr",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0278f9cf-60d2-5569-be6b-80cb6b043fa0",
+   "MobName": "Eye of Glaimaim",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "7f7323b8-28da-5ca4-9e6d-4510368ffdc8",
+   "MobName": "Glaimaim's Spawn",
+   "LootTemplateName": "family undead 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "8fc1a47f-2eb6-5815-a83f-016986cdebfb",
+   "MobName": "Glaimaim",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "b8ae3d05-ab5f-5651-a92f-5c888334fcd0",
+   "MobName": "Grimeil's Soldier",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0eab2ce8-2111-5564-9960-78f89a11b445",
+   "MobName": "Malairt",
+   "LootTemplateName": "family demon 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "133def2e-5338-5496-92ab-7f9809e79cf4",
+   "MobName": "Soremaiden of Teugmhail",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "53890524-d4a1-5f6d-a919-bf62e1561db4",
+   "MobName": "Teugmhail's Front Guard",
+   "LootTemplateName": "family humanoid 10",
+   "DropCount": 1
+  }
+ },
+ {
+  "table": "MobXLootTemplate",
+  "insert": {
+   "MobXLootTemplate_ID": "0f8a4661-c752-5bd0-ae91-19f7743cb239",
+   "MobName": "Teugmhail's Worms",
+   "LootTemplateName": "family animal 10",
+   "DropCount": 1
+  }
+ }
+]

@@ -135,6 +135,10 @@ namespace DOL.GS
 			LootList loot = base.GenerateLoot(mob, killer);
 			List<DbLootOtd> lootOTDs = null;
 
+			// A one-time drop goes straight into the bag and is recorded on the character: never during a simulation.
+			if (LootSimulator.IsSimulating)
+				return loot;
+
 			try
 			{
 				if (m_mobOTDList.ContainsKey(mob.Name.ToLower()))

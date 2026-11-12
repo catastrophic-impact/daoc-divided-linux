@@ -1,0 +1,19 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T22:18:37.516463+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "ServerProperty",
+   "key": "artifact_glass_regions",
+   "op": "update",
+   "before": {
+    "Value": "73,30,130,78,35,135,79,36,136,80,37,137,83,40,140,88,45,145,89,46,146,90,47,147,91,58,59,63,65,66,67,68,92,94,95,96,97,99,109,148,149,162,189,195,197,226,227,228,229,243,352,376,390,429,430,433,435,436,443"
+   },
+   "after": {
+    "Value": "73,30,130,78,35,135,79,36,136,80,37,137,83,40,140,88,45,145,89,46,146,90,47,147,91,58,59,63,65,66,67,68,92,94,95,96,97,99,109,148,149,162,189,195,197,226,227,228,229,243,352,376,390,429,430,433,435,436,443,339,341"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

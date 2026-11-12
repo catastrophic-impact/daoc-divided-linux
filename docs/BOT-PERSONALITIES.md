@@ -16,7 +16,7 @@ from the always-on changes listed in [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
 | `bot_voices_enabled` | True (since Beta 1.1) | Bots say lines from the bot-voices corpus in their own writing style (section 3). |
 | `bot_voices_debates` | True | When voices are on, bots hold debates and long threads in /faction (section 4). |
 | `bot_voices_tells` | True | When voices and memory are on, a bot now and then starts a tell with you ([bot-voices/TALKING-UPDATE.md](bot-voices/TALKING-UPDATE.md)). |
-| `bot_voices_chat_rate` | 1.0 | How much bots talk unprompted, 0 (only answers) to 3. |
+| `bot_voices_chat_rate` | 2.0 | How much bots talk unprompted, 0 (only answers) to 3 (1.0 before 1.1.2). |
 
 To change them, use the launcher's **Living Server** tab (with the server stopped; it applies at the next start). The same switches are in a script, for those who prefer it: close the
 server, launcher and game, then run (Python 3):
@@ -100,7 +100,7 @@ Personality doesn't choose goals in two cases:
 
 When voices are on, a bot's chat comes from the corpus in
 `source/server/GameServer/bots/autonomous/data/chat/` (979 lines and 296 scenes, written for
-2002–2003; see [bot-voices/DESIGN.md](https://github.com/chris4aker/OfflineDAoC-SocialExpansion/blob/main/docs/bot-voices/DESIGN.md)). The corpus is built into
+2002–2003; see [bot-voices/DESIGN.md](https://github.com/chris4aker/OfflineDAoC-LivingServer/blob/main/docs/bot-voices/DESIGN.md)). The corpus is built into
 `GameServer.dll`. Nothing is generated freely.
 
 **Choosing a line:**

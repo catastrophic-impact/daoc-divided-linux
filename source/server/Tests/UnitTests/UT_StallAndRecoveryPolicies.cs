@@ -7,7 +7,51 @@ namespace DOL.UnitTests
     [TestFixture, NonParallelizable]
     public class UT_StallAndRecoveryPolicies
     {
-        [SetUp] public void Reset() => AiTurnStallMonitor.TakeMinute();
+        [SetUp] public void Reset()
+        {
+            AiTurnStallMonitor.TakeMinute();
+            AiTurnStallMonitor.TakeSerialMinute();
+        }
+
+        [Test]
+        public void SerialNpcStepsAreKeptPerMinuteAndNamedWhenTheyExplainTheStall()
+        {
+            // DR-203: 2.7 s NpcService ticks whose slowest AI turn was 370 ms.
+            AiTurnStallMonitor.RecordSerial("GroupCoordinator.TryFormGroups", 5);
+            AiTurnStallMonitor.RecordSerial("RealmRaid.Pulse", 1900);
+            AiTurnStallMonitor.RecordSerial("RealmRaid.Pulse", 400);
+            AiTurnStallMonitor.RecordSerial("NpcService.BrainDispatch", 600);
+            var serial = AiTurnStallMonitor.TakeSerialMinute();
+            Assert.Multiple(() =>
+            {
+                Assert.That(serial.Select(s => s.Step), Is.EqualTo(new[] { "RealmRaid.Pulse", "NpcService.BrainDispatch" }),
+                    "under 20 ms is dropped; slowest first");
+                Assert.That(serial[0].Milliseconds, Is.EqualTo(1900), "the minute keeps each step's worst");
+                Assert.That(AiTurnStallMonitor.TakeSerialMinute(), Is.Empty, "each minute starts empty");
+                AiTurnStallMonitor.Turn[] top = [new("Yrildborg", "BotBrain", 372)];
+                Assert.That(AiTurnStallMonitor.LikelyCause(2700, 406, top, serial), Is.EqualTo("serial NPC step: RealmRaid.Pulse"));
+                Assert.That(AiTurnStallMonitor.LikelyCause(2700, 406, top, [("RealmRaid.Pulse", 200L)]), Does.StartWith("mixed"));
+                Assert.That(AiTurnStallMonitor.DescribeSerial(serial), Is.EqualTo("RealmRaid.Pulse 1900ms; NpcService.BrainDispatch 600ms"));
+            });
+        }
+
+        [Test]
+        public void CampTargetSearchProvesAFewCandidatesPerTurnAndRetriesFailuresLater()
+        {
+            // DR-203: one "Searching the blue element camp" turn proved every candidate (500 corridor checks, 1.16 s).
+            int cap = AutonomousWorldBotController.CampTargetRouteProofsPerSearch;
+            long retry = AutonomousWorldBotController.UnreachableCampTargetRetryMilliseconds;
+            Assert.Multiple(() =>
+            {
+                Assert.That(AutonomousWorldBotController.MayProveCampTarget(false, 0, 1_000, 0), Is.True);
+                Assert.That(AutonomousWorldBotController.MayProveCampTarget(false, 0, 1_000, cap - 1), Is.True);
+                Assert.That(AutonomousWorldBotController.MayProveCampTarget(false, 0, 1_000, cap), Is.False);
+                Assert.That(AutonomousWorldBotController.MayProveCampTarget(true, 1_000 + retry, 1_000, 0), Is.False,
+                    "a candidate that just failed waits");
+                Assert.That(AutonomousWorldBotController.MayProveCampTarget(true, 1_000 + retry, 1_000 + retry, 0), Is.True);
+                Assert.That(retry, Is.LessThan(75_000), "shorter than the empty-camp timer, so a good camp is not given up");
+            });
+        }
 
         [Test]
         public void StallMonitorKeepsOnlyTheFiveSlowestTurnsAndCountsTheRest()

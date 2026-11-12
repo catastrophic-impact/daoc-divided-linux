@@ -21,6 +21,7 @@ public sealed class UT_BotModernClasses
     ];
 
     private bool[] _saved;
+    private bool _savedBotCustom;
 
     private static ref bool Switch(int index)
     {
@@ -43,16 +44,54 @@ public sealed class UT_BotModernClasses
     {
         for (int i = 0; i < 10; i++)
             Switch(i) = value;
+        Properties.BOTS_USE_CUSTOM_CLASSES = value;
     }
 
     [SetUp]
-    public void Save() => _saved = Enumerable.Range(0, 10).Select(i => Switch(i)).ToArray();
+    public void Save()
+    {
+        _saved = Enumerable.Range(0, 10).Select(i => Switch(i)).ToArray();
+        _savedBotCustom = Properties.BOTS_USE_CUSTOM_CLASSES;
+    }
 
     [TearDown]
     public void Restore()
     {
         for (int i = 0; i < 10; i++)
             Switch(i) = _saved[i];
+        Properties.BOTS_USE_CUSTOM_CLASSES = _savedBotCustom;
+    }
+
+    private static readonly eCharacterClass[] CustomClasses =
+        [eCharacterClass.Stormforged, eCharacterClass.PendragonSovereign, eCharacterClass.TuathaSovereign];
+
+    [Test]
+    public void BotsLeaveTheCustomClassesToPlayers_UnlessTheBotSwitchIsOn()
+    {
+        SetAll(true);
+        Properties.BOTS_USE_CUSTOM_CLASSES = false;     // the default (owner, DR-dev-0.1g)
+        var realms = new[] { eRealm.Albion, eRealm.Midgard, eRealm.Hibernia };
+        var botClasses = realms.SelectMany(r => AutonomousBotIdentityGenerator.GetEraClasses(r)).ToArray();
+        var playerPicks = realms.SelectMany(r => AutonomousBotIdentityGenerator.GetEraClasses(r, forPlayer: true)).ToArray();
+        Assert.Multiple(() =>
+        {
+            Assert.That(botClasses, Has.None.Matches<eCharacterClass>(CustomClasses.Contains), "gamebots never roll them");
+            Assert.That(botClasses, Has.Length.EqualTo(48), "the other nine newer classes stay");
+            Assert.That(playerPicks, Is.SupersetOf(CustomClasses), "a /spawn helper the player picks can be one");
+            Assert.Throws<ArgumentException>(() =>
+                AutonomousBotIdentityGenerator.GenerateForClass(eRealm.Midgard, eGender.Male, eCharacterClass.Stormforged));
+            Assert.That(AutonomousBotIdentityGenerator.GenerateForClass(eRealm.Midgard, eGender.Male, eCharacterClass.Stormforged,
+                forPlayer: true).CharacterClass, Is.EqualTo(eCharacterClass.Stormforged));
+            Assert.That(AutonomousBotIdentityGenerator.IsClassAvailable(eCharacterClass.Stormforged), Is.True,
+                "loot and players still see the class");
+        });
+        var random = new Random(7);
+        var names = new HashSet<string>();
+        for (int i = 0; i < 600; i++)
+            Assert.That(CustomClasses, Does.Not.Contain(AutonomousBotIdentityGenerator.Generate(
+                realms[i % 3], i % 2 == 0 ? eGender.Male : eGender.Female, names, random).CharacterClass));
+        Properties.BOTS_USE_CUSTOM_CLASSES = true;
+        Assert.That(realms.SelectMany(r => AutonomousBotIdentityGenerator.GetEraClasses(r)), Is.SupersetOf(CustomClasses));
     }
 
     [Test]

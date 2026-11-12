@@ -37,8 +37,10 @@ namespace DOL.GS.PropertyCalc
             if (debuff < 0)
                 debuff = -debuff;
 
-            regen += living.BaseBuffBonusCategory[property] + living.AbilityBonus[property] + living.ItemBonus[property] - debuff;
-            regen += ModernItemBonusRules.MythicalRegen(living, property);
+            // Everything above the level base; it also stacks on the out-of-combat refill floor (issue #10).
+            double bonus = living.BaseBuffBonusCategory[property] + living.AbilityBonus[property] + living.ItemBonus[property] - debuff
+                + ModernItemBonusRules.MythicalRegen(living, property);
+            regen += bonus;
 
             if (living is GameNPC npc && living is not GameBot)
             {
@@ -50,8 +52,9 @@ namespace DOL.GS.PropertyCalc
                     regen = npc.MaxHealth * 0.125;
             }
 
-            regen *= ServerProperties.Properties.HEALTH_REGEN_AMOUNT_MODIFIER;
-            return OutOfCombatRecovery.Amount(living, property, Math.Max(1, (int) regen));
+            double modifier = ServerProperties.Properties.HEALTH_REGEN_AMOUNT_MODIFIER;
+            regen *= modifier;
+            return OutOfCombatRecovery.Amount(living, property, Math.Max(1, (int) regen), bonus, modifier);
         }
     }
 }

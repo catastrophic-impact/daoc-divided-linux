@@ -16,6 +16,71 @@ namespace DOL.GS.Quests
     public static class QuestTalkTruce
     {
         private static readonly Lazy<HashSet<string>> _questNpcNames = new(LoadQuestNpcNames);
+        private static volatile HashSet<string> _botSparedNames;
+
+        /// <summary>
+        /// Night 2026-11-04: autonomous gamebots killed Keeper Rasa (quest 20312 talk and hand-in steps) 398 times and Bjame
+        /// (21175-21185) 327 times. Both are aggressive level 26 monsters in the database; bots walking to them for their
+        /// quest step pulled them as route threats, and the next bots on the quest found "Keeper Rasa was not there".
+        /// A data quest's giver or talk, whisper or hand-in character is left alone by gamebots, and does not aggro them,
+        /// unless some quest also asks for it to be killed (then it is a quest monster, see AutonomousBotQuests.MayHunt).
+        /// </summary>
+        public static bool SparesBots(GameNPC npc) =>
+            npc != null && npc.Realm == eRealm.None && SparesBots(npc.Name);
+
+        /// <summary>The name check of <see cref="SparesBots(GameNPC)"/>.</summary>
+        public static bool SparesBots(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return false;
+            HashSet<string> names = _botSparedNames;
+            if (names == null)
+            {
+                try
+                {
+                    names = GameServer.Database == null ? new(StringComparer.OrdinalIgnoreCase) : BotSparedNames(GameServer.Database.SelectAllObjects<DbDataQuest>());
+                }
+                catch (Exception)
+                {
+                    names = new(StringComparer.OrdinalIgnoreCase);
+                }
+                _botSparedNames = names;
+            }
+            return names.Contains(name);
+        }
+
+        /// <summary>Tests only: the names gamebots spare, as if built from these quests.</summary>
+        public static void SetBotSparedNamesForTests(IEnumerable<DbDataQuest> quests) =>
+            _botSparedNames = quests == null ? null : BotSparedNames(quests);
+
+        /// <summary>Givers and talk targets of every quest, less every quest's kill targets. Pure.</summary>
+        public static HashSet<string> BotSparedNames(IEnumerable<DbDataQuest> quests)
+        {
+            HashSet<string> talk = new(StringComparer.OrdinalIgnoreCase);
+            HashSet<string> kill = new(StringComparer.OrdinalIgnoreCase);
+            foreach (DbDataQuest quest in quests)
+            {
+                if (!string.IsNullOrEmpty(quest.StartName))
+                    talk.Add(quest.StartName);
+                string[] types = (quest.StepType ?? string.Empty).Split('|');
+                string[] targets = (quest.TargetName ?? string.Empty).Split('|');
+                for (int i = 0; i < Math.Min(types.Length, targets.Length); i++)
+                {
+                    if (!byte.TryParse(types[i], out byte type))
+                        continue;
+                    string name = targets[i].Split(';')[0];
+                    if (name.Length == 0)
+                        continue;
+                    var step = (DataQuest.eStepType) type;
+                    if (TalksTo(step))
+                        talk.Add(name);
+                    else if (step is DataQuest.eStepType.Kill or DataQuest.eStepType.KillFinish)
+                        kill.Add(name);
+                }
+            }
+            talk.ExceptWith(kill);
+            return talk;
+        }
 
         /// <summary>Called from mob aggro checks: cheap for every NPC that is not a data quest's talk target.</summary>
         public static bool Holds(GameNPC npc, GamePlayer player)
@@ -53,7 +118,7 @@ namespace DOL.GS.Quests
         {
             HashSet<string> names = new(StringComparer.OrdinalIgnoreCase);
 
-            foreach (DbDataQuest quest in GameServer.Database.SelectAllObjects<DbDataQuest>())
+            foreach (DbDataQuest quest in EpicChainLinks.Link(GameServer.Database.SelectAllObjects<DbDataQuest>()))
             {
                 if (!string.IsNullOrEmpty(quest.StartName))
                     names.Add(quest.StartName);

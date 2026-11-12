@@ -6,7 +6,7 @@ namespace DOL.GS
     /// <summary>
     /// The monsters a bot or its party gave up a camp for, and how far around them to stay: for
     /// <see cref="CooldownMilliseconds"/> the camp picker skips any camp whose straight line from the bot passes inside
-    /// that reach. The give-up memory (AutonomousFailedGoalMemory) only blocks 200 units around the old camp, and a
+    /// that reach (<see cref="Blocks"/>). The give-up memory (AutonomousFailedGoalMemory) only blocks 200 units around the old camp, and a
     /// party that gave up a giant spider camp for a goblin pack picked the next giant spider spawn 1,000 units on and
     /// walked back into the same goblins: on three 14 minute private copy runs (2026-11-02) 13, 57 and 45 low level
     /// party members died within 2,500 units of a camp their party had given up in the last five minutes.
@@ -78,11 +78,65 @@ namespace DOL.GS
             lock (entries)
             {
                 foreach (Entry entry in entries)
-                    if (entry.Until > now && entry.Region == region &&
-                        AutonomousRouteThreatPolicy.DistanceToSegment(from, to, entry.At) < entry.Radius)
+                    if (entry.Until > now && entry.Region == region && Blocks(from, to, entry.At, entry.Radius))
                         return true;
             }
             return false;
+        }
+
+        /// <summary>How much nearer to a blocker a way must lead a bot already inside its reach before it counts as blocked.</summary>
+        public const float InsideTolerance = 150f;
+
+        /// <summary>
+        /// Whether the straight way from <paramref name="from"/> to <paramref name="to"/> is blocked by a blocker at
+        /// <paramref name="at"/>. From outside its reach: the way passes inside. From inside it, every way starts inside,
+        /// so only a way that leads nearer to the blocker is blocked and the ways out stay open. On the 2026-11-11 run
+        /// 347 Hibernian bots of level 5-9 stood inside a shared blocker's reach and had all their camps skipped
+        /// 16,808 times (DR-277). Pure.
+        /// </summary>
+        public static bool Blocks(Vector2 from, Vector2 to, Vector2 at, float radius)
+        {
+            float nearest = AutonomousRouteThreatPolicy.DistanceToSegment(from, to, at);
+            float start = Vector2.Distance(from, at);
+            return start < radius ? nearest < start - InsideTolerance : nearest < radius;
+        }
+
+        /// <summary>Whether a point lies inside the reach of one of this owner's live blockers.</summary>
+        public static bool Within(long ownerKey, ushort region, Vector2 point, long now)
+        {
+            if (ownerKey == 0 || !Owners.TryGetValue(ownerKey, out Entry[] entries))
+                return false;
+            lock (entries)
+            {
+                foreach (Entry entry in entries)
+                    if (entry.Until > now && entry.Region == region && Vector2.Distance(entry.At, point) < entry.Radius)
+                        return true;
+            }
+            return false;
+        }
+
+        /// <summary>The live blocker of this owner nearest to a point, for the log; false when there is none.</summary>
+        public static bool TryNearest(long ownerKey, ushort region, Vector2 from, long now, out Vector2 at, out float radius)
+        {
+            at = default;
+            radius = 0;
+            if (ownerKey == 0 || !Owners.TryGetValue(ownerKey, out Entry[] entries))
+                return false;
+            float best = float.MaxValue;
+            lock (entries)
+            {
+                foreach (Entry entry in entries)
+                {
+                    float distance = Vector2.Distance(entry.At, from);
+                    if (entry.Until > now && entry.Region == region && distance < best)
+                    {
+                        best = distance;
+                        at = entry.At;
+                        radius = entry.Radius;
+                    }
+                }
+            }
+            return best < float.MaxValue;
         }
 
         public static bool HasAny(long ownerKey, long now)

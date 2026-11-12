@@ -25,6 +25,7 @@ namespace DOL.GS.Spells
             return best;
         }
 
-        public static double Scale(GameLiving living) => 1 + Percent(living) * 0.01;
+        /// <summary>Chant percent plus the Cabalist pet sacrifice's (DR-094), as a multiplier.</summary>
+        public static double Scale(GameLiving living) => 1 + (Percent(living) + SimulacrumSacrificeSpellHandler.HealthArmorPercent(living)) * 0.01;
     }
 }

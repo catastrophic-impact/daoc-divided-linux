@@ -1,0 +1,29 @@
+{
+ "items changed": 2754,
+ "by bonus kind (all listed)": {
+  "other version": 2383,
+  "renumbered": 643,
+  "same": 453,
+  "lines added": 777,
+  "renumbered + lines added": 287,
+  "unknown official bonus codes": 161
+ },
+ "changed by bonus kind": {
+  "renumbered": 643,
+  "same": 442,
+  "lines added": 777,
+  "renumbered + lines added": 287,
+  "other version": 533,
+  "unknown official bonus codes": 72
+ },
+ "abilities": {
+  "abilities set to official": 1537,
+  "official abilities not buildable; left as is": 100
+ },
+ "spells created": 128,
+ "skipped": {
+  "touched by an earlier patch": 2044,
+  "package": 3522
+ },
+ "edits": 3010
+}

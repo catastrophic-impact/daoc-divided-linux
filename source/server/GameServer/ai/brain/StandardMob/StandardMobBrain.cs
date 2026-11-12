@@ -67,6 +67,87 @@ namespace DOL.AI.Brain
             FSM.KillFSM();
         }
 
+        #region Leash
+
+        /// <summary>How far an ordinary mob follows a target before it resets, when it has no tether of its own.</summary>
+        public const int DEFAULT_LEASH_RANGE = 4500;
+        /// <summary>Tethers below this are not leash distances (Bonedancer commander templates store a pet rank there).</summary>
+        public const int MIN_TETHER_AS_LEASH = 1000;
+        /// <summary>Longest a leashing mob ignores new aggro while it walks home, in case it can't reach its spawn.</summary>
+        public const int LEASH_EVADE_MS = 20000;
+
+        private Point3D _leashAnchor;
+        private long _leashEvadeUntil;
+
+        /// <summary>True while the mob is walking home after being pulled past its leash; it ignores new aggro meanwhile.</summary>
+        public bool IsLeashing => _leashEvadeUntil > 0 && !GameServiceUtils.ShouldTick(_leashEvadeUntil);
+
+        /// <summary>
+        /// The leash range for a mob: its tether when it has a real one, else <see cref="DEFAULT_LEASH_RANGE"/>, plus its
+        /// roaming range. 0 means no leash. Only ordinary mobs (a plain <see cref="StandardMobBrain"/>) leash here:
+        /// pets, guards, bots and scripted bosses have brains of their own, and trial and artifact encounter mobs are
+        /// reset by their encounter.
+        /// </summary>
+        public static int ResolveLeashRange(bool ordinaryMob, int tetherRange, int roamingRange)
+        {
+            if (!ordinaryMob)
+                return 0;
+
+            int range = tetherRange >= MIN_TETHER_AS_LEASH ? tetherRange : DEFAULT_LEASH_RANGE;
+            return range + Math.Max(0, roamingRange);
+        }
+
+        public virtual int LeashRange
+        {
+            get
+            {
+                GameNPC body = Body;
+
+                if (body == null || GetType() != typeof(StandardMobBrain))
+                    return 0;
+
+                bool ordinary = body is not GameBot && body is not DOL.GS.Trials.TrialMob && body is not ArtifactBoss;
+                return ResolveLeashRange(ordinary, body.TetherRange, body.RoamingRange);
+            }
+        }
+
+        /// <summary>
+        /// Where the leash is measured from: the spawn point, unless the mob was pulled while away from it (a path
+        /// walker or a mob a script moved), then the place the fight started.
+        /// </summary>
+        public void StartLeash()
+        {
+            _leashEvadeUntil = 0;
+            int range = LeashRange;
+
+            if (range <= 0)
+            {
+                _leashAnchor = null;
+                return;
+            }
+
+            Point3D spawn = Body.SpawnPoint;
+            _leashAnchor = spawn != null && !Body.CanMoveOnPath && spawn.IsWithinRadius(Body, range) ? spawn : new Point3D(Body.X, Body.Y, Body.Z);
+        }
+
+        public static bool IsBeyondLeash(Point3D anchor, IPoint3D position, int range) => anchor != null && range > 0 && !anchor.IsWithinRadius(position, range);
+
+        /// <summary>Sends the mob home when it has been pulled past its leash. Returns true when it did.</summary>
+        public bool CheckLeash()
+        {
+            if (!IsBeyondLeash(_leashAnchor, Body, LeashRange))
+                return false;
+
+            _leashAnchor = null;
+            _leashEvadeUntil = GameLoop.GameLoopTime + LEASH_EVADE_MS;
+            FSM.SetCurrentState(eFSMStateType.RETURN_TO_SPAWN);
+            return true;
+        }
+
+        public void EndLeash() => _leashEvadeUntil = 0;
+
+        #endregion
+
         #region AI
 
         public override void Think()
@@ -280,6 +361,8 @@ namespace DOL.AI.Brain
         /// Checks whether living has someone on its aggrolist
         /// </summary>
         public virtual bool HasAggro => !AggroList.IsEmpty;
+        /// <summary>Whether the living is on the aggro list (an add can be on it at 0 aggro; BafFriends).</summary>
+        public bool HasAggroOn(GameLiving living) => living != null && AggroList.ContainsKey(living);
         /// <summary>Entries on the aggro list (diagnostics).</summary>
         public int AggroCount => AggroList.Count;
 
@@ -299,6 +382,9 @@ namespace DOL.AI.Brain
         {
             if (Body.IsConfused || !Body.IsAlive || living == null)
                 return;
+
+            if (IsLeashing)
+                return; // walking home after a leash: hits and calls for help don't pull it back
 
             ForceAddToAggroList(living, aggroAmount);
         }
@@ -733,6 +819,10 @@ namespace DOL.AI.Brain
             if (realTarget is GamePlayer questPlayer && DOL.GS.Quests.QuestTalkTruce.Holds(Body, questPlayer))
                 return false;
 
+            // A quest giver or talk character leaves autonomous gamebots alone (QuestTalkTruce.SparesBots).
+            if (realTarget is GameBot { IsAutonomousWorldBot: true } && DOL.GS.Quests.QuestTalkTruce.SparesBots(Body))
+                return false;
+
             // If this npc have Faction return the AggroAmount to Player
             if (Body.Faction != null)
             {
@@ -887,7 +977,7 @@ namespace DOL.AI.Brain
             List<GameNPC> brainsInRadius = GetFriendlyAndAvailableNpcsInRadiusOrderedByDistance(bafRadius, maxAdds);
             int addCount = brainsInRadius.Count;
             if (addCount > 0)
-                BafFriends.MarkBafFight(playerPuller);
+                BafFriends.MarkBafFight(playerPuller, Body, brainsInRadius);
             BafAddCount = addCount;
 
             foreach (GameNPC npc in brainsInRadius)

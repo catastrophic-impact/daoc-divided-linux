@@ -1,0 +1,5096 @@
+[
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_majestic_robe_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 24,
+   "Bonus3Type": 3,
+   "Bonus3": 24,
+   "Bonus4Type": 198,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 10,
+   "Bonus6": 60,
+   "Bonus7Type": 210,
+   "Bonus7": 60,
+   "Bonus8Type": 13,
+   "Bonus8": 1,
+   "Bonus9Type": 17,
+   "Bonus9": 1,
+   "Bonus10Type": 19,
+   "Bonus10": 1,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Majestic Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24081)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "13",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Azure_Hauberk_of_Notes",
+  "key": "bounty_unyielding_iridescent_hauberk_alb",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 22,
+   "Bonus2Type": 156,
+   "Bonus2": 22,
+   "Bonus3Type": 202,
+   "Bonus3": 5,
+   "Bonus4Type": 10,
+   "Bonus4": 60,
+   "Bonus5Type": 196,
+   "Bonus5": 6,
+   "Bonus6Type": 198,
+   "Bonus6": 4,
+   "Bonus7Type": 153,
+   "Bonus7": 4,
+   "Bonus8Type": 13,
+   "Bonus8": 3,
+   "Bonus9Type": 17,
+   "Bonus9": 3,
+   "Bonus10Type": 19,
+   "Bonus10": 3,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Iridescent Hauberk",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24055)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 41,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "6",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Demoniac_Turmoil_Jerkin",
+  "key": "bounty_unyielding_solemnity_robe_alb",
+  "set": {
+   "Bonus1Type": 48,
+   "Bonus1": 3,
+   "Bonus2Type": 2,
+   "Bonus2": 18,
+   "Bonus3Type": 202,
+   "Bonus3": 6,
+   "Bonus4Type": 173,
+   "Bonus4": 5,
+   "Bonus5Type": 200,
+   "Bonus5": 5,
+   "Bonus6Type": 195,
+   "Bonus6": 10,
+   "Bonus7Type": 148,
+   "Bonus7": 10,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Solemnity Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24077)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 441,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "10",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 33,
+   "Item_Type": 25,
+   "SPD_ABS": 10,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_betrayal_robe_alb",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 4,
+   "Bonus2Type": 163,
+   "Bonus2": 4,
+   "Bonus3Type": 156,
+   "Bonus3": 25,
+   "Bonus4Type": 3,
+   "Bonus4": 25,
+   "Bonus5Type": 209,
+   "Bonus5": 6,
+   "Bonus6Type": 198,
+   "Bonus6": 4,
+   "Bonus7Type": 153,
+   "Bonus7": 4,
+   "Bonus8Type": 13,
+   "Bonus8": 1,
+   "Bonus9Type": 17,
+   "Bonus9": 1,
+   "Bonus10Type": 19,
+   "Bonus10": 1,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Betrayal Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24083)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "33",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Azure_Hauberk_of_Notes",
+  "key": "bounty_unyielding_vagabond_hauberk_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 1,
+   "Bonus2": 24,
+   "Bonus3Type": 3,
+   "Bonus3": 24,
+   "Bonus4Type": 201,
+   "Bonus4": 6,
+   "Bonus5Type": 173,
+   "Bonus5": 4,
+   "Bonus6Type": 200,
+   "Bonus6": 4,
+   "Bonus7Type": 199,
+   "Bonus7": 4,
+   "Bonus8Type": 13,
+   "Bonus8": 3,
+   "Bonus9Type": 17,
+   "Bonus9": 3,
+   "Bonus10Type": 19,
+   "Bonus10": 3,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Vagabond Hauberk",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24041)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 41,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "4",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_demon_robe_alb",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 22,
+   "Bonus2Type": 2,
+   "Bonus2": 22,
+   "Bonus3Type": 156,
+   "Bonus3": 22,
+   "Bonus4Type": 209,
+   "Bonus4": 6,
+   "Bonus5Type": 202,
+   "Bonus5": 6,
+   "Bonus6Type": 199,
+   "Bonus6": 5,
+   "Bonus7Type": 198,
+   "Bonus7": 5,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Demon Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24079)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "12",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Ageless_Fluted_Protector",
+  "key": "bounty_unyielding_protector_breastplate_alb",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 3,
+   "Bonus2Type": 1,
+   "Bonus2": 22,
+   "Bonus3Type": 4,
+   "Bonus3": 22,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 210,
+   "Bonus5": 50,
+   "Bonus6Type": 200,
+   "Bonus6": 4,
+   "Bonus7Type": 173,
+   "Bonus7": 4,
+   "Bonus8Type": 17,
+   "Bonus8": 3,
+   "Bonus9Type": 13,
+   "Bonus9": 3,
+   "Bonus10Type": 19,
+   "Bonus10": 3,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803790,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Protector Breastplate",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24012)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 46,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "1",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 36,
+   "Item_Type": 25,
+   "SPD_ABS": 34,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_manipulator_robe_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 24,
+   "Bonus3Type": 202,
+   "Bonus3": 8,
+   "Bonus4Type": 198,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 10,
+   "Bonus6": 60,
+   "Bonus7Type": 210,
+   "Bonus7": 60,
+   "Bonus8Type": 13,
+   "Bonus8": 1,
+   "Bonus9Type": 17,
+   "Bonus9": 1,
+   "Bonus10Type": 19,
+   "Bonus10": 1,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Manipulator Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24069)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "8",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_geomancer_robe_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 25,
+   "Bonus3Type": 202,
+   "Bonus3": 8,
+   "Bonus4Type": 198,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 10,
+   "Bonus6": 60,
+   "Bonus7Type": 210,
+   "Bonus7": 60,
+   "Bonus8Type": 13,
+   "Bonus8": 1,
+   "Bonus9Type": 17,
+   "Bonus9": 1,
+   "Bonus10Type": 19,
+   "Bonus10": 1,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Geomancer Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24048)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "5",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Superior_Gossamer_Body-torn_Vest",
+  "key": "bounty_unyielding_magus_robe_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 24,
+   "Bonus3Type": 202,
+   "Bonus3": 8,
+   "Bonus4Type": 198,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 10,
+   "Bonus6": 60,
+   "Bonus7Type": 210,
+   "Bonus7": 60,
+   "Bonus8Type": 13,
+   "Bonus8": 1,
+   "Bonus9Type": 17,
+   "Bonus9": 1,
+   "Bonus10Type": 19,
+   "Bonus10": 1,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Unyielding Magus Robe",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24062)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 58,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "7",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1Dragonsworn_Fist_Wrap_Alb",
+  "key": "bounty_ancient_priest_mace_alb",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 13,
+   "Bonus3Type": 202,
+   "Bonus3": 6,
+   "Bonus4Type": 191,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 195,
+   "Bonus6": 10,
+   "Bonus7Type": 190,
+   "Bonus7": 5,
+   "Bonus8Type": 254,
+   "Bonus8": 10,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 812903,
+   "Charges": 30,
+   "MaxCharges": 30,
+   "SpellID1": 812901,
+   "Charges1": 30,
+   "MaxCharges1": 30,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 720,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Ancient Priest Mace",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24389)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 644,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "1;6;10;33",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 2,
+   "Item_Type": 10,
+   "DPS_AF": 165,
+   "SPD_ABS": 43,
+   "Type_Damage": 1,
+   "Hand": 0
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Ageless_Fluted_Protector",
+  "key": "bounty_freezing_soldier_vest_alb",
+  "set": {
+   "Bonus1Type": 40,
+   "Bonus1": 3,
+   "Bonus2Type": 164,
+   "Bonus2": 3,
+   "Bonus3Type": 201,
+   "Bonus3": 5,
+   "Bonus4Type": 1,
+   "Bonus4": 24,
+   "Bonus5Type": 4,
+   "Bonus5": 24,
+   "Bonus6Type": 173,
+   "Bonus6": 4,
+   "Bonus7Type": 200,
+   "Bonus7": 4,
+   "Bonus8Type": 17,
+   "Bonus8": 3,
+   "Bonus9Type": 13,
+   "Bonus9": 3,
+   "Bonus10Type": 19,
+   "Bonus10": 3,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 46,
+   "Name": "Freezing Soldier Vest",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 23032)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2226,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "2",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 36,
+   "Item_Type": 25,
+   "SPD_ABS": 34,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Azure_Hauberk_of_Notes",
+  "key": "bounty_dullahan_s_hauberk_alb",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 30,
+   "Bonus2Type": 202,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 230,
+   "Bonus5": 2,
+   "Bonus6Type": 257,
+   "Bonus6": 5,
+   "Bonus7Type": 260,
+   "Bonus7": 3,
+   "Bonus8Type": 251,
+   "Bonus8": 2,
+   "Bonus9Type": 198,
+   "Bonus9": 4,
+   "Bonus10Type": 155,
+   "Bonus10": 4,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Dullahan's Hauberk",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27396)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 41,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "19",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Ageless_Telamon_Sleeves",
+  "key": "bounty_soul_diffuser_s_sleeves_alb",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 25,
+   "Bonus2Type": 202,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 210,
+   "Bonus4": 20,
+   "Bonus5Type": 191,
+   "Bonus5": 2,
+   "Bonus6Type": 153,
+   "Bonus6": 2,
+   "Bonus7Type": 197,
+   "Bonus7": 2,
+   "Bonus8Type": 155,
+   "Bonus8": 2,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 28,
+   "Name": "Soul Diffuser's Sleeves",
+   "Realm": 1,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27469)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2743,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "3",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 34,
+   "Item_Type": 28,
+   "SPD_ABS": 19,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Baldurs_Hauberk",
+  "key": "bounty_howling_titan_vest_mid",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 25,
+   "Bonus3Type": 4,
+   "Bonus3": 25,
+   "Bonus4Type": 200,
+   "Bonus4": 4,
+   "Bonus5Type": 173,
+   "Bonus5": 4,
+   "Bonus6Type": 210,
+   "Bonus6": 40,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Howling Titan Vest",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24087)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 235,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "22",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Baldurs_Hauberk",
+  "key": "bounty_freezing_titan_vest_mid",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 25,
+   "Bonus3Type": 4,
+   "Bonus3": 25,
+   "Bonus4Type": 200,
+   "Bonus4": 4,
+   "Bonus5Type": 173,
+   "Bonus5": 4,
+   "Bonus6Type": 210,
+   "Bonus6": 40,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 46,
+   "Name": "Freezing Titan Vest",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 23525)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "22",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Ancient_Cobalt_Jerkin",
+  "key": "bounty_robe_of_the_dark_magister_mid",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 30,
+   "Bonus2Type": 202,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 261,
+   "Bonus5": 2,
+   "Bonus6Type": 257,
+   "Bonus6": 5,
+   "Bonus7Type": 258,
+   "Bonus7": 5,
+   "Bonus8Type": 251,
+   "Bonus8": 2,
+   "Bonus9Type": 153,
+   "Bonus9": 4,
+   "Bonus10Type": 191,
+   "Bonus10": 4,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Robe of the Dark Magister",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27689)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 3162,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "27",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_SoT_Sleeves",
+  "key": "bounty_sleeves_of_the_dark_magister_mid",
+  "set": {
+   "Bonus1Type": 156,
+   "Bonus1": 25,
+   "Bonus2Type": 209,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 210,
+   "Bonus4": 20,
+   "Bonus5Type": 191,
+   "Bonus5": 2,
+   "Bonus6Type": 153,
+   "Bonus6": 2,
+   "Bonus7Type": 199,
+   "Bonus7": 2,
+   "Bonus8Type": 190,
+   "Bonus8": 5,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Sleeves of the Dark Magister",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27763)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2697,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "27",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 28,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Exquisite_Abysmal_Leggings",
+  "key": "bounty_howling_saga_legguards_mid",
+  "set": {
+   "Bonus1Type": 4,
+   "Bonus1": 30,
+   "Bonus2Type": 204,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 19,
+   "Bonus4": 3,
+   "Bonus5Type": 12,
+   "Bonus5": 3,
+   "Bonus6Type": 18,
+   "Bonus6": 3,
+   "Bonus7Type": 153,
+   "Bonus7": 2,
+   "Bonus8Type": 199,
+   "Bonus8": 2,
+   "Bonus9Type": 197,
+   "Bonus9": 3,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Howling Saga Legguards",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27687)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 236,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "24",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 35,
+   "Item_Type": 27,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_SBoT_Boots",
+  "key": "bounty_slippers_of_the_dark_magister_mid",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 30,
+   "Bonus2Type": 203,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 17,
+   "Bonus4": 3,
+   "Bonus5Type": 12,
+   "Bonus5": 3,
+   "Bonus6Type": 18,
+   "Bonus6": 3,
+   "Bonus7Type": 153,
+   "Bonus7": 2,
+   "Bonus8Type": 197,
+   "Bonus8": 2,
+   "Bonus9Type": 199,
+   "Bonus9": 5,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Slippers of the Dark Magister",
+   "Realm": 2,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27690)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2699,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "27",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 23,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Cloth_Cap",
+  "key": "bounty_battled_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 1,
+   "Bonus1": 18,
+   "Bonus2Type": 4,
+   "Bonus2": 16,
+   "Bonus3Type": 201,
+   "Bonus3": 5,
+   "Bonus4Type": 13,
+   "Bonus4": 7,
+   "Bonus5Type": 14,
+   "Bonus5": 7,
+   "Bonus6Type": 173,
+   "Bonus6": 2,
+   "Bonus7Type": 155,
+   "Bonus7": 2,
+   "Bonus8Type": 10,
+   "Bonus8": 40,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 90,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 39,
+   "Name": "Battled Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 64262)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 21,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Jewel_Pierced_Helm",
+  "key": "bounty_striking_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 18,
+   "Bonus2Type": 4,
+   "Bonus2": 16,
+   "Bonus3Type": 202,
+   "Bonus3": 5,
+   "Bonus4Type": 13,
+   "Bonus4": 7,
+   "Bonus5Type": 11,
+   "Bonus5": 7,
+   "Bonus6Type": 173,
+   "Bonus6": 2,
+   "Bonus7Type": 155,
+   "Bonus7": 2,
+   "Bonus8Type": 10,
+   "Bonus8": 40,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 90,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 39,
+   "Name": "Striking Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 64258)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 33,
+   "Item_Type": 21,
+   "SPD_ABS": 10,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Jewel_Spiked_Helm",
+  "key": "bounty_glittering_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 18,
+   "Bonus2Type": 2,
+   "Bonus2": 16,
+   "Bonus3Type": 203,
+   "Bonus3": 5,
+   "Bonus4Type": 13,
+   "Bonus4": 7,
+   "Bonus5Type": 15,
+   "Bonus5": 7,
+   "Bonus6Type": 173,
+   "Bonus6": 2,
+   "Bonus7Type": 155,
+   "Bonus7": 2,
+   "Bonus8Type": 10,
+   "Bonus8": 40,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 90,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 39,
+   "Name": "Glittering Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 64259)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 37,
+   "Item_Type": 21,
+   "SPD_ABS": 19,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Jewel_Spiked_Helm",
+  "key": "bounty_melodic_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 18,
+   "Bonus2Type": 2,
+   "Bonus2": 16,
+   "Bonus3Type": 202,
+   "Bonus3": 5,
+   "Bonus4Type": 13,
+   "Bonus4": 7,
+   "Bonus5Type": 15,
+   "Bonus5": 7,
+   "Bonus6Type": 199,
+   "Bonus6": 2,
+   "Bonus7Type": 153,
+   "Bonus7": 2,
+   "Bonus8Type": 10,
+   "Bonus8": 40,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 120,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 39,
+   "Name": "Melodic Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 10999)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 37,
+   "Item_Type": 21,
+   "SPD_ABS": 19,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Loyalist_Scale_Coif",
+  "key": "bounty_empowering_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 156,
+   "Bonus1": 18,
+   "Bonus2Type": 2,
+   "Bonus2": 16,
+   "Bonus3Type": 190,
+   "Bonus3": 5,
+   "Bonus4Type": 17,
+   "Bonus4": 7,
+   "Bonus5Type": 12,
+   "Bonus5": 7,
+   "Bonus6Type": 202,
+   "Bonus6": 5,
+   "Bonus7Type": 191,
+   "Bonus7": 2,
+   "Bonus8Type": 196,
+   "Bonus8": 5,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 90,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 43,
+   "Name": "Empowering Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 64260)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 21,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Loyalist_Scale_Coif",
+  "key": "bounty_fierce_mantle_of_samhain_hib",
+  "set": {
+   "Bonus1Type": 1,
+   "Bonus1": 18,
+   "Bonus2Type": 4,
+   "Bonus2": 16,
+   "Bonus3Type": 201,
+   "Bonus3": 5,
+   "Bonus4Type": 19,
+   "Bonus4": 7,
+   "Bonus5Type": 14,
+   "Bonus5": 7,
+   "Bonus6Type": 173,
+   "Bonus6": 2,
+   "Bonus7Type": 155,
+   "Bonus7": 2,
+   "Bonus8Type": 10,
+   "Bonus8": 40,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 90,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 39,
+   "Name": "Fierce Mantle of Samhain",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 64261)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 1279,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 21,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3Dragonsworn_Great_Hammer_Hib",
+  "key": "bounty_pictslayer_shillelagh_hib",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 3,
+   "Bonus2Type": 4,
+   "Bonus2": 21,
+   "Bonus3Type": 1,
+   "Bonus3": 22,
+   "Bonus4Type": 201,
+   "Bonus4": 5,
+   "Bonus5Type": 204,
+   "Bonus5": 5,
+   "Bonus6Type": 173,
+   "Bonus6": 4,
+   "Bonus7Type": 200,
+   "Bonus7": 4,
+   "Bonus8Type": 155,
+   "Bonus8": 4,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 811095,
+   "ProcSpellID1": 802340,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 41,
+   "Name": "Pictslayer Shillelagh ",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 17181)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 4286,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 22,
+   "Item_Type": 12,
+   "DPS_AF": 165,
+   "SPD_ABS": 57,
+   "Type_Damage": 1,
+   "Hand": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3Dragonsworn_Scythe",
+  "key": "bounty_abagath_strider_sickle_hib",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 3,
+   "Bonus2Type": 4,
+   "Bonus2": 21,
+   "Bonus3Type": 1,
+   "Bonus3": 22,
+   "Bonus4Type": 201,
+   "Bonus4": 5,
+   "Bonus5Type": 204,
+   "Bonus5": 5,
+   "Bonus6Type": 173,
+   "Bonus6": 4,
+   "Bonus7Type": 200,
+   "Bonus7": 4,
+   "Bonus8Type": 155,
+   "Bonus8": 4,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 811091,
+   "ProcSpellID1": 802340,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Abagath Strider Sickle",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 26462)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 932,
+   "Level": 51,
+   "LevelRequirement": 45,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 26,
+   "Item_Type": 12,
+   "DPS_AF": 165,
+   "SPD_ABS": 60,
+   "Type_Damage": 3,
+   "Hand": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3Dragonsworn_Hammer_Hib",
+  "key": "bounty_abagath_cursed_mace_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 2,
+   "Bonus2": 13,
+   "Bonus3Type": 202,
+   "Bonus3": 6,
+   "Bonus4Type": 191,
+   "Bonus4": 4,
+   "Bonus5Type": 153,
+   "Bonus5": 4,
+   "Bonus6Type": 195,
+   "Bonus6": 10,
+   "Bonus7Type": 190,
+   "Bonus7": 5,
+   "Bonus8Type": 254,
+   "Bonus8": 10,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 812903,
+   "Charges": 30,
+   "MaxCharges": 30,
+   "SpellID1": 812901,
+   "Charges1": 30,
+   "MaxCharges1": 30,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 720,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Abagath Cursed Mace",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 24383)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 450,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "42;46;47;48",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 20,
+   "Item_Type": 10,
+   "DPS_AF": 165,
+   "SPD_ABS": 43,
+   "Type_Damage": 1,
+   "Hand": 0
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3Dragonsworn_Scythe",
+  "key": "bounty_gatekeeper_s_sickle_hib",
+  "set": {
+   "Bonus1Type": 164,
+   "Bonus1": 4,
+   "Bonus2Type": 1,
+   "Bonus2": 24,
+   "Bonus3Type": 4,
+   "Bonus3": 16,
+   "Bonus4Type": 236,
+   "Bonus4": 6,
+   "Bonus5Type": 200,
+   "Bonus5": 4,
+   "Bonus6Type": 173,
+   "Bonus6": 2,
+   "Bonus7Type": 155,
+   "Bonus7": 2,
+   "Bonus8Type": 230,
+   "Bonus8": 2,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812923,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Gatekeeper's Sickle",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 26192)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2001,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 26,
+   "Item_Type": 12,
+   "DPS_AF": 165,
+   "SPD_ABS": 57,
+   "Type_Damage": 2,
+   "Hand": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_forest_vest_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 24,
+   "Bonus3Type": 156,
+   "Bonus3": 24,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 198,
+   "Bonus5": 4,
+   "Bonus6Type": 153,
+   "Bonus6": 4,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 48,
+   "Name": "Freezing Forest Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22398)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "55",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_wails_vest_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 24,
+   "Bonus3Type": 156,
+   "Bonus3": 24,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 198,
+   "Bonus5": 4,
+   "Bonus6Type": 153,
+   "Bonus6": 4,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 48,
+   "Name": "Freezing Wails Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22215)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "39",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_gloom_vest_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 24,
+   "Bonus3Type": 156,
+   "Bonus3": 24,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 198,
+   "Bonus5": 4,
+   "Bonus6Type": 153,
+   "Bonus6": 4,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 48,
+   "Name": "Freezing Gloom Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22216)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "40",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_enchanted_vest_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 24,
+   "Bonus3Type": 156,
+   "Bonus3": 24,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 198,
+   "Bonus5": 4,
+   "Bonus6Type": 153,
+   "Bonus6": 4,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 48,
+   "Name": "Freezing Enchanted Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22217)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "41",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_illusion_vest_hib",
+  "set": {
+   "Bonus1Type": 163,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 24,
+   "Bonus3Type": 156,
+   "Bonus3": 24,
+   "Bonus4Type": 10,
+   "Bonus4": 50,
+   "Bonus5Type": 198,
+   "Bonus5": 4,
+   "Bonus6Type": 153,
+   "Bonus6": 4,
+   "Bonus7Type": 203,
+   "Bonus7": 6,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 48,
+   "Name": "Freezing Illusion Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22218)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "42",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_freezing_reaper_vest_hib",
+  "set": {
+   "Bonus1Type": 90,
+   "Bonus1": 4,
+   "Bonus2Type": 3,
+   "Bonus2": 25,
+   "Bonus3Type": 4,
+   "Bonus3": 25,
+   "Bonus4Type": 210,
+   "Bonus4": 40,
+   "Bonus5Type": 173,
+   "Bonus5": 4,
+   "Bonus6Type": 204,
+   "Bonus6": 5,
+   "Bonus7Type": 198,
+   "Bonus7": 4,
+   "Bonus8Type": 13,
+   "Bonus8": 2,
+   "Bonus9Type": 17,
+   "Bonus9": 2,
+   "Bonus10Type": 19,
+   "Bonus10": 2,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 45,
+   "Name": "Freezing Reaper Vest",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 22399)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2511,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "56",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Ancient_Cracked_Stag_Hide",
+  "key": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+  "set": {
+   "Bonus1Type": 10,
+   "Bonus1": 50,
+   "Bonus2Type": 3,
+   "Bonus2": 15,
+   "Bonus3Type": 238,
+   "Bonus3": 6,
+   "Bonus4Type": 17,
+   "Bonus4": 2,
+   "Bonus5Type": 19,
+   "Bonus5": 2,
+   "Bonus6Type": 13,
+   "Bonus6": 2,
+   "Bonus7Type": 191,
+   "Bonus7": 2,
+   "Bonus8Type": 198,
+   "Bonus8": 2,
+   "Bonus9Type": 153,
+   "Bonus9": 2,
+   "Bonus10Type": 210,
+   "Bonus10": 50,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 0,
+   "ProcSpellID1": 0,
+   "CanUseEvery": 600,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Cliodna's Otherworldly Hardy Cloak",
+   "Realm": 0,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 17192)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 4559,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "0",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 41,
+   "Item_Type": 26,
+   "Type_Damage": 0
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Gossamer_Seolc_Vest",
+  "key": "bounty_robe_of_the_dark_queen_hib",
+  "set": {
+   "Bonus1Type": 156,
+   "Bonus1": 30,
+   "Bonus2Type": 209,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 261,
+   "Bonus5": 2,
+   "Bonus6Type": 257,
+   "Bonus6": 5,
+   "Bonus7Type": 258,
+   "Bonus7": 5,
+   "Bonus8Type": 251,
+   "Bonus8": 2,
+   "Bonus9Type": 153,
+   "Bonus9": 4,
+   "Bonus10Type": 191,
+   "Bonus10": 4,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Robe of the Dark Queen",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27965)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 3162,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "39",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 25,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Burnished_Shansee_Hauberk",
+  "key": "bounty_darkseed_armor_hib",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 30,
+   "Bonus2Type": 202,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 260,
+   "Bonus5": 1,
+   "Bonus6Type": 257,
+   "Bonus6": 5,
+   "Bonus7Type": 258,
+   "Bonus7": 5,
+   "Bonus8Type": 251,
+   "Bonus8": 2,
+   "Bonus9Type": 153,
+   "Bonus9": 4,
+   "Bonus10Type": 191,
+   "Bonus10": 4,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Darkseed Armor",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 29624)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 388,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "47",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Burnished_Shansee_Hauberk",
+  "key": "bounty_marrach_prime_armor_hib",
+  "set": {
+   "Bonus1Type": 1,
+   "Bonus1": 30,
+   "Bonus2Type": 201,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 230,
+   "Bonus5": 2,
+   "Bonus6Type": 260,
+   "Bonus6": 3,
+   "Bonus7Type": 251,
+   "Bonus7": 2,
+   "Bonus8Type": 200,
+   "Bonus8": 4,
+   "Bonus9Type": 155,
+   "Bonus9": 4,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Marrach Prime Armor",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 29789)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 388,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "44",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Burnished_Shansee_Hauberk",
+  "key": "bounty_dark_defender_s_scalemail_hib",
+  "set": {
+   "Bonus1Type": 2,
+   "Bonus1": 30,
+   "Bonus2Type": 202,
+   "Bonus2": 10,
+   "Bonus3Type": 10,
+   "Bonus3": 60,
+   "Bonus4Type": 210,
+   "Bonus4": 60,
+   "Bonus5Type": 260,
+   "Bonus5": 3,
+   "Bonus6Type": 258,
+   "Bonus6": 5,
+   "Bonus7Type": 251,
+   "Bonus7": 2,
+   "Bonus8Type": 153,
+   "Bonus8": 4,
+   "Bonus9Type": 191,
+   "Bonus9": 4,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 812900,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Dark Defender's Scalemail",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 30074)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 388,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "46",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 25,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Black_Velvet-lined_Armguards",
+  "key": "bounty_dark_defender_s_armguards_hib",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 25,
+   "Bonus2Type": 203,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 210,
+   "Bonus4": 20,
+   "Bonus5Type": 191,
+   "Bonus5": 2,
+   "Bonus6Type": 153,
+   "Bonus6": 2,
+   "Bonus7Type": 199,
+   "Bonus7": 2,
+   "Bonus8Type": 190,
+   "Bonus8": 2,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Dark Defender's Armguards",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 30176)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2780,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "46",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 28,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Azure Incandescent Leggings",
+  "key": "bounty_darkspore_breeches_hib",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 30,
+   "Bonus2Type": 203,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 17,
+   "Bonus4": 3,
+   "Bonus5Type": 19,
+   "Bonus5": 3,
+   "Bonus6Type": 13,
+   "Bonus6": 3,
+   "Bonus7Type": 199,
+   "Bonus7": 2,
+   "Bonus8Type": 153,
+   "Bonus8": 2,
+   "Bonus9Type": 197,
+   "Bonus9": 3,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Darkspore Breeches",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27945)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 379,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "55",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 27,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Loyalist_Scale_Legs",
+  "key": "bounty_dark_defender_s_leggings_hib",
+  "set": {
+   "Bonus1Type": 156,
+   "Bonus1": 25,
+   "Bonus2Type": 202,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 17,
+   "Bonus4": 3,
+   "Bonus5Type": 19,
+   "Bonus5": 3,
+   "Bonus6Type": 12,
+   "Bonus6": 3,
+   "Bonus7Type": 153,
+   "Bonus7": 2,
+   "Bonus8Type": 190,
+   "Bonus8": 2,
+   "Bonus9Type": 43,
+   "Bonus9": 3,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Dark Defender's Leggings",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 30100)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 389,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "46",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 38,
+   "Item_Type": 27,
+   "SPD_ABS": 27,
+   "DPS_AF": 102
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "3_Worn_Jewel_Dusted_Boots",
+  "key": "bounty_emberlight_shoes_hib",
+  "set": {
+   "Bonus1Type": 3,
+   "Bonus1": 25,
+   "Bonus2Type": 203,
+   "Bonus2": 5,
+   "Bonus3Type": 10,
+   "Bonus3": 30,
+   "Bonus4Type": 210,
+   "Bonus4": 20,
+   "Bonus5Type": 191,
+   "Bonus5": 2,
+   "Bonus6Type": 153,
+   "Bonus6": 2,
+   "Bonus7Type": 198,
+   "Bonus7": 2,
+   "Bonus8Type": 197,
+   "Bonus8": 2,
+   "Bonus9Type": 0,
+   "Bonus9": 0,
+   "Bonus10Type": 0,
+   "Bonus10": 0,
+   "ExtraBonusType": 0,
+   "ExtraBonus": 0,
+   "SpellID": 0,
+   "Charges": 0,
+   "MaxCharges": 0,
+   "SpellID1": 0,
+   "Charges1": 0,
+   "MaxCharges1": 0,
+   "ProcSpellID": 803684,
+   "ProcSpellID1": 803824,
+   "CanUseEvery": 0,
+   "IsTradable": 1,
+   "IsDropable": 1,
+   "BonusLevel": 50,
+   "Name": "Emberlight Shoes",
+   "Realm": 3,
+   "PackageID": "OfflineBountycraft",
+   "Price": 0,
+   "Quality": 100,
+   "Description": "Bountycraft (official item 27991)",
+   "IsPickable": 1,
+   "CanDropAsLoot": 0,
+   "Model": 2764,
+   "Level": 51,
+   "LevelRequirement": 50,
+   "AllowedClasses": "41",
+   "Condition": 50000,
+   "MaxCondition": 50000,
+   "Durability": 50000,
+   "MaxDurability": 50000,
+   "TranslationId": "",
+   "ClassType": "",
+   "SalvageYieldID": 0,
+   "LastTimeRowUpdated": "2026-11-08 00:00:00",
+   "Object_Type": 32,
+   "Item_Type": 23,
+   "SPD_ABS": 0,
+   "DPS_AF": 51
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1733",
+   "CraftedItem_ID": "1733",
+   "Id_nb": "bounty_unyielding_majestic_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "35832eee-52cd-5967-b894-da40efc9fad5",
+   "CraftedItemId_nb": "bounty_unyielding_majestic_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b801f0cc-53e3-5340-9e8f-08059a691fa9",
+   "CraftedItemId_nb": "bounty_unyielding_majestic_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "825321b1-4ef7-547b-8be0-b1387f556d1c",
+   "CraftedItemId_nb": "bounty_unyielding_majestic_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6e47b884-f444-58be-956c-18d24b9e363e",
+   "CraftedItemId_nb": "bounty_unyielding_majestic_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1734",
+   "CraftedItem_ID": "1734",
+   "Id_nb": "bounty_unyielding_iridescent_hauberk_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5a63315f-718c-5491-afbe-d6b4bd6e2956",
+   "CraftedItemId_nb": "bounty_unyielding_iridescent_hauberk_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "500da81f-d668-5312-9a10-fa8fb47cb1eb",
+   "CraftedItemId_nb": "bounty_unyielding_iridescent_hauberk_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "719e775d-4495-5a92-9be1-b006667ce44f",
+   "CraftedItemId_nb": "bounty_unyielding_iridescent_hauberk_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "613beceb-ad05-5312-9d21-15c5e05224df",
+   "CraftedItemId_nb": "bounty_unyielding_iridescent_hauberk_alb",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1735",
+   "CraftedItem_ID": "1735",
+   "Id_nb": "bounty_unyielding_solemnity_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2d2e8084-bc66-5202-adb8-a6517d10f1bd",
+   "CraftedItemId_nb": "bounty_unyielding_solemnity_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5a07f06a-df41-5e75-aab3-6e8f4c979583",
+   "CraftedItemId_nb": "bounty_unyielding_solemnity_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "c8dd5918-3bdf-5a2e-a2ad-56cd156961c7",
+   "CraftedItemId_nb": "bounty_unyielding_solemnity_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "a0e337e0-d492-57a3-8d47-5aba203e739a",
+   "CraftedItemId_nb": "bounty_unyielding_solemnity_robe_alb",
+   "IngredientId_nb": "Ancient_Mirror",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1736",
+   "CraftedItem_ID": "1736",
+   "Id_nb": "bounty_unyielding_betrayal_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "dcab4d02-4554-5483-baa4-d1738c84c102",
+   "CraftedItemId_nb": "bounty_unyielding_betrayal_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "9bd2b56a-3860-579c-8034-fc69de587c87",
+   "CraftedItemId_nb": "bounty_unyielding_betrayal_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b19a2532-8f31-5596-b5f5-b764ea290d0a",
+   "CraftedItemId_nb": "bounty_unyielding_betrayal_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "74c2918e-ae83-5a2f-a943-a14fd8aadae7",
+   "CraftedItemId_nb": "bounty_unyielding_betrayal_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1740",
+   "CraftedItem_ID": "1740",
+   "Id_nb": "bounty_unyielding_vagabond_hauberk_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "74cdce2e-2984-512f-a9cc-203416d981f5",
+   "CraftedItemId_nb": "bounty_unyielding_vagabond_hauberk_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "99626186-a2f8-526e-8214-254f2ac673b4",
+   "CraftedItemId_nb": "bounty_unyielding_vagabond_hauberk_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "54d5bece-9473-55df-b8a5-49597f4a9237",
+   "CraftedItemId_nb": "bounty_unyielding_vagabond_hauberk_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2c603a7a-f0ae-5f5d-bd8f-01a5eb6b7b32",
+   "CraftedItemId_nb": "bounty_unyielding_vagabond_hauberk_alb",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1741",
+   "CraftedItem_ID": "1741",
+   "Id_nb": "bounty_unyielding_demon_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0bddda3d-076f-5996-be34-92d9a06c8a21",
+   "CraftedItemId_nb": "bounty_unyielding_demon_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1a791d1d-d5e9-550b-aa3b-72869d8418c5",
+   "CraftedItemId_nb": "bounty_unyielding_demon_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ba57c075-4110-5050-bade-956548fced6b",
+   "CraftedItemId_nb": "bounty_unyielding_demon_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e03e30b3-f7f2-5342-b674-d1800fea492a",
+   "CraftedItemId_nb": "bounty_unyielding_demon_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1732",
+   "CraftedItem_ID": "1732",
+   "Id_nb": "bounty_unyielding_protector_breastplate_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "309a3c7f-2d1f-54ca-bc0a-3e1d74053906",
+   "CraftedItemId_nb": "bounty_unyielding_protector_breastplate_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "cb5acaab-e4ea-5dc0-ae8e-1eacdeefc892",
+   "CraftedItemId_nb": "bounty_unyielding_protector_breastplate_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "690bdcbd-7fac-54ae-85e8-cf3b08d5c235",
+   "CraftedItemId_nb": "bounty_unyielding_protector_breastplate_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "8ef92781-dc68-55ec-8172-e8db81feffb6",
+   "CraftedItemId_nb": "bounty_unyielding_protector_breastplate_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1745",
+   "CraftedItem_ID": "1745",
+   "Id_nb": "bounty_unyielding_manipulator_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "029d472a-07d7-5bd7-a9be-ae32cfec0005",
+   "CraftedItemId_nb": "bounty_unyielding_manipulator_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "9a51141c-cb37-5aa2-b083-683f7072f495",
+   "CraftedItemId_nb": "bounty_unyielding_manipulator_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "20c6476f-a67d-5fb0-8d7d-965d88ed3320",
+   "CraftedItemId_nb": "bounty_unyielding_manipulator_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "974f1b1a-a93f-5a87-abb8-5cb5a65bfda4",
+   "CraftedItemId_nb": "bounty_unyielding_manipulator_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1746",
+   "CraftedItem_ID": "1746",
+   "Id_nb": "bounty_unyielding_geomancer_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e08c7794-2cf7-5cd4-98b5-4d2ea192ff3f",
+   "CraftedItemId_nb": "bounty_unyielding_geomancer_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "54467f6b-5204-522b-bfa1-b30955f4a934",
+   "CraftedItemId_nb": "bounty_unyielding_geomancer_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6024ef54-ab10-5257-a4b9-3e35c1d35363",
+   "CraftedItemId_nb": "bounty_unyielding_geomancer_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e133f96c-0d54-56ce-9956-346abe7fd014",
+   "CraftedItemId_nb": "bounty_unyielding_geomancer_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1747",
+   "CraftedItem_ID": "1747",
+   "Id_nb": "bounty_unyielding_magus_robe_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "315fae5e-2495-54e1-9b56-1311cc227985",
+   "CraftedItemId_nb": "bounty_unyielding_magus_robe_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5e79398a-854e-5a29-8c85-3b5f98565e7c",
+   "CraftedItemId_nb": "bounty_unyielding_magus_robe_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4f82fb88-7eb7-5620-b77f-ee290e2af60e",
+   "CraftedItemId_nb": "bounty_unyielding_magus_robe_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "534f4251-d014-5905-a450-7009e463a81e",
+   "CraftedItemId_nb": "bounty_unyielding_magus_robe_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1768",
+   "CraftedItem_ID": "1768",
+   "Id_nb": "bounty_ancient_priest_mace_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "d2170adb-4756-5c11-977d-0a9f36980f1d",
+   "CraftedItemId_nb": "bounty_ancient_priest_mace_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0e61be56-d1a3-5ae7-992a-ad1e0d1d4bff",
+   "CraftedItemId_nb": "bounty_ancient_priest_mace_alb",
+   "IngredientId_nb": "bounty_weapon_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b74998c5-6afa-5144-b2ac-9ee18c7ceb44",
+   "CraftedItemId_nb": "bounty_ancient_priest_mace_alb",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b0fcbb1c-3956-5c65-870b-6dff7808d810",
+   "CraftedItemId_nb": "bounty_ancient_priest_mace_alb",
+   "IngredientId_nb": "Ancient_Necrotic_Brain_Fluid",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "bd254980-cda4-5b45-b28e-8649072b61ae",
+   "CraftedItemId_nb": "bounty_ancient_priest_mace_alb",
+   "IngredientId_nb": "Ancient_Lich_Tooth",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "1784",
+   "CraftedItem_ID": "1784",
+   "Id_nb": "bounty_freezing_soldier_vest_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "85e8e309-5dee-585a-a006-ced8eff0c235",
+   "CraftedItemId_nb": "bounty_freezing_soldier_vest_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "997f9869-d715-5c42-851b-fb6b864b8adf",
+   "CraftedItemId_nb": "bounty_freezing_soldier_vest_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "dbb096c2-4af8-5c04-bd4a-eef2a4d4a270",
+   "CraftedItemId_nb": "bounty_freezing_soldier_vest_alb",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "169943b9-489b-5dce-8524-3b1d97359b76",
+   "CraftedItemId_nb": "bounty_freezing_soldier_vest_alb",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "2494",
+   "CraftedItem_ID": "2494",
+   "Id_nb": "bounty_dullahan_s_hauberk_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "31fe9c2a-36a1-5d48-b22e-1e99968801bd",
+   "CraftedItemId_nb": "bounty_dullahan_s_hauberk_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2a2c3ee4-29cd-5ad7-bf0f-cd91c509647a",
+   "CraftedItemId_nb": "bounty_dullahan_s_hauberk_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6fbf7472-4e7c-53b2-a6f0-9c438a4f0574",
+   "CraftedItemId_nb": "bounty_dullahan_s_hauberk_alb",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "c466e676-61b0-5de4-ac1f-40b0d3b3da6f",
+   "CraftedItemId_nb": "bounty_dullahan_s_hauberk_alb",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "2512",
+   "CraftedItem_ID": "2512",
+   "Id_nb": "bounty_soul_diffuser_s_sleeves_alb",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "9cd28815-daaa-584b-b1fb-e6187b3eebf3",
+   "CraftedItemId_nb": "bounty_soul_diffuser_s_sleeves_alb",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "09220b45-7d7e-5ae1-8ba1-dec4664c32e8",
+   "CraftedItemId_nb": "bounty_soul_diffuser_s_sleeves_alb",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "483b6ea1-0635-568a-9683-0a86b0b63969",
+   "CraftedItemId_nb": "bounty_soul_diffuser_s_sleeves_alb",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "14c65033-aed4-5670-b56c-cb2675736304",
+   "CraftedItemId_nb": "bounty_soul_diffuser_s_sleeves_alb",
+   "IngredientId_nb": "Ancient_Pure_Mercury",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "8381",
+   "CraftedItem_ID": "8381",
+   "Id_nb": "bounty_howling_titan_vest_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5bc40b2e-646d-5001-a94c-378810c4b0e1",
+   "CraftedItemId_nb": "bounty_howling_titan_vest_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "34f77717-0b93-5f7a-93db-b781ff97cd00",
+   "CraftedItemId_nb": "bounty_howling_titan_vest_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "03e5d48f-61f5-588e-8404-d8be0062e0bb",
+   "CraftedItemId_nb": "bounty_howling_titan_vest_mid",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "35ec2106-4d03-5932-bc98-747f29882831",
+   "CraftedItemId_nb": "bounty_howling_titan_vest_mid",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "8524",
+   "CraftedItem_ID": "8524",
+   "Id_nb": "bounty_freezing_titan_vest_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1487c191-e679-5762-9d4f-f68475dbc2a7",
+   "CraftedItemId_nb": "bounty_freezing_titan_vest_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "fa157461-cc9d-52b7-84b6-e0f4d7dc46e1",
+   "CraftedItemId_nb": "bounty_freezing_titan_vest_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ba81cf94-b471-52f6-91af-de7d94111f85",
+   "CraftedItemId_nb": "bounty_freezing_titan_vest_mid",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ff8afb6f-0020-555c-b03d-a296141c445e",
+   "CraftedItemId_nb": "bounty_freezing_titan_vest_mid",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "9354",
+   "CraftedItem_ID": "9354",
+   "Id_nb": "bounty_robe_of_the_dark_magister_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f45de7c2-30fa-5dcc-b95f-29b977ae8f66",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_magister_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "51e5261a-7782-5787-b060-c75e4f6b3d35",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1bcd985e-9393-5cfc-b1ce-2664c8b7f2d8",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "af35eef2-08b6-5e3c-b0b5-333cad25bd53",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_magister_mid",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "9369",
+   "CraftedItem_ID": "9369",
+   "Id_nb": "bounty_sleeves_of_the_dark_magister_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "a656ce82-0cb4-5840-ade0-d9c14ede9404",
+   "CraftedItemId_nb": "bounty_sleeves_of_the_dark_magister_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "29e22dbb-4a7c-59e4-b6cd-6be82042f04b",
+   "CraftedItemId_nb": "bounty_sleeves_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "7867470a-4b41-59ee-9a43-02785635ace1",
+   "CraftedItemId_nb": "bounty_sleeves_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4d93cd87-f979-5c1b-9a65-943b7934c73b",
+   "CraftedItemId_nb": "bounty_sleeves_of_the_dark_magister_mid",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "9381",
+   "CraftedItem_ID": "9381",
+   "Id_nb": "bounty_howling_saga_legguards_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6cd7afc9-1d0f-5804-b05e-cb264a37c713",
+   "CraftedItemId_nb": "bounty_howling_saga_legguards_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "db03f795-67f0-5b2e-932a-1fb1db2889a9",
+   "CraftedItemId_nb": "bounty_howling_saga_legguards_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4b8aeb5a-feec-5f40-ba79-39fad3bbfd50",
+   "CraftedItemId_nb": "bounty_howling_saga_legguards_mid",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "c2dbb469-2e54-5a1a-a0fe-b1f29ed85063",
+   "CraftedItemId_nb": "bounty_howling_saga_legguards_mid",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "8548",
+   "CraftedItem_ID": "8548",
+   "Id_nb": "bounty_slippers_of_the_dark_magister_mid",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "afe94082-9b25-5b99-801c-930b774ec156",
+   "CraftedItemId_nb": "bounty_slippers_of_the_dark_magister_mid",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "15903f8e-d2b7-51ef-bb4d-4690824f7bf5",
+   "CraftedItemId_nb": "bounty_slippers_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "3d7c0db0-5137-5022-a90e-2d399d5d26c5",
+   "CraftedItemId_nb": "bounty_slippers_of_the_dark_magister_mid",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b97fd457-d908-533d-895a-b288647bd54b",
+   "CraftedItemId_nb": "bounty_slippers_of_the_dark_magister_mid",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14666",
+   "CraftedItem_ID": "14666",
+   "Id_nb": "bounty_battled_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "9dbe8c5e-ac77-50ad-a33e-e7a1085373af",
+   "CraftedItemId_nb": "bounty_battled_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f6552a32-ca11-5842-bfa6-6b58f0b1af87",
+   "CraftedItemId_nb": "bounty_battled_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1651700b-a3b2-57cf-a6a9-3fddd5b6973b",
+   "CraftedItemId_nb": "bounty_battled_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "963c0943-b780-54aa-b606-d3c93ae6d92f",
+   "CraftedItemId_nb": "bounty_battled_mantle_of_samhain_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14667",
+   "CraftedItem_ID": "14667",
+   "Id_nb": "bounty_striking_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "38a70c98-0a45-50ec-94a6-4f641159b9a0",
+   "CraftedItemId_nb": "bounty_striking_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "99d26067-19b5-5fc6-8a85-00dabc017727",
+   "CraftedItemId_nb": "bounty_striking_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "eebd09c7-cfb8-5599-a3be-988f20454b8a",
+   "CraftedItemId_nb": "bounty_striking_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f031f2d9-230a-5be5-b13d-41a67aa5429d",
+   "CraftedItemId_nb": "bounty_striking_mantle_of_samhain_hib",
+   "IngredientId_nb": "Ancient_Mirror",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14668",
+   "CraftedItem_ID": "14668",
+   "Id_nb": "bounty_glittering_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "10ed3de6-be82-5ccc-bd1e-b54022fc7f01",
+   "CraftedItemId_nb": "bounty_glittering_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "596bac5c-8013-5341-8aa2-8365cd33e25d",
+   "CraftedItemId_nb": "bounty_glittering_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5a519742-fc29-5f90-bfce-d8a7023ded47",
+   "CraftedItemId_nb": "bounty_glittering_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "c137e9be-405b-508d-aee7-ccd7fd5a98de",
+   "CraftedItemId_nb": "bounty_glittering_mantle_of_samhain_hib",
+   "IngredientId_nb": "Ancient_Pure_Mercury",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14669",
+   "CraftedItem_ID": "14669",
+   "Id_nb": "bounty_melodic_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "7bb984af-8a0f-5f61-8a0b-1b42471a1566",
+   "CraftedItemId_nb": "bounty_melodic_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "77d15ccf-01c6-568a-8e0a-15548af1a66d",
+   "CraftedItemId_nb": "bounty_melodic_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "06b49523-2a0d-502c-8e60-0de339005a27",
+   "CraftedItemId_nb": "bounty_melodic_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4485070b-5271-547d-b54b-18ebf2505aa2",
+   "CraftedItemId_nb": "bounty_melodic_mantle_of_samhain_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14670",
+   "CraftedItem_ID": "14670",
+   "Id_nb": "bounty_empowering_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "8d6acee6-1fe9-5efb-8d08-dc9f3d8ce933",
+   "CraftedItemId_nb": "bounty_empowering_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "bf8ada36-94e8-5807-9bc3-9174c84b95bb",
+   "CraftedItemId_nb": "bounty_empowering_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "62e68219-9e5b-59bb-a148-b619b0fa2b0c",
+   "CraftedItemId_nb": "bounty_empowering_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "7933a645-3531-5fd2-81c6-70bc4c3d16ca",
+   "CraftedItemId_nb": "bounty_empowering_mantle_of_samhain_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14671",
+   "CraftedItem_ID": "14671",
+   "Id_nb": "bounty_fierce_mantle_of_samhain_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ef81531b-ef32-57b1-95d2-3ea078296868",
+   "CraftedItemId_nb": "bounty_fierce_mantle_of_samhain_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ad3c6ebb-7d9e-5d23-b1c3-f8a1755469c3",
+   "CraftedItemId_nb": "bounty_fierce_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ca3cd199-7480-5084-9137-fe38ca0629ad",
+   "CraftedItemId_nb": "bounty_fierce_mantle_of_samhain_hib",
+   "IngredientId_nb": "bounty_recipe_seasonal",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1dd9e70a-e7eb-55ea-b237-e27f7be772a7",
+   "CraftedItemId_nb": "bounty_fierce_mantle_of_samhain_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "14682",
+   "CraftedItem_ID": "14682",
+   "Id_nb": "bounty_pictslayer_shillelagh_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5302cb57-ceae-586c-ab60-7c3f3aa8fd4c",
+   "CraftedItemId_nb": "bounty_pictslayer_shillelagh_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0c7b3eed-53cb-5ae2-8d07-45e9c78cbdca",
+   "CraftedItemId_nb": "bounty_pictslayer_shillelagh_hib",
+   "IngredientId_nb": "bounty_weapon_mold",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b22ffa0d-539e-5fb8-8903-bc5c78b972d1",
+   "CraftedItemId_nb": "bounty_pictslayer_shillelagh_hib",
+   "IngredientId_nb": "bounty_recipe_pictslayer",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "a1f629c4-87d3-5f5f-a06e-2d18db665c35",
+   "CraftedItemId_nb": "bounty_pictslayer_shillelagh_hib",
+   "IngredientId_nb": "Ancient_Necrotic_Brain_Fluid",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f369062d-c487-584f-aac2-8d020c79e234",
+   "CraftedItemId_nb": "bounty_pictslayer_shillelagh_hib",
+   "IngredientId_nb": "Ancient_Lich_Tooth",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15581",
+   "CraftedItem_ID": "15581",
+   "Id_nb": "bounty_abagath_strider_sickle_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "dbd48448-2d5e-5017-821e-d0cc80186158",
+   "CraftedItemId_nb": "bounty_abagath_strider_sickle_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2ed14e89-eba8-5682-b847-4011c32b2712",
+   "CraftedItemId_nb": "bounty_abagath_strider_sickle_hib",
+   "IngredientId_nb": "bounty_weapon_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "3dfa00b0-1ae8-5a4e-9488-68fd307a710e",
+   "CraftedItemId_nb": "bounty_abagath_strider_sickle_hib",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1f78a462-bdad-5f12-84eb-bf5497a13859",
+   "CraftedItemId_nb": "bounty_abagath_strider_sickle_hib",
+   "IngredientId_nb": "Ancient_Necrotic_Brain_Fluid",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "d9a1f824-beda-599e-8df9-7387039cfc8f",
+   "CraftedItemId_nb": "bounty_abagath_strider_sickle_hib",
+   "IngredientId_nb": "Ancient_Lich_Tooth",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15583",
+   "CraftedItem_ID": "15583",
+   "Id_nb": "bounty_abagath_cursed_mace_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "3156eaf4-7e0b-5bc8-a281-c1883aba5d39",
+   "CraftedItemId_nb": "bounty_abagath_cursed_mace_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "dcf0a6b7-bc36-5688-ad24-dc1af70c0dee",
+   "CraftedItemId_nb": "bounty_abagath_cursed_mace_hib",
+   "IngredientId_nb": "bounty_weapon_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "131c661f-fae5-5023-bc52-fb5551136ebf",
+   "CraftedItemId_nb": "bounty_abagath_cursed_mace_hib",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4275c4f6-cbc2-595e-b70e-d18f4c8b015b",
+   "CraftedItemId_nb": "bounty_abagath_cursed_mace_hib",
+   "IngredientId_nb": "Ancient_Necrotic_Brain_Fluid",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "fa0b3496-6ac6-55ef-a0ee-c4635008b114",
+   "CraftedItemId_nb": "bounty_abagath_cursed_mace_hib",
+   "IngredientId_nb": "Ancient_Lich_Tooth",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15588",
+   "CraftedItem_ID": "15588",
+   "Id_nb": "bounty_gatekeeper_s_sickle_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "71d73618-3aec-53c6-87ca-de8739d52976",
+   "CraftedItemId_nb": "bounty_gatekeeper_s_sickle_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "32a7162c-899a-5f0e-a533-0129854a5077",
+   "CraftedItemId_nb": "bounty_gatekeeper_s_sickle_hib",
+   "IngredientId_nb": "bounty_weapon_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "97cfcbd3-00b0-5fa7-ab7f-d35fcd4f659b",
+   "CraftedItemId_nb": "bounty_gatekeeper_s_sickle_hib",
+   "IngredientId_nb": "bounty_recipe_aurulite",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6780e175-44cc-5810-9123-8c05e6971855",
+   "CraftedItemId_nb": "bounty_gatekeeper_s_sickle_hib",
+   "IngredientId_nb": "Ancient_Necrotic_Brain_Fluid",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b416ad79-2946-50ec-91f4-644bbea1c039",
+   "CraftedItemId_nb": "bounty_gatekeeper_s_sickle_hib",
+   "IngredientId_nb": "Ancient_Lich_Tooth",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15599",
+   "CraftedItem_ID": "15599",
+   "Id_nb": "bounty_freezing_forest_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "750e3c69-fce2-54fe-8000-d9d58ddac191",
+   "CraftedItemId_nb": "bounty_freezing_forest_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "3bc49568-d51d-57ea-a9dd-c65276da91fa",
+   "CraftedItemId_nb": "bounty_freezing_forest_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e38e4238-26ec-589e-9e9c-dc75c238c2b5",
+   "CraftedItemId_nb": "bounty_freezing_forest_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f518b778-3eb3-5381-b457-c1b183e781f9",
+   "CraftedItemId_nb": "bounty_freezing_forest_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15600",
+   "CraftedItem_ID": "15600",
+   "Id_nb": "bounty_freezing_wails_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "a9de44d3-d3bc-54be-a520-f375acf871ff",
+   "CraftedItemId_nb": "bounty_freezing_wails_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f057c32f-dceb-5ce5-9a80-1344d84e4a4d",
+   "CraftedItemId_nb": "bounty_freezing_wails_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e88ea30b-8127-5cc6-8515-87a9e8d6440d",
+   "CraftedItemId_nb": "bounty_freezing_wails_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "22ecadae-7fd7-5221-9807-b6974b413289",
+   "CraftedItemId_nb": "bounty_freezing_wails_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15605",
+   "CraftedItem_ID": "15605",
+   "Id_nb": "bounty_freezing_gloom_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "6c8bbec3-1697-5e92-b1f9-24c8ffbc3373",
+   "CraftedItemId_nb": "bounty_freezing_gloom_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "43cae136-514f-5b30-a4ba-3f864fe9d161",
+   "CraftedItemId_nb": "bounty_freezing_gloom_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f34f0f91-8e84-5bb9-9402-8a89ba33d65c",
+   "CraftedItemId_nb": "bounty_freezing_gloom_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "18e842d8-81d7-59bf-a26d-192bea7d4294",
+   "CraftedItemId_nb": "bounty_freezing_gloom_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15606",
+   "CraftedItem_ID": "15606",
+   "Id_nb": "bounty_freezing_enchanted_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "461dba74-e727-5179-ba11-2faa1fff6e72",
+   "CraftedItemId_nb": "bounty_freezing_enchanted_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "981b5d68-9940-5a6f-81e8-aae7b4371d9a",
+   "CraftedItemId_nb": "bounty_freezing_enchanted_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "7d159fa2-a8d4-5a80-a9a0-79765c35da02",
+   "CraftedItemId_nb": "bounty_freezing_enchanted_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "cd2ebd2d-7507-5e4e-b43d-0e9cfee8bed2",
+   "CraftedItemId_nb": "bounty_freezing_enchanted_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15609",
+   "CraftedItem_ID": "15609",
+   "Id_nb": "bounty_freezing_illusion_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "cbf2a45c-04bb-5c3a-a20e-4b88c88008d4",
+   "CraftedItemId_nb": "bounty_freezing_illusion_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2b4b8fbd-b5ee-53e0-94cf-fb0a1db6b159",
+   "CraftedItemId_nb": "bounty_freezing_illusion_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "871095e0-66cb-5bfd-b6cf-3a405767c85b",
+   "CraftedItemId_nb": "bounty_freezing_illusion_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "17ac4f83-428a-5412-86ab-e27a55120fed",
+   "CraftedItemId_nb": "bounty_freezing_illusion_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15612",
+   "CraftedItem_ID": "15612",
+   "Id_nb": "bounty_freezing_reaper_vest_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "76bea0e1-6efc-5fc0-8841-45b8f9f3f77a",
+   "CraftedItemId_nb": "bounty_freezing_reaper_vest_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0abecf72-93ad-5daf-8624-fe996ff6e3c7",
+   "CraftedItemId_nb": "bounty_freezing_reaper_vest_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "3d05645e-3e43-5467-9cbf-83b474a55335",
+   "CraftedItemId_nb": "bounty_freezing_reaper_vest_hib",
+   "IngredientId_nb": "bounty_recipe_frozen",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "208381ef-f276-5ff4-962b-dab28c2460df",
+   "CraftedItemId_nb": "bounty_freezing_reaper_vest_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15361",
+   "CraftedItem_ID": "15361",
+   "Id_nb": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "CraftingLevel": 1,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b6dc0451-64c0-5a60-a5b1-8f991d45a857",
+   "CraftedItemId_nb": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "IngredientId_nb": "stardust",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "dda85645-e656-5a32-b376-19de8af941af",
+   "CraftedItemId_nb": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "IngredientId_nb": "bounty_accessory_mold",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ed793acc-62a3-53f2-a518-d8fe2779da80",
+   "CraftedItemId_nb": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "IngredientId_nb": "bounty_recipe_otherworldly",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "8c9d6a8b-e7d0-583c-9766-5d50d4982852",
+   "CraftedItemId_nb": "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   "IngredientId_nb": "Ancient_Crushed_Focus_Stone",
+   "Count": 2
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15635",
+   "CraftedItem_ID": "15635",
+   "Id_nb": "bounty_robe_of_the_dark_queen_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "bf2458f1-fcba-5a18-bfa7-7d210554f04c",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_queen_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "9f573fe3-fc24-5921-9911-0e939c695934",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_queen_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "bf3dbea2-c4f7-5a0a-ad7c-8300adf6af7d",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_queen_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "166fce01-0611-5d36-b4e8-b2060050bb1b",
+   "CraftedItemId_nb": "bounty_robe_of_the_dark_queen_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15639",
+   "CraftedItem_ID": "15639",
+   "Id_nb": "bounty_darkseed_armor_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "ba1e9475-b1dc-5bbc-b84c-36cec6e0acf7",
+   "CraftedItemId_nb": "bounty_darkseed_armor_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f5deeffc-b666-5bf8-bfd6-51fea6480fd0",
+   "CraftedItemId_nb": "bounty_darkseed_armor_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "10c3da24-308d-5adf-90f6-c5f659fe0766",
+   "CraftedItemId_nb": "bounty_darkseed_armor_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "214ec43f-1991-568c-86df-a90241eea864",
+   "CraftedItemId_nb": "bounty_darkseed_armor_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15642",
+   "CraftedItem_ID": "15642",
+   "Id_nb": "bounty_marrach_prime_armor_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2c9c92cf-3dd7-5e0d-8607-9a8e2512383c",
+   "CraftedItemId_nb": "bounty_marrach_prime_armor_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "86b4afc5-cd72-5749-9814-8882aa848b19",
+   "CraftedItemId_nb": "bounty_marrach_prime_armor_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1ca156c0-b035-5c61-acf3-b5942167038e",
+   "CraftedItemId_nb": "bounty_marrach_prime_armor_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "033e0273-4d47-5a85-aeff-8ab231943455",
+   "CraftedItemId_nb": "bounty_marrach_prime_armor_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15649",
+   "CraftedItem_ID": "15649",
+   "Id_nb": "bounty_dark_defender_s_scalemail_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0b0f3d7f-a205-5770-a743-d7d148a08bc4",
+   "CraftedItemId_nb": "bounty_dark_defender_s_scalemail_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "00ea60c1-89ce-5e3f-b099-8b6f60841ea4",
+   "CraftedItemId_nb": "bounty_dark_defender_s_scalemail_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5b261aaa-c3f5-53b5-b31b-a3804e65912d",
+   "CraftedItemId_nb": "bounty_dark_defender_s_scalemail_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f996024f-f9ed-5711-8bc7-834ad0953fb8",
+   "CraftedItemId_nb": "bounty_dark_defender_s_scalemail_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15665",
+   "CraftedItem_ID": "15665",
+   "Id_nb": "bounty_dark_defender_s_armguards_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "88323ce6-0592-5c7f-ab64-8952091e6556",
+   "CraftedItemId_nb": "bounty_dark_defender_s_armguards_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "e1e28c85-fdac-5684-ae84-1b9bed28b55e",
+   "CraftedItemId_nb": "bounty_dark_defender_s_armguards_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "5b88993d-d36d-5e3c-8fa9-8745a8bb2034",
+   "CraftedItemId_nb": "bounty_dark_defender_s_armguards_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "d4e8a96d-866c-5f0a-b648-8d9def5b3465",
+   "CraftedItemId_nb": "bounty_dark_defender_s_armguards_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15667",
+   "CraftedItem_ID": "15667",
+   "Id_nb": "bounty_darkspore_breeches_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "b421901e-618f-53a6-9388-8ccba322585d",
+   "CraftedItemId_nb": "bounty_darkspore_breeches_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "939a1069-8248-54e5-8c30-3f11a7a76f7c",
+   "CraftedItemId_nb": "bounty_darkspore_breeches_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "4e6e24c9-4603-5bd0-8ea4-f0663e91dae5",
+   "CraftedItemId_nb": "bounty_darkspore_breeches_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "0fccad3a-288b-5139-a2f0-d6e74675f8d3",
+   "CraftedItemId_nb": "bounty_darkspore_breeches_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15679",
+   "CraftedItem_ID": "15679",
+   "Id_nb": "bounty_dark_defender_s_leggings_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "31b12c62-b6d5-500a-90de-47b408624656",
+   "CraftedItemId_nb": "bounty_dark_defender_s_leggings_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "298b25fc-4860-5ecc-b1c9-dea8e1c2ec4e",
+   "CraftedItemId_nb": "bounty_dark_defender_s_leggings_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "f591d987-bd8f-5477-b4e2-5e1c288d068a",
+   "CraftedItemId_nb": "bounty_dark_defender_s_leggings_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "2c27cbf2-96e9-5de1-848e-2c21c7cdf057",
+   "CraftedItemId_nb": "bounty_dark_defender_s_leggings_hib",
+   "IngredientId_nb": "Ancient_Troll_Blood",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedItem",
+  "insert": {
+   "CraftedItemID": "15682",
+   "CraftedItem_ID": "15682",
+   "Id_nb": "bounty_emberlight_shoes_hib",
+   "CraftingLevel": 0,
+   "CraftingSkillType": 5,
+   "MakeTemplated": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "71bfe94c-a7ec-5ead-9f8a-9996e715cbab",
+   "CraftedItemId_nb": "bounty_emberlight_shoes_hib",
+   "IngredientId_nb": "stardust",
+   "Count": 4
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "68fb1e16-07e0-5608-8300-9ca5b801310c",
+   "CraftedItemId_nb": "bounty_emberlight_shoes_hib",
+   "IngredientId_nb": "bounty_armor_mold",
+   "Count": 3
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "1dfd919a-3ec5-5edd-9e06-1bab465dbfd7",
+   "CraftedItemId_nb": "bounty_emberlight_shoes_hib",
+   "IngredientId_nb": "bounty_recipe_curse",
+   "Count": 1
+  }
+ },
+ {
+  "table": "CraftedXItem",
+  "insert": {
+   "CraftedXItem_ID": "382cdf4f-f5b1-5f49-bf60-7fbc018e58a9",
+   "CraftedItemId_nb": "bounty_emberlight_shoes_hib",
+   "IngredientId_nb": "Enriched_Quicksilver",
+   "Count": 4
+  }
+ }
+]

@@ -38,10 +38,12 @@ public static partial class AutonomousLivingServer
                 TryClaimFirst("First to reach level 50", who, "level 50");
                 string className = ClassOf(who);
                 if (!string.IsNullOrEmpty(className))
-                    TryClaimFirst($"First {className} to reach level 50", who, $"50 as a {className.ToLowerInvariant()}");
+                    TryClaimFirst($"First {className} to reach level 50", who, $"50 as {("aeio".Contains(char.ToLowerInvariant(className[0])) ? "an" : "a")} {className.ToLowerInvariant()}");
             }
             if (GratsOn)
                 Grats(who, level);
+            if (who is GamePlayer player)
+                EngageLevelUp(player, level);
             AutonomousBotBodyLanguage.CheerDing(who);
         }
         catch (Exception exception)
@@ -108,6 +110,8 @@ public static partial class AutonomousLivingServer
                 GameBot bot = realm[i];
                 Later(bot, 4_000 + i * 3_500 + Random.Shared.Next(4_000), () => bot.IsAlive, () =>
                 {
+                    // 1.1.3: grats to the real player is said to them (not held by the ceiling); to a bot it waits its turn.
+                    using var tag = who is GamePlayer ? AutonomousChatExchange.Tag("player", AutonomousChatExchange.NewId(), 1, "grats", bot) : default;
                     if (AutonomousBotVoices.TryEventLine(bot, "grats", out string line, "fifty", slots, noRepeat: false))
                         Speak(bot, Channel.Faction, line);
                 });
@@ -150,10 +154,15 @@ public static partial class AutonomousLivingServer
         }
     }
 
-    /// <summary>Server firsts belong to the realm's own characters, never a visiting Epic Special Forces member or a
-    /// test account (the AI test client's characters are levelled by command).</summary>
+    /// <summary>A GM or admin account (the launcher's "Make Me a GM" too): its levels and ranks are set by command.</summary>
+    public static bool IsStaff(GameLiving who) =>
+        who is GamePlayer { Client.Account: { } account } && account.PrivLevel > (uint)ePrivLevel.Player;
+
+    /// <summary>Server firsts belong to the realm's own characters, never a visiting Epic Special Forces member, a
+    /// test account (the AI test client's characters are levelled by command) or a GM (playtest 2026-11-04: "/player
+    /// level 50" on a GM test character announced a server first to every realm and put it in the Herald).</summary>
     public static bool MayClaimFirst(GameLiving who) =>
-        who is not (GameBot { IsEpicSpecialForce: true } or GamePlayer { Client.Account.IsTester: true });
+        who is not (GameBot { IsEpicSpecialForce: true } or GamePlayer { Client.Account.IsTester: true }) && !IsStaff(who);
 
     /// <summary>Claims a first once. The achiever's realm cheers in /faction; everyone gets one system line.</summary>
     public static bool TryClaimFirst(string title, GameLiving who, string what)
@@ -167,7 +176,7 @@ public static partial class AutonomousLivingServer
         };
         if (!Firsts.TryAdd(title, row))
             return false;
-        Log.Info($"LIVING_SERVER_FIRST title=\"{title}\" name=\"{who.Name}\" realm={who.Realm} class=\"{row.ClassName}\"");
+        Log.Info($"LIVING_SERVER_FIRST title=\"{title}\" name=\"{who.Name}\" realm={GlobalConstants.RealmToName(who.Realm)} class=\"{row.ClassName}\"");
         foreach (GamePlayer player in ClientService.Instance.GetPlayers())
         {
             if (player?.Client == null)
@@ -183,7 +192,9 @@ public static partial class AutonomousLivingServer
             GameBot[] cheer = AutonomousBotRegistry.Snapshot()
                 .Where(bot => bot != who && bot.Realm == who.Realm && CanTalk(bot))
                 .OrderBy(_ => Random.Shared.Next()).Take(Random.Shared.Next(1, 3)).ToArray();
-            for (int i = 0; i < cheer.Length; i++)
+            // 1.1.3: with bot voices on, the burst below is the realm's cheer (a tagged event, capped at three); the separate
+            // cheers came on top of it.
+            for (int i = 0; i < (AutonomousBotVoices.Enabled ? 0 : cheer.Length); i++)
             {
                 GameBot bot = cheer[i];
                 Later(bot, 6_000 + i * 4_000 + Random.Shared.Next(4_000), () => bot.IsAlive, () =>
@@ -192,6 +203,10 @@ public static partial class AutonomousLivingServer
                         Speak(bot, Channel.Faction, line);
                 });
             }
+            // Beta 1.1.2: the realm joins in, a burst of "gz" and "woot" over the next minute or so.
+            if (AutonomousBotVoices.Enabled)
+                AutonomousChatBursts.React(who as GameBot, who.Realm, "first", null, ["player_goodnews", "boast"],
+                    new Dictionary<string, string>(StringComparer.Ordinal) { ["player"] = who.Name });
         }
         return true;
     }
@@ -322,7 +337,7 @@ public static partial class AutonomousLivingServer
         if (AutonomousBotVoices.TryEventLine(bot, "alarm", out string line, slots: slots, flags: ["in_rvr"]))
         {
             Speak(bot, Channel.Faction, line);
-            Log.Info($"LIVING_SERVER_ALARM realm={bot.Realm} enemy={enemy} count={count} place=\"{place}\" speaker=\"{bot.Name}\"");
+            Log.Info($"LIVING_SERVER_ALARM realm={GlobalConstants.RealmToName(bot.Realm)} enemy={enemy} count={count} place=\"{place}\" speaker=\"{bot.Name}\"");
         }
     }
 
@@ -429,7 +444,16 @@ public static partial class AutonomousLivingServer
         Later(bot, 4_000 + Random.Shared.Next(6_000), () => !AutonomousBotDebates.IsRunning(bot.Realm), () =>
         {
             if (AutonomousBotVoices.TryEventLine(bot, "nemesis", out string line, slots: slots))
-                Speak(bot, Channel.Faction, line);
+            {
+                long exchange = AutonomousChatExchange.NewId();
+                bool said;
+                using (AutonomousChatExchange.Tag("nemesis", exchange, 0, "teller", bot))
+                    said = Speak(bot, Channel.Faction, line);
+                // Beta 1.1.2: the realm commiserates, a short burst (1.1.3: one or two of them, and none when the line was held).
+                if (said)
+                    AutonomousChatBursts.React(bot, bot.Realm, "nemesis", line, ["complaint"],
+                    new Dictionary<string, string>(StringComparer.Ordinal) { ["player"] = bot.Name }, exchange: exchange);
+            }
         });
     }
 
@@ -454,7 +478,16 @@ public static partial class AutonomousLivingServer
         Later(bot, 1_500 + Random.Shared.Next(2_500), () => bot.IsAlive && !AutonomousBotDebates.IsRunning(bot.Realm), () =>
         {
             if (AutonomousBotVoices.TryEventLine(bot, "revenge", out string line, slots: slots))
-                Speak(bot, Channel.Faction, line);
+            {
+                long exchange = AutonomousChatExchange.NewId();
+                bool said;
+                using (AutonomousChatExchange.Tag("revenge", exchange, 0, "teller", bot))
+                    said = Speak(bot, Channel.Faction, line);
+                // Beta 1.1.2: a nemesis paid back draws cheers, a short burst (1.1.3: one or two of them, and none when the line was held).
+                if (said)
+                    AutonomousChatBursts.React(bot, bot.Realm, "revenge", line, ["boast"],
+                    new Dictionary<string, string>(StringComparer.Ordinal) { ["player"] = bot.Name }, exchange: exchange);
+            }
         });
     }
 
@@ -519,7 +552,9 @@ public static partial class AutonomousLivingServer
                         Tell(bot, rezzer, ask);
                 }
             }
-            else if ((channel == Channel.Group || PlayerHears(bot)) && Random.Shared.NextDouble() < 0.4 &&
+            // RC6 on the owner's PC: "any rez near Pennine Mountains?" in /group to a duo whose player can't rez. In a player's
+            // group the bot asks only when one of its players can.
+            else if ((channel == Channel.Group ? GroupPlayerCanRez(bot.Group) : PlayerHears(bot)) && Random.Shared.NextDouble() < 0.4 &&
                      AutonomousBotVoices.TryEventLine(bot, "rez_ask", out string general, "general", flags: ["just_died"], noRepeat: false))
                 Speak(bot, channel, general);
         });
@@ -542,17 +577,21 @@ public static partial class AutonomousLivingServer
     public static bool HasNearbyPlayerRezzer(GameBot bot) => DeathOn && IsSpeaker(bot) && NearbyRezzer(bot) != null;
 
     /// <summary>The bot is about to release to its bind point.</summary>
-    public static void OnBotReleasing(GameBot bot)
+    public static bool OnBotReleasing(GameBot bot)
     {
         if (!DeathOn || !IsSpeaker(bot))
-            return;
+            return false;
         // A failed release transfer retries every 3 s; the corpse line is said once per death.
         if (!AskedAtDeath.TryRemove(bot.DatabaseID, out _))
-            return;
+            return false;
         Channel channel = GroupHasPlayer(bot.Group) ? Channel.Group : Channel.Say;
+        bool toldGroup = false;
         if ((channel == Channel.Group || PlayerHears(bot)) && Random.Shared.NextDouble() < 0.6 &&
             AutonomousBotVoices.TryEventLine(bot, "corpse", out string line, flags: ["just_died"], noRepeat: false))
+        {
             Speak(bot, channel, line);
+            toldGroup = channel == Channel.Group;
+        }
         // Bots do not get resurrection illness; a level 10+ bot in a player's group may still grumble about it.
         if (GroupHasPlayer(bot.Group) && bot.Level >= Properties.RESS_SICKNESS_LEVEL && Random.Shared.NextDouble() < 0.35)
             Later(bot, 12_000 + Random.Shared.Next(10_000), () => bot.IsAlive && GroupHasPlayer(bot.Group), () =>
@@ -560,7 +599,12 @@ public static partial class AutonomousLivingServer
                 if (AutonomousBotVoices.TryEventLine(bot, "sickness", out string sick, noRepeat: false))
                     Speak(bot, Channel.Group, sick);
             });
+        return toldGroup;
     }
+
+    /// <summary>Whether a player in the group could rez (a rez class).</summary>
+    private static bool GroupPlayerCanRez(Group group) =>
+        group != null && group.GetPlayersInTheGroup().Any(player => player != null && IsRezClass(player));
 
     /// <summary>
     /// The bot was rezzed. Returns true when a Living Server thank-you was scheduled (the caller then

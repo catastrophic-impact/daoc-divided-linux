@@ -1,0 +1,1078 @@
+{
+ "000e3784-d73d-4df5-91db-7e9fb070c5ed": {
+  "status": "no floor",
+  "floor": null
+ },
+ "00210a4d-f8b8-4f13-9cd3-6f06def825e8": {
+  "status": "underground",
+  "floor": 420
+ },
+ "006ea042-ecea-4efe-907d-23d85a3391a9": {
+  "status": "underground",
+  "floor": 2735
+ },
+ "020332ba-6d03-4b75-8ee9-4539dccc3377": {
+  "status": "no floor",
+  "floor": null
+ },
+ "0240b1df-a7ec-4e36-9fd1-7a2ec2341178": {
+  "status": "underground",
+  "floor": 583
+ },
+ "02b097c1-d374-444d-a5d7-527526334ba9": {
+  "status": "underground",
+  "floor": 4263
+ },
+ "02eb099f-2031-4535-9eec-e540ee0972fb": {
+  "status": "underground",
+  "floor": 294
+ },
+ "03d59daf-18e9-43c7-8122-ba0449106550": {
+  "status": "no floor",
+  "floor": null
+ },
+ "046b1150-09c8-4dd8-b415-4427b22fedce": {
+  "status": "no floor",
+  "floor": null
+ },
+ "04d2df67-bd90-4d5a-bf0f-abd182677682": {
+  "status": "no floor",
+  "floor": null
+ },
+ "0617287a-7617-4464-a066-d93de44cb96f": {
+  "status": "floating",
+  "floor": 721
+ },
+ "07532326-1c6f-42e8-ac8b-1dd85e02a0da": {
+  "status": "underground",
+  "floor": 629
+ },
+ "07c4d3b4-fdd2-4e46-b4ab-cb33514b73db": {
+  "status": "underground",
+  "floor": 2866
+ },
+ "09727237-3c9d-4983-b6d6-3ff545c3f7dd": {
+  "status": "underground",
+  "floor": 503
+ },
+ "09e2b07a-7e3d-4eaf-ace4-f132f4e045a2": {
+  "status": "underground",
+  "floor": 1024
+ },
+ "0ca7ad16-8e5d-4a97-a163-a77299406a63": {
+  "status": "underground",
+  "floor": 2593
+ },
+ "0f4058be-f7bb-43df-aac1-b14d909b173c": {
+  "status": "underground",
+  "floor": 3068
+ },
+ "0ffc8469-dcbc-44e9-8923-9e70d09e13af": {
+  "status": "underground",
+  "floor": 6177
+ },
+ "100004893": {
+  "status": "floating",
+  "floor": 2700
+ },
+ "100005218": {
+  "status": "floating",
+  "floor": 3867
+ },
+ "100005256": {
+  "status": "no floor",
+  "floor": null
+ },
+ "100005335": {
+  "status": "underground",
+  "floor": 2969
+ },
+ "100005337": {
+  "status": "underground",
+  "floor": 3729
+ },
+ "100005372": {
+  "status": "underground",
+  "floor": 3918
+ },
+ "100005388": {
+  "status": "floating",
+  "floor": 6306
+ },
+ "100005456": {
+  "status": "floating",
+  "floor": 6307
+ },
+ "100030412": {
+  "status": "underground",
+  "floor": 4795
+ },
+ "100030456": {
+  "status": "floating",
+  "floor": 5927
+ },
+ "100030459": {
+  "status": "floating",
+  "floor": 3315
+ },
+ "100030468": {
+  "status": "underground",
+  "floor": 3763
+ },
+ "100030622": {
+  "status": "underground",
+  "floor": 3897
+ },
+ "100030631": {
+  "status": "floating",
+  "floor": 6064
+ },
+ "100030635": {
+  "status": "floating",
+  "floor": 5936
+ },
+ "100030638": {
+  "status": "underground",
+  "floor": 4755
+ },
+ "100030653": {
+  "status": "floating",
+  "floor": 3046
+ },
+ "100030716": {
+  "status": "underground",
+  "floor": 3962
+ },
+ "100030728": {
+  "status": "underground",
+  "floor": 4755
+ },
+ "100030744": {
+  "status": "floating",
+  "floor": 4786
+ },
+ "100030752": {
+  "status": "floating",
+  "floor": 4755
+ },
+ "100030771": {
+  "status": "floating",
+  "floor": 5941
+ },
+ "100030777": {
+  "status": "floating",
+  "floor": 5922
+ },
+ "100030793": {
+  "status": "floating",
+  "floor": 5923
+ },
+ "100030825": {
+  "status": "floating",
+  "floor": 3323
+ },
+ "100030870": {
+  "status": "no floor",
+  "floor": null
+ },
+ "100030985": {
+  "status": "floating",
+  "floor": 5882
+ },
+ "100031035": {
+  "status": "underground",
+  "floor": 2627
+ },
+ "100031104": {
+  "status": "floating",
+  "floor": 3295
+ },
+ "10f6401d-7f5f-49b7-8169-5dac36d3ee5a": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "110e796e-95a7-4bc4-bc22-bc8c47b4dbe5": {
+  "status": "underground",
+  "floor": 3769
+ },
+ "11fe84e9-0b28-48f0-9e0b-97045eded9bd": {
+  "status": "underground",
+  "floor": 670
+ },
+ "12060be5-5dbd-4663-8bec-bb47635a32a4": {
+  "status": "underground",
+  "floor": 502
+ },
+ "12667f1e-5e8b-4a95-98ac-05996e234209": {
+  "status": "underground",
+  "floor": 385
+ },
+ "129cf12b-b660-416d-a2ae-5f33ae4f6967": {
+  "status": "underground",
+  "floor": 2501
+ },
+ "14f5a2d7-6d8b-4a60-a31c-720f39b1d582": {
+  "status": "underground",
+  "floor": 3956
+ },
+ "159d59dc-453e-4119-8165-b9c98dfeb0cc": {
+  "status": "underground",
+  "floor": 3238
+ },
+ "15a42d76-1beb-41c9-acf1-ca007b542bbf": {
+  "status": "floating",
+  "floor": 6295
+ },
+ "16b5a1f7-24e6-4761-9a05-628775da777d": {
+  "status": "underground",
+  "floor": 635
+ },
+ "17b29252-57b1-4d13-b8af-eb98e50a0b9e": {
+  "status": "underground",
+  "floor": 421
+ },
+ "18f187b6-959a-4152-8c5a-996552a34de0": {
+  "status": "underground",
+  "floor": 2653
+ },
+ "19b1ce2f-471a-4cb3-96f1-6a70ad751c9c": {
+  "status": "underground",
+  "floor": 516
+ },
+ "1afaebd8-f1e7-455f-8e5a-7676ca763fe9": {
+  "status": "underground",
+  "floor": 583
+ },
+ "1cca49fd-3fb5-44c0-a434-e3ad1415f632": {
+  "status": "no floor",
+  "floor": null
+ },
+ "1d154a30-3b67-4191-8831-d41cbdab0221": {
+  "status": "underground",
+  "floor": 622
+ },
+ "1d36c077-601f-4972-ab35-243f5d2b7196": {
+  "status": "underground",
+  "floor": 2984
+ },
+ "1e408011-330f-4f9d-b234-e2d4ccc9f37a": {
+  "status": "no floor",
+  "floor": null
+ },
+ "1eab9bb4-411c-4ea1-aa27-bd0d6ab4a862": {
+  "status": "underground",
+  "floor": 473
+ },
+ "1f1be19b-df98-4624-8a7c-0b76b67db575": {
+  "status": "underground",
+  "floor": 509
+ },
+ "1f836e05-ea01-4209-a252-5949e7e73c1c": {
+  "status": "floating",
+  "floor": 3596
+ },
+ "23a2a5f8-d3d1-4a95-b88f-14cc6bdad445": {
+  "status": "underground",
+  "floor": 2993
+ },
+ "2818a2f2-a0c1-490f-bbc9-cded90ceb9ad": {
+  "status": "floating",
+  "floor": 323
+ },
+ "282d32c0-2cdd-4c08-9047-09b6deed5658": {
+  "status": "underground",
+  "floor": 4230
+ },
+ "289b6e7b-11ef-45a7-aedd-ce8a85cd23d2": {
+  "status": "underground",
+  "floor": 617
+ },
+ "2b186f76-8a4d-46e9-9ee7-137d0823407b": {
+  "status": "floating",
+  "floor": 344
+ },
+ "2dedb59f-240a-4bdf-9776-68d9a5b92628": {
+  "status": "underground",
+  "floor": 649
+ },
+ "2e2ed76e-00db-49d2-a869-6b6cccab3184": {
+  "status": "underground",
+  "floor": 859
+ },
+ "2ec9dbcb-3149-41e0-ae65-70405e55d6eb": {
+  "status": "underground",
+  "floor": 3273
+ },
+ "2ef41284-dcf5-4e2e-80d7-32feca08d11d": {
+  "status": "underground",
+  "floor": 4959
+ },
+ "3115ca75-d90c-489f-bf21-1d6107051804": {
+  "status": "underground",
+  "floor": 496
+ },
+ "3199329c-c99f-485b-a5ce-8396e4970e85": {
+  "status": "floating",
+  "floor": 5434
+ },
+ "33bd156e-cdc7-472e-9f92-ef0cea582ba1": {
+  "status": "underground",
+  "floor": 2627
+ },
+ "34b7b55b-7ad1-43b3-8d99-6a4f4649e57c": {
+  "status": "underground",
+  "floor": 358
+ },
+ "380dcadf-2825-4aa4-b5fd-77c74116156e": {
+  "status": "underground",
+  "floor": 1075
+ },
+ "3e544fad-0026-442d-aa28-9cd9aefaa708": {
+  "status": "underground",
+  "floor": 641
+ },
+ "3ecab9c8-ad45-4163-9417-129d3bb40e11": {
+  "status": "underground",
+  "floor": 5395
+ },
+ "3f26be1c-cdf4-4381-ba38-90dab370a05b": {
+  "status": "no floor",
+  "floor": null
+ },
+ "3fe43783-0d8a-48f1-9792-71ac2c9959ea": {
+  "status": "underground",
+  "floor": 477
+ },
+ "408bacc9-5e25-47fc-935b-dbc53e727fbb": {
+  "status": "underground",
+  "floor": 874
+ },
+ "416e1c1d-0623-493b-9d38-cc5ccf90549e": {
+  "status": "underground",
+  "floor": 2991
+ },
+ "4194ef07-5283-41fe-9a2e-7baf523d67f8": {
+  "status": "no floor",
+  "floor": null
+ },
+ "419d6a61-5b6e-45b5-96a3-79abc5e92c21": {
+  "status": "no floor",
+  "floor": null
+ },
+ "432f82a3-ffc4-4cb8-94f9-a7b0d1c6ae00": {
+  "status": "floating",
+  "floor": 5441
+ },
+ "436bc7bd-81a4-422d-969a-c4c6bc2b5e95": {
+  "status": "underground",
+  "floor": 3196
+ },
+ "45cedba4-7f31-4386-9120-9a123c7327f0": {
+  "status": "underground",
+  "floor": 3196
+ },
+ "46bc6dcd-3f26-42cc-9c32-2da2aa55862c": {
+  "status": "underground",
+  "floor": 2528
+ },
+ "46cd1890-4e2b-4797-96cf-8e6dc00d6c72": {
+  "status": "underground",
+  "floor": 5417
+ },
+ "4b364d5f-2aaa-4fee-9c65-d47c70e35a43": {
+  "status": "no floor",
+  "floor": null
+ },
+ "4ce946ec-df0b-444c-af24-9f2c786ac025": {
+  "status": "underground",
+  "floor": 685
+ },
+ "4d08e188-3358-4666-a400-d00ce9bc9c3a": {
+  "status": "underground",
+  "floor": 3541
+ },
+ "4e787ae5-702c-4433-8230-ba633ffbcec0": {
+  "status": "underground",
+  "floor": 1213
+ },
+ "4e91dfde-f87f-4e84-b206-be74c8120356": {
+  "status": "floating",
+  "floor": 242
+ },
+ "4fcfa62f-e889-4727-a155-baa95ab4a154": {
+  "status": "underground",
+  "floor": 2954
+ },
+ "4ffb2f3f-103a-4dd5-a5b8-ffb34f9ff210": {
+  "status": "underground",
+  "floor": 486
+ },
+ "524c8de1-dd7a-4aa6-a024-e02cdf7f954d": {
+  "status": "no floor",
+  "floor": null
+ },
+ "533ca467-ecc5-4b4c-8fba-5fc2bb95be2e": {
+  "status": "floating",
+  "floor": 5203
+ },
+ "55aba505-3174-4a3a-8c7b-4abb9e6fa060": {
+  "status": "underground",
+  "floor": 3711
+ },
+ "55d50384-e546-4850-8da4-38359b28422a": {
+  "status": "underground",
+  "floor": 3448
+ },
+ "5664c1bb-d7ad-4359-a854-e7dae8d90384": {
+  "status": "underground",
+  "floor": 1505
+ },
+ "5885b9a9-4402-4a25-9297-a4d607747bcb": {
+  "status": "underground",
+  "floor": 3368
+ },
+ "58e39f31-cd7c-45af-a429-f346985a0981": {
+  "status": "underground",
+  "floor": 415
+ },
+ "598fb7c4-5712-4b01-b099-69bffd01da7b": {
+  "status": "floating",
+  "floor": 2761
+ },
+ "5a623694-4ff7-4f61-af0d-69e3e6aec065": {
+  "status": "floating",
+  "floor": 3677
+ },
+ "5b46ba28-0e09-4066-b585-aca369b7b30f": {
+  "status": "underground",
+  "floor": 2628
+ },
+ "5d218a0f-15eb-41b8-98f2-66e263244404": {
+  "status": "underground",
+  "floor": 3020
+ },
+ "5d47e408-3a36-4f64-8edd-0579ee604f91": {
+  "status": "underground",
+  "floor": 1237
+ },
+ "5df1d567-047b-410c-a4ee-60913e2cbb58": {
+  "status": "floating",
+  "floor": 401
+ },
+ "5e0b7a0d-418d-42a8-ae82-af9aa377dbca": {
+  "status": "floating",
+  "floor": 5445
+ },
+ "5f19191c-85d9-4dbd-b882-2ba48098e503": {
+  "status": "underground",
+  "floor": 3259
+ },
+ "5fe2e5d1-1136-45e3-b756-431e531830f1": {
+  "status": "underground",
+  "floor": 1157
+ },
+ "603354ca-bfaa-4537-8598-9a0b6b7b225a": {
+  "status": "underground",
+  "floor": 624
+ },
+ "606d3b9b-58d2-4a64-954d-5d7388f203b4": {
+  "status": "underground",
+  "floor": 3046
+ },
+ "6274e79b-d887-45ca-8990-b1782378e9e4": {
+  "status": "floating",
+  "floor": 2699
+ },
+ "6481e82c-c549-41b7-b258-691ce489ca8c": {
+  "status": "underground",
+  "floor": 4462
+ },
+ "64af3127-965e-4aab-a2b2-6724a03549b1": {
+  "status": "underground",
+  "floor": 1046
+ },
+ "6576ace9-67ec-4cc7-9d06-6a0a5d84c5e1": {
+  "status": "underground",
+  "floor": 3349
+ },
+ "65fdca41-fc4e-4262-aecf-754d22238afc": {
+  "status": "floating",
+  "floor": 260
+ },
+ "6614c550-5179-4ccd-be76-c11502979293": {
+  "status": "floating",
+  "floor": 2826
+ },
+ "678b706b-a81b-41eb-9fe7-d2783eceb241": {
+  "status": "floating",
+  "floor": 444
+ },
+ "69cd13e1-6f4d-4489-a924-e522dbd99fe6": {
+  "status": "underground",
+  "floor": 527
+ },
+ "6a837592-314d-4477-8fcb-00e67080e775": {
+  "status": "underground",
+  "floor": 852
+ },
+ "6af465fe-0906-45a3-b272-cb49e7982e49": {
+  "status": "underground",
+  "floor": 596
+ },
+ "6e0cc774-28e0-4315-afbe-1411d30286e1": {
+  "status": "no floor",
+  "floor": null
+ },
+ "6e587a9e-ffb0-4d64-aed4-0ba917da8bd3": {
+  "status": "underground",
+  "floor": 406
+ },
+ "712d8938-ced6-4e90-8c0f-2b9088bd73c2": {
+  "status": "underground",
+  "floor": 965
+ },
+ "7189de2a-0b4d-46ca-9e6d-350b6692f25f": {
+  "status": "underground",
+  "floor": 10731
+ },
+ "73d2cb71-c203-475d-bb4c-b68b8465c07e": {
+  "status": "no floor",
+  "floor": null
+ },
+ "7698df5b-dc1b-430f-b550-dc6b8889b8a6": {
+  "status": "no floor",
+  "floor": null
+ },
+ "781ad37c-9df3-43d5-87c5-aa25d6162862": {
+  "status": "floating",
+  "floor": 5719
+ },
+ "7858302b-02cc-4d79-9c2d-05a8f331593f": {
+  "status": "floating",
+  "floor": 6364
+ },
+ "79e9aa92-9b39-4486-bd49-fc7b7e7ccd34": {
+  "status": "no floor",
+  "floor": null
+ },
+ "7cb753ab-b7f6-48bd-8c05-624e0fa1d83e": {
+  "status": "underground",
+  "floor": 3144
+ },
+ "7d530427-8bc4-4efa-8f4d-91900f4e52c1": {
+  "status": "underground",
+  "floor": 3811
+ },
+ "7df2b7f3-85b1-4d20-88d5-3d1cbe0ffc34": {
+  "status": "underground",
+  "floor": 4775
+ },
+ "7f0521fa-fcf1-46a0-b8fb-59eb83f98064": {
+  "status": "no floor",
+  "floor": null
+ },
+ "81acb411-c5b2-4c84-9885-329c04b2703d": {
+  "status": "underground",
+  "floor": 3649
+ },
+ "833e4784-9679-41f4-9f18-1bbb526ac877": {
+  "status": "underground",
+  "floor": 409
+ },
+ "83e439ea-790e-409d-9bd6-48756da4a706": {
+  "status": "underground",
+  "floor": 420
+ },
+ "83f5e060-b622-49fa-b050-b83944c4b44c": {
+  "status": "underground",
+  "floor": 3465
+ },
+ "84368cdf-588e-4741-ac47-b24bfb37d4f6": {
+  "status": "no floor",
+  "floor": null
+ },
+ "8608180f-fb11-4bde-a294-771962e4c114": {
+  "status": "floating",
+  "floor": 3925
+ },
+ "8615e52b-bccd-45d7-ad20-697e9aaaee0d": {
+  "status": "underground",
+  "floor": 2630
+ },
+ "877edfb5-ea6b-4a5d-934a-457044c0c507": {
+  "status": "underground",
+  "floor": 2804
+ },
+ "88352571-59bf-4fef-bce0-86e50bf29978": {
+  "status": "underground",
+  "floor": 728
+ },
+ "896b0842-5f9e-4006-89bc-aafbab4177f6": {
+  "status": "no floor",
+  "floor": null
+ },
+ "89c1a5aa-54fb-4296-a719-e60e12223b4b": {
+  "status": "underground",
+  "floor": 4917
+ },
+ "8aaa1c88-800d-438b-a456-20eaad5d19de": {
+  "status": "floating",
+  "floor": 6375
+ },
+ "8b6ec80c-869c-4dd1-aa1b-c00f9885cd9d": {
+  "status": "underground",
+  "floor": 681
+ },
+ "8c14575c-90f1-4dad-af1c-59ad4f3ff2c4": {
+  "status": "underground",
+  "floor": 744
+ },
+ "8c427ad2-5d80-4704-8e9d-4994d2a5a896": {
+  "status": "underground",
+  "floor": 1709
+ },
+ "8cdd99e8-3bca-4556-b776-cd96a76f94b2": {
+  "status": "underground",
+  "floor": 4893
+ },
+ "8e5de63f-86e9-42e4-9000-863e2a99c14f": {
+  "status": "underground",
+  "floor": 2870
+ },
+ "8edd02ec-1023-482a-9e86-3dbb2393089e": {
+  "status": "underground",
+  "floor": 3688
+ },
+ "90fa7e6c-a353-4e78-84d8-b056807653b8": {
+  "status": "underground",
+  "floor": 574
+ },
+ "92781ac2-66ae-4fc9-bf4e-53963a0a0dcd": {
+  "status": "underground",
+  "floor": 975
+ },
+ "928d239f-ef00-4f82-b966-7259d6c5e02b": {
+  "status": "underground",
+  "floor": 514
+ },
+ "94f449cc-a19c-4e5b-ad58-55881b3e6db5": {
+  "status": "no floor",
+  "floor": null
+ },
+ "951582dc-a948-4eff-9d54-0499a62e2f04": {
+  "status": "underground",
+  "floor": 554
+ },
+ "95c1b5e9-3de0-4d8f-b7e1-62697b059fb4": {
+  "status": "no floor",
+  "floor": null
+ },
+ "9808d9e7-c68b-4c6c-b87b-ac0b35d04e7c": {
+  "status": "underground",
+  "floor": 3326
+ },
+ "9a01739c-410d-4968-b955-064a826fc6ef": {
+  "status": "underground",
+  "floor": 5508
+ },
+ "9bae1122-f28d-4ff6-9c0e-cfdcfe44b3ac": {
+  "status": "no floor",
+  "floor": null
+ },
+ "9c004eda-5007-478b-875f-06dca1d45e92": {
+  "status": "underground",
+  "floor": 3224
+ },
+ "9c3c94c3-1a87-4adb-9d21-406e27622ea1": {
+  "status": "underground",
+  "floor": 421
+ },
+ "9c78bc3d-b3ce-4acd-a5ca-d1b00f52267e": {
+  "status": "floating",
+  "floor": 4860
+ },
+ "9ca53778-b6db-4427-9e34-8d71280b8bc4": {
+  "status": "underground",
+  "floor": 2839
+ },
+ "9f1839b1-977f-4f4c-a700-3ad9d17ae103": {
+  "status": "underground",
+  "floor": 1172
+ },
+ "a08b0ba9-0efa-4d59-b5ae-f9ce15fb9279": {
+  "status": "floating",
+  "floor": 600
+ },
+ "a09befc5-0648-42e3-b592-87c72415980f": {
+  "status": "floating",
+  "floor": 2756
+ },
+ "a0f41b16-aadd-4ea6-97f1-2520fbbd252e": {
+  "status": "underground",
+  "floor": 970
+ },
+ "a21a60da-cfb1-4722-8bf5-062369673cf9": {
+  "status": "underground",
+  "floor": 2919
+ },
+ "a2924645-1df1-4d0e-ae6b-ac83e17a9869": {
+  "status": "underground",
+  "floor": 683
+ },
+ "a386f574-448f-43f2-a216-948eae629d86": {
+  "status": "underground",
+  "floor": 3908
+ },
+ "a3e48c34-3d53-4597-825a-e0d3b28cbcf6": {
+  "status": "underground",
+  "floor": 1207
+ },
+ "a4ae34e0-a011-49e7-b6a4-bd9308788f5d": {
+  "status": "underground",
+  "floor": 584
+ },
+ "a57188d1-e28f-4858-b721-9f6d8409f127": {
+  "status": "underground",
+  "floor": 832
+ },
+ "a6aad56b-3760-45e0-8e67-eb3f70d572c0": {
+  "status": "underground",
+  "floor": 5266
+ },
+ "a6e64b1a-538c-476d-b10d-b3bcb122c829": {
+  "status": "underground",
+  "floor": 2965
+ },
+ "ac5584cb-fcb4-4063-a8f3-eb8c39265c9b": {
+  "status": "no floor",
+  "floor": null
+ },
+ "ae1f6995-774a-4fff-beea-fa4bbcd1491a": {
+  "status": "floating",
+  "floor": 3934
+ },
+ "b043c462-1e19-4b65-87af-40f9d828c6d5": {
+  "status": "floating",
+  "floor": 637
+ },
+ "b11fa6ed-ef83-4851-a8bd-98dafdb9d471": {
+  "status": "underground",
+  "floor": 2888
+ },
+ "b297ab51-890c-43cc-80ce-7b50c346a92e": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "b66342b4-15d7-45b7-9fc7-4a248d314fdd": {
+  "status": "no floor",
+  "floor": null
+ },
+ "b80232e5-0d35-42d7-83b5-52dabaa68b6b": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "b8c4bf6c-b8ac-4ad3-9649-715ade980d57": {
+  "status": "underground",
+  "floor": 2615
+ },
+ "b9764b1a-a207-4e9d-bcad-3d7f319d3f15": {
+  "status": "underground",
+  "floor": 2831
+ },
+ "bad8e12b-8a77-493d-a7da-f312d636e614": {
+  "status": "underground",
+  "floor": 419
+ },
+ "bb9e3d68-189e-4f7a-ac77-257b99f4a8f2": {
+  "status": "floating",
+  "floor": 5437
+ },
+ "bc1cc5e9-745b-472b-89d8-bec00a394a93": {
+  "status": "floating",
+  "floor": 451
+ },
+ "c0fbbd5e-4275-452c-9d5b-7d6bbdfadbe0": {
+  "status": "underground",
+  "floor": 280
+ },
+ "c105bd9f-654c-4a46-9587-a59f93ba492a": {
+  "status": "underground",
+  "floor": 5342
+ },
+ "c1b1b1f3-c2d4-46d3-bfe5-ef5bdcf03a06": {
+  "status": "underground",
+  "floor": 2544
+ },
+ "c24195ce-08af-4984-a4e0-7dc3faef183c": {
+  "status": "floating",
+  "floor": 415
+ },
+ "c482aad9-4a22-41aa-b643-617593016ff3": {
+  "status": "floating",
+  "floor": 266
+ },
+ "c5272f63-6b51-4182-b61f-5874a461a308": {
+  "status": "floating",
+  "floor": 5181
+ },
+ "c529ef8a-ca4f-4a2f-b379-7bea445cc509": {
+  "status": "underground",
+  "floor": 3274
+ },
+ "c86e25bd-b98a-4c8c-8f02-f5261321f6ac": {
+  "status": "underground",
+  "floor": 800
+ },
+ "c904656c-dd24-476f-ad80-5902b397d9f0": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "c98cdbf6-8a4f-46b6-ac06-87208ed3b22b": {
+  "status": "floating",
+  "floor": 2712
+ },
+ "ca903697-24ba-4f89-9682-bc104ef1ecb3": {
+  "status": "underground",
+  "floor": 1007
+ },
+ "caa1c695-facf-4151-b421-db088e0237e1": {
+  "status": "floating",
+  "floor": 3934
+ },
+ "cbf1bf98-435b-40fd-89a1-a4a5f0954464": {
+  "status": "underground",
+  "floor": 5408
+ },
+ "cc2dfdfe-194f-4b95-8ebb-0d9ab1bba646": {
+  "status": "underground",
+  "floor": 424
+ },
+ "cc696162-b05d-46a5-ad6b-ec683d3eae79": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "ccb4176c-7e9b-4edc-8b4d-a187b8edde4c": {
+  "status": "no floor",
+  "floor": null
+ },
+ "ccb58c51-109b-4fe0-a6a0-77c4df6bb1af": {
+  "status": "underground",
+  "floor": 3032
+ },
+ "cda4fedd-cd95-4dd2-a51a-963a0d6ec846": {
+  "status": "underground",
+  "floor": 1134
+ },
+ "d0f41722-9908-4215-aa48-f17ea8965846": {
+  "status": "underground",
+  "floor": 5421
+ },
+ "d13c52e6-f9c5-4223-ac3c-5dae872f52fd": {
+  "status": "underground",
+  "floor": 3707
+ },
+ "d3b3a2e5-ae32-41d4-8ac4-085323f4869d": {
+  "status": "floating",
+  "floor": 5443
+ },
+ "d3cf67ff-601e-4751-b38b-458456797357": {
+  "status": "underground",
+  "floor": 992
+ },
+ "d4015dd6-9499-4979-81ce-681c8c3d19f8": {
+  "status": "underground",
+  "floor": 987
+ },
+ "d4f5fece-72bd-497f-b791-23c7bbe99f6a": {
+  "status": "floating",
+  "floor": 455
+ },
+ "d56c3179-a8fb-40f3-8870-0a2c2674d917": {
+  "status": "underground",
+  "floor": 3524
+ },
+ "d5be6acf-3fce-4fb7-aa45-6f0fa77e4f6d": {
+  "status": "no floor",
+  "floor": null
+ },
+ "d67356ff-ba9a-46ac-b167-def3aadcf13f": {
+  "status": "underground",
+  "floor": 390
+ },
+ "d6929e58-88a4-4659-b35b-dccf19f1496e": {
+  "status": "underground",
+  "floor": 301
+ },
+ "d703bc25-61c5-4c26-a60b-93d251e29935": {
+  "status": "floating",
+  "floor": 6398
+ },
+ "d71cd1b8-0e3a-42ad-aff4-3d8bcb3060db": {
+  "status": "floating",
+  "floor": 6275
+ },
+ "d7309414-39c3-4e5b-909d-7694fc72e31e": {
+  "status": "underground",
+  "floor": 335
+ },
+ "d7ef587a-22e9-42ad-b101-317bd1cb2e4f": {
+  "status": "underground",
+  "floor": 3127
+ },
+ "d8583fb2-c8af-444c-8832-4b5d45394636": {
+  "status": "underground",
+  "floor": 544
+ },
+ "d88baab4-a980-4923-a2c8-9978c3abe980": {
+  "status": "underground",
+  "floor": 593
+ },
+ "d9695fa4-88cc-4ab8-b827-588c0b2ce752": {
+  "status": "underground",
+  "floor": 1264
+ },
+ "dac80e83-7a70-4e17-8305-861352bde16c": {
+  "status": "underground",
+  "floor": 3382
+ },
+ "ddbc9c1f-fd92-46a0-9d65-c51b553ae7e6": {
+  "status": "floating",
+  "floor": 3940
+ },
+ "dfb2379a-7406-438e-bb85-1a8f28de4e27": {
+  "status": "underground",
+  "floor": 4122
+ },
+ "e20457b2-252b-4a1e-af8f-445b03300031": {
+  "status": "underground",
+  "floor": 3408
+ },
+ "e3dbe2f7-e575-4334-91dc-bc59477c928b": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "e43ca8f1-1303-4cce-8310-6ac71763fef7": {
+  "status": "underground",
+  "floor": 3620
+ },
+ "e4888286-1fe2-40c9-bcdf-6d38bc8c5297": {
+  "status": "underground",
+  "floor": 2655
+ },
+ "e621bd7a-f674-40fd-a608-653d273bb74f": {
+  "status": "underground",
+  "floor": 623
+ },
+ "e6823acf-b5ae-4e00-a99a-9f409800dd9f": {
+  "status": "underground",
+  "floor": 2627
+ },
+ "e6eb1724-d4b1-4c40-883e-32d9f587d6c3": {
+  "status": "no floor",
+  "floor": null
+ },
+ "e929832c-2e33-4840-8773-94639074c33a": {
+  "status": "underground",
+  "floor": 504
+ },
+ "ea2a4ef6-051e-4873-9240-7f7e45a3ef18": {
+  "status": "underground",
+  "floor": 5255
+ },
+ "eb62a575-d2a1-44e7-92ff-f41fcb2ffdfc": {
+  "status": "no floor",
+  "floor": null
+ },
+ "eb7eb104-60c3-4b1a-b47b-6b36ff554eee": {
+  "status": "floating",
+  "floor": 744
+ },
+ "ec7b059a-3a4d-474d-bd8e-f03e606ff623": {
+  "status": "underground",
+  "floor": 393
+ },
+ "ee7bfd2c-d50c-4ded-9fca-87f1a0a42196": {
+  "status": "underground",
+  "floor": 660
+ },
+ "ee90016d-0b9d-4834-8a12-801d0398fdbd": {
+  "status": "underground",
+  "floor": 636
+ },
+ "ef3c8c89-7afd-4f26-88d8-f79ad050921d": {
+  "status": "no floor",
+  "floor": null
+ },
+ "eff8b00e-8eb6-4457-af6f-78860fdb8ff5": {
+  "status": "underground",
+  "floor": 3358
+ },
+ "f1436018-b5f8-4ed1-8b84-9091b9be79c7": {
+  "status": "floating",
+  "floor": 6375
+ },
+ "f26b9cac-3060-496f-a3ef-54746f9d315a": {
+  "status": "underground",
+  "floor": 717
+ },
+ "f4faf02c-2994-4a6c-b592-e2b1618ea803": {
+  "status": "underground",
+  "floor": 3202
+ },
+ "f5c47f2a-f31b-4ddd-923c-4ffd1b569dd1": {
+  "status": "underground",
+  "floor": 3241
+ },
+ "f5c85438-dcd2-4fa7-8cef-36f4a4032307": {
+  "status": "floating",
+  "floor": 3923
+ },
+ "f66c543f-022e-4792-ae21-506091149716": {
+  "status": "underground",
+  "floor": 693
+ },
+ "f73893c7-24e5-49cb-b1af-6c4a2450d46d": {
+  "status": "floating",
+  "floor": 2922
+ },
+ "f89a5299-16da-47e9-8e43-7d772eceeb6f": {
+  "status": "underground",
+  "floor": 563
+ },
+ "f93354cb-dfe9-4f8c-b2cb-4c1906be9030": {
+  "status": "no floor",
+  "floor": null
+ },
+ "fa329a68-b9a2-4cfa-a147-3898f005d049": {
+  "status": "floating",
+  "floor": 4692
+ },
+ "fb01f1af-59b6-42c8-b449-76ef0c27c0ff": {
+  "status": "underground",
+  "floor": 443
+ },
+ "fb52439b-dd82-4d66-bf45-b5e5a1224057": {
+  "status": "underground",
+  "floor": 2627
+ },
+ "fcbdbc63-ce61-4e7f-bdb3-de54626983ec": {
+  "status": "underground",
+  "floor": 704
+ },
+ "feaaba11-785c-4435-ad24-34fb3cebe076": {
+  "status": "underground",
+  "floor": 405
+ },
+ "ff201274-e310-4bda-baaf-645ceb2c1ca2": {
+  "status": "underground",
+  "floor": 581
+ },
+ "ff521dca-03cf-4a5e-bee6-9b5688c08bca": {
+  "status": "underground",
+  "floor": 305
+ },
+ "ffefa3a4-bb91-4973-b5cf-e3cc4b881dda": {
+  "status": "underground",
+  "floor": 354
+ }
+}

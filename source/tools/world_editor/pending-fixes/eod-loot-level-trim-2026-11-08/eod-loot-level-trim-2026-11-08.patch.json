@@ -1,0 +1,456 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T00:37:32.894191+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "LootTemplate",
+   "key": "8d0e47dd-e668-5a42-9b05-5fc3e9693c69",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite greensilk",
+    "ItemTemplateID": "Hearthwood_Branch",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "8d0e47dd-e668-5a42-9b05-5fc3e9693c69"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "43aa1fd0-9acd-52b5-9124-5a941210a932",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite greensilk",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "43aa1fd0-9acd-52b5-9124-5a941210a932"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "8ccc6c8a-f985-522f-b5ad-cec42cf072a2",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite greensilk",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "8ccc6c8a-f985-522f-b5ad-cec42cf072a2"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "b0eaaa1f-dbaf-5349-ad8d-fa1612a1d9a3",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite greensilk",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "b0eaaa1f-dbaf-5349-ad8d-fa1612a1d9a3"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "01c3ebec-09d0-5768-8930-fd6c8d457b86",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite hatchling",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "01c3ebec-09d0-5768-8930-fd6c8d457b86"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "d7ef09c4-cbed-53f2-a727-8797283bcae6",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite hatchling",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "d7ef09c4-cbed-53f2-a727-8797283bcae6"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "b62a5160-7977-509b-b4bc-ef2c825dc3ac",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite hatchling",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "b62a5160-7977-509b-b4bc-ef2c825dc3ac"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "45f4258c-3a56-5aa0-b8f9-d968de888556",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite priest",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "45f4258c-3a56-5aa0-b8f9-d968de888556"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "2f9e0769-abf4-5ab7-9687-8c42e7d03285",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite priest",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "2f9e0769-abf4-5ab7-9687-8c42e7d03285"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "baed5320-3490-543c-962d-600ae43efe36",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite priest",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "baed5320-3490-543c-962d-600ae43efe36"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "19970bbe-6d60-5c34-9115-bc16223d26ac",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite shadowslinker",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "19970bbe-6d60-5c34-9115-bc16223d26ac"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "7c7ac231-c227-5156-b8be-aa64f910c6a1",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite shadowslinker",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "7c7ac231-c227-5156-b8be-aa64f910c6a1"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "9ef3e689-8a5f-53a3-9952-6df981854d4c",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite shadowslinker",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "9ef3e689-8a5f-53a3-9952-6df981854d4c"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "e0c9df80-a600-5baa-8dae-4a1eb014e11b",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite weblasher",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "e0c9df80-a600-5baa-8dae-4a1eb014e11b"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "aa71f70f-56a0-5d70-99f1-3033e523ec46",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite weblasher",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "aa71f70f-56a0-5d70-99f1-3033e523ec46"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "ae3cea12-bd99-58bd-bedc-0d5338777067",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite weblasher",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "ae3cea12-bd99-58bd-bedc-0d5338777067"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "cfe5842e-a68f-5232-861b-944206278db4",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite youngling",
+    "ItemTemplateID": "Svartalf_Crafted_Belt",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "cfe5842e-a68f-5232-861b-944206278db4"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "e48133d0-54e7-5972-937a-de6e62b5d428",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite youngling",
+    "ItemTemplateID": "Svartalf_Crafted_Necklace",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "e48133d0-54e7-5972-937a-de6e62b5d428"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "3e20e6d7-2366-5caa-ae8a-bcd8bce3e1b4",
+   "op": "delete",
+   "before": {
+    "TemplateName": "arachite youngling",
+    "ItemTemplateID": "Svartalf_Crafted_Ring",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "3e20e6d7-2366-5caa-ae8a-bcd8bce3e1b4"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "15e7a19f-c863-5b0c-be5d-bbd26adc56ac",
+   "op": "delete",
+   "before": {
+    "TemplateName": "ash",
+    "ItemTemplateID": "Black_Ash_Soul_Slayer",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "15e7a19f-c863-5b0c-be5d-bbd26adc56ac"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "cbed609a-3f7e-5880-a0fe-2d294e89ded5",
+   "op": "delete",
+   "before": {
+    "TemplateName": "corpse candle",
+    "ItemTemplateID": "Painbound_Focus_Invoker_Staff",
+    "Chance": 15,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "cbed609a-3f7e-5880-a0fe-2d294e89ded5"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "f416ac37-80cf-5c23-9d6b-ffff5265ad46",
+   "op": "delete",
+   "before": {
+    "TemplateName": "disturbed presence",
+    "ItemTemplateID": "RubyEncrustedRing",
+    "Chance": 35,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "f416ac37-80cf-5c23-9d6b-ffff5265ad46"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "be8ad052-0bca-5a7d-92f8-9c2a0cbceec2",
+   "op": "delete",
+   "before": {
+    "TemplateName": "escaped thrall",
+    "ItemTemplateID": "Icebound_Bracer1",
+    "Chance": 20,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "be8ad052-0bca-5a7d-92f8-9c2a0cbceec2"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "4e92f893-e665-5eb8-8687-acba30e5928d",
+   "op": "delete",
+   "before": {
+    "TemplateName": "giant frog",
+    "ItemTemplateID": "Breastplate_of_the_Depths",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "4e92f893-e665-5eb8-8687-acba30e5928d"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "15790865-3364-5f66-9316-cecd89bfc048",
+   "op": "delete",
+   "before": {
+    "TemplateName": "giant frog",
+    "ItemTemplateID": "Cythrian_Baldric",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "15790865-3364-5f66-9316-cecd89bfc048"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "8e135949-b48f-5e12-951c-954ee40f0958",
+   "op": "delete",
+   "before": {
+    "TemplateName": "giant frog",
+    "ItemTemplateID": "Shadow-slicer",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "8e135949-b48f-5e12-951c-954ee40f0958"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "d6694522-cfac-5c89-ac7e-f78a72fb7d03",
+   "op": "delete",
+   "before": {
+    "TemplateName": "keltoi spiritualist",
+    "ItemTemplateID": "Insurgents_Vest",
+    "Chance": 20,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "d6694522-cfac-5c89-ac7e-f78a72fb7d03"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "00528d1e-8cf8-5a7b-a0ac-5bd4ca3665f0",
+   "op": "delete",
+   "before": {
+    "TemplateName": "large skeleton",
+    "ItemTemplateID": "PittedGoldenOakBow",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "00528d1e-8cf8-5a7b-a0ac-5bd4ca3665f0"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "7491517f-45d1-57bc-b5ed-8386480d2053",
+   "op": "delete",
+   "before": {
+    "TemplateName": "oak man",
+    "ItemTemplateID": "Enchanter_Staff_of_the_Arcane",
+    "Chance": 20,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "7491517f-45d1-57bc-b5ed-8386480d2053"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "a2d1566e-b7ba-56d5-b4e9-be00023021ef",
+   "op": "delete",
+   "before": {
+    "TemplateName": "spriggarn",
+    "ItemTemplateID": "RubyEncrustedRing",
+    "Chance": 10,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "a2d1566e-b7ba-56d5-b4e9-be00023021ef"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "b25282e7-33ae-503a-af0e-5ad7e3e226e3",
+   "op": "delete",
+   "before": {
+    "TemplateName": "tomte shaman",
+    "ItemTemplateID": "Icebound_Bracer",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "b25282e7-33ae-503a-af0e-5ad7e3e226e3"
+   },
+   "after": {}
+  },
+  {
+   "table": "LootTemplate",
+   "key": "3e286c86-1bab-5152-9f18-a99d9ca99362",
+   "op": "delete",
+   "before": {
+    "TemplateName": "wildling",
+    "ItemTemplateID": "Icebound_Bracer",
+    "Chance": 40,
+    "Count": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LootTemplate_ID": "3e286c86-1bab-5152-9f18-a99d9ca99362"
+   },
+   "after": {}
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

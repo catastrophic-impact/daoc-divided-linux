@@ -152,7 +152,7 @@ public static class AutonomousBotRealmGuilds
                 return;
             var failedWrites = new List<OfflineBotGuildMemberRecord>();
             var failedDeletes = new List<OfflineBotGuildMemberRecord>();
-            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+            using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
             {
                 foreach (var chunk in writes.Where(write => !write.Copy.IsPersisted).Chunk(WriteBatch))
                     if (!TryWrite(() => GameServer.Database.AddObject(chunk.Select(write => (DataObject)write.Copy))))
@@ -394,7 +394,7 @@ public static class AutonomousBotRealmGuilds
         }
         catch (Exception exception)
         {
-            Log.Error($"Bot guilds: could not found guild {request.Ordinal} for {request.Realm}", exception);
+            Log.Error($"Bot guilds: could not found guild {request.Ordinal} for {GlobalConstants.RealmToName(request.Realm)}", exception);
         }
         finally
         {
@@ -409,7 +409,7 @@ public static class AutonomousBotRealmGuilds
         Guild guild = GuildMgr.CreateGuild(realm, name);
         if (guild == null)
         {
-            Log.Warn($"Bot guilds: could not create guild \"{name}\" for {realm}");
+            Log.Warn($"Bot guilds: could not create guild \"{name}\" for {GlobalConstants.RealmToName(realm)}");
             return null;
         }
 
@@ -427,7 +427,7 @@ public static class AutonomousBotRealmGuilds
         // Audit 2026-10-17: these writes ran outside the shared database write lock that the batched bot writers
         // hold, so they could interleave with a status or membership batch. The rank titles are one batched save.
         if (retitled.Count > 0)
-            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+            using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                 GameServer.Database.SaveObject(retitled);
 
         AutonomousBotGuildEconomy.SetCharterDues(guild, charter);
@@ -437,12 +437,12 @@ public static class AutonomousBotRealmGuilds
         {
             GuildId = guild.GuildID, Realm = (int)realm, Charter = charter.ToString(), Ordinal = ordinal, CreatedUtc = nowUtc,
         };
-        lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+        using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
             GameServer.Database.AddObject(row);
         var info = new BotGuildInfo(guild.GuildID, realm, charter, ordinal);
         BotGuilds[guild.GuildID] = info;
         if (Log.IsInfoEnabled)
-            Log.Info($"Bot guilds: founded {charter} guild \"{name}\" in {realm}");
+            Log.Info($"Bot guilds: founded {charter} guild \"{name}\" in {GlobalConstants.RealmToName(realm)}");
         return info;
     }
 

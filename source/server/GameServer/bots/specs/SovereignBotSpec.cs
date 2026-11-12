@@ -13,16 +13,18 @@ namespace DOL.GS
 
             eObjectType[] oneHanded = characterClass switch
             {
-                eCharacterClass.PendragonSovereign => [eObjectType.SlashingWeapon, eObjectType.CrushingWeapon, eObjectType.ThrustWeapon],
-                eCharacterClass.TuathaSovereign => [eObjectType.Blades, eObjectType.Blunt, eObjectType.Piercing],
-                _ => [eObjectType.Sword, eObjectType.Hammer, eObjectType.Axe],
+                eCharacterClass.PendragonSovereign => [eObjectType.SlashingWeapon],
+                eCharacterClass.TuathaSovereign => [eObjectType.Blades],
+                _ => [eObjectType.Hammer, eObjectType.Axe],
             };
             eObjectType[] twoHanded = characterClass switch
             {
-                eCharacterClass.PendragonSovereign => [eObjectType.TwoHandedWeapon, eObjectType.PolearmWeapon],
-                eCharacterClass.TuathaSovereign => [eObjectType.LargeWeapons, eObjectType.CelticSpear],
-                _ => [eObjectType.Spear],
+                eCharacterClass.PendragonSovereign => [eObjectType.PolearmWeapon],
+                eCharacterClass.TuathaSovereign => [eObjectType.Scythe],
+                _ => [],
             };
+            // Storm Sovereign's two-handed set-up is a two-handed hammer or axe, trained in the same line.
+            bool storm = twoHanded.Length == 0;
 
             WeaponOneType = oneHanded[Util.Random(oneHanded.Length - 1)];
 
@@ -37,9 +39,18 @@ namespace DOL.GS
             {
                 SpecType = eSpecType.TwoHanded;
                 Is2H = true;
-                WeaponTwoType = twoHanded[Util.Random(twoHanded.Length - 1)];
-                Add(ObjToSpec(WeaponTwoType), 50, 1.0f);
-                Add(ObjToSpec(WeaponOneType), 50, 0.8f);
+                if (storm)
+                {
+                    // A two-handed item of the same type: the bot equips WeaponTwoType in both hands.
+                    WeaponTwoType = WeaponOneType;
+                    Add(ObjToSpec(WeaponOneType), 50, 1.0f);
+                }
+                else
+                {
+                    WeaponTwoType = twoHanded[Util.Random(twoHanded.Length - 1)];
+                    Add(ObjToSpec(WeaponTwoType), 50, 1.0f);
+                    Add(ObjToSpec(WeaponOneType), 50, 0.8f);
+                }
                 Add(Specs.Parry, 50, 0.6f);
                 Add(Specs.Shields, 50, 0.3f);
             }

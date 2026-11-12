@@ -127,14 +127,22 @@ namespace DOL.AI.Brain
 
             CleanUpAggroListAndGetHighestModifiedThreat();
 
+            // The aggro list keeps attackers that have since moved beyond this rooted turret's reach; casting at them
+            // was refused as "too far" (sandbox 2026-11-09: one Forest's Incarnation 100x at 4502 > 1000).
+            Spell spell = (Body as TurretPet).TurretSpell;
+            int reach = spell.IsPBAoE ? spell.Radius : spell.CalculateEffectiveRange(Body);
+            _filteredAggroList.RemoveAll(living => !Body.IsWithinRadius(living, reach));
+
             // Prioritize targets that don't already have our effect and aren't immune to it.
             // If there's none, allow them to be attacked again but only if our spell does damage.
             if (_filteredAggroList.Count > 0)
                 return _filteredAggroList[Util.Random(_filteredAggroList.Count - 1)];
-            else if ((Body as TurretPet).TurretSpell.Damage > 0)
+            else if (spell.Damage > 0)
             {
                 List<GameLiving> tempAggroList = GameLoop.GetListForTick<GameLiving>();
-                tempAggroList.AddRange(AggroList.Keys); // Wasteful, but we don't expect this to be called often.
+                foreach (GameLiving living in AggroList.Keys) // Wasteful, but we don't expect this to be called often.
+                    if (Body.IsWithinRadius(living, reach))
+                        tempAggroList.Add(living);
 
                 if (tempAggroList.Count != 0)
                     return tempAggroList[Util.Random(tempAggroList.Count - 1)];

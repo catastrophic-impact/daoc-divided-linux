@@ -82,7 +82,9 @@ public static class AutonomousMobLessons
             return;
         if (dead is GameBot { IsAutonomousWorldBot: true } fallen)
         {
-            if (killer is GameNPC monster and not GameBot && monster.Brain is not IControlledBrain && Teaches(fallen, monster))
+            // Only PvE monsters teach: an enemy realm's guard is no lesson about a camp.
+            if (killer is GameNPC monster and not GameBot && monster.Realm == eRealm.None && monster.Brain is not IControlledBrain &&
+                Teaches(fallen, monster))
                 Count(monster.Name, fallen.Group?.MemberCount > 1, win: false);
             return;
         }

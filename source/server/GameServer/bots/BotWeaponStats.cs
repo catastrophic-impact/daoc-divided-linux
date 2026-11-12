@@ -103,12 +103,18 @@ namespace DOL.GS
                 eObjectType.Spear or eObjectType.MaulerStaff ? second :
                 first != 0 ? first : second;
 
+        /// <summary>The class rule players get (no class = test or legacy NPC: allowed).</summary>
+        public static bool CanWieldOffhandWeapon(GameBot bot) => bot?.CharacterClass?.CanUseLefthandedWeapon != false;
+
         public static bool FitsConfiguredSlot(GameBot bot, DbInventoryItem item, eInventorySlot slot)
         {
             if (!CanUseMelee(bot, item)) return false;
             if (slot is eInventorySlot.RightHandWeapon or eInventorySlot.LeftHandWeapon &&
                 (item.Item_Type == Slot.TWOHAND || item.Hand == 1)) return false;
             if (slot == eInventorySlot.TwoHandWeapon && item.Item_Type != Slot.TWOHAND) return false;
+            // Only dual-wield classes swing an offhand weapon. Bards, Druids and Champions put
+            // left-hand-capable loot there and lost their shield slot to a weapon they never used.
+            if (slot == eInventorySlot.LeftHandWeapon && !CanWieldOffhandWeapon(bot)) return false;
             if (slot == eInventorySlot.LeftHandWeapon && bot.BotSpec?.SpecType == eSpecType.LeftAxe)
                 return item.Object_Type is (int)eObjectType.Axe or (int)eObjectType.LeftAxe;
             if (slot is eInventorySlot.RightHandWeapon or eInventorySlot.TwoHandWeapon &&

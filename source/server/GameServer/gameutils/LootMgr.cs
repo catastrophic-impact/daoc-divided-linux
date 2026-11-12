@@ -95,6 +95,8 @@ namespace DOL.GS
 							continue;
 						}
 						generator = (ILootGenerator)Activator.CreateInstance(generatorType);
+						// The cache keys on class + priority, but the priority itself was never copied, so no generator was ever exclusive.
+						generator.ExclusivePriority = dbGenerator.ExclusivePriority;
 
 						PutGeneratorInCache(dbGenerator, generator);
 					}
@@ -109,7 +111,7 @@ namespace DOL.GS
 			}
 
 			// no loot generators loaded...
-			if (m_globalGenerators.Count == 0 && m_mobNameGenerators.Count == 0 && m_globalGenerators.Count == 0)
+			if (m_globalGenerators.Count == 0 && m_mobNameGenerators.Count == 0 && m_mobGuildGenerators.Count == 0 && m_mobRegionGenerators.Count == 0 && m_mobFactionGenerators.Count == 0)
 			{
 				ILootGenerator baseGenerator = new LootGeneratorMoney();
 				RegisterLootGenerator(baseGenerator, null, null, null, 0);
@@ -411,16 +413,42 @@ namespace DOL.GS
 		/// <returns></returns>
 		public static DbItemTemplate[] GetLoot(GameNPC mob, GameObject killer)
 		{
+			LootDrop[] drops = GetDrops(mob, killer);
+			DbItemTemplate[] items = new DbItemTemplate[drops.Length];
+			for (int i = 0; i < drops.Length; i++)
+				items[i] = drops[i].Item;
+			return items;
+		}
+
+		/// <summary>
+		/// Returns the loot for the given mob, each drop with the participant it is meant for (null: the normal owners).
+		/// </summary>
+		public static LootDrop[] GetDrops(GameNPC mob, GameObject killer)
+		{
+			return GetDrops(LootContext.For(mob, killer), GetLootGenerators(mob));
+		}
+
+		/// <summary>
+		/// Rolls every generator against one shared context (worked out once per kill, not once per generator).
+		/// </summary>
+		public static LootDrop[] GetDrops(LootContext context, IEnumerable generators)
+		{
 			LootList lootList = null;
-			IList generators = GetLootGenerators(mob);
 			foreach (ILootGenerator generator in generators)
 			{
 				try
 				{
+					LootList generated = generator is LootGeneratorBase contextual
+						? contextual.GenerateLoot(context)
+						: generator.GenerateLoot(context.Mob, context.Killer);
+
+					if (generated == null)
+						continue;
+
 					if (lootList == null)
-						lootList = generator.GenerateLoot(mob, killer);
+						lootList = generated;
 					else
-						lootList.AddAll(generator.GenerateLoot(mob, killer));
+						lootList.AddAll(generated);
 				}
 				catch (Exception e)
 				{
@@ -429,9 +457,9 @@ namespace DOL.GS
 				}
 			}
 			if (lootList != null)
-				return lootList.GetLoot();
+				return lootList.GetDrops();
 			else
-				return new DbItemTemplate[0];
+				return [];
 		}
 
 		/// <summary>

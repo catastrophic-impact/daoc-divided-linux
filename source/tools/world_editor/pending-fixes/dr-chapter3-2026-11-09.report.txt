@@ -1,0 +1,27 @@
+2283 edits: {'NpcTemplate': 57, 'ZonePoint': 2, 'Mob': 2224}
+region 340: {'DR3-minion': 139, 'DR3-exact': 23, 'DR3-filler': 1136}; rooms 126, filled 114, left empty like their Albion twin 12
+    Aspect of Myrkr: 27 of 27 (Albion count) placed near the marker
+    Banahogg's Spawn: 13 of 13 (Albion count) placed near the marker
+    Eye of Banahogg: 9 of 9 (Albion count) placed near the marker
+    Myrkr's Brood: 9 of 9 (Albion count) placed near the marker
+    Myrkr's Child: 22 of 22 (Albion count) placed near the marker
+    Ofridr's Front Guard: 12 of 12 (Albion count) placed near the marker
+    Ofridr's Worms: 18 of 18 (Albion count) placed near the marker
+    left out (invisible helper): Soltinn's Implement
+    Soltinn's Soldier: 21 of 21 (Albion count) placed near the marker
+    Soremaiden of Ofridr: 8 of 8 (Albion count) placed near the marker
+region 341: {'DR3-exact': 19, 'DR3-minion': 81, 'DR3-filler': 858}; rooms 137, filled 85, left empty like their Albion twin 11
+    already spawned there: Chthonic Knight Carabia
+    Eye of Glaimaim: 9 of 9 (Albion count) placed near the marker
+    Glaimaim's Spawn: 13 of 13 (Albion count) placed near the marker
+    left out (invisible helper): Grimeil's Implement
+    Grimeil's Soldier: 21 of 21 (Albion count) placed near the marker
+    already spawned there: Marquis Halphas
+    Soremaiden of Teugmhail: 8 of 8 (Albion count) placed near the marker
+    Teugmhail's Front Guard: 12 of 12 (Albion count) placed near the marker
+    Teugmhail's Worms: 18 of 18 (Albion count) placed near the marker
+    already spawned there: Uamhas
+    minion type already spawned (10): Uamhas' Child
+zone point 674 realm 2: region 100 -> 340
+zone point 670 realm 2: region 340 -> 100
+dropped after the navmesh audit: 32 estimated rows

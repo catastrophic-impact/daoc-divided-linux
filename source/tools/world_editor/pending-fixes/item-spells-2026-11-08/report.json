@@ -1,0 +1,2248 @@
+{
+ "spells built": [
+  [
+   808714,
+   "ArtifactAllStats",
+   50.0,
+   15,
+   "You gain a 50% immunity to melee damage and a 50 bonus to all stats for 15 sec."
+  ],
+  [
+   803300,
+   "CastingSpeedDebuff",
+   25.0,
+   40,
+   "Single target debuff that penalizes the casting time of enemy casters by 25% for"
+  ],
+  [
+   813600,
+   "ToHitDebuff",
+   10.0,
+   60,
+   "The target shapechanges."
+  ],
+  [
+   803407,
+   "ArtifactAllStats",
+   50.0,
+   30,
+   "You gain a 10% immunity to melee damage and a 50 bonus to all stats for 30 sec."
+  ],
+  [
+   803425,
+   "Disease",
+   0.0,
+   10,
+   "Inflicts a wasting disease on the target that slows target by 15%, reduces its s"
+  ],
+  [
+   803361,
+   "Heal",
+   -10.0,
+   0,
+   "Heals the target for 10% health, power and fatigue."
+  ],
+  [
+   807688,
+   "AllMagicResistsBuff",
+   10.0,
+   7,
+   "Enhances the target's resistance to the listed damage type."
+  ],
+  [
+   807727,
+   "ColdResistDebuff",
+   30.0,
+   15,
+   "Lowers the value of the target's resistance buffs or items to the listed damage "
+  ],
+  [
+   809620,
+   "StyleAbsorbBuff",
+   75.0,
+   300,
+   "Absorbs 75% style damage."
+  ],
+  [
+   809581,
+   "Conversion",
+   100.0,
+   10,
+   "A portion of any damage done to the target is converted to heal the target inste"
+  ],
+  [
+   807665,
+   "SpeedDecrease",
+   25.0,
+   4,
+   "Target moves slower for the spell's duration."
+  ],
+  [
+   807710,
+   "StyleAbsorbBuff",
+   30.0,
+   10,
+   "Reduces the amount of damage the target takes from melee combat styles."
+  ],
+  [
+   807684,
+   "Mesmerize",
+   0.0,
+   61,
+   "Target is stunned and cannot move or take any other action for the duration of t"
+  ],
+  [
+   803465,
+   "CurePoison",
+   0.0,
+   0,
+   "Cures both Disease and Poison from the user."
+  ],
+  [
+   803477,
+   "FumbleChanceDebuff",
+   15.0,
+   30,
+   "Bedazzles target, causing it to suffer a undefined% chance to miscast and a 15% "
+  ],
+  [
+   803590,
+   "CCResist",
+   20,
+   600,
+   "You become immune to the next mesmerize spell cast on yourself."
+  ],
+  [
+   803592,
+   "StyleAbsorbBuff",
+   25.0,
+   420,
+   "Absorbs 25% style damage."
+  ],
+  [
+   803681,
+   "Heal",
+   -33.0,
+   0,
+   "Heals target within view of the caster for 33% health."
+  ],
+  [
+   803682,
+   "Resurrect",
+   0.0,
+   0,
+   "Brings the target back to life, restores 10% and 0% power and endurance and suff"
+  ],
+  [
+   803687,
+   "Heal",
+   -18.0,
+   0,
+   "Heals the target for 18% health, power and fatigue."
+  ],
+  [
+   805676,
+   "AfHitsBuff",
+   -4.0,
+   600,
+   "Target has improved armor and health for this spell's duration."
+  ],
+  [
+   812834,
+   "Conversion",
+   75.0,
+   300,
+   "Also casts: A portion of any spell damage done to the target is converted to hea"
+  ],
+  [
+   812835,
+   "MesmerizeDurationBuff",
+   20.0,
+   300,
+   "Mesmerisation spells cast upon this spell's recipient are reduced in duration by"
+  ],
+  [
+   812832,
+   "HealingDoneBuff",
+   11.0,
+   600,
+   "Enhances the effectiveness of heal spells by the caster."
+  ],
+  [
+   812836,
+   "MeleeDamageBuff",
+   5.0,
+   300,
+   "Target does additional damage with melee attacks."
+  ],
+  [
+   813601,
+   "ToHitDebuff",
+   10.0,
+   60,
+   "The target shapechanges."
+  ],
+  [
+   803372,
+   "CombatSpeedDebuff",
+   31.0,
+   15,
+   "Target's attack speed reduced by 31%."
+  ],
+  [
+   807720,
+   "MeleeDamageBuff",
+   25.0,
+   10,
+   "Target does additional damage with melee attacks."
+  ],
+  [
+   807715,
+   "HealingReceivedBuff",
+   50.0,
+   20,
+   "Heals cast on the target are more effective."
+  ],
+  [
+   807714,
+   "CombatSpeedBuff",
+   25.0,
+   15,
+   "Increases the target's melee attack speed."
+  ],
+  [
+   807669,
+   "ColdResistDebuff",
+   40.0,
+   15,
+   "Lowers the value of the target's resistance buffs or items to the listed damage "
+  ],
+  [
+   807712,
+   "ParryBuff",
+   5.0,
+   10,
+   "The target is given the ability to parry in combat."
+  ],
+  [
+   813602,
+   "ToHitDebuff",
+   10.0,
+   60,
+   "The target shapechanges."
+  ],
+  [
+   802096,
+   "CombatSpeedBuff",
+   25.0,
+   60,
+   "Increases your attack speed by 25%."
+  ],
+  [
+   808680,
+   "AblativeArmor",
+   200.0,
+   600,
+   "Adds a shield to the recipient which will temporarily absorb some of the damage "
+  ],
+  [
+   807690,
+   "ConstitutionDebuff",
+   75.0,
+   60,
+   "Decreases the target's listed stat."
+  ],
+  [
+   807692,
+   "SpreadHeal",
+   295.0,
+   0,
+   "Specialized healing spell that attempts to heal the most damaged members of the "
+  ],
+  [
+   807689,
+   "Conversion",
+   100.0,
+   10,
+   "A portion of any spell damage done to the target is converted to heal the target"
+  ],
+  [
+   807685,
+   "ArmorAbsorptionBuff",
+   10.0,
+   25,
+   "Adds to the target's absorption (ABS) factor, resulting in better protection aga"
+  ],
+  [
+   807728,
+   "Resurrect",
+   0.0,
+   0,
+   "Brings target back to life, and restores a portion of their health and power, an"
+  ],
+  [
+   804999,
+   "EnergyResistDebuff",
+   40.0,
+   15,
+   "Lowers the value of the target's resistance buffs or items to the listed damage "
+  ]
+ ],
+ "spells corrected": [
+  [
+   801591,
+   "Replenish Power (1591)",
+   {
+    "Duration": [
+     6,
+     0
+    ]
+   }
+  ],
+  [
+   801592,
+   "Replenish Power (1592)",
+   {
+    "Type": [
+     "PowerHeal",
+     "PowerRegenBuff"
+    ],
+    "Value": [
+     -50.0,
+     4.0
+    ]
+   }
+  ],
+  [
+   803403,
+   "Shield (3403)",
+   {
+    "Value": [
+     75.0,
+     250.0
+    ]
+   }
+  ],
+  [
+   803482,
+   "Heal (3482)",
+   {
+    "Duration": [
+     600,
+     0
+    ]
+   }
+  ],
+  [
+   803483,
+   "Heal (3483)",
+   {
+    "Type": [
+     "Heal",
+     "CrushSlashThrustBuff"
+    ],
+    "Value": [
+     -10.0,
+     10.0
+    ],
+    "Target": [
+     "Realm",
+     "Self"
+    ],
+    "Range": [
+     1500,
+     0
+    ]
+   }
+  ],
+  [
+   803484,
+   "Heal All Over Time (3484)",
+   {
+    "Type": [
+     "HealAllOverTime",
+     "LoreDebuff"
+    ],
+    "Value": [
+     4.0,
+     15.0
+    ],
+    "Target": [
+     "Realm",
+     "Enemy"
+    ],
+    "Range": [
+     1500,
+     0
+    ],
+    "Radius": [
+     0,
+     350
+    ],
+    "Frequency": [
+     50,
+     0
+    ]
+   }
+  ],
+  [
+   803485,
+   "Heal All Over Time (3485)",
+   {
+    "Duration": [
+     45,
+     30
+    ],
+    "Target": [
+     "Realm",
+     "Self"
+    ],
+    "Range": [
+     1500,
+     0
+    ],
+    "DamageType": [
+     10,
+     0
+    ]
+   }
+  ],
+  [
+   809576,
+   "Improved Stat Enhancement (9576)",
+   {
+    "Type": [
+     "StrengthConstitutionBuff",
+     "HeatResistBuff"
+    ],
+    "Value": [
+     75.0,
+     29.0
+    ],
+    "Duration": [
+     600,
+     300
+    ]
+   }
+  ],
+  [
+   810535,
+   "Heal (10535)",
+   {
+    "Type": [
+     "Heal",
+     "CastingSpeedDebuff"
+    ],
+    "Value": [
+     230.0,
+     25.0
+    ],
+    "Duration": [
+     0,
+     40
+    ],
+    "Target": [
+     "Self",
+     "Enemy"
+    ],
+    "Range": [
+     0,
+     1500
+    ]
+   }
+  ],
+  [
+   812051,
+   "Direct Damage (12051)",
+   {
+    "Duration": [
+     120,
+     0
+    ],
+    "Range": [
+     2000,
+     1000
+    ]
+   }
+  ],
+  [
+   812211,
+   "Heal (12211)",
+   {
+    "Duration": [
+     600,
+     0
+    ]
+   }
+  ]
+ ],
+ "spells not built": {
+  "3430": "no rule for \"{'Penalty to all stats': '35', 'Vulnerability to melee': '5%', 'Target': 'Targeted', 'Range': '500', 'Duration': '20s', 'Casting time': 'instant', 'Damage': 'Body'}\"",
+  "13604": "no rule for \"illusion\"",
+  "3411": "no spell type for Slash",
+  "3381": "no spell type for Staff",
+  "3377": "no spell type for Slash",
+  "3378": "no spell type for Thrust",
+  "3379": "no spell type for Crush",
+  "3451": "no spell row of type DmgReductionAndPowerReturn to copy",
+  "7700": "no rule for \"{}\"",
+  "7705": "no spell type for Critical Strike",
+  "7706": "no rule for \"{}\"",
+  "7701": "no rule for \"{}\"",
+  "9568": "no rule for \"{'Value': '100', 'Target': 'Self', 'Duration': '30 sec', 'Casting time': 'instant'}\"",
+  "8558": "no rule for \"cost reduction\"",
+  "7729": "no rule for \"{}\"",
+  "11441": "no rule for \"{'Target': 'Self', 'Casting time': 'instant', 'Effect': 'Recovery', 'Range': '1500'}\"",
+  "10534": "no rule for \"speed enhancement\"",
+  "5880": "no rule for \"summon elemental\"",
+  "7707": "no rule for \"resistance enhancement\"",
+  "7704": "no rule for \"{}\"",
+  "8969": "no rule for \"pet command\"",
+  "7687": "no spell row of type DmgReductionAndPowerReturn to copy",
+  "7667": "no rule for \"{}\"",
+  "3476": "no rule for \"bedazzled\"",
+  "6952": "no rule for \"{'Effect': 'Stealth Lore', 'Stealth bonus': '35', 'Target': 'Self', 'Duration': '1:30 min', 'Casting time': 'instant'}\"",
+  "3657": "no rule for \"defensive proc\"",
+  "3686": "no rule for \"offensive proc\"",
+  "12833": "no rule for \"omni heal\"",
+  "13605": "no rule for \"illusion\"",
+  "3412": "no spell type for Sword",
+  "3696": "no spell type for Sword",
+  "3695": "no spell type for Axe",
+  "3384": "no spell type for Axe",
+  "3383": "no spell type for Sword",
+  "3385": "no spell type for Hammer",
+  "3386": "no spell type for Spear",
+  "3427": "no rule for \"resistance enhancement\"",
+  "7717": "no rule for \"illusion\"",
+  "7721": "no rule for \"{}\"",
+  "7666": "no rule for \"buff shear\"",
+  "7711": "no rule for \"arcane leadership\"",
+  "7722": "no rule for \"buff shear\"",
+  "5881": "no rule for \"summon elemental\"",
+  "13606": "no rule for \"illusion\"",
+  "3387": "no spell type for Scythe",
+  "3413": "no spell type for Blades",
+  "3389": "no spell type for Blades",
+  "3390": "no spell type for Blunt",
+  "4014": "no rule for \"summon turret\"",
+  "7682": "no rule for \"{}\"",
+  "7670": "no rule for \"{'Underhill Stalker and Compatriot': 'Gains a snare style.', 'Underhill Ally': 'Gains a defensive snare-proc.', 'Underhil Companion': 'Gains a cold damage snare/nuke.', 'Underhill Zealot': 'No effect.'}\"",
+  "7673": "no rule for \"{}\"",
+  "7686": "no rule for \"increase melee critical damage chance\"",
+  "7678": "no rule for \"offensive proc\"",
+  "7691": "no rule for \"speed decrease\"",
+  "5882": "no rule for \"summon elemental\"",
+  "7723": "no rule for \"stun\""
+ },
+ "rebuild without a rule": [
+  [
+   812050,
+   "Direct Damage (12050)",
+   "DirectDamage",
+   "no rule for \"{'Effect': 'Siege Lore', 'Bonus multiplier': '20', 'Target': 'Group', 'Range': '2000', 'Duration': '2:00 min', 'Casting time': 'instant', '- Requirement': 'Restricted to Gaheris Frontiers.'}\""
+  ],
+  [
+   813354,
+   "Heal (13354)",
+   "Heal",
+   "no rule for \"stat enhancement\""
+  ]
+ ],
+ "items updated": [
+  [
+   "bounty_gem_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_emerald_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_ruby_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_spinel_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_citrine_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_amethyst_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_topaz_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_sapphire_of_the_harbinger_all",
+   {
+    "SpellID": 808714,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803300,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_majestic_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_fierce_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_striking_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_hardened_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_empowering_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_shimmering_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_battled_cap_of_the_hallowed_alb",
+   {
+    "SpellID": 813600,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_cabalist_staff_alb",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_sorcerer_staff_alb",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_theurgist_staff_alb",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_wizard_staff_alb",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_necromancer_staff_alb",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_abyssal_friar_mace_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_chthonian_scout_longbow_alb",
+   {
+    "ProcSpellID": 803425
+   }
+  ],
+  [
+   "bounty_abyssal_minstrel_harp_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_darkflame_cleric_mace_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_abyssal_cleric_mace_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_abyssal_heretic_mace_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_abyssal_heretic_flail_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_abyssal_heretic_barbed_chain_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_dreams_alb",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_means_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_breastplate_of_demonic_dreams_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_unyielding_brutalizer_vest_alb",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_ancient_battle_staff_alb",
+   {
+    "ProcSpellID1": 807727
+   }
+  ],
+  [
+   "bounty_ancient_drum_alb",
+   {
+    "SpellID": 809620,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_fireheart_mantle_all",
+   {
+    "SpellID": 809581,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_hallowed_hammer_alb",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_freezing_solemnity_vest_alb",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_freezing_betrayal_vest_alb",
+   {
+    "ProcSpellID": 807710
+   }
+  ],
+  [
+   "bounty_freezing_brutalizer_vest_alb",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_freezing_manipulator_vest_alb",
+   {
+    "ProcSpellID": 807684
+   }
+  ],
+  [
+   "bounty_freezing_geomancer_vest_alb",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_snowfall_alb",
+   {
+    "ProcSpellID1": 807727
+   }
+  ],
+  [
+   "bounty_silent_night_alb",
+   {
+    "SpellID": 809620,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_mighty_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_arcane_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_adept_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_tracker_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_dueling_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_furtive_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_agile_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_deft_ring_all",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_physical_bracer_all",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_elemental_bracer_all",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_soul_bracer_all",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_mighty_necklace_all",
+   {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_arcane_necklace_all",
+   {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_agile_necklace_all",
+   {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_tempered_necklace_all",
+   {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_mercurial_necklace_all",
+   {
+    "SpellID": 803590,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803592,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_uther_s_otherworldly_restorative_cloak_all",
+   {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_uther_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_band_of_the_dream_conqueror_all",
+   {
+    "SpellID": 805676,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_alb",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_alb",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_alb",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_alb",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_alb2",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_alb2",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_alb2",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_alb2",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_alb3",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_alb3",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_alb3",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_alb3",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_alb4",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_alb4",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_alb4",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_alb4",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_alb5",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_alb5",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_alb5",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_alb5",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_arcane_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_mindful_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_brawler_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_unseen_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_studded_steeple_of_the_sword_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_tactful_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_sword_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_feallan_steeple_of_the_revered_mid",
+   {
+    "SpellID": 813601,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_icecursed_runemaster_staff_mid",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_icecursed_spiritmaster_staff_mid",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_icecursed_bonedancer_staff_mid",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_icecursed_warlock_staff_mid",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_icecursed_healer_hammer_mid",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_icecursed_healer_heavy_hammer_mid",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_icecursed_shaman_hammer_mid",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_icecursed_shaman_heavy_hammer_mid",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_frostshard_shadowblade_axe_mid",
+   {
+    "ProcSpellID": 803372
+   }
+  ],
+  [
+   "bounty_blighted_hunter_composite_bow_mid",
+   {
+    "ProcSpellID": 803425
+   }
+  ],
+  [
+   "bounty_robe_of_demonic_intent_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_robe_of_demonic_means_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_dreams_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_intent_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_intent_mid",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_intent_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_dreams_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_howling_predator_vest_mid",
+   {
+    "ProcSpellID": 807720
+   }
+  ],
+  [
+   "bounty_howling_revival_vest_mid",
+   {
+    "ProcSpellID": 807715
+   }
+  ],
+  [
+   "bounty_howling_chaser_vest_mid",
+   {
+    "ProcSpellID": 807714
+   }
+  ],
+  [
+   "bounty_howling_brutalizer_vest_mid",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_howling_mystic_vest_mid",
+   {
+    "ProcSpellID": 807669
+   }
+  ],
+  [
+   "bounty_howling_shadow_vest_mid",
+   {
+    "ProcSpellID": 807712
+   }
+  ],
+  [
+   "bounty_drakulv_war_hammer_mid",
+   {
+    "ProcSpellID1": 807665
+   }
+  ],
+  [
+   "bounty_hallowed_hammer_mid",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_freezing_predator_vest_mid",
+   {
+    "ProcSpellID": 807720
+   }
+  ],
+  [
+   "bounty_freezing_revival_vest_mid",
+   {
+    "ProcSpellID": 807715
+   }
+  ],
+  [
+   "bounty_freezing_chaser_vest_mid",
+   {
+    "ProcSpellID": 807714
+   }
+  ],
+  [
+   "bounty_freezing_brutalizer_vest_mid",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_freezing_mystic_vest_mid",
+   {
+    "ProcSpellID": 807669
+   }
+  ],
+  [
+   "bounty_freezing_shadow_vest_mid",
+   {
+    "ProcSpellID": 807712
+   }
+  ],
+  [
+   "bounty_avalanche_mid",
+   {
+    "ProcSpellID1": 807665
+   }
+  ],
+  [
+   "bounty_snowstinger_mid",
+   {
+    "ProcSpellID1": 807727
+   }
+  ],
+  [
+   "bounty_otherworldly_mighty_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_arcane_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_adept_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_tracker_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_dueling_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_furtive_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_agile_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_deft_ring_all2",
+   {
+    "SpellID1": 803465,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_physical_bracer_all2",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_elemental_bracer_all2",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_otherworldly_soul_bracer_all2",
+   {
+    "SpellID": 803477,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_ymir_s_otherworldly_restorative_cloak_all",
+   {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_ymir_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_mid",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_mid",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_mid",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_mid",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_mid2",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_mid2",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_mid2",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_mid2",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_mid3",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_mid3",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_mid3",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_mid3",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_mid4",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_mid4",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_mid4",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_mid4",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_majestic_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_pictslayer_defender_hib",
+   {
+    "ProcSpellID1": 802096
+   }
+  ],
+  [
+   "bounty_pictslayer_heater_shield_hib",
+   {
+    "ProcSpellID1": 802096
+   }
+  ],
+  [
+   "bounty_pictslayer_small_shield_hib",
+   {
+    "SpellID": 808680,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_eldritch_staff_hib",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_enchanter_staff_hib",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_mentalist_staff_hib",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_animist_staff_hib",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_bainshee_staff_hib",
+   {
+    "SpellID": 803407,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_miasmic_bard_harp_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_miasmic_bard_hammer_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_miasmic_bard_blade_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_malignant_ranger_recurve_bow_hib",
+   {
+    "ProcSpellID": 803425
+   }
+  ],
+  [
+   "bounty_miasmic_druid_blade_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_miasmic_druid_hammer_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_miasmic_warden_blade_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_miasmic_warden_hammer_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_robe_of_demonic_means_all2",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_intent_all2",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_means_all",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_jerkin_of_demonic_intent_all3",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_intent_all2",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_dreams_all2",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_hauberk_of_demonic_means_all2",
+   {
+    "ProcSpellID1": 803361
+   }
+  ],
+  [
+   "bounty_shrouded_wails_robe_hib",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_shrouded_crystal_vest_hib",
+   {
+    "ProcSpellID": 807690
+   }
+  ],
+  [
+   "bounty_shrouded_grove_vest_hib",
+   {
+    "ProcSpellID": 807692
+   }
+  ],
+  [
+   "bounty_shrouded_prince_vest_hib",
+   {
+    "ProcSpellID": 807689
+   }
+  ],
+  [
+   "bounty_shrouded_brutalizer_vest_hib",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_shrouded_wanderer_vest_hib",
+   {
+    "ProcSpellID": 807685
+   }
+  ],
+  [
+   "bounty_abagath_fife_hib",
+   {
+    "SpellID": 807728,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_hallowed_blade_hib",
+   {
+    "SpellID1": 803407,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_freezing_crystal_vest_hib",
+   {
+    "ProcSpellID": 807690
+   }
+  ],
+  [
+   "bounty_freezing_grove_vest_hib",
+   {
+    "ProcSpellID": 807692
+   }
+  ],
+  [
+   "bounty_freezing_prince_vest_hib",
+   {
+    "ProcSpellID": 807689
+   }
+  ],
+  [
+   "bounty_freezing_brutalizer_vest_hib",
+   {
+    "ProcSpellID": 807688
+   }
+  ],
+  [
+   "bounty_freezing_wanderer_vest_hib",
+   {
+    "ProcSpellID": 807685
+   }
+  ],
+  [
+   "bounty_blizzard_hib",
+   {
+    "ProcSpellID1": 807727
+   }
+  ],
+  [
+   "bounty_icicle_hib",
+   {
+    "ProcSpellID1": 807727
+   }
+  ],
+  [
+   "bounty_silent_night_hib",
+   {
+    "SpellID": 807728,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_cliodna_s_otherworldly_restorative_cloak_all",
+   {
+    "SpellID": 803681,
+    "Charges": 30,
+    "MaxCharges": 30,
+    "SpellID1": 803682,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_hib",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_hib",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_hib",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_hib",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_hib2",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_hib2",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_hib2",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_hib2",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_hib3",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_hib3",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_hib3",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_hib3",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_soul_gauntlets_hib4",
+   {
+    "SpellID1": 812834,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dream_gauntlets_hib4",
+   {
+    "SpellID1": 812835,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_life_gauntlets_hib4",
+   {
+    "SpellID1": 812832,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_cursed_dragon_gauntlets_hib4",
+   {
+    "SpellID1": 812836,
+    "Charges1": 30,
+    "MaxCharges1": 30
+   }
+  ],
+  [
+   "bounty_unyielding_solemnity_robe_alb",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_unyielding_betrayal_robe_alb",
+   {
+    "ProcSpellID": 807710
+   }
+  ],
+  [
+   "bounty_unyielding_manipulator_robe_alb",
+   {
+    "ProcSpellID": 807684
+   }
+  ],
+  [
+   "bounty_unyielding_geomancer_robe_alb",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_battled_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_striking_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_glittering_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_melodic_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_empowering_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_fierce_mantle_of_samhain_hib",
+   {
+    "SpellID": 813602,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ],
+  [
+   "bounty_gatekeeper_s_sickle_hib",
+   {
+    "ProcSpellID": 804999
+   }
+  ],
+  [
+   "bounty_freezing_wails_vest_hib",
+   {
+    "ProcSpellID": 807665
+   }
+  ],
+  [
+   "bounty_cliodna_s_otherworldly_hardy_cloak_all",
+   {
+    "SpellID": 803687,
+    "Charges": 30,
+    "MaxCharges": 30
+   }
+  ]
+ ]
+}

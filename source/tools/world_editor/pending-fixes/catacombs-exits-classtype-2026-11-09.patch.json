@@ -1,0 +1,74 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-10T01:16:50.990097+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-292-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-293-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-376-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-377-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-403-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "eod-catexit-404-0",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"
+   },
+   "after": {
+    "ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

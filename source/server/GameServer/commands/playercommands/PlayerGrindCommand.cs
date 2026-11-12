@@ -17,6 +17,14 @@ namespace DOL.GS.Commands
     public static class PlayerCompanionGrind
     {
         public const int PullRadius = 1000;
+        public const int MaxPullRadius = 2000;
+
+        /// <summary>
+        /// How far /grind looks for its next monster (True 1.65 0.5: a crossbow reaches 1,200 and pull spells 1,500, but only
+        /// monsters within 1,000 were picked): the puller's own reach less a step, never under 1,000 (a melee puller walks
+        /// up as before), at most 2,000.
+        /// </summary>
+        public static int SearchRadius(int pullerReach) => Math.Clamp(pullerReach - 100, PullRadius, MaxPullRadius);
         public const int RegroupRadius = 350;
         public const int ContactTimeout = 35_000;
         // The legacy native client can close an otherwise healthy localhost
@@ -102,6 +110,28 @@ namespace DOL.GS.Commands
             return !ReadyWithSongUpkeep(member.Health, member.MaxHealth, member.Mana, member.MaxMana, member.Endurance, member.MaxEndurance) ||
                 member.IsCasting && member.castingComponent?.SpellHandler?.Spell?.IsPulsing != true && !BotSongTwistPolicy.HasMobileSongCast(bot);
         }
+
+        /// <summary>A chanter or singer (Paladin, Warden, Bard, Minstrel, Skald), a companion or the player.</summary>
+        public static bool KeepsSongsUp(GameLiving member)
+        {
+            int classId = member switch
+            {
+                GameBot bot => bot.CharacterClass?.ID ?? 0,
+                GamePlayer player => player.CharacterClass?.ID ?? 0,
+                _ => 0,
+            };
+            return classId != 0 && IsSongUpkeepClass((eCharacterClass)classId);
+        }
+
+        /// <summary>
+        /// Whether /grind sits this member down between pulls (True 1.65 0.5). A chanter's or singer's own chant costs power
+        /// every pulse, so "below full" sat a Paladin down, he refilled in a second, stood up, and his chant drained him below
+        /// full again, without end. Chanters and singers sit only below the pull floor (75% power or endurance) or when hurt;
+        /// seated, they still rest to full. Everyone else sits whenever they are below full, as before.
+        /// </summary>
+        public static bool NeedsModeRest(GameLiving member) => KeepsSongsUp(member)
+            ? !ReadyWithSongUpkeep(member.Health, member.MaxHealth, member.Mana, member.MaxMana, member.Endurance, member.MaxEndurance)
+            : NeedsRecovery(member);
 
         public static GameBot SelectPuller(IEnumerable<GameBot> companions) => companions
             .Where(bot => bot.IsAlive && !bot.IsCrowdControlled && bot.CharacterClass != null &&
@@ -221,7 +251,7 @@ namespace DOL.GS.Commands
                 foreach (GameLiving member in members)
                 {
                     if (AtCamp(session, member) && !member.IsCasting && !member.IsMoving &&
-                        !member.IsCrowdControlled && NeedsRecovery(member) &&
+                        !member.IsCrowdControlled && NeedsModeRest(member) &&
                         (member is not GameBot helper || !helper.IsTemporaryCompanionRestLocked) &&
                         (member is not GameBot restingBot || !BotRestRecovery.BlocksRest(restingBot)) &&
                         (member is GameBot || !member.IsSitting))
@@ -241,7 +271,7 @@ namespace DOL.GS.Commands
                 if (session.ReadySince == 0) session.ReadySince = now;
                 if (now - session.ReadySince < 2000 || now < session.NextSearch) return;
                 session.NextSearch = now + 5000;
-                GameNPC target = FindNearbyPull(player, puller, PullRadius, session.FailedTargets, now,
+                GameNPC target = FindNearbyPull(player, puller, SearchRadius(AutonomousDefensivePull.RangedPullReach(puller)), session.FailedTargets, now,
                     npc => IsSuitableLevel(player.Level, npc.Level, player.GetConLevel(npc), members.Length - 1));
                 if (target == null)
                 { session.Detail = "Ready — no suitable reachable nearby monsters"; return; }

@@ -1,0 +1,23 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-08T17:20:36.905202+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "ServerProperty",
+   "key": "bot_watch_admin",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "Category": "bots",
+    "Key": "bot_watch_admin",
+    "Description": "Add read-only developer endpoints (/api/admin/...) to Bot Watch: live bot detail, stalled bots, players. Needs bot_watch. This PC only.",
+    "DefaultValue": "False",
+    "Value": "True",
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "ServerProperty_ID": "d06c1a11-a182-4036-90f5-a8af5b649939"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

@@ -1,0 +1,41 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-10T00:07:32.289350+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Mob",
+   "key": "dr3-341-0030",
+   "op": "update",
+   "before": {
+    "Name": "Glaimaim"
+   },
+   "after": {
+    "Name": "Glamaim"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "dr3-341-glaimaim",
+   "op": "update",
+   "before": {
+    "Name": "Glaimaim"
+   },
+   "after": {
+    "Name": "Glamaim"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "8fc1a47f-2eb6-5815-a83f-016986cdebfb",
+   "op": "update",
+   "before": {
+    "MobName": "Glaimaim"
+   },
+   "after": {
+    "MobName": "Glamaim"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

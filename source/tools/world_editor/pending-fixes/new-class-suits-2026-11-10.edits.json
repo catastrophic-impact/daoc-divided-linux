@@ -1,0 +1,991 @@
+[
+ {
+  "table": "ItemTemplate",
+  "copy": "Crown_of_Forebearance",
+  "key": "dr_apostate_crown",
+  "set": {
+   "Name": "Apostate Crown",
+   "AllowedClasses": "33",
+   "Bonus2Type": 33
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "79aceb14-14cf-58ca-b710-9a9ac123f00a",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_crown",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Robe_of_Forebearance",
+  "key": "dr_apostate_robe",
+  "set": {
+   "Name": "Apostate Robe",
+   "AllowedClasses": "33",
+   "Bonus2Type": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "d219a3ee-89be-577e-b02b-cbf74b28b2a0",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_robe",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Sleeves_of_Forebearance",
+  "key": "dr_apostate_sleeves",
+  "set": {
+   "Name": "Apostate Sleeves",
+   "AllowedClasses": "33",
+   "Bonus1Type": 42,
+   "Bonus2Type": 30
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "ec758009-2689-5230-8dae-ec558b7b0ef1",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_sleeves",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Gloves_of_Forebearance",
+  "key": "dr_apostate_gloves",
+  "set": {
+   "Name": "Apostate Gloves",
+   "AllowedClasses": "33"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "3fe71e0d-ea90-5bdc-9973-c531c58b515e",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_gloves",
+   "PageNumber": 0,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Pants_of_Forebearance",
+  "key": "dr_apostate_pants",
+  "set": {
+   "Name": "Apostate Pants",
+   "AllowedClasses": "33",
+   "Bonus1Type": 42,
+   "Bonus2Type": 30
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "1706a79c-e40f-5856-89d5-b28014342d7f",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_pants",
+   "PageNumber": 0,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "1_Boots_of_Forebearance",
+  "key": "dr_apostate_boots",
+  "set": {
+   "Name": "Apostate Boots",
+   "AllowedClasses": "33",
+   "Bonus3Type": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "d05be4b0-70cc-5f0d-bd53-51f82f82d0ea",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_apostate_boots",
+   "PageNumber": 0,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassin`s Crown",
+  "key": "dr_ironfist_helm",
+  "set": {
+   "Name": "Ironfist Helm",
+   "AllowedClasses": "60",
+   "Bonus1Type": 112,
+   "Bonus2Type": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "95a81317-ab35-5fb5-9a62-2b9414cbeec1",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_helm",
+   "PageNumber": 1,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassin`s Vest",
+  "key": "dr_ironfist_vest",
+  "set": {
+   "Name": "Ironfist Vest",
+   "AllowedClasses": "60",
+   "Bonus1Type": 4,
+   "Bonus4Type": 113
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "7ae699b5-398a-50f2-8da7-cf9cfebbbb6f",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_vest",
+   "PageNumber": 1,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassins Sleeves",
+  "key": "dr_ironfist_sleeves",
+  "set": {
+   "Name": "Ironfist Sleeves",
+   "AllowedClasses": "60",
+   "Bonus1Type": 111
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "9842fdf5-c417-53cc-bcf7-d25f2b95328e",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassin`s Gloves",
+  "key": "dr_ironfist_gloves",
+  "set": {
+   "Name": "Ironfist Gloves",
+   "AllowedClasses": "60",
+   "Bonus1Type": 110
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "adab0be8-1aae-54c0-b015-80bdf51d5a69",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassin`s Leggings",
+  "key": "dr_ironfist_leggings",
+  "set": {
+   "Name": "Ironfist Leggings",
+   "AllowedClasses": "60",
+   "Bonus1Type": 109
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "378704ad-a107-5743-9828-24911649597b",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Royal Assassin`s Boots",
+  "key": "dr_ironfist_boots",
+  "set": {
+   "Name": "Ironfist Boots",
+   "AllowedClasses": "60",
+   "Bonus1Type": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "573eed28-c367-519a-b0bf-99278302316c",
+   "ItemListID": "OrbsAlbionArmor",
+   "ItemTemplateID": "dr_ironfist_boots",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Foe_Hammers_Crown",
+  "key": "dr_shieldmaiden_helm",
+  "set": {
+   "Name": "Shieldmaiden Helm",
+   "AllowedClasses": "34"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "336f4e12-20c5-5004-9507-6485fe39d357",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_helm",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Foe_Hammers_Vest",
+  "key": "dr_shieldmaiden_hauberk",
+  "set": {
+   "Name": "Shieldmaiden Hauberk",
+   "AllowedClasses": "34",
+   "Bonus3Type": 105
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "11a3b788-55b4-5da0-b8fd-b7a8ff491a2f",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_hauberk",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Foe_Hammers_Sleeves",
+  "key": "dr_shieldmaiden_sleeves",
+  "set": {
+   "Name": "Shieldmaiden Sleeves",
+   "AllowedClasses": "34"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "f35e6763-5f07-5d58-a973-4358c17ab459",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_sleeves",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Foe Hammer's Gloves",
+  "key": "dr_shieldmaiden_gloves",
+  "set": {
+   "Name": "Shieldmaiden Gloves",
+   "AllowedClasses": "34",
+   "Bonus4Type": 52
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "1ea53355-0d30-57e3-aa4a-853df8a02363",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_gloves",
+   "PageNumber": 0,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Foe_Hammers_Leggings",
+  "key": "dr_shieldmaiden_leggings",
+  "set": {
+   "Name": "Shieldmaiden Leggings",
+   "AllowedClasses": "34"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "47bd914e-00dd-5a8f-8ee3-18ff70d65e59",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_leggings",
+   "PageNumber": 0,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Foe Hammer's Boots",
+  "key": "dr_shieldmaiden_boots",
+  "set": {
+   "Name": "Shieldmaiden Boots",
+   "AllowedClasses": "34"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "94bc215f-9850-5906-a5f6-ab3cea62ffa8",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_shieldmaiden_boots",
+   "PageNumber": 0,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed Tuscarian Crown",
+  "key": "dr_hexwoven_crown",
+  "set": {
+   "Name": "Hexwoven Crown",
+   "AllowedClasses": "59"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "39bb7461-5c99-5993-bf06-2ea1a218815b",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_crown",
+   "PageNumber": 1,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed_Tuscarian_Vest",
+  "key": "dr_hexwoven_robe",
+  "set": {
+   "Name": "Hexwoven Robe",
+   "AllowedClasses": "59",
+   "Bonus3Type": 106
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "2db05ab0-d947-54f5-a795-34f4c1acc809",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_robe",
+   "PageNumber": 1,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed Tuscarian Sleeves",
+  "key": "dr_hexwoven_sleeves",
+  "set": {
+   "Name": "Hexwoven Sleeves",
+   "AllowedClasses": "59"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "4b857b48-824a-57a8-aee9-f27daa23f33a",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed Tuscarian Gloves",
+  "key": "dr_hexwoven_gloves",
+  "set": {
+   "Name": "Hexwoven Gloves",
+   "AllowedClasses": "59"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "147b639e-9fd3-540c-844a-678d9da49d44",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed_Tuscarian_Pants",
+  "key": "dr_hexwoven_pants",
+  "set": {
+   "Name": "Hexwoven Pants",
+   "AllowedClasses": "59"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "5842238d-1575-5f63-8090-c2095d71ab7a",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_pants",
+   "PageNumber": 1,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Runed_Tuscarian_Boots",
+  "key": "dr_hexwoven_boots",
+  "set": {
+   "Name": "Hexwoven Boots",
+   "AllowedClasses": "59"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "19c4978d-8aec-533e-8f40-205d0153374b",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_hexwoven_boots",
+   "PageNumber": 1,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Ice_Shadow_Crown",
+  "key": "dr_stormknuckle_helm",
+  "set": {
+   "Name": "Stormknuckle Helm",
+   "AllowedClasses": "61",
+   "Bonus3Type": 112
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "3dbb773c-493b-5359-9cae-f29ea0cdf805",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_helm",
+   "PageNumber": 1,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Ice_Shadow_Jerkin",
+  "key": "dr_stormknuckle_vest",
+  "set": {
+   "Name": "Stormknuckle Vest",
+   "AllowedClasses": "61",
+   "Bonus3Type": 109
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "19df9442-3043-58b3-8315-dbe05e6095fb",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_vest",
+   "PageNumber": 1,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Ice-Shadow Sleeves",
+  "key": "dr_stormknuckle_sleeves",
+  "set": {
+   "Name": "Stormknuckle Sleeves",
+   "AllowedClasses": "61",
+   "Bonus4Type": 111
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "a48a29bf-6614-5028-b38b-0855ea1c93e8",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Ice_Shadow_Gloves",
+  "key": "dr_stormknuckle_gloves",
+  "set": {
+   "Name": "Stormknuckle Gloves",
+   "AllowedClasses": "61",
+   "Bonus3Type": 110
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "954ef902-bab9-52fc-adf3-9f216afcc059",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Ice-Shadow Leggings",
+  "key": "dr_stormknuckle_leggings",
+  "set": {
+   "Name": "Stormknuckle Leggings",
+   "AllowedClasses": "61",
+   "Bonus4Type": 113
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "6e155dda-844d-591a-be67-ead8989abf8c",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_leggings",
+   "PageNumber": 1,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "2_Ice_Shadow_Boots",
+  "key": "dr_stormknuckle_boots",
+  "set": {
+   "Name": "Stormknuckle Boots",
+   "AllowedClasses": "61",
+   "Bonus3Type": 110
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "5424d3d7-b969-5d56-bdaa-02a36403771d",
+   "ItemListID": "OrbsMidgardArmor",
+   "ItemTemplateID": "dr_stormknuckle_boots",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule Covered Crown",
+  "key": "dr_keening_crown",
+  "set": {
+   "Name": "Keening Crown",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "d950378f-178a-5175-a3f3-31467c5c5547",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_crown",
+   "PageNumber": 1,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule Covered Robe",
+  "key": "dr_keening_robe",
+  "set": {
+   "Name": "Keening Robe",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "64929d0e-534f-5a70-bd4c-f6cee1af37e0",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_robe",
+   "PageNumber": 1,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule Covered Sleeves",
+  "key": "dr_keening_sleeves",
+  "set": {
+   "Name": "Keening Sleeves",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "262819fd-3bc0-5911-a2cf-6fb23ef61ba4",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_sleeves",
+   "PageNumber": 1,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule Covered Gloves",
+  "key": "dr_keening_gloves",
+  "set": {
+   "Name": "Keening Gloves",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "a11ca6a7-8feb-509a-996a-62a8e78b91dd",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_gloves",
+   "PageNumber": 1,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule Covered Pants",
+  "key": "dr_keening_pants",
+  "set": {
+   "Name": "Keening Pants",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "f9572185-3e67-58f1-aff6-6bb3dd93d62a",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_pants",
+   "PageNumber": 1,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Globule_Covered_Boots",
+  "key": "dr_keening_boots",
+  "set": {
+   "Name": "Keening Boots",
+   "AllowedClasses": "39"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "178beaf3-65e8-5a61-afe8-91f687794d7a",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_keening_boots",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Crown",
+  "key": "dr_bloodbound_helm",
+  "set": {
+   "Name": "Bloodbound Helm",
+   "AllowedClasses": "58",
+   "Bonus4Type": 99
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "6134a349-55c4-51c4-a6e6-9f0f630a3134",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_helm",
+   "PageNumber": 2,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Vest",
+  "key": "dr_bloodbound_vest",
+  "set": {
+   "Name": "Bloodbound Vest",
+   "AllowedClasses": "58",
+   "Bonus3Type": 99,
+   "Bonus4Type": 100
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "5c11cfc6-3c04-599e-b090-4a694cd33109",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_vest",
+   "PageNumber": 2,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Sleeves",
+  "key": "dr_bloodbound_sleeves",
+  "set": {
+   "Name": "Bloodbound Sleeves",
+   "AllowedClasses": "58",
+   "Bonus4Type": 101
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "8529bb99-c738-53bf-b48e-47d1bf82aa27",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_sleeves",
+   "PageNumber": 2,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Gauntlets",
+  "key": "dr_bloodbound_gloves",
+  "set": {
+   "Name": "Bloodbound Gloves",
+   "AllowedClasses": "58"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "6817e209-7516-54d0-8963-d5e9bf310a3c",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_gloves",
+   "PageNumber": 2,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Leggings",
+  "key": "dr_bloodbound_leggings",
+  "set": {
+   "Name": "Bloodbound Leggings",
+   "AllowedClasses": "58",
+   "Bonus4Type": 100
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "ef6eec19-bf9b-5bc4-b761-da00543a3308",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_leggings",
+   "PageNumber": 2,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Boots",
+  "key": "dr_bloodbound_boots",
+  "set": {
+   "Name": "Bloodbound Boots",
+   "AllowedClasses": "58"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "b94b15e1-a9a1-50ba-a53d-6409b613902c",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_bloodbound_boots",
+   "PageNumber": 2,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Crown",
+  "key": "dr_thornfist_helm",
+  "set": {
+   "Name": "Thornfist Helm",
+   "AllowedClasses": "62",
+   "Bonus4Type": 112
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "94917a6b-6098-58d8-88cb-3c14b96c476a",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_helm",
+   "PageNumber": 3,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Vest",
+  "key": "dr_thornfist_vest",
+  "set": {
+   "Name": "Thornfist Vest",
+   "AllowedClasses": "62",
+   "Bonus3Type": 111,
+   "Bonus4Type": 113
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "3b1b3b4a-30d4-5563-b5cc-43a69a7641ed",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_vest",
+   "PageNumber": 3,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Sleeves",
+  "key": "dr_thornfist_sleeves",
+  "set": {
+   "Name": "Thornfist Sleeves",
+   "AllowedClasses": "62",
+   "Bonus4Type": 109
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "83397797-76a6-54a1-9d73-c41fdf4c93aa",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_sleeves",
+   "PageNumber": 3,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Gauntlets",
+  "key": "dr_thornfist_gloves",
+  "set": {
+   "Name": "Thornfist Gloves",
+   "AllowedClasses": "62"
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "66a5c296-7944-59f5-be49-ad879e4281e7",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_gloves",
+   "PageNumber": 3,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Leggings",
+  "key": "dr_thornfist_leggings",
+  "set": {
+   "Name": "Thornfist Leggings",
+   "AllowedClasses": "62",
+   "Bonus4Type": 111
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "fda7cc1b-41dc-5e66-9952-ef2b30440b61",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_leggings",
+   "PageNumber": 3,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "Cured Blackthorn Boots",
+  "key": "dr_thornfist_boots",
+  "set": {
+   "Name": "Thornfist Boots",
+   "AllowedClasses": "62",
+   "Bonus4Type": 110
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "MerchantItem_ID": "5a482b3c-4c10-5bdd-834c-046a5fa865be",
+   "ItemListID": "OrbsHiberniaArmor",
+   "ItemTemplateID": "dr_thornfist_boots",
+   "PageNumber": 3,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Boots",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Crown",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Gloves",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Pants",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Robe",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Shadowed Fatebinder`s Sleeves",
+  "set": {
+   "AllowedClasses": "12;66"
+  }
+ }
+]

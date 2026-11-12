@@ -62,6 +62,8 @@ namespace DOL.GS.Trials
                 Intro = intro,
                 Victory = victory,
                 RequiresSteps = Enumerable.Range(1, step - 1).ToArray(),
+                // Refused before "<name> begins." and the stone's flare, which used to print first.
+                Refuse = UnreadyReason,
                 TimeLimitSeconds = TimeLimit,
                 LeashRange = 14000,
                 OnEnd = (run, won) =>
@@ -84,10 +86,15 @@ namespace DOL.GS.Trials
             return definition;
         }
 
+        public const string UnreadyText = "The stone stays dark. It answers only to those who have reached Master Level 9.";
+
+        public static string UnreadyReason(GamePlayer leader) => leader.MLLevel < RequiredMasterLevel ? UnreadyText : null;
+
+        /// <summary>Backstop for runs that skip TrialManager.TryStart (the GM sweep).</summary>
         private static void RefuseTheUnready(TrialRun run)
         {
-            if (run.Leader.MLLevel < RequiredMasterLevel)
-                run.End(false, "The stone stays dark. It answers only to those who have reached Master Level 9.");
+            if (UnreadyReason(run.Leader) is string reason)
+                run.End(false, reason);
         }
 
         private static void MoveParty(TrialRun run, TrialPoint point)

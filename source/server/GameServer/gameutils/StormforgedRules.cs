@@ -93,8 +93,7 @@ namespace DOL.GS
             (ReferenceEquals(clientLine, ClientLine) || PendragonSpellbook.For(clientLine) != null || SpellLineMerge.IsMerged(clientLine)) ? lines.FirstOrDefault(line => line.Item2.Contains(skill)).Item1 : clientLine;
 
         public static bool IsRogSkill(eProperty property) => property is
-            eProperty.Skill_Sword or eProperty.Skill_Hammer or eProperty.Skill_Axe or eProperty.Skill_Spear or
-            eProperty.Skill_Shields or eProperty.Skill_Parry or eProperty.Skill_Stealth or
+            eProperty.Skill_Hammer or eProperty.Skill_Axe or eProperty.Skill_Shields or eProperty.Skill_Parry or eProperty.Skill_Stealth or
             eProperty.AllMeleeWeaponSkills or eProperty.AllSkills;
 
         public static double BuffProgress(double percentage) => Math.Clamp(percentage / 100.0, 0, 1);

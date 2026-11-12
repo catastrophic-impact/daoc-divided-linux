@@ -73,8 +73,9 @@ namespace DOL.GS
         }
 
         /// <summary>
-        /// Everyone who fought, with their group and battlegroup, if they are near the boss when it
-        /// dies. Dead members count. Bots earn nothing but do bring in the group they fought with.
+        /// Everyone who fought, with their group and battlegroup, if they are alive and near the boss
+        /// when it dies (live gave the dead nothing). Bots earn nothing but do bring in the group they
+        /// fought with.
         /// </summary>
         public static HashSet<GamePlayer> EligiblePlayers(GameNPC boss, GameObject killer)
         {
@@ -115,9 +116,12 @@ namespace DOL.GS
 
             Add(killer);
 
-            players.RemoveWhere(player => player.ObjectState != GameObject.eObjectState.Active || player.CurrentRegionID != boss.CurrentRegionID || !player.IsWithinRadius(boss, CreditRadius));
+            players.RemoveWhere(player => !CanEarnReward(player) || player.CurrentRegionID != boss.CurrentRegionID || !player.IsWithinRadius(boss, CreditRadius));
             return players;
         }
+
+        /// <summary>Only a living player in the world earns encounter credit or glass.</summary>
+        public static bool CanEarnReward(GamePlayer player) => player != null && player.ObjectState == GameObject.eObjectState.Active && player.IsAlive;
 
         /// <summary>A boss out in the world. Some encounters need several of them dead close together.</summary>
         public static void WorldBossDied(GameNPC boss, GameObject killer, string artifactId)
@@ -166,6 +170,11 @@ namespace DOL.GS
 
             foreach (GamePlayer player in players)
             {
+                // Multi-kill and staged encounters gather players over several kills: someone who
+                // died after an earlier kill is still on the list.
+                if (!CanEarnReward(player))
+                    continue;
+
                 if (ArtifactProgress.Get(player, artifactId)?.EncounterDone == true)
                 {
                     GiveGlass(player, RepeatGlassReward);
@@ -210,6 +219,18 @@ namespace DOL.GS
 
         /// <summary>The boss of the fight or of a stage, as opposed to one of a crowd of adds.</summary>
         public bool CastsSpells { get; set; } = true;
+
+        /// <summary>
+        /// Whether killing this mob pays XP and loot. Only the last stage does: every earlier form or split paid a full
+        /// kill (each Peridas form, each Gem stage), on top of the encounter's own reward.
+        /// </summary>
+        public bool Rewards { get; set; } = true;
+
+        public override long ExperienceValue => Rewards ? base.ExperienceValue : 0;
+
+        public override long GetExperienceValueForLevel(int level) => Rewards ? base.GetExperienceValueForLevel(level) : 0;
+
+        public override bool CanDropLoot => Rewards && base.CanDropLoot;
 
         private const int AddHealthDivisor = 5;
 
@@ -470,7 +491,11 @@ namespace DOL.GS
             foreach (ArtifactSpawnDef spawn in stage.Spawns)
             {
                 for (int i = 0; i < spawn.Count; i++)
-                    spawned.Add(SpawnMob(spawn, lastStage && spawn.IsBoss));
+                {
+                    ArtifactBoss mob = SpawnMob(spawn, lastStage && spawn.IsBoss);
+                    mob.Rewards = lastStage;
+                    spawned.Add(mob);
+                }
             }
 
             if (stage.Gate)
@@ -579,6 +604,8 @@ namespace DOL.GS
             _credited.Clear();
         }
 
+        public static bool IsCaster(ArtifactSpawnDef spawn) => spawn.IsBoss;
+
         private ArtifactBoss SpawnMob(ArtifactSpawnDef spawn, bool givesCredit)
         {
             double angle = Util.RandomDouble() * Math.PI * 2;
@@ -590,7 +617,9 @@ namespace DOL.GS
                 ArtifactId = _encounter.ArtifactId,
                 GivesCredit = givesCredit,
                 IsStageBoss = spawn.IsBoss,
-                CastsSpells = spawn.IsBoss || spawn.Count == 1,
+                // Only bosses cast and take the encounter's health factor. "|| Count == 1" made every lone form of a
+                // solo encounter a 3x caster (Orion's Belt form 1 killed a plate Armsman; Night Terror stunned at stage 1).
+                CastsSpells = IsCaster(spawn),
                 Name = spawn.Name,
                 Model = (ushort) spawn.Model,
                 Size = (byte) spawn.Size,

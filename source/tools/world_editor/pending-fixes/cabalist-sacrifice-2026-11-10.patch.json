@@ -1,0 +1,457 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-10T23:20:01.915735+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Spell",
+   "key": "cabalist-sacrifice-77818",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77818,
+    "ClientEffect": 1560,
+    "Icon": 1560,
+    "Name": "Simulacrum Soul",
+    "Description": "Sacrifices your simulacrum in exchange for greater power. Reduces all melee damage taken by 10%. You cannot summon a new simulacrum while this lasts.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": -25,
+    "CastTime": 5.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SimulacrumSacrifice",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You absorb your simulacrum's power.",
+    "Message2": "{0} absorbs a simulacrum's power.",
+    "Message3": "Your simulacrum's power fades.",
+    "Message4": "The simulacrum's power fades from {0}.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 77516,
+    "EffectGroup": 77516,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "local-round3-live-v1",
+    "TooltipId": 65311,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Spell_ID": "cabalist-sacrifice-77818"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "cabalist-sacrifice-77818",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Vivification (Live)",
+    "SpellID": 77818,
+    "Level": 3,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "cabalist-sacrifice-77818"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1476,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77818,
+    "KeyName": "MeleeReduction",
+    "Value": "10",
+    "CustomParamID": 1476,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "cabalist-sacrifice-77819",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77819,
+    "ClientEffect": 1560,
+    "Icon": 1560,
+    "Name": "Simulacrum Fortitude",
+    "Description": "Sacrifices your simulacrum in exchange for greater power. Reduces all melee damage taken by 10%. Increases maximum health and armor factor by 10%. You cannot summon a new simulacrum while this lasts.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": -25,
+    "CastTime": 5.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SimulacrumSacrifice",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You absorb your simulacrum's power.",
+    "Message2": "{0} absorbs a simulacrum's power.",
+    "Message3": "Your simulacrum's power fades.",
+    "Message4": "The simulacrum's power fades from {0}.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 77516,
+    "EffectGroup": 77516,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "local-round3-live-v1",
+    "TooltipId": 65312,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Spell_ID": "cabalist-sacrifice-77819"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "cabalist-sacrifice-77819",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Vivification (Live)",
+    "SpellID": 77819,
+    "Level": 13,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "cabalist-sacrifice-77819"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1477,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77819,
+    "KeyName": "MeleeReduction",
+    "Value": "10",
+    "CustomParamID": 1477,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1478,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77819,
+    "KeyName": "HealthArmor",
+    "Value": "10",
+    "CustomParamID": 1478,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "cabalist-sacrifice-77820",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77820,
+    "ClientEffect": 1560,
+    "Icon": 1560,
+    "Name": "Simulacrum Resilience",
+    "Description": "Sacrifices your simulacrum in exchange for greater power. Reduces all melee damage taken by 10%. Increases maximum health and armor factor by 10%. Reduces the duration of all root and snare effects by 25%. You cannot summon a new simulacrum while this lasts.",
+    "Target": "Self",
+    "Range": 0,
+    "Power": -25,
+    "CastTime": 5.0,
+    "Damage": 0.0,
+    "DamageType": 0,
+    "Type": "SimulacrumSacrifice",
+    "Duration": 600,
+    "Frequency": 0,
+    "Pulse": 0,
+    "PulsePower": 0,
+    "Radius": 0,
+    "RecastDelay": 0,
+    "ResurrectHealth": 0,
+    "ResurrectMana": 0,
+    "Value": 0,
+    "Concentration": 0,
+    "LifeDrainReturn": 0,
+    "AmnesiaChance": 0,
+    "Message1": "You absorb your simulacrum's power.",
+    "Message2": "{0} absorbs a simulacrum's power.",
+    "Message3": "Your simulacrum's power fades.",
+    "Message4": "The simulacrum's power fades from {0}.",
+    "InstrumentRequirement": 0,
+    "SpellGroup": 77516,
+    "EffectGroup": 77516,
+    "SubSpellID": 0,
+    "MoveCast": 0,
+    "Uninterruptible": 0,
+    "IsFocus": 0,
+    "SharedTimerGroup": 0,
+    "IsPrimary": 0,
+    "IsSecondary": 0,
+    "AllowBolt": 0,
+    "PackageID": "local-round3-live-v1",
+    "TooltipId": 65313,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "Spell_ID": "cabalist-sacrifice-77820"
+   }
+  },
+  {
+   "table": "LineXSpell",
+   "key": "cabalist-sacrifice-77820",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "LineName": "Vivification (Live)",
+    "SpellID": 77820,
+    "Level": 23,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "LineXSpell_ID": "cabalist-sacrifice-77820"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1479,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77820,
+    "KeyName": "MeleeReduction",
+    "Value": "10",
+    "CustomParamID": 1479,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1480,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77820,
+    "KeyName": "HealthArmor",
+    "Value": "10",
+    "CustomParamID": 1480,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1481,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77820,
+    "KeyName": "SnareReduction",
+    "Value": "25",
+    "CustomParamID": 1481,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-round3-live-v1-77550",
+   "op": "update",
+   "before": {
+    "Description": "Simulacrum Superiority (live 1.130a Vivification (Live)).",
+    "Target": "Pet",
+    "Range": 1500,
+    "Type": "DefensiveProc",
+    "Duration": 1200,
+    "Frequency": 100,
+    "Value": 77551.0,
+    "Message1": "You are affected by Simulacrum Superiority.",
+    "Message2": "{0} is affected by Simulacrum Superiority.",
+    "Message3": "Simulacrum Superiority ends.",
+    "Message4": "Simulacrum Superiority ends on {0}."
+   },
+   "after": {
+    "Description": "Sacrifices your simulacrum in exchange for greater power. Reduces all melee damage taken by 10%. Increases maximum health and armor factor by 10%. Reduces the duration of all root and snare effects by 25%. Melee attackers are slowed by 10% for 5 seconds when they strike you. You cannot summon a new simulacrum while this lasts.",
+    "Target": "Self",
+    "Range": 0,
+    "Type": "SimulacrumSacrifice",
+    "Duration": 600,
+    "Frequency": 0,
+    "Value": 0,
+    "Message1": "You absorb your simulacrum's power.",
+    "Message2": "{0} absorbs a simulacrum's power.",
+    "Message3": "Your simulacrum's power fades.",
+    "Message4": "The simulacrum's power fades from {0}."
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1482,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77550,
+    "KeyName": "MeleeReduction",
+    "Value": "10",
+    "CustomParamID": 1482,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1483,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77550,
+    "KeyName": "HealthArmor",
+    "Value": "10",
+    "CustomParamID": 1483,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1484,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77550,
+    "KeyName": "SnareReduction",
+    "Value": "25",
+    "CustomParamID": 1484,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1485,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77550,
+    "KeyName": "ProcSpell",
+    "Value": "77551",
+    "CustomParamID": 1485,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "Spell",
+   "key": "local-round3-live-v1-77552",
+   "op": "update",
+   "before": {
+    "Description": "Simulacrum Brilliance (live 1.130a Vivification (Live)).",
+    "Target": "Pet",
+    "Range": 1500,
+    "Type": "DefensiveProc",
+    "Duration": 1200,
+    "Frequency": 100,
+    "Value": 77553.0,
+    "Message1": "You are affected by Simulacrum Brilliance.",
+    "Message2": "{0} is affected by Simulacrum Brilliance.",
+    "Message3": "Simulacrum Brilliance ends.",
+    "Message4": "Simulacrum Brilliance ends on {0}."
+   },
+   "after": {
+    "Description": "Sacrifices your simulacrum in exchange for greater power. Reduces all melee damage taken by 10%. Increases maximum health and armor factor by 10%. Reduces the duration of all root and snare effects by 25%. Melee attackers are slowed by 10% for 5 seconds when they strike you. Increases all magic damage by 15%. You cannot summon a new simulacrum while this lasts.",
+    "Target": "Self",
+    "Range": 0,
+    "Type": "SimulacrumSacrifice",
+    "Duration": 600,
+    "Frequency": 0,
+    "Value": 0,
+    "Message1": "You absorb your simulacrum's power.",
+    "Message2": "{0} absorbs a simulacrum's power.",
+    "Message3": "Your simulacrum's power fades.",
+    "Message4": "The simulacrum's power fades from {0}."
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1486,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77552,
+    "KeyName": "MeleeReduction",
+    "Value": "10",
+    "CustomParamID": 1486,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1487,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77552,
+    "KeyName": "HealthArmor",
+    "Value": "10",
+    "CustomParamID": 1487,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1488,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77552,
+    "KeyName": "SnareReduction",
+    "Value": "25",
+    "CustomParamID": 1488,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1489,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77552,
+    "KeyName": "ProcSpell",
+    "Value": "77551",
+    "CustomParamID": 1489,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  },
+  {
+   "table": "SpellXCustomValues",
+   "key": 1490,
+   "op": "insert",
+   "before": {},
+   "after": {
+    "SpellID": 77552,
+    "KeyName": "MagicDamage",
+    "Value": "15",
+    "CustomParamID": 1490,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

@@ -1,0 +1,448 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-08T19:44:41.425135+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Mob",
+   "key": "012213ba-444e-466d-9c3e-abe2d8df15eb",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "2c0046f7-6c0b-44b0-9bb1-317bd5e8a84f",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "40df815f-ee3d-4c4c-b5d9-7d245fbc6343",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "4f173101-d0d1-4b04-8539-646abf125de4",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "5cdcebb3-a37d-449e-ac08-d85538e21255",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.AlbionRogueTrainer"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "cb3ae186-65c4-47f3-8aab-d6b7e16591c9",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "d0da2264-fa64-4dcc-8e2f-82f1b918efa7",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "dee8157e-aa6b-47d6-9dfa-ae5aca2b9231",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "ed0095b8-08b8-44b0-bef9-c02e821d1dc7",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "f79320fe-7f0f-4597-819c-0696d37f6b02",
+   "op": "update",
+   "before": {
+    "ClassType": "0"
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameNPC"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "f9e139fb-d55b-413b-9276-3389a455c53d",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "4aa68a99-33a0-4c06-9382-f49cb1f91e06",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.AI.Brain.ParthananFarmController"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "55ebf81b-1619-4240-94dc-8908c8378e83",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.GS.MainTeleporterBrain"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "6ef32701-7268-4418-9a42-3748f0025785",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.AI.Brain.ParthananFarmController"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "86a29600-09eb-402d-b153-5bbea3d91929",
+   "op": "update",
+   "before": {
+    "Brain": "GiantSporiteClusterBrain"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "88390d52-f55f-4a0c-af8f-adb9b193b877",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.GS.MainTeleporterBrain"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "f0369612-4598-41ec-8564-04e7afbdef04",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.AI.Brain.AggressiveBrain"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "f16ac830-f873-44fb-bb60-4441d4bf6bdc",
+   "op": "update",
+   "before": {
+    "Brain": "DOL.AI.Brain.ParthananFarmController"
+   },
+   "after": {
+    "Brain": ""
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98387410",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98387602",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98388048",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98388484",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98389195",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.MaulerTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.HiberniaMaulerTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98391269",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98392074",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98392519",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.MidgardRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98392722",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98392800",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98392954",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98393634",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.AlbionRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98393651",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Trainer.RogueTrainer"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Trainer.AlbionRogueTrainer"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98393853",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98393910",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98394979",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98395332",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98396189",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98396689",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98396691",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "98398021",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.Scripts.Recharger"
+   },
+   "after": {
+    "ClassType": "DOL.GS.Recharger"
+   }
+  },
+  {
+   "table": "NpcTemplate",
+   "key": "fe2b8812-67ca-4d71-812a-715553d947c7",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.AlchemistMaster"
+   },
+   "after": {
+    "ClassType": "DOL.GS.AlchemistsMaster"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

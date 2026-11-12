@@ -115,11 +115,21 @@ namespace DOL.GS
             _ => true,
         };
 
-        private static ClassChoice[] ActiveChoices(eRealm realm)
+        /// <summary>The three custom classes are for players unless bots_use_custom_classes is on (owner, 2026-11-11 for
+        /// DR-dev-0.1g). IsClassAvailable stays as it is: mob loot still targets those classes for players.</summary>
+        public static bool IsCustomClass(eCharacterClass characterClass) =>
+            characterClass is eCharacterClass.Stormforged or eCharacterClass.PendragonSovereign or eCharacterClass.TuathaSovereign;
+
+        public static bool IsBotClassAllowed(eCharacterClass characterClass) =>
+            !IsCustomClass(characterClass) || Properties.BOTS_USE_CUSTOM_CLASSES;
+
+        /// <param name="forPlayer">A bot the player picks the class of (/spawn helpers): the custom classes stay open.</param>
+        private static ClassChoice[] ActiveChoices(eRealm realm, bool forPlayer = false)
         {
             if (!Choices.TryGetValue(realm, out ClassChoice[] classic))
                 return null;
-            ClassChoice[] modern = ModernChoices[realm].Where(choice => IsClassAvailable(choice.CharacterClass)).ToArray();
+            ClassChoice[] modern = ModernChoices[realm]
+                .Where(choice => IsClassAvailable(choice.CharacterClass) && (forPlayer || IsBotClassAllowed(choice.CharacterClass))).ToArray();
             // With every switch off (Classic, Stormforged-less worlds) the original array is used, so rolls are unchanged.
             return modern.Length == 0 ? classic : [.. classic, .. modern];
         }
@@ -180,9 +190,10 @@ namespace DOL.GS
             eGender gender,
             eCharacterClass characterClass,
             ISet<string> reservedNames = null,
-            Random random = null)
+            Random random = null,
+            bool forPlayer = false)
         {
-            ClassChoice[] realmChoices = ActiveChoices(realm);
+            ClassChoice[] realmChoices = ActiveChoices(realm, forPlayer);
             if (realmChoices == null)
                 throw new ArgumentOutOfRangeException(nameof(realm));
             ClassChoice choice = realmChoices.FirstOrDefault(entry => entry.CharacterClass == characterClass);
@@ -201,8 +212,11 @@ namespace DOL.GS
                 race);
         }
 
-        public static IReadOnlyCollection<eCharacterClass> GetEraClasses(eRealm realm) =>
-            ActiveChoices(realm) is ClassChoice[] choices
+        // Two overloads, not an optional parameter: callers pass GetEraClasses as a method group (SelectMany).
+        public static IReadOnlyCollection<eCharacterClass> GetEraClasses(eRealm realm) => GetEraClasses(realm, false);
+
+        public static IReadOnlyCollection<eCharacterClass> GetEraClasses(eRealm realm, bool forPlayer) =>
+            ActiveChoices(realm, forPlayer) is ClassChoice[] choices
                 ? choices.Select(choice => choice.CharacterClass).ToArray()
                 : Array.Empty<eCharacterClass>();
 

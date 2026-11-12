@@ -38,6 +38,12 @@ namespace DOL.GS
                 return 0;
 
             line = bot.ResolvePowerSpellLine(spell, line);
+            // ResurrectSpellHandler charges a share of maximum power, not the spell's Power field. Using
+            // Power let bots start raises they could not pay for; the native check then refused them without
+            // a message (overnight run 2026-11-08: most raises of every class "refused without a message").
+            // Without a corpse, price a raise of a same-level corpse; callers with one use ResurrectCost.
+            if (spell.SpellType == eSpellType.Resurrect)
+                return line?.Name == GlobalSpellsLines.Realm_Spells ? 0 : ResurrectCost(bot, null);
             double cost = spell.Power;
             if (cost < 0)
             {
@@ -62,5 +68,12 @@ namespace DOL.GS
 
             return Math.Max(0, (int)cost);
         }
+
+        /// <summary>The power ResurrectSpellHandler.PowerCost charges to raise <paramref name="corpse"/> (same level when null).</summary>
+        public static int ResurrectCost(GameLiving caster, GameLiving corpse) =>
+            ResurrectCost(caster.MaxMana, caster.Level, corpse?.Level ?? caster.Level);
+
+        public static int ResurrectCost(int maxMana, int casterLevel, int corpseLevel) =>
+            (int)(maxMana * Math.Max(.1f, .5f + (corpseLevel - casterLevel) / (float)Math.Max(1, casterLevel)));
     }
 }

@@ -48,6 +48,26 @@ namespace DOL.GS.Trials
                 Populate();
         }
 
+        public const int DefaultClearRadius = 450;
+
+        /// <summary>
+        /// Whether a world NPC near a trial anchor is a hostile monster to remove: realm 0, aggressive, on its own brain,
+        /// not at peace, and not a trial, encounter, merchant or keep NPC. No trial counts world kills.
+        /// </summary>
+        public static bool ShouldClear(GameNPC npc)
+        {
+            if (npc is not { IsAlive: true, Realm: eRealm.None } || (npc.Flags & GameNPC.eFlags.PEACE) != 0 || !IsWorldMonster(npc))
+                return false;
+            return npc.Brain is DOL.AI.Brain.StandardMobBrain { AggroLevel: > 0 } and not DOL.AI.Brain.IControlledBrain;
+        }
+
+        // World monsters are plain GameNPCs or the few monster classes the world rows use (exact types, so trial mobs,
+        // encounter bosses and anchors, merchants, guards and scripted NPCs all stay).
+        public static bool IsWorldMonster(GameNPC npc) => IsWorldMonsterType(npc.GetType());
+
+        public static bool IsWorldMonsterType(Type type) =>
+            type == typeof(GameNPC) || type == typeof(GameEpicNPC) || type == typeof(GameEpicBoss) || type.Name == "NightSpawn";
+
         /// <summary>A bad trial must never stop the server from starting.</summary>
         public static void Populate()
         {
@@ -69,6 +89,14 @@ namespace DOL.GS.Trials
                             {
                                 if (definition.ReplaceRadius <= 0 || Math.Abs(imported.X - definition.Anchor.X) <= definition.ReplaceRadius && Math.Abs(imported.Y - definition.Anchor.Y) <= definition.ReplaceRadius)
                                     imported.Delete();
+                            }
+                        }
+                        if (definition.ClearRadius > 0)
+                        {
+                            foreach (GameNPC nearby in WorldMgr.GetNPCsCloseToSpot(regionId, definition.Anchor.X, definition.Anchor.Y, definition.Anchor.Z, (ushort)definition.ClearRadius))
+                            {
+                                if (ShouldClear(nearby))
+                                    nearby.Delete();
                             }
                         }
                         TrialStarter starter = new(definition)
@@ -139,7 +167,7 @@ namespace DOL.GS.Trials
                 return $"The trials are for those of level {GamePlayer.MAX_LEVEL}.";
             if (MissingSteps(player, starter.Definition) is { Length: > 0 } missing)
                 return $"You must first finish step{(missing.Length > 1 ? "s" : "")} {string.Join(", ", missing)} of Master Level {starter.Definition.ML}.";
-            return null;
+            return starter.Definition.Refuse?.Invoke(player);
         }
 
         public static void Award(TrialRun run)

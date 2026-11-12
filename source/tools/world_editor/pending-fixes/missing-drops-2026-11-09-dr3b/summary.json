@@ -1,0 +1,39 @@
+{
+ "monsters with official drops we spawn (non-ToA)": 2213,
+ "monsters getting new table rows": 0,
+ "items created": 1,
+ "items created by realm": {
+  "3": 1
+ },
+ "existing items newly dropped": 0,
+ "LootTemplate rows": 0,
+ "MobXLootTemplate rows": 0,
+ "tables": 0,
+ "monsters by chance a kill gives one new drop": {},
+ "LootOTD rows": 1,
+ "spells created": 0,
+ "spells not buildable": 0,
+ "items that lost a spell they could not get": 0,
+ "skipped": {
+  "our item belongs to package OfflineMissingDrops": 3266,
+  "already drops there": 31528,
+  "our item belongs to package OfflineToANamedDrops": 5,
+  "our item belongs to package atlas_orbs_item": 481,
+  "our item belongs to package drmed": 72,
+  "no donor of that type": 12,
+  "our item belongs to package OfflineBountycraft": 177
+ },
+ "edits": 2,
+ "part1 edits": 2,
+ "part2 edits": 0,
+ "by table": {
+  "ItemTemplate": 1,
+  "LootOTD": 1
+ },
+ "new item level source": {
+  "level requirement": 1
+ },
+ "new item model source": {
+  "donor": 1
+ }
+}

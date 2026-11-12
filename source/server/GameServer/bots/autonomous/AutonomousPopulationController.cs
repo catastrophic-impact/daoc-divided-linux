@@ -47,6 +47,7 @@ public static class AutonomousPopulationController
     public static void OnServerStarted(DOLEvent e, object sender, EventArgs args)
     {
         Interlocked.Increment(ref _loginGeneration);
+        _rampFinished = false;
         _startedUtc = DateTime.UtcNow;
         AutonomousBotSchedule.NoteServerStarted(_startedUtc);
         OfflineWorldBotRecord[] previouslyOnline = DOLDB<OfflineWorldBotRecord>
@@ -60,7 +61,7 @@ public static class AutonomousPopulationController
         }
         if (previouslyOnline.Length > 0)
         {
-            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+            using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                 GameServer.Database.SaveObject(previouslyOnline.Cast<DataObject>());
         }
         RefreshControlPlane(force: true);
@@ -109,22 +110,23 @@ public static class AutonomousPopulationController
             // Living Server schedules (off by default): only bots scheduled online are logged in, and the
             // count is of those, so bots still finishing a fight before logging out don't block the rest.
             bool scheduled = AutonomousBotSchedule.Active;
+            int missing;
             if (scheduled)
             {
                 OfflineWorldBotRecord[] wanted = roster.Where(record => AutonomousBotSchedule.WantsOnline(record, nowUtc)).ToArray();
-                desired = Math.Min(desired, wanted.Length);
+                // 1.1.3: the startup ramp spreads the schedule's number over its minutes (it ramped the whole roster and
+                // capped that, so at 5 a.m. the few hundred scheduled bots all came in within the first two minutes).
+                desired = AutonomousPopulationRamp.DesiredActiveCount(_cachedEnabled, wanted.Length, _cachedRampMinutes, nowUtc - _startedUtc);
                 online = wanted.Count(record => AutonomousBotRegistry.Contains(record.BotId));
+                // Scheduled-off bots still finishing something (often a group) stay online (AutonomousBotSchedule.LoginsWanted).
+                missing = AutonomousBotSchedule.LoginsWanted(desired, online, AutonomousBotRegistry.Count,
+                    AutonomousBotSchedule.RecentOverstays, PendingSpawns.Count);
             }
-            int missing = desired - online - PendingSpawns.Count;
-            // Scheduled-off bots still finishing something (often a group) stay online. For their first 15 minutes
-            // they count, so logins wait for them (10% slack); after that they no longer hold the schedule back.
-            if (scheduled)
-            {
-                missing = Math.Min(missing, desired + desired / 10 - online - AutonomousBotSchedule.RecentOverstays - PendingSpawns.Count);
-                // Hard ceiling: never more than a quarter above the schedule's number in total.
-                missing = Math.Min(missing, desired + desired / 4 - AutonomousBotRegistry.Count - PendingSpawns.Count);
-            }
+            else
+                missing = desired - online - PendingSpawns.Count;
             _populationSatisfied = missing <= 0;
+            if (!_rampFinished && AutonomousPopulationRamp.Finished(_cachedEnabled, _cachedRampMinutes, nowUtc - _startedUtc, missing <= 0))
+                _rampFinished = true;
             if (missing <= 0)
                 return;
             if (LoadGovernor.HoldLogins) // daoc-divided-linux: the server is overloaded, no more bots for now
@@ -256,7 +258,7 @@ public static class AutonomousPopulationController
             if (record.RegionId == AutonomousDarknessFallsPolicy.RegionId &&
                 AutonomousDarknessFallsNavigation.TryGetRealmEntrance((eRealm)record.Realm, out Vector3 dungeonEntrance))
             {
-                Log.Info($"AUTONOMOUS_DF_LOGIN_AT_ENTRANCE bot={record.Name} id={record.BotId} realm={(eRealm)record.Realm} " +
+                Log.Info($"AUTONOMOUS_DF_LOGIN_AT_ENTRANCE bot={record.Name} id={record.BotId} realm={GlobalConstants.RealmToName((eRealm)record.Realm)} " +
                          $"saved={record.X},{record.Y},{record.Z} entrance={(int)dungeonEntrance.X},{(int)dungeonEntrance.Y},{(int)dungeonEntrance.Z}");
                 bot.CurrentRegionID = AutonomousDarknessFallsPolicy.RegionId;
                 bot.X = (int)dungeonEntrance.X;
@@ -279,6 +281,31 @@ public static class AutonomousPopulationController
                 Log.Info($"AUTONOMOUS_LOGIN_MOVED_FROM_BOSS bot=\"{record.Name}\" region={record.RegionId} at={record.X},{record.Y},{record.Z}");
                 PlaceAtCapitalFallback(bot, record);
                 bot.SynchronizePositionForLoginValidation();
+            }
+            // Night playtest 2026-11-04: a bot logged out dead was saved on its corpse with 1 health (the save keeps at least 1)
+            // and came back there alive: Caeloinlan logged in beside the pooka camp that had killed it and died 11 s later. It
+            // comes back as if it had released: at the nearest bind in that region (else its capital), with a third of its
+            // health, power and endurance.
+            if (LoggedOutDead(record))
+            {
+                Point3D bind = BotReleaseBindPoints.Nearest((ushort)record.RegionId, record.X, record.Y, (eRealm)record.Realm);
+                Zone bindZone = bind is { } point ? WorldMgr.GetRegion((ushort)record.RegionId)?.GetZone(point.X, point.Y) : null;
+                if (bind is { } spot && bindZone != null && AutonomousRealmBoundary.Allows((eRealm)record.Realm, (ushort)record.RegionId, bindZone.ID))
+                {
+                    bot.CurrentRegionID = (ushort)record.RegionId;
+                    bot.X = spot.X;
+                    bot.Y = spot.Y;
+                    bot.Z = spot.Z;
+                }
+                else
+                    PlaceAtCapitalFallback(bot, record);
+                bot.SynchronizePositionForLoginValidation();
+                bot.Health = Math.Max(1, bot.MaxHealth / 3);
+                bot.Mana = Math.Max(0, bot.MaxMana / 3);
+                bot.Endurance = Math.Max(0, bot.MaxEndurance / 3);
+                record.IsAlive = true;
+                Log.Info($"AUTONOMOUS_LOGIN_AFTER_DEATH bot=\"{record.Name}\" id={record.BotId} region={record.RegionId} " +
+                         $"corpse={record.X},{record.Y},{record.Z} at={bot.CurrentRegionID}:{bot.X},{bot.Y},{bot.Z}");
             }
             // A beggar (bot_living_beggars) always logs in in its own capital.
             if (AutonomousBeggars.PlaceAtLogin(bot, record))
@@ -323,6 +350,10 @@ public static class AutonomousPopulationController
     public static bool IsFreshUnplacedLevelOneRecord(OfflineWorldBotRecord record) =>
         record != null && record.Level == 1 && record.Experience == 0 && record.RealmPoints == 0 &&
         record.RegionId == 0 && string.IsNullOrWhiteSpace(record.LastSavedUtc);
+
+    /// <summary>A record last saved while the bot lay dead (never-saved records are not: their IsAlive is just the default).</summary>
+    public static bool LoggedOutDead(OfflineWorldBotRecord record) =>
+        record != null && !record.IsAlive && record.RegionId != 0 && !string.IsNullOrWhiteSpace(record.LastSavedUtc);
 
     /// <summary>How close to a boss (an epic or a scripted named monster with its own tether) a saved spot may be.</summary>
     public const int LoginBossClearance = 2_500;
@@ -433,6 +464,15 @@ public static class AutonomousPopulationController
     }
 
     private static volatile bool _populationSatisfied;
+    private static volatile bool _rampFinished;
+
+    /// <summary>The startup ramp has finished (AutonomousPopulationRamp.Finished) since this server start; true when the
+    /// population controller has not started (tests, tools).</summary>
+    public static bool StartupRampFinished => _rampFinished || _startedUtc == default;
+
+    /// <summary>Minutes until the ramp counts as finished at the latest (0 once it has).</summary>
+    public static int StartupRampMinutesLeft => StartupRampFinished ? 0
+        : AutonomousPopulationRamp.MinutesLeft(_cachedRampMinutes, DateTime.UtcNow - _startedUtc);
 
     /// <summary>The non-retired roster as last read by the control plane (read-only; empty before the first read).</summary>
     internal static OfflineWorldBotRecord[] CachedRoster => _cachedRoster;

@@ -1865,7 +1865,8 @@ namespace DOL.GS
 
             foreach (ECSGameEffect bladeturn in owner.effectListComponent.GetEffects(eEffect.Bladeturn))
             {
-                if (DOL.GS.Spells.ModernMauler.PierceBladeturn(ad.Attacker) || DOL.GS.Spells.MeleeTruthSpellHandler.Strikes(ad)) continue;
+                if (DOL.GS.Spells.ModernMauler.PierceBladeturn(ad.Attacker) || DOL.GS.Spells.MeleeTruthSpellHandler.Strikes(ad) ||
+                    DOL.GS.Spells.LoyaltyCloaks.IgnoresBladeturn(ad)) continue;
                 if (!bladeturn.IsActive)
                     continue;
 
@@ -2253,6 +2254,17 @@ namespace DOL.GS
             return (int) (ad.Damage * criticalMod);
         }
 
+        /// <summary>
+        /// Base melee/ranged miss chance before level, bonus, style and ammo adjustments.
+        /// Live 1.117C and later: every weapon carries the hidden +5% to-hit artifacts used to have, so a player or bot
+        /// attacking with a weapon item starts at 13% (87% to-hit with matching 35% weapon and armor enchantments; official
+        /// Grab Bags 2019-04-26 and 2021-02-05, DR-194). Monsters keep the old 18%: the bonus belongs to weapons players wield.
+        /// </summary>
+        public static double BaseMissChance(GameLiving attacker, DbInventoryItem weapon)
+        {
+            return weapon != null && attacker is GamePlayer or IGamePlayer ? 13 : 18;
+        }
+
         public double GetMissChance(WeaponAction action, AttackData ad, AttackData lastAD, DbInventoryItem weapon)
         {
             // No miss if the target is sitting or for Volley attacks.
@@ -2260,7 +2272,7 @@ namespace DOL.GS
                return 0;
 
             // In 1.117C, every weapon was given the intrinsic 5% flat bonus special weapons (such as artifacts) had, lowering the base miss rate to 13%.
-            double missChance = 18;
+            double missChance = BaseMissChance(ad.Attacker, weapon);
             missChance -= ad.Attacker.GetModified(eProperty.ToHitBonus);
             missChance += owner.GetModified(eProperty.MissHit); // Master Level "harder to hit" bonuses.
 

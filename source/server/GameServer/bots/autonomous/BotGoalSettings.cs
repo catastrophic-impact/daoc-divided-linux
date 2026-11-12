@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -27,6 +28,47 @@ public sealed record BotGoalWeights(int SoloPve, int GroupPve, int RvR, int Batt
     }
 }
 
+/// <summary>
+/// Where autonomous gamebots stop gaining experience (owner request 2026-11-08), so every level range keeps bots.
+/// Each bot draws its stop level from its own id, so it never changes between starts. The five shares are percentages
+/// of the roster and must total 100. A bot already past its stop level keeps its level; it only stops gaining.
+/// </summary>
+public sealed record BotLevelSpread(bool Enabled, int Stop1To9, int Stop10To19, int Stop20To34, int Stop35To49, int Reach50)
+{
+    public static BotLevelSpread Defaults => new(false, 10, 10, 15, 15, 50);
+    public int Total => Stop1To9 + Stop10To19 + Stop20To34 + Stop35To49 + Reach50;
+    public static readonly (int Low, int High)[] Ranges = [(1, 9), (10, 19), (20, 34), (35, 49), (50, 50)];
+
+    /// <summary>The level this bot stops at: 50 when the spread is off or the bot draws the level 50 share.</summary>
+    public int StopLevelFor(long botId)
+    {
+        if (!Enabled || Total != 100) return 50;
+        ulong draw = Mix((ulong)botId);
+        int roll = (int)(draw % 100);
+        int[] shares = [Stop1To9, Stop10To19, Stop20To34, Stop35To49, Reach50];
+        int range = 0, cumulative = shares[0];
+        while (range < shares.Length - 1 && roll >= cumulative) cumulative += shares[++range];
+        (int low, int high) = Ranges[range];
+        return low + (int)(Mix(draw) % (ulong)(high - low + 1));
+    }
+
+    // SplitMix64: a stable spread of consecutive roster ids.
+    private static ulong Mix(ulong value)
+    {
+        value += 0x9E3779B97F4A7C15UL;
+        value = (value ^ (value >> 30)) * 0xBF58476D1CE4E5B9UL;
+        value = (value ^ (value >> 27)) * 0x94D049BB133111EBUL;
+        return value ^ (value >> 31);
+    }
+
+    public void Validate()
+    {
+        int[] shares = [Stop1To9, Stop10To19, Stop20To34, Stop35To49, Reach50];
+        if (shares.Any(share => share < 0 || share > 100) || Total != 100)
+            throw new InvalidDataException("Level spread: percentages must be 0–100 and add up to exactly 100%.");
+    }
+}
+
 public sealed record BotGoalSettings
 {
     public const string FileName = "bot-goals.json";
@@ -34,6 +76,8 @@ public sealed record BotGoalSettings
     public required BotGoalWeights Levels1To19 { get; init; }
     public required BotGoalWeights Levels20To49 { get; init; }
     public required BotGoalWeights Level50 { get; init; }
+    // Added 2026-11-08; settings files saved before it read as off.
+    public BotLevelSpread LevelSpread { get; init; } = BotLevelSpread.Defaults;
     public static BotGoalSettings Defaults => new()
     {
         Levels1To19 = new(60, 40, 0), Levels20To49 = new(40, 40, 20), Level50 = new(20, 40, 40),
@@ -48,6 +92,7 @@ public sealed record BotGoalSettings
         ValidateRow(Level50, "Level 50");
         if (Levels1To19.RvR != 0) throw new InvalidDataException("Levels 1–19 cannot have RvR goals.");
         if (Level50.Battlegrounds != 0) throw new InvalidDataException("Level 50 cannot have battleground goals (the battlegrounds are for levels 15–35).");
+        (LevelSpread ?? throw new InvalidDataException("Level spread is missing.")).Validate();
     }
 
     private static void ValidateRow(BotGoalWeights row, string name)

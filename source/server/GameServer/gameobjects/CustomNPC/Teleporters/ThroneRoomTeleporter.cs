@@ -31,6 +31,29 @@ namespace DOL.GS
 	{
 		private static new readonly Logging.Logger log = Logging.LoggerManager.Create(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+		/// <summary>The throne room region of a realm, or 0.</summary>
+		public static ushort ThroneRegionFor(eRealm realm) => realm switch
+		{
+			eRealm.Albion => 394,
+			eRealm.Midgard => 360,
+			eRealm.Hibernia => 395,
+			_ => 0
+		};
+
+		/// <summary>
+		/// The throne room is open when its region is loaded and not disabled. This replaces a check of
+		/// eClientExpansion.DarknessRising (5) against disabled_expansions, which is read on the Regions.Expansion
+		/// scale (4 = Darkness Rising), so "5;6" wrongly kept the guards saying the King was busy.
+		/// </summary>
+		public static bool IsThroneRoomOpen(eRealm realm)
+		{
+			ushort regionId = ThroneRegionFor(realm);
+			if (regionId == 0)
+				return false;
+			Region region = WorldMgr.GetRegion(regionId);
+			return region != null && !region.IsDisabled;
+		}
+
 		/// <summary>
 		/// Interact with the NPC.
 		/// </summary>
@@ -41,9 +64,9 @@ namespace DOL.GS
 			if (!base.Interact(player) || player == null)
 				return false;
 
-			if (GlobalConstants.IsExpansionEnabled((int)eClientExpansion.DarknessRising))
+			if (IsThroneRoomOpen(Realm))
 			{
-				if (player.CurrentRegion.Expansion == (int)eClientExpansion.DarknessRising)
+				if (player.CurrentRegionID == ThroneRegionFor(Realm))
 				{
 					SayTo(player, "Do you wish to [exit]?");
 				}
@@ -78,7 +101,7 @@ namespace DOL.GS
 
 			GamePlayer player = source as GamePlayer;
 
-			if ((text.ToLower() == "king" || text.ToLower() == "exit") && GlobalConstants.IsExpansionEnabled((int)eClientExpansion.DarknessRising))
+			if ((text.ToLower() == "king" || text.ToLower() == "exit") && IsThroneRoomOpen(Realm))
 			{
 				uint throneRegionID = 0;
 				string teleportThroneID = "error";

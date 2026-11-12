@@ -65,7 +65,7 @@ namespace DOL.GS.Spells
 
                 int newPetLevel = AutonomousPetSupport.BonedancerSubPetLevel(Caster.Level, m_spell);
 
-                if (cumulativeLevel + newPetLevel > 75)
+                if (cumulativeLevel + newPetLevel > AutonomousPetSupport.BonedancerMinionLevelBudget(Caster.Level))
                 {
                     if (playerCaster != null)
                         MessageToCaster("Your commander is not powerful enough to control a minion of this level.", eChatType.CT_SpellResisted);

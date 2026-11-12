@@ -1,0 +1,121 @@
+{
+ "mob names given a table": 801,
+ "spawns covered": 13602,
+ "skipped": {
+  "has a table": 4842,
+  "not a hostile mob": 4760,
+  "placeholder name": 1
+ },
+ "by family (names, spawns)": {
+  "animal": [
+   21,
+   289
+  ],
+  "demon": [
+   22,
+   251
+  ],
+  "elemental": [
+   60,
+   966
+  ],
+  "generic": [
+   369,
+   5731
+  ],
+  "humanoid": [
+   295,
+   5420
+  ],
+  "insect": [
+   13,
+   509
+  ],
+  "magical": [
+   1,
+   54
+  ],
+  "plant": [
+   2,
+   15
+  ],
+  "undead": [
+   18,
+   367
+  ]
+ },
+ "chosen by": {
+  "fallback": 369,
+  "race": 51,
+  "body type": 2,
+  "name": 379
+ },
+ "tables": 61,
+ "junk items": 120,
+ "edits": 801,
+ "samples": {
+  "animal": [
+   "Stinky (L16, race)",
+   "lone wolf (L20, race)",
+   "Darkmare (L58, race)",
+   "Mystical Steed (L70, race)",
+   "frenzied hound (L60, name)",
+   "ferocious hound (L32, name)"
+  ],
+  "demon": [
+   "albino cave spriteling (L30, race)",
+   "fire demon (L50, race)",
+   "Belial's child (L55, race)",
+   "Aspect of Belial (L50, race)",
+   "Xaphan's soldier (L50, race)",
+   "Belial (L67, race)"
+  ],
+  "elemental": [
+   "Piece of Scum (L4, race)",
+   "lava monster (L28, race)",
+   "lithic gargoyle (L35, name)",
+   "quartz gargoyle (L30, name)",
+   "incendiary gargoyle (L36, name)",
+   "baby gargoyle (L40, name)"
+  ],
+  "generic": [
+   "Haki (L35, fallback)",
+   "fanatical hand of Ymir (L64, fallback)",
+   "mossy cave sprite (L37, fallback)",
+   "maniacal master of prey (L45, fallback)",
+   "tomb spiderling (L24, fallback)",
+   "maniacal shadow master (L43, fallback)"
+  ],
+  "humanoid": [
+   "Rat-catcher (L28, race)",
+   "Mad Sprite (L4, race)",
+   "Gokstad (L16, race)",
+   "Daffyd Difwych (L15, race)",
+   "Celain Eirich (L36, race)",
+   "Druid Disenchanter (L20, race)"
+  ],
+  "insect": [
+   "King Vero (L10, race)",
+   "carrion worm (L35, body type)",
+   "Bailey (L12, body type)",
+   "cave spider hatchling (L30, name)",
+   "tomb spider hatchling (L20, name)",
+   "large cave spider (L43, name)"
+  ],
+  "magical": [
+   "jade simulacrum (L38, race)"
+  ],
+  "plant": [
+   "Koramenna (L22, race)",
+   "glashtin root harvester (L22, name)"
+  ],
+  "undead": [
+   "Ciar (L6, race)",
+   "Taldos' companion (L11, race)",
+   "spirit champion (L42, name)",
+   "wayward phantom (L43, name)",
+   "phantom wisp (L40, name)",
+   "wandering phantom (L41, name)"
+  ]
+ }
+}

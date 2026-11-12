@@ -254,6 +254,20 @@ namespace DOL.UnitTests
         }
 
         [Test]
+        public void PerfecterFontsGiveTheFullRateInCombat()
+        {
+            // DR-258: Sphere of Rejuvenation (63032) and Font of Power (63034) no longer halve for allies in combat.
+            foreach (int id in new[] { 63032, 63034 })
+            {
+                var spell = new Spell(new DbSpell { SpellID = id, Type = "MasterLevelAbility", Target = "Self", Radius = 500, Duration = 600, Frequency = 40, Value = 5 }, 1);
+                Assert.That(MasterLevelAbilities.FontPercent(spell), Is.EqualTo(10));
+                string text = MasterLevelAbilities.For(id).Describe(spell);
+                Assert.That(text, Does.Contain("10%").And.Contain("in or out of combat"));
+                Assert.That(text, Does.Not.Contain("double out of combat"));
+            }
+        }
+
+        [Test]
         public void PassiveIconsArePermanent()
         {
             var owner = NewActor(eRealm.Midgard);
@@ -453,11 +467,33 @@ namespace DOL.UnitTests
             Assert.That(player.MLGranted || player.Champion, Is.False);
             player.Level = 50;
             MasterLevelRules.EnsureTraining(player);
-            Assert.That(player.MLGranted && player.Champion, Is.True);
+            Assert.That(player.MLGranted, Is.True);
+            Assert.That(player.Champion, Is.False, "Champion training starts at the King, not on its own");
             Assert.That(player.MLLevel, Is.Zero);
             Assert.That(player.ChampionLevel, Is.Zero);
             MasterLevelRules.EnsureTraining(player);
-            Assert.That(player.MLGranted && player.Champion, Is.True, "login and repeated checks are idempotent");
+            Assert.That(player.MLGranted, Is.True, "login and repeated checks are idempotent");
+        }
+
+        [Test]
+        public void TheKingStartsChampionTrainingWithoutClearingProgress()
+        {
+            var player = (ProgressionPlayer)RuntimeHelpers.GetUninitializedObject(typeof(ProgressionPlayer));
+            typeof(GamePlayer).GetField("m_dbCharacter", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(player, new DbCoreCharacter());
+            player.Realm = eRealm.Albion;
+            player.Level = 49;
+            Assert.That(ChampionRules.BecomeChampion(player, eRealm.Albion), Is.EqualTo(ChampionRules.KingAnswer.NotLevelFifty));
+            player.Level = 50;
+            Assert.That(ChampionRules.BecomeChampion(player, eRealm.Hibernia), Is.EqualTo(ChampionRules.KingAnswer.WrongRealm));
+            Assert.That(player.Champion, Is.False);
+
+            player.ChampionExperience = 1234;
+            player.ChampionLevel = 2;
+            Assert.That(ChampionRules.BecomeChampion(player, eRealm.Albion), Is.EqualTo(ChampionRules.KingAnswer.NowChampion));
+            Assert.That(player.Champion, Is.True);
+            Assert.That(player.ChampionExperience, Is.EqualTo(1234), "the old King path cleared champion experience");
+            Assert.That(player.ChampionLevel, Is.EqualTo(2));
+            Assert.That(ChampionRules.BecomeChampion(player, eRealm.Albion), Is.EqualTo(ChampionRules.KingAnswer.AlreadyChampion));
         }
 
         [Test]
@@ -481,8 +517,12 @@ namespace DOL.UnitTests
                 Assert.That(player.MLExperience, Is.GreaterThan(0));
                 Assert.That(player.AwardedChampionExperience, Is.Zero, "normal XP does not advance CLs");
                 ChampionRules.GainRealmPoints(player, 2500);
+                Assert.That(player.AwardedChampionExperience, Is.Zero, "no champion experience before the King");
+                Assert.That(player.MLGranted, Is.True);
+                Assert.That(player.Champion, Is.False);
+                Assert.That(ChampionRules.BecomeChampion(player, eRealm.Midgard), Is.EqualTo(ChampionRules.KingAnswer.NowChampion));
+                ChampionRules.GainRealmPoints(player, 2500);
                 Assert.That(player.AwardedChampionExperience, Is.EqualTo(2500));
-                Assert.That(player.MLGranted && player.Champion, Is.True);
             }
             finally
             {

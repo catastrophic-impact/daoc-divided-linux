@@ -46,6 +46,9 @@ namespace DOL.GS
         /// <summary>The session id clients know this bot by while it is shown as a player, 0 when it has none (BotPlayerPresentation).</summary>
         internal ushort PresentedSession { get; set; }
         internal ushort PresentedRegion { get; set; }
+        /// <summary>Where <see cref="SwimmingForClients"/> was last worked out, and the answer (BotPlayerPresentation.Swimming).</summary>
+        internal (ushort Zone, int X, int Y, int Z) SwimCheckedAt { get; set; }
+        internal bool SwimmingForClients { get; set; }
         public string ClassName { get; private set; }
         public new string InternalID { get; set; }
         public byte ClassId { get; set; }
@@ -192,6 +195,11 @@ namespace DOL.GS
         public GameClient Client => _dummyClient;
 
         #endregion
+
+        /// <summary>A tactic's melee position order (EncounterMeleeStations: Govannon's demon) sets how close the bot follows
+        /// the target it fights; otherwise the NPC default.</summary>
+        public override int StickMinimumRange =>
+            EncounterMeleeStations.MinimumFollowFor(this, TargetObject, GameLoop.GameLoopTime) ?? base.StickMinimumRange;
 
         #region IGamePlayer — CharacterClass
 
@@ -579,6 +587,15 @@ namespace DOL.GS
         #region IGamePlayer — Level / Class Properties
 
         public byte MaxLevel => 50;
+
+        /// <summary>
+        /// The level at which this gamebot stops gaining experience: its level-spread stop (bot-goals.json) for an
+        /// autonomous gamebot, otherwise 50. Special Forces and account companions are never held back.
+        /// </summary>
+        public int ExperienceStopLevel =>
+            IsAutonomousWorldBot && !IsEpicSpecialForce && !IsAccountCompanion
+                ? Math.Clamp(AutonomousBotGoalPolicy.Settings.LevelSpread.StopLevelFor(DatabaseID), 1, MaxLevel)
+                : MaxLevel;
         public int RealmLevel { get; set; }
         public int MLLevel { get; set; }
         public bool Champion { get; set; }
@@ -1036,6 +1053,13 @@ namespace DOL.GS
         protected override bool RetainCorpseForResurrection => true;
         protected override bool RetainGroupWhenDead => true;
 
+        /// <summary>Who killed this bot last time (AutonomousWorldBotController.ObserveDeaths reads it).</summary>
+        public string LastDeathKillerName { get; private set; } = string.Empty;
+        /// <summary>The last death was to an enemy realm (player, bot, their pet or a guard), not a PvE monster.</summary>
+        public bool LastDeathByEnemyRealm { get; private set; }
+        /// <summary>The last death was to an epic monster (a raid or dragon boss): no lesson about solo camps.</summary>
+        public bool LastDeathByEpic { get; private set; }
+
         public override void ProcessDeath(GameObject killer)
         {
             // Before the death bookkeeping below overwrites the activity and target.
@@ -1048,7 +1072,13 @@ namespace DOL.GS
             IsReturningAfterRelease = false;
             _stableReturnPlan = null;
             CompleteStableMasterRoute();
+            BotDutyLeases.OnDied(this); // a battleground rally drops its dead (BotDutyLeaseRules.EndsOnDeath)
+            // 1.1.3, after RC6: how many were on it, read before the death clears the tracker, for how the death is told.
+            int attackers = IsAutonomousWorldBot ? AutonomousDeathDiagnostics.Attackers(this) : 0;
 
+            LastDeathKillerName = killer?.Name ?? string.Empty;
+            LastDeathByEnemyRealm = AutonomousDeathDiagnostics.IsEnemyRealmKill(Realm, killer);
+            LastDeathByEpic = killer is IGameEpicNpc;
             if (IsAutonomousWorldBot && PersistentRecord != null)
             {
                 AutonomousDeathDiagnostics.Record(this, killer, PersistentRecord.Activity);
@@ -1064,9 +1094,10 @@ namespace DOL.GS
             ShowDeadToViewers(killer);
             if (IsAutonomousWorldBot)
             {
+                AnnounceRvrDeath(killer);
                 AutonomousBotStatusPersistence.Queue(this);
                 AutonomousBotGuildSocial.OnBotDeath(this);
-                AutonomousBotVoices.OnBotDeath(this);
+                AutonomousBotVoices.OnBotDeath(this, killer, attackers);
                 AutonomousLivingServer.OnBotDied(this, killer);
             }
             StartDeathRecoveryTimer();
@@ -1145,6 +1176,15 @@ namespace DOL.GS
 
         public const long SiegeCorpseWaitMilliseconds = 240_000;
 
+        // Fork: /allrelease runs the death timer's release at once; the timer ends itself once the bot is alive
+        public bool ReleaseNow()
+        {
+            if (IsAlive || ObjectState != eObjectState.Active)
+                return false;
+            ReleaseToNearestBindAndReturn();
+            return IsAlive;
+        }
+
         private bool HasViableResurrector()
         {
             if (Group == null)
@@ -1156,10 +1196,8 @@ namespace DOL.GS
                     continue;
                 if (member is GameBot bot && bot.ResurrectionSpell != null && bot.Mana >= bot.PowerCost(bot.ResurrectionSpell))
                     return true;
-                if (member is GamePlayer player && player.CharacterClass?.ID is
-                    (int)eCharacterClass.Cleric or (int)eCharacterClass.Friar or
-                    (int)eCharacterClass.Healer or (int)eCharacterClass.Shaman or
-                    (int)eCharacterClass.Druid or (int)eCharacterClass.Warden or (int)eCharacterClass.Bard)
+                // Any player who has learned a resurrection (a Heretic was left out of the old class list).
+                if (member is GamePlayer player && AutonomousLivingServer.CanRez(player))
                     return true;
             }
             return false;
@@ -1167,6 +1205,7 @@ namespace DOL.GS
 
         private void ReleaseToNearestBindAndReturn(bool returnToParty = true)
         {
+            AutonomousBotRealmPointRewards.NoteReleased(this);
             if (IsTemporaryGroupHelper)
             {
                 if (!TemporaryCompanionRecovery.CanReleaseToOwner(this))
@@ -1201,12 +1240,20 @@ namespace DOL.GS
                 if (releaseZone == null || !AutonomousRealmBoundary.Allows(Realm, releaseRegion, releaseZone.ID))
                     release = null;
             }
+            // A battleground has no bind stones: a bot of the bracket releases at its realm's portal keep (outside the
+            // gate, on the field mesh), not at the capital a region away (Discord report 2026-11-04, Abermenai: a dead
+            // groupmate released and "had a far run back").
+            if (IsAutonomousWorldBot && release == null && BattlegroundBrackets.ForRegion(releaseRegion) is { } bracket &&
+                BattlegroundBrackets.Allows(bracket, Level) && BattlegroundBrackets.BotArrival(bracket, Realm) is { } portal)
+                release = new Point3D(portal.X, portal.Y, portal.Z);
             if (IsAutonomousWorldBot && release != null)
             {
                 long now = GameLoop.GameLoopTime;
                 bool sameBind = _lastBindRelease != null && _lastBindReleaseRegion == releaseRegion &&
                     _lastBindRelease.X == release.X && _lastBindRelease.Y == release.Y;
-                _bindQuickReturns = BotReleaseBindPoints.NextQuickReturns(_bindQuickReturns, sameBind, now - _lastBindReleaseTick);
+                // The corpse is still where the bot fell: how far from the bind it died.
+                double deathDistance = System.Math.Sqrt(System.Math.Pow((double)X - release.X, 2) + System.Math.Pow((double)Y - release.Y, 2));
+                _bindQuickReturns = BotReleaseBindPoints.NextQuickReturns(_bindQuickReturns, sameBind, now - _lastBindReleaseTick, deathDistance);
                 _lastBindRelease = release;
                 _lastBindReleaseRegion = releaseRegion;
                 _lastBindReleaseTick = now;
@@ -1238,12 +1285,15 @@ namespace DOL.GS
                 release = new Point3D(capital.X, capital.Y, capital.Z);
             }
             release ??= _deathLocation;
-            if (IsAutonomousWorldBot)
-                AutonomousLivingServer.OnBotReleasing(this);
+            // RC6 on the owner's PC: "long run back to Pennine Mountains" and "released, running back" in the same second.
+            bool toldGroup = IsAutonomousWorldBot && AutonomousLivingServer.OnBotReleasing(this);
+            // beside a bindstone, never on it (owner 2026-11-10: bots stood up on top of Huginfell's stone)
+            release = BotReleaseBindPoints.BesideBindstone(releaseRegion, release, unchecked((int)DatabaseID ^ Environment.TickCount));
             // Transfer the corpse first: a failed MoveTo must not revive the bot
             // at its killer or cause HandleDeathRecovery to discard its timer.
             if (!MoveCorpseForRelease(releaseRegion, release.X, release.Y, release.Z, Heading))
                 return;
+            BotGroupRelease.NoteRelease(this, releaseRegion, release, returnToParty); // Fork: a release in a player's group shows in the log
             Health = Math.Max(1, MaxHealth / 3);
             Mana = Math.Max(0, MaxMana / 3);
             Endurance = Math.Max(0, MaxEndurance / 3);
@@ -1253,8 +1303,8 @@ namespace DOL.GS
             Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
             Brain?.Start();
             ShowStandingToViewers();
-            if (returnToParty)
-                Say(ReturnDialogue("release"));
+            if (returnToParty && !toldGroup)
+                TellOwnGroup(ReturnDialogue("release"));
 
             if (PersistentRecord != null)
             {
@@ -1303,6 +1353,39 @@ namespace DOL.GS
                     viewer.Out.SendPlayerDied(this, killer);
                 else
                     RecreateFor(viewer);
+            }
+        }
+
+        /// <summary>
+        /// The region's kill spam for a gamebot killed by another realm, as GamePlayer.ProcessDeath sends it for a
+        /// player: "X was just killed by Y in Z." to the victim's realm and the killer's realm (Discord report
+        /// 2026-11-04, Abermenai: no kill spam for any bot death).
+        /// </summary>
+        private void AnnounceRvrDeath(GameObject killer)
+        {
+            GameLiving owner = AutonomousBotRealmPointRewards.ResolveRootRewardOwner(killer as GameLiving);
+            if (owner == null || owner.Realm == eRealm.None || owner.Realm == Realm || CurrentRegion == null)
+                return;
+            string location = CurrentAreas.Count > 0 && CurrentAreas[0] is AbstractArea { } area and not Area.BindArea
+                ? area.Description
+                : CurrentZone?.Description ?? string.Empty;
+            eChatType type = owner.Realm switch
+            {
+                eRealm.Albion => eChatType.CT_KilledByAlb,
+                eRealm.Midgard => eChatType.CT_KilledByMid,
+                eRealm.Hibernia => eChatType.CT_KilledByHib,
+                _ => eChatType.CT_PlayerDied,
+            };
+            bool killerIsPlayerLike = owner is GamePlayer || owner is GameBot { IsAutonomousWorldBot: true };
+            foreach (GamePlayer player in ClientService.Instance.GetPlayersOfRegion(CurrentRegion))
+            {
+                if (player.Realm != Realm && !(killerIsPlayerLike && player.Realm == owner.Realm) &&
+                    !(ServerProperties.Properties.DEATH_MESSAGES_ALL_REALMS && (killerIsPlayerLike || owner is Keeps.GameKeepGuard)))
+                    continue;
+                string language = player.Client?.Account?.Language;
+                player.Out.SendMessage(LanguageMgr.GetTranslation(language, "GamePlayer.Die.KilledByLocation",
+                    AutonomousNameMask.NameFor(player, this, 0, true, language),
+                    AutonomousNameMask.NameFor(player, owner, 1, false, language), location), type, eChatLoc.CL_SystemWindow);
             }
         }
 
@@ -1413,6 +1496,26 @@ namespace DOL.GS
             _stableReturnPlan = null;
         }
 
+        /// <summary>
+        /// Living Server: a gamebot in a player's group that stalled on its way back plans it again from where it stands
+        /// (a stablemaster route when one is faster, else a walk with detours around hostile monsters) before
+        /// BotGroupRelease lets it join the leader. False when that can't apply here.
+        /// </summary>
+        public bool RestartReturnToLeader(GamePlayer leader)
+        {
+            if (!IsAlive || IsOnStableMasterRoute || leader == null || leader.CurrentRegionID != CurrentRegionID)
+                return false;
+            StopFollowing();
+            StopMovingOnPath();
+            StopMoving();
+            WakeRecoveryRest();
+            (Brain as BotBrain)?.Disengage();
+            _stableReturnPlan = null;
+            IsReturningAfterRelease = true;
+            Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+            return true;
+        }
+
         public bool ContinueReturnJourney()
         {
             if (!IsReturningAfterRelease || !IsAlive)
@@ -1428,16 +1531,29 @@ namespace DOL.GS
             Point3D destination = leader?.IsAlive == true && leader.CurrentRegionID == CurrentRegionID
                 ? new Point3D(leader.X, leader.Y, leader.Z)
                 : _deathLocation;
-            if (CurrentRegionID != _deathRegionId && (leader == null || leader.CurrentRegionID != CurrentRegionID))
-                return true;
+            if (BotGroupRelease.WaitsForLeader(this)) return true; // Fork: its corpse is no goal, the group goes on where the player comes back
+            if ((CurrentRegionID != _deathRegionId || BotGroupRelease.IsGroupReturn(this)) && (leader == null || leader.CurrentRegionID != CurrentRegionID)) // Fork: its leader left the region it died in
+            {
+                // Living Server: a stablemaster ride in progress ends at its stable before the bot may join its leader.
+                if (IsOnStableMasterRoute)
+                {
+                    MaintainStableMasterRoute();
+                    if (IsMovingOnPath || CurrentPathPoint != null || !TryCompleteStableMasterRouteAfterArrival())
+                        return true;
+                    _stableReturnPlan = null;
+                }
+                return BotGroupRelease.TryReturnToLeader(this, _deathTick); // Fork: it stood here for good, nothing else moves a bot in a player's group
+            }
 
             if (GetDistanceTo(destination) <= 350)
             {
                 IsReturningAfterRelease = false;
                 _stableReturnPlan = null;
                 CompleteStableMasterRoute();
-                Say(ReturnDialogue("arrive"));
+                // 1.1.3 (RC5 on the owner's PC): "back" only after a death; a bot that walked to the player after an invite is "here".
+                TellOwnGroup(ReturnDialogue(_deathTick > 0 && GameLoop.GameLoopTime - _deathTick < 20 * 60_000 ? "arrive" : "arrive_walk"));
                 Brain?.FSM?.SetCurrentState(eFSMStateType.FOLLOW);
+                BotGroupRelease.FinishReturn(this); // Fork: as an invitation does
                 return false;
             }
 
@@ -1449,7 +1565,7 @@ namespace DOL.GS
                 if (!TryCompleteStableMasterRouteAfterArrival())
                     return true;
                 _stableReturnPlan = null;
-                Say(ReturnDialogue("dismount"));
+                TellOwnGroup(ReturnDialogue("dismount"));
             }
 
             _stableReturnPlan ??= FindFasterStableRoute(destination);
@@ -1483,7 +1599,7 @@ namespace DOL.GS
                     return true;
                 }
                 _stableReturnPlan = null;
-                Say(ReturnDialogue("mount"));
+                TellOwnGroup(ReturnDialogue("mount"));
                 return true;
             }
 
@@ -1496,8 +1612,10 @@ namespace DOL.GS
         {
             Vector3 current = new(X, Y, Z);
             Vector3 desired = new(destination.X, destination.Y, destination.Z);
+            // Fork: 900-unit steps stopped at the first wall, a planned route finds the door. Living Server: a detour around a
+            // hostile monster still comes first, so only a clear way is walked as one planned route.
             AutonomousThreatAwarePathing.SafeStep step = AutonomousThreatAwarePathing.ChooseStep(this, current, desired, 900);
-            PathTo(step.Position, MaxSpeed);
+            PathTo(BotGroupRelease.ReturnStepTarget(BotGroupRelease.IsGroupReturn(this), step.Detouring, step.Position, desired), MaxSpeed);
             if (PersistentRecord != null)
             {
                 PersistentRecord.Activity = step.Detouring ? step.Reason : "Walking back to the party";
@@ -1518,7 +1636,23 @@ namespace DOL.GS
             if (GameLoop.GameLoopTime < _nextReturnRoleplayTick || IsCasting || InCombat)
                 return;
             _nextReturnRoleplayTick = GameLoop.GameLoopTime + Util.Random(60_000, 120_000);
-            Say(ReturnDialogue(stage));
+            TellOwnGroup(ReturnDialogue(stage));
+        }
+
+        /// <summary>
+        /// Where a line about the way back after a release goes: the bot's own group, and only when a player is in it (1.1.3 RC1,
+        /// live check 2026-11-08 at Camelot's bind: about 25 "released, running back" lines in 45 s in /say, from bots of other
+        /// groups, to everyone standing there). "group", or null when nobody needs to hear it. Pure.
+        /// </summary>
+        public static string ReturnLineChannel(bool inGroup, bool groupHasPlayer) => inGroup && groupHasPlayer ? "group" : null;
+
+        private void TellOwnGroup(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text) || ReturnLineChannel(Group != null, AutonomousLivingServer.GroupHasPlayer(Group)) == null)
+                return;
+            text = AutonomousRoleplayers.Voice(this, text);
+            Group.SendMessageToGroupMembers(this, text, eChatType.CT_Group, eChatLoc.CL_ChatWindow);
+            BotChatTranscript.Bot("group", Name, Realm, text);
         }
 
         // Play test 2026-10-27: an autonomous gamebot in the player's group said "I have caught up. Returning to formation." —
@@ -1539,6 +1673,12 @@ namespace DOL.GS
             "stable" => "grabbing a horse, faster",
             "mount" => string.IsNullOrEmpty(stableDestination) ? "on a horse, be there soon" : $"horse to {stableDestination}, be there soon",
             "dismount" => "off the horse, almost there",
+            "arrive_walk" => random.Next(3) switch
+            {
+                0 => "here",
+                1 => "made it, ready",
+                _ => "ok here, whats the plan",
+            },
             "arrive" => random.Next(3) switch
             {
                 0 => "back",
@@ -1804,6 +1944,8 @@ namespace DOL.GS
         public TryPickUpResult TryAutoPickUpItem(WorldInventoryItem item)
         {
             item.AssertLockAcquisition();
+            if (IsAccountCompanion)
+                return TryCompanionAutoPickUpItem(item);
             if (!IsAutonomousWorldBot || IsTemporaryGroupHelper || IsEpicSpecialForce)
                 return TryPickUpResult.DoesNotWant;
             if (Inventory == null)
@@ -1879,6 +2021,11 @@ namespace DOL.GS
 
         public void GainRealmPoints(long amount, bool modify)
         {
+            if (IsAccountCompanion && amount > 0)
+            {
+                GainAccountCompanionRealmPoints(amount);
+                return;
+            }
             if (!IsAutonomousWorldBot || amount <= 0)
                 return;
             AutonomousRealmPoints += amount;
@@ -1895,6 +2042,13 @@ namespace DOL.GS
         }
 
         public override void GainRealmPoints(long amount) => GainRealmPoints(amount, true);
+
+        public override void GainBountyPoints(long amount)
+        {
+            if (IsAccountCompanion && amount > 0)
+                GainAccountCompanionBountyPoints(amount);
+            base.GainBountyPoints(amount);
+        }
 
         public override void EnemyKilled(GameLiving enemy)
         {
@@ -1915,9 +2069,10 @@ namespace DOL.GS
             }
             if (!IsAutonomousWorldBot || arguments == null || arguments.ExpTotal <= 0)
                 return;
-            if (Level >= MaxLevel || BracketBotService.IsAtCap(this)) // daoc-divided-linux: bracket bots stop at their bracket's top level
+            int stopLevel = ExperienceStopLevel;
+            if (Level >= stopLevel || BracketBotService.IsAtCap(this)) // daoc-divided-linux: bracket bots stop at their bracket's top level
             {
-                // The cap discards the experience, but a kill that earned it is still proof the bot is working: a
+                // The cap (level 50, or the bot's own level-spread stop) discards the experience, but a kill that earned it is still proof the bot is working: a
                 // level-50 caster or pet class farming from one spot was "rescued" to its capital every fifteen
                 // minutes (241 of 268 such recoveries in run 2026-10-13 were level 50).
                 AutonomousStuckWatchdog.MarkProgress(this, eAutonomousProgressKind.Experience);
@@ -1961,12 +2116,16 @@ namespace DOL.GS
                 previousExperience = Experience;
                 previousLevel = Level;
                 Experience += experienceGained;
-                while (Level < MaxLevel && Experience >= GamePlayer.GetExperienceAmountForLevel(Level))
+                while (Level < stopLevel && Experience >= GamePlayer.GetExperienceAmountForLevel(Level))
                 {
                     Level++;
                     ApplyLevelStatGrowth(Level);
                     leveled = true;
                 }
+                // A bot held below 50 keeps no banked experience past its stop, so a later change to the
+                // spread does not level it several times from one kill.
+                if (Level >= stopLevel && stopLevel < MaxLevel)
+                    Experience = Math.Min(Experience, GamePlayer.GetExperienceAmountForLevel(Level) - 1);
 
                 if (leveled)
                 {
@@ -1982,9 +2141,15 @@ namespace DOL.GS
 
             if (leveled)
             {
-                Health = MaxHealth;
-                Mana = MaxMana;
-                Endurance = MaxEndurance;
+                // Experience can arrive after the bot died (its group or pet finished the kill). A dead bot is not
+                // refilled: a full health bar made it look alive, its release timer stopped and it stood frozen where
+                // it fell (True165 a2de7bf85: 22 bots overnight). It levels now and rises on release.
+                if (IsAlive)
+                {
+                    Health = MaxHealth;
+                    Mana = MaxMana;
+                    Endurance = MaxEndurance;
+                }
                 AutonomousBotStatusPersistence.Queue(this, true);
                 if (IsAutonomousWorldBot)
                 {
@@ -2120,14 +2285,17 @@ namespace DOL.GS
             {
                 Shade(false);
 
-                // In classic 1.65 a Necromancer survives the loss of its
-                // zombie only barely. Match that failure state for autonomous
-                // and temporary bots, while leaving normal voluntary releases
-                // and stable-travel despawns untouched.
+                // A Necromancer survives the loss of its servant weakened: the player rule (ClassDisciple), at most 10% of its
+                // health (owner 2026-11-05: bots dropped to 1 HP and died right after). Voluntary releases and stable-travel
+                // despawns are untouched.
                 if (necromancerPetDied && IsAlive)
-                    Health = 1;
+                    DropToServantLossHealth();
             }
         }
+
+        /// <summary>A Necromancer's health after its servant died: as for a player, at most 10% of its maximum.</summary>
+        private void DropToServantLossHealth() =>
+            Health = (int)Math.Ceiling(Math.Min(Health, MaxHealth * 0.10));
 
         public override bool RemoveControlledBrain(IControlledBrain controlledBrain)
         {
@@ -2145,7 +2313,7 @@ namespace DOL.GS
             if (IsShade)
                 Shade(false);
             if (deadNecromancerPet && IsAlive)
-                Health = 1;
+                DropToServantLossHealth();
             return true;
         }
 
@@ -2720,7 +2888,11 @@ namespace DOL.GS
                 SpendSpecPoints(Level, 0); // fully trained on arrival, like a level-50 /spawn companion
             else
                 LoadPersistedSpecs(record.SerializedSpecs);
-            bool buildLocked = IsEpicSpecialForce || BotLifetimeBuild.Restore(BotSpec, record.SerializedBuildPlan);
+            // A saved plan for lines this class no longer has (the Storm Sovereign remake) is replaced by the fresh plan,
+            // and the bot's points are spent again on it below (AUTONOMOUS_BUILD_RESPEC).
+            bool savedPlanFits = IsEpicSpecialForce || BotLifetimeBuild.FitsClass(record.SerializedBuildPlan,
+                line => GetSpecializationByName(line) != null, BotSpec.SpecLines.Select(line => line.Spec));
+            bool buildLocked = IsEpicSpecialForce || savedPlanFits && BotLifetimeBuild.Restore(BotSpec, record.SerializedBuildPlan);
             if (!buildLocked)
                 BotLifetimeBuild.AlignWithInvestedWeapons(BotSpec, GetBaseSpecLevel);
             // A saved build can predate the Savage's trained weapon line. Its
@@ -2735,6 +2907,17 @@ namespace DOL.GS
             }
             m_leftOverSpecPoints = Math.Max(0, record.UnspentSpecPoints);
             _lastAutonomousTrainedLevel = IsEpicSpecialForce ? Level : ParseLastTrainedLevel(record.SerializedAbilities, Level, record.SerializedSpecs);
+            if (!savedPlanFits)
+            {
+                foreach (Specialization spec in GetSpecList().Where(spec => spec.Trainable))
+                    spec.Level = 1;
+                m_leftOverSpecPoints = 0;
+                SpendSpecPoints(Level, 0);
+                _lastAutonomousTrainedLevel = Level;
+                MarkAutonomousStateDirty();
+                log.Warn($"AUTONOMOUS_BUILD_RESPEC bot=\"{record.Name}\" id={record.BotId} class=\"{ClassName}\" level={Level} " +
+                         $"weapon={BotSpec.WeaponOneType} unspentBefore={record.UnspentSpecPoints} reason=\"saved plan trains lines the class no longer has\"");
+            }
             if (!IsEpicSpecialForce && NeedsTrainingOnArrival(record.SerializedAbilities, record.SerializedSpecs, Level))
             {
                 // Created above level 1 (the launcher's level-50 roster): spend every point now, like the
@@ -2827,7 +3010,22 @@ namespace DOL.GS
                 return false;
 
             WatchLeaderRegionChanges(leader);
+            // A gamebot joins mid-trip: its stable-master or frontier-porter ride and its walk end here, or it stays
+            // "Boarding frontier teleporter" ~1,900 away and never counts as available for the player's fights
+            // (playtest 2026-11-07, after a leader's GM jump). The controller does not run for a player-led bot.
+            if (IsAutonomousWorldBot && !IsTemporaryGroupHelper)
+            {
+                if (IsOnStableMasterRoute)
+                    CompleteStableMasterRoute();
+                if (movementComponent != null)
+                    StopMovingOnPath();
+                EndReturnJourney();
+                if (PersistentRecord != null)
+                    PersistentRecord.Activity = "Following the player's group";
+            }
             PlayerGroupLeader = leader;
+            // The player now has this gamebot's time: no raid, siege, RvR event or rally takes it (docs/DUTY-LEASE.md).
+            BotDutyLeases.Claim(this, eDutyLeaseKind.PlayerGroup, leader.Name, DutyLeaseReason.PlayerGroup, leader.Name);
             if (Brain is BotBrain brain)
             {
                 brain.RebindAssistedPlayer();
@@ -2842,6 +3040,7 @@ namespace DOL.GS
                 CompleteStableMasterRoute();
             WatchLeaderRegionChanges(null);
             PlayerGroupLeader = null;
+            BotDutyLeases.Release(this, eDutyLeaseKind.PlayerGroup);
             if (Brain is BotBrain brain)
                 brain.RebindAssistedPlayer();
         }
@@ -3053,8 +3252,19 @@ namespace DOL.GS
         internal void NoteSpellFinished(Spell spell, GameLiving target)
         {
             if (spell != null && !spell.IsHarmful)
+            {
                 _lastFinishedBuff = (spell.ID, GameLoop.GameLoopTime, target?.Name ?? string.Empty);
+                if (spell.Target == eSpellTarget.GROUP)
+                    _groupBuffFinishedTicks[spell.ID] = GameLoop.GameLoopTime;
+            }
         }
+
+        private readonly Dictionary<int, long> _groupBuffFinishedTicks = new();
+
+        /// <summary>This group buff was cast to the end within the last <paramref name="milliseconds"/>.</summary>
+        internal bool GroupBuffFinishedWithin(Spell spell, long milliseconds) =>
+            spell != null && _groupBuffFinishedTicks.TryGetValue(spell.ID, out long tick) &&
+            GameLoop.GameLoopTime - tick < milliseconds;
 
         private (int SpellId, string Text) _lastSpellMessage;
 
@@ -3072,6 +3282,17 @@ namespace DOL.GS
             // parked party is still recovering.
             if (target != null && IsRecoveryResting)
                 return;
+
+            // 1.2 epic rule (Funus with his weapon puzzle): a bot never starts an attack on a boss it must not hit (its hits
+            // heal him to full), and an archer that may fight him with its distance weapon only starts with that weapon.
+            // Play test duo14: reavers he turned on fought back in melee (40 of his 110 heals).
+            if (target is GameLiving living && EpicEncounterTactics.MustNotHit(this, living))
+            {
+                if (RefusesAttackOn(this, living))
+                    return;
+                if (ActiveWeaponSlot != eActiveWeaponSlot.Distance)
+                    SwitchWeapon(eActiveWeaponSlot.Distance);
+            }
 
             // A ranged shot owns its aim/release animation.  Reissuing the
             // same target every think pulse used to reset that state, producing
@@ -3104,6 +3325,15 @@ namespace DOL.GS
             if (IsCasting || castingComponent.HasPendingSkillRequests)
                 return true;
 
+            if (BotArcheryShots.HoldShotUnderMeleePressure(IsBeingInterruptedByOther,
+                    attackComponent?.AttackerTracker?.Attackers?.OfType<GameLiving>().Any(attacker => attacker.IsAlive &&
+                        attacker != this && IsWithinRadius(attacker, MeleeAttackRange + 100)) == true) &&
+                Brain is BotBrain archerBrain)
+            {
+                archerBrain.RequestArcherMeleeFallback(GameLoop.GameLoopTime + BotArcheryShots.MeleePressureFallbackMilliseconds);
+                return true;
+            }
+
             Spell shot = BotArcheryShots.Choose(ArcheryShots, GetDistanceTo(target), Group != null, EndurancePercent,
                 spell => spell.CalculateEffectiveRange(this), spell => GetSkillDisabledDuration(spell) <= 0);
             if (shot == null)
@@ -3117,6 +3347,10 @@ namespace DOL.GS
                 StopAttack();
             return true;
         }
+        /// <summary>The bot must not hit <paramref name="target"/> at all and has no distance weapon it may fight it with (an
+        /// epic rule: Funus while his puzzle is on, for a class he takes no damage from), so it starts no attack on it.</summary>
+        public static bool RefusesAttackOn(GameBot bot, GameLiving target) =>
+            EpicEncounterTactics.MustNotHit(bot, target) && !EpicEncounterTactics.FightsAtRange(bot, target);
 
         public override bool AddToWorld()
         {
@@ -3166,7 +3400,8 @@ namespace DOL.GS
         {
             if (Health > 0 || ObjectState != eObjectState.Active || _corpseReleaseMove > 0)
                 return false;
-            log.Warn($"BOT_CORPSE_MOVE_REFUSED {kind} bot=\"{Name}\" id={DatabaseID} from={CurrentRegionID}:{X},{Y},{Z} " +
+            if (log.IsWarnEnabled)
+                log.Warn($"BOT_CORPSE_MOVE_REFUSED {kind} bot=\"{Name}\" id={DatabaseID} from={CurrentRegionID}:{X},{Y},{Z} " +
                      $"to={regionID}:{x},{y},{z}{Environment.NewLine}{Environment.StackTrace}");
             return true;
         }
@@ -3437,6 +3672,15 @@ namespace DOL.GS
         }
 
         /// <summary>
+        /// Whether the Bonedancer plan migration may touch this bot's lines. Never an account companion
+        /// (DR-243): its levels are the owner's own training, and a second line above 1 would read as a
+        /// legacy spread and be re-spent into the bot plan's primary. Never an autonomous bot with a saved
+        /// lifetime build either: that is not a maintenance-time respec opportunity.
+        /// </summary>
+        public static bool BonedancerPlanMigrationApplies(bool isAccountCompanion, bool isAutonomousWorldBot, string savedBuildPlan) =>
+            !isAccountCompanion && !(isAutonomousWorldBot && !string.IsNullOrWhiteSpace(savedBuildPlan));
+
+        /// <summary>
         /// Migrates an already-running Bonedancer from the legacy mixed-ratio
         /// plan to the focused 50-point primary/secondary plan.  This changes
         /// only the future allocation policy; the current specialization
@@ -3444,8 +3688,8 @@ namespace DOL.GS
         /// </summary>
         internal void EnsureBonedancerFocusedSpecPlan()
         {
-            if (IsAutonomousWorldBot && !string.IsNullOrWhiteSpace(PersistentRecord?.SerializedBuildPlan))
-                return; // A saved lifetime build is not a maintenance-time respec opportunity.
+            if (!BonedancerPlanMigrationApplies(IsAccountCompanion, IsAutonomousWorldBot, PersistentRecord?.SerializedBuildPlan))
+                return;
             if (CharacterClass?.ID != (int)eCharacterClass.Bonedancer || BotSpec == null)
                 return;
 
@@ -3699,11 +3943,11 @@ namespace DOL.GS
                 return false;
 
             bool saved;
-            lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+            using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                 saved = record.IsPersisted ? GameServer.Database.SaveObject(record) : GameServer.Database.AddObject(record);
             if (includeInventory && Inventory is BotInventory persistentInventory)
             {
-                lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+                using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                     saved &= persistentInventory.SaveIntoDatabase(InternalID);
             }
             if (saved)
@@ -4466,19 +4710,25 @@ namespace DOL.GS
             return Inventory.GetItem(eInventorySlot.TorsoArmor) != null;
         }
 
-        // One-time promotion for helpers already present when their owner
-        // reaches 50. Run on the bot's normal turn, never in a player event or
-        // during combat/casting/horse travel. Preserve the existing build/group.
+        // Helpers level with their owner (Discord 2026-11-04: remaking the group
+        // every few levels), up to 50, and get the endgame kit at 50. Never
+        // lowers a helper (a GM-leveled owner spawns helpers above 50). Run on
+        // the bot's normal turn, never in a player event or during
+        // combat/casting/horse travel. Preserve the existing build/group.
         internal bool TryApplyEndgameCompanionUpgrade()
         {
-            if (!IsTemporaryGroupHelper || IsAccountCompanion || _endgameCompanionEquipped || Owner?.Level != 50 ||
+            if (!IsTemporaryGroupHelper || IsAccountCompanion || Owner == null ||
                 !IsAlive || IsCasting || InCombat || IsAttacking || IsOnStableMasterRoute ||
                 Brain is BotBrain { HasAggro: true } || ControlledBrain?.Body is { InCombat: true })
                 return false;
 
+            byte targetLevel = (byte)Math.Min((int)Owner.Level, 50);
+            if (Level > targetLevel || Level == targetLevel && (targetLevel < 50 || _endgameCompanionEquipped))
+                return false;
+
             byte previousLevel = Level;
             int healthPercent = HealthPercent, manaPercent = ManaPercent, endurancePercent = EndurancePercent;
-            Level = 50;
+            Level = targetLevel;
             for (int level = Math.Max(6, previousLevel + 1); level <= Level; level++)
                 ApplyLevelStatGrowth(level);
             if (previousLevel < Level)
@@ -4489,12 +4739,15 @@ namespace DOL.GS
             SetBotSpells();
             SortStyles();
             SortSpells();
-            EquipBot(50);
-            // Replace a pre-50 summon through its normal release lifecycle.
-            // In particular this preserves Necromancer shade cleanup.
-            AutonomousPetSupport.CancelPendingCharm(this);
-            AutonomousPetSupport.ReleaseFieldTurrets(this);
-            CommandNpcRelease();
+            EquipBot(targetLevel);
+            if (targetLevel == 50)
+            {
+                // Replace a pre-50 summon through its normal release lifecycle.
+                // In particular this preserves Necromancer shade cleanup.
+                AutonomousPetSupport.CancelPendingCharm(this);
+                AutonomousPetSupport.ReleaseFieldTurrets(this);
+                CommandNpcRelease();
+            }
             Health = Math.Max(1, MaxHealth * healthPercent / 100);
             Mana = MaxMana * manaPercent / 100;
             Endurance = MaxEndurance * endurancePercent / 100;
@@ -4736,6 +4989,12 @@ namespace DOL.GS
                     TryMoveEquippedItemToBackpack(slot))
                     changed = true;
             }
+            // A weapon left in the offhand of a class that cannot dual wield blocks its shield.
+            DbInventoryItem offhand = Inventory.GetItem(eInventorySlot.LeftHandWeapon);
+            if (offhand != null && BotWeaponStats.IsMeleeWeapon((eObjectType)offhand.Object_Type) &&
+                !BotWeaponStats.CanWieldOffhandWeapon(this) &&
+                TryMoveEquippedItemToBackpack(eInventorySlot.LeftHandWeapon))
+                changed = true;
             return changed;
         }
 
@@ -4980,6 +5239,11 @@ namespace DOL.GS
 
         private void SetRanged()
         {
+            // The class's own kind first when it trains more than one (a mercenary's short bow, an armsman's crossbow):
+            // SetRangedWeapon fills only an empty slot, so the ability order below no longer decides it.
+            if (CharacterClass != null && BotRangedCombat.PreferredRangedType((eCharacterClass)CharacterClass.ID) is eObjectType own &&
+                HasAbility(BotRangedCombat.AbilityFor(own)))
+                BotEquipment.SetRangedWeapon(this, own);
             foreach (Ability ability in GetAllAbilities())
             {
                 switch (ability.KeyName)
@@ -5095,6 +5359,11 @@ namespace DOL.GS
 
         public override void SwitchWeapon(eActiveWeaponSlot slot)
         {
+            // Play test diagnostic (Funus): who puts the melee weapon in hand of a bot that may fight its target only
+            // with its distance weapon. Once per bot every ten minutes, the call path.
+            if (slot != eActiveWeaponSlot.Distance && ActiveWeaponSlot == eActiveWeaponSlot.Distance &&
+                TargetObject is GameLiving rangedOnly && EpicEncounterTactics.FightsAtRange(this, rangedOnly))
+                EpicEncounterRestores.NoteMeleeSwitch(this, rangedOnly);
             // GameNPC.SwitchWeapon intentionally stops and restarts an active
             // attack, even when the requested slot is already selected. That
             // is useful for scripted NPCs, but inventory/equipment refreshes
@@ -5206,7 +5475,23 @@ namespace DOL.GS
         {
             if (target != null && IsRecoveryResting)
                 return;
-            base.Follow(target, minDistance, maxDistance);
+            base.Follow(target, MeleeStandOff(target, minDistance), maxDistance);
+        }
+
+        /// <summary>
+        /// Living Server 1.2, "arrive slightly short": an autonomous gamebot's melee approach to a monster stops 0-20 units
+        /// short of the stick distance, the same for the same bot every fight (BotCombatMovement.StandOff), so bots don't all
+        /// stand on one exact ring. Not for companions, player-led groups, dragons, epic encounters or raid dungeons.
+        /// </summary>
+        private int MeleeStandOff(GameObject target, int minDistance)
+        {
+            if (!IsAutonomousWorldBot || IsTemporaryGroupHelper || IsEpicSpecialForce || IsPlayerLedGroup ||
+                target == null || target != TargetObject || target is not GameNPC monster || monster is GameBot ||
+                minDistance != StickMinimumRange || ActiveWeaponSlot == eActiveWeaponSlot.Distance ||
+                DragonCombatGeometry.TargetReach(monster) > 0 || EpicEncounterTactics.For(monster) != null ||
+                EpicEncounterTactics.IsTacticPart(monster) || AutonomousRealmRaid.IsRaidDungeon(CurrentRegionID))
+                return minDistance;
+            return BotCombatMovement.StandOff(minDistance, DatabaseID > 0 ? DatabaseID : ObjectID);
         }
 
         public new void StopFollowing()

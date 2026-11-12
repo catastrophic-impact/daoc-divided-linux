@@ -35,6 +35,8 @@ namespace DOL.UnitTests
         {
             Assert.That(TrialScaling.HealthScale(TrialScope.Group, 8), Is.EqualTo(1.0));
             Assert.That(TrialScaling.HealthScale(TrialScope.Group, 4), Is.EqualTo(0.5));
+            Assert.That(TrialScaling.HealthScale(TrialScope.Group, 1), Is.EqualTo(0.125));   // one player counts as one (DR-115)
+            Assert.That(TrialScaling.HealthScale(TrialScope.Group, 2), Is.EqualTo(0.25));
             Assert.That(TrialScaling.HealthScale(TrialScope.Raid, 1), Is.EqualTo(TrialScaling.MinimumScale));
             Assert.That(TrialScaling.HealthScale(TrialScope.Raid, 80), Is.EqualTo(TrialScaling.MaximumScale));
         }

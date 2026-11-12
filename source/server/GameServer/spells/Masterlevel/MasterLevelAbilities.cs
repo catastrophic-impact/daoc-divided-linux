@@ -174,6 +174,12 @@ namespace DOL.GS.Spells
         {
             if (target == null || !target.IsAlive)
                 return;
+            RunAbility(target);
+        }
+
+        /// <summary>Runs the ability on a target, logging instead of throwing. Its helpers skip dead targets.</summary>
+        protected void RunAbility(GameLiving target)
+        {
             try
             {
                 Ability?.Run?.Invoke(this, target);
@@ -242,6 +248,8 @@ namespace DOL.GS.Spells
         /// <summary>Starts this ability's timed effect (its <see cref="MLAbility.Mods"/>) on the target.</summary>
         public void Hold(GameLiving target, int duration = 0)
         {
+            if (target == null || !target.IsAlive)
+                return;
             MasterLevelHold.Refresh(this, target, duration > 0 ? duration : Spell.Duration, Ability.OnCast != null);
         }
 
@@ -255,6 +263,9 @@ namespace DOL.GS.Spells
         /// <summary>Casts an internal spell of a stock type from the caster, with fixed variance.</summary>
         public void Cast(GameLiving target, int index, eSpellType type, Action<DbSpell> setup)
         {
+            // A style finisher still runs when its hit killed the target: its splash and self effects go on, the corpse is skipped.
+            if (target == null || !target.IsAlive)
+                return;
             Spell spell = _subSpells.GetOrAdd((Spell.ID, index), _ =>
             {
                 var db = new DbSpell
@@ -263,10 +274,42 @@ namespace DOL.GS.Spells
                     Icon = Spell.Icon, ClientEffect = Spell.ClientEffect, DamageType = (int)eDamageType.Energy
                 };
                 setup(db);
+                StockMessages(db);
                 // Show the ability's own tooltip on the effect, not the borrowed icon's stock spell.
                 return new Spell(db, 50) { InternalID = Spell.InternalID };
             });
             ScriptMgr.CreateSpellHandler(Caster, spell, SkillBase.GetSpellLine(GlobalSpellsLines.Reserved_Spells))?.StartSpell(target);
+        }
+
+        /// <summary>
+        /// The stock lines a stun, snare, root, mez or disarm prints. Internal sub-spells had no Message1-4, so a Sovereign
+        /// stun or snare landed silently (playtest 2026-11-07: Binding Radiance, Unhorse, Lady of the Lake).
+        /// </summary>
+        public static void StockMessages(DbSpell db)
+        {
+            if (!string.IsNullOrEmpty(db.Message1) || !string.IsNullOrEmpty(db.Message2))
+                return;
+            (string, string, string, string) lines = db.Type switch
+            {
+                nameof(eSpellType.StyleStun) or nameof(eSpellType.Stun) =>
+                    ("You are stunned!", "{0} is stunned!", "You recover from the stun.", "{0} recovers from the stun."),
+                nameof(eSpellType.SpeedDecrease) when db.Value >= 99 =>
+                    ("Your feet are frozen to the ground!", "{0} is rooted in place!", "You can move again.", "{0} can move again."),
+                nameof(eSpellType.SpeedDecrease) or nameof(eSpellType.DamageSpeedDecrease) =>
+                    ("Your movements slow!", "{0} slows down!", "You speed up again.", "{0} speeds up again."),
+                nameof(eSpellType.Mesmerize) =>
+                    ("You are entranced!", "{0} is entranced!", "You are no longer entranced.", "{0} is no longer entranced."),
+                nameof(eSpellType.Disarm) =>
+                    ("You are disarmed!", "{0} is disarmed!", "You can use your weapon again.", "{0} can use their weapon again."),
+                nameof(eSpellType.CombatSpeedDebuff) =>
+                    ("Your attacks slow!", "{0}'s attacks slow!", "Your attacks speed up again.", "{0}'s attacks speed up again."),
+                _ => (null, null, null, null)
+            };
+            // Other types keep their empty lines: null made SendMessages throw on StartsWith for the Pendragon
+            // ward (BothAblativeArmor) and burn (DamageOverTime), 113 exceptions in a 10-minute soak.
+            if (lines.Item1 == null)
+                return;
+            (db.Message1, db.Message2, db.Message3, db.Message4) = lines;
         }
 
         public void Damage(GameLiving target, double amount, eDamageType type = eDamageType.Energy, int index = 0) =>
@@ -275,7 +318,7 @@ namespace DOL.GS.Spells
         /// <summary>Damage not known when the table was written (percent of health); not cached.</summary>
         public void DamageNow(GameLiving target, int amount, eDamageType type)
         {
-            if (amount <= 0)
+            if (amount <= 0 || target == null || !target.IsAlive)
                 return;
             var spell = new Spell(new DbSpell { SpellID = Spell.ID * 1000 + 999, Name = Spell.Name, Type = "DirectDamage", Target = "Enemy", Damage = amount, DamageType = (int)type, Icon = Spell.Icon }, 50)
                 { InternalID = Spell.InternalID };
@@ -321,7 +364,7 @@ namespace DOL.GS.Spells
 
         public void Provoke(GameLiving target, GameLiving onto, long amount)
         {
-            if (target is GameNPC { Brain: StandardMobBrain brain })
+            if (target is GameNPC { IsAlive: true, Brain: StandardMobBrain brain })
                 brain.AddToAggroList(onto, amount);
         }
 
@@ -485,6 +528,24 @@ namespace DOL.GS.Spells
             foreach (var (id, ability) in ChampionAbilities.Build())
                 _byId[id] = ability;
             foreach (var (id, ability) in StormSovereignAbilities.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in StormRemakeStyles.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in StormRemakeSpells.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in StormRegaliaSpells.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in TuathaRemakeStyles.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in TuathaRemakeSpells.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in TaraRegaliaSpells.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in PendragonRemakeStyles.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in PendragonRemakeSpells.Build())
+                _byId[id] = ability;
+            foreach (var (id, ability) in CamelotRegaliaSpells.Build())
                 _byId[id] = ability;
         }
 
@@ -816,6 +877,9 @@ namespace DOL.GS.Spells
             });
         }
 
+        /// <summary>Percent a Perfecter font restores per pulse: twice the spell's Value, the same in or out of combat (DR-258).</summary>
+        public static int FontPercent(Spell spell) => (int)spell.Value * 2;
+
         private static void PlaceField(MasterLevelAbilityHandler h, MasterLevelFieldOptions options)
         {
             if (h.GroundPoint(out Point3D at))
@@ -854,11 +918,12 @@ namespace DOL.GS.Spells
             Add(new MLAbility
             {
                 Path = "Perfecter", Level = 3, Ground = true, Positive = true,
-                Describe = s => $"Font ({Sec(s) / 60} min, {s.Radius} radius): every 4 s heals allies inside for {s.Value}% of their health, double out of combat.",
+                // DR-258: fonts work at full strength in combat too (the old rate halved them for anyone fighting).
+                Describe = s => $"Font ({Sec(s) / 60} min, {s.Radius} radius): every 4 s heals allies inside for {FontPercent(s)}% of their health, in or out of combat.",
                 Run = (h, _) => PlaceField(h, new MasterLevelFieldOptions
                 {
                     Friendly = true, Model = 2585, Name = "Sphere of Rejuvenation", PulseEffect = 7245,
-                    OnPulse = (f, ally) => f.Ability.Heal(ally, ally.MaxHealth * (int)f.Ability.Spell.Value * (ally.InCombat ? 1 : 2) / 100)
+                    OnPulse = (f, ally) => f.Ability.Heal(ally, ally.MaxHealth * FontPercent(f.Ability.Spell) / 100)
                 })
             });
             Add(new MLAbility
@@ -869,13 +934,13 @@ namespace DOL.GS.Spells
             Add(new MLAbility
             {
                 Path = "Perfecter", Level = 5, Ground = true, Positive = true,
-                Describe = s => $"Font ({Sec(s) / 60} min, {s.Radius} radius): every 4 s restores {s.Value}% power and endurance to allies inside, double out of combat.",
+                Describe = s => $"Font ({Sec(s) / 60} min, {s.Radius} radius): every 4 s restores {FontPercent(s)}% power and endurance to allies inside, in or out of combat.",
                 Run = (h, _) => PlaceField(h, new MasterLevelFieldOptions
                 {
                     Friendly = true, Model = 2583, Name = "Font of Power", PulseEffect = 7212,
                     OnPulse = (f, ally) =>
                     {
-                        int percent = (int)f.Ability.Spell.Value * (ally.InCombat ? 1 : 2);
+                        int percent = FontPercent(f.Ability.Spell);
                         MasterLevelAbilityHandler.Restore(f.StormOwner, ally, percent, percent, f.Ability.Spell.Name);
                     }
                 })
@@ -1313,7 +1378,9 @@ namespace DOL.GS
             Model = options.Model;
             if (options.Size > 0)
                 Size = options.Size;
-            Realm = eRealm.None;
+            // The storm (3457), ward and rune objects draw their look from the object's realm (objects.csv realm effect
+            // sets, e.g. storm_base_alb/_mid/_hib); realm None drew the Hibernian green for everyone. PEACE keeps it untargetable.
+            Realm = owner.Realm;
             Flags |= eFlags.PEACE;
             if (options.Hidden)
                 Flags |= eFlags.STEALTH;

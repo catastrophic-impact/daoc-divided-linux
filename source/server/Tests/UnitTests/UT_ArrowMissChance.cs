@@ -72,8 +72,9 @@ public class UT_ArrowMissChance
         Assert.That(shot.AdjustDamageForHitChance(100, 85), Is.EqualTo(100));
     }
 
-    [TestCase(1, 19.33)]
-    [TestCase(9, 30.0)]
+    // A bot archer with a bow starts at the live 13% base (DR-194), then 1.33 per level the target is above.
+    [TestCase(1, 14.33)]
+    [TestCase(9, 25.0)]
     public void BowFireMissesTheSameOldWay(int levelsAbove, double expectedMissPercent)
     {
         Fighter archer = Fighter.At(50), mob = Fighter.At((byte)(50 + levelsAbove));
@@ -82,5 +83,16 @@ public class UT_ArrowMissChance
         var action = new WeaponAction(archer, mob, bow, 1, 4000, eRangedAttackType.Normal, arrow);
         var ad = new AttackData { Attacker = archer, Target = mob };
         Assert.That(mob.attackComponent.GetMissChance(action, ad, null, bow), Is.EqualTo(expectedMissPercent).Within(0.01));
+    }
+
+    [Test]
+    public void BaseMissIsLiveThirteenPercentForWeaponWieldersOnly()
+    {
+        DbInventoryItem sword = GameInventoryItem.Create(new DbItemTemplate { Object_Type = (int)eObjectType.SlashingWeapon });
+        Fighter bot = Fighter.At(50);
+        Assert.That(AttackComponent.BaseMissChance(bot, sword), Is.EqualTo(13));   // player or bot with a weapon: 87% to-hit
+        Assert.That(AttackComponent.BaseMissChance(bot, null), Is.EqualTo(18));    // no weapon item: no hidden +5%
+        var monster = (GameNPC)RuntimeHelpers.GetUninitializedObject(typeof(GameNPC));
+        Assert.That(AttackComponent.BaseMissChance(monster, sword), Is.EqualTo(18)); // monsters keep the old base
     }
 }

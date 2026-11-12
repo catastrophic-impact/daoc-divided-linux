@@ -1,0 +1,1 @@
+[{"table": "ZonePoint", "where": {"ClassType": "DOL.GS.Scripts.AdventureWingJumpPoint"}, "set": {"ClassType": "DOL.GS.ServerRules.AdventureWingJumpPoint"}}]

@@ -122,6 +122,16 @@ namespace DOL.GS.Spells
 
 		#endregion
 
+		/// <summary>The brain class a summon template names, or null when ClassType is not a controlled-pet brain.</summary>
+		public static Type ResolvePetBrainType(string classType)
+		{
+			if (string.IsNullOrWhiteSpace(classType))
+				return null;
+			Type type = Assembly.GetExecutingAssembly().GetType(classType, false, true);
+			return type != null && !type.IsAbstract && typeof(IControlledBrain).IsAssignableFrom(type) && type.GetConstructor(Type.EmptyTypes) != null
+				? type : null;
+		}
+
 		public override void ApplyEffectOnTarget(GameLiving target)
 		{
 			INpcTemplate template = NpcTemplateMgr.GetTemplate(Spell.LifeDrainReturn);
@@ -138,11 +148,14 @@ namespace DOL.GS.Spells
 
 			if (template.ClassType != null && template.ClassType.Length > 0)
 			{
-				Assembly asm = Assembly.GetExecutingAssembly();
-				brain = (IControlledBrain)asm.CreateInstance(template.ClassType, true);
+				// A summon template's ClassType names the pet's brain. World monster templates reused for a pet carry a
+				// creature class instead (e.g. DOL.GS.GameNPC on the dread lich, template 212): use the default pet brain then.
+				Type brainType = ResolvePetBrainType(template.ClassType);
+				if (brainType != null)
+					brain = Activator.CreateInstance(brainType) as IControlledBrain;
 
 				if (brain == null && log.IsWarnEnabled)
-					log.Warn($"ApplyEffectOnTarget(): ClassType {template.ClassType} on NPCTemplateID {template.TemplateId} not found, using default ControlledBrain");
+					log.Warn($"ApplyEffectOnTarget(): ClassType {template.ClassType} on NPCTemplateID {template.TemplateId} is not a pet brain, using default ControlledBrain");
 			}
 
 			if (brain == null)

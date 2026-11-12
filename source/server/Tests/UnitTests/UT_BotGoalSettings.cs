@@ -32,7 +32,14 @@ public class UT_BotGoalSettings
     public void ExclusivePoliciesApplyToAllocationRollsRecoveryAndOldEligibility(int solo, int group, int rvr, int kind)
     {
         Apply(new(solo, group, rvr));
-        foreach (int level in new[] { 20, 49, 50 })
+        // Frontier RvR starts at level 40 and reaches the configured share at 50 (night playtest 2026-11-04), so an
+        // RvR-only row is exclusive at 50 and leaves a level 20 bot solo PvE.
+        if (rvr > 0)
+        {
+            Assert.That(AutonomousBotGoalPolicy.Choose(20, new Random(1)), Is.EqualTo(eAutonomousObjectiveKind.SoloPve));
+            Assert.That(AutonomousObjectiveAssignments.IsRvrEligible(new OfflineWorldBotRecord { Level = 20 }, DateTime.UtcNow), Is.False);
+        }
+        foreach (int level in rvr > 0 ? new[] { 50 } : new[] { 20, 49, 50 })
         {
             for (int seed = 0; seed < 300; seed++)
                 Assert.That((int)AutonomousBotGoalPolicy.Choose(level, new Random(seed)), Is.EqualTo(kind));

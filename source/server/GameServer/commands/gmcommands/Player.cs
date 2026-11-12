@@ -161,7 +161,7 @@ namespace DOL.GS.Commands
                     {
                         if (pToLevel.Level < 40 || pToLevel.IsLevelSecondStage)
                         {
-                            pToLevel.Level++;
+                            pToLevel.SetLevelDirect((byte)(pToLevel.Level + 1));
 
                             client.Out.SendMessage("You gave " + pToLevel.Name + " a free level!",
                                                        eChatType.CT_Important, eChatLoc.CL_SystemWindow);
@@ -219,27 +219,9 @@ namespace DOL.GS.Commands
 
                             if (newLevel > curLevel)
                             {
-                                bool curSecondStage = player.IsLevelSecondStage;
-                                if (newLevel > curLevel && curSecondStage)
-                                {
-                                    player.GainExperience(eXPSource.Other, player.GetExperienceValueForLevel(++curLevel));
-                                }
-                                if (newLevel != curLevel || !curSecondStage)
-                                    player.Level = newLevel;
-
-                                // If new level is more than 40, then we have
-                                // to add the skill points from half-levels
-                                if (newLevel > 40)
-                                {
-                                    if (curLevel < 40)
-                                        curLevel = 40;
-                                    for (int i = curLevel; i < newLevel; i++)
-                                    {
-                                        // we skip the first add if was in level 2nd stage
-                                        if (curSecondStage)
-                                            curSecondStage = false;
-                                    }
-                                }
+                                // Experience goes to the new level's floor: leaving it below makes the
+                                // next kill "top up" a whole level and pour it into Master Levels.
+                                player.SetLevelDirect(newLevel);
                             }
 
                             if (args[1] == "reset")

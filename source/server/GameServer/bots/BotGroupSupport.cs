@@ -228,8 +228,7 @@ namespace DOL.GS
                 // A player who just said no (to release, or to wait for someone else) isn't asked again for a minute.
                 if (RecentlyDeclined(corpse.TempProperties.GetProperty<long>(DOL.GS.Spells.ResurrectSpellHandler.RESURRECT_DECLINED_AT_PROPERTY),
                         GameLoop.GameLoopTime)) continue;
-                int cost = (int)(bot.MaxMana * Math.Max(.1f, .5f + (corpse.Level - bot.Level) / (float)Math.Max(1, (int)bot.Level)));
-                if (bot.Mana < cost) continue;
+                if (bot.Mana < BotSpellPower.ResurrectCost(bot, corpse)) continue;
                 if (combat && corpse is GameBot && HardFoeOverCorpse(corpse) != null) continue;
                 if (state.Resurrection.TryReserve(bot, corpse, GameLoop.GameLoopTime, spell.CastTime,
                     true, combat, combat ? budget + 1 : healers, false, bot.CanCastHealSpells)) return corpse;
@@ -252,7 +251,7 @@ namespace DOL.GS
             if (UnderAttack(bot)) return "under attack";
             if (!HasCorpseLineOfSight(bot, corpse)) return "no line of sight to the corpse";
             if (corpse.TempProperties.GetProperty<GameLiving>("RESURRECT_CASTER") != null) return "another resurrection is already pending on the corpse";
-            int cost = (int)(bot.MaxMana * Math.Max(.1f, .5f + (corpse.Level - bot.Level) / (float)Math.Max(1, (int)bot.Level)));
+            int cost = BotSpellPower.ResurrectCost(bot, corpse);
             if (bot.Mana < cost) return $"not enough power for the reservation ({bot.Mana}/{cost} of {bot.MaxMana})";
             if (corpse is GameBot && HardFoeOverCorpse(corpse) is GameNPC foe) return $"the corpse lies under {foe.Name}, still fighting";
             return "the shared reservation refused (another resurrector holds it, or healers are needed for combat)";

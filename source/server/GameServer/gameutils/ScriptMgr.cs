@@ -10,6 +10,7 @@ using DOL.AI.Brain;
 using DOL.Config;
 using DOL.Events;
 using DOL.GS.Commands;
+using DOL.GS.PacketHandler;
 using DOL.GS.ServerRules;
 using DOL.GS.Spells;
 
@@ -373,7 +374,30 @@ namespace DOL.GS
             {
                 client.Player.Notify(DOL.Events.GamePlayerEvent.ExecuteCommand, new ExecuteCommandEventArgs(client.Player, myCommand, pars));
             }
-            myCommand.m_cmdHandler.OnCommand(client, pars);
+
+            if (!RunCommandHandler(myCommand.m_cmdHandler, client, pars, out string refusal))
+                client.Out?.SendMessage(refusal, eChatType.CT_System, eChatLoc.CL_SystemWindow);
+        }
+
+        /// <summary>
+        /// Runs a command handler. A command typed at the server console has no player, and the many handlers that read
+        /// client.Player threw a NullReferenceException that HandleCommand logged as an error (DR-042, e.g. /stats);
+        /// that case now answers with <paramref name="refusal"/> instead. Any other exception still propagates.
+        /// </summary>
+        public static bool RunCommandHandler(ICommandHandler handler, GameClient client, string[] pars, out string refusal)
+        {
+            refusal = null;
+
+            try
+            {
+                handler.OnCommand(client, pars);
+                return true;
+            }
+            catch (NullReferenceException) when (client.Player == null)
+            {
+                refusal = $"{pars[0].TrimStart('&')} needs a character in the game; the server console has none.";
+                return false;
+            }
         }
 
         /// <summary>

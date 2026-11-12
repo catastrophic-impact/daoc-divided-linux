@@ -1,0 +1,83 @@
+[
+ {
+  "table": "Mob",
+  "key": "alb_100008959",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "mid_100008959",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "100008959",
+  "set": {
+   "AggroLevel": 0,
+   "AggroRange": 0,
+   "Flags": 16
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1030-0",
+  "set": {
+   "X": 305206,
+   "Y": 446311,
+   "Z": 7792
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1030-1",
+  "set": {
+   "X": 305206,
+   "Y": 446311,
+   "Z": 7792
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1030-2",
+  "set": {
+   "X": 305206,
+   "Y": 446311,
+   "Z": 7792
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1058-0",
+  "set": {
+   "X": 379374,
+   "Y": 601872,
+   "Z": 8181
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1058-1",
+  "set": {
+   "X": 379374,
+   "Y": 601872,
+   "Z": 8181
+  }
+ },
+ {
+  "table": "Mob",
+  "key": "artifact-anchor-1058-2",
+  "set": {
+   "X": 379374,
+   "Y": 601872,
+   "Z": 8181
+  }
+ }
+]

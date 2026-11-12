@@ -3,6 +3,101 @@
 The newest version is first. For the full detail of every earlier update, see
 [docs/history/CHANGELOG-0.3-to-0.32b.md](docs/history/CHANGELOG-0.3-to-0.32b.md).
 
+## DR-dev-0.1e — 2026-11-08
+
+Bots at every level, the Regalia armor art, and the fixes from an overnight run of DR-dev-0.1d with 3,600 bots. It
+replaces DR-dev-0.1d. A DR-dev-0.1d folder can install it from the launcher (Options > Update and repair > CHECK FOR
+UPDATES); older folders update by hand once.
+
+- **Level spread (new, off by default):** the Bot Goals tab can keep bots at every level. Set what share of the
+  gamebots stop gaining experience at 1-9, 10-19, 20-34 or 35-49, and what share go on to 50 (defaults 10/10/15/15/50).
+  A held bot keeps playing, looting, questing and earning realm points; it just doesn't level. Each bot keeps the
+  same stop level every start. Bots already past their stop keep their level. Your character and /spawn companions are
+  never held back.
+- **+ Lv.25 bots:** the Bots page has a + Lv.25 button beside + Lv.1 and + Lv.50 (Shift adds 10, Ctrl 100). They
+  start in their capital with 50 gold and no armor, trained for their level.
+- **Regalia art:** the Storm, Tara and Camelot Regalia now look as designed. The client patch adds their armor and
+  cloaks; in DR-dev-0.1d the Storm Regalia drew nothing on a release client, and Tara and Camelot used stock armor.
+- **Alchemy:** 243 potion recipes the client lists but the world lacked (the Potion and Draught tiers and the Greater
+  and Superior elixirs) can be made now, and a recipe your realm can't make says why instead of failing silently.
+- **Bot resurrection:** bots counted a rez's power cost wrong, so their raises started and were then refused without
+  a message. They now pay what the spell really costs.
+- **Bot Animist turrets:** turrets fired at targets out of their range (85-95% of casts refused); they now pick
+  targets in range and wait out an interrupt.
+- **Stability:** Krackenschtein no longer crashes and disappears from the world, and a crash in the bots' trips to
+  merchants and trainers is gone.
+- **Bots:** two deaths at a far camp no longer send a levelling bot back to its capital; bots let go of stale fight
+  targets and call their pets off; group buffs aren't recast over and over; a lone keep march walks on instead of
+  turning back from the same pack forever.
+- **Warlock:** Spell of Creation targets a corpse, as it should.
+
+## DR-dev-0.1d — 2026-11-07
+
+The Sovereign remakes, a launcher that updates itself, and the fixes from a full day of playtesting. It replaces
+DR-dev-0.1b and includes everything listed under DR-dev-0.1c (built, never published).
+
+- **Updates from the launcher:** from this build on, the launcher looks for a newer release on GitHub once a day (or
+  Options > Update and repair > CHECK FOR UPDATES), and offers Install, Later or Skip this version. Install
+  downloads the release, checks it against its published SHA-256 and the package's own file list, then copies it
+  over your folder with a backup of every file it replaces, keeps your world, account, logs and settings, and rolls
+  back if anything fails. The daily check can be turned off. Ported from chris4aker's Living Server.
+- **Storm Sovereign remake:** Hammer, Axe and Shield lines with 60 chained styles, Tempest charges spent by
+  finishers, merged spells, three realm abilities, one Storm Wolf, and Storm Regalia as real items with a set bonus.
+- **Tuatha Sovereign remake:** Scythe, Blades and Shield, 61 styles, Sidhe Marks, the two courts, 15 spells, Evade,
+  the Morrigan form and Regalia of Tara.
+- **Pendragon Sovereign remake:** Sword, Polearm and Shield, 61 styles, Valor, 9 new spells, three realm abilities
+  and Regalia of Camelot. (The Regalia sets use stock armor art in this build.)
+- **Sovereign styles:** a finisher whose hit kills still runs its splash, heals and spends; style effects can't be
+  resisted; the Sovereign's life siphon now says what it restored.
+- **Loot:** one loot roll per kill with personal drops for the player who earned them (a hand pickup no longer
+  autosplits them away), bad-luck protection, family loot tables for 1,500 monster names that dropped only coin,
+  ToA bonuses on random items (rog_toa_item_chance 15), class-filtered cap lines, and no single huge stat line.
+- **Atlantis:** monsters notice you at 500 like the rest of the world (was 800); 57 djinn landings moved out of
+  monster camps; aggressive Stable Masters and Bakabti at the Havens are at peace; zone exits route bots correctly;
+  a warning when you start holding your breath; the Ruins of Atlantis sea monsters are back above the sea floor.
+- **Master Levels and artifacts:** trial starters no longer stand in hostile camps; trial clones, respawns and
+  encounter forms no longer pay full experience and loot; lone encounter forms no longer cast like the boss; the Band
+  of Stars snake has normal health; the Winged Helm and Golden Scarab Vest encounters moved out of their camps.
+- **Classes:** Mauler left-hand wraps fit the left hand; Reaver Boomslang/Taipan snares 40% and Constrictor procs
+  Reaver Pain; Malefic Horror makes monsters flee; Necromancer servants proc again; Enchanter Stone Skin's armor
+  lands; pulsing chants no longer leave a negative regeneration bonus; regeneration bonuses stack again (issue #10);
+  monsters on model IDs the 1.130 client reused look right again.
+- **Bots:** they notice enemy players like players do instead of by radar; Darkness Falls princes no longer eat them
+  and solo bots stay on their own side; Atlantis bots give up fewer trips; a bot in your group stops its old trip;
+  /invite no longer breaks a bot party mid-camp; raid deaths no longer make bots pick easier camps; and many smaller
+  fixes from the playtest and server logs.
+- **Guilds:** /gc addalt adds your own other characters to your guild, even offline.
+
+## DR-dev-0.1c — 2026-11-06
+
+A fix for Atlantis movement; it replaces DR-dev-0.1b. (Built, never published: its fixes ship in DR-dev-0.1d.)
+
+- Atlantis: on land below sea level, and in the water, players stopped and snapped in place, and drowned standing on
+  dry land in the Stygian Delta and the Land of Atum. The server now puts water only where the client draws it (each
+  zone's river and sea shapes), and Hibernia's Stygian Delta allows diving like every other Atlantis zone (world
+  update).
+- Gamebots swim on the water surface in battlegrounds and Atlantis instead of hopping up and down.
+
+## DR-dev-0.1b — 2026-11-05
+
+Fixes to the Fishing Update from the first Discord reports; it replaces DR-dev-0.1a.
+
+- Border keep gates: Castle Sauvage, Snowdonia Fortress, Svasud Faste, Vindsaul Faste and Druim Cain opened but held
+  the player in ("Invalid ZonePoint ... ID 191/193"). The client patch drops live's New Frontiers jumps past those
+  gates; the launcher patches the client copy again on its next start.
+- Battlegrounds: the Abermenai portal keeps had no guards or NPCs and the Murdaigean ones only Siege Masters; both now
+  have Thidranki's guards, Hastener, merchants and Siegemasters (world update). Gamebot deaths send the realm kill
+  messages, and gamebots that release in a battleground come back at their own portal keep, not their capital.
+- Realm points and experience for a gamebot kill count the gamebots in your group: a player grouped with gamebots got
+  nothing for the kills their bots made. The server log has an RVR_PLAYER_REWARD line for every such reward.
+- Heretics and Valkyries count as resurrecters: a dead gamebot beside one now waits for the rez instead of releasing
+  after 20 seconds.
+- A party member that falls behind is no longer moved to its leader while the leader is fighting.
+- Companions level with their owner (up to 50) on their next idle turn; /raid and the companion raid open at level 50
+  or higher, not only at exactly 50.
+- Launcher: says which serverconfig.xml value stops the server, and why START SERVER does nothing when another server
+  already uses the port.
+
 ## DR-dev-0.1a — 2026-11-04
 
 Three fixes to the Fishing Update; it replaces DR-dev-0.1. The world is unchanged.
@@ -327,6 +422,36 @@ client). The original DAoC client is no longer supported, and the Sluaghbinder c
 - The Sluaghbinder is no longer offered anywhere: new characters can't choose it, no gamebots or /spawn companions are
   made as one, and its trainer, wisp, quest line and quest monsters are gone (existing installs: run
   tools/claude-version/remove_sluaghbinder_npcs.py once with the server stopped). Old characters still load.
+- Solo gamebots pick up the coin and items of their own kills again. The check for who may pick up a dropped bag
+  compared the owner by reference instead of by value, so a bot never counted as the owner of its own drops.
+- Bots buy the best equipment upgrade they can afford. They chose the best upgrade on a merchant's list first and,
+  when it cost more than they had, bought nothing, although cheaper upgrades were on the same list.
+- Relic campaigns: an army out to take a relic first takes the frontier keeps whose sentinels guard that relic keep.
+  Every keep a realm holds stands a 3x-health sentinel at its relic temple, and an army that marched straight in was
+  wiped by them (in one test 125 of 173 deaths at a relic keep were guards, 63 of them sentinels). The relic siege
+  follows once at most two sentinels are left.
+- High-end raid encounters (epic named monsters, the raid boss, a dungeon's final bosses): a player in the fight gets
+  one item in four straight into the bag and 25% of the coin; the bots share the rest. Other kills are unchanged.
+- Gamebots are drawn at a player's height (short, average or tall) instead of a random size that could make them
+  far taller than any player.
+- Bot relic raids can take a relic home. Before, a relic raid could never end in a capture:
+  - After the gates fall, the army goes up onto the enemy relic shrine (in four of the six relic keeps the relic sits
+    about 650 units from the keep centre and 830 higher, so the bots never saw it and the pad never held the 8 it
+    needs). A relic is lifted as soon as there is a way to it, not after every door of the keep is broken.
+  - The healthiest raider on the pad carries it and runs home: no fighting or looting on the way unless stunned or
+    cornered, and it opens its own keep's gates to reach its shrine (it used to stand outside them until the stuck
+    check made it drop the relic, over and over). The escort stays with it until the capture.
+  - Sieging bots with nothing else to fight hit the nearest gate by hand, as players did, instead of waiting for rams.
+    Ranged bots step in to a sentinel (relic temple guards take no damage from beyond 800).
+  - A relic campaign is kept, and retried, until its relic siege really starts; it ends after six hours without a
+    keep taken (not six hours from the start) or three steps in a row with no progress. Raids in progress survive a
+    server restart and are planned again about five minutes later; a relic being carried at a restart goes back to
+    the pad it was taken from.
+  - A relic that goes back to its pad by itself ends its carrier event (the leftover event blocked every new siege
+    for every realm for up to four hours), only living sentinels count, every refused pickup is logged with the
+    reason, and the frontier porters no longer teleport a player carrying a relic (bots already could not).
+- Gamebots face the monster they are hitting. A bot that walked to its own spot (closing in, a flank, behind for a
+  style) and stopped kept facing the way it walked while it swung; it now turns to its target.
 
 **World**
 - Abermenai, the 15-19 battleground, loads in the original game client. The client shipped it without terrain, so

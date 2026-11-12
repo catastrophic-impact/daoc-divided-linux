@@ -1,0 +1,214 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T23:11:50.900847+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "Spell",
+   "key": "local-round3-live-v1-77738",
+   "op": "update",
+   "before": {
+    "Type": "ArmorFactorBuff"
+   },
+   "after": {
+    "Type": "PaladinArmorFactorBuff"
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99992932",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99992947",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99993025",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99993252",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99993295",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99993736",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99993904",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99994124",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99994616",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99995621",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99995882",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "99995970",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  },
+  {
+   "table": "Mob",
+   "key": "81deae8f-0fb1-4005-8ba4-8b12e24d0e72",
+   "op": "update",
+   "before": {
+    "ClassType": "DOL.GS.GameNPC",
+    "AggroLevel": 200,
+    "AggroRange": 500
+   },
+   "after": {
+    "ClassType": "DOL.GS.GameTrainingDummy",
+    "AggroLevel": 0,
+    "AggroRange": 0
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

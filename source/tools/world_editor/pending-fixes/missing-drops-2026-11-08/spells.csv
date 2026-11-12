@@ -1,0 +1,16 @@
+Official spell,Our spell,Type,Copied from,Damage,Value,Duration,Target,Description
+1586,801586,DirectDamage,801064,331.0,0.0,0,Enemy,Does 331.5 Heat damage to the target.
+1593,801593,CrushResistDebuff,811095,0.0,5.0,20,Enemy,Decreases the target's resistances to Crush damage by 5%.
+1594,801594,SlashResistDebuff,808786,0.0,5.0,20,Enemy,Decreases the target's resistances to Slash damage by 5%.
+1595,801595,ThrustResistDebuff,808788,0.0,5.0,20,Enemy,Decreases the target's resistances to Thrust damage by 5%.
+1880,801880,DirectDamage,801064,72.0,0.0,0,Enemy,Does 72.0 Body damage to the target.
+3723,803723,DirectDamage,801064,50.0,0.0,0,Enemy,Does 50.0 Energy damage to the target.
+3731,803731,DirectDamage,801064,59.0,0.0,0,Enemy,Does 59.0 Energy damage to the target.
+3745,803745,DirectDamage,801064,59.0,0.0,0,Enemy,Does 59.0 Cold damage to the target.
+3746,803746,DirectDamage,801064,68.0,0.0,0,Enemy,Does 68.0 Cold damage to the target.
+3796,803796,PowerHeal,801183,0.0,50.0,0,Self,The target regains 50 power points.
+3874,803874,StrengthConstitutionBuff,803853,0.0,30.0,600,Self,Target's strength and constitution are increased by 30.
+3875,803875,DexterityQuicknessBuff,803856,0.0,30.0,600,Self,Target's dexterity and quickness are increased by 30.
+10874,810874,Lifedrain,803832,39.0,-100,0,Enemy,The target takes 39.0 Cold damage and the attacker is healed for 100% of the damage dealt.
+12207,812207,Heal,801581,0.0,80.0,0,Self,The target regains 80 hit points.
+12208,812208,DirectDamage,801064,95.0,0.0,0,Enemy,Does 95.0 Heat damage to the target.

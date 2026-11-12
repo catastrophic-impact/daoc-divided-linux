@@ -468,6 +468,10 @@ namespace DOL.GS.Styles
 			if (allowFreeProc && ValhallasBlessing != null && Util.Chance(75))
 				return 0;
 
+			// 1.129 Champion Valor auras: a 2-10% chance for a style to cost no endurance (DR-101).
+			if (allowFreeProc && DOL.GS.Spells.CostFreeChance.Rolls(living))
+				return 0;
+
 			// Camelot Herald 1.90 : Battlemaster styles will now cost a flat amount of Endurance, regardless of weapon speed
 			if (style.Spec is Specs.Battlemaster)
 				return Math.Max(1, (int) Math.Ceiling((30 * style.EnduranceCost / 40) * living.GetModified(eProperty.FatigueConsumption) * 0.01));
@@ -636,7 +640,10 @@ namespace DOL.GS.Styles
 						temp += LanguageMgr.GetTranslation(player.Client.Account.Language, "DetailDisplayHandler.HandlePacket.YouFumble");
 						break;
 					case Style.eAttackResultRequirement.Style:
-						Style reqStyle = SkillBase.GetStyleByID(style.OpeningRequirementValue, player.CharacterClass.ID);
+						// the opener of the style's own class first: a companion's styles are shown to its player, whose class
+						// may not have them (a Necromancer reading an Armsman's Opal Slash got "(style not found 58)" - 2026-11-05)
+						Style reqStyle = SkillBase.GetStyleByID(style.OpeningRequirementValue, style.ClassID) ??
+						                 SkillBase.GetStyleByID(style.OpeningRequirementValue, player.CharacterClass.ID);
 						if (reqStyle == null)
 						{
 							reqStyle = SkillBase.GetStyleByID(style.OpeningRequirementValue, 0);

@@ -1,0 +1,139 @@
+[
+ {
+  "table": "LineXSpell",
+  "delete": "Bead_END"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "Bead_HEAL"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "Bead_POM"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_30115"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_30125"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_31053"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_31054"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32140"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32156"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32162"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32179"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32191"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32211"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32231"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32233"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_32280"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_33333"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_34000"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_4075"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_9067"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "item_effects_9175"
+ },
+ {
+  "table": "LineXSpell",
+  "delete": "Potion_Heal_230"
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "22012_tradalva",
+  "set": {
+   "Spells": ""
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "22013_tradman",
+  "set": {
+   "Spells": ""
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "3e68d407-24af-460d-82db-b32775519473",
+  "set": {
+   "Spells": "5405"
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "4e2458359-ab7f-48ad-93499-147f51a462bd",
+  "set": {
+   "Spells": ""
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "98397189",
+  "set": {
+   "Spells": ""
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "852a95c4-e9a1-481b-97ac-79634c355ca2",
+  "set": {
+   "Spells": ""
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "fb5b33a0-593e-4e85-9ac3-6b15b389e825",
+  "set": {
+   "Spells": ""
+  }
+ }
+]

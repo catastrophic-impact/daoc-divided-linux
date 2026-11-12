@@ -1,0 +1,612 @@
+[
+ {
+  "index": 0,
+  "line": "Slash",
+  "name": "Crowned Cut",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Holy fire burn for 12 seconds."
+ },
+ {
+  "index": 1,
+  "line": "Slash",
+  "name": "Lady of the Lake",
+  "level": 3,
+  "open": "chain",
+  "after": "Crowned Cut",
+  "growth": 1.1,
+  "description": "A holy strike and a 30% snare."
+ },
+ {
+  "index": 2,
+  "line": "Slash",
+  "name": "Judgment of Excalibur",
+  "level": 10,
+  "open": "chain",
+  "after": "Lady of the Lake",
+  "growth": 1.45,
+  "description": "Judgment: holy fire, +20% per Valor; heals your party 3% per Valor."
+ },
+ {
+  "index": 3,
+  "line": "Slash",
+  "name": "Riposte of Camelot",
+  "level": 5,
+  "open": "parry",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you parry. +1 Valor and +10% parry for 10 seconds."
+ },
+ {
+  "index": 4,
+  "line": "Slash",
+  "name": "Gawain's Answer",
+  "level": 13,
+  "open": "chain",
+  "after": "Riposte of Camelot",
+  "growth": 1.1,
+  "description": "A strike with the strength of the noon sun: +25%."
+ },
+ {
+  "index": 5,
+  "line": "Slash",
+  "name": "Sun at Noon",
+  "level": 38,
+  "open": "chain",
+  "after": "Gawain's Answer",
+  "growth": 1.45,
+  "description": "Judgment with a 3-second stun."
+ },
+ {
+  "index": 6,
+  "line": "Slash",
+  "name": "Shield-Breaker",
+  "level": 8,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. +1 Valor; the target's block -20% for 10 seconds."
+ },
+ {
+  "index": 7,
+  "line": "Slash",
+  "name": "Kay's Cut",
+  "level": 28,
+  "open": "chain",
+  "after": "Shield-Breaker",
+  "growth": 1.1,
+  "description": "Attack speed -25% for 12 seconds."
+ },
+ {
+  "index": 8,
+  "line": "Slash",
+  "name": "Caliburn's Oath",
+  "level": 40,
+  "open": "chain",
+  "after": "Kay's Cut",
+  "growth": 1.45,
+  "description": "Judgment; you gain 20% absorption for 10 seconds."
+ },
+ {
+  "index": 9,
+  "line": "Slash",
+  "name": "Bedivere's Turn",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. 40% snare and a holy burn."
+ },
+ {
+  "index": 10,
+  "line": "Slash",
+  "name": "Return the Sword",
+  "level": 23,
+  "open": "chain",
+  "after": "Bedivere's Turn",
+  "growth": 1.1,
+  "description": "Disarms the target for 5 seconds."
+ },
+ {
+  "index": 11,
+  "line": "Slash",
+  "name": "Mordred's Bane",
+  "level": 20,
+  "open": "back",
+  "after": null,
+  "growth": 1.2,
+  "description": "From behind. A heavy blow and a holy burn."
+ },
+ {
+  "index": 12,
+  "line": "Slash",
+  "name": "Camlann",
+  "level": 25,
+  "open": "chain",
+  "after": "Mordred's Bane",
+  "growth": 1.1,
+  "description": "+25% if the target is below half health."
+ },
+ {
+  "index": 13,
+  "line": "Slash",
+  "name": "Last Light of Camelot",
+  "level": 43,
+  "open": "chain",
+  "after": "Camlann",
+  "growth": 1.5,
+  "description": "Capstone Judgment, doubled below 25% health."
+ },
+ {
+  "index": 14,
+  "line": "Slash",
+  "name": "Hidden Blade of Avalon",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. A great opener and a 3-second stun."
+ },
+ {
+  "index": 15,
+  "line": "Slash",
+  "name": "Mists of Avalon",
+  "level": 30,
+  "open": "chain",
+  "after": "Hidden Blade of Avalon",
+  "growth": 1.1,
+  "description": "A holy burn and +2 Valor."
+ },
+ {
+  "index": 16,
+  "line": "Slash",
+  "name": "Grail Light",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "A strike that heals you."
+ },
+ {
+  "index": 17,
+  "line": "Slash",
+  "name": "Grail Quest",
+  "level": 35,
+  "open": "chain",
+  "after": "Grail Light",
+  "growth": 1.1,
+  "description": "Heals your party 10%."
+ },
+ {
+  "index": 18,
+  "line": "Slash",
+  "name": "Lancelot's Fury",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Two quick strikes, +1 Valor."
+ },
+ {
+  "index": 19,
+  "line": "Slash",
+  "name": "Excalibur Unsheathed",
+  "level": 48,
+  "open": "chain",
+  "after": "Lancelot's Fury",
+  "growth": 1.6,
+  "description": "Signature Judgment: holy fire on every enemy within 350; heals your party."
+ },
+ {
+  "index": 20,
+  "line": "Polearm",
+  "name": "Couched Lance",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "A long-reach thrust."
+ },
+ {
+  "index": 21,
+  "line": "Polearm",
+  "name": "Unhorse",
+  "level": 3,
+  "open": "chain",
+  "after": "Couched Lance",
+  "growth": 1.1,
+  "description": "Knocks the target off its feet: 3-second stun."
+ },
+ {
+  "index": 22,
+  "line": "Polearm",
+  "name": "Judgment of the Lance",
+  "level": 10,
+  "open": "chain",
+  "after": "Unhorse",
+  "growth": 1.45,
+  "description": "Judgment: holy fire, +20% per Valor; wards your party 3% per Valor."
+ },
+ {
+  "index": 23,
+  "line": "Polearm",
+  "name": "Lancer's Answer",
+  "level": 5,
+  "open": "parry",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you parry. A strike and +1 Valor."
+ },
+ {
+  "index": 24,
+  "line": "Polearm",
+  "name": "Sweep of the Field",
+  "level": 13,
+  "open": "chain",
+  "after": "Lancer's Answer",
+  "growth": 1.1,
+  "description": "Sweep: the target and 3 enemies near it."
+ },
+ {
+  "index": 25,
+  "line": "Polearm",
+  "name": "Field of Camlann",
+  "level": 38,
+  "open": "chain",
+  "after": "Sweep of the Field",
+  "growth": 1.45,
+  "description": "Judgment on every enemy within 350; each burns."
+ },
+ {
+  "index": 26,
+  "line": "Polearm",
+  "name": "The Tilt",
+  "level": 8,
+  "open": "front",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the front. Interrupts, +1 Valor."
+ },
+ {
+  "index": 27,
+  "line": "Polearm",
+  "name": "Splinter the Shield",
+  "level": 28,
+  "open": "chain",
+  "after": "The Tilt",
+  "growth": 1.1,
+  "description": "The target's block and parry -20% for 10 seconds."
+ },
+ {
+  "index": 28,
+  "line": "Polearm",
+  "name": "Breaker of Hosts",
+  "level": 40,
+  "open": "chain",
+  "after": "Splinter the Shield",
+  "growth": 1.45,
+  "description": "Judgment with a 4-second stun."
+ },
+ {
+  "index": 29,
+  "line": "Polearm",
+  "name": "Flank of the Charge",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. 40% snare."
+ },
+ {
+  "index": 30,
+  "line": "Polearm",
+  "name": "Rider Down",
+  "level": 23,
+  "open": "chain",
+  "after": "Flank of the Charge",
+  "growth": 1.1,
+  "description": "Roots the target for 8 seconds."
+ },
+ {
+  "index": 31,
+  "line": "Polearm",
+  "name": "Dragon's Tail",
+  "level": 20,
+  "open": "back",
+  "after": null,
+  "growth": 1.2,
+  "description": "From behind. A heavy blow and a holy burn."
+ },
+ {
+  "index": 32,
+  "line": "Polearm",
+  "name": "Wyrmfire",
+  "level": 25,
+  "open": "chain",
+  "after": "Dragon's Tail",
+  "growth": 1.1,
+  "description": "Holy fire on the target and enemies within 300 of it."
+ },
+ {
+  "index": 33,
+  "line": "Polearm",
+  "name": "Rhongomyniad",
+  "level": 43,
+  "open": "chain",
+  "after": "Wyrmfire",
+  "growth": 1.5,
+  "description": "Capstone Judgment, doubled below 25% health."
+ },
+ {
+  "index": 34,
+  "line": "Polearm",
+  "name": "Silent Lance",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. A great opener, +2 Valor."
+ },
+ {
+  "index": 35,
+  "line": "Polearm",
+  "name": "Pin to the Earth",
+  "level": 30,
+  "open": "chain",
+  "after": "Silent Lance",
+  "growth": 1.1,
+  "description": "3-second stun."
+ },
+ {
+  "index": 36,
+  "line": "Polearm",
+  "name": "Charge of Albion",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "You gain 30% speed for 6 seconds; the strike snares 40%."
+ },
+ {
+  "index": 37,
+  "line": "Polearm",
+  "name": "Banner of the Dragon",
+  "level": 35,
+  "open": "chain",
+  "after": "Charge of Albion",
+  "growth": 1.1,
+  "description": "Your party gains 10% melee damage for 15 seconds."
+ },
+ {
+  "index": 38,
+  "line": "Polearm",
+  "name": "Pendragon's Reach",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Sweeps every enemy within 400: +1 Valor each (up to 3)."
+ },
+ {
+  "index": 39,
+  "line": "Polearm",
+  "name": "The Red Dragon",
+  "level": 48,
+  "open": "chain",
+  "after": "Pendragon's Reach",
+  "growth": 1.6,
+  "description": "Signature Judgment: holy fire on every enemy within 500; wards your party."
+ },
+ {
+  "index": 40,
+  "line": "Shields",
+  "name": "King's Rebuke",
+  "level": 1,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Taunt, +1 Valor."
+ },
+ {
+  "index": 41,
+  "line": "Shields",
+  "name": "Hold the Gate",
+  "level": 3,
+  "open": "chain",
+  "after": "King's Rebuke",
+  "growth": 1.1,
+  "description": "You gain 30% block for 8 seconds."
+ },
+ {
+  "index": 42,
+  "line": "Shields",
+  "name": "Pridwen's Answer",
+  "level": 10,
+  "open": "chain",
+  "after": "Hold the Gate",
+  "growth": 1.3,
+  "description": "4-second stun."
+ },
+ {
+  "index": 43,
+  "line": "Shields",
+  "name": "Stand Fast",
+  "level": 5,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. +1 Valor and a ward on you."
+ },
+ {
+  "index": 44,
+  "line": "Shields",
+  "name": "Shield of the Round Table",
+  "level": 13,
+  "open": "chain",
+  "after": "Stand Fast",
+  "growth": 1.1,
+  "description": "Taunts and strikes every enemy within 350, +1 Valor."
+ },
+ {
+  "index": 45,
+  "line": "Shields",
+  "name": "Judgment of the Round Table",
+  "level": 38,
+  "open": "chain",
+  "after": "Shield of the Round Table",
+  "growth": 1.45,
+  "description": "Judgment; wards your party 3% per Valor."
+ },
+ {
+  "index": 46,
+  "line": "Shields",
+  "name": "Crown's Bash",
+  "level": 8,
+  "open": "block",
+  "after": null,
+  "growth": 1.0,
+  "description": "After you block. +1 Valor and a 3-second stun."
+ },
+ {
+  "index": 47,
+  "line": "Shields",
+  "name": "Shatterguard",
+  "level": 28,
+  "open": "chain",
+  "after": "Crown's Bash",
+  "growth": 1.1,
+  "description": "The target's block -20% for 10 seconds."
+ },
+ {
+  "index": 48,
+  "line": "Shields",
+  "name": "Walls of Camelot",
+  "level": 40,
+  "open": "chain",
+  "after": "Shatterguard",
+  "growth": 1.45,
+  "description": "Judgment; your party gains 15% absorption for 10 seconds."
+ },
+ {
+  "index": 49,
+  "line": "Shields",
+  "name": "Pridwen's Bash",
+  "level": 12,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.3,
+  "description": "Anytime shield slam: a 9-second stun (normal immunity), +1 Valor."
+ },
+ {
+  "index": 50,
+  "line": "Shields",
+  "name": "Shield Rush",
+  "level": 18,
+  "open": "side",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the side. 40% snare."
+ },
+ {
+  "index": 51,
+  "line": "Shields",
+  "name": "Ram the Line",
+  "level": 23,
+  "open": "chain",
+  "after": "Shield Rush",
+  "growth": 1.1,
+  "description": "Knocks the target back: 2-second stun."
+ },
+ {
+  "index": 52,
+  "line": "Shields",
+  "name": "Hill of Badon",
+  "level": 20,
+  "open": "front",
+  "after": null,
+  "growth": 1.0,
+  "description": "From the front. Interrupts, +1 Valor."
+ },
+ {
+  "index": 53,
+  "line": "Shields",
+  "name": "Unbroken",
+  "level": 25,
+  "open": "chain",
+  "after": "Hill of Badon",
+  "growth": 1.1,
+  "description": "You gain 30% block for 8 seconds."
+ },
+ {
+  "index": 54,
+  "line": "Shields",
+  "name": "The Throne Stands",
+  "level": 43,
+  "open": "chain",
+  "after": "Unbroken",
+  "growth": 1.5,
+  "description": "Capstone Judgment: taunts and burns every enemy within 500; wards your party."
+ },
+ {
+  "index": 55,
+  "line": "Shields",
+  "name": "Hidden Pridwen",
+  "level": 15,
+  "open": "stealth",
+  "after": null,
+  "growth": 1.2,
+  "description": "From stealth. 4-second stun, +2 Valor."
+ },
+ {
+  "index": 56,
+  "line": "Shields",
+  "name": "Guarded Retreat",
+  "level": 30,
+  "open": "chain",
+  "after": "Hidden Pridwen",
+  "growth": 1.1,
+  "description": "A ward on you."
+ },
+ {
+  "index": 57,
+  "line": "Shields",
+  "name": "Oath of Protection",
+  "level": 33,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Heals you 5% and the ally you guard 10%."
+ },
+ {
+  "index": 58,
+  "line": "Shields",
+  "name": "Fealty",
+  "level": 35,
+  "open": "chain",
+  "after": "Oath of Protection",
+  "growth": 1.1,
+  "description": "Heals your party 10%."
+ },
+ {
+  "index": 59,
+  "line": "Shields",
+  "name": "Rally to the King",
+  "level": 45,
+  "open": "anytime",
+  "after": null,
+  "growth": 0.85,
+  "description": "Your party gains 10% block and parry for 15 seconds."
+ },
+ {
+  "index": 60,
+  "line": "Shields",
+  "name": "Pendragon's Shield",
+  "level": 48,
+  "open": "chain",
+  "after": "Rally to the King",
+  "growth": 1.6,
+  "description": "Signature Judgment: wards your party and gives it 20% absorption for 10 seconds."
+ }
+]

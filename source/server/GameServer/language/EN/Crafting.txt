@@ -3,6 +3,7 @@
 ## Tradeskill Names
 Crafting.Name.Alchemy:					    Alchemy
 Crafting.Name.Armorcraft:				    Armorcraft
+Crafting.Name.Bountycraft:				    Bountycraft
 Crafting.Name.BasicCrafting:			    Basic Crafting
 Crafting.Name.Clothworking:				    Clothworking
 Crafting.Name.Evocation:				    Spellcrafting

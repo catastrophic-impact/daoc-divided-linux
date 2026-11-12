@@ -34,6 +34,7 @@ namespace DOL.GS
 		ArmorCrafting = 2,
 		SiegeCrafting = 3,
 		Alchemy = 4,
+		BountyCrafting = 5,
 		MetalWorking = 6,
 		LeatherCrafting = 7,
 		ClothWorking = 8,
@@ -97,6 +98,9 @@ namespace DOL.GS
 			//Advanced skill
 			m_craftingskills[(int)eCraftingSkill.Alchemy - 1] = new Alchemy();
 			m_craftingskills[(int)eCraftingSkill.SpellCrafting - 1] = new SpellCrafting();
+
+			// Bountycraft (1.125): every character has it at 1; see BountyCrafting
+			m_craftingskills[(int)eCraftingSkill.BountyCrafting - 1] = new BountyCrafting();
 
 			return true;
 		}

@@ -79,6 +79,34 @@ namespace DOL.GS.Tests
         }
 
         [Test]
+        public void Scenes_ARoleThatTellsTheFrontierIsCastOutForRvr()
+        {
+            // RC10 on the owner's PC: "first night in the frontier", "made it to Castle Excalibur", "first realm points" from a 40
+            // grinding in Avalon. The newcomer's role (task=rvr) goes only to a bot out for rvr.
+            VC.Scene scene = Corpus.Scenes.Single(s => s.Id == "rvr_newbie_frontier");
+            Assert.That(scene.Roles["A"].Task, Is.EqualTo("rvr"));
+            var types = new[] { BotPersonalityType.NoLifer, BotPersonalityType.Socialite, BotPersonalityType.Daredevil, BotPersonalityType.Leveler,
+                BotPersonalityType.Explorer, BotPersonalityType.Crafter };
+            var grinding = Enumerable.Range(1, 12).Select(i => new Debates.Candidate(i, types[i % types.Length], "Cleric", 45)).ToArray();
+            for (int seed = 0; seed < 20; seed++)
+                Assert.That(Debates.Cast(scene, grinding, new Random(seed)), Is.Null, "no bot out for rvr to play the newcomer");
+            var withOne = grinding.Append(new Debates.Candidate(99, BotPersonalityType.Leveler, "Necromancer", 44, RvrTask: true)).ToArray();
+            for (int seed = 0; seed < 20; seed++)
+                Assert.That(Debates.Cast(scene, withOne, new Random(seed))["A"], Is.EqualTo(99));
+        }
+
+        [Test]
+        public void Gossip_NeverAsksWhetherTheOnlinePlayerIsOn()
+        {
+            // RC10 on the owner's PC: "anyone know if Manawatch is on today? want to group again" in /faction while the player was
+            // on. Gossip only runs while the player is online (AutonomousLivingServer.TryGossip).
+            VC.Line[] gossip = Corpus.Lines.Where(line => line.Kind == "gossip").ToArray();
+            Assert.That(gossip, Is.Not.Empty);
+            Assert.That(gossip.Where(line => Regex.IsMatch(line.Text, @"\b(is|are) (on|online|around)\b|know if \{player\}")).Select(line => line.Text),
+                Is.Empty);
+        }
+
+        [Test]
         public void Tells_AboutLevelling_OnlyGoToPlayersUnderTheCap()
         {
             // In-game check 2026-10-27: a level 50 got "how close are you to your next level?" by tell.
@@ -94,7 +122,10 @@ namespace DOL.GS.Tests
         public void Runtime_LoadsTheSameCorpus()
         {
             Assert.That(AutonomousBotVoices.Corpus, Is.Not.Null, "The server finds the embedded corpus.");
-            Assert.That(AutonomousBotVoices.Corpus.Lines.Length, Is.EqualTo(Corpus.Lines.Length));
+            // Living Server 1.2: the server adds the lore bible's lore and rumour lines (LoreChat.CorpusLines) to the built corpus.
+            int lore = LoreChat.CorpusLines(LoreBible.Current).Count(line => Corpus.LineById(line.Id) == null);
+            Assert.That(AutonomousBotVoices.Corpus.Lines.Length, Is.EqualTo(Corpus.Lines.Length + lore));
+            Assert.That(AutonomousBotVoices.Corpus.Lines.Take(Corpus.Lines.Length).Select(line => line.Id), Is.EqualTo(Corpus.Lines.Select(line => line.Id)));
         }
 
         [Test]
@@ -164,7 +195,8 @@ namespace DOL.GS.Tests
             Dictionary<string, string> slots = FullSlots();
             // A storyline episode also gets its two protagonists' names and, for an ending, the player who took a side.
             var story = new Dictionary<string, string>(slots) { ["name_a"] = "Aelwyn", ["name_b"] = "Brannoc", ["player"] = "Kaelith" };
-            Assert.That(Corpus.Scenes.Where(scene => !Debates.Playable(scene, _ => AutonomousBotStorylines.IsStory(scene) ? story : slots))
+            // A tale gets its storyteller's name ({name_b}) and the asker's (AutonomousTales).
+            Assert.That(Corpus.Scenes.Where(scene => !Debates.Playable(scene, _ => AutonomousBotStorylines.IsStory(scene) || AutonomousTales.IsTaleScene(scene) ? story : slots))
                 .Select(scene => scene.Id), Is.Empty);
         }
 
@@ -194,7 +226,9 @@ namespace DOL.GS.Tests
             VC.Voice proper = Corpus.Voices.Single(voice => voice.Name == "proper");
             Assert.That(VC.Style("i cant go, im afk", proper, new Random(1)), Is.EqualTo("I can't go, I'm afk."));
             Assert.That(VC.Style("anyone for tomb?", proper, new Random(1)), Is.EqualTo("Anyone for tomb?"));
-            Assert.That(VC.Style("nice :)", proper, new Random(1)), Is.EqualTo("Nice :)"));
+            // Beta 1.1.2: a short ack stays as players typed it, even from a tidy writer; a short line takes no full stop.
+            Assert.That(VC.Style("nice :)", proper, new Random(1)), Is.EqualTo("nice :)"));
+            Assert.That(VC.Style("np, have fun", proper, new Random(1)), Is.EqualTo("np, have fun"), "a line that starts with a chat word stays as typed");
         }
 
         [Test]
@@ -217,9 +251,11 @@ namespace DOL.GS.Tests
         }
 
         [Test]
-        public void SwapTypo_SwapsTwoNeighboringLettersInOneLongWord()
+        public void SwapTypo_SlipsOneLetterInOneLongWord()
         {
+            // Beta 1.1.2: mostly a dropped letter, sometimes a swap, never the first letter, only in words of five or more.
             var random = new Random(3);
+            int dropped = 0;
             for (int draw = 0; draw < 100; draw++)
             {
                 string typo = VC.SwapTypo("need a healer here", random);
@@ -230,10 +266,15 @@ namespace DOL.GS.Tests
                 Assert.That(changed.Length, Is.LessThanOrEqualTo(1), typo);
                 foreach (int index in changed)
                 {
-                    Assert.That(before[index].Length, Is.GreaterThanOrEqualTo(4));
-                    Assert.That(after[index].OrderBy(c => c), Is.EqualTo(before[index].OrderBy(c => c)), "Same letters, swapped.");
+                    Assert.That(before[index].Length, Is.GreaterThanOrEqualTo(5));
+                    Assert.That(after[index][0], Is.EqualTo(before[index][0]), "the first letter stays");
+                    if (after[index].Length == before[index].Length - 1)
+                        dropped++;
+                    else
+                        Assert.That(after[index].OrderBy(c => c), Is.EqualTo(before[index].OrderBy(c => c)), "Same letters, swapped.");
                 }
             }
+            Assert.That(dropped, Is.GreaterThan(50));
             Assert.That(VC.SwapTypo("ok hi", random), Is.EqualTo("ok hi"), "No word long enough: unchanged.");
         }
 
@@ -250,6 +291,18 @@ namespace DOL.GS.Tests
             noItem["item"] = string.Empty;
             Assert.That(VC.TryFill("pc on {item}?", noItem, out _), Is.False, "An empty value isn't a value (except the opener).");
             Assert.That(VC.TryFill("pc on {item}?", null, out _), Is.False);
+        }
+
+        // Playtest 2026-11-04: "first to 50 as a elementalist".
+        [TestCase("elementalist", "as an elementalist i get no respect")]
+        [TestCase("Armsman", "as an Armsman i get no respect")]
+        [TestCase("cleric", "as a cleric i get no respect")]
+        [TestCase("unique", "as a unique i get no respect")]
+        public void TryFill_UsesAnBeforeAVowel(string value, string expected)
+        {
+            var slots = new Dictionary<string, string> { ["class"] = value };
+            Assert.That(VC.TryFill("as a {class} i get no respect", slots, out string filled), Is.True);
+            Assert.That(filled, Is.EqualTo(expected));
         }
 
         [Test]

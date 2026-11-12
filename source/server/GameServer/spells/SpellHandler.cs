@@ -414,6 +414,15 @@ namespace DOL.GS.Spells
 		/// <summary>
 		/// All checks before any casting begins
 		/// </summary>
+		/// <summary>Why the last CheckBeginCast refused when it sent the caster no message (NPC casters mostly), for the bot tester log.</summary>
+		public string RefuseReason { get; protected set; }
+
+		protected bool Refuse(string reason)
+		{
+			RefuseReason = reason;
+			return false;
+		}
+
 		public virtual bool CheckBeginCast(GameLiving selectedTarget, bool quiet)
 		{
             if (DeathKnight.BlockedByForm(Caster, Spell))
@@ -427,7 +436,7 @@ namespace DOL.GS.Spells
                 return false;
             }
 			if (m_caster.ObjectState != GameObject.eObjectState.Active)
-				return false;
+				return Refuse("caster not active");
  
 			if (!m_caster.IsAlive)
 			{
@@ -637,7 +646,7 @@ namespace DOL.GS.Spells
 						}
 					}
 					else
-						return false;
+						return Refuse("interrupt timer");
 				}
 			}
 
@@ -656,11 +665,11 @@ namespace DOL.GS.Spells
 			if (m_ability != null)
 			{
 				if (!Caster.castingComponent.CheckCooldown(m_ability.Ability))
-					return false;
+					return Refuse("ability on cooldown");
 			}
 
 			if (!Caster.castingComponent.CheckCooldown(m_spell))
-				return false;
+				return Refuse("spell on cooldown");
 
 			switch (Spell.Target)
 			{
@@ -722,7 +731,7 @@ namespace DOL.GS.Spells
 						if (Caster is GameNPC npc)
 							npc.Follow(Target, m_spell.CalculateEffectiveRange(npc) - 100, npc.StickMaximumRange);
 
-						return false;
+						return Refuse($"target too far ({(int) m_caster.GetDistanceTo(Target)} > {Spell.CalculateEffectiveRange(m_caster)})");
 					}
 
 					if (!HasLos)
@@ -772,7 +781,7 @@ namespace DOL.GS.Spells
 							}
 
 							if (!GameServer.ServerRules.IsAllowedToAttack(Caster, Target, quiet))
-								return false;
+								return Refuse("not allowed to attack target");
 
 							break;
 						}
@@ -791,7 +800,7 @@ namespace DOL.GS.Spells
 						case eSpellTarget.REALM:
 						{
 							if (!GameServer.ServerRules.IsSameRealm(Caster, Target, true))
-								return false;
+								return Refuse("target not same realm");
 
 							break;
 						}
@@ -817,14 +826,14 @@ namespace DOL.GS.Spells
 				if (!quiet && Caster is not GameBot)
 					MessageToCaster("You don't have enough power to cast that!", eChatType.CT_SpellResisted);
 
-				return false;
+				return Refuse("not enough power");
 			}
 
 			if (!CheckConcentrationCost(quiet))
-				return false;
+				return Refuse("concentration");
 
 			if (!CheckPulseCap(quiet))
-				return false;
+				return Refuse("pulse cap");
 
 			// Cancel engage if user starts attack
 			if (m_caster.IsEngaging)
@@ -1148,6 +1157,7 @@ namespace DOL.GS.Spells
 				case eCastState.Precast:
 				{
 					BotTesterLog.CastStarted(this);
+					RefuseReason = null;
 					if (CheckBeginCast(Target))
 					{
 						_castStartTick = GameLoop.GameLoopTime;
@@ -1286,6 +1296,10 @@ namespace DOL.GS.Spells
 			if (syphon > 0 && Util.Chance(syphon))
 				return 0;
 
+			// 1.129 Champion Valor auras: a 2-10% chance for a spell to cost no power (DR-101).
+			if (CostFreeChance.Rolls(Caster))
+				return 0;
+
 			if (Caster is GameBot botCaster)
 				return BotSpellPower.Cost(botCaster, Spell, SpellLine);
 
@@ -1334,7 +1348,8 @@ namespace DOL.GS.Spells
 		public virtual int CalculateEnduranceCost()
 		{
 			// Custom Stormforged and royal class spells cost power only; styles still cost endurance.
-			if (m_spell.ID is >= 62000 and <= 62239 or >= 62400 and <= 62972 or >= 64000 and <= 64572 or >= 73000 and <= 73572)
+			if (m_spell.ID is >= 62000 and <= 62239 or >= 62400 and <= 62972 or >= 64000 and <= 64572 or >= 73000 and <= 73572 ||
+				StormSovereignAbilities.Owns(m_spell.ID))
 				return 0;
 
 			return 5;
@@ -1391,6 +1406,10 @@ namespace DOL.GS.Spells
 		{
 			_calculatedCastTime = castTime * 100;
 			_castEndTick = _castStartTick + _calculatedCastTime;
+
+			// A bot twisting its songs restarts them every few seconds; only the first start plays its music (BotQuietSongs).
+			if (BotQuietSongs.IsRestart(m_caster, m_spell, GameLoop.GameLoopTime))
+				return;
 
 			foreach (GamePlayer player in m_caster.GetPlayersInRadius(WorldMgr.VISIBILITY_DISTANCE))
 			{
@@ -1592,6 +1611,7 @@ namespace DOL.GS.Spells
 			GameLiving target = castTarget as GameLiving;
 			eSpellTarget modifiedTarget = Spell.Target;
 			ushort modifiedRadius = (ushort) ModernWarlock.AdjustDistance(Caster, Spell, Spell.Radius);
+			modifiedRadius = LoyaltyCloaks.AdjustDirectDamageRadius(Caster, Spell, modifiedRadius);
 
 			if (modifiedTarget is eSpellTarget.PET && !HasPositiveEffect)
 				modifiedTarget = eSpellTarget.ENEMY;
@@ -2628,7 +2648,9 @@ namespace DOL.GS.Spells
                 return true;
             }
 
-			double spellResistChance = CalculateSpellResistChance(target);
+			// Sovereign style effects (Storm, Pendragon, Tuatha) land like the style that carries them: no resist roll
+			// (owner, playtest 2026-11-07). Immunities and wards above still apply.
+			double spellResistChance = StormSovereignHandler.IsSovereignStyleSubSpell(Spell.ID) ? 0 : CalculateSpellResistChance(target);
 
 			if (spellResistChance > 0)
 			{
@@ -2746,6 +2768,15 @@ namespace DOL.GS.Spells
 
 		#region messages
 
+		/// <summary>
+		/// A caster-side line that reads right for a pet too: MessageToCaster sends a pet's lines to its owner, so
+		/// "You steal 40 hit points." looked like the owner's own lifetap. A pet's line is "Your bear steals ...".
+		/// </summary>
+		public static string CasterSentence(GameLiving caster, string youForm, string petForm) =>
+			caster is GamePlayer or null ? "You " + youForm : $"Your {caster.Name} {petForm}";
+
+		public static string Points(int amount, string what) => $"{amount} {what} point{(amount == 1 ? "" : "s")}";
+
 		/// <summary>The player who reads this caster's messages: the caster, or the owner of a controlled pet.</summary>
 		private GamePlayer CasterViewer() =>
 			Caster as GamePlayer ?? ((Caster as GameNPC)?.Brain as IControlledBrain)?.GetPlayerOwner();
@@ -2757,6 +2788,10 @@ namespace DOL.GS.Spells
 		/// </summary>
 		public void MessageToCaster(string message, eChatType type)
 		{
+            // Spells with an empty Message2 (Wrath of the Raven, Bainshee snares, Body Lock...) sent a blank line.
+            if (string.IsNullOrEmpty(message))
+                return;
+
             if (!Spell.IsHarmful)
                 CabalistRestDiagnostics.Message(Caster, Spell, message);
             BotTesterLog.SpellMessage(Caster, Spell, message);
@@ -3352,7 +3387,7 @@ namespace DOL.GS.Spells
 			if (Caster.Chance(RandomDeckEvent.CriticalChance, criticalChance))
 			{
 				double min = 0.1;
-				double max = ad.Target is GamePlayer ? 0.5 : 1.0;
+				double max = DOL.GS.PropertyCalc.PlayerDefenseFormula.MaxSpellCriticalBonus(ad.Target);
 				double criticalMod = min + Caster.GetPseudoDoubleIncl(RandomDeckEvent.CriticalVariance) * (max - min);
 				criticalDamage = (int) (finalDamage * criticalMod);
 			}

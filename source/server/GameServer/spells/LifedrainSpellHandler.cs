@@ -46,11 +46,11 @@ namespace DOL.GS.Spells
 
             if (heal > 0)
             {
-                MessageToCaster("You steal " + heal + " hit point" + (heal == 1 ? "." : "s."), eChatType.CT_Spell);
+                MessageToCaster(CasterSentence(m_caster, $"steal {Points(heal, "hit")}.", $"steals {Points(heal, "hit")}."), eChatType.CT_Spell);
             }
             else
             {
-                MessageToCaster("You cannot absorb any more life.", eChatType.CT_SpellResisted);
+                MessageToCaster(CasterSentence(m_caster, "cannot absorb any more life.", "cannot absorb any more life."), eChatType.CT_SpellResisted);
             }
         }
     }

@@ -365,6 +365,17 @@ namespace DOL.UnitTests
         }
 
         [Test]
+        public void ALowPieceIsStillOrderedAsAnUpgradeForALevel20Buyer()
+        {
+            // Night 2026-11-04: crafters topped out at skill 28, so only low pieces could be made.
+            Recipe low = MakeRecipe(10, price: 10, productLevel: 3);
+            Assert.That(AutonomousBotCraftOrders.ChooseCommission([low], eRealm.Albion, 22, 1_000, _ => 30, _ => true), Is.SameAs(low));
+            Assert.That(AutonomousBotCraftOrders.ChooseCommission([low], eRealm.Albion, 24, 1_000, _ => 30, _ => true), Is.Null,
+                "More than the commission window below the buyer");
+            Assert.That(AutonomousBotCraftOrders.FitsCommissionLevel(25, 20), Is.False, "Never above the buyer");
+        }
+
+        [Test]
         public void PlacingAnOrderTakesTheBuyersCoinIntoTheOrder()
         {
             TestBot buyer = Bot("Buyer");

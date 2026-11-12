@@ -252,6 +252,20 @@ namespace DOL.GS
         ArtifactStunFeedback,
         ArtifactCheatDeath,
         ArtifactMorph,
-        CampRest
+        CampRest,
+        CostFreeChance,
+        // Loyalty cloak abilities (DR-216) and the artifact spell damage buff
+        SpellDamageBuff,
+        MeleeCritBuff,
+        ParryBlockBuff,
+        ArcaneLeadership,
+        IgnoreBladeturn,
+        GroupDDRadius,
+        ControlShrug,
+        DiseaseWard,
+        // Cabalist pet sacrifice line (DR-094)
+        SimulacrumSacrifice,
+        // Water breathing and swim speed (Nereid potions, the fork's Nereid's Blessing).
+        WaterBreathing
     }
 }

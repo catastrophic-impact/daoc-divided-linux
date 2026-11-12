@@ -77,6 +77,8 @@ FLAGS = {'in_group', 'solo', 'in_town', 'in_dungeon', 'in_rvr', 'at_camp', 'trav
          'will_rez',   # will_rez: set only when answering a rez ask the bot will really come to
          'player_rezzed_me',   # gossip: the player really rezzed this bot (bot memory)
          'player_leveling',    # tells: the player is under the level cap (lines about levelling; in-game check 2026-10-27)
+         'bot_leads',          # bot-led groups: a gamebot leads the party the player is in (the player follows)
+         'lead_call',          # bot-led groups: the leader's own calls (BotLedGroups.Announce passes it; no bot has it alone)
          # The talking update: what is true in the world right now (AutonomousChatNews and the RvR event layer).
          'df_ours',            # the bot's realm holds Darkness Falls
          'defending',          # one of the realm's keeps is under siege now ({keep} is that keep)
@@ -122,7 +124,9 @@ TIME_FLAGS = {'day', 'evening', 'night'}
 INTENTS = {'unknown', 'greeting', 'banter', 'abuse', 'grouping', 'grinding', 'travel', 'dungeon', 'rvr',
            'trading', 'help', 'farewell', 'ignoreoutofworld',
            # 0.36-se.4: short chat players type
-           'thanks', 'congrats', 'ding', 'laugh', 'away', 'back', 'rez', 'alarm', 'classtalk', 'botcheck'}
+           'thanks', 'congrats', 'ding', 'laugh', 'away', 'back', 'rez', 'alarm', 'classtalk', 'botcheck',
+           # Beta 1.1.2: an in-character line from the player
+           'roleplay'}
 MOODS = {'friendly', 'neutral', 'cool', 'rival'}
 SLOTS = {'me', 'class', 'level', 'realm', 'zone', 'monster', 'npc', 'item', 'count', 'camp', 'dungeon',
          'capital', 'enemy', 'keep', 'frontier', 'player', 'player_class', 'place', 'q',
@@ -179,7 +183,16 @@ def split_list(value):
     return [] if value in ('', '*') else [v.strip() for v in value.split(',') if v.strip()]
 
 
+# Beta 1.1.2: a "[a kobold|kobolds] ... [is|are]" family makes "a kobold ... are" (the blind round 1 judge caught it).
+AGREEMENT_RE = re.compile(r"^(a|an|one) [a-z']+( (with|holding|of|in|on|a|an|the|[a-z']+ing))*( [a-z']+)? (are|were) (worse|so|always|just|scarier|better) than\b")
+
+
 def check_text(text, tags, where, problems):
+    # Beta 1.1.2: a "[, ]" without a "|" leaked into lines as written ("lfg[, ]got time pst").
+    if '[' in text or ']' in text:
+        problems.append(f'{where}: a "[" or "]" left in the line as said (a choice needs a "|"): {text}')
+    if AGREEMENT_RE.search(text.lower()):
+        problems.append(f'{where}: a singular subject with "are" (write the choices as whole phrases): {text}')
     if len(text) > MAX_RAW:
         problems.append(f'{where}: {len(text)} characters (max {MAX_RAW}): {text}')
     for slot in SLOT_RE.findall(text):
@@ -367,6 +380,13 @@ def parse_file(path, problems):
                 # levels=35-49: a role whose lines only fit some levels ("i am not 50 yet"; live test 2026-10-18).
                 if 'levels' in req:
                     scene['roles'][role]['levels'] = parse_levels(req['levels'], where)
+                # task=rvr: a role whose lines tell what the bot is doing out there ("made it to {keep}", "first realm points"),
+                # cast only from bots really out for rvr (1.1.3 RC10 on the owner's PC: a 40 grinding in Avalon told it).
+                if 'task' in req:
+                    if req['task'] not in ('rvr',):
+                        problems.append(f'{where}: unknown task {req["task"]} (rvr)')
+                    else:
+                        scene['roles'][role]['task'] = req['task']
             elif key == 'exit':
                 # "@exit A": when the scene plays to its end, the bot cast as A logs off for a few hours (the rage quit).
                 if scene is None or not re.fullmatch(r'[A-H]', value):
@@ -451,6 +471,9 @@ def parse_file(path, problems):
             if len(family) > 1:
                 line['weight'] = round(weight, 4)
                 line['_family'] = True
+                # Beta 1.1.2: the ways of saying one template share a family, so a realm doesn't hear two of them close
+                # together ("that horse ride took so long i aged a year" / "... i grew a beard").
+                line['family'] = hashlib.sha1((tags['kind'] + '|' + text).encode()).hexdigest()[:10]
             if tags['kind'] in OPENER_KINDS:
                 line['invites'] = tags['invites'] or infer_invites(said, tags['kind'])
                 # A plain "ask" tag takes a more specific question type when the words show one ("how is everyone?").
@@ -515,6 +538,57 @@ def expand(text):
 
 def norm(text):
     return re.sub(r'[^a-z0-9{}]+', ' ', text.lower()).strip()
+
+
+LORE = ROOT / 'source/server/GameServer/bots/autonomous/data/lore'
+LORE_REALMS = {'Albion': 'alb', 'Midgard': 'mid', 'Hibernia': 'hib', 'Neutral': '*'}
+
+
+def check_lore(problems):
+    """Living Server 1.2: the lore bible's bot lines (data/lore, docs/LORE.md) go through the same era, slot and place
+    checks as the corpus. The server adds them at run time (LoreChat.CorpusLines), as ambient lore about a place, so they
+    are checked with those tags and the location's realm. The schema itself is UT_LoreBible's."""
+    if not LORE.exists():
+        return 0
+    realms = {}
+    files = sorted(LORE.glob('locations/*.json')) + sorted(LORE.glob('bosses/*.json'))
+    loaded = []
+    for path in files:
+        try:
+            data = json.loads(path.read_text(encoding='utf-8'))
+        except ValueError as error:
+            problems.append(f'{path.relative_to(ROOT)}: not valid JSON ({error})')
+            continue
+        loaded.append((path, data))
+        if path.parent.name == 'locations':
+            realms[data.get('id')] = data.get('realm')
+    count = 0
+    for path, data in loaded:
+        realm = realms.get(data.get('locationId'), data.get('realm')) if path.parent.name == 'bosses' else data.get('realm')
+        # The shared lines, then each realm's take (realmTakes: Summoner's Hall told the Albion way) as that realm's lines.
+        groups = [('botLines', realm, data.get('botLines') or {})]
+        for key, take in (data.get('realmTakes') or {}).items():
+            if isinstance(take, dict):
+                groups.append((f'realmTakes.{key}.botLines', key.capitalize(), take.get('botLines') or {}))
+        for prefix, group_realm, bot_lines in groups:
+            tags = fresh_tags()
+            tags.update(kind='ambient', topic='lore', realm=LORE_REALMS.get(group_realm, '*'), about=True)
+            for field, lines in bot_lines.items():
+                for i, template in enumerate(lines or []):
+                    where = f'{path.relative_to(ROOT)} {prefix}.{field}[{i}]'
+                    if not CHOICE_RE.search(template) and ('[' in template or ']' in template):
+                        problems.append(f'{where}: "[" without a "|" choice: {template}')
+                        continue
+                    for said in expand(template):
+                        found = []
+                        check_text(said, tags, where, found)
+                        # A Neutral place's lore is told in every realm, about every realm ("albion got avalon, midgard got
+                        # aegir"): naming another realm's place there is the point, not a slip (Hibernia writer, PR #91).
+                        if group_realm == 'Neutral' or realm == 'Neutral':
+                            found = [p for p in found if not re.search(r' in a line for realm [a-z*]+: ', p)]
+                        problems += found
+                        count += 1
+    return count
 
 
 def main():
@@ -585,6 +659,8 @@ def main():
                 if have < need:
                     problems.append(f'coverage: {kind} for {realm} {lo}-{hi} has {have}, needs {need}')
 
+    lore_lines = check_lore(problems)
+
     if problems:
         print(f'{len(problems)} problem(s):')
         for p in problems:
@@ -603,6 +679,7 @@ def main():
     print('by kind: ' + ', '.join(f'{k} {n}' for k, n in sorted(by_kind.items())))
     print('openers invite: ' + ', '.join(f'{k} {n}' for k, n in sorted(collections.Counter(
         x['invites'] for x in lines if 'invites' in x).items())))
+    print(f'lore bible bot lines checked: {lore_lines}')
     print('by realm: ' + ', '.join(f'{k} {n}' for k, n in sorted(collections.Counter(x["realm"] for x in lines).items())))
     print('by type (lines that name types): ' + ', '.join(
         f'{t} {sum(1 for x in lines if t in x["who"])}' for t in sorted(TYPES)))

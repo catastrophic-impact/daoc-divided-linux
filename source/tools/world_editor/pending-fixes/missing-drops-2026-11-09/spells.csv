@@ -1,0 +1,6 @@
+Official spell,Our spell,Type,Copied from,Damage,Value,Duration,Target,Description
+3701,803701,DirectDamage,801064,41.0,0.0,0,Enemy,Does 41.0 Heat damage to the target.
+10872,810872,Lifedrain,803832,26.0,-100,0,Enemy,The target takes 26.0 Cold damage and the attacker is healed for 100% of the damage dealt.
+10895,810895,DamageOverTime,803769,16.0,0.0,20,Enemy,Target takes 16 Energy damage every 4.000 seconds.
+10905,810905,DamageOverTime,803769,30.0,0.0,20,Enemy,Target takes 30 Heat damage every 4.999 seconds.
+16657,816657,DirectDamage,801064,44.0,0.0,0,Enemy,Does 44.2 Heat damage to the target.

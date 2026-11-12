@@ -4,10 +4,10 @@ import sys
 from pathlib import Path
 
 if __package__:
-    from .editor import main, WORKSPACE, REPO
+    from .editor import main, WORKSPACE, REPO, DATA_REPO
 else:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from world_editor.editor import main, WORKSPACE, REPO
+    from world_editor.editor import main, WORKSPACE, REPO, DATA_REPO
 
 
 def launch():
@@ -16,7 +16,7 @@ def launch():
     parser.add_argument('--no-browser', action='store_true')
     parser.add_argument('--port', type=int, default=0)
     args=parser.parse_args()
-    modern=REPO/'artifacts/modern-client-test/runtime'
+    modern=DATA_REPO/'artifacts/modern-client-test/runtime'
     profiles={
         'classic':(WORKSPACE/'Classic/runtime/data/opendaoc.sqlite3.db', WORKSPACE/'Classic/runtime/client-opendaoc/app'),
         'stormforged':(WORKSPACE/'Stormforged/runtime/data/opendaoc.sqlite3.db', WORKSPACE/'Stormforged/runtime/client-opendaoc/app'),

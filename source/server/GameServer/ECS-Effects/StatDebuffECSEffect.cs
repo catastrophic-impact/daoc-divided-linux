@@ -17,8 +17,8 @@ namespace DOL.GS
         {
             base.OnStartEffect();
 
-            if (Owner is GamePlayer player)
-                TryDebuffInterrupt(SpellHandler.Spell, player, SpellHandler.Caster);
+            // No interrupt here (DR-184). Live: Reaver pulsing debuffs stopped interrupting in 1.72, the Bonedancer
+            // instant body debuffs in 1.87, and the instant body and damage debuff lines in 1.111.
 
             // Force Champion's stat debuffs to be applied as spec debuffs (see `StatCalculator`).
             if (SpellHandler.Caster is GamePlayer playerCaster &&
@@ -75,33 +75,6 @@ namespace DOL.GS
             // "Your coordination returns."
             // "{0}'s coordination returns."
             OnEffectExpiresMsg(true, false, true);
-        }
-
-        public static void TryDebuffInterrupt(Spell spell, GamePlayer player, GameLiving caster)
-        {
-            if (spell.ID is not 10031 and //BD insta debuffs
-                not 10032 and
-                not 10033 and
-                not 9631 and //reaver pbae insta melee damage reductions
-                not 9632 and
-                not 9633 and
-                not 9634 and
-                not 9635 and
-                not 9636 and
-                not 9637 and
-                not 9601 and //reaver pbae insta abs reductions
-                not 9602 and
-                not 9603 and
-                not 9604 and
-                not 9605 and
-                not 9606)
-                return;
-
-            if (player != null)
-            {
-                player.StopCurrentSpellcast();
-                player.StartInterruptTimer(player.SpellInterruptDuration, AttackData.eAttackType.Spell, caster);
-            }
         }
     }
 }

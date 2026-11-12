@@ -1,0 +1,228 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T22:46:24.921179+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "ItemTemplate",
+   "key": "alloy_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "alloy_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "arcanite_dragonsworn_hand_wraphib",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "arcanium_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "arcanium_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "asterite_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "asterite_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bronze_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "bronze_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "Exceptional_Maligned_Avernal_Hand_Wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "Exquisite_Avernal_Malison_Hand_Wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "iron_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "iron_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "mithril_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "mithril_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "netherium_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "netherium_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "steel_razored_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "steel_riveted_hand_wrap",
+   "op": "update",
+   "before": {
+    "Item_Type": 10
+   },
+   "after": {
+    "Item_Type": 11
+   }
+  },
+  {
+   "table": "ItemTemplate",
+   "key": "local-mauler-starter-right",
+   "op": "update",
+   "before": {
+    "Hand": 2
+   },
+   "after": {
+    "Hand": 0
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

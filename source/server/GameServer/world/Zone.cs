@@ -711,6 +711,10 @@ namespace DOL.GS
                 if ((y > 364000) && (y < 394000) && (x > 674000) && (x < 716000)) return false;
             }
 
+            // Atlantis: water only where the client draws it (see ZoneWater).
+            if (ZoneWater.TryIsUnderwater(ZoneSkinID, x - XOffset, y - YOffset, z, out bool underwater))
+                return underwater;
+
             return z < Waterlevel;
         }
     }

@@ -14,10 +14,17 @@ namespace DOL.GS.Spells
 		private DbTeleport m_destination;
 
 		public UniPortal(GameLiving caster, Spell spell, SpellLine spellLine, DbTeleport destination)
-			: base(caster, spell, spellLine) 
+			: base(caster, spell, spellLine)
 		{
 			m_destination = destination;
 		}
+
+		/// <summary>
+		/// The standard handler constructor, so ScriptMgr's boot scan finds one (it logged "Couldn't find a SpellHandler
+		/// constructor for UniPortal" every boot, DR-037). Teleporters build the portal with a destination; built this
+		/// way (spell 5999 cast as a plain spell) it has nowhere to send anyone and does nothing.
+		/// </summary>
+		public UniPortal(GameLiving caster, Spell spell, SpellLine spellLine) : this(caster, spell, spellLine, null) { }
 
 		/// <summary>
 		/// Whether this spell can be cast on the selected target at all.
@@ -33,7 +40,7 @@ namespace DOL.GS.Spells
 
 		public override void ApplyEffectOnTarget(GameLiving target)
 		{
-			if (target is not GamePlayer player)
+			if (target is not GamePlayer player || m_destination == null)
 				return;
 
 			if (player.InCombat || GameRelic.IsPlayerCarryingRelic(player))
@@ -60,6 +67,9 @@ namespace DOL.GS.Spells
 			m_destination = destination;
 		}
 
+		/// <summary>The standard handler constructor for ScriptMgr's boot scan (DR-037); without a destination it does nothing.</summary>
+		public UniPortalKeep(GameLiving caster, Spell spell, SpellLine spellLine) : this(caster, spell, spellLine, null) { }
+
 		/// <summary>
 		/// Whether this spell can be cast on the selected target at all.
 		/// </summary>
@@ -74,7 +84,7 @@ namespace DOL.GS.Spells
 
 		public override void ApplyEffectOnTarget(GameLiving target)
 		{
-			if (target is not GamePlayer player)
+			if (target is not GamePlayer player || m_destination == null)
 				return;
 
 			/*if (player.IsAlive && !player.IsStunned && !player.IsMezzed)

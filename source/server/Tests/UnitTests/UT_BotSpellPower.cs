@@ -630,6 +630,18 @@ namespace DOL.UnitTests
             }
         }
 
+        [Test] public void ResurrectionCostsWhatTheNativeHandlerCharges_NotThePowerField()
+        {
+            // Overnight run 2026-11-08: bots priced a raise at the spell's Power (-25: a quarter of the pool) while
+            // ResurrectSpellHandler charges half of max power for a same-level corpse, so raises were refused silently.
+            Bot bot = MakeBot(typeof(ClassCleric), 50);
+            Spell rez = S(-25, 4, 10, "Resurrect");
+            Assert.That(BotSpellPower.Cost(bot, rez, null), Is.EqualTo((int)(bot.MaxMana * 0.5f)));
+            Assert.That(BotSpellPower.ResurrectCost(1000, 50, 50), Is.EqualTo(500));
+            Assert.That(BotSpellPower.ResurrectCost(1000, 40, 50), Is.EqualTo(750), "higher corpse costs more");
+            Assert.That(BotSpellPower.ResurrectCost(1000, 50, 1), Is.EqualTo(100), "never below a tenth");
+        }
+
         [Test] public void NativePulseChargesOncePerDuePulse_NotEveryServiceOrAiTick()
         {
             Bot bot = MakeBot(typeof(ClassBonedancer), 50);

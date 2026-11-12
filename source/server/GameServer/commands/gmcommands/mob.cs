@@ -77,6 +77,7 @@ namespace DOL.GS.Commands
 	     "'/mob addloot2 <ItemTemplateID> <chance> [count]' to add loot to the mob's drop table. Optionally specify count of how many item to drop if chance < 100%.",
 	     "'/mob addotd <ItemTemplateID> <min level>' add a one time drop to this mob..",
 	     "'/mob viewloot [random] [inv]' to view the selected mob's loot table.  Use random to simulate a kill drop, random inv to simulate and generate the loots.",
+	     "'/mob viewloot sim [kills(1000)]' to roll the selected mob's loot many times as if you killed it, and show drop rates. Nothing drops or is saved.",
 	     "'/mob removeloot <ItemTemplateID>' to remove loot from the mob's unique drop table.",
 	     "'/mob removeloot2 <ItemTemplateID>' same as '/mob removeloot' but for the 'MobDrop' generator.",
 	     "'/mob removeotd <ItemTemplateID>' to remove a one time drop from the mob's unique drop table.",
@@ -2006,6 +2007,21 @@ namespace DOL.GS.Commands
 		private void viewloot(GameClient client, GameNPC targetMob, string[] args)
 		{
 			refreshloot(client, targetMob, null);
+
+			if (args.Length > 2 && args[2] == "sim")
+			{
+				int kills = 1000;
+				if (args.Length > 3 && (!int.TryParse(args[3], out kills) || kills < 1))
+				{
+					DisplayMessage(client, $"Kills must be a number from 1 to {LootSimulator.MaxKills:N0}.");
+					return;
+				}
+
+				LootSimulator.Result result = LootSimulator.Run(targetMob, client.Player, kills);
+				client.Out.SendCustomTextWindow(targetMob.Name + "'s Simulated Loot",
+					LootSimulator.Report(targetMob.Name, client.Player.Name, result));
+				return;
+			}
 
 			if (args.Length > 2 && args[2] == "random")
 			{

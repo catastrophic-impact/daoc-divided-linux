@@ -81,6 +81,24 @@ public sealed class UT_ModernRaceCreation
         Assert.That(CharacterCreateRequestHandler.IsCharacterValid(Character(race, realm, career)), Is.False);
     }
 
+    // Base-race pairs the stock 1.130 client offers that the classic lists left out (checked 2026-11-09).
+    [TestCase(2, 1, 12)] // Avalonian Necromancer
+    [TestCase(14, 2, 21)] // Valkyn Thane
+    [TestCase(8, 2, 31)] // Kobold Berserker
+    [TestCase(7, 2, 28)] // Dwarf Shaman
+    public void ClientBaseRacePairCanCreate(int race, int realm, int career)
+        => Assert.That(CharacterCreateRequestHandler.IsCharacterValid(Character(race, realm, career)), Is.True);
+
+    [TestCase(2, 1, 12)]
+    [TestCase(14, 2, 21)]
+    [TestCase(8, 2, 31)]
+    [TestCase(7, 2, 28)]
+    public void ClientBaseRacePairStaysClassicWhenModernRacesAreOff(int race, int realm, int career)
+    {
+        Properties.ENABLE_MODERN_RACES = false;
+        Assert.That(CharacterCreateRequestHandler.IsCharacterValid(Character(race, realm, career)), Is.False);
+    }
+
     [Test]
     public void NormalCombinationsAndStatBudgetStillApply()
     {

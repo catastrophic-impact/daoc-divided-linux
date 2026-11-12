@@ -66,6 +66,42 @@
    "From": "DR-dev-0.1",
    "File": "world-DR-dev-0.1a.json",
    "Sha256": "2FB870E1329B3EFDB8B86558C1416794925AB3644D69FF911B250770ABA2E81D"
+  },
+  {
+   "Version": "DR-dev-0.1b",
+   "From": "DR-dev-0.1a",
+   "File": "world-DR-dev-0.1b.json",
+   "Sha256": "9CBF4723E74E2BC7E304BF7CE2658FAD27200BD12BF7D17E1D9910FCF032B135"
+  },
+  {
+   "Version": "DR-dev-0.1c",
+   "From": "DR-dev-0.1b",
+   "File": "world-DR-dev-0.1c.json",
+   "Sha256": "EF553F45EECF9946930DF11A6666395A7CCB1E53E59AE967A42FD0C840A320C6"
+  },
+  {
+   "Version": "DR-dev-0.1d",
+   "From": "DR-dev-0.1c",
+   "File": "world-DR-dev-0.1d.json",
+   "Sha256": "6852E15B6732B0E9836AB11D8FCFADEC89BF004D0262A760B11120A971D0941F"
+  },
+  {
+   "Version": "DR-dev-0.1e",
+   "From": "DR-dev-0.1d",
+   "File": "world-DR-dev-0.1e.json",
+   "Sha256": "B31FBA4BA853CB80BB86CC7F2E7594CB3CB580E71EEC5A47801D91A84288347D"
+  },
+  {
+   "Version": "DR-dev-0.1f",
+   "From": "DR-dev-0.1e",
+   "File": "world-DR-dev-0.1f.json",
+   "Sha256": "98DF233D9DFB1619AE7EF6527ADA9B573B944DDD13FD7C3FB6BFBE3B4FBC594F"
+  },
+  {
+   "Version": "DR-dev-0.1g",
+   "From": "DR-dev-0.1f",
+   "File": "world-DR-dev-0.1g.json",
+   "Sha256": "45F75D640DECA6B418EC6C647E4A56F03235F83D84EFED85B8F5E39EED5F7DB7"
   }
  ]
 }

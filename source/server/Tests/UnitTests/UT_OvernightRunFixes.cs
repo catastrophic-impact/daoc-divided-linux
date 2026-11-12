@@ -46,6 +46,52 @@ namespace DOL.UnitTests
             ConColor con, int adds, bool turnsBack) =>
             Assert.That(AutonomousDungeonPolicy.SoloTurnsBackFrom(grouped, hasCamp, rejoining, ownTarget, con, adds), Is.EqualTo(turnsBack));
 
+        /// <summary>
+        /// DR-277: a bot inside a blocker's reach had every camp of the region skipped. Only the ways that lead nearer to
+        /// the blocker are blocked from there; from outside nothing changes.
+        /// </summary>
+        [Test]
+        public void ABotInsideABlockersReachKeepsTheWaysOut()
+        {
+            System.Numerics.Vector2 blocker = new(350_000, 590_000);
+            const float reach = 1_500;
+            System.Numerics.Vector2 inside = new(350_600, 590_000); // 600 from the blocker
+            Assert.Multiple(() =>
+            {
+                Assert.That(AutonomousRouteBlockMemory.Blocks(inside, new(360_000, 590_000), blocker, reach), Is.False, "straight away from it");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(inside, new(350_600, 600_000), blocker, reach), Is.False, "sideways: never nearer than now");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(inside, new(340_000, 590_000), blocker, reach), Is.True, "through the blocker");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(inside, new(350_100, 590_000), blocker, reach), Is.True, "a camp nearer to the blocker");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(inside, new(350_500, 590_000), blocker, reach), Is.False, "a step within the tolerance");
+
+                System.Numerics.Vector2 outside = new(355_000, 590_000);
+                Assert.That(AutonomousRouteBlockMemory.Blocks(outside, new(345_000, 590_000), blocker, reach), Is.True, "from outside: through the reach");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(outside, new(351_000, 590_000), blocker, reach), Is.True, "from outside: a camp inside the reach");
+                Assert.That(AutonomousRouteBlockMemory.Blocks(outside, new(355_000, 600_000), blocker, reach), Is.False, "from outside: past it");
+            });
+
+            AutonomousRouteBlockMemory.Clear();
+            long now = 1_000_000;
+            long band5 = AutonomousRouteBlockMemory.WordOfMouthKey(eRealm.Hibernia, 8, 200);
+            AutonomousRouteBlockMemory.Note(band5, 200, blocker, reach, now, AutonomousRouteBlockMemory.WordOfMouthSlots);
+            int open = 0;
+            for (int degrees = 0; degrees < 360; degrees += 10)
+            {
+                System.Numerics.Vector2 camp = inside + 8_000 * new System.Numerics.Vector2(
+                    System.MathF.Cos(degrees * System.MathF.PI / 180), System.MathF.Sin(degrees * System.MathF.PI / 180));
+                if (!AutonomousRouteBlockMemory.Crosses(band5, 200, inside, camp, now + 1))
+                    open++;
+            }
+            Assert.That(open, Is.InRange(25, 29), "all but the quarter of the compass that leads at the blocker stays open");
+            Assert.That(AutonomousRouteBlockMemory.TryNearest(band5, 200, inside, now + 1, out System.Numerics.Vector2 at, out float radius), Is.True);
+            Assert.That((at, radius), Is.EqualTo((blocker, reach)));
+            Assert.That(AutonomousRouteBlockMemory.TryNearest(band5, 201, inside, now + 1, out _, out _), Is.False, "another region");
+            Assert.That(AutonomousRouteBlockMemory.Within(band5, 200, new(351_000, 590_000), now + 1), Is.True, "a camp inside the reach never comes back");
+            Assert.That(AutonomousRouteBlockMemory.Within(band5, 200, new(352_000, 590_000), now + 1), Is.False);
+            Assert.That(AutonomousRouteBlockMemory.Within(band5, 200, new(351_000, 590_000), now + AutonomousRouteBlockMemory.CooldownMilliseconds + 1), Is.False, "forgotten");
+            AutonomousRouteBlockMemory.Clear();
+        }
+
         [Test]
         public void ARedOrPurpleBlockerIsPassedOnToBotsOfTheSameLevel()
         {

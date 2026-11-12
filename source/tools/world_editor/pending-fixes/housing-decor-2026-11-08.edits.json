@@ -1,0 +1,4656 @@
+[
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_icons_of_caer_sidi",
+  "set": {
+   "Name": "Icons of Caer Sidi",
+   "Model": 1382,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_gothwaite_harbor_at_night",
+  "set": {
+   "Name": "Gothwaite Harbor at Night",
+   "Model": 1383,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sunset_over_avalon_isle",
+  "set": {
+   "Name": "Sunset Over Avalon Isle",
+   "Model": 1384,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_agony_of_defeat",
+  "set": {
+   "Name": "Agony of Defeat",
+   "Model": 1385,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_caer_gothwaite",
+  "set": {
+   "Name": "Caer Gothwaite",
+   "Model": 1386,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_stonehenge",
+  "set": {
+   "Name": "Stonehenge",
+   "Model": 1387,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sunset_at_gothwaite_harbor",
+  "set": {
+   "Name": "Sunset at Gothwaite Harbor",
+   "Model": 1388,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_bridge_to_clifton",
+  "set": {
+   "Name": "Bridge to Clifton",
+   "Model": 1389,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_anniogel_at_night",
+  "set": {
+   "Name": "Anniogel at Night",
+   "Model": 1390,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_safety_in_the_distance",
+  "set": {
+   "Name": "Safety in the Distance",
+   "Model": 1391,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_icons_of_caer_sidi_grandiose",
+  "set": {
+   "Name": "Icons of Caer Sidi grandiose painting",
+   "Model": 1382,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_gothwaite_harbor_at_night_grandiose",
+  "set": {
+   "Name": "Gothwaite Harbor at Night grandiose painting",
+   "Model": 1383,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sunset_over_avalon_isle_grandiose",
+  "set": {
+   "Name": "Sunset Over Avalon Isle grandiose painting",
+   "Model": 1384,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_agony_of_defeat_grandiose",
+  "set": {
+   "Name": "Agony of Defeat grandiose painting",
+   "Model": 1385,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_caer_gothwaite_grandiose",
+  "set": {
+   "Name": "Caer Gothwaite grandiose painting",
+   "Model": 1386,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_stonehenge_grandiose",
+  "set": {
+   "Name": "Stonehenge grandiose painting",
+   "Model": 1387,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sunset_at_gothwaite_harbor_grandiose",
+  "set": {
+   "Name": "Sunset at Gothwaite Harbor grandiose painting",
+   "Model": 1388,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_bridge_to_clifton_grandiose",
+  "set": {
+   "Name": "Bridge to Clifton grandiose painting",
+   "Model": 1389,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_anniogel_at_night_grandiose",
+  "set": {
+   "Name": "Anniogel at Night grandiose painting",
+   "Model": 1390,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_safety_in_the_distance_grandiose",
+  "set": {
+   "Name": "Safety in the Distance grandiose painting",
+   "Model": 1391,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_a_hero_of_albion_wall_tapestry",
+  "set": {
+   "Name": "A Hero of Albion wall tapestry",
+   "Model": 1593,
+   "Price": 750000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_an_albion_adept_wall_tapestry",
+  "set": {
+   "Name": "An Albion Adept wall tapestry",
+   "Model": 1576,
+   "Price": 750000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_granite_arch",
+  "set": {
+   "Name": "granite arch",
+   "Model": 1453,
+   "Price": 500000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_walled_granite_arch",
+  "set": {
+   "Name": "walled granite arch",
+   "Model": 1463,
+   "Price": 1000000
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_indoor_albmap",
+   "PageNumber": 0,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_icons_of_caer_sidi",
+   "PageNumber": 0,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_gothwaite_harbor_at_night",
+   "PageNumber": 0,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_sunset_over_avalon_isle",
+   "PageNumber": 0,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_agony_of_defeat",
+   "PageNumber": 0,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_caer_gothwaite",
+   "PageNumber": 0,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_stonehenge",
+   "PageNumber": 0,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_sunset_at_gothwaite_harbor",
+   "PageNumber": 0,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_bridge_to_clifton",
+   "PageNumber": 0,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_anniogel_at_night",
+   "PageNumber": 0,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_safety_in_the_distance",
+   "PageNumber": 0,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_indoor_large_alb_map",
+   "PageNumber": 0,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_icons_of_caer_sidi_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_gothwaite_harbor_at_night_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_sunset_over_avalon_isle_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_agony_of_defeat_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_caer_gothwaite_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_stonehenge_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_sunset_at_gothwaite_harbor_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_bridge_to_clifton_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_anniogel_at_night_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_safety_in_the_distance_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_a_hero_of_albion_wall_tapestry",
+   "PageNumber": 0,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_an_albion_adept_wall_tapestry",
+   "PageNumber": 0,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_granite_arch",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_decor_walled_granite_arch",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "2c84ce8d-21b4-462b-bd81-24e07757401e",
+   "ItemTemplateID": "housing_outdoor_albouthouse",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_glacial_resting_place",
+  "set": {
+   "Name": "Glacial Resting Place",
+   "Model": 1402,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_frozen_horizon",
+  "set": {
+   "Name": "Frozen Horizon",
+   "Model": 1403,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_aegirhamn_docks",
+  "set": {
+   "Name": "Aegirhamn Docks",
+   "Model": 1404,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_darkness_falls",
+  "set": {
+   "Name": "Darkness Falls",
+   "Model": 1405,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_skyline_of_jordheim",
+  "set": {
+   "Name": "Skyline of Jordheim",
+   "Model": 1406,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_queen_kula_s_splendor",
+  "set": {
+   "Name": "Queen Kula's Splendor",
+   "Model": 1407,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_hazards_of_iarnvidiur_s_lair",
+  "set": {
+   "Name": "Hazards of Iarnvidiur's Lair",
+   "Model": 1408,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_wintry_forest_sunrise",
+  "set": {
+   "Name": "Wintry Forest Sunrise",
+   "Model": 1409,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sanctuary",
+  "set": {
+   "Name": "Sanctuary",
+   "Model": 1410,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_fog_over_hagall",
+  "set": {
+   "Name": "Fog Over Hagall",
+   "Model": 1411,
+   "Price": 250000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_glacial_resting_place_grandiose",
+  "set": {
+   "Name": "Glacial Resting Place grandiose painting",
+   "Model": 1402,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_frozen_horizon_grandiose",
+  "set": {
+   "Name": "Frozen Horizon grandiose painting",
+   "Model": 1403,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_aegirhamn_docks_grandiose",
+  "set": {
+   "Name": "Aegirhamn Docks grandiose painting",
+   "Model": 1404,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_darkness_falls_grandiose",
+  "set": {
+   "Name": "Darkness Falls grandiose painting",
+   "Model": 1405,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_skyline_of_jordheim_grandiose",
+  "set": {
+   "Name": "Skyline of Jordheim grandiose painting",
+   "Model": 1406,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_queen_kula_s_splendor_grandiose",
+  "set": {
+   "Name": "Queen Kula's Splendor grandiose painting",
+   "Model": 1407,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_hazards_of_iarnvidiur_s_lair_grandiose",
+  "set": {
+   "Name": "Hazards of Iarnvidiur's Lair grandiose painting",
+   "Model": 1408,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_wintry_forest_sunrise_grandiose",
+  "set": {
+   "Name": "Wintry Forest Sunrise grandiose painting",
+   "Model": 1409,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_sanctuary_grandiose",
+  "set": {
+   "Name": "Sanctuary grandiose painting",
+   "Model": 1410,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_fog_over_hagall_grandiose",
+  "set": {
+   "Name": "Fog Over Hagall grandiose painting",
+   "Model": 1411,
+   "Price": 400000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_a_hero_of_midgard_wall_tapestry",
+  "set": {
+   "Name": "A Hero of Midgard wall tapestry",
+   "Model": 1572,
+   "Price": 750000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_three_defenders_of_midgard_wall_tapestry",
+  "set": {
+   "Name": "Three Defenders of Midgard wall tapestry",
+   "Model": 1592,
+   "Price": 750000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_crossed_beam_arch",
+  "set": {
+   "Name": "crossed beam arch",
+   "Model": 1466,
+   "Price": 500000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_walled_crossed_beam_arch",
+  "set": {
+   "Name": "walled crossed-beam arch",
+   "Model": 1467,
+   "Price": 1000000
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_albmap",
+  "key": "housing_decor_midgard_wall_map",
+  "set": {
+   "Name": "Midgard wall map",
+   "Model": 1381,
+   "Price": 50000
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_midgard_wall_map",
+   "PageNumber": 0,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_glacial_resting_place",
+   "PageNumber": 0,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_frozen_horizon",
+   "PageNumber": 0,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_aegirhamn_docks",
+   "PageNumber": 0,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_darkness_falls",
+   "PageNumber": 0,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_skyline_of_jordheim",
+   "PageNumber": 0,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_queen_kula_s_splendor",
+   "PageNumber": 0,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_hazards_of_iarnvidiur_s_lair",
+   "PageNumber": 0,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_wintry_forest_sunrise",
+   "PageNumber": 0,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_sanctuary",
+   "PageNumber": 0,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_fog_over_hagall",
+   "PageNumber": 0,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_indoor_large_mid_map",
+   "PageNumber": 0,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_glacial_resting_place_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_frozen_horizon_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_aegirhamn_docks_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_darkness_falls_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_skyline_of_jordheim_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_queen_kula_s_splendor_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_hazards_of_iarnvidiur_s_lair_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_wintry_forest_sunrise_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_sanctuary_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_fog_over_hagall_grandiose",
+   "PageNumber": 0,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_a_hero_of_midgard_wall_tapestry",
+   "PageNumber": 0,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_three_defenders_of_midgard_wall_tapestry",
+   "PageNumber": 0,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_crossed_beam_arch",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_decor_walled_crossed_beam_arch",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "75e0a81e-6140-4a25-82b8-ba7eeac1ffef",
+   "ItemTemplateID": "housing_outdoor_midouthouse",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop54",
+   "PageNumber": 0,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop55",
+   "PageNumber": 0,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop56",
+   "PageNumber": 0,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop57",
+   "PageNumber": 0,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop58",
+   "PageNumber": 0,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop59",
+   "PageNumber": 0,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop60",
+   "PageNumber": 0,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop61",
+   "PageNumber": 0,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop62",
+   "PageNumber": 0,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop63",
+   "PageNumber": 0,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop64",
+   "PageNumber": 0,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop65",
+   "PageNumber": 0,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop66",
+   "PageNumber": 0,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop67",
+   "PageNumber": 0,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop68",
+   "PageNumber": 0,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop69",
+   "PageNumber": 0,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop70",
+   "PageNumber": 0,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop71",
+   "PageNumber": 0,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop72",
+   "PageNumber": 0,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop73",
+   "PageNumber": 0,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop74",
+   "PageNumber": 0,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop75",
+   "PageNumber": 0,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop86",
+   "PageNumber": 0,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_indoor_shop85",
+   "PageNumber": 0,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_outdoor_shop98",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_outdoor_shop99",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "410c36c1-1913-4dc8-b073-5486eb3e876b",
+   "ItemTemplateID": "housing_outdoor_shop100",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_granite_arch",
+   "PageNumber": 0,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_walled_granite_arch",
+   "PageNumber": 0,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_crossed_beam_arch",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_walled_crossed_beam_arch",
+   "PageNumber": 2,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_clas_alb_horsetrophy_5years",
+  "set": {
+   "Name": "Albion 5 year horse trophy",
+   "Model": 3689,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_clas_hib_horsetrophy_5years",
+  "set": {
+   "Name": "Hibernia 5 year horse trophy",
+   "Model": 3690,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_clas_mid_horsetrophy_5years",
+  "set": {
+   "Name": "Midgard 5 year horse trophy",
+   "Model": 3691,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_dracolich_trophy",
+  "set": {
+   "Name": "Dracolich trophy",
+   "Model": 3692,
+   "Price": 1000000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_egg_dragon_a",
+  "set": {
+   "Name": "Albion dragon egg",
+   "Model": 3741,
+   "Price": 1000000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_egg_dragon_h",
+  "set": {
+   "Name": "Hibernia dragon egg",
+   "Model": 3739,
+   "Price": 1000000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_egg_dragon_m",
+  "set": {
+   "Name": "Midgard dragon egg",
+   "Model": 3740,
+   "Price": 1000000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springnestegg",
+  "set": {
+   "Name": "springnestegg",
+   "Model": 4198,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springnestegg",
+   "PageNumber": 2,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_15year",
+  "set": {
+   "Name": "15 year statue",
+   "Model": 4651,
+   "Price": 1000000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_15year",
+   "PageNumber": 2,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_fishbasket",
+  "set": {
+   "Name": "garden fish basket",
+   "Model": 4247,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_fishbasket",
+   "PageNumber": 2,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_market_barrow",
+  "set": {
+   "Name": "market barrow",
+   "Model": 4246,
+   "Price": 250000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_market_barrow",
+   "PageNumber": 2,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springbench",
+  "set": {
+   "Name": "spring garden bench",
+   "Model": 4199,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springbench",
+   "PageNumber": 2,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springflowerbox",
+  "set": {
+   "Name": "spring flower box",
+   "Model": 4200,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springflowerbox",
+   "PageNumber": 3,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springfowers",
+  "set": {
+   "Name": "spring flowers",
+   "Model": 4201,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springfowers",
+   "PageNumber": 3,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springshrubwhite",
+  "set": {
+   "Name": "white spring shrub",
+   "Model": 4205,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springshrubwhite",
+   "PageNumber": 3,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springshrubyellow",
+  "set": {
+   "Name": "yellow spring shrub",
+   "Model": 4206,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springshrubyellow",
+   "PageNumber": 3,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springtreepink",
+  "set": {
+   "Name": "pink spring garden tree",
+   "Model": 4207,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springtreepink",
+   "PageNumber": 3,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_springtreewhite",
+  "set": {
+   "Name": "white spring garden tree",
+   "Model": 4208,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_springtreewhite",
+   "PageNumber": 3,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_statue_cupid",
+  "set": {
+   "Name": "cupid garden statue",
+   "Model": 4175,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_statue_cupid",
+   "PageNumber": 3,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_trophy_ext_trophy_garden_headhuntingdisplay_albion",
+  "set": {
+   "Name": "Albion garden headhunting display",
+   "Model": 4897,
+   "Price": 500000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_trophy_ext_trophy_garden_headhuntingdisplay_hibernia",
+  "set": {
+   "Name": "Hibernia garden headhunting display",
+   "Model": 4898,
+   "Price": 500000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_trophy_ext_trophy_garden_headhuntingdisplay_midgard",
+  "set": {
+   "Name": "Midgard garden headhunting display",
+   "Model": 4896,
+   "Price": 500000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_winterbanner_alb",
+  "set": {
+   "Name": "Albion winter banner",
+   "Model": 4151,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_winterbanner_alb",
+   "PageNumber": 3,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_winterbanner_hib",
+  "set": {
+   "Name": "Hibernia winter banner",
+   "Model": 4152,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_winterbanner_hib",
+   "PageNumber": 4,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_winterbanner_mid",
+  "set": {
+   "Name": "Midgard winter banner",
+   "Model": 4153,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_winterbanner_mid",
+   "PageNumber": 4,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_wintercandlestand",
+  "set": {
+   "Name": "winter garden candle stand",
+   "Model": 4154,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_wintercandlestand",
+   "PageNumber": 4,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_winterpresents_lg",
+  "set": {
+   "Name": "large garden winter presents",
+   "Model": 4155,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_winterpresents_lg",
+   "PageNumber": 4,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_winterpresents_sm",
+  "set": {
+   "Name": "small garden winter presents",
+   "Model": 4156,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_winterpresents_sm",
+   "PageNumber": 4,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_wintersleigh",
+  "set": {
+   "Name": "winter sleigh",
+   "Model": 4157,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_wintersleigh",
+   "PageNumber": 4,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_wintertree_alb",
+  "set": {
+   "Name": "Albion garden winter tree",
+   "Model": 4158,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_wintertree_alb",
+   "PageNumber": 4,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_wintertree_hib",
+  "set": {
+   "Name": "Hibernia garden winter tree",
+   "Model": 4159,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_wintertree_hib",
+   "PageNumber": 4,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_ext_wintertree_mid",
+  "set": {
+   "Name": "Midgard garden winter tree",
+   "Model": 4160,
+   "Price": 150000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_ext_wintertree_mid",
+   "PageNumber": 4,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_gargoyle_trophy",
+  "set": {
+   "Name": "Round Table gargoyle trophy",
+   "Model": 3395,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_glimmer_knight_trophy",
+  "set": {
+   "Name": "Glimmer Knight trophy",
+   "Model": 4111,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_guildbannertrophy_alb",
+  "set": {
+   "Name": "Albion guild banner trophy",
+   "Model": 3359,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_guildbannertrophy_hib",
+  "set": {
+   "Name": "Hibernia guild banner trophy",
+   "Model": 3360,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_guildbannertrophy_mid",
+  "set": {
+   "Name": "Midgard guild banner trophy",
+   "Model": 3361,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_chamber_pot",
+  "set": {
+   "Name": "chamber pot",
+   "Model": 1578,
+   "Price": 20000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_chamber_pot",
+   "PageNumber": 0,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_fishtank",
+  "set": {
+   "Name": "fish tank",
+   "Model": 1569,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_fishtank",
+   "PageNumber": 0,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_foot_stool",
+  "set": {
+   "Name": "foot stool",
+   "Model": 1550,
+   "Price": 50000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_foot_stool",
+   "PageNumber": 1,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_springbench",
+  "set": {
+   "Name": "spring bench",
+   "Model": 4202,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_springbench",
+   "PageNumber": 1,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_springtree",
+  "set": {
+   "Name": "spring tree",
+   "Model": 4204,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_springtree",
+   "PageNumber": 1,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_springtree_pink",
+  "set": {
+   "Name": "pink spring tree",
+   "Model": 4215,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_springtree_pink",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_springtree_tall",
+  "set": {
+   "Name": "tall spring tree",
+   "Model": 4214,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_springtree_tall",
+   "PageNumber": 2,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_table_frontier_albion",
+  "set": {
+   "Name": "Albion frontier table",
+   "Model": 4804,
+   "Price": 300000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_table_frontier_albion",
+   "PageNumber": 2,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_table_frontier_ellan_vannin",
+  "set": {
+   "Name": "Ellan Vannin frontier table",
+   "Model": 4805,
+   "Price": 300000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_table_frontier_ellan_vannin",
+   "PageNumber": 2,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_table_frontier_hibernia",
+  "set": {
+   "Name": "Hibernia frontier table",
+   "Model": 4803,
+   "Price": 300000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_table_frontier_hibernia",
+   "PageNumber": 2,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_table_frontier_midgard",
+  "set": {
+   "Name": "Midgard frontier table",
+   "Model": 4802,
+   "Price": 300000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_table_frontier_midgard",
+   "PageNumber": 2,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_ant_01",
+  "set": {
+   "Name": "giant ant trophy",
+   "Model": 1364,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_cupid",
+  "set": {
+   "Name": "cupid statue",
+   "Model": 4173,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_cupid",
+   "PageNumber": 3,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_cyclops",
+  "set": {
+   "Name": "Cyclops trophy",
+   "Model": 2568,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_doppleganger",
+  "set": {
+   "Name": "doppelganger trophy",
+   "Model": 4888,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_fishbasket",
+  "set": {
+   "Name": "fish basket",
+   "Model": 4245,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_fishbasket",
+   "PageNumber": 3,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_goblinchief",
+  "set": {
+   "Name": "goblin chief trophy",
+   "Model": 3558,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_goldeneggs",
+  "set": {
+   "Name": "golden eggs",
+   "Model": 4195,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_goldeneggs",
+   "PageNumber": 3,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_avalonian",
+  "set": {
+   "Name": "avalonian headhunting trophy",
+   "Model": 4901,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_briton",
+  "set": {
+   "Name": "briton headhunting trophy",
+   "Model": 4902,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_celt",
+  "set": {
+   "Name": "celt headhunting trophy",
+   "Model": 4903,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_dwarf",
+  "set": {
+   "Name": "dwarf headhunting trophy",
+   "Model": 4894,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_elf",
+  "set": {
+   "Name": "elf headhunting trophy",
+   "Model": 4904,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_firbolg",
+  "set": {
+   "Name": "firbolg headhunting trophy",
+   "Model": 4905,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_frostalf01",
+  "set": {
+   "Name": "frostalf headhunting trophy",
+   "Model": 4909,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_halfogre01",
+  "set": {
+   "Name": "halfogre headhunting trophy",
+   "Model": 4911,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_highlander",
+  "set": {
+   "Name": "highlander headhunting trophy",
+   "Model": 4899,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_inconnu01",
+  "set": {
+   "Name": "inconnu headhunting trophy",
+   "Model": 4910,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_kobold",
+  "set": {
+   "Name": "kobold headhunting trophy",
+   "Model": 4893,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_lurikeen",
+  "set": {
+   "Name": "lurikeen headhunting trophy",
+   "Model": 4906,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_norse",
+  "set": {
+   "Name": "norse headhunting trophy",
+   "Model": 4895,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_saracen",
+  "set": {
+   "Name": "saracen headhunting trophy",
+   "Model": 4900,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_shar01",
+  "set": {
+   "Name": "shar headhunting trophy",
+   "Model": 4907,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_sylvan01",
+  "set": {
+   "Name": "sylvan headhunting trophy",
+   "Model": 4912,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_trolll",
+  "set": {
+   "Name": "troll headhunting trophy",
+   "Model": 4892,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhunting_valkyn01",
+  "set": {
+   "Name": "valkyn headhunting trophy",
+   "Model": 4908,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhuntingdisplay_albion01",
+  "set": {
+   "Name": "Albion headhunting display",
+   "Model": 4891,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhuntingdisplay_hibernia01",
+  "set": {
+   "Name": "Hibernia headhunting display",
+   "Model": 4890,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_headhuntingdisplay_midgard01",
+  "set": {
+   "Name": "Midgard headhunting display",
+   "Model": 4889,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_manticor",
+  "set": {
+   "Name": "manticore trophy",
+   "Model": 2529,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_marketbasket",
+  "set": {
+   "Name": "market basket",
+   "Model": 4244,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_marketbasket",
+   "PageNumber": 3,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_minoconstruct",
+  "set": {
+   "Name": "minotaur construct trophy",
+   "Model": 3557,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_octopus",
+  "set": {
+   "Name": "Octopus trophy",
+   "Model": 2569,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_phoenix",
+  "set": {
+   "Name": "Phoenix trophy",
+   "Model": 2536,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_pie",
+  "set": {
+   "Name": "pie",
+   "Model": 4243,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_pie",
+   "PageNumber": 3,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_samut",
+  "set": {
+   "Name": "Samut trophy",
+   "Model": 2570,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_scarab",
+  "set": {
+   "Name": "Scarab trophy",
+   "Model": 2571,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_snow_cat_01",
+  "set": {
+   "Name": "snow cat trophy",
+   "Model": 1374,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_springbunny",
+  "set": {
+   "Name": "spring bunny",
+   "Model": 4196,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_springbunny",
+   "PageNumber": 3,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_stygian_lion",
+  "set": {
+   "Name": "Stygian lion trophy",
+   "Model": 2572,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_int_floor_trophy_talos",
+  "set": {
+   "Name": "Talos trophy",
+   "Model": 2530,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_winterbrazier",
+  "set": {
+   "Name": "winter brazier",
+   "Model": 4138,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_winterbrazier",
+   "PageNumber": 3,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintercandlestand",
+  "set": {
+   "Name": "winter candle stand",
+   "Model": 4139,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintercandlestand",
+   "PageNumber": 3,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_winter_light",
+  "set": {
+   "Name": "winter light",
+   "Model": 4140,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_winter_light",
+   "PageNumber": 3,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_winter_tree_alb",
+  "set": {
+   "Name": "Albion winter tree",
+   "Model": 4141,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_winter_tree_alb",
+   "PageNumber": 3,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintertreehib",
+  "set": {
+   "Name": "Hibernia winter tree",
+   "Model": 4142,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintertreehib",
+   "PageNumber": 3,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintertreemid",
+  "set": {
+   "Name": "Midgard winter tree",
+   "Model": 4143,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintertreemid",
+   "PageNumber": 3,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintertreetall_a",
+  "set": {
+   "Name": "tall Albion winter tree",
+   "Model": 4161,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintertreetall_a",
+   "PageNumber": 3,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintertreetall_h",
+  "set": {
+   "Name": "tall Hibernia winter tree",
+   "Model": 4162,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintertreetall_h",
+   "PageNumber": 3,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_trophy_wintertreetall_m",
+  "set": {
+   "Name": "tall Midgard winter tree",
+   "Model": 4163,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_trophy_wintertreetall_m",
+   "PageNumber": 3,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_winterpresents_lg",
+  "set": {
+   "Name": "large winter presents",
+   "Model": 4164,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_winterpresents_lg",
+   "PageNumber": 3,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_decor_int_floor_winterpresents_sm",
+  "set": {
+   "Name": "small winter presents",
+   "Model": 4165,
+   "Price": 150000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_floor_winterpresents_sm",
+   "PageNumber": 3,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_mauler_unlock_inside",
+  "set": {
+   "Name": "Mauler unlock trophy",
+   "Model": 3732,
+   "Price": 250000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_trophy_mauler_unlock_outside",
+  "set": {
+   "Name": "Mauler unlock garden trophy",
+   "Model": 3733,
+   "Price": 250000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_10yrshield",
+  "set": {
+   "Name": "Camelot 10 year wall trophy",
+   "Model": 4314,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_10yrshield",
+   "PageNumber": 3,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_5yrshield",
+  "set": {
+   "Name": "Camelot 5 year wall trophy",
+   "Model": 3693,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_5yrshield",
+   "PageNumber": 3,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_7yrtrophyknot",
+  "set": {
+   "Name": "seven year knot",
+   "Model": 4248,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_7yrtrophyknot",
+   "PageNumber": 4,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_painting_anniversary_large",
+  "set": {
+   "Name": "anniversary grandiose painting",
+   "Model": 4824,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_painting_anniversary_large",
+   "PageNumber": 4,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_painting_anniversary_large_02",
+  "set": {
+   "Name": "second anniversary grandiose painting",
+   "Model": 4825,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_painting_anniversary_large_02",
+   "PageNumber": 4,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_singletrophy_pixie_blue",
+  "set": {
+   "Name": "blue pixie trophy",
+   "Model": 1485,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_singletrophy_pixie_green",
+  "set": {
+   "Name": "green pixie trophy",
+   "Model": 1487,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_singletrophy_pixie_red",
+  "set": {
+   "Name": "red pixie trophy",
+   "Model": 1484,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_singletrophy_pixie_white",
+  "set": {
+   "Name": "white pixie trophy",
+   "Model": 1486,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_springgarland",
+  "set": {
+   "Name": "spring garland",
+   "Model": 4197,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_springgarland",
+   "PageNumber": 4,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_tapestry_04",
+  "set": {
+   "Name": "anniversary wall tapestry",
+   "Model": 4329,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_tapestry_04",
+   "PageNumber": 4,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_agramon",
+  "set": {
+   "Name": "Agramon trophy",
+   "Model": 3555,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_alb_dragon_02",
+  "set": {
+   "Name": "Golestandt wall trophy",
+   "Model": 3870,
+   "Price": 1000000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_ammut",
+  "set": {
+   "Name": "Ammut trophy",
+   "Model": 2532,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_barracuda",
+  "set": {
+   "Name": "Barracuda trophy",
+   "Model": 2533,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_chimera",
+  "set": {
+   "Name": "Chimera trophy",
+   "Model": 2534,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_fishing",
+  "set": {
+   "Name": "fishing trophy",
+   "Model": 4242,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_gorgon",
+  "set": {
+   "Name": "Gorgon trophy",
+   "Model": 2573,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_hib_dragon_02",
+  "set": {
+   "Name": "Cuuldurach wall trophy",
+   "Model": 3872,
+   "Price": 1000000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_iaculi",
+  "set": {
+   "Name": "Iaculi trophy",
+   "Model": 2574,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_knotcandle",
+  "set": {
+   "Name": "knotwork candle",
+   "Model": 4134,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_knotcandle",
+   "PageNumber": 4,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_mantis_01",
+  "set": {
+   "Name": "Mantis trophy",
+   "Model": 1422,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_medusa",
+  "set": {
+   "Name": "Medusa trophy",
+   "Model": 2535,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_mega_01",
+  "set": {
+   "Name": "megalodon trophy",
+   "Model": 1423,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_mid_dragon_02",
+  "set": {
+   "Name": "Gjalpinulva wall trophy",
+   "Model": 3871,
+   "Price": 1000000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_minotaur_lt",
+  "set": {
+   "Name": "Minotaur lieutenant trophy",
+   "Model": 2575,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_nereid_lt",
+  "set": {
+   "Name": "Nereid lieutenant trophy",
+   "Model": 2576,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_b_b_r_r",
+  "set": {
+   "Name": "four pixie trophy (blue, red)",
+   "Model": 1426,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_b_b_w_w",
+  "set": {
+   "Name": "four pixie trophy (blue, white)",
+   "Model": 1427,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_g_g_b_b",
+  "set": {
+   "Name": "four pixie trophy (green, blue)",
+   "Model": 1428,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_g_g_g_g",
+  "set": {
+   "Name": "four pixie trophy (green)",
+   "Model": 1429,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_g_g_r_r",
+  "set": {
+   "Name": "four pixie trophy (green, red)",
+   "Model": 1430,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_g_w_b_r",
+  "set": {
+   "Name": "four pixie trophy (green, white, blue, red)",
+   "Model": 1431,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_r_r_r_r",
+  "set": {
+   "Name": "four pixie trophy (red)",
+   "Model": 1432,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_w_w_g_g",
+  "set": {
+   "Name": "four pixie trophy (white, green)",
+   "Model": 1433,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_w_w_r_r",
+  "set": {
+   "Name": "four pixie trophy (white, red)",
+   "Model": 1434,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_pixie_w_w_w_w",
+  "set": {
+   "Name": "four pixie trophy (white)",
+   "Model": 1435,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_qebeh",
+  "set": {
+   "Name": "Qebeh trophy",
+   "Model": 2577,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_rockguardian",
+  "set": {
+   "Name": "Rock Guardian trophy",
+   "Model": 4113,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_runihura",
+  "set": {
+   "Name": "Runihura trophy",
+   "Model": 2537,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_saber_01",
+  "set": {
+   "Name": "Saber trophy",
+   "Model": 1436,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_shark",
+  "set": {
+   "Name": "Shark trophy",
+   "Model": 2587,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_stingray",
+  "set": {
+   "Name": "Stingray trophy",
+   "Model": 2578,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_triton_lt",
+  "set": {
+   "Name": "Triton lieutenant trophy",
+   "Model": 2579,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_typhon",
+  "set": {
+   "Name": "Typhon trophy",
+   "Model": 2531,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_uraeus",
+  "set": {
+   "Name": "Uraeus trophy",
+   "Model": 2580,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_trophy_int_wall_trophy_werewolf_revamp",
+  "set": {
+   "Name": "werewolf trophy",
+   "Model": 4112,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathgold",
+  "set": {
+   "Name": "gold wreath",
+   "Model": 4131,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathgold",
+   "PageNumber": 4,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathknot",
+  "set": {
+   "Name": "knotwork wreath",
+   "Model": 4132,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathknot",
+   "PageNumber": 4,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathred",
+  "set": {
+   "Name": "red wreath",
+   "Model": 4133,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathred",
+   "PageNumber": 4,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathsnow",
+  "set": {
+   "Name": "snowy wreath",
+   "Model": 4128,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathsnow",
+   "PageNumber": 4,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathspray",
+  "set": {
+   "Name": "wreath spray",
+   "Model": 4129,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathspray",
+   "PageNumber": 4,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_trophy_wreathswag",
+  "set": {
+   "Name": "wreath swag",
+   "Model": 4130,
+   "Price": 150000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_trophy_wreathswag",
+   "PageNumber": 4,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop66",
+  "key": "housing_decor_int_wall_vegasroundtable2006",
+  "set": {
+   "Name": "Round Table 2006 wall plaque",
+   "Model": 3540,
+   "Price": 500000,
+   "Object_Type": 50
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_indoor_shop",
+   "ItemTemplateID": "housing_decor_int_wall_vegasroundtable2006",
+   "PageNumber": 4,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_outdoor_shop98",
+  "key": "housing_decor_message_brd",
+  "set": {
+   "Name": "message board",
+   "Model": 1599,
+   "Price": 100000,
+   "Object_Type": 49
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_outdoor_shop",
+   "ItemTemplateID": "housing_decor_message_brd",
+   "PageNumber": 4,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_roundtable",
+  "set": {
+   "Name": "The Round Table",
+   "Model": 2986,
+   "Price": 2000000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_astoroth",
+  "set": {
+   "Name": "Astoroth trophy",
+   "Model": 3397,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_belial",
+  "set": {
+   "Name": "Belial trophy",
+   "Model": 3396,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_dub",
+  "set": {
+   "Name": "Dub trophy",
+   "Model": 3023,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_fafner",
+  "set": {
+   "Name": "Fafner trophy",
+   "Model": 3024,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_gargoyle",
+  "set": {
+   "Name": "Gargoyle trophy",
+   "Model": 3025,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_mordred",
+  "set": {
+   "Name": "Mordred trophy",
+   "Model": 3026,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_terracite_bose",
+  "set": {
+   "Name": "terracite boss trophy",
+   "Model": 3027,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_utgard",
+  "set": {
+   "Name": "Utgard trophy",
+   "Model": 3412,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_indoor_shop10",
+  "key": "housing_trophy_trophy_xaphan",
+  "set": {
+   "Name": "Xaphan trophy",
+   "Model": 3415,
+   "Price": 500000,
+   "Object_Type": 51
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_agramon",
+   "PageNumber": 0,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_clas_alb_horsetrophy_5years",
+   "PageNumber": 0,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_egg_dragon_a",
+   "PageNumber": 0,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_ext_trophy_garden_headhuntingdisplay_albion",
+   "PageNumber": 0,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_guildbannertrophy_alb",
+   "PageNumber": 0,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhuntingdisplay_albion01",
+   "PageNumber": 0,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_ammut",
+   "PageNumber": 0,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_astoroth",
+   "PageNumber": 0,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_avalonian",
+   "PageNumber": 0,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_barracuda",
+   "PageNumber": 0,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_belial",
+   "PageNumber": 0,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_singletrophy_pixie_blue",
+   "PageNumber": 0,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_briton",
+   "PageNumber": 0,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_celt",
+   "PageNumber": 0,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_chimera",
+   "PageNumber": 0,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_hib_dragon_02",
+   "PageNumber": 0,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_cyclops",
+   "PageNumber": 0,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_doppleganger",
+   "PageNumber": 0,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_dracolich_trophy",
+   "PageNumber": 0,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_dub",
+   "PageNumber": 0,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_dwarf",
+   "PageNumber": 0,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_elf",
+   "PageNumber": 0,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_fafner",
+   "PageNumber": 0,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_firbolg",
+   "PageNumber": 0,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_fishing",
+   "PageNumber": 0,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_b_b_r_r",
+   "PageNumber": 0,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_b_b_w_w",
+   "PageNumber": 0,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_g_g_g_g",
+   "PageNumber": 0,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_g_g_b_b",
+   "PageNumber": 0,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_g_g_r_r",
+   "PageNumber": 0,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_g_w_b_r",
+   "PageNumber": 1,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_r_r_r_r",
+   "PageNumber": 1,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_w_w_w_w",
+   "PageNumber": 1,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_w_w_g_g",
+   "PageNumber": 1,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_pixie_w_w_r_r",
+   "PageNumber": 1,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_frostalf01",
+   "PageNumber": 1,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_gargoyle",
+   "PageNumber": 1,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_ant_01",
+   "PageNumber": 1,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_mid_dragon_02",
+   "PageNumber": 1,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_glimmer_knight_trophy",
+   "PageNumber": 1,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_goblinchief",
+   "PageNumber": 1,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_alb_dragon_02",
+   "PageNumber": 1,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_gorgon",
+   "PageNumber": 1,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_singletrophy_pixie_green",
+   "PageNumber": 1,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_halfogre01",
+   "PageNumber": 1,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_clas_hib_horsetrophy_5years",
+   "PageNumber": 1,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_egg_dragon_h",
+   "PageNumber": 1,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_ext_trophy_garden_headhuntingdisplay_hibernia",
+   "PageNumber": 1,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_guildbannertrophy_hib",
+   "PageNumber": 1,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhuntingdisplay_hibernia01",
+   "PageNumber": 1,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_highlander",
+   "PageNumber": 1,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_iaculi",
+   "PageNumber": 1,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_inconnu01",
+   "PageNumber": 1,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_kobold",
+   "PageNumber": 1,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_lurikeen",
+   "PageNumber": 1,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_manticor",
+   "PageNumber": 1,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_mantis_01",
+   "PageNumber": 1,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_mauler_unlock_outside",
+   "PageNumber": 1,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_mauler_unlock_inside",
+   "PageNumber": 1,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_medusa",
+   "PageNumber": 1,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_mega_01",
+   "PageNumber": 2,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_clas_mid_horsetrophy_5years",
+   "PageNumber": 2,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_egg_dragon_m",
+   "PageNumber": 2,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_ext_trophy_garden_headhuntingdisplay_midgard",
+   "PageNumber": 2,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_guildbannertrophy_mid",
+   "PageNumber": 2,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhuntingdisplay_midgard01",
+   "PageNumber": 2,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_minoconstruct",
+   "PageNumber": 2,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_minotaur_lt",
+   "PageNumber": 2,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_mordred",
+   "PageNumber": 2,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_nereid_lt",
+   "PageNumber": 2,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_norse",
+   "PageNumber": 2,
+   "SlotPosition": 10
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_octopus",
+   "PageNumber": 2,
+   "SlotPosition": 11
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_phoenix",
+   "PageNumber": 2,
+   "SlotPosition": 12
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_qebeh",
+   "PageNumber": 2,
+   "SlotPosition": 13
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_singletrophy_pixie_red",
+   "PageNumber": 2,
+   "SlotPosition": 14
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_rockguardian",
+   "PageNumber": 2,
+   "SlotPosition": 15
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_gargoyle_trophy",
+   "PageNumber": 2,
+   "SlotPosition": 16
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_runihura",
+   "PageNumber": 2,
+   "SlotPosition": 17
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_saber_01",
+   "PageNumber": 2,
+   "SlotPosition": 18
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_samut",
+   "PageNumber": 2,
+   "SlotPosition": 19
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_saracen",
+   "PageNumber": 2,
+   "SlotPosition": 20
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_scarab",
+   "PageNumber": 2,
+   "SlotPosition": 21
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_shar01",
+   "PageNumber": 2,
+   "SlotPosition": 22
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_shark",
+   "PageNumber": 2,
+   "SlotPosition": 23
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_snow_cat_01",
+   "PageNumber": 2,
+   "SlotPosition": 24
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_stingray",
+   "PageNumber": 2,
+   "SlotPosition": 25
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_stygian_lion",
+   "PageNumber": 2,
+   "SlotPosition": 26
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_sylvan01",
+   "PageNumber": 2,
+   "SlotPosition": 27
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_talos",
+   "PageNumber": 2,
+   "SlotPosition": 28
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_terracite_bose",
+   "PageNumber": 2,
+   "SlotPosition": 29
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_roundtable",
+   "PageNumber": 3,
+   "SlotPosition": 0
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_triton_lt",
+   "PageNumber": 3,
+   "SlotPosition": 1
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_trolll",
+   "PageNumber": 3,
+   "SlotPosition": 2
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_typhon",
+   "PageNumber": 3,
+   "SlotPosition": 3
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_uraeus",
+   "PageNumber": 3,
+   "SlotPosition": 4
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_utgard",
+   "PageNumber": 3,
+   "SlotPosition": 5
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_floor_trophy_headhunting_valkyn01",
+   "PageNumber": 3,
+   "SlotPosition": 6
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_trophy_werewolf_revamp",
+   "PageNumber": 3,
+   "SlotPosition": 7
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_int_wall_singletrophy_pixie_white",
+   "PageNumber": 3,
+   "SlotPosition": 8
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "insert": {
+   "ItemListID": "housing_taxidermy",
+   "ItemTemplateID": "housing_trophy_trophy_xaphan",
+   "PageNumber": 3,
+   "SlotPosition": 9
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "key": "545492cf-fbcc-47ca-99b6-34542ec9f903",
+  "set": {
+   "ItemsListTemplateID": "housing_taxidermy"
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "copy": "f3fc9335-2a1b-4c65-a539-459dc6723165",
+  "key": "housing_siegecraft_alb",
+  "set": {
+   "TemplateId": 842,
+   "ItemsListTemplateID": "SiegeMerchantAlb"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_siegecraft_supplies",
+  "key": "housing_alb_siegecraft_supplies",
+  "set": {
+   "Bonus": 842
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "key": "2ec84e81-ddef-4b0d-9bfa-1f3c4f32ee09",
+  "set": {
+   "ItemTemplateID": "housing_alb_siegecraft_supplies"
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "copy": "f3fc9335-2a1b-4c65-a539-459dc6723165",
+  "key": "housing_siegecraft_mid",
+  "set": {
+   "TemplateId": 843,
+   "ItemsListTemplateID": "SiegeMerchantMid"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_siegecraft_supplies",
+  "key": "housing_mid_siegecraft_supplies",
+  "set": {
+   "Bonus": 843
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "key": "b345f6ca-08bb-43ac-ae9a-d9c39636e39c",
+  "set": {
+   "ItemTemplateID": "housing_mid_siegecraft_supplies"
+  }
+ },
+ {
+  "table": "NpcTemplate",
+  "copy": "f3fc9335-2a1b-4c65-a539-459dc6723165",
+  "key": "housing_siegecraft_hib",
+  "set": {
+   "TemplateId": 844,
+   "ItemsListTemplateID": "SiegeMerchantHib"
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "copy": "housing_siegecraft_supplies",
+  "key": "housing_hib_siegecraft_supplies",
+  "set": {
+   "Bonus": 844
+  }
+ },
+ {
+  "table": "MerchantItem",
+  "key": "9923bf96-285b-44af-8796-5359280a7b94",
+  "set": {
+   "ItemTemplateID": "housing_hib_siegecraft_supplies"
+  }
+ }
+]

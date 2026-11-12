@@ -526,8 +526,25 @@ namespace DOL.GS.PacketHandler.Client.v168
                 return true;
             }
 
+            // The name is unique in DOLCharacters. A client that skips the name check (or two creates at once) used to
+            // hit the constraint: the insert failed, but the creation event still ran for a character that was never
+            // saved (error.log 2026-11-07 05:33). Refuse it instead.
+            if (DOLDB<DbCoreCharacter>.SelectObject(DB.Column("Name").IsEqualTo(ch.Name)) != null)
+            {
+                if (log.IsWarnEnabled)
+                    log.Warn($"{ch.AccountName} tried to create a character with a taken name: {ch.Name}");
+
+                return true;
+            }
+
             // Save the character in the database
-            GameServer.Database.AddObject(ch);
+            if (!GameServer.Database.AddObject(ch))
+            {
+                if (log.IsErrorEnabled)
+                    log.Error($"Character {ch.Name} could not be saved for account {ch.AccountName}; creation cancelled");
+
+                return true;
+            }
 
             // Fire the character creation event
             // This is Where Most Creation Script should take over to update any data they would like !
@@ -978,6 +995,15 @@ namespace DOL.GS.PacketHandler.Client.v168
                         log.WarnFormat("Wrong race: {0}, class:{1} on character creation from Account: {2}", ch.Race, ch.Class, ch.AccountName);
 
                     valid = false;
+                }
+
+                if (!GlobalConstants.STARTING_STATS_DICT.ContainsKey((eRace)ch.Race))
+                {
+                    // The client offers every race up to Labyrinth; this server's world is Classic and Shrouded Isles.
+                    if (log.IsWarnEnabled)
+                        log.Warn($"Race {(eRace)ch.Race} ({ch.Race}) is not playable on this server (Catacombs and later races are off): character creation refused for Account: {ch.AccountName}");
+
+                    return false;
                 }
 
                 valid &= CharacterStatValidator.Validate(ch, out int distributedPoints);

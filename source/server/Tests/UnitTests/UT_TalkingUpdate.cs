@@ -471,7 +471,7 @@ namespace DOL.GS.Tests
             Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.2", untouched), Is.Empty, "a newer build already ran");
             Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.PlanChanges("1.1", untouched).Select(c => c.NewDefault),
                 Is.EqualTo(new[] { "1.5", "False" }));
-            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Version, Is.EqualTo("1.1.2"));
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Version, Is.EqualTo("1.1.2.1"));
 
             var chosen = new Dictionary<string, (string Value, string DefaultValue)>
             {
@@ -488,6 +488,67 @@ namespace DOL.GS.Tests
                 ["mana_regen_amount_halved_below_50_percent"] = ("False", "False"),
             };
             Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("", fresh), Is.Empty);
+        }
+
+        [Test]
+        public void RaidSizingDefaultsFromEarlierTestBuildsReachAnUntouchedWorldOnce()
+        {
+            // 2026-11-05 on the owner's test copy: rows written by an earlier PR #75 build kept the old step (5) and ceiling
+            // (150), so raids moved 125 -> 115 after two wins and 125 -> 135.2 after a loss.
+            var testCopy = new Dictionary<string, (string Value, string DefaultValue)>
+            {
+                ["realm_raid_win_trim_percent"] = ("5", "5"),
+                ["realm_raid_largest_size_percent"] = ("150", "150"),
+                ["realm_raid_smallest_size_percent"] = ("70", "70"),     // already the default
+                ["realm_raid_target_win_percent"] = ("67", "67"),        // never changed
+                ["realm_raid_start_size_percent"] = ("125", "125"),      // never changed
+            };
+            // That copy has already recorded 1.1.2 (every 1.1.2 build wrote it).
+            var planned = DOL.GS.ServerProperties.LivingServerSettingsUpgrade.PlanChanges("1.1.2", testCopy);
+            Assert.That(planned.Select(c => (c.Key, c.NewDefault)), Is.EqualTo(new[]
+                { ("realm_raid_win_trim_percent", "10"), ("realm_raid_largest_size_percent", "200") }));
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1.2.1", testCopy), Is.Empty, "once only");
+            // The very first build's defaults (smallest 60, largest 100).
+            var firstBuild = new Dictionary<string, (string Value, string DefaultValue)>
+            {
+                ["realm_raid_smallest_size_percent"] = ("60", "60"),
+                ["realm_raid_largest_size_percent"] = ("100", "100"),
+                ["realm_raid_win_trim_percent"] = ("5", "5"),
+            };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.PlanChanges("1.1.2", firstBuild).Select(c => (c.Key, c.NewDefault)),
+                Is.EquivalentTo(new[] { ("realm_raid_win_trim_percent", "10"), ("realm_raid_largest_size_percent", "200"),
+                    ("realm_raid_smallest_size_percent", "70") }));
+            // A player's own choice is kept: set in the launcher, or another value than the old default.
+            var chosen = new Dictionary<string, (string Value, string DefaultValue)>
+            {
+                ["realm_raid_win_trim_percent"] = ("5", ""),
+                ["realm_raid_largest_size_percent"] = ("170", "150"),
+            };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1.2", chosen), Is.Empty);
+            // A new world starts on the new defaults; the code agrees with the upgrade's new values.
+            var fresh = new Dictionary<string, (string Value, string DefaultValue)>
+            {
+                ["realm_raid_win_trim_percent"] = ("10", "10"),
+                ["realm_raid_largest_size_percent"] = ("200", "200"),
+            };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("", fresh), Is.Empty);
+            Assert.That(DOL.GS.RealmRaidRecruitmentPolicy.WinTrimPercentSetting, Is.EqualTo(10));
+            Assert.That(DOL.GS.RealmRaidRecruitmentPolicy.LargestSizePercentSetting, Is.EqualTo(200));
+            Assert.That(DOL.GS.RealmRaidRecruitmentPolicy.SmallestSizePercentSetting, Is.EqualTo(70));
+        }
+
+        [Test]
+        public void BusierChatReachesAnUntouchedWorldOnce()
+        {
+            // Owner 2026-11-04, after the playtest: bot_voices_chat_rate 1 -> 2 where the server wrote 1 itself.
+            var untouched = new Dictionary<string, (string Value, string DefaultValue)> { ["bot_voices_chat_rate"] = ("1", "1") };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1", untouched), Is.EqualTo(new[] { "bot_voices_chat_rate" }));
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.PlanChanges("1.1", untouched).Single().NewDefault, Is.EqualTo("2"));
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1.2", untouched), Is.Empty, "once only");
+            var chosen = new Dictionary<string, (string Value, string DefaultValue)> { ["bot_voices_chat_rate"] = ("1", "") };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1", chosen), Is.Empty, "set in the launcher: the player's choice");
+            var other = new Dictionary<string, (string Value, string DefaultValue)> { ["bot_voices_chat_rate"] = ("2.5", "1") };
+            Assert.That(DOL.GS.ServerProperties.LivingServerSettingsUpgrade.Plan("1.1", other), Is.Empty);
         }
 
         [Test]
@@ -583,6 +644,111 @@ namespace DOL.GS.Tests
             Assert.That(AutonomousLivingServer.OfferFits("hey, want to duo here? im {level} {class}", true), Is.True);
         }
 
+        /// <summary>RC7 on the owner's PC: two stories at once, a third two minutes later; "which way" answered "few grps".</summary>
+        [Test]
+        public void OneStoryAtATimeAndWhereGetsAPlace()
+        {
+            Assert.That(AutonomousBotChatCoordinator.AnyStoryRoom(100_000, 104_000), Is.False);
+            Assert.That(AutonomousBotChatCoordinator.AnyStoryRoom(100_000, 100_000 + AutonomousBotChatCoordinator.AnyStoryGapMs), Is.True);
+            Assert.That(AutonomousChatFieldTalk.Fits("few grps", "place"), Is.False);
+            Assert.That(AutonomousChatFieldTalk.Fits("3 grps", "place"), Is.False);
+            Assert.That(AutonomousChatFieldTalk.Fits("through the mg", "place"), Is.True);
+            Assert.That(AutonomousChatFieldTalk.RunsOnAbout(new AutonomousChatFieldTalk.Said("port to frontier up?", "rvr", null) { Family = "rvr_port" }), Is.False);
+            Assert.That(AutonomousChatFieldTalk.RunsOnAbout(new AutonomousChatFieldTalk.Said("any grps out?", "rvr", null) { Family = "rvr_grps" }), Is.True);
+        }
+
+        /// <summary>RC7 on the owner's PC: "lfg Stonehenge Barrows or anywhere with xp" from a cabalist out in Odin's Gate for rvr.</summary>
+        [TestCase("lfg Stonehenge Barrows or anywhere with xp", true, false)]
+        [TestCase("lfg Stonehenge Barrows or anywhere with xp", false, true)]
+        [TestCase("lf rvr grp 50 cab", true, true)]
+        [TestCase("lf rvr grp 50 cab", false, false)]
+        [TestCase("lfg 50 cab", true, true)]
+        [TestCase("lfg 50 cab", false, true)]
+        public void AGroupPostFitsTheBotsTask(string text, bool rvrTask, bool fits) =>
+            Assert.That(AutonomousChatFieldTalk.FitsTask(text, rvrTask), Is.EqualTo(fits));
+
+        /// <summary>RC6 on the owner's PC: "what class?" was answered "coming from mount collory".</summary>
+        [Test]
+        public void WhatClassIsAnsweredWithAClass()
+        {
+            Assert.That(AutonomousChatFieldTalk.QuestionKind("what class?"), Is.EqualTo("class"));
+            Assert.That(AutonomousChatFieldTalk.Fits("coming from mount collory", "class"), Is.False);
+            Assert.That(AutonomousChatFieldTalk.Fits("in lough derg", "class"), Is.False);
+            Assert.That(AutonomousChatFieldTalk.Fits("bard 29", "class"), Is.True);
+            Assert.That(AutonomousChatFieldTalk.Fits("cab, 50", "class"), Is.True);
+            Assert.That(AutonomousChatFieldTalk.Fits("dunno", "class"), Is.True);
+        }
+
+        /// <summary>RC6 on the owner's PC: written /lfg lines that claim a group or a want slipped past the group-state check.</summary>
+        [TestCase("group at Coruscating Mine needs a healer, pst", "lfm")]
+        [TestCase("group has room near Connacht, all classes welcome", "lfm")]
+        [TestCase("33 minstrel looking for group, got time", "lfg")]
+        [TestCase("ranger 50 lf anything with xp pst", "lfg")]
+        [TestCase("any group need a 50 minstrel? happy to travel", "lfg")]
+        [TestCase("any1 need a 32 theurgist? pst", "lfg")]
+        [TestCase("looking for a duo partner 50 scout", "lfg")]
+        [TestCase("wtb a shield for a 50 armsman", null)]
+        [TestCase("looking for plate arms, will pay", null)]
+        public void AWrittenGroupPostIsReadForItsStance(string text, string stance) =>
+            Assert.That(AutonomousChatStance.SeekOf(text), Is.EqualTo(stance));
+
+        /// <summary>RC6 on the owner's PC: the player's "wts 99% arcane cloth cap, cheap" in /trade drew nothing.</summary>
+        [TestCase("wts 99% arcane cloth cap, cheap", AutonomousChatMarket.Post.Wts)]
+        [TestCase("selling a 98% sword pst", AutonomousChatMarket.Post.Wts)]
+        [TestCase("wtb cloth legs pst", AutonomousChatMarket.Post.Wtb)]
+        [TestCase("anyone selling a necklace?", AutonomousChatMarket.Post.Wtb)]
+        [TestCase("lol", AutonomousChatMarket.Post.None)]
+        [TestCase("where is the trainer", AutonomousChatMarket.Post.None)]
+        public void APlayersTradePostIsReadAsASaleOrAWant(string text, AutonomousChatMarket.Post post) =>
+            Assert.That(AutonomousChatMarket.PostOf(text), Is.EqualTo(post));
+
+        /// <summary>RC6 on the owner's PC: "which stable 4 group rendezvous?" in /faction.</summary>
+        [TestCase("group rendezvous", false)]
+        [TestCase("the group rendezvous", false)]
+        [TestCase("frontier patrol near death stalkers", false)]
+        [TestCase("Iarn Dwarf Camp", true)]
+        [TestCase("Hagall", true)]
+        [TestCase("Avalon Marsh", true)]
+        [TestCase("Caer Benowyc", true)]
+        public void OnlyARealPlaceIsADestinationToTalkAbout(string destination, bool place) =>
+            Assert.That(AutonomousBotVoices.IsPlaceName(destination), Is.EqualTo(place));
+
+        /// <summary>RC6 on the owner's PC: "any grps out?" "quiet atm" ran on with "how many?" "small grp" "count me in".</summary>
+        [TestCase("quiet atm", true)]
+        [TestCase("havent seen any", true)]
+        [TestCase("dunno, quiet tonight", true)]
+        [TestCase("nope sry", true)]
+        [TestCase("beno under attack", false)]
+        [TestCase("few grps", false)]
+        [TestCase("try the crafters in camelot", false)]
+        public void AnAnswerThatSaysThereIsNothingEndsTheThread(string answer, bool nothing)
+        {
+            Assert.That(AutonomousChatFieldTalk.SaysNothing(answer), Is.EqualTo(nothing));
+            Assert.That(AutonomousChatFieldTalk.GoesSomewhere("k omw"), Is.True);
+            Assert.That(AutonomousChatFieldTalk.GoesSomewhere("ty"), Is.False);
+            Assert.That(AutonomousChatFieldTalk.GoesSomewhere("ty, inv"), Is.True, "RC8: 'not that i know' then 'ty, inv'");
+        }
+
+        /// <summary>RC6 on the owner's PC: "want to team up for a bit?" from another zone, then "too far away to join you".</summary>
+        [Test]
+        public void AnOfferFromTooFarSaysWhereTheBotIs()
+        {
+            for (int seed = 0; seed < 40; seed++)
+            {
+                string far = AutonomousLivingServer.WithWhere("50 wizard here, want to team up for a bit?", "Avalon Marsh", false, new Random(seed));
+                Assert.That(far, Does.StartWith("50 wizard here, want to team up for a bit?"), far);
+                Assert.That(far, Does.Contain("avalon marsh"), far);
+                Assert.That(far, Does.Not.Contain("??"), far);
+                string named = AutonomousLivingServer.WithWhere("hi im 50 scout want to duo in Pennine Mountains?", "Pennine Mountains", true, new Random(seed));
+                Assert.That(named.ToLowerInvariant().Split("pennine").Length - 1, Is.EqualTo(1), named);
+                string across = AutonomousLivingServer.WithWhere("want to duo?", "Pennine Mountains", true, new Random(seed));
+                Assert.That(across, Does.Contain("pennine"), across);
+                string reply = AutonomousLivingServer.TooFarReply("Avalon Marsh", false, new Random(seed));
+                Assert.That(reply, Does.Contain("avalon marsh"), reply);
+                Assert.That(AutonomousLivingServer.TooFarReply(null, false, new Random(seed)), Is.Not.Empty);
+            }
+        }
+
         [Test]
         public void EveryTellTopicHasLinesAndOffersNeverPromiseAnInvite()
         {
@@ -610,24 +776,27 @@ namespace DOL.GS.Tests
         [Test]
         public void FactionChatIsBusierInTheEveningAndWithMoreBots()
         {
+            // Beta 1.1.2: the gap comes from the ambient budget (chat-budget.json); the middle draw gives its mean.
             var fixedDraw = new FixedRandom(0.5);
             long normal = AutonomousBotChatCoordinator.FactionGapMs(120, 14, 1.0, fixedDraw);
-            Assert.That(normal, Is.EqualTo(120_000));
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 21, 1.0, fixedDraw), Is.LessThan(normal));
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 4, 1.0, fixedDraw), Is.GreaterThan(normal));
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(400, 14, 1.0, fixedDraw), Is.LessThan(normal));
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(20, 14, 1.0, fixedDraw), Is.GreaterThan(normal));
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 14, 2.0, fixedDraw), Is.LessThan(normal));
-            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(10_000, 21, 3.0, fixedDraw), Is.GreaterThanOrEqualTo(40_000), "never a flood");
+            // No population cap: Beta 1.1.1 stopped getting busier at about 390 bots a realm.
+            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(1_000, 21, 1.0, fixedDraw),
+                Is.LessThan(AutonomousBotChatCoordinator.FactionGapMs(400, 21, 1.0, fixedDraw)));
+            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(3_000, 21, 1.0, fixedDraw),
+                Is.LessThan(AutonomousBotChatCoordinator.FactionGapMs(1_000, 21, 1.0, fixedDraw)));
+            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(100_000, 21, 3.0, new FixedRandom(0.0)), Is.GreaterThanOrEqualTo(3_000), "never a flood");
             Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 14, 0, fixedDraw), Is.GreaterThan(TimeSpan.FromDays(365).TotalMilliseconds),
                 "rate 0: bots only answer");
-            Assert.That(AutonomousBotChatCoordinator.LocalGapMs(14, 1.0, fixedDraw), Is.EqualTo(60_000));
-            // The longest draw too (the fixed draw above is the shortest).
-            var longest = new LongestRandom();
-            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 14, 1.0, longest), Is.EqualTo(240_000));
-            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(120, 4, 1.0, longest), Is.LessThanOrEqualTo(20 * 60_000));
-            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(10, 4, 0.1, longest), Is.EqualTo(20 * 60_000), "never silent for hours");
-            Assert.That(AutonomousBotChatCoordinator.LocalGapMs(14, 0, fixedDraw), Is.GreaterThan(TimeSpan.FromDays(365).TotalMilliseconds));
+            Assert.That(AutonomousBotChatCoordinator.LocalGapMs(1_000, 21, 1.0, fixedDraw), Is.EqualTo(AutonomousChatBudget.GapMs(2.0, fixedDraw)),
+                "a target of 2 /say lines a minute");
+            Assert.That(AutonomousBotChatCoordinator.LocalGapMs(1_000, 14, 0, fixedDraw), Is.GreaterThan(TimeSpan.FromDays(365).TotalMilliseconds));
+            // Beta 1.1.1's evening gap at 1,000 bots was 2-4 minutes over 1.8 x 1.35: 74 s on average. The budget's is shorter.
+            Assert.That(AutonomousBotChatCoordinator.FactionGapMs(1_000, 21, 1.0, fixedDraw), Is.LessThan(74_000));
         }
 
         #endregion

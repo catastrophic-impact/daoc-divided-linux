@@ -1,0 +1,642 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-07T22:46:19.568828+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "ZonePoint",
+   "key": "296",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "295",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "297",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 130
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "298",
+   "op": "update",
+   "before": {
+    "SourceRegion": 36
+   },
+   "after": {
+    "SourceRegion": 79
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "299",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73,
+    "SourceX": 343922,
+    "SourceY": 472891,
+    "SourceZ": 4205
+   },
+   "after": {
+    "SourceRegion": 36,
+    "SourceX": 22460,
+    "SourceY": 45673,
+    "SourceZ": 8518
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "300",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 136,
+    "SourceX": 22460,
+    "SourceY": 45673,
+    "SourceZ": 8518
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "301",
+   "op": "update",
+   "before": {
+    "SourceRegion": 36
+   },
+   "after": {
+    "SourceRegion": 79
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "302",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 36,
+    "SourceX": 29173,
+    "SourceY": 24137,
+    "SourceZ": 16978
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "303",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 136,
+    "SourceX": 29173,
+    "SourceY": 24137,
+    "SourceZ": 16978
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "304",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "305",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "307",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "308",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "309",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 130,
+    "SourceX": 333212,
+    "SourceY": 466125,
+    "SourceZ": 8822
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "toa-crossriver2-a",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "toa-crossriver2-m",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "toa-crossriver-a",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "toa-crossriver-m",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "310",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "311",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "314",
+   "op": "update",
+   "before": {
+    "SourceRegion": 78
+   },
+   "after": {
+    "SourceRegion": 35
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "316",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "317",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "319",
+   "op": "update",
+   "before": {
+    "SourceRegion": 37
+   },
+   "after": {
+    "SourceRegion": 80
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "320",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 37,
+    "SourceX": 29468,
+    "SourceY": 26150,
+    "SourceZ": 17312
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "321",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 137,
+    "SourceX": 29468,
+    "SourceY": 26150,
+    "SourceZ": 17312
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "322",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "323",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 30,
+    "SourceX": 234397,
+    "SourceY": 401998,
+    "SourceZ": 9100
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "325",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "326",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "328",
+   "op": "update",
+   "before": {
+    "SourceRegion": 40
+   },
+   "after": {
+    "SourceRegion": 83
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "329",
+   "op": "update",
+   "before": {
+    "SourceRegion": 83
+   },
+   "after": {
+    "SourceRegion": 40
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "330",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 140,
+    "SourceX": 32979,
+    "SourceY": 29932,
+    "SourceZ": 15975
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "331",
+   "op": "update",
+   "before": {
+    "SourceRegion": 40
+   },
+   "after": {
+    "SourceRegion": 83
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "332",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 40,
+    "SourceX": 32301,
+    "SourceY": 29942,
+    "SourceZ": 15975
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "334",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "335",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "337",
+   "op": "update",
+   "before": {
+    "SourceRegion": 45
+   },
+   "after": {
+    "SourceRegion": 88
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "338",
+   "op": "update",
+   "before": {
+    "SourceRegion": 88
+   },
+   "after": {
+    "SourceRegion": 45
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "343",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "344",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "346",
+   "op": "update",
+   "before": {
+    "SourceRegion": 46
+   },
+   "after": {
+    "SourceRegion": 89
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "347",
+   "op": "update",
+   "before": {
+    "SourceRegion": 89
+   },
+   "after": {
+    "SourceRegion": 46
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "350",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 46,
+    "SourceX": 48703,
+    "SourceY": 16893,
+    "SourceZ": 15668
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "352",
+   "op": "update",
+   "before": {
+    "SourceRegion": 30
+   },
+   "after": {
+    "SourceRegion": 73
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "353",
+   "op": "update",
+   "before": {
+    "SourceRegion": 73
+   },
+   "after": {
+    "SourceRegion": 30
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "356",
+   "op": "update",
+   "before": {
+    "SourceRegion": 90
+   },
+   "after": {
+    "SourceRegion": 47
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "358",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 90,
+    "SourceX": 53102,
+    "SourceY": 38926,
+    "SourceZ": 11920
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "361",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 91,
+    "SourceX": 31906,
+    "SourceY": 34971,
+    "SourceZ": 15722
+   }
+  },
+  {
+   "table": "ZonePoint",
+   "key": "363",
+   "op": "update",
+   "before": {
+    "SourceRegion": 0,
+    "SourceX": 0,
+    "SourceY": 0,
+    "SourceZ": 0
+   },
+   "after": {
+    "SourceRegion": 91,
+    "SourceX": 31906,
+    "SourceY": 34971,
+    "SourceZ": 15722
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

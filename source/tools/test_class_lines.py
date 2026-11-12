@@ -3,7 +3,13 @@ from contextlib import closing
 from pathlib import Path
 import sqlite3
 import unittest
-import class_lines as c
+try:
+    import class_lines as c
+except ModuleNotFoundError as missing:
+    # The daoc.gg class data files are local only (.git/info/exclude, owner 2026-10-25).
+    if not (missing.name or '').endswith('_data'):
+        raise
+    raise unittest.SkipTest(f'{missing.name}.py is local only; copy it into source/tools to run these tests')
 import hybrid_lines
 import remove_sluaghbinder
 

@@ -619,3 +619,51 @@ PlayerClass.Warden.GetTitle.15:		Guardian
 PlayerClass.Warden.GetTitle.10:		Woodsman
 PlayerClass.Warden.GetTitle.5:		Watcher
 
+#### Storm Sovereign (custom class)
+PlayerClass.Storm Sovereign.GetTitle.50:	Storm Sovereign
+PlayerClass.Storm Sovereign.GetTitle.45:	High Storm Jarl
+PlayerClass.Storm Sovereign.GetTitle.40:	Stormbringer
+PlayerClass.Storm Sovereign.GetTitle.35:	Tempest Lord
+PlayerClass.Storm Sovereign.GetTitle.30:	Lightning Jarl
+PlayerClass.Storm Sovereign.GetTitle.25:	Thunder Herald
+PlayerClass.Storm Sovereign.GetTitle.20:	Stormcaller
+PlayerClass.Storm Sovereign.GetTitle.15:	Gale Warden
+PlayerClass.Storm Sovereign.GetTitle.10:	Thunder Squire
+PlayerClass.Storm Sovereign.GetTitle.5:	Storm Initiate
+
+#### Pendragon Sovereign (custom class)
+PlayerClass.Pendragon Sovereign.GetTitle.50:	Pendragon Sovereign
+PlayerClass.Pendragon Sovereign.GetTitle.45:	High King's Champion
+PlayerClass.Pendragon Sovereign.GetTitle.40:	Lord of Pendragon
+PlayerClass.Pendragon Sovereign.GetTitle.35:	Dragon Marshal
+PlayerClass.Pendragon Sovereign.GetTitle.30:	Lord Protector
+PlayerClass.Pendragon Sovereign.GetTitle.25:	Banneret
+PlayerClass.Pendragon Sovereign.GetTitle.20:	Knight of the Dragon
+PlayerClass.Pendragon Sovereign.GetTitle.15:	Knight Errant
+PlayerClass.Pendragon Sovereign.GetTitle.10:	Squire of Pendragon
+PlayerClass.Pendragon Sovereign.GetTitle.5:	Page of Pendragon
+
+#### Tuatha Sovereign (custom class)
+PlayerClass.Tuatha Sovereign.GetTitle.50:	Tuatha Sovereign
+PlayerClass.Tuatha Sovereign.GetTitle.45:	Ard Ri's Chosen
+PlayerClass.Tuatha Sovereign.GetTitle.40:	High Lord of Danu
+PlayerClass.Tuatha Sovereign.GetTitle.35:	Sidhe Lord
+PlayerClass.Tuatha Sovereign.GetTitle.30:	Lord of the Mounds
+PlayerClass.Tuatha Sovereign.GetTitle.25:	Champion of the Tuatha
+PlayerClass.Tuatha Sovereign.GetTitle.20:	Knight of Danu
+PlayerClass.Tuatha Sovereign.GetTitle.15:	Sidhe Guardian
+PlayerClass.Tuatha Sovereign.GetTitle.10:	Ward of the Sidhe
+PlayerClass.Tuatha Sovereign.GetTitle.5:	Child of Danu
+
+#### Death Knight (live 1.122B Necromancer titles)
+PlayerClass.Death Knight.GetTitle.50:	Master Reanimator
+PlayerClass.Death Knight.GetTitle.45:	Deathbringer
+PlayerClass.Death Knight.GetTitle.40:	Reanimator
+PlayerClass.Death Knight.GetTitle.35:	Deathseeker
+PlayerClass.Death Knight.GetTitle.30:	Priest of Arawn
+PlayerClass.Death Knight.GetTitle.25:	Deathstalker
+PlayerClass.Death Knight.GetTitle.20:	Adept of Arawn
+PlayerClass.Death Knight.GetTitle.15:	Summoner
+PlayerClass.Death Knight.GetTitle.10:	Servant of Arawn
+PlayerClass.Death Knight.GetTitle.5:	Apprentice Necromancer
+

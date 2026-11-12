@@ -1,0 +1,66 @@
+[
+ [
+  1584,
+  "no rule for \"stat enhancement\""
+ ],
+ [
+  1587,
+  "no rule for \"endurance drain\""
+ ],
+ [
+  1588,
+  "no rule for \"melee absorption debuff\""
+ ],
+ [
+  1589,
+  "no rule for \"{'Duration': '20s', '- Damage Type': 'Thrust', '- Effective Damage': '11.6 DPS', 'Bonus Level': '44'}\""
+ ],
+ [
+  1590,
+  "no rule for \"{'Value': '40%', 'Target': 'Targeted', 'Range': '1000', 'Duration': '20 sec', 'Casting time': 'instant', '- Effective Armor': '35 Factor', 'Bonus Level': '41'}\""
+ ],
+ [
+  1899,
+  "no rule for \"disease\""
+ ],
+ [
+  3779,
+  "no rule for \"damage shield\""
+ ],
+ [
+  3814,
+  "no rule for \"endurance regen\""
+ ],
+ [
+  3816,
+  "no rule for \"endurance regen\""
+ ],
+ [
+  3818,
+  "no rule for \"power regen\""
+ ],
+ [
+  3887,
+  "no rule for \"damage shield\""
+ ],
+ [
+  7834,
+  "no rule for \"{'- Damage Type': 'Slash', '- Effective Damage': '12.0 DPS', 'Can use item every': '1:30 min', 'Bonus Level': '33'}\""
+ ],
+ [
+  10185,
+  "no rule for \"stat enhancement\""
+ ],
+ [
+  11790,
+  "no rule for \"endurance drain\""
+ ],
+ [
+  11831,
+  "no rule for \"increase fumble chance\""
+ ],
+ [
+  16742,
+  "no rule for \"disease\""
+ ]
+]

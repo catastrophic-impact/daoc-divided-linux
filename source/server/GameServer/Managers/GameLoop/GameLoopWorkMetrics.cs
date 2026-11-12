@@ -79,6 +79,7 @@ namespace DOL.GS
         private static void ReportStallMinute()
         {
             var (slowTurns, bigTurns, top) = AiTurnStallMonitor.TakeMinute();
+            var serial = AiTurnStallMonitor.TakeSerialMinute();
             TimeSpan gcPause = GC.GetTotalPauseDuration();
             int gen2 = GC.CollectionCount(2);
             double gcPauseMs = (gcPause - _lastGcPause).TotalMilliseconds;
@@ -89,9 +90,10 @@ namespace DOL.GS
             double worstMs = worst.Value?.MaxMs ?? 0;
             if (!AiTurnStallMonitor.IsStallMinute(worstMs, gcPauseMs))
                 return;
-            string likely = AiTurnStallMonitor.LikelyCause(worstMs, gcPauseMs, top);
+            string likely = AiTurnStallMonitor.LikelyCause(worstMs, gcPauseMs, top, serial);
             string slowest = AiTurnStallMonitor.Describe(top);
-            Log.Warn(FormattableString.Invariant($"SERVER_STALL worstTickMs={worstMs:F0} stage={worst.Key ?? "none"} gcPauseMs={gcPauseMs:F0} gen2={gen2Delta} heapMB={GC.GetTotalMemory(false) / 1048576} slowAiTurns={slowTurns} bigAiTurns={bigTurns} likely=\"{likely}\" slowest=\"{slowest}\""));
+            string serialSteps = AiTurnStallMonitor.DescribeSerial(serial);
+            Log.Warn(FormattableString.Invariant($"SERVER_STALL worstTickMs={worstMs:F0} stage={worst.Key ?? "none"} gcPauseMs={gcPauseMs:F0} gen2={gen2Delta} heapMB={GC.GetTotalMemory(false) / 1048576} slowAiTurns={slowTurns} bigAiTurns={bigTurns} likely=\"{likely}\" slowest=\"{slowest}\" serial=\"{serialSteps}\""));
         }
 
         // For the launcher's BOT AI DELAY card. Written off the game loop so a slow disk

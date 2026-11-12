@@ -1,0 +1,1386 @@
+{
+ "format": "offline-daoc-world-editor-2",
+ "created": "2026-11-09T21:55:02.383452+00:00",
+ "clientWorld": "bb01d5e0ea8847ce322f77ff0f61fa511cdd4b62aee99f583e39db36b54983dc",
+ "changes": [
+  {
+   "table": "MobXLootTemplate",
+   "key": "7af74a6a-02d9-5163-b482-4c85e3028a7e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "an'shi",
+    "LootTemplateName": "official drops 61b5a71584 named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "7af74a6a-02d9-5163-b482-4c85e3028a7e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d4dc879c-cba1-55d6-a3fe-9ebc749c410a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "da'mesh",
+    "LootTemplateName": "official drops 61b5a71584 named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d4dc879c-cba1-55d6-a3fe-9ebc749c410a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "95dd9f1f-3b21-55bb-ab95-e6b0889351ef",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "spymaster zarahel",
+    "LootTemplateName": "official drops 61b5a71584 named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "95dd9f1f-3b21-55bb-ab95-e6b0889351ef"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ff866516-6f8c-5067-b85b-58a8d3b79b79",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "brittle marrach gargoyle",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ff866516-6f8c-5067-b85b-58a8d3b79b79"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "056f884b-a292-51b0-8249-52712bc75495",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf archer",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "056f884b-a292-51b0-8249-52712bc75495"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "4ff163e2-eacf-5dea-82ca-dea7f7b78348",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf bladist",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "4ff163e2-eacf-5dea-82ca-dea7f7b78348"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "6f52cdd8-452e-521b-90f1-d26cead9601e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf guard",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "6f52cdd8-452e-521b-90f1-d26cead9601e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "a5b6293e-4cca-5b3b-bff9-7319c070cce2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil ghost",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "a5b6293e-4cca-5b3b-bff9-7319c070cce2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "1e7883fd-edff-5157-bbbc-4bdef8fa4927",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil shade",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "1e7883fd-edff-5157-bbbc-4bdef8fa4927"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "3377721d-54a1-5daf-8776-35951aa13dd7",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "weak marrach gargoyle",
+    "LootTemplateName": "official drops c5fe1be1b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "3377721d-54a1-5daf-8776-35951aa13dd7"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "9cdaa6a9-7a9f-52cd-b9bf-4be3bc543987",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "conspiring black hand",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "9cdaa6a9-7a9f-52cd-b9bf-4be3bc543987"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "2e5937d6-94f1-58dc-8d93-614290e5eeae",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "conspiring sentinel",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "2e5937d6-94f1-58dc-8d93-614290e5eeae"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "b787b86b-48e7-5118-881b-65c38d662ac0",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented lookout",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "b787b86b-48e7-5118-881b-65c38d662ac0"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d22abb56-4c70-52cb-b75f-263eb836c61b",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented master infiltrator",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d22abb56-4c70-52cb-b75f-263eb836c61b"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "c36f695a-fa7c-5c57-ad61-920a4c7504a4",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented master scout",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "c36f695a-fa7c-5c57-ad61-920a4c7504a4"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "1bb0e562-abf6-577c-8ff3-7cdfeb4ddd62",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged assassin",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "1bb0e562-abf6-577c-8ff3-7cdfeb4ddd62"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "56b36e88-55b4-5855-a219-d8e3c660479b",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged scout",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "56b36e88-55b4-5855-a219-d8e3c660479b"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "c878bd3e-83fa-5055-8ce5-25f570f2794e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted assassin",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "c878bd3e-83fa-5055-8ce5-25f570f2794e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ef3b8f4a-e7f5-5f9e-8a02-f8e35953dd49",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted master spy",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ef3b8f4a-e7f5-5f9e-8a02-f8e35953dd49"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "e0e4c17c-8b21-57ae-9d37-60c42f636f0c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted pathfinder",
+    "LootTemplateName": "official drops bb59199c02",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "e0e4c17c-8b21-57ae-9d37-60c42f636f0c"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "2f80d1b2-027d-559e-9737-9490e2a1f07d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "conspiring centurion",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "2f80d1b2-027d-559e-9737-9490e2a1f07d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "41ce08a4-5fda-51f3-8a3c-7f9140d35c2a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "conspiring warrior",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "41ce08a4-5fda-51f3-8a3c-7f9140d35c2a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "3faa97f8-6896-5ddc-a776-73c8e55ecee6",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented general",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "3faa97f8-6896-5ddc-a776-73c8e55ecee6"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "85a32a7f-cba6-5daf-a916-0a970857ff02",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented mercenary master",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "85a32a7f-cba6-5daf-a916-0a970857ff02"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "64c3e1ed-6d0d-59cf-ac64-f015d3b87c32",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged defender of arawn",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "64c3e1ed-6d0d-59cf-ac64-f015d3b87c32"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "1118bef1-b3ab-5b91-8492-8e6f4e1d38b1",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged mercenary",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "1118bef1-b3ab-5b91-8492-8e6f4e1d38b1"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "49cca7a6-690c-5ac9-b602-79076f12243d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged soldier",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "49cca7a6-690c-5ac9-b602-79076f12243d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "f9adec8a-81c2-5c71-b2b6-b62a21a6fc00",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted lieutenant",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "f9adec8a-81c2-5c71-b2b6-b62a21a6fc00"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d18560bc-6c3c-54f5-8512-a619266623cd",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted sergeant",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d18560bc-6c3c-54f5-8512-a619266623cd"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "98e3e2de-6906-520f-b9d4-7e766a24cdc3",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted veteran",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "98e3e2de-6906-520f-b9d4-7e766a24cdc3"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "0785f174-3b1f-5135-bf33-abb15c707e2c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "manic possessed inconnu",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "0785f174-3b1f-5135-bf33-abb15c707e2c"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "a6090a23-3c21-5c42-a1c8-7352896c114f",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "possessed archaeologist",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "a6090a23-3c21-5c42-a1c8-7352896c114f"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ae38c1ed-42b2-588a-ab40-8e562dce8e07",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "possessed digger",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ae38c1ed-42b2-588a-ab40-8e562dce8e07"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "1fc28e58-73c6-5975-9568-b3e06a978fe8",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "possessed excavator",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "1fc28e58-73c6-5975-9568-b3e06a978fe8"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "b4e37760-1a33-5268-b3a4-71e010744f8e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "possessed pickman",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "b4e37760-1a33-5268-b3a4-71e010744f8e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "795c9068-ac9b-5525-ab92-b4333a367bd8",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "tortmented possessed inconnu",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "795c9068-ac9b-5525-ab92-b4333a367bd8"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "16b94964-14aa-5194-9d08-d183d5b4cabe",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "tortured possessed inconnu",
+    "LootTemplateName": "official drops 61b5a71584",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "16b94964-14aa-5194-9d08-d183d5b4cabe"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "f44e3f56-76d8-5a24-bedf-252a4e797773",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "conspiring guardian of morgana",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "f44e3f56-76d8-5a24-bedf-252a4e797773"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ac1d7e7e-3e9a-5176-adf4-1e6d611008c2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "demented dark knight",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ac1d7e7e-3e9a-5176-adf4-1e6d611008c2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "80f47a5b-c4fe-5491-bf4f-a9ac45b9f150",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged knight",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "80f47a5b-c4fe-5491-bf4f-a9ac45b9f150"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "6f4ab6f4-f3e2-511f-b337-062c878a1f8d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged reaver",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "6f4ab6f4-f3e2-511f-b337-062c878a1f8d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "5076dddd-5199-5846-969e-fa8153e90a70",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted defender of arawn",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "5076dddd-5199-5846-969e-fa8153e90a70"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ad51c4e4-3331-5dba-93e8-95004085763d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted underworld knight",
+    "LootTemplateName": "official drops b8676ef490",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ad51c4e4-3331-5dba-93e8-95004085763d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "3a5c522f-4556-5679-9373-489dda96a7b8",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf overseer",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "3a5c522f-4556-5679-9373-489dda96a7b8"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "be0d0b17-c4ce-51ef-bab0-67bd3a4bfd39",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf peasant",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "be0d0b17-c4ce-51ef-bab0-67bd3a4bfd39"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "233a9bdf-e16f-5075-8cf3-39dc3b65f825",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf subject",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "233a9bdf-e16f-5075-8cf3-39dc3b65f825"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "6400dfa0-2857-5d00-be59-9c00d41aad11",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf thrall",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "6400dfa0-2857-5d00-be59-9c00d41aad11"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "4128cc0c-f096-5497-a56f-18266f63bf3e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "dark elf vassal",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "4128cc0c-f096-5497-a56f-18266f63bf3e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "5ac8f39d-77ad-5ea2-92ae-ab31ffe82829",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "marrach gargoyle hatchling",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "5ac8f39d-77ad-5ea2-92ae-ab31ffe82829"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "5fe452cd-3beb-5e6b-90c2-b98e459525d2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil fragment",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "5fe452cd-3beb-5e6b-90c2-b98e459525d2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "e594de80-6729-5a81-a549-50f7504ee860",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil shadeling",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "e594de80-6729-5a81-a549-50f7504ee860"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "247dc77e-517e-52c8-b4d0-f398253bb955",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil wispling",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "247dc77e-517e-52c8-b4d0-f398253bb955"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "896ac60c-8b36-5c0e-b725-35063a388505",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "veil wraith",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "896ac60c-8b36-5c0e-b725-35063a388505"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "f992ee32-faa6-5884-8905-f8d8fba2094e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "young marrach gargoyle",
+    "LootTemplateName": "official drops a9dcbde4b1",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "f992ee32-faa6-5884-8905-f8d8fba2094e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "fb58fe60-7604-5a9c-a5c2-7cedb15f5719",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged friar",
+    "LootTemplateName": "official drops 4ac0b2ed7b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "fb58fe60-7604-5a9c-a5c2-7cedb15f5719"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "33915727-2fac-5450-8fff-0e7d65a9532d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "deranged priest of arawn",
+    "LootTemplateName": "official drops 4ac0b2ed7b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "33915727-2fac-5450-8fff-0e7d65a9532d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "049b1ce9-97a5-5ec0-a44f-d66b9a482666",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "haunted ecclesiastic",
+    "LootTemplateName": "official drops 4ac0b2ed7b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "049b1ce9-97a5-5ec0-a44f-d66b9a482666"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "c39f083b-c1e5-58a4-bbab-2dafd600d07a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious archon",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "c39f083b-c1e5-58a4-bbab-2dafd600d07a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "949e415b-0b16-591b-a999-3e6b5bcde58f",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious hero",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "949e415b-0b16-591b-a999-3e6b5bcde58f"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "807f4e12-958a-568b-b5e7-364f8f601a77",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied champion",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "807f4e12-958a-568b-b5e7-364f8f601a77"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "a918e11f-1871-54b2-a14e-0c3a0d7a984a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied fallen knight",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "a918e11f-1871-54b2-a14e-0c3a0d7a984a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "a1474b34-badc-54a3-86b8-af14ab0aec0e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal bully",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "a1474b34-badc-54a3-86b8-af14ab0aec0e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "349e642c-38ac-59d5-a000-a11754a59145",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal squire",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "349e642c-38ac-59d5-a000-a11754a59145"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "dc9a72e1-086e-50ad-be4b-7979a01879dd",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "obstinate consul",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "dc9a72e1-086e-50ad-be4b-7979a01879dd"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "fae75bfe-0e16-5d49-8af2-05f507974d27",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving battle dancer",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "fae75bfe-0e16-5d49-8af2-05f507974d27"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "f6df0eca-ed62-56b0-92ad-20b0ce3904f0",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving militia-man",
+    "LootTemplateName": "official drops 7e6312218b",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "f6df0eca-ed62-56b0-92ad-20b0ce3904f0"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d04a5b84-ee11-54ba-88a3-b3d7a165fb80",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious armigerant",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d04a5b84-ee11-54ba-88a3-b3d7a165fb80"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "9cbcbe89-5787-567d-9da5-d6675c05724a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious bladesong",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "9cbcbe89-5787-567d-9da5-d6675c05724a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "9cba9689-bd0c-5360-9ace-04e7877acc53",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious paragon",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "9cba9689-bd0c-5360-9ace-04e7877acc53"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "55a61d35-8729-5fa1-acb2-09721f1a3bda",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied guardian",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "55a61d35-8729-5fa1-acb2-09721f1a3bda"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "0e4ce448-2bea-5627-aa91-6a0ccf7c780a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal fighter",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "0e4ce448-2bea-5627-aa91-6a0ccf7c780a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "7ecd0dc0-03a8-52e9-8226-bf8895048be2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal pugilist",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "7ecd0dc0-03a8-52e9-8226-bf8895048be2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "6857ed4e-6194-5528-96c0-d3bc940d0cb4",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "obstinate duelist",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "6857ed4e-6194-5528-96c0-d3bc940d0cb4"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "4e1a1ed7-d95a-5d13-93c5-b18647ff895a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving gladiator",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "4e1a1ed7-d95a-5d13-93c5-b18647ff895a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "74bb992f-2e26-5a22-b6d4-c05c4317ad92",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving scrapper",
+    "LootTemplateName": "official drops d185fa08b5",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "74bb992f-2e26-5a22-b6d4-c05c4317ad92"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "60018944-271e-5e45-b704-b6f74f43fa8f",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious master marksman",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "60018944-271e-5e45-b704-b6f74f43fa8f"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "6110aaac-a486-55c6-8770-2b1a2e7fda55",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious master ranger",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "6110aaac-a486-55c6-8770-2b1a2e7fda55"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "05253a8f-bf59-5cd5-8e7e-6cee6c1cee9e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied marauder",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "05253a8f-bf59-5cd5-8e7e-6cee6c1cee9e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "0624bc92-9808-53b2-9633-1d3426492252",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied ravager",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "0624bc92-9808-53b2-9633-1d3426492252"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "950252c1-009a-5435-8eb7-49904da5fe66",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal footpad",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "950252c1-009a-5435-8eb7-49904da5fe66"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "80ce4f26-5f42-57b5-9b52-682674354573",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal shadow",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "80ce4f26-5f42-57b5-9b52-682674354573"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "c73491f5-a3c1-5205-a1a1-74a11d756af0",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "obstinate master archer",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "c73491f5-a3c1-5205-a1a1-74a11d756af0"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "2401ee6b-3362-5992-9462-2e03fbf43bce",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving crier",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "2401ee6b-3362-5992-9462-2e03fbf43bce"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "cef15b88-4a82-57d5-b164-850f649994d2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving thief",
+    "LootTemplateName": "official drops 78910efe6c",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "cef15b88-4a82-57d5-b164-850f649994d2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "a5ad16be-a1f5-54e1-9b13-3a315ff4ff56",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "ferocious seraph",
+    "LootTemplateName": "official drops 581e5805f0",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "a5ad16be-a1f5-54e1-9b13-3a315ff4ff56"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d9409e5b-009d-5eb3-a4de-b3c4025d3803",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "obstinate valorant",
+    "LootTemplateName": "official drops 581e5805f0",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d9409e5b-009d-5eb3-a4de-b3c4025d3803"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "cddcee0c-0382-5809-937f-d19cee67e21f",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "follower of pluto",
+    "LootTemplateName": "official drops b978238b9a",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "cddcee0c-0382-5809-937f-d19cee67e21f"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "27069c5e-3c9b-5bf3-a2a3-4111096822a0",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian aspirant",
+    "LootTemplateName": "official drops b978238b9a",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "27069c5e-3c9b-5bf3-a2a3-4111096822a0"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "64f998ef-2af1-5e2f-b3e5-725d1147cca2",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian thrall",
+    "LootTemplateName": "official drops b978238b9a",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "64f998ef-2af1-5e2f-b3e5-725d1147cca2"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "1d71fce3-cc41-51b9-bede-01d672dbe4a5",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "tenebrous fighter",
+    "LootTemplateName": "official drops b978238b9a",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "1d71fce3-cc41-51b9-bede-01d672dbe4a5"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "bb94e845-88c3-54c1-8f1c-450a8e3f4387",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied aide",
+    "LootTemplateName": "official drops ffe98a1f0e named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "bb94e845-88c3-54c1-8f1c-450a8e3f4387"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "eae10630-f89e-5f15-8aaa-a3f110b6a575",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal mender",
+    "LootTemplateName": "official drops ffe98a1f0e named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "eae10630-f89e-5f15-8aaa-a3f110b6a575"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "5ffe8c66-e72c-56f3-b6a5-41b846a4e2ae",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "frenzied augur",
+    "LootTemplateName": "official drops ffe98a1f0e",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "5ffe8c66-e72c-56f3-b6a5-41b846a4e2ae"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "7e8a87f3-bef2-5423-ac30-b17b1e131210",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "maniacal visionary",
+    "LootTemplateName": "official drops ffe98a1f0e",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "7e8a87f3-bef2-5423-ac30-b17b1e131210"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "571c460d-8522-55c4-8b88-67b980a93f5a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving auspex",
+    "LootTemplateName": "official drops ffe98a1f0e",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "571c460d-8522-55c4-8b88-67b980a93f5a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "cb7667cd-ba85-5486-a655-16a204a3819a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "raving diviner",
+    "LootTemplateName": "official drops ffe98a1f0e",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "cb7667cd-ba85-5486-a655-16a204a3819a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "4e1e957c-89c5-5150-854e-76fda3f43c0c",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "high plutonian scribe",
+    "LootTemplateName": "official drops f79e3d62ea named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "4e1e957c-89c5-5150-854e-76fda3f43c0c"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "e033ea42-3292-55a8-ac3a-8b36b340da5b",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian guard",
+    "LootTemplateName": "official drops f79e3d62ea named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "e033ea42-3292-55a8-ac3a-8b36b340da5b"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ccd02512-bb17-5471-9553-cf4fefbc220d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian sacrificer",
+    "LootTemplateName": "official drops f79e3d62ea named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ccd02512-bb17-5471-9553-cf4fefbc220d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "8f906abd-91df-5b5a-aa5d-be4cd91a5229",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian brother",
+    "LootTemplateName": "official drops f79e3d62ea",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "8f906abd-91df-5b5a-aa5d-be4cd91a5229"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "ad125271-94c5-533f-b7ea-0549ed6c7912",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian disciple",
+    "LootTemplateName": "official drops f79e3d62ea",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "ad125271-94c5-533f-b7ea-0549ed6c7912"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "67ed3c99-49d4-5c03-995d-584beeddde1e",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian initiate",
+    "LootTemplateName": "official drops f79e3d62ea",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "67ed3c99-49d4-5c03-995d-584beeddde1e"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "cbfefb7c-f0ab-5b06-b9f6-fdb0990a73a3",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian novice",
+    "LootTemplateName": "official drops f79e3d62ea",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "cbfefb7c-f0ab-5b06-b9f6-fdb0990a73a3"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "bc20b75e-d50b-547a-8942-c02a9432a00a",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "plutonian worshipper",
+    "LootTemplateName": "official drops f79e3d62ea",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "bc20b75e-d50b-547a-8942-c02a9432a00a"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "5a91add4-9a31-57f5-b60c-d9c9fecc369d",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "stalker",
+    "LootTemplateName": "official drops 6d9292a139 named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "5a91add4-9a31-57f5-b60c-d9c9fecc369d"
+   }
+  },
+  {
+   "table": "MobXLootTemplate",
+   "key": "d14313e7-82e4-57ef-a080-7733ee089d14",
+   "op": "insert",
+   "before": {},
+   "after": {
+    "MobName": "wight",
+    "LootTemplateName": "official drops 6d9292a139 named",
+    "DropCount": 1,
+    "LastTimeRowUpdated": "2000-01-01 00:00:00",
+    "MobXLootTemplate_ID": "d14313e7-82e4-57ef-a080-7733ee089d14"
+   }
+  }
+ ],
+ "note": "Server-sent NPC/object positions need no client binary patch. Geometry edits require matching client assets and rebuilt navigation."
+}

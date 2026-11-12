@@ -59,6 +59,16 @@ public static class AutonomousBattlegroundWave
 
     public static bool IsTooFew(int realmBotsInside) => realmBotsInside < MinimumWave;
 
+    /// <summary>
+    /// The bot is in a battleground whose realm wave is going in on the central keep (RvR perception: it keeps to the
+    /// assault instead of answering a mate's call).
+    /// </summary>
+    public static bool IsAssaulting(GameBot bot)
+    {
+        if (bot == null || !Waves.TryGetValue((bot.CurrentRegionID, bot.Realm), out Wave wave)) return false;
+        lock (wave) return wave.Going;
+    }
+
     /// <summary>A wave goes in at this many gathered: 60% of the realm's bots inside, at least <see cref="MinimumWave"/>.</summary>
     public static int WaveSize(int realmBotsInside) => Math.Max(MinimumWave, realmBotsInside * 6 / 10);
 

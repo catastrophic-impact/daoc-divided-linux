@@ -93,7 +93,7 @@ namespace DOL.GS;
                 AutonomousBotStatusPersistence.Queue(live);
             else
             {
-                lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+                using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                     GameServer.Database.SaveObject(bot);
             }
             return true;
@@ -119,7 +119,7 @@ namespace DOL.GS;
                 AutonomousBotStatusPersistence.Queue(live);
             else
             {
-                lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+                using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
                     GameServer.Database.SaveObject(bot);
             }
             return true;
@@ -144,6 +144,7 @@ namespace DOL.GS;
 
     public static PurchaseCandidate FindBestUsefulExchangePurchase(GameBot bot, int maximumResults = 48)
     {
+        using var aiProfile = AiProfile.Scope(AiSystem.EconomyValuation); // AI_PROFILE: measures only
         if (bot?.Inventory == null || bot.DatabaseID <= 0)
             return null;
 
@@ -335,6 +336,7 @@ namespace DOL.GS;
         /// </summary>
         public static eWorldServiceKind? GetNeededService(GameBot bot)
         {
+            using var aiProfile = AiProfile.Scope(AiSystem.EconomyValuation); // AI_PROFILE: measures only
             if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.Inventory == null ||
                 !AutonomousObjectiveAssignments.WantsBetweenTaskInventory(bot))
                 return null;
@@ -423,7 +425,7 @@ namespace DOL.GS;
         {
             removed = 0;
             if (!arrivedAtMerchant || bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper ||
-                bot.IsPlayerLedGroup || bot.Inventory == null || bot.DatabaseID <= 0 ||
+                BotDutyLeases.IsSpokenForByPlayer(bot) || bot.Inventory == null || bot.DatabaseID <= 0 ||
                 !IsBackpackFull(bot) || FindVendorTrashCandidate(bot) != null ||
                 FindValuableListingCandidate(bot) != null)
                 return false;
@@ -526,6 +528,11 @@ namespace DOL.GS;
                 item.Object_Type is (int)eObjectType.Axe or (int)eObjectType.LeftAxe &&
                 item.Object_Type != (int)bot.BotSpec.WeaponOneType && item.Item_Type != Slot.TWOHAND && item.Hand != 1)
                 requested = eInventorySlot.LeftHandWeapon;
+            // Many one-handers are listed as left-hand items because either hand can hold them.
+            // A class that cannot dual wield can only use them in its main hand.
+            if (requested == eInventorySlot.LeftHandWeapon && item.Hand != 2 &&
+                !BotWeaponStats.CanWieldOffhandWeapon(bot))
+                requested = eInventorySlot.RightHandWeapon;
             if (!BotWeaponStats.FitsConfiguredSlot(bot, item, requested)) return eInventorySlot.Invalid;
         }
         if (requested is eInventorySlot.LeftRing or eInventorySlot.RightRing)
@@ -550,6 +557,7 @@ namespace DOL.GS;
 
         public static ListingCandidate FindValuableListingCandidate(GameBot bot)
     {
+        using var aiProfile = AiProfile.Scope(AiSystem.EconomyValuation); // AI_PROFILE: measures only
         if (bot?.Inventory == null || bot.DatabaseID <= 0 ||
             (!IsBackpackFull(bot) && !AutonomousObjectiveAssignments.IsBetweenPveTasks(bot)))
             return null;
@@ -570,7 +578,8 @@ namespace DOL.GS;
                            (space || AutonomousBotCrafting.IsOwnWork(bot, item)) &&
                            !TryGetEquipmentUpgrade(bot, item, out _))
             .Select(item => new ListingCandidate(item, RecommendListingPrice(item)))
-            .Where(candidate => WorthListing(candidate.Item, candidate.PriceCopper))
+            .Where(candidate => WorthListing(candidate.Item, candidate.PriceCopper) &&
+                                !RealmExchangeSaturation.IsSaturated(bot.Realm, candidate.Item))
             // A craft trip ends by posting what it made, not the dearest loot in the bag.
             .OrderByDescending(candidate => AutonomousObjectiveAssignments.WantsBetweenTaskCraft(bot) && AutonomousBotCrafting.IsOwnWork(bot, candidate.Item))
             .ThenByDescending(candidate => candidate.PriceCopper)
@@ -579,6 +588,7 @@ namespace DOL.GS;
 
         public static DbInventoryItem FindVendorTrashCandidate(GameBot bot)
         {
+            using var aiProfile = AiProfile.Scope(AiSystem.EconomyValuation); // AI_PROFILE: measures only
             if (bot?.Inventory == null)
                 return null;
 
@@ -610,11 +620,13 @@ namespace DOL.GS;
             if (AutonomousBotCraftOrders.IsHeldForOrder(item))
                 return true;
             // The bot's own work waits for a free Realm Exchange post; only a nearly full bag sends it to a vendor.
-            if (AutonomousBotCrafting.IsOwnWork(bot, item) && !IsBackpackNearlyFull(bot))
+            // Once the realm already has plenty like it on the exchange, it goes to a vendor (Discord 2026-11-09).
+            bool saturated = RealmExchangeSaturation.IsSaturated(bot.Realm, item);
+            if (AutonomousBotCrafting.IsOwnWork(bot, item) && !IsBackpackNearlyFull(bot) && !saturated)
                 return true;
             // If the bot's single listing slot is occupied, unwanted gear can
             // still be sold normally. Never vendor an equippable upgrade.
-            return canList && item.IsTradable && WorthListing(item, RecommendListingPrice(item));
+            return canList && item.IsTradable && !saturated && WorthListing(item, RecommendListingPrice(item));
         }
 
         /// <summary>Worth a Realm Exchange post: dear enough for its level, or the bot's own work, which it sells there
@@ -700,6 +712,7 @@ namespace DOL.GS;
 
         public static bool TryBuyUsefulVendorUpgrade(GameBot bot, GameMerchant merchant, out DbInventoryItem purchased, out long copper)
         {
+            using var aiProfile = AiProfile.Scope(AiSystem.EconomyValuation); // AI_PROFILE: measures only
             purchased = null;
             copper = 0;
             if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.Inventory == null ||
@@ -909,11 +922,12 @@ namespace DOL.GS;
     {
         if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.DatabaseID <= 0 ||
             item == null || !item.IsTradable || priceCopper <= 0 || item.OwnerLot != 0 || BotSiegeRuntime.IsSupply(item.Id_nb) ||
-            item.SlotPosition is < (int)eInventorySlot.FirstBackpack or > (int)eInventorySlot.LastBackpack)
+            item.SlotPosition is < (int)eInventorySlot.FirstBackpack or > (int)eInventorySlot.LastBackpack ||
+            RealmExchangeSaturation.IsSaturated(bot.Realm, item))
             return false;
 
         lock (RealmExchangeBroker.TransactionLock)
-        lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+        using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
         {
         string ownerId = GetOwnerId(bot.DatabaseID);
         if (!bot.Inventory.AllItems.Contains(item))
@@ -957,6 +971,7 @@ namespace DOL.GS;
         }
         MarketCache.AddItem(item);
         MarkInventoryChanged(bot);
+        RealmExchangeSaturation.NoteListed(item);
         RunTelemetry.Trade(bot, "exchange-list", null, item, priceCopper, Math.Max(1, item.Count));
         return true;
         }
@@ -994,7 +1009,7 @@ namespace DOL.GS;
     {
         lock (RealmExchangeBroker.TransactionLock)
         lock (typeof(AutonomousBotEconomy))
-        lock (AutonomousBotStatusPersistence.DatabaseWriteLock)
+        using (AiProfile.Lock(AutonomousBotStatusPersistence.DatabaseWriteLock, AiSystem.LockDatabaseWrite))
         {
             if (bot?.IsAutonomousWorldBot != true || bot.IsTemporaryGroupHelper || bot.PersistentRecord == null ||
                 bot.DatabaseID <= 0 || !RealmExchangeBroker.IsAvailableListing(item, bot.Realm) ||

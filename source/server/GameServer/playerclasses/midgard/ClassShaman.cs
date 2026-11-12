@@ -40,9 +40,9 @@ namespace DOL.GS.PlayerClass
 			return true;
 		}
 
-		public override List<PlayerRace> EligibleRaces => new List<PlayerRace>()
-		{
-			 PlayerRace.Kobold, PlayerRace.Troll,
-		};
+		// The 1.130 client also offers Dwarf (its creation table, checked 2026-11-09); allowed with modern races on.
+		public override List<PlayerRace> EligibleRaces => ServerProperties.Properties.ENABLE_MODERN_RACES
+			? new List<PlayerRace> { PlayerRace.Kobold, PlayerRace.Troll, PlayerRace.Dwarf }
+			: new List<PlayerRace> { PlayerRace.Kobold, PlayerRace.Troll };
 	}
 }

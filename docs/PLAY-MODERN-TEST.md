@@ -28,6 +28,38 @@ The download contains **no game client**. You use your own Dark Age of Camelot i
 
 If the setup is cancelled or fails, nothing is set up. It asks again on the next start, or when you press ENTER REALM.
 
+## Updating
+From the build after DR-dev-0.1c on, the launcher updates itself.
+- **The check:** when the launcher starts, it asks GitHub at most once a day whether a newer Divided Realms release is
+  out. It asks for the list of releases only, with a plain program name, and sends nothing about you or your game. If
+  GitHub can't be reached, it says nothing. **Options > Update and repair > CHECK FOR UPDATES** asks right away. Untick
+  **Check automatically** there to stop the daily check.
+- **The offer:** a newer release opens a window with **Install**, **Later** or **Skip this version**. A skipped release
+  isn't offered again on start, but CHECK FOR UPDATES still shows it.
+- **Install:**
+  - Close the server, the game and World Workshop first. The launcher won't update while any of them runs.
+  - It downloads the release zip (about 1.2 GB) to `runtime\updates` and shows the progress. A broken download picks up
+    where it stopped.
+  - It checks the zip against the SHA-256 the release page publishes, then checks every file against the package's own
+    `PACKAGE MANIFEST.sha256`.
+  - The launcher then closes, and a small window copies the new files over your folder. This is the same as extracting
+    over it. Every file it replaces is backed up first in `runtime\updates\backups`. If anything goes wrong, it puts
+    every file back. The launcher then opens again.
+  - On that start, it adds the release's world fixes to your world (after a backup) and patches your client copy again,
+    as after a manual update.
+- **Never touched:** your world and characters (`runtime\data\opendaoc.sqlite3.db` and its backups), `runtime\account.txt`,
+  logs, your client copy, and your settings (overlay, Host for Friends, a `serverconfig.xml` you changed).
+- **Undo an update:** close the launcher, the server and the game. Then double-click **ROLLBACK.cmd** in that update's
+  backup folder, `runtime\updates\backups\<old>-to-<new>-<time>`. It puts the game's files back. Your world keeps the
+  newer release's world fixes. To undo those too, copy the world backup the launcher made before them
+  (`runtime\backups\world-update-*`) over `runtime\data\opendaoc.sqlite3.db`, which loses what you played since.
+- **Folders it won't update:** the launcher only updates a folder unpacked from a release download. That folder has
+  `RELEASE.txt` or `EDITION.txt` and `PACKAGE MANIFEST.sha256` at its top. It never updates a developer's folder or
+  anything inside a Git checkout.
+
+**By hand** (and from DR-dev-0.1c or older, whose launchers can't update themselves): close the launcher, extract the
+new download over your folder and replace every file.
+
 ## Notes
 - **Ports:** the server listens only on this computer, on port 10330.
 - **Saves:** your characters and bots are saved in `runtime/data`. To move to a new version of this test, keep that

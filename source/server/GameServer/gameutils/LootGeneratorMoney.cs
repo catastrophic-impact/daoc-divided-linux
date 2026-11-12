@@ -44,6 +44,11 @@ namespace DOL.GS
 
 			long moneyCount = minLoot + Util.Random(minLoot >> 1);
 			moneyCount = (long)((double)moneyCount * ServerProperties.Properties.MONEY_DROP);
+			// loot-rules.json: on top of money_drop (both 1.0 by default)
+			CoinLootRules coin = LootRulesFile.Current.Coin;
+			double coinMultiplier = coin.Multiplier * (LootContext.IsNamedMob(mob) ? coin.NamedMultiplier : 1.0);
+			if (coinMultiplier != 1.0)
+				moneyCount = (long)(moneyCount * coinMultiplier);
 			GameObject looter = killer is GameNPC { Brain: AI.Brain.IControlledBrain pet } ? pet.GetPlayerOwner() : killer;
 			if (MasterLevelRules.HasPassive(looter as GameLiving, "Spymaster", 1))
 				moneyCount = moneyCount * 3 / 2;

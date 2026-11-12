@@ -1,0 +1,178 @@
+{
+ "mob names given a table": 1520,
+ "spawns covered": 34093,
+ "skipped": {
+  "has a table": 2877,
+  "not a hostile mob": 4299,
+  "placeholder name": 1
+ },
+ "by family (names, spawns)": {
+  "animal": [
+   111,
+   2844
+  ],
+  "demon": [
+   18,
+   276
+  ],
+  "drake": [
+   10,
+   155
+  ],
+  "elemental": [
+   83,
+   1901
+  ],
+  "generic": [
+   299,
+   8535
+  ],
+  "giant": [
+   61,
+   1233
+  ],
+  "humanoid": [
+   481,
+   7430
+  ],
+  "insect": [
+   66,
+   1088
+  ],
+  "magical": [
+   70,
+   1608
+  ],
+  "plant": [
+   30,
+   1253
+  ],
+  "reptile": [
+   21,
+   421
+  ],
+  "sea": [
+   21,
+   3586
+  ],
+  "undead": [
+   249,
+   3763
+  ]
+ },
+ "chosen by": {
+  "race": 1079,
+  "name": 75,
+  "body type": 67,
+  "fallback": 299
+ },
+ "tables": 119,
+ "junk items": 120,
+ "edits": 1548,
+ "samples": {
+  "animal": [
+   "wolf nipper (L12, race)",
+   "diamondback toad (L53, race)",
+   "small hill cat (L7, race)",
+   "black mauler cub (L1, race)",
+   "black bear (L18, race)",
+   "swamp slime (L3, race)"
+  ],
+  "demon": [
+   "flaming raukomaz (L30, race)",
+   "Chamberlain (L79, race)",
+   "tunnel imp (L39, race)",
+   "impling (L1, race)",
+   "Mutilator Namox (L60, race)",
+   "casolith (L49, race)"
+  ],
+  "drake": [
+   "aged bleeder (L13, race)",
+   "envy drakeling (L13, race)",
+   "Cornwall Drake (L42, race)",
+   "arboreal drakeling (L4, race)",
+   "carrion drake (L8, race)",
+   "silverscale drakeling (L12, race)"
+  ],
+  "elemental": [
+   "river spriteling (L3, race)",
+   "spriggarn ambusher (L15, race)",
+   "spraggon springer (L22, race)",
+   "spriggarn howler (L16, race)",
+   "wind spirit (L34, race)",
+   "sidhe gaoite (L36, race)"
+  ],
+  "generic": [
+   "dungeon chitin (L23, fallback)",
+   "ekyps scavenger (L44, fallback)",
+   "cave trow (L50, fallback)",
+   "Sallours (L62, fallback)",
+   "gruppchef (L59, fallback)",
+   "anpassa foranst (L52, fallback)"
+  ],
+  "giant": [
+   "granite giant gatherer (L44, race)",
+   "marsh scrag (L11, race)",
+   "Stonecrush rockgrinder (L50, race)",
+   "wood ogre scourge (L12, race)",
+   "wood ogre mystic (L11, race)",
+   "hrimathursa tormentor (L78, race)"
+  ],
+  "humanoid": [
+   "minor fideal (L16, race)",
+   "goblin shaman (L9, race)",
+   "azure banisher (L52, race)",
+   "drakulv axehand (L50, race)",
+   "blodfelag henchman (L13, race)",
+   "svartalf outcast (L17, race)"
+  ],
+  "insect": [
+   "pelagian guard (L28, body type)",
+   "corpse crawler (L22, body type)",
+   "cave spider (L15, body type)",
+   "icestrider frostweaver (L46, body type)",
+   "duegarhunter (L36, body type)",
+   "djupt usling (L50, body type)"
+  ],
+  "magical": [
+   "brownie (L1, race)",
+   "pooka (L54, race)",
+   "glimmer ghoul (L41, race)",
+   "frenzied feeder (L57, race)",
+   "wolfaur headsman (L38, race)",
+   "wind sprite (L15, race)"
+  ],
+  "plant": [
+   "weeping willow (L24, race)",
+   "oak man (L8, race)",
+   "elder beech (L25, race)",
+   "fire flower (L20, race)",
+   "frigid broadleaf (L57, race)",
+   "Eld (L23, race)"
+  ],
+  "reptile": [
+   "grass viper (L12, race)",
+   "aged basilisk (L19, race)",
+   "water snake (L1, race)",
+   "venomspitter (L30, race)",
+   "slime lizard (L1, race)",
+   "tunneler (L37, race)"
+  ],
+  "sea": [
+   "spindly rock crab (L10, name)",
+   "pelagian crab (L27, name)",
+   "archipelago crab (L42, name)",
+   "manta ray (L44, name)",
+   "hobgoblin fish-catcher (L13, name)",
+   "mud crab warrior (L36, name)"
+  ],
+  "undead": [
+   "roaming dirge (L9, race)",
+   "nordic dirge (L9, race)",
+   "moldy skeleton (L7, race)",
+   "Mithra initiate (L8, race)",
+   "fragile skeleton (L9, race)",
+   "rattling skeleton (L1, race)"
+  ]
+ }
+}

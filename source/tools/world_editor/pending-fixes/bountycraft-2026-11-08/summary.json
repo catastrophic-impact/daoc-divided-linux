@@ -1,0 +1,467 @@
+{
+ "bountycraft recipes in the client": 1017,
+ "recipes added (incl. stardust alchemy)": 974,
+ "products": {
+  "new item": 867,
+  "world item": 105,
+  "skipped": 46
+ },
+ "new items": 704,
+ "spells not built": {
+  "802096": "no rule for \"increase attack speed\"",
+  "803300": "no rule for \"arrogance (invocation)\"",
+  "803361": "no rule for \"{'- Effective Armor': '118 Factor', 'Can use item every': '1:30 min', 'Bonus Level': '48'}\"",
+  "803372": "no rule for \"attack speed decrease\"",
+  "803377": "no spell type for Slash",
+  "803378": "no spell type for Thrust",
+  "803379": "no spell type for Crush",
+  "803381": "no spell type for Staff",
+  "803383": "no spell type for Sword",
+  "803384": "no spell type for Axe",
+  "803385": "no spell type for Hammer",
+  "803386": "no spell type for Spear",
+  "803387": "no spell type for Scythe",
+  "803389": "no spell type for Blades",
+  "803390": "no spell type for Blunt",
+  "803407": "no rule for \"{'Level': '50', 'Duration': '30 seconds)'}\"",
+  "803411": "no spell type for Slash",
+  "803412": "no spell type for Sword",
+  "803413": "no spell type for Blades",
+  "803425": "no rule for \"disease\"",
+  "803427": "no rule for \"resistance enhancement\"",
+  "803430": "no rule for \"{'Absorption': '50%', 'Value': '250', 'Target': 'Self', 'Duration': '10:00 min', 'Casting time': 'instant', 'Penalty to all stats': '35', 'Vulnerability to melee': '5%', 'Range': '500', 'Damage': 'Body)', 'Can use item every': '12:00 min', 'Bonus Level': '46'}\"",
+  "803451": "no rule for \"damage to power\"",
+  "803465": "no rule for \"boon of kings\"",
+  "803476": "no rule for \"bedazzled\"",
+  "803477": "no rule for \"bedazzled\"",
+  "803590": "no rule for \"mesmerization feedback\"",
+  "803592": "no rule for \"mesmerization feedback\"",
+  "803657": "no rule for \"defensive proc\"",
+  "803681": "no rule for \"wave of healing\"",
+  "803682": "no rule for \"wave of healing\"",
+  "803686": "no rule for \"offensive proc\"",
+  "803687": "no rule for \"defensive proc\"",
+  "803695": "no spell type for Axe",
+  "803696": "no spell type for Sword",
+  "804014": "no rule for \"summon turret\"",
+  "805676": "no rule for \"boon of kings\"",
+  "805880": "no rule for \"summon elemental\"",
+  "805881": "no rule for \"summon elemental\"",
+  "805882": "no rule for \"summon elemental\"",
+  "806952": "no rule for \"defensive proc\"",
+  "807665": "no rule for \"speed decrease\"",
+  "807666": "no rule for \"buff shear\"",
+  "807667": "no rule for \"{}\"",
+  "807669": "no spell type for Cold",
+  "807670": "no rule for \"{'Underhill Ally': 'Gains a defensive snare-proc.', 'Underhil Companion': 'Gains a cold damage snare/nuke.', 'Underhill Zealot': 'No effect.'}\"",
+  "807673": "no rule for \"{}\"",
+  "807678": "no rule for \"offensive proc\"",
+  "807682": "no rule for \"{}\"",
+  "807684": "no rule for \"mesmerize\"",
+  "807685": "no rule for \"melee absorption\"",
+  "807686": "no rule for \"increase melee critical damage chance\"",
+  "807687": "no rule for \"damage to power\"",
+  "807688": "no rule for \"resistance enhancement\"",
+  "807689": "no rule for \"damage conversion\"",
+  "807690": "no rule for \"stat decrease\"",
+  "807691": "no rule for \"speed decrease\"",
+  "807692": "no rule for \"spreadheal\"",
+  "807700": "no rule for \"{}\"",
+  "807701": "no rule for \"{}\"",
+  "807704": "no rule for \"{}\"",
+  "807705": "no spell type for Critical Strike",
+  "807706": "no rule for \"{}\"",
+  "807707": "no rule for \"resistance enhancement\"",
+  "807710": "no rule for \"style damage shield\"",
+  "807711": "no rule for \"arcane leadership\"",
+  "807712": "no rule for \"parry\"",
+  "807714": "no rule for \"increase attack speed\"",
+  "807715": "no rule for \"efficient healing\"",
+  "807717": "no rule for \"illusion\"",
+  "807720": "no rule for \"melee damage boost\"",
+  "807721": "no rule for \"{}\"",
+  "807722": "no rule for \"buff shear\"",
+  "807727": "no spell type for Cold",
+  "807728": "no rule for \"raise dead\"",
+  "807729": "no rule for \"{'Can use item every': '15:00 min', 'Bonus Level': '50'}\"",
+  "808558": "no rule for \"cost reduction\"",
+  "808680": "no rule for \"{'Absorption': '50%', 'Value': '200', 'Target': 'Self', 'Duration': '10:00 min', 'Casting time': 'instant'}\"",
+  "808714": "no rule for \"arrogance (invocation)\"",
+  "808969": "no rule for \"pet command\"",
+  "809568": "no rule for \"{'Value': '100', 'Target': 'Self', 'Duration': '30 sec', 'Casting time': 'instant', '- Effective Armor': '35 Factor', 'Can use item every': '15:00 min', 'Bonus Level': '33'}\"",
+  "809581": "no rule for \"damage conversion\"",
+  "809620": "no rule for \"style damage shield\"",
+  "810534": "no rule for \"speed enhancement\"",
+  "811441": "no rule for \"speed enhancement\"",
+  "812832": "no rule for \"heal bonus\"",
+  "812833": "no rule for \"{'- Effective Armor': '113 Factor', 'Can use item every': '15:00 min', 'Bonus Level': '50'}\"",
+  "812834": "no rule for \"damage conversion\"",
+  "812835": "no rule for \"mesmerize duration reduction\"",
+  "812836": "no rule for \"melee damage boost\"",
+  "813600": "no rule for \"illusion\"",
+  "813601": "no rule for \"illusion\"",
+  "813602": "no rule for \"illusion\"",
+  "813604": "no rule for \"illusion\"",
+  "813605": "no rule for \"illusion\"",
+  "813606": "no rule for \"illusion\""
+ },
+ "bounty master lists": [
+  "AlbBountyMerchant",
+  "HibBPTotem",
+  "HibBountyMerchant",
+  "midBPTotem"
+ ],
+ "stardust lists": [
+  "02ae5791-f62e-446a-a3b8-8622dfc085c2",
+  "02bc74d5-9bc9-4f51-98c9-39f40ed4d5e4",
+  "0ae0791c-7067-4d3e-b485-cf1339f57900",
+  "10b7e3dd-161b-40d3-af7c-c3c9d19ebfe9",
+  "11093e0a-4b18-4fff-9e8a-a12cb0c854ca",
+  "1c17a804-2634-4eb2-8e3e-33e244415c32",
+  "24103ba5-e129-4ec4-8c1c-860082ecbd56",
+  "3c4d2e54-d2f3-4524-9176-1cb2b29b73bf",
+  "40e628be-3fca-43af-8ff7-14a33541ff1f",
+  "4ff50218-48b4-4ec3-bab4-35959351a59c",
+  "50132a38-a56c-4ff5-ad41-043029555c15",
+  "5841e81d-ef86-4bc1-92ac-18bf337c4bcc",
+  "602a887a-3f03-462b-af52-cd64a452616d",
+  "6fcd4bf7-1046-486e-ae71-a5f6cc722450",
+  "729095c9-68a5-4bdd-81cc-83f5571a23e8",
+  "77793013",
+  "77793014",
+  "7cb1b630-d224-48b7-95fe-eb1a4573770c",
+  "7d20e5e1-1800-4694-b5bd-db7059b0a178",
+  "7f53d9c4-8840-414e-9a4d-849e16f3ff0c",
+  "82a20fe5-f7a0-4646-b034-9cda98a2a0d3",
+  "8779e1e2-1208-4859-aa3c-d9e19ac02b72",
+  "8cfba271-8494-4b74-a82b-af76b5b9f3b8",
+  "90ba5684-9faf-4a8c-a7c6-989cb12d7c6e",
+  "93548ff3-88d5-45fb-aab1-89aac7ae69fb",
+  "966eda39-c819-41d3-84e0-cdf9783c1999",
+  "9ab94f25-0da3-42f0-abd1-189f95c64d13",
+  "9eaa1534-b9d3-46c7-a8ca-2112191eb6f5",
+  "AlbAlchemy",
+  "AlbSpellcraft",
+  "HibAlchemy",
+  "HibAlchemy2",
+  "HibSCAlchMerchant",
+  "HibSpellAlchMerchant",
+  "HibSpellcraft",
+  "MidAlchemy",
+  "MidAlchemy2",
+  "MidAlchemyComponents",
+  "MidFlasksAlchemy",
+  "MidSpellAlchMerchant",
+  "MidSpellAlchMerchant2",
+  "MidSpellcraftAll",
+  "MidSpellcraftMerchant2",
+  "MidSpellcrafting",
+  "a10b5e7e-117a-4332-8278-7428ba13fd93",
+  "a41eb44e-8193-4436-8f51-0383abb9dd89",
+  "a66add6f-2688-497d-aed1-1cf3d9c9387e",
+  "bf87bdfe-3ee0-4cd5-ac63-92f6566887e6",
+  "c0bafaf6-5032-4c1c-a771-3d70203acb95",
+  "d3127590-80ab-4acb-861b-1e4f46e488ca",
+  "dafff1c1-2fb9-4592-9e5e-c13adba9224e",
+  "ecabb583-acd0-47f1-b7ab-ac41c1892a3d",
+  "eccc0b92-53bd-45cd-b157-36f1dc648380",
+  "f0e9458e-5fca-4b00-bcdd-d153f3520b4b",
+  "fadeb120-b4a0-4b27-8d77-0c483d01064d",
+  "housing_alb_dye_tincture_enchantment",
+  "housing_alb_potion_tincture_enchantment",
+  "housing_hib_dye_tincture_enchantment",
+  "housing_hib_potion_tincture_enchantment",
+  "housing_mid_dye_tincture_enchantment",
+  "housing_mid_potion_tincture_enchantment",
+  "housing_poison_dye",
+  "housing_poison_potion"
+ ],
+ "edits": 5317,
+ "by table": {
+  "ItemTemplate": 716,
+  "Spell": 36,
+  "LineXSpell": 36,
+  "CraftedItem": 974,
+  "CraftedXItem": 3447,
+  "MerchantItem": 107,
+  "ServerProperty": 1
+ },
+ "skipped": [
+  [
+   1,
+   1733,
+   "Cabalist - Unyielding Majestic Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1734,
+   "Cleric - Unyielding Iridescent Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1735,
+   "Friar - Unyielding Solemnity Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1736,
+   "Heretic - Unyielding Betrayal Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1740,
+   "Minstrel - Unyielding Vagabond Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1741,
+   "Necromancer - Unyielding Demon Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1732,
+   "Paladin - Unyielding Protector Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1745,
+   "Sorcerer - Unyielding Manipulator Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1746,
+   "Theurgist - Unyielding Geomancer Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1747,
+   "Wizard - Unyielding Magus Vest",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1768,
+   "Ancient Priest Hammer",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1784,
+   "Armsman - Freezing Soldier Hauberk",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   2494,
+   "Reaver - Dullahan's Armor",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   2512,
+   "Scout - Soul Diffuser Sleeves",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   8381,
+   "Warrior -  Howling Titan Vest",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   8524,
+   "Warrior -  Freezing Titan Vest",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   9354,
+   "Spiritmaster - Dark Magister's Robe",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   9369,
+   "Spiritmaster - Dark Masgister's Sleeves",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   9381,
+   "Skald - Howling Saga Leggaurds",
+   "skipped: no official item"
+  ],
+  [
+   2,
+   8548,
+   "Spiritmaster - Dark Magister's Slippers",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14666,
+   "Battled Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14667,
+   "Striking Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14668,
+   "Glittering Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14669,
+   "Melodic Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14670,
+   "Empowering Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14671,
+   "Fierce Mantle of the Samhain",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   14682,
+   "Pictslayer Shillelagh",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15581,
+   "Abagath Strider",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15583,
+   "Abagath Cursed Hammer",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15588,
+   "Gatekeeper's Scythe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15599,
+   "Animist - Freezing Forest Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15600,
+   "Bainshee - Freezing Wails Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15605,
+   "Eldritch - Freezing Gloom Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15606,
+   "Enchanter - Freezing Enchanted Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15609,
+   "Mentalist - Freezing Illusion Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15612,
+   "Valewalker - Freezing Reaper Robe",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15361,
+   "Cliodnar's Otherworldly Hardy Cloak",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15635,
+   "Bainshee - Gown of the Dark Queen",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15639,
+   "Druid - Darkseed Hauberk",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15642,
+   "Hero - Marrach Prime Scale",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15649,
+   "Warden - Dark Protector's Scalemail",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15665,
+   "Warden - Dark Protector's Armguards",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15667,
+   "Animist - Darkspore Pants",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15679,
+   "Warden - Dark Protector's Leggings",
+   "skipped: no official item"
+  ],
+  [
+   3,
+   15682,
+   "Enchanter - Emberlight Boots",
+   "skipped: no official item"
+  ],
+  [
+   1,
+   1726,
+   "Jerkin of Demonic Intent",
+   "skipped: Jerkin_of_Demonic_Intent1 already made with other ingredients"
+  ]
+ ]
+}

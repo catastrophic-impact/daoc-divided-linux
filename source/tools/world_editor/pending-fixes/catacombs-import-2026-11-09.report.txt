@@ -1,0 +1,34 @@
+Catacombs import plan
+mob rows to add: 13266 | excluded: 32 {'invisible helper': 22, 'already in our world': 8, 'Mob_ID already used': 2}
+left out regions: {"Albion's Otherworld": 897}
+    63 Roman Aqueducts                     753
+    66 Albion's Underground Forest        1170
+    59 Albion's Glashtin Forges            453
+    67 The Deadlands of Annwn              915
+    68 Lower Crypt                         309
+   148 The Frontlines                      792
+    65 Inconnu Crypt                       300
+    69 Albion's Darkspire                    0
+    58 Midgard's Underground Forest       1073
+   189 Midgard's Glashtin Forges           516
+   149 Nyttheim                            766
+   162 Midgard's Deadlands                 679
+   195 Midgard's Otherworld                543
+   243 Kobold Undercity                    356
+   188 Midgard's Darkspire                   0
+    92 Veil Rift                           546
+    96 Hibernia's Underground Forest      1200
+    99 Hibernia's Glashtin Forge           546
+    95 Hibernia's Frontlines               577
+    97 Hibernia's Deadlands                562
+   197 The Otherworld                      826
+    94 The Queen's Labyrinth               294
+    93 Shar Labyrinth                       90
+    98 Hibernia's Darkspire                  0
+realm: {0: 12721, 1: 189, 3: 152, 2: 204}
+classes: {'DOL.GS.GameNPC': 13130, 'DOL.GS.GameMerchant': 27, 'DOL.GS.GameGuard': 25, 'DOL.GS.GameHastener': 7, 'DOL.GS.GameHealer': 5, 'DOL.GS.Enchanter': 3, 'DOL.GS.Recharger': 3, 'DOL.GS.Blacksmith': 3, 'DOL.GS.EmblemNPC': 3, 'DOL.GS.GameVaultKeeper': 3, 'DOL.GS.GuildRegistrar': 3, 'DOL.GS.NameRegistrar': 3, 'DOL.GS.Trainer.BlademasterTrainer': 1, 'DOL.GS.Trainer.RangerTrainer': 1, 'DOL.GS.Trainer.ChampionTrainer': 1, 'DOL.GS.Trainer.EnchanterTrainer': 1, 'DOL.GS.Trainer.AnimistTrainer': 1, 'DOL.GS.Trainer.EldritchTrainer': 1, 'DOL.GS.Trainer.DruidTrainer': 1, 'DOL.GS.Trainer.MentalistTrainer': 1, 'DOL.GS.Trainer.HeroTrainer': 1, 'DOL.GS.Trainer.NightshadeTrainer': 1, 'DOL.GS.GameAuruliteMerchant': 1, 'DOL.GS.Trainer.WardenTrainer': 1, 'DOL.GS.Trainer.BardTrainer': 1, 'DOL.GS.Trainer.ValewalkerTrainer': 1, 'DOL.GS.Trainer.ShamanTrainer': 1, 'DOL.GS.Trainer.BerserkerTrainer': 1, 'DOL.GS.Trainer.SpiritmasterTrainer': 1, 'DOL.GS.Trainer.HunterTrainer': 1, 'DOL.GS.Trainer.SkaldTrainer': 1, 'DOL.GS.Trainer.ShadowbladeTrainer': 1, 'DOL.GS.Trainer.HealerTrainer': 1, 'DOL.GS.Trainer.SavageTrainer': 1, 'DOL.GS.Trainer.BonedancerTrainer': 1, 'DOL.GS.Trainer.ThaneTrainer': 1, 'DOL.GS.Trainer.RunemasterTrainer': 1, 'DOL.GS.Trainer.WarriorTrainer': 1, 'DOL.GS.Trainer.MercenaryTrainer': 1, 'DOL.GS.Trainer.AlbionRogueTrainer': 1}
+classes our world has never used: {'DOL.GS.GameAuruliteMerchant': 1, 'DOL.GS.HiberniaTeleporter': 1}
+RoamingRange 0 -> 100 on 4368 rows; model remapped on 1 rows
+NPC templates added: 1 | missing in EoD too: []
+merchant lists added: 1 | merchant item rows: 32 | merchants made plain NPCs (nothing sellable): []
+zone points added: 279 | already ours and the same: 0 | id used by ours for another place: []

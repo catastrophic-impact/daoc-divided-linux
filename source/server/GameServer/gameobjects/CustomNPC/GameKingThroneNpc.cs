@@ -24,10 +24,13 @@ using DOL.Language;
 namespace DOL.GS
 {
 	// This class has to be completed and may be inherited for scripting purpose (like quests)
+	/// <summary>
+	/// The realm's King in the throne room. A level 50 player starts Champion training here (ChampionRules.BecomeChampion,
+	/// owner 2026-11-09); champion levels earned are kept, never cleared. He also levels and respecs champions and points
+	/// them to the Weaponmasters.
+	/// </summary>
 	public class KingNPC : GameNPC
 	{
-		private static new readonly Logging.Logger log = Logging.LoggerManager.Create(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
 		public KingNPC()
 			: base()
 		{
@@ -39,33 +42,29 @@ namespace DOL.GS
 				return false;
 
 			TurnTo(player, 5000);
-			if (!player.Champion && player.Level == 50)
+			if (player.Realm != Realm)
+				return true;
+
+			if (!player.Champion)
 			{
-				player.Out.SendMessage(LanguageMgr.GetTranslation(player.Client.Account.Language, "KingNPC.WhisperReceive.AskForChampion"), eChatType.CT_System, eChatLoc.CL_PopupWindow);
+				if (player.Level >= GamePlayer.MAX_LEVEL)
+					SayTo(player, "Your deeds have reached my ears. Will you take up the life of the [Champions] of this realm? Your battles against our enemies will then raise you through the champion levels.");
+				else
+					SayTo(player, "Serve the realm well. When you have reached your fiftieth season, come before me again.");
+				return true;
 			}
 
-			if (player.Champion)
+			bool cllevel = false;
+			while (player.ChampionLevel < player.ChampionMaxLevel && player.ChampionExperience >= player.ChampionExperienceForNextLevel)
 			{
-				bool cllevel = false;
-
-				while (player.ChampionLevel < player.ChampionMaxLevel && player.ChampionExperience >= player.ChampionExperienceForNextLevel)
-				{
-					player.ChampionLevelUp();
-					cllevel = true;
-				}
-
-				if ( cllevel )
-				{
-					player.Out.SendMessage( "You reached champion level " + player.ChampionLevel + "!", eChatType.CT_System, eChatLoc.CL_PopupWindow );
-				}
-
-				if (player.ChampionLevel >= 5)
-				{
-					player.Out.SendMessage("I can [respecialize] your champion skills if you so desire.", eChatType.CT_System, eChatLoc.CL_PopupWindow);
-				}
-
+				player.ChampionLevelUp();
+				cllevel = true;
 			}
+			if (cllevel)
+				player.Out.SendMessage("You reached champion level " + player.ChampionLevel + "!", eChatType.CT_System, eChatLoc.CL_PopupWindow);
 
+			string respec = player.ChampionLevel >= 5 ? " I can also [respecialize] your champion skills if you so desire." : string.Empty;
+			SayTo(player, "Welcome, champion. My Weaponmasters in this hall will arm you." + respec);
 			return true;
 		}
 
@@ -74,26 +73,29 @@ namespace DOL.GS
 			if (!base.WhisperReceive(source, str))
 				return false;
 
-			GamePlayer player = source as GamePlayer;
-			if (player == null) return false;
+			if (source is not GamePlayer player)
+				return false;
 
-			if (str == "Champions" && player.Level == 50)
+			string text = str?.Trim().ToLowerInvariant();
+			if (text == "champions" || text == "champion")
 			{
-				if (player.Champion == true)
+				switch (ChampionRules.BecomeChampion(player, Realm))
 				{
-					player.Out.SendMessage(LanguageMgr.GetTranslation(player.Client.Account.Language, "KingNPC.WhisperReceive.AlreadyChampion"), eChatType.CT_System, eChatLoc.CL_PopupWindow);
-					return false;
+					case ChampionRules.KingAnswer.NowChampion:
+						player.Out.SendUpdatePlayer();
+						player.SaveIntoDatabase();
+						SayTo(player, "Rise, champion of the realm. Realm points you earn from now on raise your champion levels. My Weaponmasters in this hall will arm you.");
+						player.Out.SendMessage("Champion training has begun. Realm points from PvP/RvR now advance your Champion Levels.", eChatType.CT_Important, eChatLoc.CL_SystemWindow);
+						return true;
+					case ChampionRules.KingAnswer.AlreadyChampion:
+						SayTo(player, "You are already a champion of this realm.");
+						return true;
+					default:
+						return true;
 				}
-
-				player.RemoveChampionLevels();
-				player.Champion = true;
-				player.Out.SendUpdatePlayer();
-				player.SaveIntoDatabase();
-				player.Out.SendMessage(LanguageMgr.GetTranslation(player.Client.Account.Language, "KingNPC.WhisperReceive.IsNowChampion"), eChatType.CT_System, eChatLoc.CL_PopupWindow);
-				return true;
 			}
 
-			if (str.ToLower() == "respecialize" && player.Champion && player.ChampionLevel >= 5)
+			if (text == "respecialize" && player.Realm == Realm && player.Champion && player.ChampionLevel >= 5)
 			{
 				player.RespecChampionSkills();
 				player.SaveIntoDatabase();

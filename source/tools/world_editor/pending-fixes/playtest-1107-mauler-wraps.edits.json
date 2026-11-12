@@ -1,0 +1,142 @@
+[
+ {
+  "table": "ItemTemplate",
+  "key": "alloy_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "alloy_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "arcanite_dragonsworn_hand_wraphib",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "arcanium_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "arcanium_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "asterite_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "asterite_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "bronze_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "bronze_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Exceptional_Maligned_Avernal_Hand_Wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "Exquisite_Avernal_Malison_Hand_Wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "iron_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "iron_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "mithril_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "mithril_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "netherium_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "netherium_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "steel_razored_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "steel_riveted_hand_wrap",
+  "set": {
+   "Item_Type": 11
+  }
+ },
+ {
+  "table": "ItemTemplate",
+  "key": "local-mauler-starter-right",
+  "set": {
+   "Hand": 0
+  }
+ }
+]

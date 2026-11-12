@@ -58,7 +58,7 @@ namespace DOL.GS
         /// <summary>Called from the follow state. True when the bot was moved to its leader.</summary>
         public static bool TryRegroup(GameBot bot, GamePlayer leader)
         {
-            if (!Applies(bot, leader))
+            if (!Applies(bot, leader) || PlayerBotStay.IsHeld(bot))     // /bots stay: far from the leader on purpose
                 return false;
             bool sameRegion = bot.CurrentRegion == leader.CurrentRegion;
             float distance = sameRegion ? bot.GetDistanceTo(leader) : float.MaxValue;

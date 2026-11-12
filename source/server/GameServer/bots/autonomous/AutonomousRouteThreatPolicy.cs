@@ -23,6 +23,12 @@ namespace DOL.GS
             "Gamebots look ahead along their route in open zones and pull, avoid or route around aggressive monsters before walking into them.", true)]
         public static bool Enabled = true;
 
+        /// <summary>
+        /// Whether a walk is scanned for PvE monsters: every walk of a bot on a PvE objective, and of a bot on an RvR
+        /// objective only its march to a keep (night 2026-11-04: levels 40-49 on frontier tours walked into purple camps).
+        /// </summary>
+        public static bool ScansFor(bool rvrObjective, bool rvrTravel) => !rvrObjective || rvrTravel;
+
         public const int ScanMilliseconds = 2_500;
         public const float LookAhead = 1_500f;
         public const int ScanRadius = 1_800;
@@ -98,6 +104,11 @@ namespace DOL.GS
         /// ten-minute retarget cooldown when <paramref name="mayAbandonHopeless"/>: it used to walk on into it
         /// ("Ignore"), and on 2026-10-28 879 solo bots died to a purple or red before reaching their camp.
         /// </summary>
+        /// <summary>A blocker of the camp's own species at yellow or lower is the camp's work, not a route threat.</summary>
+        public static bool IsCampWork(string blockerName, ConColor con, string campMonster) =>
+            !string.IsNullOrEmpty(campMonster) && con <= ConColor.YELLOW &&
+            string.Equals(blockerName, campMonster, StringComparison.OrdinalIgnoreCase);
+
         public static RouteThreatAction Decide(ConColor con, bool grouped, int packSize, bool bossLike,
             bool detourAvailable, int detoursSoFar, bool mayRetarget, bool cautious = false, bool mayAbandonHopeless = false,
             int levelsAboveReference = 0, bool mayForceRetarget = false, bool strongParty = false, bool highLevelSolo = false,
@@ -113,7 +124,9 @@ namespace DOL.GS
             {
                 ConColor felt = cautious && con == ConColor.YELLOW ? ConColor.ORANGE : con;
                 // Atlantis: solo blue packs killed more often than single oranges (14% against 12%).
-                int easySolo = felt <= ConColor.GREEN ? 3 : felt <= ConColor.BLUE ? denseWorld ? 1 : 2 : 0;
+                // Playtest 2026-11-07: with 1, three blue statuettes ended 48% of Atlantis trips; 2 again, now that
+                // Atlantis camps reach 500 like the rest of the world.
+                int easySolo = felt <= ConColor.GREEN ? 3 : felt <= ConColor.BLUE ? 2 : 0;
                 int fightableSolo = felt <= ConColor.GREEN ? 5 : felt <= ConColor.BLUE ? denseWorld ? 2 : 3 : felt <= ConColor.ORANGE ? 1 : 0;
                 if (packSize <= easySolo)
                     return RouteThreatAction.Pull;

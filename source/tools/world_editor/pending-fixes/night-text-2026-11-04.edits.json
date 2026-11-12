@@ -1,0 +1,5 @@
+[
+  {"table": "Spell", "where": {"Message2": "{0} loose endurance!"}, "set": {"Message2": "{0} loses endurance!"}},
+  {"table": "Spell", "where": {"Name": "Bolster Resillience"}, "set": {"Name": "Bolster Resilience"}},
+  {"table": "Spell", "where": {"Name": "Resillience of the Sun"}, "set": {"Name": "Resilience of the Sun"}}
+]

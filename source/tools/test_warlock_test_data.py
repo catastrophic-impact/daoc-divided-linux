@@ -12,6 +12,7 @@ class WarlockDataTests(unittest.TestCase):
     def setUp(self):
         self.db=sqlite3.connect(':memory:')
         self.root=REPO/'artifacts/modern-client-test'
+        if not (self.root/'runtime/data/opendaoc.sqlite3.db').exists():self.skipTest('needs the modern test install beside this checkout')
         with closing(sqlite3.connect((self.root/'runtime/data/opendaoc.sqlite3.db').as_uri()+'?mode=ro',uri=True)) as source:
             source.backup(self.db)
     def tearDown(self):self.db.close()

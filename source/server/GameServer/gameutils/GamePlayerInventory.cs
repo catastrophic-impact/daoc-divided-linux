@@ -14,6 +14,18 @@ namespace DOL.GS
     /// </summary>
     public class GamePlayerInventory : GameLivingInventory
     {
+        /// <summary>
+        /// An item fits the left hand when it is typed for it, or when it is a fist wrap marked left-handed (Hand 2):
+        /// 20 world fist wrap templates and older drops carry Hand 2 with the right-hand Item_Type.
+        /// </summary>
+        public static bool IsLeftHandItem(int itemType, int objectType, int hand)
+        {
+            if ((eInventorySlot) itemType == eInventorySlot.LeftHandWeapon)
+                return true;
+
+            return (eObjectType) objectType == eObjectType.FistWraps && hand == 2;
+        }
+
         private static readonly Logging.Logger Log = Logging.LoggerManager.Create(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         #region Constructor/Declaration/LoadDatabase/SaveDatabase
@@ -739,12 +751,7 @@ namespace DOL.GS
                         return false;
                     }
 
-                    if (item.Type_Damage > m_player.ChampionLevel)
-                    {
-                        m_player.Out.SendMessage($"You can't use {item.GetName(0, true)}, you should increase your champion level.", eChatType.CT_System, eChatLoc.CL_SystemWindow);
-                        return false;
-                    }
-
+                    // No Champion Level requirement on items (owner rule): mythirians are not gated by Type_Damage.
                     break;
                 }
                 case eInventorySlot.HorseBarding:
@@ -811,7 +818,7 @@ namespace DOL.GS
                 }
                 case eInventorySlot.LeftHandWeapon:
                 {
-                    if ((eInventorySlot) item.Item_Type != slot ||
+                    if (!IsLeftHandItem(item.Item_Type, item.Object_Type, item.Hand) ||
                         ((eObjectType) item.Object_Type is not eObjectType.Shield && !m_player.attackComponent.CanUseLefthandedWeapon))
                     {
                         m_player.Out.SendMessage($"{item.GetName(0, true)} can't go there!", eChatType.CT_System, eChatLoc.CL_SystemWindow);
